@@ -3959,6 +3959,7 @@ let bacotlu = media.message["ephemeralMessage"] ? media.message.ephemeralMessage
 let p1 = await alpha.getStatus(sender)
 anunya = process.uptime()
 ini_anu =`${ucapannya2} @${sender.split('@')[0]}
+
 「 *BOT INFO* 」
 *${emoj} Creator :* _@${koko.split('@')[0]}_
 *${emoj} Powered :* _@${ini_mark.split('@')[0]}_
@@ -3976,6 +3977,7 @@ ini_anu =`${ucapannya2} @${sender.split('@')[0]}
 *${emoj} Runtime :* _${kyun(anunya)}_
 *${emoj} Battery :* _${isBattre}_
 *${emoj} Charging :* _${isCharge}_
+
 「 *YOU INFO* 」
 *${emoj} Kak :* _${pushname}_
 *${emoj} Bio :* _${p1 ? `${p1.status}` : '-'}_
@@ -16829,9 +16831,8 @@ break
 
 case 'ngeri':
 case 'ngery':
-const men_ngeri = mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
 try {
-ppus = await alpha.getProfilePicture(men_ngeri)
+ppus = await alpha.getProfilePicture(mek.message.extendedTextMessage.contextInfo.mentionedJid[0])
 } catch {
 ppus = 'https://i.ibb.co/LPvt8wx/ppkosong.jpg'
 }
