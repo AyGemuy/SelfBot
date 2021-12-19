@@ -15139,7 +15139,7 @@ if (!budy.includes("@")){
 kapankah = q
 const kapan =['Besok','Lusa','Tadi','4 Hari Lagi','5 Hari Lagi','6 Hari Lagi','1 Minggu Lagi','2 Minggu Lagi','3 Minggu Lagi','1 Bulan Lagi','2 Bulan Lagi','3 Bulan Lagi','4 Bulan Lagi','5 Bulan Lagi','6 Bulan Lagi','1 Tahun Lagi','2 Tahun Lagi','3 Tahun Lagi','4 Tahun Lagi','5 Tahun Lagi','6 Tahun Lagi','1 Abad lagi','3 Hari Lagi']
 const koh = kapan[Math.floor(Math.random() * kapan.length)]
-var kpkeh = `*Pertanyaan :* ${command} ${kapankah}\n*Jawaban :* ${keh}`
+var kpkeh = `*Pertanyaan :* ${command} ${kapankah}\n*Jawaban :* ${koh}`
 alpha.sendMessage(from, kpkeh, MessageType.text,{quoted: mek, sendEphemeral: true
 })
 } else if (budy.includes("@")){
