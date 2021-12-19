@@ -3787,7 +3787,7 @@ let userProcfile = `「 *USER INFO* 」
 ⏰ Expired Prem : ${isPremium ? 'Unlimited Premium' : ` ${cek.days} d, ${cek.hours} h, ${cek.minutes} m, ${cek.seconds} s`}
 👨‍🎓 Register : ${isRegister? `Done`:`Belum Daftar`}
 🚫 Baned : ${isBanned?`True`:`False`}`
-let papakpo = [{
+let invet = [{
 "buttonId": `inv`,
 "buttonText": {
 "displayText": "Inventory"
@@ -3800,7 +3800,7 @@ let papakpo = [{
 },
 "type": "RESPONSE"
 }]
-sendButLocation(from, userProcfile , `${botname}™© | By ${ownername}`,pp_userz, papakpo, {contextInfo: { mentionedJid: [sender]}})
+sendButLocation(from, userProcfile , `${botname}™© | By ${ownername}`,pp_userz, invet, {contextInfo: { mentionedJid: [sender]}})
 }
 break
 
@@ -3813,8 +3813,16 @@ sn_ = await fetchJson('https://api.caranya.my.id/gen-password')
 let ran_blc = randomNomor(50)
 addBalance(sender, ran_blc, balance)
 fs.writeFileSync('./database/user/register.json', JSON.stringify(register))
-teks = `╭────⋆⸙ *VERIFIED* ⸙⋆────╮\n📛 *Nama :* ${pushname}\n#️⃣ *Nomor :* @${sender.split('@')[0]}\n💌 *Bio :* ${bio_user}\n🔑 *SN :* ${sn_.medium}\n⏰ *Time :* ${wib} Wib\n╰────⋆⸙ *SUCCES* ⸙⋆────╯`
-let papako = [{
+teks = `⌯✆ *VERIFIED* ✆⌯
+
+╭⌯
+│ *Nama :* ${pushname}
+│ *Nomor :* @${sender.split('@')[0]}
+│ *Bio :* ${bio_user}
+│ *SN :* ${sn_.medium}
+│ *Time :* ${wib} Wib
+╰⌯`
+let vengrif = [{
 "buttonId": `menu`,
 "buttonText": {
 "displayText": "🌱 List menu"
@@ -3827,18 +3835,18 @@ let papako = [{
 },
 "type": "RESPONSE"
 }]
-sendButLocation(from, teks , `Makasih Udah Verifikasi 😉\n${botname}™© | By ${ownername}`,pp_userz, papako, {contextInfo: { mentionedJid: [sender]}})
+sendButLocation(from, teks , `Makasih Udah Verifikasi 😉\n${botname}™© | By ${ownername}`,pp_userz, vengrif, {contextInfo: { mentionedJid: [sender]}})
 break
 
 case '?':
 teks = `Ada apa kak *${pushname}*,
 *${botname}* disini ada yang bisa saya bantu?`
-let papako = [
+let bpklu = [
 {buttonId: 'x_menu', buttonText: {displayText: '🌱 List-Menu'}, type: 1},
 {buttonId: 'menu_x', buttonText: {displayText: '🌱 Lol-Menu'}, type: 1},
 {buttonId: 'menu_xc', buttonText: {displayText: '🌱 Xc-Menu'}, type: 1}
 ]
-sendButLocation(from, teks , `Silahkan pilih menu untuk menggunakan ${botname}`,pp_userz, papako, {contextInfo: { mentionedJid: [sender]}})
+sendButLocation(from, teks , `Silahkan pilih menu untuk menggunakan ${botname}`,pp_userz, bpklu, {contextInfo: { mentionedJid: [sender]}})
 break
 
 case 'menu':
@@ -3858,6 +3866,7 @@ const ngelink_ = ["https://www.youtube.com","https://www.instagram.com","http://
 const pelink_ = ngelink_[Math.floor(Math.random() * ngelink_.length)]
 alpha.sendMessage(from,
 { contentText: `${ucapannya2} @${sender.split('@')[0]}
+
 「 *YOU INFO* 」
 *${emoj} Kak :* ${pushname}
 *${emoj} Bio :* ${xbi ? `${xbi.status}` : '-'}
@@ -3912,7 +3921,7 @@ mediaType:"2",
 previewType: "VIDEO",
 mediaUrl: pelink_}}})
 } else if(menusimple = true){
-const medd_1 = await alpha.prepareMessage(from, m_thumb, MessageType.location, {thumbnail: thumb_miku})
+const medd_1 = await alpha.prepareMessage(from, thumb_miku, MessageType.location, {thumbnail: thumb_miku})
 let ephe_nya = medd_1.message["ephemeralMessage"] ? medd_1.message.ephemeralMessage : medd_1
 const bttn_1 = [
 {buttonId: 'x_menu', buttonText: {displayText: '🌱 List-Menu'}, type: 1},
@@ -3921,7 +3930,7 @@ const bttn_1 = [
 ]
 const buttn_1 = {
 contentText: allmenu(prefix, wita, wit, ucapannya2, timuu, status, wa_version, mcc, mnc, os_version, device_manufacturer, device_model, alfa , alfa1, thisDay, ini_tanggal, totalchat, hit_today, ini_gcchat),
-footerText: `${tampilTanggal}${enter}${enter}Regard @${koko.split('@')[0]}`,
+footerText: `${tampilTanggal}${enter}Regard @${xtar.split('@')[0]}`,
 buttons: bttn_1,
 headerType: 6,
 locationMessage: ephe_nya.message.locationMessage
@@ -3934,7 +3943,7 @@ alpha.sendMessage(from, buttn_1, MessageType.buttonsMessage,{
 "body": `${botname}`,
 "sourceUrl": apiku,
 "thumbnail": thumb_miku},
-"mentionedJid" : [sender,koko,ini_mark]},
+"mentionedJid" : [sender,xtar,ini_mark]},
 quoted: mek, sendEphemeral: true
 })
 }
@@ -17958,8 +17967,16 @@ addBalance(sender, ran_blc, balance)
 addLevelingId(sender)
 sn_ = await fetchJson('https://api.caranya.my.id/gen-password')
 fs.writeFileSync('./database/user/register.json', JSON.stringify(register))
-teks = `╭────⋆⸙ *VERIFIED* ⸙⋆────╮\n📛 *Nama :* ${pushname}\n#️⃣ *Nomor :* @${sender.split('@')[0]}\n💌 *Bio :* ${bio_user}\n🔑 *SN :* ${sn_.medium}\n⏰ *Time :* ${wib} Wib\n╰────⋆⸙ *SUCCES* ⸙⋆────╯`
-let papako = [{
+teks = `⌯✆ *VERIFIED* ✆⌯
+
+╭⌯
+│ *Nama :* ${pushname}
+│ *Nomor :* @${sender.split('@')[0]}
+│ *Bio :* ${bio_user}
+│ *SN :* ${sn_.medium}
+│ *Time :* ${wib} Wib
+╰⌯`
+let bpkmu = [{
 "buttonId": `menu`,
 "buttonText": {
 "displayText": "🌱 List menu"
@@ -17972,7 +17989,7 @@ let papako = [{
 },
 "type": "RESPONSE"
 }]
-sendButLocation(from, teks , `Makasih Udah Verifikasi 😉\n${botname}™© | By ${ownername}`,pp_userz, papako, {contextInfo: { mentionedJid: [sender]}})
+sendButLocation(from, teks , `Makasih Udah Verifikasi 😉\n${botname}™© | By ${ownername}`,pp_userz, bpkmu, {contextInfo: { mentionedJid: [sender]}})
 }
 // AUTO REPLY by Piyo >_<
 if (budy == 'p') {
