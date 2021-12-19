@@ -2,12 +2,12 @@
 const help = (prefix, wita, wit, ucapannya2, timuu, status, wa_version, mcc, mnc, os_version, device_manufacturer, device_model, alfa , alfa1, thisDay, ini_tanggal, totalchat, hit_today, ini_gcchat, latensi, teks)=> {
 	return`「 *WUDY BOT INFO*   」
 	
-*🌱 Mode :* ${status}
-*☂️ Prefix :* ${prefix}
-*👒 Total Hit :* ${hit_today.length}
-*🎓 Personal Chat :* ${totalchat.length - ini_gcchat.lenght}
-*🎩 Total All Chat :* ${totalchat.length}
-*👔 Group Chat :* ${ini_gcchat}
+*Mode :* ${status}
+*Prefix :* ${prefix}
+*Total Hit :* ${hit_today.length}
+*Personal Chat :* ${totalchat.length - ini_gcchat.lenght}
+*Total All Chat :* ${totalchat.length}
+*Group Chat :* ${ini_gcchat}
 
 ╭⌯ *</LIST MENU/>*
 🍃⋆Allmenu 
@@ -52,33 +52,33 @@ const convert = (prefix) => {
 const download = (prefix) => {
 	return`*</DOWNLOAD MENU/>*
 
-╭⌯ ${prefix}ytsearch _query_
+╭⌯ ${prefix}ytsearch *query*
 │⌯ ${prefix}igstalk _username_
 │⌯ ${prefix}ghstalk _username_
-│⌯ ${prefix}play _query_
-│⌯ ${prefix}playmp4 _query_
-│⌯ ${prefix}video _query_
-│⌯ ${prefix}ytmp3 _link_
-│⌯ ${prefix}ytmp4 _link_
-│⌯ ${prefix}ig _link_
-│⌯ ${prefix}igphoto _link_
-│⌯ ${prefix}igvideo _link_
-│⌯ ${prefix}igtv _link_
-│⌯ ${prefix}igreels _link_
-│⌯ ${prefix}twitter _link_
-│⌯ ${prefix}tiktokwm _link_
-│⌯ ${prefix}tiktoknowm _link_
-│⌯ ${prefix}tiktokaudio _link_
-│⌯ ${prefix}fb _link_
-│⌯ ${prefix}brainly _query_
-│⌯ ${prefix}image _query_
-│⌯ ${prefix}pinterest _query_
-│⌯ ${prefix}pinterest2 _query_
-│⌯ ${prefix}playstore _query_
-│⌯ ${prefix}gcwa _query_
-│⌯ ${prefix}lirik _query_
-│⌯ ${prefix}komiku _query_
-│⌯ ${prefix}otaku _query_
+│⌯ ${prefix}play *query*
+│⌯ ${prefix}playmp4 *query*
+│⌯ ${prefix}video *query*
+│⌯ ${prefix}ytmp3 *link*
+│⌯ ${prefix}ytmp4 *link*
+│⌯ ${prefix}ig *link*
+│⌯ ${prefix}igphoto *link*
+│⌯ ${prefix}igvideo *link*
+│⌯ ${prefix}igtv *link*
+│⌯ ${prefix}igreels *link*
+│⌯ ${prefix}twitter *link*
+│⌯ ${prefix}tiktokwm *link*
+│⌯ ${prefix}tiktoknowm *link*
+│⌯ ${prefix}tiktokaudio *link*
+│⌯ ${prefix}fb *link*
+│⌯ ${prefix}brainly *query*
+│⌯ ${prefix}image *query*
+│⌯ ${prefix}pinterest *query*
+│⌯ ${prefix}pinterest2 *query*
+│⌯ ${prefix}playstore *query*
+│⌯ ${prefix}gcwa *query*
+│⌯ ${prefix}lirik *query*
+│⌯ ${prefix}komiku *query*
+│⌯ ${prefix}otaku *query*
 │⌯ ${prefix}anime _random_
 ╰─⊸ *Wudy ⌕*`
 }
@@ -86,14 +86,14 @@ const download = (prefix) => {
 const allmenu = (prefix, wita, wit, ucapannya2, timuu, status, wa_version, mcc, mnc, os_version, device_manufacturer, device_model, alfa , alfa1, thisDay, ini_tanggal, totalchat, hit_today, ini_gcchat, latensi, teks)  => {
 	return `「 *WUDY BOT INFO*   」
 	
-*🌱 Mode :* ${status}
-*☂️ Prefix :* ${prefix}
-*👒 Total Hit :* ${hit_today.length}
-*🎓 Personal Chat :* ${totalchat.length - ini_gcchat.lenght}
-*🎩 Total All Chat :* ${totalchat.length}
-*👔 Group Chat :* ${ini_gcchat}
+*Mode :* ${status}
+*Prefix :* ${prefix}
+*Total Hit :* ${hit_today.length}
+*Personal Chat :* ${totalchat.length - ini_gcchat.lenght}
+*Total All Chat :* ${totalchat.length}
+*Group Chat :* ${ini_gcchat}
 
-</𝗢𝗪𝗡𝗘𝗥 𝗠𝗘𝗡𝗨/>
+*</𝗢𝗪𝗡𝗘𝗥 𝗠𝗘𝗡𝗨/>*
 ╭⸙ ${prefix}self
 │⌯ ${prefix}public
 │⌯ ${prefix}readall
@@ -110,13 +110,12 @@ const allmenu = (prefix, wita, wit, ucapannya2, timuu, status, wa_version, mcc, 
 │⌯ ${prefix}bc
 │⌯ ${prefix}tobc
 │⌯ ${prefix}bcaudio
-│• $
-│• >
-│• x
-│• =>
+│⌯  $  *termux code*
+│⌯  =>  *eval async*
+│⌯  x or > *code*
 ╰─⊸ *Wudy ⌕*
 
-</𝗚𝗥𝗢𝗨𝗣 𝗠𝗘𝗡𝗨/>
+*</𝗚𝗥𝗢𝗨𝗣 𝗠𝗘𝗡𝗨/>*
 ╭⸙ ${prefix}antilink
 │⌯ ${prefix}welcome
 │⌯ ${prefix}group
@@ -132,7 +131,7 @@ const allmenu = (prefix, wita, wit, ucapannya2, timuu, status, wa_version, mcc, 
 │⌯ ${prefix}infogc
 ╰─⊸ *Wudy ⌕*
 
-</𝗚𝗔𝗠𝗘 𝗠𝗘𝗡𝗨/>
+*</𝗚𝗔𝗠𝗘 𝗠𝗘𝗡𝗨/>*
 ╭⸙ ${prefix}suit     
 │⌯ ${prefix}slot
 │⌯ ${prefix}gelud
@@ -144,7 +143,7 @@ const allmenu = (prefix, wita, wit, ucapannya2, timuu, status, wa_version, mcc, 
 │⌯ ${prefix}family100
 ╰─⊸ *Wudy ⌕*
 
-</𝗚𝗔𝗕𝗨𝗧 𝗠𝗘𝗡𝗨/>
+*</𝗚𝗔𝗕𝗨𝗧 𝗠𝗘𝗡𝗨/>*
 ╭⸙ ${prefix}apakah
 │⌯ ${prefix}cekganteng
 │⌯ ${prefix}cekcantik
@@ -154,7 +153,7 @@ const allmenu = (prefix, wita, wit, ucapannya2, timuu, status, wa_version, mcc, 
 │⌯ ${prefix}citacita
 ╰─⊸ *Wudy ⌕*
 
-</𝗧𝗢𝗢𝗟𝗦 𝗠𝗘𝗡𝗨/>
+*</𝗧𝗢𝗢𝗟𝗦 𝗠𝗘𝗡𝗨/>*
 ╭⸙ ${prefix}tourl            
 │⌯ ${prefix}sticker
 │⌯ ${prefix}attp
@@ -167,7 +166,7 @@ const allmenu = (prefix, wita, wit, ucapannya2, timuu, status, wa_version, mcc, 
 │⌯ ${prefix}stickertourl
 ╰─⊸ *Wudy ⌕*
 
-</𝗦𝗘𝗔𝗥𝗖𝗛𝗜𝗡𝗚/>
+*</𝗦𝗘𝗔𝗥𝗖𝗛𝗜𝗡𝗚/>*
 ╭⸙ ${prefix}image   
 │⌯ ${prefix}video   
 │⌯ ${prefix}pinterest
@@ -189,7 +188,7 @@ const allmenu = (prefix, wita, wit, ucapannya2, timuu, status, wa_version, mcc, 
 │⌯ ${prefix}wiki
 ╰─⊸ *Wudy ⌕*
 
-</𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗/>
+*</𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗/>*
 ╭⸙ ${prefix}ig    
 │⌯ ${prefix}mediafire    
 │⌯ ${prefix}pinterest  
@@ -204,7 +203,7 @@ const allmenu = (prefix, wita, wit, ucapannya2, timuu, status, wa_version, mcc, 
 │⌯ ${prefix}tinyurl
 ╰─⊸ *Wudy ⌕*
 
-</𝗣𝗛𝗢𝗧𝗢𝗢𝗫𝗬/>
+*</𝗣𝗛𝗢𝗧𝗢𝗢𝗫𝗬/>*
 ╭⸙ ${prefix}burnpaper
 │⌯ ${prefix}smoke
 │⌯ ${prefix}shadow
@@ -218,7 +217,7 @@ const allmenu = (prefix, wita, wit, ucapannya2, timuu, status, wa_version, mcc, 
 │⌯ ${prefix}lovetext
 ╰─⊸ *Wudy ⌕*
 
-</𝗪𝗜𝗕𝗨 𝗠𝗘𝗡𝗨/>
+*</𝗪𝗜𝗕𝗨 𝗠𝗘𝗡𝗨/>*
 ╭⸙ ${prefix}bj
 │⌯ ${prefix}loli
 │⌯ ${prefix}yuri
@@ -251,7 +250,7 @@ const allmenu = (prefix, wita, wit, ucapannya2, timuu, status, wa_version, mcc, 
 │⌯ ${prefix}slap
 ╰─⊸ *Wudy ⌕*
 
-</𝗠𝗨𝗟𝗧𝗜 𝗦𝗘𝗦𝗦𝗜𝗢𝗡/>
+*</𝗠𝗨𝗟𝗧𝗜 𝗦𝗘𝗦𝗦𝗜𝗢𝗡/>*
 ╭⸙ ${prefix}jadibot
 │⌯ ${prefix}stopjadibot
 │⌯ ${prefix}listjadibot
@@ -263,12 +262,13 @@ const allmenu = (prefix, wita, wit, ucapannya2, timuu, status, wa_version, mcc, 
 
 const xallmenu = (prefix, wita, wit, ucapannya2, timuu, status, wa_version, mcc, mnc, os_version, device_manufacturer, device_model, alfa , alfa1, thisDay, ini_tanggal, totalchat, hit_today, ini_gcchat, latensi, teks)  => {
 	return `「 *WUDY BOT INFO*   」
-*🌱 Mode :* ${status}
-*☂️ Prefix :* ${prefix}
-*👒 Total Hit :* ${hit_today.length}
-*🎓 Personal Chat :* ${totalchat.length - ini_gcchat.lenght}
-*🎩 Total All Chat :* ${totalchat.length}
-*👔 Group Chat :* ${ini_gcchat}
+
+*Mode :* ${status}
+*Prefix :* ${prefix}
+*Total Hit :* ${hit_today.length}
+*Personal Chat :* ${totalchat.length - ini_gcchat.lenght}
+*Total All Chat :* ${totalchat.length}
+*Group Chat :* ${ini_gcchat}
 
 ╭⋆⸙「 *CONVERT MENU*   」
 │⌯ ${prefix}toimg
@@ -282,33 +282,33 @@ const xallmenu = (prefix, wita, wit, ucapannya2, timuu, status, wa_version, mcc,
 ╰─⊸ *Wudy ⌕*
 
 ╭⋆⸙「 *DOWNLOAD MENU*   」
-│⌯ ${prefix}ytsearch _query_
+│⌯ ${prefix}ytsearch *query*
 │⌯ ${prefix}igstalk _username_
 │⌯ ${prefix}ghstalk _username_
-│⌯ ${prefix}play _query_
-│⌯ ${prefix}playmp4 _query_
-│⌯ ${prefix}video _query_
-│⌯ ${prefix}ytmp3 _link_
-│⌯ ${prefix}ytmp4 _link_
-│⌯ ${prefix}ig _link_
-│⌯ ${prefix}igphoto _link_
-│⌯ ${prefix}igvideo _link_
-│⌯ ${prefix}igtv _link_
-│⌯ ${prefix}igreels _link_
-│⌯ ${prefix}twitter _link_
-│⌯ ${prefix}tiktokwm _link_
-│⌯ ${prefix}tiktoknowm _link_
-│⌯ ${prefix}tiktokaudio _link_
-│⌯ ${prefix}fb _link_
-│⌯ ${prefix}brainly _query_
-│⌯ ${prefix}image _query_
-│⌯ ${prefix}pinterest _query_
-│⌯ ${prefix}pinterest2 _query_
-│⌯ ${prefix}playstore _query_
-│⌯ ${prefix}gcwa _query_
-│⌯ ${prefix}lirik _query_
-│⌯ ${prefix}komiku _query_
-│⌯ ${prefix}anime _random_
+│⌯ ${prefix}play *query*
+│⌯ ${prefix}playmp4 *query*
+│⌯ ${prefix}video *query*
+│⌯ ${prefix}ytmp3 *link*
+│⌯ ${prefix}ytmp4 *link*
+│⌯ ${prefix}ig *link*
+│⌯ ${prefix}igphoto *link*
+│⌯ ${prefix}igvideo *link*
+│⌯ ${prefix}igtv *link*
+│⌯ ${prefix}igreels *link*
+│⌯ ${prefix}twitter *link*
+│⌯ ${prefix}tiktokwm *link*
+│⌯ ${prefix}tiktoknowm *link*
+│⌯ ${prefix}tiktokaudio *link*
+│⌯ ${prefix}fb *link*
+│⌯ ${prefix}brainly *query*
+│⌯ ${prefix}image *query*
+│⌯ ${prefix}pinterest *query*
+│⌯ ${prefix}pinterest2 *query*
+│⌯ ${prefix}playstore *query*
+│⌯ ${prefix}gcwa *query*
+│⌯ ${prefix}lirik *query*
+│⌯ ${prefix}komiku *query*
+│⌯ ${prefix}anime *random*
 │⌯ ${prefix}bucin2
 │⌯ ${prefix}cehor
 │⌯ ${prefix}darkjoke2
@@ -350,7 +350,7 @@ const xallmenu = (prefix, wita, wit, ucapannya2, timuu, status, wa_version, mcc,
 │⌯ ${prefix}family100
 │⌯ ${prefix}tebakanime
 │⌯ ${prefix}suit
-│⌯ ${prefix}fitnahpc text|balasan
+│⌯ ${prefix}fitnahpc *text*|balasan
 │⌯ ${prefix}kontak 62xxx|text
 │⌯ ${prefix}tictactoe @user
 │⌯ ${prefix}delttt
@@ -371,44 +371,44 @@ const xallmenu = (prefix, wita, wit, ucapannya2, timuu, status, wa_version, mcc,
 │⌯ ${prefix}ttp2
 │⌯ ${prefix}ttp3
 │⌯ ${prefix}ttp4
-│⌯ ${prefix}swm author|packname
-│⌯ ${prefix}take author|packname
+│⌯ ${prefix}swm *author|packname*
+│⌯ ${prefix}take *author|packname*
 │⌯ ${prefix}fdeface
 │⌯ ${prefix}amongus 
-│⌯ ${prefix}tweettrump text
-│⌯ ${prefix}cmm text
-│⌯ ${prefix}kanna text
-│⌯ ${prefix}tahta text
-│⌯ ${prefix}neon2 text
-│⌯ ${prefix}wall text
-│⌯ ${prefix}wolf text
-│⌯ ${prefix}tfire text
-│⌯ ${prefix}ytgold text
-│⌯ ${prefix}ytsilver text
-│⌯ ${prefix}t3d text
-│⌯ ${prefix}logoa text|text
-│⌯ ${prefix}pornhub text|text
-│⌯ ${prefix}marvel text|text
-│⌯ ${prefix}leavest text
-│⌯ ${prefix}phcoment text|text
-│⌯ ${prefix}nulis text
+│⌯ ${prefix}tweettrump *text*
+│⌯ ${prefix}cmm *text*
+│⌯ ${prefix}kanna *text*
+│⌯ ${prefix}tahta *text*
+│⌯ ${prefix}neon2 *text*
+│⌯ ${prefix}wall *text*
+│⌯ ${prefix}wolf *text*
+│⌯ ${prefix}tfire *text*
+│⌯ ${prefix}ytgold *text*
+│⌯ ${prefix}ytsilver *text*
+│⌯ ${prefix}t3d *text*
+│⌯ ${prefix}logoa *text|text*
+│⌯ ${prefix}pornhub *text|text*
+│⌯ ${prefix}marvel *text|text*
+│⌯ ${prefix}leavest *text*
+│⌯ ${prefix}phcoment *text|text*
+│⌯ ${prefix}nulis *text*
 │⌯ ${prefix}nulis2
 │⌯ ${prefix}emoji 👼
-│⌯ ${prefix}naruto text
-│⌯ ${prefix}blueneon text
-│⌯ ${prefix}matrix text
-│⌯ ${prefix}greenneon text
-│⌯ ${prefix}dropwater text|text
-│⌯ ${prefix}wolflogo text
-│⌯ ${prefix}flowertext text
-│⌯ ${prefix}crosslogo text
-│⌯ ${prefix}silktext text
-│⌯ ${prefix}flametext text
-│⌯ ${prefix}glowtext text
-│⌯ ${prefix}smoketext text
-│⌯ ${prefix}pubglogo text|text
-│⌯ ${prefix}skytext text
-│⌯ ${prefix}cslogo text
+│⌯ ${prefix}naruto *text*
+│⌯ ${prefix}blueneon *text*
+│⌯ ${prefix}matrix *text*
+│⌯ ${prefix}greenneon *text*
+│⌯ ${prefix}dropwater *text|text*
+│⌯ ${prefix}wolflogo *text*
+│⌯ ${prefix}flowertext *text*
+│⌯ ${prefix}crosslogo *text*
+│⌯ ${prefix}silktext *text*
+│⌯ ${prefix}flametext *text*
+│⌯ ${prefix}glowtext *text*
+│⌯ ${prefix}smoketext *text*
+│⌯ ${prefix}pubglogo *text|text*
+│⌯ ${prefix}skytext *text*
+│⌯ ${prefix}cslogo *text*
 ╰─⊸ *Wudy ⌕*
 
 ╭⋆⸙「 *IMAGE EFFECT*   」
@@ -462,34 +462,34 @@ const xallmenu = (prefix, wita, wit, ucapannya2, timuu, status, wa_version, mcc,
 
 ╭⋆⸙「 *GROUP MENU*   」
 │⌯ ${prefix}add 62+
-│⌯ ${prefix}kick _@user_
+│⌯ ${prefix}kick *@user*
 │⌯ ${prefix}radd _reply pesan @user_
 │⌯ ${prefix}rkick _reply pesan @user_
 │⌯ ${prefix}ping
-│⌯ ${prefix}nsfw _on / off_
-│⌯ ${prefix}antilink _on / off_
-│⌯ ${prefix}get _link_
-│⌯ ${prefix}getpp _@user_
-│⌯ ${prefix}getname _reply_
-│⌯ ${prefix}size _reply media_
-│⌯ ${prefix}colongsw _reply sw_
-│⌯ ${prefix}getbio _@user_
+│⌯ ${prefix}nsfw *on / off*
+│⌯ ${prefix}antilink *on / off*
+│⌯ ${prefix}get *link*
+│⌯ ${prefix}getpp *@user*
+│⌯ ${prefix}getname *reply*
+│⌯ ${prefix}size *reply media*
+│⌯ ${prefix}colongsw *reply sw*
+│⌯ ${prefix}getbio *@user*
 │⌯ ${prefix}tagall
 │⌯ ${prefix}listonline
 │⌯ ${prefix}caripesan query
-│⌯ ${prefix}caripesan2 _query_
+│⌯ ${prefix}caripesan2 *query*
 │⌯ ${prefix}searchmsg _query|total_
-│⌯ ${prefix}sider _reply pesan bot_
-│⌯ ${prefix}del _reply pesan bot_
-│⌯ ${prefix}q _reply pesan_
-│⌯ ${prefix}afk _reason_
-│⌯ ${prefix}getsider _reply pesan bot_
+│⌯ ${prefix}sider *reply pesan bot*
+│⌯ ${prefix}del *reply pesan bot*
+│⌯ ${prefix}q *reply pesan*
+│⌯ ${prefix}afk *reason*
+│⌯ ${prefix}getsider *reply pesan bot*
 │⌯ ${prefix}promoteall
 │⌯ ${prefix}ppcouple
 │⌯ ${prefix}setname
 │⌯ ${prefix}revoke
 │⌯ ${prefix}setdesk
-│⌯ ${prefix}spam text|jumlah
+│⌯ ${prefix}spam *text*|jumlah
 │⌯ ${prefix}demoteall
 │⌯ ${prefix}admin
 │⌯ ${prefix}listpc
@@ -546,35 +546,35 @@ const xallmenu = (prefix, wita, wit, ucapannya2, timuu, status, wa_version, mcc,
 │⌯ ${prefix}pin
 │⌯ ${prefix}delthischat
 │⌯ ${prefix}unpin
-│⌯ ${prefix}autoread <query> on / off
-│⌯ ${prefix}antibug on / off
-│⌯ ${prefix}antidelete on / off
-│⌯ ${prefix}anticall on / off
-│⌯ ${prefix}autoketik on / off
-│⌯ ${prefix}autovn on / off
-│⌯ ${prefix}antihidetag on / off
-│⌯ ${prefix}autobio on / off
-│⌯ ${prefix}register on / off
-│⌯ ${prefix}autorespon on / off
+│⌯ ${prefix}autoread <query> *on / off*
+│⌯ ${prefix}antibug *on / off*
+│⌯ ${prefix}antidelete *on / off*
+│⌯ ${prefix}anticall *on / off*
+│⌯ ${prefix}autoketik *on / off*
+│⌯ ${prefix}autovn *on / off*
+│⌯ ${prefix}antihidetag *on / off*
+│⌯ ${prefix}autobio *on / off*
+│⌯ ${prefix}register *on / off*
+│⌯ ${prefix}autorespon *on / off*
 │⌯ ${prefix}setthumb
 │⌯ ${prefix}settarget
 │⌯ ${prefix}setfakeimg
 │⌯ ${prefix}setreply
-│⌯ ${prefix}term _code_
-• x or > _code_
-• $  _termux code_
-• =>  _eval async_
+│⌯ ${prefix}term *code*
+• x or > *code*
+• $  *termux code*
+• =>  *eval async*
 ╰─⊸ *Wudy ⌕*
 
 ╭⋆⸙「 *SET STC CMD*   」
-│⌯ ${prefix}set_stc_menu _<query>_
-│⌯ ${prefix}set_stc_ping _<query>_
-│⌯ ${prefix}set_stc_gclose _<query>_
-│⌯ ${prefix}set_stc_gopen _<query>_
-│⌯ ${prefix}set_stc_itos _<query>_
-│⌯ ${prefix}set_stc_toimg _<query>_
-│⌯ ${prefix}set_stc_self _<query>_
-│⌯ ${prefix}set_stc_public _<query>_
+│⌯ ${prefix}set_stc_menu *<query>*
+│⌯ ${prefix}set_stc_ping *<query>*
+│⌯ ${prefix}set_stc_gclose *<query>*
+│⌯ ${prefix}set_stc_gopen *<query>*
+│⌯ ${prefix}set_stc_itos *<query>*
+│⌯ ${prefix}set_stc_toimg *<query>*
+│⌯ ${prefix}set_stc_self *<query>*
+│⌯ ${prefix}set_stc_public *<query>*
 ╰─⊸ *Wudy ⌕*
 
 ╭⋆⸙「 *STORAGE  MENU*   」
@@ -863,7 +863,7 @@ const fun = (prefix) => {
 │⌯ ${prefix}caklontong
 │⌯ ${prefix}family100
 │⌯ ${prefix}tebakanime
-│⌯ ${prefix}fitnahpc text|balasan
+│⌯ ${prefix}fitnahpc *text*|balasan
 │⌯ ${prefix}kontak 62xxx|text
 │⌯ ${prefix}tictactoe @user
 │⌯ ${prefix}delttt
@@ -887,100 +887,100 @@ const maker = (prefix) => {
 │⌯ ${prefix}ttp2
 │⌯ ${prefix}ttp3
 │⌯ ${prefix}ttp4
-│⌯ ${prefix}swm author|packname
-│⌯ ${prefix}take author|packname
+│⌯ ${prefix}swm *author|packname*
+│⌯ ${prefix}take *author|packname*
 │⌯ ${prefix}fdeface
 │⌯ ${prefix}amongus 
-│⌯ ${prefix}tweettrump text
-│⌯ ${prefix}1917 _teks_
-│⌯ ${prefix}angelwing _teks_
-│⌯ ${prefix}bannerepep _teks_
-│⌯ ${prefix}blood _teks_
-│⌯ ${prefix}bluelight _teks_
-│⌯ ${prefix}blueneon _teks_
-│⌯ ${prefix}break-wall _teks_
-│⌯ ${prefix}christmas _teks_
-│⌯ ${prefix}cmm _teks_
-│⌯ ${prefix}crosslogo _teks_
-│⌯ ${prefix}cslogo _teks_
-│⌯ ${prefix}deluxe-gold _teks_
-│⌯ ${prefix}deluxe-silver _teks_
-│⌯ ${prefix}dropwater _teks_|text_
-│⌯ ${prefix}firedragon _teks_
-│⌯ ${prefix}firewing _teks_
-│⌯ ${prefix}firework _teks_
-│⌯ ${prefix}flametext _teks_
-│⌯ ${prefix}flowertext _teks_
-│⌯ ${prefix}flower _teks_
-│⌯ ${prefix}galaxyangel _teks_
-│⌯ ${prefix}galaxyedge _teks_
-│⌯ ${prefix}galaxysprout _teks_
-│⌯ ${prefix}glossy-blue _teks_
-│⌯ ${prefix}glossy-carbon _teks_
-│⌯ ${prefix}glowtext _teks_
-│⌯ ${prefix}glow _teks_
-│⌯ ${prefix}glue _teks_
-│⌯ ${prefix}googleimage _teks_
-│⌯ ${prefix}gradient _teks_
-│⌯ ${prefix}greenneon _teks_
-│⌯ ${prefix}halloween _teks_
-│⌯ ${prefix}horror _teks_
-│⌯ ${prefix}joker _teks_
-│⌯ ${prefix}kanna _teks_
-│⌯ ${prefix}lava _teks_
-│⌯ ${prefix}leavest _teks_
-│⌯ ${prefix}lightgerm _teks_
-│⌯ ${prefix}logoa _teks_|text_
-│⌯ ${prefix}loveshadow _teks_
-│⌯ ${prefix}luxury _teks_
-│⌯ ${prefix}marvel _teks_|text_
-│⌯ ${prefix}matrix _teks_
-│⌯ ${prefix}metal-dark _teks_
-│⌯ ${prefix}metal-purple _teks_
-│⌯ ${prefix}minion _teks_
-│⌯ ${prefix}moon _teks_
-│⌯ ${prefix}naruto _teks_
-│⌯ ${prefix}neon-light _teks_
-│⌯ ${prefix}neon2 _teks_
-│⌯ ${prefix}neondevil _teks_
-│⌯ ${prefix}neon _teks_
+│⌯ ${prefix}tweettrump *text*
+│⌯ ${prefix}1917 *text*
+│⌯ ${prefix}angelwing *text*
+│⌯ ${prefix}bannerepep *text*
+│⌯ ${prefix}blood *text*
+│⌯ ${prefix}bluelight *text*
+│⌯ ${prefix}blueneon *text*
+│⌯ ${prefix}break-wall *text*
+│⌯ ${prefix}christmas *text*
+│⌯ ${prefix}cmm *text*
+│⌯ ${prefix}crosslogo *text*
+│⌯ ${prefix}cslogo *text*
+│⌯ ${prefix}deluxe-gold *text*
+│⌯ ${prefix}deluxe-silver *text*
+│⌯ ${prefix}dropwater *text|text*
+│⌯ ${prefix}firedragon *text*
+│⌯ ${prefix}firewing *text*
+│⌯ ${prefix}firework *text*
+│⌯ ${prefix}flametext *text*
+│⌯ ${prefix}flowertext *text*
+│⌯ ${prefix}flower *text*
+│⌯ ${prefix}galaxyangel *text*
+│⌯ ${prefix}galaxyedge *text*
+│⌯ ${prefix}galaxysprout *text*
+│⌯ ${prefix}glossy-blue *text*
+│⌯ ${prefix}glossy-carbon *text*
+│⌯ ${prefix}glowtext *text*
+│⌯ ${prefix}glow *text*
+│⌯ ${prefix}glue *text*
+│⌯ ${prefix}googleimage *text*
+│⌯ ${prefix}gradient *text*
+│⌯ ${prefix}greenneon *text*
+│⌯ ${prefix}halloween *text*
+│⌯ ${prefix}horror *text*
+│⌯ ${prefix}joker *text*
+│⌯ ${prefix}kanna *text*
+│⌯ ${prefix}lava *text*
+│⌯ ${prefix}leavest *text*
+│⌯ ${prefix}lightgerm *text*
+│⌯ ${prefix}logoa *text|text*
+│⌯ ${prefix}loveshadow *text*
+│⌯ ${prefix}luxury *text*
+│⌯ ${prefix}marvel *text|text*
+│⌯ ${prefix}matrix *text*
+│⌯ ${prefix}metal-dark *text*
+│⌯ ${prefix}metal-purple *text*
+│⌯ ${prefix}minion *text*
+│⌯ ${prefix}moon *text*
+│⌯ ${prefix}naruto *text*
+│⌯ ${prefix}neon-light *text*
+│⌯ ${prefix}neon2 *text*
+│⌯ ${prefix}neondevil *text*
+│⌯ ${prefix}neon *text*
 │⌯ ${prefix}nulis2
-│⌯ ${prefix}nulis _teks_
-│⌯ ${prefix}papercut _teks_
-│⌯ ${prefix}phcoment _teks_|text_
-│⌯ ${prefix}pornhub _teks_|text_
-│⌯ ${prefix}pubglogo _teks_|text_
-│⌯ ${prefix}sand-engrave _teks_
-│⌯ ${prefix}sand-summery _teks_
-│⌯ ${prefix}sand-writing _teks_
-│⌯ ${prefix}sand2 _teks_
-│⌯ ${prefix}sand _teks_
-│⌯ ${prefix}seasidesand _teks_
-│⌯ ${prefix}silktext _teks_
-│⌯ ${prefix}skeleton _teks_
-│⌯ ${prefix}skytext _teks_
-│⌯ ${prefix}sky _teks_
-│⌯ ${prefix}smoketext _teks_
-│⌯ ${prefix}starmetalic _teks_
-│⌯ ${prefix}summer _teks_
-│⌯ ${prefix}t3d _teks_
-│⌯ ${prefix}tahta _teks_
-│⌯ ${prefix}tfire _teks_
-│⌯ ${prefix}thunder _teks_
-│⌯ ${prefix}toxic _teks_
-│⌯ ${prefix}underwater _teks_
-│⌯ ${prefix}viettel _teks_
-│⌯ ${prefix}wall _teks_
-│⌯ ${prefix}water3d _teks_
-│⌯ ${prefix}wicker _teks_
-│⌯ ${prefix}winter _teks_
-│⌯ ${prefix}wolflogo _teks_
-│⌯ ${prefix}wolf _teks_
-│⌯ ${prefix}writegalaxy _teks_
-│⌯ ${prefix}xmas _teks_
-│⌯ ${prefix}yasuo _teks_
-│⌯ ${prefix}ytgold _teks_
-│⌯ ${prefix}ytsilver _teks_
+│⌯ ${prefix}nulis *text*
+│⌯ ${prefix}papercut *text*
+│⌯ ${prefix}phcoment *text|text*
+│⌯ ${prefix}pornhub *text|text*
+│⌯ ${prefix}pubglogo *text|text*
+│⌯ ${prefix}sand-engrave *text*
+│⌯ ${prefix}sand-summery *text*
+│⌯ ${prefix}sand-writing *text*
+│⌯ ${prefix}sand2 *text*
+│⌯ ${prefix}sand *text*
+│⌯ ${prefix}seasidesand *text*
+│⌯ ${prefix}silktext *text*
+│⌯ ${prefix}skeleton *text*
+│⌯ ${prefix}skytext *text*
+│⌯ ${prefix}sky *text*
+│⌯ ${prefix}smoketext *text*
+│⌯ ${prefix}starmetalic *text*
+│⌯ ${prefix}summer *text*
+│⌯ ${prefix}t3d *text*
+│⌯ ${prefix}tahta *text*
+│⌯ ${prefix}tfire *text*
+│⌯ ${prefix}thunder *text*
+│⌯ ${prefix}toxic *text*
+│⌯ ${prefix}underwater *text*
+│⌯ ${prefix}viettel *text*
+│⌯ ${prefix}wall *text*
+│⌯ ${prefix}water3d *text*
+│⌯ ${prefix}wicker *text*
+│⌯ ${prefix}winter *text*
+│⌯ ${prefix}wolflogo *text*
+│⌯ ${prefix}wolf *text*
+│⌯ ${prefix}writegalaxy *text*
+│⌯ ${prefix}xmas *text*
+│⌯ ${prefix}yasuo *text*
+│⌯ ${prefix}ytgold *text*
+│⌯ ${prefix}ytsilver *text*
 │⌯ ${prefix}emoji 👼
 ╰─⊸ *Wudy ⌕*`
 }
@@ -991,23 +991,23 @@ const other = (prefix) => {
 ╭⌯ ${prefix}add 62xxx
 │⌯ ${prefix}kick 62xxx
 │⌯ ${prefix}ping
-│⌯ ${prefix}antilink _on / off_
-│⌯ ${prefix}get _link_
-│⌯ ${prefix}getpp _@user_
-│⌯ ${prefix}getbio _@user_
-│⌯ ${prefix}getname _reply_
-│⌯ ${prefix}size _reply media_
-│⌯ ${prefix}colongsw _reply sw_
+│⌯ ${prefix}antilink *on / off*
+│⌯ ${prefix}get *link*
+│⌯ ${prefix}getpp *@user*
+│⌯ ${prefix}getbio *@user*
+│⌯ ${prefix}getname *reply*
+│⌯ ${prefix}size *reply media*
+│⌯ ${prefix}colongsw *reply sw*
 │⌯ ${prefix}tagall
 │⌯ ${prefix}listonline
-│⌯ ${prefix}caripesan query
-│⌯ ${prefix}caripesan2 _query_
-│⌯ ${prefix}searchmsg _query|total_
-│⌯ ${prefix}sider _reply pesan bot_
-│⌯ ${prefix}del _reply pesan bot_
-│⌯ ${prefix}q _reply pesan_
-│⌯ ${prefix}afk _reason_
-│⌯ ${prefix}getsider _reply pesan bot_
+│⌯ ${prefix}caripesan *query*
+│⌯ ${prefix}caripesan2 *query*
+│⌯ ${prefix}searchmsg *query|total*
+│⌯ ${prefix}sider *reply pesan bot*
+│⌯ ${prefix}del *reply pesan bot*
+│⌯ ${prefix}q *reply pesan*
+│⌯ ${prefix}afk *reason*
+│⌯ ${prefix}getsider *reply pesan bot*
 │⌯ ${prefix}tagall
 │⌯ ${prefix}revoke
 │⌯ ${prefix}setname
@@ -1033,22 +1033,22 @@ const other = (prefix) => {
 │⌯ ${prefix}buyglimit
 │⌯ ${prefix}blowjob
 │⌯ ${prefix}awoo
-│⌯ ${prefix}youwatch _teks_
-│⌯ ${prefix}thelazy _teks_
-│⌯ ${prefix}samehadaku _teks_
-│⌯ ${prefix}ipgeo _ip_
-│⌯ ${prefix}amazon _teks_
-│⌯ ${prefix}md5enc _kata_
-│⌯ ${prefix}moddroid _teks_
-│⌯ ${prefix}ssfile _teks_
-│⌯ ${prefix}ssticker _teks_
-│⌯ ${prefix}pinterst _teks_
-│⌯ ${prefix}gsearch _teks_
-│⌯ ${prefix}gimage _teks_
-│⌯ ${prefix}quran _1|2_
-│⌯ ${prefix}translate _kata_
-│⌯ ${prefix}tts _id kata_
-│⌯ ${prefix}detikvn _12345_
+│⌯ ${prefix}youwatch *text*
+│⌯ ${prefix}thelazy *text*
+│⌯ ${prefix}samehadaku *text*
+│⌯ ${prefix}ipgeo *ip*
+│⌯ ${prefix}amazon *text*
+│⌯ ${prefix}md5enc *kata*
+│⌯ ${prefix}moddroid *text*
+│⌯ ${prefix}ssfile *text*
+│⌯ ${prefix}ssticker *text*
+│⌯ ${prefix}pinterst *text*
+│⌯ ${prefix}gsearch *text*
+│⌯ ${prefix}gimage *text*
+│⌯ ${prefix}quran *1|2*
+│⌯ ${prefix}translate *kata*
+│⌯ ${prefix}tts *id kata*
+│⌯ ${prefix}detikvn *12345*
 │⌯ ${prefix}megumin
 ╰─⊸ *Wudy ⌕*`
 }
@@ -1086,24 +1086,24 @@ const ownermenu = (prefix) => {
 │⌯ ${prefix}pin
 │⌯ ${prefix}delthischat
 │⌯ ${prefix}unpin
-│⌯ ${prefix}autoread <query> on / off
-│⌯ ${prefix}antibug on / off
-│⌯ ${prefix}antidelete on / off
-│⌯ ${prefix}anticall on / off
-│⌯ ${prefix}autoketik on / off
-│⌯ ${prefix}autobio on / off
-│⌯ ${prefix}antihidetag on / off
-│⌯ ${prefix}autovn on / off
-│⌯ ${prefix}register on / off
-│⌯ ${prefix}autorespon on / off
+│⌯ ${prefix}autoread <query> *on / off*
+│⌯ ${prefix}antibug *on / off*
+│⌯ ${prefix}antidelete *on / off*
+│⌯ ${prefix}anticall *on / off*
+│⌯ ${prefix}autoketik *on / off*
+│⌯ ${prefix}autobio *on / off*
+│⌯ ${prefix}antihidetag *on / off*
+│⌯ ${prefix}autovn *on / off*
+│⌯ ${prefix}register *on / off*
+│⌯ ${prefix}autorespon *on / off*
 │⌯ ${prefix}setthumb
 │⌯ ${prefix}settarget
 │⌯ ${prefix}setfakeimg
 │⌯ ${prefix}setreply
-│⌯ ${prefix}term _code_
-│⌯  $  _termux code_
-│⌯  =>  _eval async_
-│⌯  x or > _code_
+│⌯ ${prefix}term *code*
+│⌯  $  *termux code*
+│⌯  =>  *eval async*
+│⌯  x or > *code*
 ╰─⊸ *Wudy ⌕*`
 }
 
@@ -1412,10 +1412,10 @@ const quotesmenu = (prefix) => {
 │⌯ ${prefix}truth  
 │⌯ ${prefix}katabijak_lucu   
 │⌯ ${prefix}katacaklontong 
-│⌯ ${prefix}artinama _nama_
-│⌯ ${prefix}artimimpi _mimpi_
-│⌯ ${prefix}artikata _kata_
-│⌯ ${prefix}zodiak _teks_
+│⌯ ${prefix}artinama *nama*
+│⌯ ${prefix}artimimpi *mimpi*
+│⌯ ${prefix}artikata *kata*
+│⌯ ${prefix}zodiak *text*
 │⌯ ${prefix}katadilan  
 ╰─⊸ *Wudy ⌕*`
 }
@@ -1438,8 +1438,8 @@ const animemenu = (prefix) => {
 	return`*</ANIME MENU/>*
 
 ╭⌯ ${prefix}random
-│⌯ ${prefix}topmanga _teks_
-│⌯ ${prefix}topanime _teks_
+│⌯ ${prefix}topmanga *text*
+│⌯ ${prefix}topanime *text*
 │⌯ ${prefix}anna
 │⌯ ${prefix}asuna_yuki 
 │⌯ ${prefix}ayuzawa 
@@ -1467,7 +1467,7 @@ const animemenu = (prefix) => {
 │⌯ ${prefix}yukino 
 │⌯ ${prefix}yuzuki 
 │⌯ ${prefix}akame
-│⌯ ${prefix}wallanime _teks_
+│⌯ ${prefix}wallanime *text*
 │⌯ ${prefix}mikosiba
 ╰─⊸ *Wudy ⌕*`
 }
