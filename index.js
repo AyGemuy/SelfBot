@@ -563,7 +563,7 @@ buttons: [
 "fileEncSha256": "NI9ykWUcXKquea4BmH7GgzhMb3pAeqqwE+MTFbH/Wk8=", "directPath": "/v/t62.7119-24/35160407_568282564396101_3119299043264875885_n.enc?ccb=11-4&oh=d43befa9a76b69d757877c3d430a0752&oe=61915CEC", "mediaKeyTimestamp": "1634472176",
 "jpegThumbnail": fs.readFileSync(`image/miku.jpg`)}},
 MessageType.buttonsMessage,
-{ quoted: fgif2,sendEphemeral: true,
+{ quoted: mek,sendEphemeral: true,
 thumbnail: fs.readFileSync(`image/miku.jpg`),
 contextInfo: { forwardingScore: 508,
 isForwarded: true,
@@ -581,7 +581,7 @@ let po = alpha.prepareMessageFromContent(from, {
 "buttonText": `SELECT HERE ${emoj}`,
 "footerText": `${botname}`,
 "listType": "SINGLE_SELECT",
-"sections": list}}, {quoted: fgif2})
+"sections": list}}, {quoted: mek})
 return alpha.relayWAMessage(po, {waitForAck: true})
 }
 const sendButtDoc = (from, titel2) => {
@@ -611,7 +611,7 @@ type: 1}],
 "mediaKeyTimestamp": "1634472176",
 "jpegThumbnail": fs.readFileSync(`image/miku.jpg`)}},
 MessageType.buttonsMessage,
-{ quoted: fgif2,sendEphemeral: true,
+{ quoted: mek,sendEphemeral: true,
 thumbnail: fs.readFileSync(`image/miku.jpg`),
 contextInfo: { forwardingScore: 508,
 isForwarded: true,
@@ -1679,7 +1679,7 @@ res = alpha.prepareMessageFromContent(from,
 "footerText": `${ucapannya2}`, 
 "thumbnail": thumb_miku,
 "surface": 'CATALOG' }
-}, {quoted: fgif2})
+}, {quoted: mek})
 alpha.relayWAMessage(res)
 }
 const jadigc = (teks) => {
@@ -1690,7 +1690,7 @@ grup = alpha.prepareMessageFromContent(from,
 "footerText": `${ucapannya2}`,
 "jpegThumbnail": thumb_miku,
 "caption": teks}
-}, {quoted: fgif2})
+}, {quoted: mek})
 alpha.relayWAMessage(grup)
 }
 const jadicatalog = (teks) => {
@@ -1723,7 +1723,7 @@ anu = alpha.prepareMessageFromContent(from,{
 	"isForwarded": true
 }
 }
-},{quoted: fgif2, contextInfo: { mentionedJid: [sender]}})
+},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
 alpha.relayWAMessage(anu)
 }
 const sendFakeThumb = async function(from, url, title, desc){
@@ -1856,12 +1856,12 @@ participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "62882248593508@s.whats
 "sellerJid": "62887435047326@s.whatsapp.net",
 "token": "AR5b5YFz2g4W5fYrjbeakPiI3/XxarATSeP+KLh+0FGwkw=="
 }}}
-const ftroli ={key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "6289523258649-1604595598@g.us" }, "message": {orderMessage: {itemCount: 2021,status: 200, thumbnail: thumb_miku, surface: 200, message: `𝐸𝑥𝑒𝑐𝑢𝑡𝑒 : ${command}`, orderTitle: 'Wudy', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
+const ftroli ={key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "6289523258649-1604595598@g.us" }, "message": {orderMessage: {itemCount: 2021,status: 200, thumbnail: thumb_miku, surface: 200, message: `𝐸𝑥𝑒𝑐 : ${command}`, orderTitle: 'Wudy', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
 const fdoc = {key : {participant : '0@s.whatsapp.net'},message: {documentMessage: {title: `${creator}`,jpegThumbnail: thumb_miku}}}
 const fvn = {key: {participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "6289643739077-1613049930@g.us" } : {})},message: { "audioMessage": {"mimetype":"audio/ogg; codecs=opus","seconds":86400000,"ptt": "true"}} } 
 const fgif = {key: {participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "6289643739077-1613049930@g.us" } : {})},message: {"videoMessage": { "title":`${creator}`, "h": `Hmm`,'seconds': '99999', 'gifPlayback': 'true', 'caption': `${creator}`, 'jpegThumbnail': thumb_miku}}}
-const fgif2 = {key: {participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "0@s.whatsapp.net" } : {})},message: {"videoMessage": {'gifPlayback': 'true', 'caption': `؜✗ ${pushname} ✗\n𝐸𝑥𝑒𝑐𝑢𝑡𝑒 : ${command}`, 'jpegThumbnail': pp_userz}}}
-const fgclink = {key: {participant: "0@s.whatsapp.net","remoteJid": "0@s.whatsapp.net"},"message": {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us","inviteCode": "m","groupName": "P", "caption": `✗ ${pushname} ✗\n𝐸𝑥𝑒𝑐𝑢𝑡𝑒 : ${command}`, 'jpegThumbnail': fs.readFileSync(`image/${fthumb}`)}}}
+const fgif2 = {key: {participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "0@s.whatsapp.net" } : {})},message: {"videoMessage": {'gifPlayback': 'true', 'caption': `؜✗ ${pushname} ✗\n𝐸𝑥𝑒𝑐 : ${command}`, 'jpegThumbnail': pp_userz}}}
+const fgclink = {key: {participant: "0@s.whatsapp.net","remoteJid": "0@s.whatsapp.net"},"message": {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us","inviteCode": "m","groupName": "P", "caption": `✗ ${pushname} ✗\n𝐸𝑥𝑒𝑐 : ${command}`, 'jpegThumbnail': fs.readFileSync(`image/${fthumb}`)}}}
 const fgclink2 = {key: {participant: "0@s.whatsapp.net","remoteJid": "0@s.whatsapp.net"},"message": {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us","inviteCode": "m","groupName": "P", "caption": `${fake}`, 'jpegThumbnail': thumb_miku}}}
 const fvideo = {key: { fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "6289643739077-1613049930@g.us" } : {}) },message: { "videoMessage": { "title":`${creator}`, "h": `Hmm`,'seconds': '99999', 'caption': `${creator}`, 'jpegThumbnail': thumb_miku}}}
 const floc = {contextInfo: {"forwardingScore":999,"isForwarded":true,'stanzaId': msgId, 'participant':`${numbernye}@s.whatsapp.net`, 'remoteJid': '6283136505591-1614953337@g.us', 'quotedMessage': {"locationMessage": {"degreesLatitude": 41.893714904785156, "degreesLongitude": -87.63370513916016, "name": fake , 'jpegThumbnail': thumb_miku}}}}
@@ -1955,7 +1955,7 @@ mime = Mimetype.gif
 if(mime.split("/")[0] === "audio"){
 mime = Mimetype.mp4Audio
 }
-alpha.sendMessage(to, media, type, { quoted: fgif2, mimetype: mime, caption: text,contextInfo: {"mentionedJid": mids}})
+alpha.sendMessage(to, media, type, { quoted: mek, mimetype: mime, caption: text,contextInfo: {"mentionedJid": mids}})
 fs.unlinkSync(filename)
 });
 }
@@ -1996,10 +1996,10 @@ mime = Mimetype.pdf
 if(mime.split("/")[0] === "audio"){
 mime = Mimetype.mp4Audio
 }
-return alpha.sendMessage(from, await getBuffer(url), type, {caption: caption, quoted: fgif2, mimetype: mime, contextInfo: {"mentionedJid": men ? men : []}})
+return alpha.sendMessage(from, await getBuffer(url), type, {caption: caption, quoted: mek, mimetype: mime, contextInfo: {"mentionedJid": men ? men : []}})
 }
 const textImg = (teks) => {
-return alpha.sendMessage(from, teks, text, {quoted: fgif2, thumbnail: thumb_miku})
+return alpha.sendMessage(from, teks, text, {quoted: mek, thumbnail: thumb_miku})
 }
 const sendStickerUrl = async(to, url) => {
 console.log(color(time, 'magenta'), color(moment.tz('Asia/Jakarta').format('HH:mm:ss'), "gold"), color('Downloading sticker...'))
@@ -2135,7 +2135,7 @@ let found = false
 for (let wn of _win) {
 if (wn.jid === sender) {
 let winCounts = winawal - wn.win
-if (winCounts <= 0) return alpha.sendMessage(from, `Anda belum pernah memainkan game tictactoe${enter}${enter}Jumlah kemenangan kamu didalam game *tictactoe* adalah: ${winCounts}`, text, { quoted: fgif2 })
+if (winCounts <= 0) return alpha.sendMessage(from, `Anda belum pernah memainkan game tictactoe${enter}${enter}Jumlah kemenangan kamu didalam game *tictactoe* adalah: ${winCounts}`, text, { quoted: mek })
 return `${winCounts}`
 found = true
 }
@@ -2153,7 +2153,7 @@ let found = false
 for (let ls of _lose) {
 if (ls.jid === sender) {
 let loseCounts = loseawal - ls.lose
-if (loseCounts <= 0) return alpha.sendMessage(from, `Anda belum pernah memainkan game tictactoe${enter}${enter}Jumlah kemenangan kamu didalam game *tictactoe* adalah: ${winCounts}`, text, { quoted: fgif2 })
+if (loseCounts <= 0) return alpha.sendMessage(from, `Anda belum pernah memainkan game tictactoe${enter}${enter}Jumlah kemenangan kamu didalam game *tictactoe* adalah: ${winCounts}`, text, { quoted: mek })
 return `${loseCounts}`
 found = true
 }
@@ -2284,7 +2284,7 @@ fs.writeFileSync("./src/tictactoe.json", JSON.stringify(tictactoe))
 })
 fs.unlinkSync("./temp/" + from + ".json");
 } else if (sender == `${tttSkuy.Y}@s.whatsapp.net` && budy.toLowerCase() == 'n') {
-alpha.sendMessage(from, `「 *Game Tictactoe Rejected* 」\n\n• @${tttSkuy.Y} yahaha cupu lo`, text, {quoted: fgif2, contextInfo: { mentionedJid: [tttSkuy.Y + "@s.whatsapp.net"]}})
+alpha.sendMessage(from, `「 *Game Tictactoe Rejected* 」\n\n• @${tttSkuy.Y} yahaha cupu lo`, text, {quoted: mek, contextInfo: { mentionedJid: [tttSkuy.Y + "@s.whatsapp.net"]}})
 fs.unlinkSync("./temp/" + from + ".json");
 }
 }
@@ -2418,7 +2418,7 @@ await alpha.sendMessage(`* 「 LEVEL UP 」 *
 💳 *Balance :* ${getBalance(sender, balance)}
 👛 *Dompet :* ${checkATMuser(sender)}
 📛 *Role :* ${role}
-Congrats 🎉`,text, {quoted: fgif2, contextInfo: {"mentionedJid": [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true })
+Congrats 🎉`,text, {quoted: mek, contextInfo: {"mentionedJid": [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true })
 */
 try {
 pep = await alpha.getProfilePicture(sender)
@@ -2435,7 +2435,7 @@ capt = ` *「 LEVEL UP 」*
 👛 *Dompet :* ${checkATMuser(sender)}
 📛 *Role :* ${role}
 Congrats 🎉`
-await alpha.sendMessage(from, lev_up, MessageType.image, {quoted: fgif2, caption: capt, contextInfo: {"mentionedJid": [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true })
+await alpha.sendMessage(from, lev_up, MessageType.image, {quoted: mek, caption: capt, contextInfo: {"mentionedJid": [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true })
 }
 } catch (err) {
 console.error(err)
@@ -2515,11 +2515,11 @@ footerText: fortext,
 buttons: but,
 headerType: 1
 }
-alpha.sendMessage(from, buttonMessages, MessageType.buttonsMessage, {quoted: fgif2,sendEphemeral: true})
+alpha.sendMessage(from, buttonMessages, MessageType.buttonsMessage, {quoted: mek,sendEphemeral: true})
 }
 const sendKontak = (from, nomor, nama, org = "") => {
 const vcard = 'BEGIN:VCARD\n' + 'VERSION:3.0\n' + 'FN:' + nama + '\n' + 'ORG:' + org + '\n' + 'TEL;type=CELL;type=VOICE;waid=' + nomor + ':+' + nomor + '\n' + 'END:VCARD'
-alpha.sendMessage(from, {displayname: nama, vcard: vcard}, MessageType.contact, {quoted: fgif2})
+alpha.sendMessage(from, {displayname: nama, vcard: vcard}, MessageType.contact, {quoted: mek})
 }
 
 if (isMuted){
@@ -2582,7 +2582,7 @@ const uptime = process.uptime()
 const tekss = `${kyun(uptime)}`
 const ini_totalchat = `${totalchat.length - giid.lenght}`
 const replyy = (teks) => {
-alpha.sendMessage(from, teks, sticker, { quoted: fgif2 })
+alpha.sendMessage(from, teks, sticker, { quoted: mek })
 }
 for (let zeeone of setiker){
 if (budy === zeeone){
@@ -2605,12 +2605,12 @@ alpha.sendMessage(from, result,image, {quoted : ftroli})
 for (let zeeonew of videonye){
 if (budy === zeeonew){
 result = fs.readFileSync(`./media/video/${zeeonew}.mp4`)
-alpha.sendMessage(from, result,video, {mimetype: 'video/mp4', duration: 86400000, quoted: fgif2})
+alpha.sendMessage(from, result,video, {mimetype: 'video/mp4', duration: 86400000, quoted: mek})
 }
 } 
 for (let i = 0; i < filter.length ; i++) {
 if (budy == filter[i].Filter) {
-alpha.sendMessage(from, filter[i].Jawaban, text, {quoted: fgif2})
+alpha.sendMessage(from, filter[i].Jawaban, text, {quoted: mek})
 }
 } 
 // Akinator
@@ -3830,6 +3830,17 @@ let papako = [{
 sendButLocation(from, teks , `Makasih Udah Verifikasi 😉\n${botname}™© | By ${ownername}`,pp_userz, papako, {contextInfo: { mentionedJid: [sender]}})
 break
 
+case '?':
+teks = `Ada apa kak *${pushname}*,
+*${botname}* disini ada yang bisa saya bantu?`
+let papako = [
+{buttonId: 'x_menu', buttonText: {displayText: '🌱 List-Menu'}, type: 1},
+{buttonId: 'menu_x', buttonText: {displayText: '🌱 Lol-Menu'}, type: 1},
+{buttonId: 'menu_xc', buttonText: {displayText: '🌱 Xc-Menu'}, type: 1}
+]
+sendButLocation(from, teks , `Silahkan pilih menu untuk menggunakan ${botname}`,pp_userz, papako, {contextInfo: { mentionedJid: [sender]}})
+break
+
 case 'menu':
 if(menusimple == false){
 try {
@@ -3847,33 +3858,33 @@ const ngelink_ = ["https://www.youtube.com","https://www.instagram.com","http://
 const pelink_ = ngelink_[Math.floor(Math.random() * ngelink_.length)]
 alpha.sendMessage(from,
 { contentText: `${ucapannya2} @${sender.split('@')[0]}
-「 *BOT INFO* 」
-*${emoj2} Creator :* _@${xtar.split('@')[0]}_
-*${emoj2} Powered :* _@${ini_mark.split('@')[0]}_
-*${emoj2} Mode :* _${banChats ? 'SELF-MODE' : 'PUBLIC-MODE'}_
-*${emoj2} Status :* _${offline ? 'OFFLINE' : 'ONLINE'}_
-*${emoj2} Prefix :* _${prefix}_
-*${emoj2} Group Chat :* _${giid.length}_
-*${emoj2} Private Chat :* _${totalchat.length - giid.length}_
-*${emoj2} Total Chat :* _${totalchat.length}_
-*${emoj2} Lib :* _Baileys_
-*${emoj2} Type :* _NodeJs_
-*${emoj2} Total hit :* _${hitall}_
-*${emoj2} Hit today :* _${hit_today.length}_
-*${emoj2} Speed :* _${latensii.toFixed(4)} Second_
-*${emoj2} Runtime :* _${kyun(anunya)}_
-*${emoj2} Battery :* _${isBattre}_
-*${emoj2} Charging :* _${isCharge}_
 「 *YOU INFO* 」
-*${emoj} Kak :* _${pushname}_
-*${emoj} Bio :* _${xbi ? `${xbi.status}` : '-'}_
-*${emoj} Nomor :* _@${sender.split('@')[0]}_
-*${emoj} Me :* _${mek.key.fromMe ? 'True' : 'False'}_
-*${emoj} Owner :* _${isOwner ? 'True' : `False`}_
-*${emoj} CoOwner :* _${isCreator ? 'True' : `False`}_`,
+*${emoj} Kak :* ${pushname}
+*${emoj} Bio :* ${xbi ? `${xbi.status}` : '-'}
+*${emoj} Nomor :* @${sender.split('@')[0]}
+*${emoj} Me :* ${mek.key.fromMe ? 'True' : 'False'}
+*${emoj} Owner :* ${isOwner ? 'True' : `False`}
+*${emoj} CoOwner :* ${isCreator ? 'True' : `False`}
+
+「 *BOT INFO* 」
+*${emoj2} Creator :* @${xtar.split('@')[0]}
+*${emoj2} Powered :* @${ini_mark.split('@')[0]}
+*${emoj2} Mode :* ${banChats ? 'SELF-MODE' : 'PUBLIC-MODE'}
+*${emoj2} Status :* ${offline ? 'OFFLINE' : 'ONLINE'}
+*${emoj2} Prefix :* ${prefix}
+*${emoj2} Group Chat :* ${giid.length}
+*${emoj2} Private Chat :* ${totalchat.length - giid.length}
+*${emoj2} Total Chat :* ${totalchat.length}
+*${emoj2} Total hit :* ${hitall}
+*${emoj2} Hit today :* ${hit_today.length}
+*${emoj2} Speed :* ${latensii.toFixed(4)} Second_
+*${emoj2} Runtime :* ${kyun(anunya)}
+*${emoj2} Battery :* ${isBattre}
+*${emoj2} Charging :* ${isCharge}`,
 buttons: [
-{buttonId: 'x_menu', buttonText: {displayText: '🌱 List menu'}, type: 1},
-{buttonId: 'menu_x', buttonText: {displayText: '🍵 Lol menu'}, type: 1}
+{buttonId: 'x_menu', buttonText: {displayText: '🌱 List-Menu'}, type: 1},
+{buttonId: 'menu_x', buttonText: {displayText: '🌱 Lol-Menu'}, type: 1},
+{buttonId: 'menu_xc', buttonText: {displayText: '🌱 Xc-Menu'}, type: 1}
 ],
 "headerType": "DOCUMENT",
 "documentMessage": { "url": "https://mmg.whatsapp.net/d/f/Ano5cGYOFQnC51uJaqGBWiCrSJH1aDCi8-YPQMMb1N1y.enc",
@@ -3889,7 +3900,7 @@ buttons: [
 "mediaKeyTimestamp": "1634472176",
 "jpegThumbnail": xc}},
 MessageType.buttonsMessage,
-{ quoted: fgif2,sendEphemeral: true,
+{ quoted: mek,sendEphemeral: true,
 thumbnail: fs.readFileSync(`image/miku.jpg`),
 contextInfo: { forwardingScore: 508,
 isForwarded: true,
@@ -3900,39 +3911,35 @@ thumbnail: xc,
 mediaType:"2",
 previewType: "VIDEO",
 mediaUrl: pelink_}}})
-} else if(menusimple = true){ 
-sendStickerFromUrl(from, `https://i.ibb.co/9rsxrhR/menu.webp`, mek)
-teks = `${emoj} MENU BOT`
-let pov = [{
-"buttonId": 'x_menu',
-"buttonText": {
-"displayText": "List-Menu"
-},
-"type": "RESPONSE"
-},{
-"buttonId": 'menu_x',
-"buttonText": {
-"displayText": "Lol-Menu"
-},
-"type": "RESPONSE"
-},{
-"buttonId": 'menu_xc',
-"buttonText": {
-"displayText": "Xc-Menu"
-},
-"type": "RESPONSE"
-}
+} else if(menusimple = true){
+const medd_1 = await alpha.prepareMessage(from, m_thumb, MessageType.location, {thumbnail: thumb_miku})
+let ephe_nya = medd_1.message["ephemeralMessage"] ? medd_1.message.ephemeralMessage : medd_1
+const bttn_1 = [
+{buttonId: 'x_menu', buttonText: {displayText: '🌱 List-Menu'}, type: 1},
+{buttonId: 'menu_x', buttonText: {displayText: '🌱 Lol-Menu'}, type: 1},
+{buttonId: 'menu_xc', buttonText: {displayText: '🌱 Xc-Menu'}, type: 1}
 ]
-sendButLocation(from, teks , `Pilih Menu \n${botname}\n
-┈┈┈┈▕▔╱▔▔▔━▁
-┈┈┈▕▔╱╱╱👁┈╲▂▔▔╲
-┈┈▕▔╱╱╱╱💧▂▂▂▂▂▂▏
-┈▕▔╱▕▕╱╱╱┈▽▽▽▽▽
-▕▔╱┊┈╲╲╲╲▂△△△△
-▔╱┊┈╱▕╲▂▂▂▂▂▂╱
-╱┊┈╱┉▕┉┋╲┈`,pp_userz, pov, {contextInfo: { mentionedJid: [sender]}})
+const buttn_1 = {
+contentText: allmenu(prefix, wita, wit, ucapannya2, timuu, status, wa_version, mcc, mnc, os_version, device_manufacturer, device_model, alfa , alfa1, thisDay, ini_tanggal, totalchat, hit_today, ini_gcchat),
+footerText: `${tampilTanggal}${enter}${enter}Regard @${koko.split('@')[0]}`,
+buttons: bttn_1,
+headerType: 6,
+locationMessage: ephe_nya.message.locationMessage
+}
+alpha.sendMessage(from, buttn_1, MessageType.buttonsMessage,{
+"contextInfo": {
+"externalAdReply": {
+"forwardingScore": 999,isForwarded: true,
+"title": `${ucapannya2}` ,
+"body": `${botname}`,
+"sourceUrl": apiku,
+"thumbnail": thumb_miku},
+"mentionedJid" : [sender,koko,ini_mark]},
+quoted: mek, sendEphemeral: true
+})
 }
 break
+
 
 case 'help':
 try {
@@ -3973,8 +3980,9 @@ ini_anu =`${ucapannya2} @${sender.split('@')[0]}
 *${emoj} Owner :* _${isOwner ? 'True' : `False`}_
 *${emoj} CoOwner :* _${isCreator ? 'True' : `False`}_`
 const buttons = [
-{buttonId: 'x_menu', buttonText: {displayText: '🌱 List menu'}, type: 1},
-{buttonId: 'menu_x', buttonText: {displayText: '🍵 Lol menu'}, type: 1}
+{buttonId: 'x_menu', buttonText: {displayText: '🌱 List-Menu'}, type: 1},
+{buttonId: 'menu_x', buttonText: {displayText: '🌱 Lol-Menu'}, type: 1},
+{buttonId: 'menu_xc', buttonText: {displayText: '🌱 Xc-Menu'}, type: 1}
 ]
 const btn = {
 contentText: ini_anu ,
@@ -3991,12 +3999,13 @@ let content1 = thumb_miku
 const media1 = await alpha.prepareMessage(from, content1, MessageType.location, {thumbnail: content1})
 let bacotlu1 = media1.message["ephemeralMessage"] ? media1.message.ephemeralMessage : media1
 const buttons1 = [
-{buttonId: 'statiktiknya', buttonText:{displayText: '📱 Statistik'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: '🏷️ List Message'}, type: 1}
+{buttonId: 'x_menu', buttonText: {displayText: '🌱 List-Menu'}, type: 1},
+{buttonId: 'menu_x', buttonText: {displayText: '🌱 Lol-Menu'}, type: 1},
+{buttonId: 'menu_xc', buttonText: {displayText: '🌱 Xc-Menu'}, type: 1}
 ]
 const btn1 = {
 contentText: allmenu(prefix, wita, wit, ucapannya2, timuu, status, wa_version, mcc, mnc, os_version, device_manufacturer, device_model, alfa , alfa1, thisDay, ini_tanggal, totalchat, hit_today, ini_gcchat),
-footerText: `${tampilTanggal}${enter}${tampilWaktu}${enter}${enter}Regard @${koko.split('@')[0]}`,
+footerText: `${tampilTanggal}${enter}Regard @${koko.split('@')[0]}`,
 buttons: buttons1,
 headerType: 6,
 locationMessage: bacotlu1.message.locationMessage
@@ -4010,7 +4019,7 @@ alpha.sendMessage(from, btn1, MessageType.buttonsMessage,{
 "sourceUrl": apiku,
 "thumbnail": thumb_miku},
 "mentionedJid" : [sender,koko,ini_mark]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 }
 break
@@ -4041,7 +4050,7 @@ isForwarded: true,
 sendEphemeral: true,
 "mentionedJid" : [sender,koko],
 },
-quoted: fgif2,sendEphemeral: true
+quoted: mek,sendEphemeral: true
 })
 break
 
@@ -4128,7 +4137,7 @@ alpha.sendMessage(from, buttonMessagee, MessageType.buttonsMessage,{
 "contextInfo": {
 "forwardingScore": 999,isForwarded: true,
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 }
 break
@@ -4215,7 +4224,7 @@ if (!isGroup) return reply2(lang.onlygc())
 if (!isGroupAdmins) return reply2(lang.onlygcAdmin())
 if (!isBotGroupAdmins) return reply2(lang.otNotAdm())
 alpha.groupUpdateSubject(from, `${body.slice(9)}`)
-alpha.sendMessage(from, '「 SUKSES 」Mengubah Nama Grup my', text, { quoted: fgif2 })
+alpha.sendMessage(from, '「 SUKSES 」Mengubah Nama Grup my', text, { quoted: mek })
 break
 
 case 'setdesc':
@@ -4223,7 +4232,7 @@ if (!isGroup) return reply2(lang.onlygc())
 if (!isGroupAdmins) return reply2(lang.onlygcAdmin())
 if (!isBotGroupAdmins) return reply2('_Saya Bukan Admin_')
 alpha.groupUpdateDescription(from, `${body.slice(9)}`)
-alpha.sendMessage(from, '*「 SUKSES 」Mengubah Desk Grup', text, { quoted: fgif2 })
+alpha.sendMessage(from, '*「 SUKSES 」Mengubah Desk Grup', text, { quoted: mek })
 break
 
 case 'spam':
@@ -4279,7 +4288,7 @@ if (isMedia && !mek.message.videoMessage || isQuotedSticker) {
 const encmedia = isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 bc = await alpha.downloadMediaMessage(encmedia)
 for (let _ of anu) {
-alpha.sendMessage(_.jid, bc, sticker, {quoted: fgif2})
+alpha.sendMessage(_.jid, bc, sticker, {quoted: mek})
 }
 reply2('Suksess broadcast')
 }
@@ -4292,7 +4301,7 @@ if (isMedia && !mek.message.videoMessage || isQuotedVideo) {
 const encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 bc = await alpha.downloadMediaMessage(encmedia)
 for (let _ of anu) {
-alpha.sendMessage(_.jid, bc, video, {mimetype: 'video/mp4', duration: 86400000,quoted: fgif2,caption: `[ *${setting.botname} BROADCAST* ]\n\n${body.slice(9)}`})
+alpha.sendMessage(_.jid, bc, video, {mimetype: 'video/mp4', duration: 86400000,quoted: mek,caption: `[ *${setting.botname} BROADCAST* ]\n\n${body.slice(9)}`})
 }
 reply2(lang.successBc())
 }
@@ -4305,7 +4314,7 @@ if (isMedia && !mek.message.audioMessage || isQuotedAudio) {
 const encmedia = isQuotedAudio ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 bc = await alpha.downloadMediaMessage(encmedia)
 for (let _ of anu) {
-alpha.sendMessage(_.jid, bc, audio, {mimetype : 'audio/mp4' , duration : 86400000, ptt : true,quoted: fgif2,caption: `[ *${setting.botname} BROADCAST* ]\n\n${body.slice(9)}`})
+alpha.sendMessage(_.jid, bc, audio, {mimetype : 'audio/mp4' , duration : 86400000, ptt : true,quoted: mek,caption: `[ *${setting.botname} BROADCAST* ]\n\n${body.slice(9)}`})
 }
 reply2(lang.successBc())
 }
@@ -4329,7 +4338,7 @@ case 'creator':
 hehe = await alpha.sendMessage(from, {
 "displayName": "Wudy owner",
 "vcard": "BEGIN:VCARD\nVERSION:3.0\nN:;Wudy owner;;;\nFN:Wudy owner\nORG:Wudy owner\nTITLE:\nitem1.TEL;waid=6282195322106:+62 821-9532-2106\nitem1.X-ABLabel:Wudy owner\nX-WA-BIZ-DESCRIPTION:Semua bisa dimulai dengan mengetik #menu\nX-WA-BIZ-NAME:Wudy owner\nEND:VCARD"
-}, 'contactMessage', { quoted: fgif2})
+}, 'contactMessage', { quoted: mek})
 break
 
 case 'sider':
@@ -4411,7 +4420,7 @@ mem.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
 var options = {
 contextInfo: { mentionedJid: mem },
-quoted: fgif2
+quoted: mek
 }
 ini_buffer = fs.readFileSync(file)
 alpha.sendMessage(from, ini_buffer, sticker, options)
@@ -4435,7 +4444,7 @@ mem.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
 var options = {
 contextInfo: { mentionedJid: mem },
-quoted: fgif2
+quoted: mek
 }
 ini_buffer = fs.readFileSync(file)
 alpha.sendMessage(from, ini_buffer, sticker, options)
@@ -4452,7 +4461,7 @@ mem.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
 var options = {
 contextInfo: { mentionedJid: mem },
-quoted: fgif2
+quoted: mek
 }
 ini_buffer = fs.readFileSync(file)
 alpha.sendMessage(from, ini_buffer, image, options)
@@ -4471,7 +4480,7 @@ var options = {
 mimetype : 'audio/mp4',
 ptt : true,
 contextInfo: { mentionedJid: mem },
-quoted: fgif2
+quoted: mek
 }
 ini_buffer = fs.readFileSync(file)
 alpha.sendMessage(from, ini_buffer, audio, options)
@@ -4489,7 +4498,7 @@ mem.push(adm.id.replace('c.us', 's.whatsapp.net'))
 var options = {
 mimetype : 'video/mp4',
 contextInfo: { mentionedJid: mem },
-quoted: fgif2
+quoted: mek
 }
 ini_buffer = fs.readFileSync(file)
 alpha.sendMessage(from, ini_buffer, video, options)
@@ -4538,7 +4547,7 @@ exec(`ffmpeg -i ${media2} ${ran}`, (err) => {
 fs.unlinkSync(media2)
 if (err) return reply2(`Err: ${err}`)
 buffer453 = fs.readFileSync(ran)
-alpha.sendMessage(from, buffer453, audio, { mimetype : 'audio/mp4' , duration : 86400000, quoted: fgif2 })
+alpha.sendMessage(from, buffer453, audio, { mimetype : 'audio/mp4' , duration : 86400000, quoted: mek })
 fs.unlinkSync(ran)
 })
 break
@@ -4553,7 +4562,7 @@ exec(`ffmpeg -i ${media3} -filter_complex "[0:v]setpts=0.5*PTS[v];[0:a]atempo=2[
 fs.unlinkSync(media3)
 if (err) return reply2(`Err: ${err}`)
 buffer453 = fs.readFileSync(ran)
-alpha.sendMessage(from, buffer453, video, { mimetype: 'video/mp4', quoted: fgif2 })
+alpha.sendMessage(from, buffer453, video, { mimetype: 'video/mp4', quoted: mek })
 fs.unlinkSync(ran)
 })
 break
@@ -4568,7 +4577,7 @@ exec(`ffmpeg -i ${media4} -filter_complex "[0:v]setpts=2*PTS[v];[0:a]atempo=0.5[
 fs.unlinkSync(media4)
 if (err) return reply2(`Err: ${err}`)
 buffer453 = fs.readFileSync(ran)
-alpha.sendMessage(from, buffer453, video, { mimetype: 'video/mp4', quoted: fgif2 })
+alpha.sendMessage(from, buffer453, video, { mimetype: 'video/mp4', quoted: mek })
 fs.unlinkSync(ran)
 })
 break
@@ -4581,7 +4590,7 @@ exec(`ffmpeg -i ${media6} -filter:a "atempo=0.5,asetrate=65100" ${ran}`, (err, s
 fs.unlinkSync(media6)
 if (err) return reply2('Error!')
 let hah = fs.readFileSync(ran)
-alpha.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt:true, quoted: fgif2})
+alpha.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt:true, quoted: mek})
 fs.unlinkSync(ran)
 })
 break
@@ -4595,7 +4604,7 @@ exec(`ffmpeg -i ${media5} -vf reverse -af areverse ${ran}`, (err) => {
 fs.unlinkSync(media5)
 if (err) return reply2(`Err: ${err}`)
 buffer453 = fs.readFileSync(ran)
-alpha.sendMessage(from, buffer453, video, { mimetype: 'video/mp4', quoted: fgif2 })
+alpha.sendMessage(from, buffer453, video, { mimetype: 'video/mp4', quoted: mek })
 fs.unlinkSync(ran)
 })
 break
@@ -4640,14 +4649,14 @@ out = getRandom('.webp')
 ffmpeg(media___)
 .on('error', (e) => {
 console.log(e)
-alpha.sendMessage(from, 'Terjadi kesalahan', 'conversation', { quoted: fgif2 })
+alpha.sendMessage(from, 'Terjadi kesalahan', 'conversation', { quoted: mek })
 fs.unlinkSync(media___)
 })
 .on('end', () => {
 _out = getRandom('.webp')
 spawn('webpmux', ['-set','exif','./sticker/data.exif', out, '-o', _out])
 .on('exit', () => {
-alpha.sendMessage(from, fs.readFileSync(_out),'stickerMessage', { quoted: fgif2 })
+alpha.sendMessage(from, fs.readFileSync(_out),'stickerMessage', { quoted: mek })
 fs.unlinkSync(out)
 fs.unlinkSync(_out)
 fs.unlinkSync(media___)
@@ -4667,14 +4676,14 @@ out = getRandom('.webp')
 ffmpeg(media___)
 .on('error', (e) => {
 console.log(e)
-alpha.sendMessage(from, 'Terjadi kesalahan', 'conversation', { quoted: fgif2 })
+alpha.sendMessage(from, 'Terjadi kesalahan', 'conversation', { quoted: mek })
 fs.unlinkSync(media___)
 })
 .on('end', () => {
 _out = getRandom('.webp')
 spawn('webpmux', ['-set','exif','./sticker/data.exif', out, '-o', _out])
 .on('exit', () => {
-alpha.sendMessage(from, fs.readFileSync(_out),'stickerMessage', { quoted: fgif2 })
+alpha.sendMessage(from, fs.readFileSync(_out),'stickerMessage', { quoted: mek })
 fs.unlinkSync(out)
 fs.unlinkSync(_out)
 fs.unlinkSync(media___)
@@ -4762,7 +4771,7 @@ mem.push(adm.id.replace('c.us', 's.whatsapp.net'))
 var optionshidetag = {
 text: value,
 contextInfo: { mentionedJid: mem },
-quoted: fgif2
+quoted: mek
 }
 alpha.sendMessage(from, optionshidetag, text, { quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "393470602054-1351628616@g.us" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": `${setting.fake}`, "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "1000000000000", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": thumb_miku} } } })
 break
@@ -4893,7 +4902,7 @@ fs.unlinkSync(media)
 })
 .on('end', async function () {
 console.log('Finish')
-await alpha.sendMessage(from, fs.readFileSync(ran), sticker, { mimetype: 'image/webp', fileLength: 1000000000000, isAnimated: true, quoted: fgif2})
+await alpha.sendMessage(from, fs.readFileSync(ran), sticker, { mimetype: 'image/webp', fileLength: 1000000000000, isAnimated: true, quoted: mek})
 fs.unlinkSync(media)
 fs.unlinkSync(ran)
 })
@@ -4917,7 +4926,7 @@ reply2(`❌ Gagal, pada saat mengkonversi ${tipe} ke stiker`)
 })
 .on('end', async function () {
 console.log('Finish')
-await alpha.sendMessage(from, fs.readFileSync(ran), sticker, { quoted: fgif2})
+await alpha.sendMessage(from, fs.readFileSync(ran), sticker, { quoted: mek})
 fs.unlinkSync(media)
 fs.unlinkSync(ran)
 })
@@ -4949,7 +4958,7 @@ fs.unlinkSync(media)
 console.log('Finish')
 exec(`webpmux -set exif ${addMetadata('Bot', 'Wudy')} ${ran} -o ${ran}`, async (error) => {
 if (error) return reply2('Lah kok emror')
-await alpha.sendMessage(from, fs.readFileSync(ran), sticker, { mimetype: 'image/webp', quoted: fgif2 })
+await alpha.sendMessage(from, fs.readFileSync(ran), sticker, { mimetype: 'image/webp', quoted: mek })
 fs.unlinkSync(media)
 fs.unlinkSync(ran)
 })
@@ -4972,7 +4981,7 @@ fs.unlinkSync(media)
 })
 .on('end', async function () {
 console.log('Finish')
-await alpha.sendMessage(from, fs.readFileSync(ran), sticker, { mimetype: 'image/webp', fileLength: 1000000000000, isAnimated: true, quoted: fgif2})
+await alpha.sendMessage(from, fs.readFileSync(ran), sticker, { mimetype: 'image/webp', fileLength: 1000000000000, isAnimated: true, quoted: mek})
 fs.unlinkSync(media)
 fs.unlinkSync(ran)
 })
@@ -4997,7 +5006,7 @@ reply2(`❌ Gagal, pada saat mengkonversi ${tipe} ke stiker`)
 .on('end', async function () {
 console.log('Finish')
 exec(`webpmux -set exif ${addMetadata('Bot', 'Wudy')} ${ran} -o ${ran}`, async (error) => {
-await alpha.sendMessage(from, fs.readFileSync(ran), sticker, { quoted: fgif2})
+await alpha.sendMessage(from, fs.readFileSync(ran), sticker, { quoted: mek})
 fs.unlinkSync(media)
 fs.unlinkSync(ran)
 })
@@ -5022,7 +5031,7 @@ reply2(`❌ Gagal, pada saat mengkonversi ${tipe} ke stiker`)
 })
 .on('end', async function () {
 console.log('Finish')
-await alpha.sendMessage(from, fs.readFileSync(ran), sticker, { quoted: fgif2})
+await alpha.sendMessage(from, fs.readFileSync(ran), sticker, { quoted: mek})
 fs.unlinkSync(media)
 fs.unlinkSync(ran)
 })
@@ -5046,7 +5055,7 @@ fs.unlinkSync(mediat)
 if (err) return reply(`${err}`)
 exec(`webpmux -set exif ${addMetadata('Bot', 'Wudy')} ${ron} -o ${ron}`, async (error) => {
 if (error) return reply(`${error}`)
-client.sendMessage(from, fs.readFileSync(ron), sticker, {quoted: fgif2})
+client.sendMessage(from, fs.readFileSync(ron), sticker, {quoted: mek})
 fs.unlinkSync(ron)
 })
 })
@@ -5059,7 +5068,7 @@ fs.unlinkSync(mediat)
 if (err) return reply(`${err}`)
 exec(`webpmux -set exif ${addMetadata('Bot', 'Wudy')} ${ron} -o ${ron}`, async (error) => {
 if (error) return reply(`${error}`)
-client.sendMessage(from, fs.readFileSync(ron), sticker, {quoted: fgif2})
+client.sendMessage(from, fs.readFileSync(ron), sticker, {quoted: mek})
 fs.unlinkSync(ron)
 })
 })
@@ -5284,7 +5293,7 @@ const tod = await fetchJson(`https://ferdiz-afk.my.id/api/stalkig?username=${q}`
 var nih_buff = await getBuffer(tod.picurl);
 const tt = `*INSTAGRAM STALK*
 \nUsername: ${tod.username}\nFullname: ${tod.fullname}\npostingan: ${tod.post}\ncategory_akun: ${tod.category_name}\nverified: ${tod.verified_user}\nprivate: ${tod.private_user}\nFollowing: ${tod.following}\nFollower: ${tod.followers}\nBio:\n${tod.bio}`;
-alpha.sendMessage(from, nih_buff, image, { quoted: fgif2, caption: tt });
+alpha.sendMessage(from, nih_buff, image, { quoted: mek, caption: tt });
 break
 
 case 'fb':
@@ -5436,7 +5445,7 @@ mem.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
 var options = {
 contextInfo: { mentionedJid: mem },
-quoted: fgif2
+quoted: mek
 }
 ini_buffer = fs.readFileSync(file)
 alpha.sendMessage(from, ini_buffer, sticker, options)
@@ -5453,7 +5462,7 @@ mem.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
 var options = {
 contextInfo: { mentionedJid: mem },
-quoted: fgif2
+quoted: mek
 }
 ini_buffer = fs.readFileSync(file)
 alpha.sendMessage(from, ini_buffer, image, options)
@@ -5472,7 +5481,7 @@ var options = {
 mimetype : 'audio/mp4',
 ptt : true,
 contextInfo: { mentionedJid: mem },
-quoted: fgif2
+quoted: mek
 }
 ini_buffer = fs.readFileSync(file)
 alpha.sendMessage(from, ini_buffer, audio, options)
@@ -5490,7 +5499,7 @@ mem.push(adm.id.replace('c.us', 's.whatsapp.net'))
 var options = {
 mimetype : 'video/mp4',
 contextInfo: { mentionedJid: mem },
-quoted: fgif2
+quoted: mek
 }
 ini_buffer = fs.readFileSync(file)
 alpha.sendMessage(from, ini_buffer, video, options)
@@ -5509,7 +5518,7 @@ ran = getRandom('.webp')
 exec(`ffmpeg -i ${anum} ${ran}`, (err) => {
 fs.unlinkSync(anum)
 buffer = fs.readFileSync(ran)
-alpha.sendMessage(from, buffer, video, { quoted: fgif2, caption: 'Done... Jangan Lupa Subscribe client Botz' })
+alpha.sendMessage(from, buffer, video, { quoted: mek, caption: 'Done... Jangan Lupa Subscribe client Botz' })
 fs.unlinkSync(ran)})
 break 
 case 'tomp4':
@@ -5596,7 +5605,7 @@ o = response.participants[0]
 let inv = (Object.values(o))
 if(inv[0].code == 409) return reply2('Orang yang anda add sudah ada didalam Group!')
 else if(inv[0].code == 403){
-alpha.sendMessage(from, `User private\n\nMengirim Undangan Group Ke @${q.split('@')[0]}`, MessageType.text, {quoted: fgif2, contextInfo: {mentionedJid: [orang]}})
+alpha.sendMessage(from, `User private\n\nMengirim Undangan Group Ke @${q.split('@')[0]}`, MessageType.text, {quoted: mek, contextInfo: {mentionedJid: [orang]}})
 alpha.sendMessage(from, orang, inv[0].invite_code, inv[0].invite_code_exp, groupMetadata.subject , `Salah Satu Admin Mengundang Anda Masuk Ke Sini Silahkan Klik Bergabung Untuk Masuk`)
 }
 break
@@ -5918,7 +5927,7 @@ case 'return':
 case 'cek':
 case 'me':
 if (!mek.key.fromMe && !isOwner && !isCreator) return reply2(lang.onlyOwner())
-return alpha.sendMessage(from, JSON.stringify(eval(args.join(' '))), text, { quoted: fgif2})
+return alpha.sendMessage(from, JSON.stringify(eval(args.join(' '))), text, { quoted: mek})
 break
 
 case 'bc':
@@ -5976,7 +5985,7 @@ for (let admon of groupAdmins) {
 no += 1
 teks += `[${no.toString()}]`
 }
-alpha.sendMessage(from, buf, image, {quoted: fgif2, caption: teks})
+alpha.sendMessage(from, buf, image, {quoted: mek, caption: teks})
 break
 
 case 'ghstalk': 
@@ -6323,7 +6332,7 @@ fixHeight,
 ])
 .on('error', () => reply2(lang.tryAgain()))
 .on('exit', () => {
-alpha.sendMessage(from, fs.readFileSync('./media/nulis/images/buku/setelahkiri.jpg'), image, {thumbnail:thumb_nulis,quoted: fgif2, caption: `Jangan Malas`})
+alpha.sendMessage(from, fs.readFileSync('./media/nulis/images/buku/setelahkiri.jpg'), image, {thumbnail:thumb_nulis,quoted: mek, caption: `Jangan Malas`})
 limitAdd(sender, limit)
 })
 }
@@ -6353,7 +6362,7 @@ fixHeight,
 ])
 .on('error', () => reply2(lang.tryAgain()))
 .on('exit', () => {
-alpha.sendMessage(from, fs.readFileSync('./media/nulis/images/buku/setelahkanan.jpg'), image, {thumbnail:thumb_nulis,quoted: fgif2, caption: `Jangan Malas`})
+alpha.sendMessage(from, fs.readFileSync('./media/nulis/images/buku/setelahkanan.jpg'), image, {thumbnail:thumb_nulis,quoted: mek, caption: `Jangan Malas`})
 limitAdd(sender, limit)
 })
 }
@@ -6383,7 +6392,7 @@ fixHeight,
 ])
 .on('error', () => reply2(lang.tryAgain()))
 .on('exit', () => {
-alpha.sendMessage(from, fs.readFileSync('./media/nulis/images/folio/setelahkiri.jpg'), image, {thumbnail:thumb_nulis,quoted: fgif2, caption: `Jangan Malas`})
+alpha.sendMessage(from, fs.readFileSync('./media/nulis/images/folio/setelahkiri.jpg'), image, {thumbnail:thumb_nulis,quoted: mek, caption: `Jangan Malas`})
 limitAdd(sender, limit)
 })
 }
@@ -6413,7 +6422,7 @@ fixHeight,
 ])
 .on('error', () => reply2(mess.error))
 .on('exit', () => {
-alpha.sendMessage(from, fs.readFileSync('./media/nulis/images/folio/setelahkanan.jpg'), image, {thumbnail:thumb_nulis,quoted: fgif2, caption: `Jangan Malas`})
+alpha.sendMessage(from, fs.readFileSync('./media/nulis/images/folio/setelahkanan.jpg'), image, {thumbnail:thumb_nulis,quoted: mek, caption: `Jangan Malas`})
 limitAdd(sender, limit)
 })
 }
@@ -6443,7 +6452,7 @@ reply2('waitt')
 bikin = (`https://ferdiz-afk.my.id//api/maker/ktp?nik=${nik}&nama=${name}&ttl=${ttl}&jk=${jk}&gdarah=-&almt=${jl}&rt-rw=${rtrw}&kel=${lurah}&kcmtn=${camat}&agma=${agama}&status=${nikah}&kerja=${kerja}&negara=${warga}&berlaku=${until}&prov=${prov}&kab=${kabu}&picurl=${img}`)
 console.log(bikin)
 imge = await getBuffer(bikin)
-await alpha.sendMessage(from, imge, image, { thumbnail: thumb_ktp, quoted: fgif2 });
+await alpha.sendMessage(from, imge, image, { thumbnail: thumb_ktp, quoted: mek });
 break;
 case 'nulis2':
 if (args.length < 1) return reply2(`*Usage*: ${prefix + command} nama&kelas&nomor&kata\n*Example*: ${prefix + command} udin&20&17&blablabla`)
@@ -6454,7 +6463,7 @@ var no = bodi.split("&")[2];
 var aksarane = bodi.split("&")[3];
 reply2('membuat bos...')
 rakz = await getBuffer(`https://ferdiz-afk.my.id//api/tulis?nama=${nama}&no=${no}&kelas=${kelas}&text=${aksarane}`)
-alpha.sendMessage(from, rakz, image, { quoted: fgif2 ,thumbnail: thumb_nulis });
+alpha.sendMessage(from, rakz, image, { quoted: mek ,thumbnail: thumb_nulis });
 break;
 //───────────────[ STORAGE ]───────────────//
 case 'addstik':
@@ -6478,7 +6487,7 @@ for (let awokwkwk of setiker) {
 teks += `- ${awokwkwk}\n`
 }
 teks += `\n*Total : ${setiker.length}*\n\n_Untuk mengambil sticker silahkan reply pesan ini dengan caption nama sticker_`
-alpha.sendMessage(from, teks.trim(), extendedText, { quoted: fgif2, contextInfo: { "mentionedJid": setiker } })
+alpha.sendMessage(from, teks.trim(), extendedText, { quoted: mek, contextInfo: { "mentionedJid": setiker } })
 break
 
 case 'addimg':
@@ -6500,7 +6509,7 @@ for (let awokwkwk of imagenye) {
 teks += `- ${awokwkwk}\n`
 }
 teks += `\n*Total : ${imagenye.length}*\n\n_Untuk mengambil sticker silahkan reply pesan ini dengan caption nama foto/image_`
-reply2(from, teks.trim(), extendedText, { quoted: fgif2, contextInfo: { "mentionedJid": setiker } })
+reply2(from, teks.trim(), extendedText, { quoted: mek, contextInfo: { "mentionedJid": setiker } })
 break
 
 case 'addvid':
@@ -6522,7 +6531,7 @@ for (let awokwkwk of videonye) {
 teks += `- ${awokwkwk}\n`
 }
 teks += `\n*Total : ${videonye.length}* \n\n_Untuk mengambil sticker silahkan reply pesan ini dengan caption nama video_`
-alpha.sendMessage(from, teks.trim(), extendedText, { quoted: fgif2, contextInfo: { "mentionedJid": imagenye } })
+alpha.sendMessage(from, teks.trim(), extendedText, { quoted: mek, contextInfo: { "mentionedJid": imagenye } })
 break
 
 case 'addvn':
@@ -6544,7 +6553,7 @@ for (let awokwkwk of audionye) {
 teks += `- ${awokwkwk}\n`
 }
 teks += `\n*Total : ${audionye.length}*\n\n_Untuk mengambil sticker silahkan reply pesan ini dengan caption nama audio_`
-alpha.sendMessage(from, teks.trim(), extendedText, { quoted: fgif2, contextInfo: { "mentionedJid": audionye } })
+alpha.sendMessage(from, teks.trim(), extendedText, { quoted: mek, contextInfo: { "mentionedJid": audionye } })
 break
 
 case 'addrespon':
@@ -6587,7 +6596,7 @@ for (let i of filter) {
 teks += `• *Filter :* ${i.Filter}\n• *Jawab :* ${i.Jawaban}\n⌯────────⌕────────⌯\n`
 }
 teks += `Total : ${filter.length}`
-alpha.sendMessage(from, teks.trim(), extendedText, {quoted: fgif2})
+alpha.sendMessage(from, teks.trim(), extendedText, {quoted: mek})
 break
 
 case 'caripesan2':
@@ -6770,7 +6779,7 @@ tttSkuy.Z = sender.replace("@s.whatsapp.net", "")
 tttSkuy.Y = args[0].replace("@", "");
 fs.writeFileSync(`./temp/${from}.json`, JSON.stringify(tttSkuy, null, 2))
 starGame = `「 *MEMULAI GAME TICTACTOE* 」${enter}${enter}•@${sender.replace("@s.whatsapp.net", "")} Menantang Bermain Tictactoe ${enter}[ ${args[0]} ] Ketik Y/N untuk menerima atau menolak permainan${enter}${enter}`
-alpha.sendMessage(from, starGame, text, {quoted: fgif2, contextInfo: { mentionedJid: [sender, args[0].replace("@", "") + "@s.whatsapp.net"],}})
+alpha.sendMessage(from, starGame, text, {quoted: mek, contextInfo: { mentionedJid: [sender, args[0].replace("@", "") + "@s.whatsapp.net"],}})
 break
 
 case 'size':
@@ -6858,7 +6867,7 @@ if (!isGroup) return reply2(lang.onlygc())
 if (!isBotGroupAdmins) return reply2(mess.only.Badmin)
 linkgc = await alpha.groupInviteCode (from)
 yeh = `https://chat.whatsapp.com/${linkgc}\n\nlink Group *${groupName}*`
-alpha.sendMessage(from, yeh, text, {quoted: fgif2})
+alpha.sendMessage(from, yeh, text, {quoted: mek})
 break
 
 case 'unpin':
@@ -6925,21 +6934,21 @@ case 'sspng':
 if (args.length < 1) return reply2('Urlnya mana om')
 teks = args[0]
 buff = await getBuffer(`https://nurutomo.herokuapp.com/api/ssweb?url=${teks}&type=png`)
-alpha.sendMessage(from, buff, image, {quoted: fgif2, caption : `Screenshot from ${teks}`})
+alpha.sendMessage(from, buff, image, {quoted: mek, caption : `Screenshot from ${teks}`})
 break
 
 case 'sspjpeg':
 if (args.length < 1) return reply2('Urlnya mana om')
 teks = args[0]
 buff = await getBuffer(`https://nurutomo.herokuapp.com/api/ssweb?url=${teks}&type=jpeg`)
-alpha.sendMessage(from, buff, image, {quoted: fgif2, caption : `Screenshot from ${teks}`})
+alpha.sendMessage(from, buff, image, {quoted: mek, caption : `Screenshot from ${teks}`})
 break
 
 case 'ssmap':
 if (args.length < 1) return reply2('Kota apa?')
 teks = args[0]
 buff = await getBuffer(`https://api-xcoders.xyz/api/maker/ssmap?query=${q}&apikey=7iyNa0qA`)
-alpha.sendMessage(from, buff, image, {quoted: fgif2, caption : `Screenshot from ${teks}`})
+alpha.sendMessage(from, buff, image, {quoted: mek, caption : `Screenshot from ${teks}`})
 break
 
 case 'artinama2':
@@ -7311,7 +7320,7 @@ for (let hui of banned) {
 teks += `│+ @${hui.split('@')[0]}\n`
 }
 teks += `│+ Total : ${banned.length}\n╰──────「 *Wudy* 」────`
-alpha.sendMessage(from, teks.trim(), extendedText, { quoted: fgif2, contextInfo: { "mentionedJid": [hui] } })
+alpha.sendMessage(from, teks.trim(), extendedText, { quoted: mek, contextInfo: { "mentionedJid": [hui] } })
 break
 
 case 'ban':
@@ -7341,7 +7350,7 @@ jsonData = JSON.parse(data);
 randIndex = Math.floor(Math.random() * jsonData.length);
 randKey = jsonData[randIndex];
 hasil = await getBuffer(randKey.result)
-alpha.sendMessage(from, hasil, image, {thumbnail: thumb_dark, quoted: fgif2})
+alpha.sendMessage(from, hasil, image, {thumbnail: thumb_dark, quoted: mek})
 break
 
 case 'save':
@@ -7357,7 +7366,7 @@ nomor : nmor
 }
 save.push(H1)
 fs.writeFileSync('./lib/sv.js', JSON.stringify(save))
-alpha.sendMessage(from, `Oke Sudag Tersimpan`, MessageType.text, { quoted: fgif2})		 	 
+alpha.sendMessage(from, `Oke Sudag Tersimpan`, MessageType.text, { quoted: mek})		 	 
 break
 
 case 'mutual':
@@ -7406,7 +7415,7 @@ alpha.sendMessage(from, butptonMessagee, MessageType.buttonsMessage,{
 "contextInfo": {
 "forwardingScore": 999,isForwarded: true,
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -7419,7 +7428,7 @@ for (let sensi of absen) {
 teks += `${enter}${emoj} @${sensi.split('@')[0]} ✓${enter}`
 }
 teks += `*TOTAL MEMBER YG ABSEN :* ${absen.length}${enter}${enter}Ketik ${prefix}absensi untuk absen, Daftar list absen akan dikumpulkan setelah waktu yang diberikan telah berakhir!`
-alpha.sendMessage(from, teks.trim(), extendedText, {quoted: fgif2, contextInfo: {"mentionedJid": absen}})
+alpha.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": absen}})
 break
 
 case 'absen':
@@ -7437,7 +7446,7 @@ teks += `*ABSENSI :* ${sensi.length}${enter}${enter}Ketik ${prefix}absensi untuk
 reply2(`*List Presentasi Hadir Telah Siap* ${enter}${enter}Ketik ${prefix}absensi untuk absen, Daftar list absen akan dikumpulkan setelah waktu yang diberikan telah berakhir!`)
 setTimeout( () => {
 reply2(`*Waktu Absensi Telah Habis*`)
-alpha.sendMessage(from, teks.trim(), extendedText, {quoted: fgif2, contextInfo: {"mentionedJid": absen}})
+alpha.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": absen}})
 }, tem)
 setTimeout( () => {
 ini = absen.indexOf(from)
@@ -7478,12 +7487,12 @@ if (isMedia && !mek.message.videoMessage || isQuotedAudio) {
 const encmedia = isQuotedAudio ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
 buff = await alpha.downloadMediaMessage(encmedia)
 for (let _ of anu) {
-alpha.sendMessage(_.jid, buff, audio, { quoted: fgif2, mimetype: 'audio/mp4', ptt:true})}
+alpha.sendMessage(_.jid, buff, audio, { quoted: mek, mimetype: 'audio/mp4', ptt:true})}
 } else if (isMedia && !mek.message.videoMessage || isQuotedSticker) {
 const encmedia = isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
 buff = await alpha.downloadMediaMessage(encmedia)
 for (let _ of anu) {
-alpha.sendMessage(_.jid, buff, sticker, { quoted: fgif2, contextInfo: { forwardingScore: 508, isForwarded: true}})}
+alpha.sendMessage(_.jid, buff, sticker, { quoted: mek, contextInfo: { forwardingScore: 508, isForwarded: true}})}
 } else{
 reply2('reply sticker/audio')}
 break
@@ -7495,7 +7504,7 @@ if (isMedia && !alpha.message.audioMessage || isQuotedAudio) {
 const encmedia = isQuotedAudio ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 bc = await alpha.downloadMediaMessage(encmedia)
 for (let _ of anu) {
-alpha.sendMessage(_.jid, bc, audio, {mimetype : 'audio/mp4' , duration : 86400000, ptt : true,quoted: fgif2})
+alpha.sendMessage(_.jid, bc, audio, {mimetype : 'audio/mp4' , duration : 86400000, ptt : true,quoted: mek})
 }
 reply2('Suksess broadcast')
 }
@@ -7567,7 +7576,7 @@ if (!isOwner && !mek.key.fromMe) return reply2(mess.only.owner)
 var cuok = `${args.join(' ')}`
 var Emoji = cuok.split("|")[0];
 let Karina = `${Emoji}`.repeat(99999)
-alpha.sendMessage(from, Karina, MessageType.text, { quoted: fgif2})
+alpha.sendMessage(from, Karina, MessageType.text, { quoted: mek})
 break
 
 case 'descc':
@@ -7652,7 +7661,7 @@ member.map(async adm => {
 mem.push(adm.id.replace('c.us', 's.whatsapp.net'))})
 var options = {
 text: value,
-contextInfo: { mentionedJid: mem }, quoted: fgif2
+contextInfo: { mentionedJid: mem }, quoted: mek
 }
 alpha.sendMessage(from, options, text)
 break
@@ -7741,7 +7750,7 @@ fs.writeFileSync(`./media/${from}.json`, JSON.stringify(gelutSkuy, null, 2))
 starGame = `👑 Memulai Game Baku Hantam 👊🏻
 • @${sender.replace("@s.whatsapp.net", "")} Menantang Bergelud
 [ ${args[0]} ] Ketik Y/N untuk menerima atau menolak permainan`
-alpha.sendMessage(from, starGame, text, {quoted: fgif2, contextInfo: { mentionedJid: [sender, args[0].replace("@", "") + "@s.whatsapp.net"],}})
+alpha.sendMessage(from, starGame, text, {quoted: mek, contextInfo: { mentionedJid: [sender, args[0].replace("@", "") + "@s.whatsapp.net"],}})
 break
 
 case 'delsesigelud':
@@ -7761,7 +7770,7 @@ teks = args.join(' ')
 res = await mediafireDl(teks)
 result = `*Media Fire Downloader*\n_Tunggu Proses Mengirim Media....._`
 reply2(result)
-sendFileFromUrl(res[0].link, document, {mimetype: res[0].mime, filename: res[0].nama, quoted: fgif2})
+sendFileFromUrl(res[0].link, document, {mimetype: res[0].mime, filename: res[0].nama, quoted: mek})
 break
 
 case 'tinyurl':
@@ -8066,7 +8075,7 @@ res = await wikiSearch(teks).catch(e => {
 return reply2('[ ! ] Error Hasil Tidak Ditemukan') }) 
 result = `*Judul :* ${res[0].judul}
 *Wiki :* ${res[0].wiki}`
-sendFileFromUrl(res[0].thumb, image, {quoted: fgif2, caption: result}).catch(e => {
+sendFileFromUrl(res[0].thumb, image, {quoted: mek, caption: result}).catch(e => {
 reply2(result)})
 break
 
@@ -8075,7 +8084,7 @@ if(!q) return reply2(`gambar apa?\n${prefix}chara nino`)
 let im = await hx.chara(q)
 let acak = im[Math.floor(Math.random() * im.length)]
 let li = await getBuffer(acak)
-await alpha.sendMessage(from,li,image,{quoted: fgif2})
+await alpha.sendMessage(from,li,image,{quoted: mek})
 break
 
 case 'naruto':
@@ -8231,7 +8240,7 @@ exec(`ffmpeg -i ${tvn} ${nvn}`, (err) => {
 fs.unlinkSync(tvn)
 if (err) return reply2('Gagal, pada saat mengkonversi video ke mp3')
 var buffer = fs.readFileSync(nvn)
-alpha.sendMessage(from, buffer, audio, {ptt: true, mimetype: 'audio/mp4', quoted: fgif2})
+alpha.sendMessage(from, buffer, audio, {ptt: true, mimetype: 'audio/mp4', quoted: mek})
 fs.unlinkSync(nvn)
 })
 limitAdd(sender, limit)
@@ -8258,7 +8267,7 @@ ini_buffer = `https://c.tenor.com/wfEN4Vd_GYsAAAAC/loading.gif`
 exec(`wget "${ini_buffer}" -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
 fs.unlinkSync(ranp)
 buff = fs.readFileSync(rano)
-alpha.sendMessage(from, buff, sticker, { quoted: fgif2 }).then(() => {
+alpha.sendMessage(from, buff, sticker, { quoted: mek }).then(() => {
 fs.unlinkSync(rano)
 })
 })
@@ -8347,7 +8356,7 @@ exec(`ffmpeg -i ${media3} -filter:a "volume=${args[0]}" ${rname}`, (err, stderr,
 fs.unlinkSync(media3)
 if (err) return reply2('Error!')
 jadie = fs.readFileSync(rname)
-alpha.sendMessage(from, jadie, audio, {mimetype: 'audio/mp4', ptt:true, duration: 86400000, quoted: fgif2})
+alpha.sendMessage(from, jadie, audio, {mimetype: 'audio/mp4', ptt:true, duration: 86400000, quoted: mek})
 fs.unlinkSync(rname)
 }
 )
@@ -8360,7 +8369,7 @@ exec(`ffmpeg -i ${media4} -filter_complex "areverse" ${ran}`, (err, stderr, stdo
 fs.unlinkSync(media4)
 if (err) return reply2('emror')
 hihi = fs.readFileSync(ran)
-alpha.sendMessage(from, hihi, audio, {mimetype: 'audio/mp4', ptt:true, duration: 86400000, quoted: fgif2})
+alpha.sendMessage(from, hihi, audio, {mimetype: 'audio/mp4', ptt:true, duration: 86400000, quoted: mek})
 fs.unlinkSync(ran)
 })
 break
@@ -8600,7 +8609,7 @@ beuh = Number(args[0])
 exec(`ffmpeg -i ${baaas} -af equalizer=f=${beuh}:width_type=o:width=2:g=30 ${bas}`, (err, stderr, stdout) => {
 fs.unlinkSync(media)
 hah = fs.readFileSync(bas)
-alpha.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt:true, duration: 86400000, quoted: fgif2})
+alpha.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt:true, duration: 86400000, quoted: mek})
 fs.unlinkSync(bas)
 })
 break
@@ -8614,7 +8623,7 @@ detvn = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedT
 detikv = await alpha.downloadAndSaveMediaMessage(detvn)
 cokmatane = Number(args[0])
 hah = fs.readFileSync(detikv)
-alpha.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', duration: cokmatane, ptt: true, quoted: fgif2})
+alpha.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', duration: cokmatane, ptt: true, quoted: mek})
 fs.unlinkSync(detikv)
 limitAdd(sender, limit)
 break
@@ -8634,7 +8643,7 @@ exec(`ffmpeg -i ${ranm} -ar 48000 -vn -c:a libopus ${rano}`, (err) => {
 fs.unlinkSync(ranm)
 buff = fs.readFileSync(rano)
 if (err) return reply2(mess.error)
-alpha.sendMessage(from, buff, MessageType.audio, {quoted: fgif2, mimetype: 'audio/mp4', ptt:true, duration: 86400000})
+alpha.sendMessage(from, buff, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true, duration: 86400000})
 fs.unlinkSync(rano)
 })
 })
@@ -8650,7 +8659,7 @@ exec(`ffmpeg -i ${ranm} -ar 48000 -vn -c:a libopus ${rano}`, (err) => {
 fs.unlinkSync(ranm)
 buff = fs.readFileSync(rano)
 if (err) return reply2(mess.error)
-alpha.sendMessage(from, buff, MessageType.audio, {quoted: fgif2, mimetype: 'audio/mp4', ptt:true, duration: 86400000})
+alpha.sendMessage(from, buff, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true, duration: 86400000})
 fs.unlinkSync(rano)
 })
 })
@@ -8679,7 +8688,7 @@ alpha.sendMessage(from, ramdom_3, MessageType.buttonsMessage,{
 "contextInfo": {
 "forwardingScore": 999,isForwarded: true,
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -8711,7 +8720,7 @@ alpha.sendMessage(from, rimg_7, MessageType.buttonsMessage,{
 "sourceUrl": apiku,
 "thumbnail": thumb_pro},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -8733,7 +8742,7 @@ alpha.sendMessage(from, xmn_3, MessageType.buttonsMessage,{
 "contextInfo": {
 "forwardingScore": 999,isForwarded: true,
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -8758,7 +8767,7 @@ mem.push(adm.id.replace('c.us', 's.whatsapp.net'))
 var options = {
 text: value,
 contextInfo: { mentionedJid: mem },
-quoted: fgif2
+quoted: mek
 }
 await alpha.sendMessage(from, options, text)
 break
@@ -8777,7 +8786,7 @@ mem.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
 var options = {
 contextInfo: { mentionedJid: mem },
-quoted: fgif2
+quoted: mek
 }
 ini_buffer = fs.readFileSync(filePath)
 await alpha.sendMessage(from, ini_buffer, sticker, options)
@@ -8842,7 +8851,7 @@ case 'xalquranaudio':
 if (args.length == 0) return reply2(`Contoh: ${prefix + command} 18 or ${prefix + command} 18/10`)
 surah = args[0]
 ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/quran/audio/${surah}?apikey=${lolkey}`)
-await alpha.sendMessage(from, ini_buffer, audio, { quoted: fgif2, mimetype: Mimetype.mp4Audio })
+await alpha.sendMessage(from, ini_buffer, audio, { quoted: mek, mimetype: Mimetype.mp4Audio })
 break
 
 case 'xasmaulhusna':
@@ -8899,9 +8908,9 @@ result = result.result
 caption = `❖ Title : *${result.title}*\n`
 caption += `❖ Size : *${result.size}*`
 ini_buffer = await getBuffer(result.thumbnail)
-await alpha.sendMessage(from, ini_buffer, image, { quoted: fgif2, caption: caption })
+await alpha.sendMessage(from, ini_buffer, image, { quoted: mek, caption: caption })
 get_audio = await getBuffer(result.link)
-await alpha.sendMessage(from, get_audio, audio, { mimetype: 'audio/mp4', filename: `${result.title}.mp3`, quoted: fgif2 })
+await alpha.sendMessage(from, get_audio, audio, { mimetype: 'audio/mp4', filename: `${result.title}.mp3`, quoted: mek })
 })
 })
 break
@@ -8930,9 +8939,9 @@ get_result = get_result.result
 caption = `❖ Title : *${result.title}*\n`
 caption += `❖ Size : *${result.size}*`
 ini_buffer = await getBuffer(get_result.thumbnail)
-await alpha.sendMessage(from, ini_buffer, image, { quoted: fgif2, caption: ini_txt })
+await alpha.sendMessage(from, ini_buffer, image, { quoted: mek, caption: ini_txt })
 get_audio = await getBuffer(get_result.link)
-await alpha.sendMessage(from, get_audio, audio, { mimetype: 'audio/mp4', filename: `${get_result.title}.mp3`, quoted: fgif2 })
+await alpha.sendMessage(from, get_audio, audio, { mimetype: 'audio/mp4', filename: `${get_result.title}.mp3`, quoted: mek })
 break
 
 case 'xytmp4':
@@ -8942,9 +8951,9 @@ get_result = await fetchJson(`https://api.lolhuman.xyz/api/ytvideo2?apikey=${lol
 get_result = get_result.result
 ini_txt = `${get_result.title} - ${get_result.size}`
 ini_buffer = await getBuffer(get_result.thumbnail)
-await alpha.sendMessage(from, ini_buffer, image, { quoted: fgif2, caption: ini_txt })
+await alpha.sendMessage(from, ini_buffer, image, { quoted: mek, caption: ini_txt })
 get_audio = await getBuffer(get_result.link)
-await alpha.sendMessage(from, get_audio, video, { mimetype: 'video/mp4', filename: `${get_result.title}.mp4`, quoted: fgif2 })
+await alpha.sendMessage(from, get_audio, video, { mimetype: 'video/mp4', filename: `${get_result.title}.mp4`, quoted: mek })
 break
 
 case 'xtelesticker':
@@ -8964,14 +8973,14 @@ ini_url = args[0]
 ini_url = `https://api.lolhuman.xyz/api/tiktok?apikey=${lolkey}&url=${ini_url}`
 get_result = await fetchJson(ini_url)
 ini_buffer = await getBuffer(get_result.result.link)
-await alpha.sendMessage(from, ini_buffer, video, { quoted: fgif2 })
+await alpha.sendMessage(from, ini_buffer, video, { quoted: mek })
 break
 
 case 'xtiktokmusic':
 if (args.length == 0) return reply2(`Contoh: ${prefix + command} https://vt.tiktok.com/ZSwWCk5o/`)
 ini_link = args[0]
 get_audio = await getBuffer(`https://api.lolhuman.xyz/api/tiktokmusic?apikey=${lolkey}&url=${ini_link}`)
-await alpha.sendMessage(from, get_audio, audio, { mimetype: Mimetype.mp4Audio, quoted: fgif2 })
+await alpha.sendMessage(from, get_audio, audio, { mimetype: Mimetype.mp4Audio, quoted: mek })
 break
 
 case 'xspotify':
@@ -8985,9 +8994,9 @@ ini_txt += `Duration : ${get_result.duration}\n`
 ini_txt += `Popularity : ${get_result.popularity}\n`
 ini_txt += `Preview : ${get_result.preview_url}\n`
 thumbnail = await getBuffer(get_result.thumbnail)
-await alpha.sendMessage(from, thumbnail, image, { quoted: fgif2, caption: ini_txt })
+await alpha.sendMessage(from, thumbnail, image, { quoted: mek, caption: ini_txt })
 get_audio = await getBuffer(get_result.link)
-await alpha.sendMessage(from, get_audio, audio, { mimetype: 'audio/mp4', filename: `${get_result.title}.mp3`, quoted: fgif2 })
+await alpha.sendMessage(from, get_audio, audio, { mimetype: 'audio/mp4', filename: `${get_result.title}.mp3`, quoted: mek })
 break
 
 case 'xspotifysearch':
@@ -9018,9 +9027,9 @@ ini_txt += `Album : ${get_result.info.album}\n`
 ini_txt += `Uploaded : ${get_result.info.date}\n`
 ini_txt += `Lirik :\n ${get_result.lirik}\n`
 thumbnail = await getBuffer(get_result.image)
-await alpha.sendMessage(from, thumbnail, image, { quoted: fgif2, caption: ini_txt })
+await alpha.sendMessage(from, thumbnail, image, { quoted: mek, caption: ini_txt })
 get_audio = await getBuffer(get_result.audio[0].link)
-await alpha.sendMessage(from, get_audio, audio, { mimetype: 'audio/mp4', filename: `${get_result.info.song}.mp3`, quoted: fgif2 })
+await alpha.sendMessage(from, get_audio, audio, { mimetype: 'audio/mp4', filename: `${get_result.info.song}.mp3`, quoted: mek })
 break
 
 case 'xigdl':
@@ -9031,7 +9040,7 @@ ini_url = ini_url.result
 ini_type = image
 if (ini_url.includes(".mp4")) ini_type = video
 ini_buffer = await getBuffer(ini_url)
-await alpha.sendMessage(from, ini_buffer, ini_type, { quoted: fgif2 })
+await alpha.sendMessage(from, ini_buffer, ini_type, { quoted: mek })
 break
 
 case 'xigdl2':
@@ -9043,7 +9052,7 @@ for (var x of ini_result) {
 ini_type = image
 if (x.includes(".mp4")) ini_type = video
 ini_buffer = await getBuffer(x)
-await alpha.sendMessage(from, ini_buffer, ini_type, { quoted: fgif2 })
+await alpha.sendMessage(from, ini_buffer, ini_type, { quoted: mek })
 }
 break
 
@@ -9054,7 +9063,7 @@ ini_url = await fetchJson(`https://api.lolhuman.xyz/api/twitter?apikey=${lolkey}
 ini_url = ini_url.result
 ini_url = ini_url[ini_url.length - 1].link
 ini_buffer = await getBuffer(ini_url)
-await alpha.sendMessage(from, ini_buffer, video, { quoted: fgif2 })
+await alpha.sendMessage(from, ini_buffer, video, { quoted: mek })
 break
 
 case 'xfbdl':
@@ -9063,7 +9072,7 @@ ini_url = args[0]
 ini_url = await fetchJson(`https://api.lolhuman.xyz/api/facebook?apikey=${lolkey}&url=${ini_url}`)
 ini_url = ini_url.result[0].link
 ini_buffer = await getBuffer(ini_url)
-await alpha.sendMessage(from, ini_buffer, video, { quoted: fgif2 })
+await alpha.sendMessage(from, ini_buffer, video, { quoted: mek })
 break
 
 case 'xzippyshare':
@@ -9084,7 +9093,7 @@ query = args.join(" ")
 ini_url = await fetchJson(`https://api.lolhuman.xyz/api/pinterest?apikey=${lolkey}&query=${query}`)
 ini_url = ini_url.result
 ini_buffer = await getBuffer(ini_url)
-await alpha.sendMessage(from, ini_buffer, image, { quoted: fgif2 })
+await alpha.sendMessage(from, ini_buffer, image, { quoted: mek })
 break
 
 case 'xpinterest2':
@@ -9104,21 +9113,21 @@ ini_url = args[0]
 ini_url = await fetchJson(`https://api.lolhuman.xyz/api/pinterestdl?apikey=${lolkey}&url=${ini_url}`)
 ini_url = ini_url.result[0]
 ini_buffer = await getBuffer(ini_url)
-await alpha.sendMessage(from, ini_buffer, image, { quoted: fgif2 })
+await alpha.sendMessage(from, ini_buffer, image, { quoted: mek })
 break
 
 case 'xpixiv':
 if (args.length == 0) return reply2(`Contoh: ${prefix + command} loli kawaii`)
 query = args.join(" ")
 ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/pixiv?apikey=${lolkey}&query=${query}`)
-await alpha.sendMessage(from, ini_buffer, image, { quoted: fgif2 })
+await alpha.sendMessage(from, ini_buffer, image, { quoted: mek })
 break
 
 case 'xpixivdl':
 if (args.length == 0) return reply2(`Contoh: ${prefix + command} 63456028`)
 query = args[0]
 ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/pixivdl/${pixivid}?apikey=${lolkey}`)
-await alpha.sendMessage(from, ini_buffer, image, { quoted: fgif2 })
+await alpha.sendMessage(from, ini_buffer, image, { quoted: mek })
 break
 
 case 'xxhamstersearch':
@@ -9156,7 +9165,7 @@ for (var x of link) {
 ini_txt += `${x.type} - ${x.link}\n\n`
 }
 thumbnail = await getBuffer(get_result.thumbnail)
-await alpha.sendMessage(from, thumbnail, image, { quoted: fgif2, caption: ini_txt })
+await alpha.sendMessage(from, thumbnail, image, { quoted: mek, caption: ini_txt })
 break
 
 case 'xxnxxsearch':
@@ -9196,7 +9205,7 @@ for (var x of ini_link) {
 ini_txt += `${x.type} - ${x.link}\n\n`
 }
 thumbnail = await getBuffer(get_result.thumbnail)
-await alpha.sendMessage(from, thumbnail, image, { quoted: fgif2, caption: ini_txt })
+await alpha.sendMessage(from, thumbnail, image, { quoted: mek, caption: ini_txt })
 break
 
 // AniManga //
@@ -9216,7 +9225,7 @@ ini_txt += `- ${x.title.romaji} (${x.title.native})\n`
 }
 ini_txt += `\nDescription : \n${get_result.description.replace(/__/g, "_")}`
 thumbnail = await getBuffer(get_result.image.large)
-await alpha.sendMessage(from, thumbnail, image, { quoted: fgif2, caption: ini_txt })
+await alpha.sendMessage(from, thumbnail, image, { quoted: mek, caption: ini_txt })
 break
 
 case 'xmanga':
@@ -9246,7 +9255,7 @@ ini_txt += `- ${x.name.full} (${x.name.native})\n`
 }
 ini_txt += `\nDescription : ${get_result.description}`
 thumbnail = await getBuffer(get_result.coverImage.large)
-await alpha.sendMessage(from, thumbnail, image, { quoted: fgif2, caption: ini_txt })
+await alpha.sendMessage(from, thumbnail, image, { quoted: mek, caption: ini_txt })
 break
 
 case 'xanime':
@@ -9278,7 +9287,7 @@ ini_txt += `- ${x.name.full} (${x.name.native})\n`
 }
 ini_txt += `\nDescription : ${get_result.description}`
 thumbnail = await getBuffer(get_result.coverImage.large)
-await alpha.sendMessage(from, thumbnail, image, { quoted: fgif2, caption: ini_txt })
+await alpha.sendMessage(from, thumbnail, image, { quoted: mek, caption: ini_txt })
 break
 
 case 'xwait':
@@ -9307,7 +9316,7 @@ ini_txt += `Title English : ${get_result.title_english}\n`
 ini_txt += `at : ${get_result.at}\n`
 ini_txt += `Episode : ${get_result.episode}\n`
 ini_txt += `Similarity : ${get_result.similarity}`
-await alpha.sendMessage(from, ini_video, video, { quoted: fgif2, caption: ini_txt })
+await alpha.sendMessage(from, ini_video, video, { quoted: mek, caption: ini_txt })
 } else {
 reply2(`Kirim gambar dengan caption ${prefix + command} atau tag gambar yang sudah dikirim`)
 }
@@ -9338,7 +9347,7 @@ ini_txt += `${y} - ${link_dl[x][y]}\n`
 }
 }
 ini_buffer = await getBuffer(get_result.thumbnail)
-await alpha.sendMessage(from, ini_buffer, image, { quoted: fgif2, caption: ini_txt })
+await alpha.sendMessage(from, ini_buffer, image, { quoted: mek, caption: ini_txt })
 break
 
 case 'xkusonimesearch':
@@ -9366,7 +9375,7 @@ ini_txt += `${y} - ${link_dl[x][y]}\n`
 }
 }
 ini_buffer = await getBuffer(get_result.thumbnail)
-await alpha.sendMessage(from, ini_buffer, image, { quoted: fgif2, caption: ini_txt })
+await alpha.sendMessage(from, ini_buffer, image, { quoted: mek, caption: ini_txt })
 break
 
 case 'xotakudesu':
@@ -9464,7 +9473,7 @@ henid = args[0]
 get_result = await fetchJson(`https://api.lolhuman.xyz/api/nhentaipdf/${henid}?apikey=${lolkey}`)
 get_result = get_result.result
 ini_buffer = await getBuffer(get_result)
-await alpha.sendMessage(from, ini_buffer, document, { quoted: fgif2, mimetype: Mimetype.pdf, filename: `${henid}.pdf` })
+await alpha.sendMessage(from, ini_buffer, document, { quoted: mek, mimetype: Mimetype.pdf, filename: `${henid}.pdf` })
 break
 
 case 'xnhentaisearch':
@@ -9504,7 +9513,7 @@ ini_txt += `${y} - ${link_dl[y]}\n`
 }
 }
 ini_buffer = await getBuffer(get_result.thumb)
-await alpha.sendMessage(from, ini_buffer, image, { quoted: fgif2, caption: ini_txt })
+await alpha.sendMessage(from, ini_buffer, image, { quoted: mek, caption: ini_txt })
 break
 
 case 'xnekopoisearch':
@@ -9630,7 +9639,7 @@ ini_txt += `Hp : ${get_result.attr.hp}\n`
 ini_txt += `Mana : ${get_result.attr.mana}\n`
 ini_txt += `Mana regen : ${get_result.attr.mana_regen}\n`
 ini_icon = await getBuffer(get_result.icon)
-await alpha.sendMessage(from, ini_icon, image, { quoted: fgif2, caption: ini_txt })
+await alpha.sendMessage(from, ini_icon, image, { quoted: mek, caption: ini_txt })
 break
 
 case 'xmlstalk':
@@ -9649,9 +9658,9 @@ ini_txt = `Name : ${get_result.title}\n`
 ini_txt += `Intro : ${get_result.intro}\n`
 ini_txt += `Icon : ${get_result.icon}\n`
 ini_icon = await getBuffer(get_result.cover1)
-await alpha.sendMessage(from, ini_icon, image, { quoted: fgif2, caption: ini_txt })
+await alpha.sendMessage(from, ini_icon, image, { quoted: mek, caption: ini_txt })
 ini_voice = await getBuffer(get_result.cv[0].audio[0])
-await alpha.sendMessage(from, ini_voice, audio, { quoted: fgif2, mimetype: Mimetype.mp4Audio })
+await alpha.sendMessage(from, ini_voice, audio, { quoted: mek, mimetype: Mimetype.mp4Audio })
 break
 
 case 'xqrreader':
@@ -9798,7 +9807,7 @@ ini_txt += `Magnitude : ${get_result.magnitude}\n`
 ini_txt += `Kedalaman : ${get_result.kedalaman}\n`
 ini_txt += `Koordinat : ${get_result.koordinat}`
 get_buffer = await getBuffer(get_result.map)
-await alpha.sendMessage(from, get_buffer, image, { quoted: fgif2, caption: ini_txt })
+await alpha.sendMessage(from, get_buffer, image, { quoted: mek, caption: ini_txt })
 break
 
 case 'xlirik':
@@ -9821,7 +9830,7 @@ ini_txt += `Kelembapan : ${get_result.kelembapan}\n`
 ini_txt += `Suhu : ${get_result.suhu}\n`
 ini_txt += `Udara : ${get_result.udara}\n`
 ini_txt += `Permukaan laut : ${get_result.permukaan_laut}\n`
-await alpha.sendMessage(from, { degreesLatitude: get_result.latitude, degreesLongitude: get_result.longitude }, location, { quoted: fgif2 })
+await alpha.sendMessage(from, { degreesLatitude: get_result.latitude, degreesLongitude: get_result.longitude }, location, { quoted: mek })
 reply2(ini_txt)
 break
 
@@ -9964,7 +9973,7 @@ ini_txt += `Date Release : ${get_result.date_release}\n`
 ini_txt += `Language : ${get_result.language}\n`
 ini_txt += `Link Download : ${get_result.link_dl}`
 thumbnail = await getBuffer(get_result.thumbnail)
-await alpha.sendMessage(from, thumbnail, image, { quoted: fgif2, caption: ini_txt })
+await alpha.sendMessage(from, thumbnail, image, { quoted: mek, caption: ini_txt })
 break
 
 case 'xdrakorongoing':
@@ -9999,7 +10008,7 @@ ini_txt += `Pages : ${get_result.pages}\n`
 ini_txt += `Description : ${get_result.desc}\n\n`
 ini_txt += `Story : \n${get_result.story}`
 thumbnail = await getBuffer(get_result.photo)
-await alpha.sendMessage(from, thumbnail, image, { quoted: fgif2, caption: ini_txt })
+await alpha.sendMessage(from, thumbnail, image, { quoted: mek, caption: ini_txt })
 break
 
 case 'xwattpadsearch':
@@ -10035,7 +10044,7 @@ ini_txt = `Title : ${get_result.title}\n`
 ini_txt += `Desc : ${get_result.desc}\n`
 ini_txt += `Story :\n${get_result.story}\n`
 thumbnail = await getBuffer(get_result.thumbnail)
-await alpha.sendMessage(from, thumbnail, image, { quoted: fgif2, caption: ini_txt })
+await alpha.sendMessage(from, thumbnail, image, { quoted: mek, caption: ini_txt })
 break
 
 // Random Text //
@@ -10085,7 +10094,7 @@ case 'xgimage':
 if (args.length == 0) return reply2(`Contoh: ${prefix + command} loli kawaii`)
 query = args.join(" ")
 ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/gimage?apikey=${lolkey}&query=${query}`)
-await alpha.sendMessage(from, ini_buffer, image, { quoted: fgif2 })
+await alpha.sendMessage(from, ini_buffer, image, { quoted: mek })
 break
 
 case 'xgimage2':
@@ -10103,7 +10112,7 @@ case 'xkonachan':
 if (args.length == 0) return reply2(`Contoh: ${prefix + command} azur_lane`)
 query = args.join(" ")
 ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/konachan?apikey=${lolkey}&query=${query}`)
-await alpha.sendMessage(from, ini_buffer, image, { quoted: fgif2 })
+await alpha.sendMessage(from, ini_buffer, image, { quoted: mek })
 break
 
 case 'xwallpapersearch':
@@ -10111,7 +10120,7 @@ if (args.length == 0) return reply2(`Contoh: ${prefix + command} loli kawaii`)
 query = args.join(" ")
 get_result = await fetchJson(`https://api.lolhuman.xyz/api/wallpaper?apikey=${lolkey}&query=${query}`)
 ini_buffer = await getBuffer(get_result.result)
-await alpha.sendMessage(from, ini_buffer, image, { quoted: fgif2 })
+await alpha.sendMessage(from, ini_buffer, image, { quoted: mek })
 break
 
 case 'xwallpapersearch2':
@@ -10119,7 +10128,7 @@ if (args.length == 0) return reply2(`Contoh: ${prefix + command} loli kawaii`)
 query = args.join(" ")
 get_result = await fetchJson(`https://api.lolhuman.xyz/api/wallpaper2?apikey=${lolkey}&query=${query}`)
 ini_buffer = await getBuffer(get_result.result)
-await alpha.sendMessage(from, ini_buffer, image, { quoted: fgif2 })
+await alpha.sendMessage(from, ini_buffer, image, { quoted: mek })
 break
 
 case 'xplaystore':
@@ -10242,12 +10251,12 @@ break
 case 'xasupan':
 get_result = await fetchJson(`https://api.lolhuman.xyz/api/asupan?apikey=${lolkey}`)
 ini_buffer = await getBuffer(get_result.result)
-await alpha.sendMessage(from, ini_buffer, video, { quoted: fgif2, mimetype: Mimetype.mp4, filename: "asupan.mp4" })
+await alpha.sendMessage(from, ini_buffer, video, { quoted: mek, mimetype: Mimetype.mp4, filename: "asupan.mp4" })
 break
 
 case 'xwancak':
 ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/onecak?apikey=${lolkey}`)
-await alpha.sendMessage(from, ini_buffer, image, { quoted: fgif2 })
+await alpha.sendMessage(from, ini_buffer, image, { quoted: mek })
 break
 
 case 'xakinator': // Premium / VIP apikey only
@@ -10267,7 +10276,7 @@ ini_txt += "1 - Tidak\n"
 ini_txt += "2 - Saya Tidak Tau\n"
 ini_txt += "3 - Mungkin\n"
 ini_txt += "4 - Mungkin Tidak"
-await alpha.sendMessage(from, ini_txt, text, { quoted: fgif2 }).then(() => {
+await alpha.sendMessage(from, ini_txt, text, { quoted: mek }).then(() => {
 akinator[sender.split('@')[0]] = dt
 fs.writeFileSync("./src/akinator.json", JSON.stringify(akinator))
 })
@@ -10300,7 +10309,7 @@ encoding: "binary"
 fs.unlinkSync(filePath)
 fs.writeFileSync(file_name, body, "binary")
 ini_buff = fs.readFileSync(file_name)
-alpha.sendMessage(from, ini_buff, image, { quoted: fgif2 }).then(() => {
+alpha.sendMessage(from, ini_buff, image, { quoted: mek }).then(() => {
 fs.unlinkSync(file_name)
 })
 });
@@ -10337,7 +10346,7 @@ fs.unlinkSync(filepath)
 reply2('Terjadi kesalahan saat mengconvert sticker.')
 })
 .on('end', () => {
-alpha.sendMessage(from, fs.readFileSync(randomName), sticker, { quoted: fgif2 })
+alpha.sendMessage(from, fs.readFileSync(randomName), sticker, { quoted: mek })
 fs.unlinkSync(filepath)
 fs.unlinkSync(randomName)
 })
@@ -10386,7 +10395,7 @@ console.log(err)
 fs.unlinkSync(file_name)
 })
 .on('end', function() {
-alpha.sendMessage(from, fs.readFileSync(file_name2), sticker, { quoted: fgif2 })
+alpha.sendMessage(from, fs.readFileSync(file_name2), sticker, { quoted: mek })
 fs.unlinkSync(file_name2)
 })
 .addOutputOptions([`-vcodec`, `libwebp`, `-vf`, `scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
@@ -10424,7 +10433,7 @@ ini_buffer = `https://api.lolhuman.xyz/api/editor/triggered?apikey=${lolkey}&img
 exec(`wget "${ini_buffer}" -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
 fs.unlinkSync(ranp)
 buff = fs.readFileSync(rano)
-alpha.sendMessage(from, buff, sticker, { quoted: fgif2 }).then(() => {
+alpha.sendMessage(from, buff, sticker, { quoted: mek }).then(() => {
 fs.unlinkSync(rano)
 })
 })
@@ -10433,7 +10442,7 @@ break
 case 'xwasted':
 ini_url = args[0]
 ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/editor/wasted?apikey=${lolkey}&img=${ini_url}`)
-await alpha.sendMessage(from, ini_buffer, image, { quoted: fgif2 })
+await alpha.sendMessage(from, ini_buffer, image, { quoted: mek })
 break
 
 case 'xsmoji':
@@ -10445,7 +10454,7 @@ emoji = encodeURI(emoji[0])
 emoji = encodeURI(emoji)
 }
 ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/smoji/${emoji}?apikey=${lolkey}`)
-await alpha.sendMessage(from, ini_buffer, sticker, { quoted: fgif2 })
+await alpha.sendMessage(from, ini_buffer, sticker, { quoted: mek })
 break
 
 case 'xsmoji2':
@@ -10458,14 +10467,14 @@ emoji = encodeURI(emoji)
 }
 ini_buffer = await fetchJson(`https://api.lolhuman.xyz/api/smoji3/${emoji}?apikey=${lolkey}`)
 ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/convert/towebp?apikey=${lolkey}&img=` + ini_buffer.result.emoji.whatsapp)
-await alpha.sendMessage(from, ini_buffer, sticker, { quoted: fgif2 })
+await alpha.sendMessage(from, ini_buffer, sticker, { quoted: mek })
 break
 
 case 'xfakedonald':
 if (args.length == 0) return reply2(`Contoh: ${prefix + command} Wudy`)
 ini_txt = args.join(" ")
 ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/tweettrump?apikey=${lolkey}&text=${ini_txt}`)
-await alpha.sendMessage(from, ini_buffer, image, { quoted: fgif2 })
+await alpha.sendMessage(from, ini_buffer, image, { quoted: mek })
 break
 
 case 'xfaketoko':
@@ -10492,7 +10501,7 @@ warga = get_args[13]
 until = get_args[14]
 img = get_args[15]
 ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/ktpmaker?apikey=${lolkey}&nik=${nik}&prov=${prov}&kabu=${kabu}&name=${name}&ttl=${ttl}&jk=${jk}&jl=${jl}&rtrw=${rtrw}&lurah=${lurah}&camat=${camat}&agama=${agama}&nikah=${nikah}&kerja=${kerja}&warga=${warga}&until=${until}&img=${img}`)
-await alpha.sendMessage(from, ini_buffer, image, { quoted: fgif2 })
+await alpha.sendMessage(from, ini_buffer, image, { quoted: mek })
 break
 
 // Converter
@@ -10606,7 +10615,7 @@ ini_txt += `Likes : ${get_result.likes}\n`
 ini_txt += `Video : ${get_result.video}\n`
 ini_txt += `Bio : ${get_result.bio}\n`
 pp_tt = await getBuffer(get_result.user_picture)
-alpha.sendMessage(from, pp_tt, image, { quoted: fgif2, caption: ini_txt })
+alpha.sendMessage(from, pp_tt, image, { quoted: mek, caption: ini_txt })
 break
 
 // Other
@@ -10614,14 +10623,14 @@ case 'xssweb':
 if (args.length == 0) return reply2(`Contoh: ${prefix + command} https://api.lolhuman.xyz`)
 ini_link = args[0]
 ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/ssweb?apikey=${lolkey}&url=${ini_link}`)
-await alpha.sendMessage(from, ini_buffer, image, { quoted: fgif2 })
+await alpha.sendMessage(from, ini_buffer, image, { quoted: mek })
 break
 
 case 'xssweb2':
 if (args.length == 0) return reply2(`Contoh: ${prefix + command} https://api.lolhuman.xyz`)
 ini_link = args[0]
 ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/sswebfull?apikey=${lolkey}&url=${ini_link}`)
-await alpha.sendMessage(from, ini_buffer, image, { quoted: fgif2 })
+await alpha.sendMessage(from, ini_buffer, image, { quoted: mek })
 break
 
 case 'xshortlink':
@@ -10686,7 +10695,7 @@ encoding: "binary"
 fs.unlinkSync(filePath)
 fs.writeFileSync(file_name, body, "binary")
 ini_buff = fs.readFileSync(file_name)
-alpha.sendMessage(from, ini_buff, image, { quoted: fgif2 }).then(() => {
+alpha.sendMessage(from, ini_buff, image, { quoted: mek }).then(() => {
 fs.unlinkSync(file_name)
 })
 });
@@ -10711,7 +10720,7 @@ encoding: "binary"
 fs.unlinkSync(filePath)
 fs.writeFileSync(file_name, body, "binary")
 ini_buff = fs.readFileSync(file_name)
-await alpha.sendMessage(from, ini_buff, image, { quoted: fgif2 }).then(() => {
+await alpha.sendMessage(from, ini_buff, image, { quoted: mek }).then(() => {
 fs.unlinkSync(file_name)
 })
 });
@@ -10741,7 +10750,7 @@ case 'xmegumin':
 case 'xart':
 case 'xwallnime':
 getBuffer(`https://api.lolhuman.xyz/api/random/${xmen}?apikey=${lolkey}`).then((gambar) => {
-alpha.sendMessage(from, gambar, image, { quoted: fgif2 })
+alpha.sendMessage(from, gambar, image, { quoted: mek })
 })
 break
 
@@ -10767,7 +10776,7 @@ case 'xlewdanimegirls':
 case 'xbiganimetiddies':
 case 'xhentai4everyone':
 getBuffer(`https://api.lolhuman.xyz/api/random/nsfw/${xmen}?apikey=${lolkey}`).then((gambar) => {
-alpha.sendMessage(from, gambar, image, { quoted: fgif2 })
+alpha.sendMessage(from, gambar, image, { quoted: mek })
 })
 break
 
@@ -10801,7 +10810,7 @@ case 'xdance':
 case 'xcringe':
 case 'xblush':
 getBuffer(`https://api.lolhuman.xyz/api/random/blush?apikey=${lolkey}`).then((gambar) => {
-alpha.sendMessage(from, gambar, image, { quoted: fgif2 })
+alpha.sendMessage(from, gambar, image, { quoted: mek })
 })
 break
 
@@ -10856,7 +10865,7 @@ case 'xnsfw_avatar':
 case 'xnsfw_neko_gif':
 case 'xrandom_hentai_gif':
 await getBuffer(`https://api.lolhuman.xyz/api/random2/${xmen}?apikey=${lolkey}`).then((gambar) => {
-alpha.sendMessage(from, gambar, image, { quoted: fgif2 })
+alpha.sendMessage(from, gambar, image, { quoted: mek })
 })
 break
 
@@ -10901,7 +10910,7 @@ case 'xwonderfulgraffiti':
 if (args.length == 0) return reply2(`Contoh: ${prefix + command} Wudy`)
 ini_txt = args.join(" ")
 await getBuffer(`https://api.lolhuman.xyz/api/textprome/${xmen}?apikey=${lolkey}&text=${ini_txt}`).then((gambar) => {
-alpha.sendMessage(from, gambar, image, { quoted: fgif2 })
+alpha.sendMessage(from, gambar, image, { quoted: mek })
 })
 break
 
@@ -10920,7 +10929,7 @@ if (args.length == 0) return reply2(`Contoh: ${prefix + command} Wudy`)
 txt1 = args[0]
 txt2 = args[1]
 await getBuffer(`https://api.lolhuman.xyz/api/textprome2/${xmen}?apikey=${lolkey}&text1=${txt1}&text2=${txt2}`).then((gambar) => {
-alpha.sendMessage(from, gambar, image, { quoted: fgif2 })
+alpha.sendMessage(from, gambar, image, { quoted: mek })
 })
 break
 
@@ -10950,7 +10959,7 @@ case 'xcarvedwood':
 if (args.length == 0) return reply2(`Contoh: ${prefix + command} Wudy`)
 ini_txt = args.join(" ")
 await getBuffer(`https://api.lolhuman.xyz/api/photooxy1/${xmen}?apikey=${lolkey}&text=${ini_txt}`).then((gambar) => {
-alpha.sendMessage(from, gambar, image, { quoted: fgif2 })
+alpha.sendMessage(from, gambar, image, { quoted: mek })
 })
 break
 
@@ -10962,7 +10971,7 @@ if (args.length == 0) return reply2(`Contoh: ${prefix + command} Wudy`)
 txt1 = args[0]
 txt2 = args[1]
 await getBuffer(`https://api.lolhuman.xyz/api/photooxy2/${xmen}?apikey=${lolkey}&text1=${txt1}&text2=${txt2}`).then((gambar) => {
-alpha.sendMessage(from, gambar, image, { quoted: fgif2 })
+alpha.sendMessage(from, gambar, image, { quoted: mek })
 })
 break
 
@@ -11010,7 +11019,7 @@ case 'xavatardota':
 if (args.length == 0) return reply2(`Contoh: ${prefix + command} Wudy`)
 ini_txt = args.join(" ")
 await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/${xmen}?apikey=${lolkey}&text=${ini_txt}`).then((gambar) => {
-alpha.sendMessage(from, gambar, image, { quoted: fgif2 })
+alpha.sendMessage(from, gambar, image, { quoted: mek })
 })
 break
 
@@ -11078,7 +11087,7 @@ break
 case 'say':
 if (args.length > 50) return reply2('```Error, Teks Terlalu Panjang!```')
 say_ = await getBuffer(`https://api.dapuhy.ga/api/maker/tts?text=${q}&lang=id&apikey=${dapuhy}`)
-alpha.sendMessage(from, say_, MessageType.audio, {quoted: fgif2, mimetype: 'audio/mp4', ptt:true, duration: 86400000})
+alpha.sendMessage(from, say_, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true, duration: 86400000})
 break
 
 case 'asupan':
@@ -11089,7 +11098,7 @@ case 'asupanrikagusriani':
 case 'asupanghea':
 asup_2 = await getBuffer(`https://api.dapuhy.ga/api/asupan/${command}?apikey=${dapuhy}`) 
 asup_1 = `Nih Asupan nya ${pushname}`
-alpha.sendMessage(from, asup_2,video,{caption: `${asup1}`,quoted: fgif2})
+alpha.sendMessage(from, asup_2,video,{caption: `${asup1}`,quoted: mek})
 break
 
 case 'quoteslucu':
@@ -11112,7 +11121,7 @@ alpha.sendMessage(from, qtlc_3, MessageType.buttonsMessage,{
 "contextInfo": {
 "forwardingScore": 999,isForwarded: true,
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -11138,7 +11147,7 @@ alpha.sendMessage(from, crpn_3, MessageType.buttonsMessage,{
 "contextInfo": {
 "forwardingScore": 999,isForwarded: true,
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -11161,7 +11170,7 @@ alpha.sendMessage(from, jgkt_3, MessageType.buttonsMessage,{
 "contextInfo": {
 "forwardingScore": 999,isForwarded: true,
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -11197,7 +11206,7 @@ alpha.sendMessage(from, ttgbr_7, MessageType.buttonsMessage,{
 "sourceUrl": apiku,
 "thumbnail": thumb_img},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 await sleep(`${waktu_game}`)
 if (tebakgambar2.hasOwnProperty(sender.split('@')[0])) {
@@ -11406,7 +11415,7 @@ alpha.sendMessage(from, rdmg_1, MessageType.image,{
 "sourceUrl": apiku,
 "thumbnail": thumb_miku},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -11458,7 +11467,7 @@ alpha.sendMessage(from, poxy_7, MessageType.buttonsMessage,{
 "sourceUrl": apiku,
 "thumbnail": thumb_oxy},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -11581,7 +11590,7 @@ alpha.sendMessage(from, txtpr_7, MessageType.buttonsMessage,{
 "sourceUrl": apiku,
 "thumbnail": thumb_pro},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -11657,7 +11666,7 @@ alpha.sendMessage(from, ephto_7, MessageType.buttonsMessage,{
 "sourceUrl": apiku,
 "thumbnail": thumb_epho},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -11704,7 +11713,7 @@ alpha.sendMessage(from, pfun_7, MessageType.buttonsMessage,{
 "sourceUrl": apiku,
 "thumbnail": thumb_pfun},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -11733,7 +11742,7 @@ alpha.sendMessage(from, cwe_7, MessageType.buttonsMessage,{
 "sourceUrl": apiku,
 "thumbnail": thumb_coupl},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 let cwo_1 = await getBuffer(cwe_.result.pria);
 const cwo_3 = await alpha.prepareMessage(from, cwo_1, MessageType.image, { thumbnail:thumb_coupl})
@@ -11758,7 +11767,7 @@ alpha.sendMessage(from, cwo_7, MessageType.buttonsMessage,{
 "sourceUrl": apiku,
 "thumbnail": thumb_coupl},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -11799,7 +11808,7 @@ alpha.sendMessage(from, oxy2_7, MessageType.buttonsMessage,{
 "sourceUrl": apiku,
 "thumbnail": thumb_pro},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -11881,7 +11890,7 @@ alpha.sendMessage(from, oxxy_7, MessageType.buttonsMessage,{
 "sourceUrl": apiku,
 "thumbnail": thumb_pro},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -11942,7 +11951,7 @@ alpha.sendMessage(from, tpr2_7, MessageType.buttonsMessage,{
 "sourceUrl": apiku,
 "thumbnail": thumb_pro},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break 
 //1 TEXT
@@ -12123,7 +12132,7 @@ alpha.sendMessage(from, tpr_7, MessageType.buttonsMessage,{
 "sourceUrl": apiku,
 "thumbnail": thumb_pro},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -12154,7 +12163,7 @@ alpha.sendMessage(from, qur_1_, MessageType.buttonsMessage,{
 "contextInfo": {
 "forwardingScore": 999,isForwarded: true,
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -12220,7 +12229,7 @@ alpha.sendMessage(from, nsfw2_7, MessageType.buttonsMessage,{
 "sourceUrl": apiku,
 "thumbnail": thumb_miku},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -12250,14 +12259,14 @@ case 'ssweb':
 if (args.length < 1) return reply2('Urlnya mana om')
 teks = args[0]
 buff = await getBuffer(`https://api.apiflash.com/v1/urltoimage?access_key=7eea5c14db5041ecb528f68062a7ab5d&url=${teks}`)
-alpha.sendMessage(from, buff, image, {quoted: fgif2, caption : `Screenshot from ${teks}`})
+alpha.sendMessage(from, buff, image, {quoted: mek, caption : `Screenshot from ${teks}`})
 break
 
 case 'ss2':
 if (args.length < 1) return reply2('Urlnya mana om')
 teks = args[0]
 buff = await getBuffer(`https://hadi-api.herokuapp.com/api/ssweb2?url=${teks}`)
-alpha.sendMessage(from, buff, image, {quoted: fgif2, caption : `Screenshot from ${teks}`})
+alpha.sendMessage(from, buff, image, {quoted: mek, caption : `Screenshot from ${teks}`})
 break
 
 case 'tinyurl':
@@ -12318,7 +12327,7 @@ alpha.sendMessage(from, rdm_1, MessageType.image,{
 "sourceUrl": apiku,
 "thumbnail": thumb_miku},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -12335,7 +12344,7 @@ alpha.sendMessage(from, hdw_1, MessageType.image,{
 "sourceUrl": apiku,
 "thumbnail": thumb_miku},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -12352,7 +12361,7 @@ alpha.sendMessage(from, wnim_1, MessageType.image,{
 "sourceUrl": apiku,
 "thumbnail": thumb_miku},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -12423,7 +12432,7 @@ case 'wooden-boards':
 case 'write-stars':
 if(!q) return reply2(`${emoj} Hint : ${prefix + command} Wudy Bot`) 
 buff = await getBuffer(`https://hadi-api.herokuapp.com/api/photoxy/${command}?teks=${q}`)
-alpha.sendMessage(from, buff, image, {quoted: fgif2, caption : `Dah selesai , Req by: ${pushname}\nKetik *${prefix}oxylist* untuk melihat menu yang lain`})
+alpha.sendMessage(from, buff, image, {quoted: mek, caption : `Dah selesai , Req by: ${pushname}\nKetik *${prefix}oxylist* untuk melihat menu yang lain`})
 break
 
 case 'anime':
@@ -12452,7 +12461,7 @@ alpha.sendMessage(from, animek_8, MessageType.buttonsMessage,{
 "sourceUrl": apiku,
 "thumbnail": thumb_nime},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -12516,7 +12525,7 @@ alpha.sendMessage(from, cuac_3, MessageType.buttonsMessage,{
 "contextInfo": {
 "forwardingScore": 999,isForwarded: true,
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -12581,13 +12590,13 @@ break
 case 'attp2':
 if(!q) return reply2(`${emoj} Hint : ${prefix + command} hai bg`)
 buffer = await getBuffer(`https://api.lolhuman.xyz/api/attp?apikey=${lolkey}&text=${encodeURIComponent(q)}`)
-alpha.sendMessage(from, buffer, sticker, { quoted: fgif2 })
+alpha.sendMessage(from, buffer, sticker, { quoted: mek })
 break
 
 case 'attp':
 if(!q) return reply2(`${emoj} Hint : ${prefix + command} hai bg`)
 buffer = await getBuffer(`https://api.xteam.xyz/attp?file&text=${encodeURIComponent(q)}`)
-alpha.sendMessage(from, buffer, sticker, { quoted: fgif2 })
+alpha.sendMessage(from, buffer, sticker, { quoted: mek })
 break
 
 case 'qrcode':
@@ -12703,7 +12712,7 @@ alpha.sendMessage(from, tttgbr_7, MessageType.buttonsMessage,{
 "sourceUrl": apiku,
 "thumbnail": thumb_img},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 await sleep(`${waktu_game}`)
 if (tebakgambar3.hasOwnProperty(sender.split('@')[0])) {
@@ -12750,7 +12759,7 @@ alpha.sendMessage(from, tgbr_7, MessageType.buttonsMessage,{
 "sourceUrl": apiku,
 "thumbnail": thumb_img},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 await sleep(`${waktu_game}`)
 if (tebakgambar.hasOwnProperty(sender.split('@')[0])) {
@@ -13233,7 +13242,7 @@ alpha.sendMessage(from, rnim_1, MessageType.image,{caption:rnim_5,
 "sourceUrl": apiku,
 "thumbnail": thumb_miku},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -13257,7 +13266,7 @@ alpha.sendMessage(from, rcat_1, MessageType.image,{caption:rcat_5,
 "sourceUrl": apiku,
 "thumbnail": thumb_miku},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -13281,7 +13290,7 @@ alpha.sendMessage(from, rdog_1, MessageType.image,{caption:rdog_5,
 "sourceUrl": apiku,
 "thumbnail": thumb_miku},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -13305,7 +13314,7 @@ alpha.sendMessage(from, rfox_1, MessageType.image,{caption:rfox_5,
 "sourceUrl": apiku,
 "thumbnail": thumb_miku},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -13329,7 +13338,7 @@ alpha.sendMessage(from, rkoa_1, MessageType.image,{caption:rkoa_5,
 "sourceUrl": apiku,
 "thumbnail": thumb_miku},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -13353,7 +13362,7 @@ alpha.sendMessage(from, rpan_1, MessageType.image,{caption:rpan_5,
 "sourceUrl": apiku,
 "thumbnail": thumb_miku},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -13377,7 +13386,7 @@ alpha.sendMessage(from, rred_1, MessageType.image,{caption:rred_5,
 "sourceUrl": apiku,
 "thumbnail": thumb_miku},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -13499,7 +13508,7 @@ alpha.sendMessage(from, gcwa_3, MessageType.buttonsMessage,{
 "contextInfo": {
 "forwardingScore": 999,isForwarded: true,
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -13521,7 +13530,7 @@ alpha.sendMessage(from, gsrch_3, MessageType.buttonsMessage,{
 "contextInfo": {
 "forwardingScore": 999,isForwarded: true,
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -13550,7 +13559,7 @@ alpha.sendMessage(from, topnim_3, MessageType.buttonsMessage,{
 "contextInfo": {
 "forwardingScore": 999,isForwarded: true,
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -13574,7 +13583,7 @@ alpha.sendMessage(from, rbuc_3, MessageType.buttonsMessage,{
 "contextInfo": {
 "forwardingScore": 999,isForwarded: true,
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -13598,7 +13607,7 @@ alpha.sendMessage(from, fakta_3, MessageType.buttonsMessage,{
 "contextInfo": {
 "forwardingScore": 999,isForwarded: true,
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -13622,7 +13631,7 @@ alpha.sendMessage(from, ktbjk_3, MessageType.buttonsMessage,{
 "contextInfo": {
 "forwardingScore": 999,isForwarded: true,
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -13646,7 +13655,7 @@ alpha.sendMessage(from, motvas_3, MessageType.buttonsMessage,{
 "contextInfo": {
 "forwardingScore": 999,isForwarded: true,
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -13670,7 +13679,7 @@ alpha.sendMessage(from, pntn_3, MessageType.buttonsMessage,{
 "contextInfo": {
 "forwardingScore": 999,isForwarded: true,
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -13706,7 +13715,7 @@ alpha.sendMessage(from, ssfile_3, MessageType.buttonsMessage,{
 "contextInfo": {
 "forwardingScore": 999,isForwarded: true,
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -13743,7 +13752,7 @@ alpha.sendMessage(from, modd_7, MessageType.buttonsMessage,{
 "sourceUrl": apiku,
 "thumbnail": thumb_mod},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -13767,7 +13776,7 @@ alpha.sendMessage(from, md5_3, MessageType.buttonsMessage,{
 "contextInfo": {
 "forwardingScore": 999,isForwarded: true,
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -13790,7 +13799,7 @@ alpha.sendMessage(from, artikt_3, MessageType.buttonsMessage,{
 "contextInfo": {
 "forwardingScore": 999,isForwarded: true,
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -13813,7 +13822,7 @@ alpha.sendMessage(from, artimp_3, MessageType.buttonsMessage,{
 "contextInfo": {
 "forwardingScore": 999,isForwarded: true,
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -13836,7 +13845,7 @@ alpha.sendMessage(from, artinm_3, MessageType.buttonsMessage,{
 "contextInfo": {
 "forwardingScore": 999,isForwarded: true,
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -13868,7 +13877,7 @@ alpha.sendMessage(from, amzn_3, MessageType.buttonsMessage,{
 "contextInfo": {
 "forwardingScore": 999,isForwarded: true,
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -13900,7 +13909,7 @@ alpha.sendMessage(from, ipgeo_3, MessageType.buttonsMessage,{
 "contextInfo": {
 "forwardingScore": 999,isForwarded: true,
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -13935,7 +13944,7 @@ alpha.sendMessage(from, smhdku_7, MessageType.buttonsMessage,{
 "sourceUrl": apiku,
 "thumbnail": thumb_sam},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -13967,7 +13976,7 @@ alpha.sendMessage(from, lzy_3, MessageType.buttonsMessage,{
 "contextInfo": {
 "forwardingScore": 999,isForwarded: true,
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -13996,7 +14005,7 @@ alpha.sendMessage(from, yw_3, MessageType.buttonsMessage,{
 "contextInfo": {
 "forwardingScore": 999,isForwarded: true,
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -14021,7 +14030,7 @@ alpha.sendMessage(from, zdiak_3, MessageType.buttonsMessage,{
 "contextInfo": {
 "forwardingScore": 999,isForwarded: true,
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -14056,7 +14065,7 @@ alpha.sendMessage(from, gbr5_7, MessageType.buttonsMessage,{
 "sourceUrl": apiku,
 "thumbnail": thumb_img},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 await sleep(`${waktu_game}`)
 if (tebakgambar5.hasOwnProperty(sender.split('@')[0])) {
@@ -14128,7 +14137,7 @@ alpha.sendMessage(from, tnim_7, MessageType.buttonsMessage,{
 "sourceUrl": apiku,
 "thumbnail": thumb_anim},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 await sleep(`${waktu_game}`)
 if (tebakanime.hasOwnProperty(sender.split('@')[0])) {
@@ -14171,7 +14180,7 @@ alpha.sendMessage(from, wnime_7, MessageType.buttonsMessage,{
 "sourceUrl": apiku,
 "thumbnail": thumb_nime},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -14203,7 +14212,7 @@ alpha.sendMessage(from, shta_7, MessageType.buttonsMessage,{
 "sourceUrl": apiku,
 "thumbnail": thumb_miku},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -14235,7 +14244,7 @@ alpha.sendMessage(from, neku_7, MessageType.buttonsMessage,{
 "sourceUrl": apiku,
 "thumbnail": thumb_miku},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -14267,7 +14276,7 @@ alpha.sendMessage(from, kmn_7, MessageType.buttonsMessage,{
 "sourceUrl": apiku,
 "thumbnail": thumb_miku},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -14299,7 +14308,7 @@ alpha.sendMessage(from, loly_7, MessageType.buttonsMessage,{
 "sourceUrl": apiku,
 "thumbnail": thumb_miku},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -14331,7 +14340,7 @@ alpha.sendMessage(from, hsb_7, MessageType.buttonsMessage,{
 "sourceUrl": apiku,
 "thumbnail": thumb_miku},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -14365,7 +14374,7 @@ alpha.sendMessage(from, cehor_7, MessageType.buttonsMessage,{
 "sourceUrl": apiku,
 "thumbnail": thumb_miku},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -14397,7 +14406,7 @@ alpha.sendMessage(from, drjok_7, MessageType.buttonsMessage,{
 "sourceUrl": apiku,
 "thumbnail": thumb_dark},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -14436,7 +14445,7 @@ alpha.sendMessage(from, xnsfw_7, MessageType.buttonsMessage,{
 "sourceUrl": apiku,
 "thumbnail": thumb_miku},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -14469,7 +14478,7 @@ alpha.sendMessage(from, gimg_7, MessageType.buttonsMessage,{
 "sourceUrl": apiku,
 "thumbnail": thumb_miku},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -14505,7 +14514,7 @@ alpha.sendMessage(from, capt_7, MessageType.buttonsMessage,{
 "sourceUrl": apiku,
 "thumbnail": thumb_cap},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 await sleep(`${waktu_game}`)
 if (recaptcha.hasOwnProperty(sender.split('@')[0])) {
@@ -14554,7 +14563,7 @@ alpha.sendMessage(from, tbra_7, MessageType.buttonsMessage,{
 "sourceUrl": apiku,
 "thumbnail": thumb_flag},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 await sleep(`${waktu_game}`)
 if (tebakbendera.hasOwnProperty(sender.split('@')[0])) {
@@ -14601,7 +14610,7 @@ alpha.sendMessage(from, tkab_7, MessageType.buttonsMessage,{
 "sourceUrl": apiku,
 "thumbnail": thumb_flag},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 await sleep(`${waktu_game}`)
 if (tebakkabupaten.hasOwnProperty(sender.split('@')[0])) {
@@ -14648,7 +14657,7 @@ alpha.sendMessage(from, gbr4_7, MessageType.buttonsMessage,{
 "sourceUrl": apiku,
 "thumbnail": thumb_img},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 await sleep(`${waktu_game}`)
 if (tebakgambar4.hasOwnProperty(sender.split('@')[0])) {
@@ -14757,7 +14766,7 @@ alpha.sendMessage(from, tapp_7, MessageType.buttonsMessage,{
 "sourceUrl": apiku,
 "thumbnail": thumb_flag},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 await sleep(`${waktu_game}`)
 if (tebakaplikasi.hasOwnProperty(sender.split('@')[0])) {
@@ -14783,7 +14792,7 @@ tebaklagu[sender.split('@')[0]] = jwb_lagu.toLowerCase()
 fs.writeFileSync("./game/tebaklagu.json", JSON.stringify(tebaklagu))
 console.log(jwb_lagu)
 song_nya = await getBuffer(`${lgu}`)
-alpha.sendMessage(from, song_nya, MessageType.audio, {quoted: fgif2, mimetype: 'audio/mp4', ptt:true, duration: 86400000})
+alpha.sendMessage(from, song_nya, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true, duration: 86400000})
 reply2(clue)
 await sleep(`${waktu_game}`)
 if (tebaklagu.hasOwnProperty(sender.split('@')[0])) {
@@ -14908,7 +14917,7 @@ case 'text3d':
 case 'thundertext':
 case 'toxictext':
 ini_buffer = await getBuffer(`https://kocakz.herokuapp.com/api/textpro/${command}?text=${q}`)
-alpha.sendMessage(from, ini_buffer, image, {quoted: fgif2, caption : `Dah selesai , Req by: ${pushname}\nKetik *${prefix}tpro_list* untuk melihat menu yang lain`})
+alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Dah selesai , Req by: ${pushname}\nKetik *${prefix}tpro_list* untuk melihat menu yang lain`})
 break
 
 case 'avengers':
@@ -14921,13 +14930,13 @@ t = args.join(' ')
 t1 = t.split('|')[0]
 t2 = t.split('|')[1]
 ini_buffer = await getBuffer(`https://kocakz.herokuapp.com/api/textpro/${command}?text1=${t1}&text2=${t2}`)
-alpha.sendMessage(from, ini_buffer, MessageType.image,{quoted: fgif2})
+alpha.sendMessage(from, ini_buffer, MessageType.image,{quoted: mek})
 break
 
 case 'sertitolol':
 if(!q) return reply2(`${emoj} Hint : ${prefix + command} Wudy Bot`) 
 buff = await getBuffer(`https://mysakura.herokuapp.com/api/serti/tolol?text=${q}&apikey=sakura404`)
-alpha.sendMessage(from, buff, image, {quoted: fgif2, caption : `Ketik *.serti* untuk melihat list , Req by: ${pushname}`})
+alpha.sendMessage(from, buff, image, {quoted: mek, caption : `Ketik *.serti* untuk melihat list , Req by: ${pushname}`})
 break
 
 //───────────────[ FITUR IMAGE ]───────────────//
@@ -14949,7 +14958,7 @@ await alpha.sendMessage(from, w_3, MessageType.listMessage, {
 "contextInfo": {
 "forwardingScore": 999,isForwarded: true,
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -14982,7 +14991,7 @@ alpha.sendMessage(from, pinterest_7, MessageType.buttonsMessage,{
 "sourceUrl": apiku,
 "thumbnail": thumb_pin},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -15081,7 +15090,7 @@ case 'citacita':
 var cita =['http://piyobot.000webhostapp.com/citacita1.mp3','http://piyobot.000webhostapp.com/citacita2.mp3','http://piyobot.000webhostapp.com/citacita3.mp3','http://piyobot.000webhostapp.com/citacita4.mp3','http://piyobot.000webhostapp.com/citacita5.mp3','http://piyobot.000webhostapp.com/citacita6.mp3','http://piyobot.000webhostapp.com/citacita7.mp3','http://piyobot.000webhostapp.com/citacita8.mp3','http://piyobot.000webhostapp.com/citacita9.mp3','http://piyobot.000webhostapp.com/citacita10.mp3','http://piyobot.000webhostapp.com/citacita11.mp3','http://piyobot.000webhostapp.com/citacita12.mp3','http://piyobot.000webhostapp.com/citacita13.mp3','http://piyobot.000webhostapp.com/citacita14.mp3','http://piyobot.000webhostapp.com/citacita15.mp3','http://piyobot.000webhostapp.com/citacita16.mp3','http://piyobot.000webhostapp.com/citacita17.mp3','http://piyobot.000webhostapp.com/citacita18.mp3','http://piyobot.000webhostapp.com/citacita19.mp3','http://piyobot.000webhostapp.com/citacita20.mp3','http://piyobot.000webhostapp.com/citacita21.mp3','http://piyobot.000webhostapp.com/citacita22.mp3','http://piyobot.000webhostapp.com/citacita23.mp3','http://piyobot.000webhostapp.com/citacita24.mp3','http://piyobot.000webhostapp.com/citacita25.mp3','http://piyobot.000webhostapp.com/citacita26.mp3','http://piyobot.000webhostapp.com/citacita27.mp3','http://piyobot.000webhostapp.com/citacita28.mp3','http://piyobot.000webhostapp.com/citacita29.mp3','http://piyobot.000webhostapp.com/citacita30.mp3','http://piyobot.000webhostapp.com/citacita31.mp3','http://piyobot.000webhostapp.com/citacita32.mp3','http://piyobot.000webhostapp.com/citacita33.mp3','http://piyobot.000webhostapp.com/citacita34.mp3','http://piyobot.000webhostapp.com/citacita35.mp3']
 var cita3 = cita[Math.floor(Math.random() * cita.length)]
 cita2 = await getBuffer(cita3)
-alpha.sendMessage(from, cita2, MessageType.audio, {quoted: fgif2, mimetype: 'audio/mp4', ptt:true, duration: 86400000})
+alpha.sendMessage(from, cita2, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true, duration: 86400000})
 break
 
 case 'kapankah':
@@ -15213,7 +15222,7 @@ alpha.sendMessage(from, rexdl_3, MessageType.buttonsMessage,{
 "contextInfo": {
 "forwardingScore": 999,isForwarded: true,
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -15238,7 +15247,7 @@ await alpha.sendMessage(from, math3_3, MessageType.listMessage, {
 "contextInfo": {
 "forwardingScore": 999,isForwarded: true,
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -15273,7 +15282,7 @@ alpha.sendMessage(from, mat2_7, MessageType.buttonsMessage,{
 "sourceUrl": apiku,
 "thumbnail": thumb_miku},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 await sleep(`${waktu_game}`)
 if (math2.hasOwnProperty(sender.split('@')[0])) {
@@ -15309,7 +15318,7 @@ alpha.sendMessage(from, facten_3, MessageType.buttonsMessage,{
 "contextInfo": {
 "forwardingScore": 999,isForwarded: true,
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -15335,7 +15344,7 @@ alpha.sendMessage(from, umur_3, MessageType.buttonsMessage,{
 "contextInfo": {
 "forwardingScore": 999,isForwarded: true,
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -15363,7 +15372,7 @@ alpha.sendMessage(from, gen_3, MessageType.buttonsMessage,{
 "contextInfo": {
 "forwardingScore": 999,isForwarded: true,
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -15395,7 +15404,7 @@ alpha.sendMessage(from, ajg5, MessageType.buttonsMessage,{
 "sourceUrl": apiku,
 "thumbnail": thumb_miku},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -15433,7 +15442,7 @@ alpha.sendMessage(from, ipinf_7, MessageType.buttonsMessage,{
 "contextInfo": {
 "forwardingScore": 999,isForwarded: true,
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -15445,7 +15454,7 @@ exec(`ffmpeg -i ${slow} -filter:a "atempo=0.7,asetrate=44100" ${ran}`, (err, std
 fs.unlinkSync(slow)
 if (err) return reply2('Error!')
 hah = fs.readFileSync(ran)
-alpha.sendMessage(from, hah, MessageType.audio, {quoted: fgif2, mimetype: 'audio/mp4', ptt:true, duration: 86400000})
+alpha.sendMessage(from, hah, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true, duration: 86400000})
 fs.unlinkSync(ran)
 })
 break
@@ -15458,7 +15467,7 @@ exec(`ffmpeg -i ${muk} -filter:a "atempo=1.6,asetrate=22100" ${ran}`, (err, stde
 fs.unlinkSync(muk)
 if (err) return reply2('Error!')
 hah = fs.readFileSync(ran)
-alpha.sendMessage(from, hah, MessageType.audio, {quoted: fgif2, mimetype: 'audio/mp4', ptt:true, duration: 86400000})
+alpha.sendMessage(from, hah, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true, duration: 86400000})
 fs.unlinkSync(ran)
 })
 break
@@ -15471,7 +15480,7 @@ exec(`ffmpeg -i ${pai2} -filter:a "atempo=0.5,asetrate=65100" ${ran}`, (err, std
 fs.unlinkSync(pai2)
 if (err) return reply2('Error!')
 hah = fs.readFileSync(ran)
-alpha.sendMessage(from, hah, MessageType.audio, {quoted: fgif2, mimetype: 'audio/mp4', ptt:true, duration: 86400000})
+alpha.sendMessage(from, hah, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true, duration: 86400000})
 fs.unlinkSync(ran)
 })
 break
@@ -15484,7 +15493,7 @@ exec(`ffmpeg -i ${ptt} ${ran}`, (err) => {
 fs.unlinkSync(ptt)
 if (err) return reply2('Gagal mengkonversi audio ke ptt')
 topt = fs.readFileSync(ran)
-alpha.sendMessage(from, hah, MessageType.audio, {quoted: fgif2, mimetype: 'audio/mp4', ptt:true, duration: 86400000})
+alpha.sendMessage(from, hah, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true, duration: 86400000})
 })
 break
 
@@ -15496,7 +15505,7 @@ exec(`ffmpeg -i ${bas2} -af equalizer=f=94:width_type=o:width=2:g=30 ${ran}`, (e
 fs.unlinkSync(bas2)
 if (err) return reply2('Error!')
 hah = fs.readFileSync(ran)
-alpha.sendMessage(from, hah, MessageType.audio, {quoted: fgif2, mimetype: 'audio/mp4', ptt:true, duration: 86400000})
+alpha.sendMessage(from, hah, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true, duration: 86400000})
 fs.unlinkSync(ran)
 })
 break
@@ -15651,7 +15660,7 @@ impostor = kntl.split("|")[1];
 alpha.sendMessage(from, {
 name: nama,
 address: impostor,
-jpegThumbnail: thumb_miku}, MessageType.liveLocation, {quoted: fgif2})
+jpegThumbnail: thumb_miku}, MessageType.liveLocation, {quoted: mek})
 break
 
 case 'fdevace':
@@ -16033,7 +16042,7 @@ await alpha.sendMessage(from, npl, MessageType.text, {
 "sourceUrl": apiku,
 "thumbnail": thumb_miku},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 break
 
@@ -16073,74 +16082,6 @@ var nomor = pc.split("|")[0];
 var org = pc.split("|")[1];
 alpha.sendMessage(nomor+'@s.whatsapp.net', org, MessageType.text) 
 reply2(`Sukses mengirim chat:\n${org},@${nomor}`)
-break
-case 'swm2':
-if (isMedia && !mek.message.videoMessage || isQuotedImage) {
-	ppp = `${args.join(' ')}`
-	const encmediax = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
-	const mediax = await alpha.downloadAndSaveMediaMessage(encmediax, `./sticker/${sender}`)
-	const packname1 = ppp.split('|')[0]
-	const author1 = ppp.split('|')[1]
-	exif.create(packname1, author1, `stickwm_${sender}`)
-	await ffmpeg(`${mediax}`)
-			.input(mediax)
-			.on('start', function (cmd) {
-console.log(`Started : ${cmd}`)
-			})
-			.on('error', function (err) {
-console.log(`Error : ${err}`)
-fs.unlinkSync(mediax)
-reply2(mess.error.api)
-			})
-			.on('end', function () {
-console.log('Finish')
-exec(`webpmux -set exif ./sticker/stickwm_${sender}.exif ./sticker/${sender}.webp -o ./sticker/${sender}.webp`, async (error) => {
-if (error) return reply2(mess.error.api)
-alpha.sendMessage(from, fs.readFileSync(`./sticker/${sender}.webp`), sticker, {quoted: mek})
-fs.unlinkSync(mediax)	
-fs.unlinkSync(`./sticker/${sender}.webp`)	
-fs.unlinkSync(`./sticker/stickwm_${sender}.exif`)
-})
-			})
-			.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
-			.toFormat('webp')
-			.save(`./sticker/${sender}.webp`)
-} else if ((isMedia && mek.message.videoMessage.fileLength < 10000000 || isQuotedVideo && mek.message.extendedTextMessage.contextInfo.quotedMessage.videoMessage.fileLength < 10000000)) {
-	wmsti = body.slice(11)
-	if (!wmsti.includes('|')) return reply2(`Kirim gambar atau reply gambar dengan caption *${prefix}stickerwm nama|author*`)
-	const encmediax = isQuotedVideo ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
-	const mediax = await alpha.downloadAndSaveMediaMessage(encmediax, `./sticker/${sender}`)
-	const packname1 = wmsti.split('|')[0]
-	const author1 = wmsti.split('|')[1]
-	exif.create(packname1, author1, `stickwm_${sender}`)
-	sticWait(from)
-		await ffmpeg(`${mediax}`)
-			.inputFormat(mediax.split('.')[4])
-			.on('start', function (cmd) {
-console.log(`Started : ${cmd}`)
-			})
-			.on('error', function (err) {
-console.log(`Error : ${err}`)
-fs.unlinkSync(mediax)
-tipe = mediax.endsWith('.mp4') ? 'video' : 'gif'
-reply2(mess.error.api)
-			})
-			.on('end', function () {
-console.log('Finish')
-exec(`webpmux -set exif ./sticker/stickwm_${sender}.exif ./sticker/${sender}.webp -o ./sticker/${sender}.webp`, async (error) => {
-if (error) return reply2(mess.error.api)
-alpha.sendMessage(from, fs.readFileSync(`./sticker/${sender}.webp`), sticker, {quoted: mek})
-fs.unlinkSync(mediax)
-fs.unlinkSync(`./sticker/${sender}.webp`)
-fs.unlinkSync(`./sticker/stickwm_${sender}.exif`)
-})
-			})
-			.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
-			.toFormat('webp')
-			.save(`./sticker/${sender}.webp`)
-} else {
-	reply2(`Kirim gambar/video dengan caption ${prefix}stickerwm nama|author atau tag gambar/video yang sudah dikirim\nNote : Durasi video maximal 10 detik`)
-}
 break
 
 case 'ultah':
@@ -16208,7 +16149,7 @@ var ranstik = ["angry","anime","bite","bored","bread","chocolate","cookie","cudd
 pfft = ranstik[Math.floor(Math.random() * ranstik.length)]
 res = await fetchJson(`https://api.satou-chan.xyz/api/endpoint/${pfft}`)
 inibuff = res.url
-sendStickerFromUrl(from, inibuff,{quoted: fgif2})
+sendStickerFromUrl(from, inibuff,{quoted: mek})
 break
 
 case 'game':
@@ -16286,7 +16227,7 @@ case 'wooden-boards':
 case 'write-birthday':
 if(!q) return reply2(`${emoj} Hint : ${prefix + command} Wudy Bot`) 
 ini_buffer = await getBuffer(`https://kuontol-api.herokuapp.com/api/photooxy/${command}?text=${q}`)
-alpha.sendMessage(from, ini_buffer, image, {quoted: fgif2, caption : `Dah selesai , Req by: ${pushname}\nKetik *${prefix}oxy_list* untuk melihat menu yang lain`})
+alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Dah selesai , Req by: ${pushname}\nKetik *${prefix}oxy_list* untuk melihat menu yang lain`})
 break
 
 case 'tytyd':
@@ -16325,7 +16266,7 @@ grup = alpha.prepareMessageFromContent(from,
 "footerText": `${dari_grup}`,
 "jpegThumbnail": pp_userz,
 "caption": `${caption_grup}`}
-}, {quoted: fgif2})
+}, {quoted: mek})
 alpha.relayWAMessage(grup)
 break
 
@@ -16363,7 +16304,7 @@ anu = alpha.prepareMessageFromContent(from,{
 	"isForwarded": true
 }
 }
-},{quoted: fgif2, contextInfo: { mentionedJid: [sender]}})
+},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
 alpha.relayWAMessage(anu)
 break
 
@@ -16710,7 +16651,7 @@ var imgbb = require('imgbb-uploader')
 anu = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", './stickmeme.jpeg')
 teks = `${anu.display_url}`
 buffer453 = await getBuffer (`https://api-xcoders.xyz/api/convert/reversevideo?url=${teks}&apikey=7iyNa0qA`)
-alpha.sendMessage(from, buffer453, video, { mimetype: 'video/mp4', quoted: fgif2 })
+alpha.sendMessage(from, buffer453, video, { mimetype: 'video/mp4', quoted: mek })
 fs.unlinkSync('./stickmeme.jpeg')
 }
 break
@@ -16756,7 +16697,7 @@ case 'coverpubg':
 if (args.length == 0) return reply2(`Contoh: ${prefix + command} Wudy`)
 ini_txt = args.join(" ")
 await getBuffer(`https://api-xcoders.xyz/api/ephoto/${command}?text=${ini_txt}&apikey=7iyNa0qA`).then((gambar) => {
-alpha.sendMessage(from, gambar, image, { quoted: fgif2 })
+alpha.sendMessage(from, gambar, image, { quoted: mek })
 })
 break
 
@@ -16783,7 +16724,7 @@ await fs.writeFileSync(`./stickmeme.jpeg`, owgi)
 var imgbb = require('imgbb-uploader')
 anu = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", './stickmeme.jpeg')
 teks = await getBuffer(`https://api-xcoders.xyz/api/ephoto/${command}?url=${anu.display_url}&apikey=7iyNa0qA`)
-alpha.sendMessage(from, teks, image, { quoted: fgif2 })
+alpha.sendMessage(from, teks, image, { quoted: mek })
 fs.unlinkSync('./stickmeme.jpeg')
 }
 break
@@ -16801,7 +16742,7 @@ await fs.writeFileSync(`./stickmeme.jpeg`, owgi)
 var imgbb = require('imgbb-uploader')
 anu = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", './stickmeme.jpeg')
 teks = await getBuffer(`https://api-xcoders.xyz/api/ephoto/${command}?url=${anu.display_url}&text=${top}&text2=${bottom}&apikey=7iyNa0qA`)
-alpha.sendMessage(from, teks, image, { quoted: fgif2 })
+alpha.sendMessage(from, teks, image, { quoted: mek })
 fs.unlinkSync('./stickmeme.jpeg')
 }
 break
@@ -16817,7 +16758,7 @@ await fs.writeFileSync(`./stickmeme.jpeg`, owgi)
 var imgbb = require('imgbb-uploader')
 anu = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", './stickmeme.jpeg')
 teks = await getBuffer(`https://api-xcoders.xyz/api/ephoto/adventure?url=${anu.display_url}&text=${top}&text2=${bottom}&apikey=7iyNa0qA`)
-alpha.sendMessage(from, teks, image, { quoted: fgif2 })
+alpha.sendMessage(from, teks, image, { quoted: mek })
 fs.unlinkSync('./stickmeme.jpeg')
 }
 break
@@ -16836,7 +16777,7 @@ await fs.writeFileSync(`./stickmeme.jpeg`, owgi)
 var imgbb = require('imgbb-uploader')
 anu = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", './stickmeme.jpeg')
 teks = await getBuffer(`https://api-xcoders.xyz/api/ephoto/${command}?url=${anu.display_url}&text=${top}&apikey=7iyNa0qA`)
-alpha.sendMessage(from, teks, image, { quoted: fgif2 })
+alpha.sendMessage(from, teks, image, { quoted: mek })
 fs.unlinkSync('./stickmeme.jpeg')
 }
 break
@@ -16852,7 +16793,7 @@ if (args.length == 0) return reply2(`Contoh: ${prefix + command} Wudy`)
 txt1 = args[0]
 txt2 = args[1]
 await getBuffer(`https://api-xcoders.xyz/api/ephoto/${command}?text=${txt1}&text2=${txt2}&apikey=7iyNa0qA`).then((gambar) => {
-alpha.sendMessage(from, gambar, image, { quoted: fgif2 })
+alpha.sendMessage(from, gambar, image, { quoted: mek })
 })
 break
 
@@ -17367,7 +17308,7 @@ alpha.sendMessage(from, wifu_8, MessageType.buttonsMessage,{
 "sourceUrl": apiku,
 "thumbnail": thumb_nime},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 }
 
@@ -17398,7 +17339,7 @@ alpha.sendMessage(from, wifu2_8, MessageType.buttonsMessage,{
 "sourceUrl": apiku,
 "thumbnail": thumb_nime},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true
+quoted: mek, sendEphemeral: true
 })
 }
 
@@ -17430,86 +17371,87 @@ alpha.sendMessage(from, wifu3_8, MessageType.buttonsMessage,{
 "sourceUrl": apiku,
 "thumbnail": thumb_nime},
 "mentionedJid" : [sender]},
-quoted: fgif2, sendEphemeral: true 
+quoted: mek, sendEphemeral: true 
 })
 }
 
 if (subscribezeeoneofc == 'menu_xc') {
 xc_menus = `*KALO GAK WORK*\n*SOMRY, DON'T SPAM YA KAK*
 ${ucapannya2}
+
 ╭⋆⸙「 Maker Editing 」
-│⌯ ${prefix}american':
-│⌯ ${prefix}anonymous':
-│⌯ ${prefix}aov':
-│⌯ ${prefix}arrow2':
-│⌯ ${prefix}arrow':
-│⌯ ${prefix}blackpink':
-│⌯ ${prefix}cake':
-│⌯ ${prefix}caper':
-│⌯ ${prefix}cloth':
-│⌯ ${prefix}cloud':
-│⌯ ${prefix}crank':
-│⌯ ${prefix}dragonfire':
-│⌯ ${prefix}eraser':
-│⌯ ${prefix}foggy':
-│⌯ ${prefix}glasses':
-│⌯ ${prefix}graffiti':
-│⌯ ${prefix}greenbrush':
-│⌯ ${prefix}hallowen':
-│⌯ ${prefix}horror':
-│⌯ ${prefix}incandescent':
-│⌯ ${prefix}leafgraphy':
-│⌯ ${prefix}letters':
-│⌯ ${prefix}metals':
-│⌯ ${prefix}ml':
-│⌯ ${prefix}neonblue':
-│⌯ ${prefix}neonbp':
-│⌯ ${prefix}nightstars':
-│⌯ ${prefix}pig':
-│⌯ ${prefix}pubgavatar':
-│⌯ ${prefix}puppy':
-│⌯ ${prefix}sunlight':
-│⌯ ${prefix}television':
-│⌯ ${prefix}tiger':
-│⌯ ${prefix}typography2':
-│⌯ ${prefix}typography':
-│⌯ ${prefix}warface':
-│⌯ ${prefix}water':
-│⌯ ${prefix}coverpubg':
-│⌯ ${prefix}reversevideo':
-│⌯ ${prefix}billboard':
-│⌯ ${prefix}cat':
-│⌯ ${prefix}cinemagraph':
-│⌯ ${prefix}collage':
-│⌯ ${prefix}cyberpunk':
-│⌯ ${prefix}fire':
-│⌯ ${prefix}handlefire':
-│⌯ ${prefix}heart':
-│⌯ ${prefix}memories':
-│⌯ ${prefix}painting':
-│⌯ ${prefix}rain':
-│⌯ ${prefix}ring':
-│⌯ ${prefix}sad':
-│⌯ ${prefix}smoke':
-│⌯ ${prefix}spectrum':
-│⌯ ${prefix}vhs':
-│⌯ ${prefix}buoys':
-│⌯ ${prefix}notebook':
-│⌯ ${prefix}wposter':
-│⌯ ${prefix}adventures':
-│⌯ ${prefix}artistic':
-│⌯ ${prefix}diary':
-│⌯ ${prefix}diaryframe':
-│⌯ ${prefix}flower':
-│⌯ ${prefix}glazing':
-│⌯ ${prefix}heated':
-│⌯ ${prefix}juventus':
-│⌯ ${prefix}pencil':
-│⌯ ${prefix}quotestatus':
-│⌯ ${prefix}scholes':
-│⌯ ${prefix}wood':
-│⌯ ${prefix}writestatus':
-╰───「 WudyBot 」`
+│⌯ ${prefix}american *text*
+│⌯ ${prefix}anonymous *text*
+│⌯ ${prefix}aov *text*
+│⌯ ${prefix}arrow2 *text*
+│⌯ ${prefix}arrow *text*
+│⌯ ${prefix}blackpink *text*
+│⌯ ${prefix}cake *text*
+│⌯ ${prefix}caper *text*
+│⌯ ${prefix}cloth *text*
+│⌯ ${prefix}cloud *text*
+│⌯ ${prefix}crank *text*
+│⌯ ${prefix}dragonfire *text*
+│⌯ ${prefix}eraser *text*
+│⌯ ${prefix}foggy *text*
+│⌯ ${prefix}glasses *text*
+│⌯ ${prefix}graffiti *text*
+│⌯ ${prefix}greenbrush *text*
+│⌯ ${prefix}hallowen *text*
+│⌯ ${prefix}horror *text*
+│⌯ ${prefix}incandescent *text*
+│⌯ ${prefix}leafgraphy *text*
+│⌯ ${prefix}letters *text*
+│⌯ ${prefix}metals *text*
+│⌯ ${prefix}ml *text*
+│⌯ ${prefix}neonblue *text*
+│⌯ ${prefix}neonbp *text*
+│⌯ ${prefix}nightstars *text*
+│⌯ ${prefix}pig *text*
+│⌯ ${prefix}pubgavatar *text*
+│⌯ ${prefix}puppy *text*
+│⌯ ${prefix}sunlight *text*
+│⌯ ${prefix}television *text*
+│⌯ ${prefix}tiger *text*
+│⌯ ${prefix}typography2 *text*
+│⌯ ${prefix}typography *text*
+│⌯ ${prefix}warface *text*
+│⌯ ${prefix}water *text*
+│⌯ ${prefix}coverpubg *text*
+│⌯ ${prefix}reversevideo *text*
+│⌯ ${prefix}billboard *text*
+│⌯ ${prefix}cat *text*
+│⌯ ${prefix}cinemagraph *text*
+│⌯ ${prefix}collage *text*
+│⌯ ${prefix}cyberpunk *text*
+│⌯ ${prefix}fire *text*
+│⌯ ${prefix}handlefire *text*
+│⌯ ${prefix}heart *text*
+│⌯ ${prefix}memories *text*
+│⌯ ${prefix}painting *text*
+│⌯ ${prefix}rain *text*
+│⌯ ${prefix}ring *text*
+│⌯ ${prefix}sad *text*
+│⌯ ${prefix}smoke *text*
+│⌯ ${prefix}spectrum *text*
+│⌯ ${prefix}vhs *text*
+│⌯ ${prefix}buoys *text*
+│⌯ ${prefix}notebook *text*
+│⌯ ${prefix}wposter *text*
+│⌯ ${prefix}adventures *text*
+│⌯ ${prefix}artistic *text*
+│⌯ ${prefix}diary *text*
+│⌯ ${prefix}diaryframe *text*
+│⌯ ${prefix}flower *text*
+│⌯ ${prefix}glazing *text*
+│⌯ ${prefix}heated *text*
+│⌯ ${prefix}juventus *text*
+│⌯ ${prefix}pencil *text*
+│⌯ ${prefix}quotestatus *text*
+│⌯ ${prefix}scholes *text*
+│⌯ ${prefix}wood *text*
+│⌯ ${prefix}writestatus *text*
+╰─⊸ *Wudy ⌕*`
 but = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 List game'}, type: 1}
 ]
@@ -17529,7 +17471,8 @@ ${ucapannya2}
 │⌯ ${prefix}xalquranaudio no_surah/no_ayat
 │⌯ ${prefix}xkisahnabi nama_nabi
 │⌯ ${prefix}xjadwalsholat daerah
-␥
+╰─⊸ *Wudy ⌕*
+
 ╭⋆⸙「 Downloader 」
 │⌯ ${prefix}xytsearch query
 │⌯ ${prefix}xytplay query
@@ -17548,7 +17491,8 @@ ${ucapannya2}
 │⌯ ${prefix}xpixivdl url_pixiv
 │⌯ ${prefix}xzippyshare url_zippyshare
 │⌯ ${prefix}xtelesticker url_pack
-␥
+╰─⊸ *Wudy ⌕*
+
 ╭⋆⸙「 Movie & Story 」
 │⌯ ${prefix}xdrakorongoing
 │⌯ ${prefix}xlk21 query
@@ -17556,7 +17500,8 @@ ${ucapannya2}
 │⌯ ${prefix}xwattpadsearch query
 │⌯ ${prefix}xcerpen
 │⌯ ${prefix}xceritahoror
-␥
+╰─⊸ *Wudy ⌕*
+
 ╭⋆⸙「 Searching 」
 │⌯ ${prefix}xshopee query
 │⌯ ${prefix}xgoogle query
@@ -17567,7 +17512,8 @@ ${ucapannya2}
 │⌯ ${prefix}xstickerwa query
 │⌯ ${prefix}xwallpapersearch query
 │⌯ ${prefix}xwallpapersearch2 query
-␥
+╰─⊸ *Wudy ⌕*
+
 ╭⋆⸙「 Random Text 」
 │⌯ ${prefix}xquotes
 │⌯ ${prefix}xquotesdilan
@@ -17578,7 +17524,8 @@ ${ucapannya2}
 │⌯ ${prefix}xpantun
 │⌯ ${prefix}xbucin
 │⌯ ${prefix}xrandomnama
-␥
+╰─⊸ *Wudy ⌕*
+
 ╭⋆⸙「 AniManga 」
 │⌯ ${prefix}xwait
 │⌯ ${prefix}xmanga query
@@ -17593,7 +17540,8 @@ ${ucapannya2}
 │⌯ ${prefix}xnhentaisearch query
 │⌯ ${prefix}xnekopoi url
 │⌯ ${prefix}xnekopoisearch query
-␥
+╰─⊸ *Wudy ⌕*
+
 ╭⋆⸙「 Information 」
 │⌯ ${prefix}xkbbi
 │⌯ ${prefix}xbrainly2
@@ -17621,7 +17569,8 @@ ${ucapannya2}
 │⌯ ${prefix}xhoax
 │⌯ ${prefix}xnsfwcheck
 │⌯ ${prefix}xocr
-␥
+╰─⊸ *Wudy ⌕*
+
 ╭⋆⸙「 Entertainment 」
 │⌯ ${prefix}xasupan
 │⌯ ${prefix}xwancak
@@ -17629,7 +17578,8 @@ ${ucapannya2}
 │⌯ ${prefix}xcanceltebakgambar
 │⌯ ${prefix}xakinator
 │⌯ ${prefix}xcancelakinator
-␥
+╰─⊸ *Wudy ⌕*
+
 ╭⋆⸙「 Creator 」
 │⌯ ${prefix}xttp text
 │⌯ ${prefix}xttp2 text
@@ -17639,20 +17589,23 @@ ${ucapannya2}
 │⌯ ${prefix}xsmoji emoji
 │⌯ ${prefix}xfakedonald text
 │⌯ ${prefix}xktpmaker
-␥
+╰─⊸ *Wudy ⌕*
+
 ╭⋆⸙「 Primbon 」
 │⌯ ${prefix}xartinama name
 │⌯ ${prefix}xjodoh name1 & name2 
 │⌯ ${prefix}xweton tanggal bulan tahun
 │⌯ ${prefix}xjadian tanggal bulan tahun
 │⌯ ${prefix}xtebakumur name
-␥
+╰─⊸ *Wudy ⌕*
+
 ╭⋆⸙「 Other 」
 │⌯ ${prefix}xssweb link
 │⌯ ${prefix}xssweb2 link
 │⌯ ${prefix}xshortlink link
 │⌯ ${prefix}xspamsms nomor
-␥
+╰─⊸ *Wudy ⌕*
+
 ╭⋆⸙「 Text Pro Me 」
 │⌯ ${prefix}xblackpink text
 │⌯ ${prefix}xneon text
@@ -17696,7 +17649,8 @@ ${ucapannya2}
 │⌯ ${prefix}xwolflogo text1 text2
 │⌯ ${prefix}xsteel3d text1 text2
 │⌯ ${prefix}xwallgravity text1 text2
-␥
+╰─⊸ *Wudy ⌕*
+
 ╭⋆⸙「 Photo Oxy 」
 │⌯ ${prefix}xshadow text
 │⌯ ${prefix}xcup text
@@ -17726,7 +17680,8 @@ ${ucapannya2}
 │⌯ ${prefix}xarcade8bit text1 text2
 │⌯ ${prefix}xbattlefield4 text1 text2
 │⌯ ${prefix}xpubg text1 text2
-␥
+╰─⊸ *Wudy ⌕*
+
 ╭⋆⸙「 Ephoto 360 」
 │⌯ ${prefix}xwetglass text
 │⌯ ${prefix}xmulticolor3d text
@@ -17758,7 +17713,8 @@ ${ucapannya2}
 │⌯ ${prefix}xgoldplaybutton text
 │⌯ ${prefix}xsilverplaybutton text
 │⌯ ${prefix}xfreefire text
-␥
+╰─⊸ *Wudy ⌕*
+
 ╭⋆⸙「 Random Image 」
 │⌯ ${prefix}xart
 │⌯ ${prefix}xbts
@@ -17837,7 +17793,7 @@ ${ucapannya2}
 │⌯ ${prefix}xngif
 │⌯ ${prefix}xnsfw_neko_gif
 │⌯ ${prefix}xrandom_hentai_gif
-╰───「 WudyBot 」`
+╰─⊸ *Wudy ⌕*`
 but = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 List game'}, type: 1}
 ]
@@ -17888,7 +17844,7 @@ reply2(`${sur}\n*${sur2}*\n\n${arb}\n\n${indo}\n\n*Tafsir :*\n_${taf}_`)
 
 if (subscribezeeoneofc == 'Quran_audio') {
 getaudio = await getBuffer(aud)
-alpha.sendMessage(from, getaudio, audio, {mimetype:'audio/mp4', quoted: fgif2, ptt:true})
+alpha.sendMessage(from, getaudio, audio, {mimetype:'audio/mp4', quoted: mek, ptt:true})
 }
 
 if (fs.existsSync(`./media/${from}.json`)) {
@@ -17902,11 +17858,11 @@ fs.writeFileSync(`./media/${from}.json`, JSON.stringify(gelutSkuy, null, 2))
 starGame = `👑 Gelud Game 🤙🏻 
 Diantara @${gelutSkuy.Z} & @${gelutSkuy.Y}
 • Pemenangnya adalah [ @${winR} ] `
-alpha.sendMessage(from, starGame, text, {quoted: fgif2, contextInfo: { mentionedJid: [winR + "@s.whatsapp.net", gelutSkuy.Z + "@s.whatsapp.net", gelutSkuy.Y + "@s.whatsapp.net",]}})
+alpha.sendMessage(from, starGame, text, {quoted: mek, contextInfo: { mentionedJid: [winR + "@s.whatsapp.net", gelutSkuy.Z + "@s.whatsapp.net", gelutSkuy.Y + "@s.whatsapp.net",]}})
 fs.unlinkSync("./media/" + from + ".json");
 } else if (sender == `${gelutSkuy.Y}@s.whatsapp.net` && budy.toLowerCase() == 'n') {
 alpha.sendMessage(from, `👑 Game Gelud Rejected 🤙🏻
-• @${gelutSkuy.Y} Menolak🤙🏻`, text, {quoted: fgif2, contextInfo: { mentionedJid: [gelutSkuy.Y + "@s.whatsapp.net"]}})
+• @${gelutSkuy.Y} Menolak🤙🏻`, text, {quoted: mek, contextInfo: { mentionedJid: [gelutSkuy.Y + "@s.whatsapp.net"]}})
 fs.unlinkSync("./media/" + from + ".json");
 }
 }
@@ -17929,8 +17885,8 @@ ini_list.push({
 hehe = await alpha.sendMessage(from, {
 "displayName": `${ini_list.length} kontak`,
 "contacts": ini_list 
-}, 'contactsArrayMessage', { quoted: fgif2, contextInfo: {"mentionedJid": members_ids}})
-alpha.sendMessage(from,'Nih Kak Owner Ku',text,{quoted: hehe})
+}, 'contactsArrayMessage', { quoted: mek, contextInfo: {"mentionedJid": members_ids}})
+alpha.sendMessage(from,'Nih owner gw bg🗿',text,{quoted: hehe})
 }
 
 if (subscribezeeoneofc == 'statiktiknya') {
@@ -17964,7 +17920,7 @@ console.log(color('[ CMD ]', 'aqua'), 'Ownerbot', color(pushname))
 hehe = await alpha.sendMessage(from, {
 "displayName": "Wudy owner",
 "vcard": "BEGIN:VCARD\nVERSION:3.0\nN:;Wudy owner;;;\nFN:Wudy owner\nORG:Wudy owner\nTITLE:\nitem1.TEL;waid=6282195322106:+62 821-9532-2106\nitem1.X-ABLabel:Wudy owner\nX-WA-BIZ-DESCRIPTION:Semua bisa dimulai dengan mengetik #menu\nX-WA-BIZ-NAME:Wudy owner\nEND:VCARD"
-}, 'contactMessage', { quoted: fgif2})
+}, 'contactMessage', { quoted: mek})
 var ini_gopayy =`Halo @${sender.split("@")[0]} itu owner gw kack🙄`
 var buttonss = [
 {buttonId: 'Oke', buttonText:{displayText: 'Ok'}, type: 1}
@@ -17985,7 +17941,7 @@ alpha.sendMessage(from, buttonMessagee, MessageType.buttonsMessage,{
 if (budy.includes("Anj",'Anjing')){
 alpha.updatePresence(from, Presence.composing)
 const daieeeee = fs.readFileSync('./sticker/ajg.webp');
-alpha.sendMessage(from, daieeeee, sticker, {quoted: {key: {participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "0@s.whatsapp.net" } : {})},message: {"videoMessage": {'gifPlayback': 'true', 'caption': `✗ ${pushname} ✗\n𝐸𝑥𝑒𝑐𝑢𝑡𝑒 : IH KASARR :(`, 'jpegThumbnail': fs.readFileSync(`image/ajg.jpg`)}}}})
+alpha.sendMessage(from, daieeeee, sticker, {quoted: {key: {participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "0@s.whatsapp.net" } : {})},message: {"videoMessage": {'gifPlayback': 'true', 'caption': `✗ ${pushname} ✗\n𝐸𝑥𝑒𝑐 : IH KASARR :(`, 'jpegThumbnail': fs.readFileSync(`image/ajg.jpg`)}}}})
 }
 
 if (budy.includes("Tes")){
@@ -18020,11 +17976,11 @@ sendButLocation(from, teks , `Makasih Udah Verifikasi 😉\n${botname}™© | By
 }
 // AUTO REPLY by Piyo >_<
 if (budy == 'p') {
-alpha.sendMessage(from, `Salam yg bener kak @${sender.split("@")[0]}` ,text, {"contextInfo": {"mentionedJid" : [sender]}, quoted: fgif2, sendEphemeral: true})
+alpha.sendMessage(from, `Salam yg bener kak @${sender.split("@")[0]}` ,text, {"contextInfo": {"mentionedJid" : [sender]}, quoted: mek, sendEphemeral: true})
 }
 
 if (budy == 'hai') {
-await alpha.sendMessage(from, `Ada apa kak @${sender.split("@")[0]}` ,text, {"contextInfo": {"mentionedJid" : [sender]}, quoted: fgif2, sendEphemeral: true})
+await alpha.sendMessage(from, `Ada apa kak @${sender.split("@")[0]}` ,text, {"contextInfo": {"mentionedJid" : [sender]}, quoted: mek, sendEphemeral: true})
 getr = [`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/onii%20chan.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/Pasti%20Bangka%20ngana%20ko%20ba%20jamping%20jamping%20anjing%20anjing%20banget%20Viral%20titktok%20versi%20Spongebob.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/Prank%20desahan.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/megumin_last.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/onii%20chan%20onii%20chan.mp3?raw=true`]
 let hai1= getr[Math.floor(Math.random() * getr.length)];
 calcu = await getBuffer(hai1)
@@ -18032,7 +17988,7 @@ await alpha.sendMessage(from,calcu, MessageType.audio, {mimetype:'audio/mp4', qu
 }
 
 if (budy == 'Hai') {
-await alpha.sendMessage(from, `Ada apa kak @${sender.split("@")[0]}` ,text, {"contextInfo": {"mentionedJid" : [sender]}, quoted: fgif2, sendEphemeral: true})
+await alpha.sendMessage(from, `Ada apa kak @${sender.split("@")[0]}` ,text, {"contextInfo": {"mentionedJid" : [sender]}, quoted: mek, sendEphemeral: true})
 getr = [`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/onii%20chan.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/Pasti%20Bangka%20ngana%20ko%20ba%20jamping%20jamping%20anjing%20anjing%20banget%20Viral%20titktok%20versi%20Spongebob.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/Prank%20desahan.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/megumin_last.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/onii%20chan%20onii%20chan.mp3?raw=true`]
 let hai2= getr[Math.floor(Math.random() * getr.length)];
 calcu = await getBuffer(hai2)
@@ -18040,11 +17996,11 @@ await alpha.sendMessage(from,calcu, MessageType.audio, {mimetype:'audio/mp4', qu
 }
 
 if (budy == 'P') {
-alpha.sendMessage(from, `Salam yg bener kak @${sender.split("@")[0]}` ,text, {"contextInfo": {"mentionedJid" : [sender]}, quoted: fgif2, sendEphemeral: true})
+alpha.sendMessage(from, `Salam yg bener kak @${sender.split("@")[0]}` ,text, {"contextInfo": {"mentionedJid" : [sender]}, quoted: mek, sendEphemeral: true})
 }
 
 if (budy == 'bot') {
-await alpha.sendMessage(from, `Ada apa kak @${sender.split("@")[0]}` ,text, {"contextInfo": {"mentionedJid" : [sender]}, quoted: fgif2, sendEphemeral: true})
+await alpha.sendMessage(from, `Ada apa kak @${sender.split("@")[0]}` ,text, {"contextInfo": {"mentionedJid" : [sender]}, quoted: mek, sendEphemeral: true})
 getr = [`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/onii%20chan.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/Pasti%20Bangka%20ngana%20ko%20ba%20jamping%20jamping%20anjing%20anjing%20banget%20Viral%20titktok%20versi%20Spongebob.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/Prank%20desahan.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/megumin_last.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/onii%20chan%20onii%20chan.mp3?raw=true`]
 let bot1= getr[Math.floor(Math.random() * getr.length)];
 calcu = await getBuffer(bot1)
@@ -18052,7 +18008,7 @@ await alpha.sendMessage(from,calcu, MessageType.audio, {mimetype:'audio/mp4', qu
 }
 
 if (budy == 'Bot') {
-await alpha.sendMessage(from, `Ada apa kak @${sender.split("@")[0]}` ,text, {"contextInfo": {"mentionedJid" : [sender]}, quoted: fgif2, sendEphemeral: true})
+await alpha.sendMessage(from, `Ada apa kak @${sender.split("@")[0]}` ,text, {"contextInfo": {"mentionedJid" : [sender]}, quoted: mek, sendEphemeral: true})
 getr = [`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/onii%20chan.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/Pasti%20Bangka%20ngana%20ko%20ba%20jamping%20jamping%20anjing%20anjing%20banget%20Viral%20titktok%20versi%20Spongebob.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/Prank%20desahan.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/megumin_last.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/onii%20chan%20onii%20chan.mp3?raw=true`]
 let bot2= getr[Math.floor(Math.random() * getr.length)];
 calcu = await getBuffer(bot2)
@@ -18060,17 +18016,17 @@ await alpha.sendMessage(from,calcu, MessageType.audio, {mimetype:'audio/mp4', qu
 }
 
 if (budy == 'assalamualaikum') {
-alpha.sendMessage(from, `Waalaikumsalam kak @${sender.split("@")[0]}` ,text, {"contextInfo": {"mentionedJid" : [sender]}, quoted: fgif2, sendEphemeral: true})
+alpha.sendMessage(from, `Waalaikumsalam kak @${sender.split("@")[0]}` ,text, {"contextInfo": {"mentionedJid" : [sender]}, quoted: mek, sendEphemeral: true})
 }
 
 if (budy == 'Assalamualaikum') {
-alpha.sendMessage(from, `Waalaikumsalam kak @${sender.split("@")[0]}` ,text, {"contextInfo": {"mentionedJid" : [sender]}, quoted: fgif2, sendEphemeral: true})
+alpha.sendMessage(from, `Waalaikumsalam kak @${sender.split("@")[0]}` ,text, {"contextInfo": {"mentionedJid" : [sender]}, quoted: mek, sendEphemeral: true})
 }
 
 if (budy.startsWith('x')){
 try {
 if (!mek.key.fromMe && !isOwner && !isCreator) return reply2(lang.onlyOwner())
-return alpha.sendMessage(from, JSON.stringify(eval(budy.slice(2)),null,'\t'),text, {quoted: fgif2})
+return alpha.sendMessage(from, JSON.stringify(eval(budy.slice(2)),null,'\t'),text, {quoted: mek})
 } catch(err) {
 e = String(err)
 reply2(e)
@@ -18080,7 +18036,7 @@ reply2(e)
 if (budy.startsWith('>')){
 try {
 if (!mek.key.fromMe && !isOwner && !isCreator) return reply2(lang.onlyOwner())
-return alpha.sendMessage(from, JSON.stringify(eval(budy.slice(2)),null,'\t'),text, {quoted: fgif2})
+return alpha.sendMessage(from, JSON.stringify(eval(budy.slice(2)),null,'\t'),text, {quoted: mek})
 } catch(err) {
 e = String(err)
 reply2(e)
