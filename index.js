@@ -246,9 +246,11 @@ const mute = JSON.parse(fs.readFileSync('./database/mute.json'))
 const sisimi = JSON.parse(fs.readFileSync("./list/sisimi.json"))
 const simiaudio = JSON.parse(fs.readFileSync("./list/simiaudio.json"))
 // MENU EDIT
+
 const { tpro_list, epho_list, pfun_list, oxy_list, nsfw_list} = require('./list/list.js')
 const { reki } = require('./list/reki.js')
 const { naga_ } = require('./list/naga.js')
+
 // GAME
 const asahotak = JSON.parse(fs.readFileSync('./game/asahotak.json'))
 const recaptcha = JSON.parse(fs.readFileSync('./game/recaptcha.json'))
@@ -285,6 +287,7 @@ const tebaklucu = JSON.parse(fs.readFileSync('./game/tebaklucu.json'))
 const tebaklagu = JSON.parse(fs.readFileSync('./game/tebaklagu.json'))
 const teswibu = JSON.parse(fs.readFileSync('./game/teswibu.json'))
 const tebakhewan = JSON.parse(fs.readFileSync('./game/tebakhewan.json'))
+
 // END
 const akinator = JSON.parse(fs.readFileSync('./src/akinator.json'))
 const sewa = JSON.parse(fs.readFileSync('./src/sewa.json'));
@@ -320,6 +323,7 @@ var ___minggu = 'Rp Gratis'
 var _bulan = 'Rp Gratis'
 var _permanen = 'Rp Gratis'
 var __permanen = 'Rp Gratis'
+
 // APIKEY
 dapuhy = 'AyGemuy24' // ls7II19RQIYv1aS // kYR0hlaVZZPvv8B
 YuzApi = 'Yuzzu'
@@ -4062,7 +4066,6 @@ break
 
 case 'setmenu':
 if (!isOwner && !isCreator && !mek.key.fromMe) return reply2(lang.onlyOwner())
-if (args.length < 1) return reply2(`*Example :*${enter} •${prefix + command} simple\n for simple menu\n${enter} •${prefix + command} ori\n for real menu`)
 if ((args[0]) == 'ori'){
 menusimple = false
 reply2(`_Succses mengganti menu ke menu ori_`)
@@ -4070,10 +4073,25 @@ reply2(`_Succses mengganti menu ke menu ori_`)
 menusimple = true
 Mloc = false
 reply2(`_Succses mengganti menu ke menu simple_`)
-} else {
-reply2(`*Example :*${enter} •${prefix + command} simple\n for simple menu\n${enter} •${prefix + command} ori\n for real menu`)
+} else if (!q) {
+sendButMessage(from, `${emoj} MODE setmenu`, `Choose one`, [
+{
+buttonId: 'setmenu ori',
+buttonText: {
+displayText: `Original`,
+},
+type: 1,
+},
+{
+buttonId: 'setmenu simple',
+buttonText: {
+displayText: `Simple`,
+},
+type: 1,
+},
+]);
 }
-break
+break;
 
 case 'setlang':
 if (!isOwner && !isCreator && !mek.key.fromMe) return reply2(lang.onlyOwner())
@@ -11372,38 +11390,6 @@ sendStickerFromUrl(from, `${anuk}`, mek)
 }
 break
 
-case 'removebg':
-case 'nobg':
-if (isMedia) return reply2('Reply Gambar')
-var imgbb = require('imgbb-uploader')
-var remo = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
-var vebe = await alpha.downloadAndSaveMediaMessage(remo, `./media/${sender}.png`)
-let genya = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", vebe)
-const FormData = require('form-data');
-const formData = new FormData();
-formData.append('size', 'auto');
-formData.append('image_url', `${genya.display_url}`);
-axios({
-method: 'post',
-url: 'https://api.remove.bg/v1.0/removebg',
-data: formData,
-responseType: 'arraybuffer',
-headers: {
-...formData.getHeaders(),
-'X-Api-Key': 'UBhMUo7FNNdEZ6fmkyAMrAUA',
-},
-encoding: null
-})
-.then((response) => {
-if(response.status != 200) return console.error('Error:', response.status, response.statusText);
-fs.writeFileSync("no-bg.png", response.data);
-alpha.sendMessage(from, fs.readFileSync('./no-bg.png'), image, { quoted: mek , caption: 'Done'})
-})
-.catch((error) => {
-return console.error('Request failed:', error);
-});
-break
-
 case 'batues':
 case 'exontol':
 case 'blekpink':
@@ -16943,6 +16929,41 @@ buffer = fs.readFileSync(media)
 alpha.sendMessage('status@broadcast', buffer, MessageType.image, {quoted: mek, caption: `${teksyy}`})
 reply2(`Sukses upload image:\n${teksyy}`)
 break
+
+
+case 'removebg':
+case 'nobg':
+if (isMedia) return reply2('Reply Gambar')
+var imgbb = require('imgbb-uploader')
+var remo = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+var vebe = await alpha.downloadAndSaveMediaMessage(remo, `./media/${sender}.png`)
+let genya = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", vebe)
+const FormData = require('form-data');
+const formData = new FormData();
+formData.append('size', 'auto');
+formData.append('image_url', `${genya.display_url}`);
+axios({
+method: 'post',
+url: 'https://api.remove.bg/v1.0/removebg',
+data: formData,
+responseType: 'arraybuffer',
+headers: {
+...formData.getHeaders(),
+'X-Api-Key': 'UBhMUo7FNNdEZ6fmkyAMrAUA',
+},
+encoding: null
+})
+.then((response) => {
+if(response.status != 200) return console.error('Error:', response.status, response.statusText);
+fs.writeFileSync("no-bg.png", response.data);
+alpha.sendMessage(from, fs.readFileSync('./no-bg.png'), image, { quoted: mek , caption: 'Done'})
+})
+.catch((error) => {
+return console.error('Request failed:', error);
+});
+break
+
+
 
 //Ends
 default:
