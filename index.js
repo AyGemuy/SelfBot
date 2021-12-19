@@ -3851,12 +3851,6 @@ break
 
 case 'menu':
 if(menusimple == false){
-try {
-xcat = await alpha.getProfilePicture(sender)
-} catch {
-xcat = 'https://i.ibb.co/LPvt8wx/ppkosong.jpg'
-}
-let xc = await getBuffer(xcat)
 xtar = `${targetpc}@s.whatsapp.net`
 let xbi = await alpha.getStatus(sender)
 anunya = process.uptime()
@@ -3907,7 +3901,7 @@ buttons: [
 "fileEncSha256": "NI9ykWUcXKquea4BmH7GgzhMb3pAeqqwE+MTFbH/Wk8=",
 "directPath": "/v/t62.7119-24/35160407_568282564396101_3119299043264875885_n.enc?ccb=11-4&oh=d43befa9a76b69d757877c3d430a0752&oe=61915CEC",
 "mediaKeyTimestamp": "1634472176",
-"jpegThumbnail": xc}},
+"jpegThumbnail": pp_userz}},
 MessageType.buttonsMessage,
 { quoted: mek,sendEphemeral: true,
 thumbnail: fs.readFileSync(`image/miku.jpg`),
@@ -3916,12 +3910,13 @@ isForwarded: true,
 "mentionedJid" : [sender,xtar,ini_mark],
 externalAdReply: { title: `${botname}`,
 body: `${tampilTanggal}`,
-thumbnail: xc,
+thumbnail: pp_userz,
 mediaType:"2",
 previewType: "VIDEO",
 mediaUrl: pelink_}}})
 } else if(menusimple = true){
-const medd_1 = await alpha.prepareMessage(from, thumb_miku, MessageType.location, {thumbnail: thumb_miku})
+xtar = `${targetpc}@s.whatsapp.net`
+const medd_1 = await alpha.prepareMessage(from, pp_userz, MessageType.location, {thumbnail: pp_userz})
 let ephe_nya = medd_1.message["ephemeralMessage"] ? medd_1.message.ephemeralMessage : medd_1
 const bttn_1 = [
 {buttonId: 'x_menu', buttonText: {displayText: '🌱 List-Menu'}, type: 1},
@@ -3942,7 +3937,7 @@ alpha.sendMessage(from, buttn_1, MessageType.buttonsMessage,{
 "title": `${ucapannya2}` ,
 "body": `${botname}`,
 "sourceUrl": apiku,
-"thumbnail": thumb_miku},
+"thumbnail": pp_userz},
 "mentionedJid" : [sender,xtar,ini_mark]},
 quoted: mek, sendEphemeral: true
 })
@@ -15042,26 +15037,48 @@ mentions(teks, jds, true)
 break
 
 case 'apakah':
-apakah = body.slice(1)
+if (!budy.includes("@")){
+apakah = q
 const apa =['Iya','Tidak','Bisa Jadi','Coba Ulangi']
 const kah = apa[Math.floor(Math.random() * apa.length)]
-reply2('*Pertanyaan :* '+apakah+'\n*Jawaban :* '+ kah)
-break
-
-case 'gantengcek':
-case 'cekganteng':
-ganteng = body.slice(1)
-const gan =['10','30','20','40','50','60','70','62','74','83','97','100','29','94','75','82','41','39']
-const teng = gan[Math.floor(Math.random() * gan.length)]
-reply2('*Pertanyaan :* '+ganteng+'\n*Jawaban :* '+ teng+'%')
+var tkkk = `*Pertanyaan :* ${command} ${apakah}\n*Jawaban :* ${kah}`
+alpha.sendMessage(from, tkkk, MessageType.text,{quoted: mek, sendEphemeral: true
+})
+} else if (budy.includes("@")){
+apakah = q
+ghost = mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
+const apa2 =['Iya','Tidak','Bisa Jadi','Coba Ulangi']
+const kah2 = apa2[Math.floor(Math.random() * apa2.length)]
+var tkkk2 = `*Pertanyaan :* ${command} ${apakah}\n*Jawaban :* ${kah2}`
+alpha.sendMessage(from, tkkk2, MessageType.text,{
+"contextInfo": {
+"mentionedJid" : [sender,ghost]},
+quoted: mek, sendEphemeral: true
+})}
 break
 
 case 'cantikcek':
 case 'cekcantik':
-cantik = body.slice(1)
-const can =['10','30','20','40','50','60','70','62','74','83','97','100','29','94','75','82','41','39']
-const tik = can[Math.floor(Math.random() * can.length)]
-reply2('*Pertanyaan :* '+cantik+'\n*Jawaban :* '+ tik+'%')
+case 'gantengcek':
+case 'cekganteng':
+if (!budy.includes("@")){
+ganteng = q
+const gan =['10','30','20','40','50','60','70','62','74','83','97','100','29','94','75','82','41','39']
+const teng = gan[Math.floor(Math.random() * gan.length)]
+var gnteng = `*Pertanyaan :* ${command} ${ganteng}\n*Jawaban :* ${teng}%`
+alpha.sendMessage(from, gnteng, MessageType.text,{quoted: mek, sendEphemeral: true
+})
+} else if (budy.includes("@")){
+ganteng = q
+ghost = mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
+const gan2 =['10','30','20','40','50','60','70','62','74','83','97','100','29','94','75','82','41','39']
+const teng2 = gan2[Math.floor(Math.random() * gan2.length)]
+var gnteng2 = `*Pertanyaan :* ${command} ${ganteng}\n*Jawaban :* ${teng2}%`
+alpha.sendMessage(from, gnteng2, MessageType.text,{
+"contextInfo": {
+"mentionedJid" : [sender,ghost]},
+quoted: mek, sendEphemeral: true
+})}
 break
 
 case 'cekwatak':
@@ -15089,10 +15106,25 @@ reply2('Pertanyaan : *hoby*\n\nJawaban : '+ hooo)
 break
 
 case 'bisakah':
-bisakah = body.slice(1)
+case 'benarkah':
+if (!budy.includes("@")){
+bisakah = q
 const bisa =['Bisa','Tidak Bisa','Coba Ulangi','Ya mana gw tau']
 const keh = bisa[Math.floor(Math.random() * bisa.length)]
-reply2('*Pertanyaan :* '+bisakah+'\n*Jawaban :* '+ keh)
+var biskeh = `*Pertanyaan :* ${command} ${bisakah}\n*Jawaban :* ${keh}`
+alpha.sendMessage(from, biskeh, MessageType.text,{quoted: mek, sendEphemeral: true
+})
+} else if (budy.includes("@")){
+bisakah = q
+ghost = mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
+const bisa2 =['Bisa','Tidak Bisa','Coba Ulangi','Ya mana gw tau']
+const keh2 = bisa2[Math.floor(Math.random() * bisa2.length)]
+var biskeh2 = `*Pertanyaan :* ${command} ${bisakah}\n*Jawaban :* ${keh2}`
+alpha.sendMessage(from, biskeh2, MessageType.text,{
+"contextInfo": {
+"mentionedJid" : [sender,ghost]},
+quoted: mek, sendEphemeral: true
+})}
 break
 
 case 'citacita': 
@@ -15103,10 +15135,24 @@ alpha.sendMessage(from, cita2, MessageType.audio, {quoted: mek, mimetype: 'audio
 break
 
 case 'kapankah':
-kapankah = body.slice(1)
+if (!budy.includes("@")){
+kapankah = q
 const kapan =['Besok','Lusa','Tadi','4 Hari Lagi','5 Hari Lagi','6 Hari Lagi','1 Minggu Lagi','2 Minggu Lagi','3 Minggu Lagi','1 Bulan Lagi','2 Bulan Lagi','3 Bulan Lagi','4 Bulan Lagi','5 Bulan Lagi','6 Bulan Lagi','1 Tahun Lagi','2 Tahun Lagi','3 Tahun Lagi','4 Tahun Lagi','5 Tahun Lagi','6 Tahun Lagi','1 Abad lagi','3 Hari Lagi']
 const koh = kapan[Math.floor(Math.random() * kapan.length)]
-reply2('*Pertanyaan :* '+kapankah+'\n*Jawaban :* '+ koh)
+var kpkeh = `*Pertanyaan :* ${command} ${kapankah}\n*Jawaban :* ${keh}`
+alpha.sendMessage(from, kpkeh, MessageType.text,{quoted: mek, sendEphemeral: true
+})
+} else if (budy.includes("@")){
+kapankah = q
+ghost = mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
+const kapan2 =['Besok','Lusa','Tadi','4 Hari Lagi','5 Hari Lagi','6 Hari Lagi','1 Minggu Lagi','2 Minggu Lagi','3 Minggu Lagi','1 Bulan Lagi','2 Bulan Lagi','3 Bulan Lagi','4 Bulan Lagi','5 Bulan Lagi','6 Bulan Lagi','1 Tahun Lagi','2 Tahun Lagi','3 Tahun Lagi','4 Tahun Lagi','5 Tahun Lagi','6 Tahun Lagi','1 Abad lagi','3 Hari Lagi']
+const koh2 = kapan2[Math.floor(Math.random() * kapan2.length)]
+var kpkeh2 = `*Pertanyaan :* ${command} ${kapankah}\n*Jawaban :* ${koh2}`
+alpha.sendMessage(from, kpkeh2, MessageType.text,{
+"contextInfo": {
+"mentionedJid" : [sender,ghost]},
+quoted: mek, sendEphemeral: true
+})}
 break
 
 case 'cantik':
@@ -15120,38 +15166,6 @@ membr.push(siaps.jid)
 mentions(teks, membr, true)
 break
 
-case 'ganteng':
-membr = []
-const nus = groupMembers
-const msl = groupMembers
-const siapss = nus[Math.floor(Math.random() * nus.length)]
-const sipss = pushname[Math.floor(Math.random() * msl.length)]
-teks = `*Masih Gantengan Owner Gua :* @${siapss.jid.split('@')[0]}`
-membr.push(siapss.jid)
-mentions(teks, membr, true)
-break
-
-case 'babii':
-membr = []
-const meg = groupMembers
-const mge = groupMembers
-const ba = meg[Math.floor(Math.random() * meg.length)]
-const bii = pushname[Math.floor(Math.random() * mge.length)]
-teks = `*Yang Paling Babii Disini Adalah :* @${ba.jid.split('@')[0]}`
-membr.push(ba.jid)
-mentions(teks, membr, true)
-break
-
-case 'beban':
-membr = []
-const nge = groupMembers
-const todd = groupMembers
-const beb = nge[Math.floor(Math.random() * nge.length)]
-const an = pushname[Math.floor(Math.random() * todd.length)]
-teks = `*Yang Paling Beban Disini Adalah :* @${beb.jid.split('@')[0]}`
-membr.push(beb.jid)
-mentions(teks, membr, true)
-break
 
 case 'readmore':
 if (args.length < 1) return reply2('Teks nya mana?')
@@ -15905,6 +15919,13 @@ omkeh = await getBuffer(`https://ojankyaa.000webhostapp.com/sound/${command}.mp3
 alpha.sendMessage(from, omkeh, MessageType.audio, { quoted: mek, mimetype: 'audio/mp4', ptt: true })
 break
 
+case 'ganteng':
+case 'pki':
+case 'siapakah':
+case 'colikers':
+case 'kuntul':
+case 'babii':
+case 'beban':
 case 'bego':
 case 'tolol':
 case 'pinter':
@@ -16808,14 +16829,14 @@ break
 
 case 'ngeri':
 case 'ngery':
-let men_ngeri = mek.message.extendedTextMessage.contextInfo.mentionedJid
+const men_ngeri = mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
 try {
-pic = await alpha.getProfilePicture(men_ngeri[0])
+ppus = await alpha.getProfilePicture(men_ngeri)
 } catch {
-pic = 'https://i.ibb.co/LPvt8wx/ppkosong.jpg'
+ppus = 'https://i.ibb.co/LPvt8wx/ppkosong.jpg'
 }
-thumbb = await getBuffer(pic)
-await fs.writeFileSync(`./stickmeme.jpeg`, thumbb)
+let tumnel = await getBuffer(ppus)
+await fs.writeFileSync(`./stickmeme.jpeg`, tumnel)
 var imgbb = require('imgbb-uploader')
 anu = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", './stickmeme.jpeg')
 teks = `${anu.display_url}`
