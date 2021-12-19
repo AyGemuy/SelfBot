@@ -16931,39 +16931,6 @@ reply2(`Sukses upload image:\n${teksyy}`)
 break
 
 
-case 'removebg':
-case 'nobg':
-if (isMedia) return reply2('Reply Gambar')
-var imgbb = require('imgbb-uploader')
-var remo = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
-var vebe = await alpha.downloadAndSaveMediaMessage(remo, `./media/${sender}.png`)
-let genya = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", vebe)
-const FormData = require('form-data');
-const formData = new FormData();
-formData.append('size', 'auto');
-formData.append('image_url', `${genya.display_url}`);
-axios({
-method: 'post',
-url: 'https://api.remove.bg/v1.0/removebg',
-data: formData,
-responseType: 'arraybuffer',
-headers: {
-...formData.getHeaders(),
-'X-Api-Key': 'UBhMUo7FNNdEZ6fmkyAMrAUA',
-},
-encoding: null
-})
-.then((response) => {
-if(response.status != 200) return console.error('Error:', response.status, response.statusText);
-fs.writeFileSync("no-bg.png", response.data);
-alpha.sendMessage(from, fs.readFileSync('./no-bg.png'), image, { quoted: mek , caption: 'Done'})
-})
-.catch((error) => {
-return console.error('Request failed:', error);
-});
-break
-
-
 
 //Ends
 default:
