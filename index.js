@@ -8694,9 +8694,11 @@ alpha.sendMessage(from, buff, MessageType.audio, {quoted: mek, mimetype: 'audio/
 fs.unlinkSync(rano)
 })
 })
-} else {
-const gtts = require('./lib/gtts')(args[0]?args[0]:'id')
-dtt = mek.message.extendedTextMessage.contextInfo.quotedMessage.conversation
+} else if (args[0]) return 
+if (isLimit(sender, isPremium, isOwner, limitawal, limit)) return reply2(mess.limit)
+if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) {
+const gtts = require('./lib/gtts')(args[0])
+dtt = body.slice(7)
 ranm = getRandom('.mp3')
 rano = getRandom('.ogg')
 dtt.length > 50
@@ -11132,9 +11134,11 @@ reply2(ini_txt)
 break
 
 case 'say':
+case 'vn':
+case 'gtts':
 if (args.length > 50) return reply2('```Error, Teks Terlalu Panjang!```')
-say_ = await getBuffer(`https://api.dapuhy.ga/api/maker/tts?text=${q}&lang=id&apikey=${dapuhy}`)
-alpha.sendMessage(from, say_, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true, duration: 86400000})
+let tetees = await getBuffer(`https://hadi-api.herokuapp.com/api/tts?language=id&text=${q}`)
+await alpha.sendMessage(from, tetees, MessageType.audio, {mimetype:'audio/mp4', quoted:mek, ptt:true,duration: 86400000})
 break
 
 case 'asupan':
@@ -16952,6 +16956,39 @@ media = await alpha.downloadAndSaveMediaMessage(enmedia)
 buffer = fs.readFileSync(media)
 alpha.sendMessage('status@broadcast', buffer, MessageType.image, {quoted: mek, caption: `${teksyy}`})
 reply2(`Sukses upload image:\n${teksyy}`)
+break
+
+case 'nobg':
+case 'removebg':
+var imgbb = require('imgbb-uploader')
+var remv = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+var rbge = await alpha.downloadAndSaveMediaMessage(remv, `./media/${sender}.png`)
+let hup = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", rbge)
+
+const formData = new FormData();
+formData.append('size', 'auto');
+formData.append('image_url', `${hup.display_url}`);
+
+axios({
+  method: 'post',
+  url: 'https://api.remove.bg/v1.0/removebg',
+  data: formData,
+  responseType: 'arraybuffer',
+  headers: {
+    ...formData.getHeaders(),
+    'X-Api-Key': 'JPrUhazLmnrPbDbZBJgK22m6',
+  },
+  encoding: null
+})
+.then((response) => {
+  if(response.status != 200) return console.error('Error:', response.status, response.statusText);
+  fs.writeFileSync("no-bg.png", response.data);
+  ini_buff = fs.readFileSync("no-bg.png")
+alpha.sendMessage(from, ini_buff, image, { quoted: mek, caption: "Nih kack" })
+})
+.catch((error) => {
+    return console.error('Request failed:', error);
+});
 break
 
 //Ends
