@@ -16955,10 +16955,10 @@ case 'removebg':
 if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 var edit2_ = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
 var edit3_ = await alpha.downloadAndSaveMediaMessage(edit2_, `./media/${sender}.png`)
-const inputPath = edit3_;
+
 const formData = new FormData();
 formData.append('size', 'auto');
-formData.append('image_file', fs.createReadStream(inputPath), path.basename(inputPath));
+formData.append('image_file', fs.createReadStream(edit3_), path.basename(edit3_));
 
 axios({
   method: 'post',
@@ -16979,6 +16979,7 @@ axios({
 .catch((error) => {
     return console.error('Request failed:', error);
 });
+}
 break
 
 
