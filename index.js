@@ -17966,16 +17966,9 @@ alpha.sendMessage(from, buttonMessagee, MessageType.buttonsMessage,{
 })
 }
 
-if (budy.includes("Anj",'Anjing')){
-alpha.updatePresence(from, Presence.composing)
-const daieeeee = fs.readFileSync('./sticker/ajg.webp');
-alpha.sendMessage(from, daieeeee, sticker, {quoted: {key: {participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "0@s.whatsapp.net" } : {})},message: {"videoMessage": {'gifPlayback': 'true', 'caption': `✗ ${pushname} ✗\n𝐸𝑥𝑒𝑐 : IH KASARR :(`, 'jpegThumbnail': fs.readFileSync(`image/ajg.jpg`)}}}})
-}
-
 if (budy.includes("Tes")){
 alpha.updatePresence(from, Presence.composing)
-const daieeeee = fs.readFileSync('./sticker/tes.webp');
-alpha.sendMessage(from, daieeeee, sticker, {quoted: mek})
+alpha.sendMessage(from, 'Tes nyala', text, {quoted: mek})
 }
 
 if(budy.includes("@verif", "@verify","daftar")){
