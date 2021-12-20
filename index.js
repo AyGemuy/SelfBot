@@ -16931,16 +16931,14 @@ reply2(`Sukses upload image:\n${teksyy}`)
 break
 
 case 'nobg':
+case 'removebg':
 if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
-var imgbb = require('imgbb-uploader')
 var edit2_ = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
 var edit3_ = await alpha.downloadAndSaveMediaMessage(edit2_, `./media/${sender}.png`)
-let edit4_ = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", edit3_)
-ling = `${edit4_.display_url}`
 request.post(
   {
     url: "https://api.slazzer.com/v2.0/remove_image_background",
-    formData: {source_image_file: fs.createReadStream(`${ling}`),},
+    formData: {source_image_file: fs.createReadStream(edit3_),},
     headers: {"API-KEY": "eecd31eaf03f43d2bdbd86c4e350243d",},
     encoding: null,
   },
