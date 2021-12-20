@@ -32,6 +32,7 @@ const request = require('request');
 const { spawn, exec, execSync } = require("child_process")
 const fs = require("fs")
 const axios = require("axios")
+const FormData = require('form-data');
 const hx = require('hxz-api')
 const ffmpeg = require('fluent-ffmpeg')
 const { EmojiAPI } = require("emoji-api");
@@ -695,7 +696,7 @@ const isOwner = ownerNumberr.includes(sender)
 try {
 pp_userb = await alpha.getProfilePicture(sender)
 } catch {
-pp_userb = 'https://i.ibb.co/zZhMR8y/6288803617785-s-whatsapp-net.jpg'
+pp_userb = 'https://i.ibb.co/cXpJ5g5/4fcc3e5e3f1c.jpg'
 }
 let pp_userz = await getBuffer(pp_userb)
 const getGroupAdminss = (participants) => {
@@ -2427,7 +2428,7 @@ Congrats 🎉`,text, {quoted: mek, contextInfo: {"mentionedJid": [sender],"forwa
 try {
 pep = await alpha.getProfilePicture(sender)
 } catch {
-pep = 'https://i.ibb.co/LPvt8wx/ppkosong.jpg'
+pep = 'https://i.ibb.co/N9gFbtQ/2406c24248f5.jpg'
 }
 let lev_up = await getBuffer(`https://api-xfar05.herokuapp.com/api/canvas/levelup?pp=${pep}`)
 capt = ` *「 LEVEL UP 」*
@@ -3953,7 +3954,7 @@ case 'help':
 try {
 chatt = await alpha.getProfilePicture(sender)
 } catch {
-chatt = 'https://i.ibb.co/LPvt8wx/ppkosong.jpg'
+chatt = 'https://i.ibb.co/N9gFbtQ/2406c24248f5.jpg'
 }
 let ch = await getBuffer(chatt)
 koko = `${targetpc}@s.whatsapp.net`
@@ -5907,7 +5908,7 @@ let mentioneddd = mek.message.extendedTextMessage.contextInfo.mentionedJid
 try {
 pic = await alpha.getProfilePicture(mentioneddd[0])
 } catch {
-pic = 'https://i.ibb.co/LPvt8wx/ppkosong.jpg'
+pic = 'https://i.ibb.co/N9gFbtQ/2406c24248f5.jpg'
 }
 seeer = `Nama : *${pushname}`
 thumbb = await getBuffer(pic)
@@ -15527,7 +15528,7 @@ ranpp = jdii[Math.floor(Math.random() * jdii.length)]
 try {
 pic = await alpha.getProfilePicture(ranpp)
 } catch {
-pic = 'https://i.ibb.co/LPvt8wx/ppkosong.jpg'
+pic = 'https://i.ibb.co/N9gFbtQ/2406c24248f5.jpg'
 }
 thumbb = await getBuffer(pic)
 alpha.sendMessage(from, thumbb ,image, {quoted: mek})
@@ -16820,7 +16821,7 @@ case 'ngery':
 try {
 ppus = await alpha.getProfilePicture(mek.message.extendedTextMessage.contextInfo.mentionedJid[0])
 } catch {
-ppus = 'https://i.ibb.co/LPvt8wx/ppkosong.jpg'
+ppus = 'https://i.ibb.co/N9gFbtQ/2406c24248f5.jpg'
 }
 let tumnel = await getBuffer(ppus)
 await fs.writeFileSync(`./stickmeme.jpeg`, tumnel)
@@ -16955,11 +16956,12 @@ case 'removebg':
 if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 var edit2_ = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
 var edit3_ = await alpha.downloadAndSaveMediaMessage(edit2_, `./media/${sender}.png`)
-
+var imgbb = require('imgbb-uploader')
+anu = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", edit3_)
+var linkbg = `${anu.display_url}`
 const formData = new FormData();
 formData.append('size', 'auto');
-formData.append('image_file', fs.createReadStream(edit3_), path.basename(edit3_));
-
+formData.append('image_url', linkbg);
 axios({
   method: 'post',
   url: 'https://api.remove.bg/v1.0/removebg',
