@@ -16939,7 +16939,7 @@ let edit4_ = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", edit3_)
 ling = `${edit4_.display_url}`
 request.post(
   {
-    url: 'https://api.slazzer.com/v2.0/remove_image_background',
+    url: "https://api.slazzer.com/v2.0/remove_image_background",
     formData: {source_image_file: fs.createReadStream(`${ling}`),},
     headers: {"API-KEY": "eecd31eaf03f43d2bdbd86c4e350243d",},
     encoding: null,
@@ -16947,8 +16947,8 @@ request.post(
   function (error, response, body) {
     if(error){ console.log(error); return;}
     if(response.statusCode != 200){ console.log(body.toString('utf8')); return; }
-    fs.writeFileSync('no-bg.png', body);
-    alpha.sendMessage(from, fs.readFileSync('./no-bg.png'), image, {quoted: mek })
+    fs.writeFileSync("no-bg.png", body);
+    alpha.sendMessage(from, fs.readFileSync("./no-bg.png"), image, {quoted: mek })
   }
 );
 }
