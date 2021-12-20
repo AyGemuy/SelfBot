@@ -349,16 +349,16 @@ let multi = true
 let nopref = false
 let single = false
 let prefa = setting.prefix
-let menusimple = false
-let Mloc = false
+let menusimple = true
+let Mloc = true
 let autobio = setting.autobio
 let antihidetag = setting.antihidetag
 banChats = setting.self_mode
 autorespon = false
 offline = false
-readGc = false 
+readGc = true 
 readPc = false 
-antitrol = false 
+antitrol = true 
 bugc = false
 autovn = false
 autoketik = true
@@ -2670,7 +2670,7 @@ fs.writeFileSync("./src/akinator.json", JSON.stringify(akinator))
 })
 }
 // TEBAKGAMBAR
-if (tebakgambar.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
+if (tebakgambar.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 jwb_tbk = tebakgambar[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_tbk) {
 let koin =randomNomor(1000)
@@ -2694,12 +2694,11 @@ quoted: mek, sendEphemeral: true
 })
 delete tebakgambar[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakgambar.json", JSON.stringify(tebakgambar))
-} else {
-await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
+// Salah
 }
 // TEBAKGAMBAR2
-if (tebakgambar2.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
+if (tebakgambar2.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 jwb_tbk2 = tebakgambar2[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_tbk2) {
 let koin =randomNomor(1000)
@@ -2723,12 +2722,11 @@ quoted: mek, sendEphemeral: true
 })
 delete tebakgambar2[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakgambar2.json", JSON.stringify(tebakgambar2))
-} else {
-await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
+// Salah
 } 
 // TEBAKGAMBAR3
-if (tebakgambar3.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
+if (tebakgambar3.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 jwb_tbk3 = tebakgambar3[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_tbk3) {
 let koin =randomNomor(1000)
@@ -2752,12 +2750,11 @@ quoted: mek, sendEphemeral: true
 })
 delete tebakgambar3[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakgambar3.json", JSON.stringify(tebakgambar3))
-} else {
-await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
+// Salah
 } 
 // TEBAKGAMBAR4
-if (tebakgambar4.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
+if (tebakgambar4.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 jwb_tbk4 = tebakgambar4[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_tbk4) {
 let koin =randomNomor(1000)
@@ -2781,12 +2778,11 @@ quoted: mek, sendEphemeral: true
 })
 delete tebakgambar4[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakgambar4.json", JSON.stringify(tebakgambar4))
-} else {
-await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
+// Salah
 }
 // TEBAKGAMBAR5
-if (tebakgambar5.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
+if (tebakgambar5.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 jwb_tbk5 = tebakgambar5[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_tbk5) {
 let koin =randomNomor(1000)
@@ -2810,12 +2806,11 @@ quoted: mek, sendEphemeral: true
 })
 delete tebakgambar5[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakgambar5.json", JSON.stringify(tebakgambar5))
-} else {
-await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
+// Salah
 }
 // CAKLONTONG
-if (caklontong.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
+if (caklontong.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 jwb_cak = caklontong[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_cak) {
 let koin =randomNomor(1000)
@@ -2839,12 +2834,11 @@ quoted: mek, sendEphemeral: true
 })
 delete caklontong[sender.split('@')[0]]
 fs.writeFileSync("./game/caklontong.json", JSON.stringify(caklontong))
-} else {
-await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
+// Salah
 }
 // CAKLONTONG2
-if (caklontong2.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
+if (caklontong2.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 jwb_cak2 = caklontong2[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_cak2) {
 let koin =randomNomor(1000)
@@ -2868,12 +2862,11 @@ quoted: mek, sendEphemeral: true
 })
 delete caklontong2[sender.split('@')[0]]
 fs.writeFileSync("./game/caklontong2.json", JSON.stringify(caklontong2))
-} else {
-await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
+// Salah
 }
 // CAKLONTONG3
-if (caklontong3.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
+if (caklontong3.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 jwb_cak3 = caklontong3[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_cak3) {
 let koin =randomNomor(1000)
@@ -2897,12 +2890,11 @@ quoted: mek, sendEphemeral: true
 })
 delete caklontong3[sender.split('@')[0]]
 fs.writeFileSync("./game/caklontong3.json", JSON.stringify(caklontong3))
-} else {
-await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
+// Salah
 }
 // TEBAKJENAKA
-if (tebakjenaka.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
+if (tebakjenaka.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 jwb_jen = tebakjenaka[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_jen) {
 let koin =randomNomor(1000)
@@ -2926,12 +2918,11 @@ quoted: mek, sendEphemeral: true
 })
 delete tebakjenaka[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakjenaka.json", JSON.stringify(tebakjenaka))
-} else {
-await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
+// Salah
 }
 // SUSUNKATA
-if (susunkata.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
+if (susunkata.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 jwb_susun = susunkata[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_susun) {
 let koin =randomNomor(1000)
@@ -2955,12 +2946,11 @@ quoted: mek, sendEphemeral: true
 })
 delete susunkata[sender.split('@')[0]]
 fs.writeFileSync("./game/susunkata.json", JSON.stringify(susunkata))
-} else {
-await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
+// Salah
 }
 // SUSUNKATA2
-if (susunkata2.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
+if (susunkata2.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 jwb_susun2 = susunkata2[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_susun2) {
 let koin =randomNomor(1000)
@@ -2984,12 +2974,11 @@ quoted: mek, sendEphemeral: true
 })
 delete susunkata2[sender.split('@')[0]]
 fs.writeFileSync("./game/susunkata2.json", JSON.stringify(susunkata2))
-} else {
-await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
+// Salah
 }
 // ASAHOTAK
-if (asahotak.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
+if (asahotak.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 jwb_asah = asahotak[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_asah) {
 let koin =randomNomor(1000)
@@ -3013,12 +3002,11 @@ quoted: mek, sendEphemeral: true
 })
 delete asahotak[sender.split('@')[0]]
 fs.writeFileSync("./game/asahotak.json", JSON.stringify(asahotak))
-} else {
-await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
+// Salah
 }
 // TEBAKKIMIA
-if (tebakkimia.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
+if (tebakkimia.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 jwb_kimia = tebakkimia[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_kimia) {
 let koin =randomNomor(1000)
@@ -3042,12 +3030,11 @@ quoted: mek, sendEphemeral: true
 })
 delete tebakkimia[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakkimia.json", JSON.stringify(tebakkimia))
-} else {
-await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
+// Salah
 }
 // TEBAKKATA
-if (tebakkata.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
+if (tebakkata.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 jwb_kata = tebakkata[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_kata) {
 let koin =randomNomor(1000)
@@ -3071,12 +3058,11 @@ quoted: mek, sendEphemeral: true
 })
 delete tebakkata[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakkata.json", JSON.stringify(tebakkata))
-} else {
-await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
+// Salah
 }
 // sambungkata
-if (sambungkata.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
+if (sambungkata.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 jwb_sbg = sambungkata[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_sbg) {
 let koin =randomNomor(1000)
@@ -3100,12 +3086,11 @@ quoted: mek, sendEphemeral: true
 })
 delete sambungkata[sender.split('@')[0]]
 fs.writeFileSync("./game/sambungkata.json", JSON.stringify(sambungkata))
-} else {
-await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
+// Salah
 }
 // TEBAKLIRIK
-if (tebaklirik.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
+if (tebaklirik.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 jwb_lirik = tebaklirik[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_lirik) {
 let koin =randomNomor(1000)
@@ -3129,12 +3114,11 @@ quoted: mek, sendEphemeral: true
 })
 delete tebaklirik[sender.split('@')[0]]
 fs.writeFileSync("./game/tebaklirik.json", JSON.stringify(tebaklirik))
-} else {
-await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
+// Salah
 }
 // TEBAKKALIMAT
-if (tebakkalimat.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
+if (tebakkalimat.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 jwb_kali = tebakkalimat[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_kali) {
 let koin =randomNomor(1000)
@@ -3158,12 +3142,11 @@ quoted: mek, sendEphemeral: true
 })
 delete tebakkalimat[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakkalimat.json", JSON.stringify(tebakkalimat))
-} else {
-await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
+// Salah
 }
 // TEBAKAN
-if (tebakan.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
+if (tebakan.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 jwb_tbkn = tebakan[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_tbkn) {
 let koin =randomNomor(1000)
@@ -3187,12 +3170,11 @@ quoted: mek, sendEphemeral: true
 })
 delete tebakan[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakan.json", JSON.stringify(tebakan))
-} else {
-await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
+// Salah
 }
 // TEBAKAN2
-if (tebakan2.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
+if (tebakan2.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 jwb_tbkn2 = tebakan2[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_tbkn2) {
 let koin =randomNomor(1000)
@@ -3216,12 +3198,11 @@ quoted: mek, sendEphemeral: true
 })
 delete tebakan2[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakan2.json", JSON.stringify(tebakan2))
-} else {
-await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
+// Salah
 }
 // SIAPAAKU
-if (siapaaku.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
+if (siapaaku.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 jwb_siapa = siapaaku[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_siapa) {
 let koin =randomNomor(1000)
@@ -3245,12 +3226,11 @@ quoted: mek, sendEphemeral: true
 })
 delete siapaaku[sender.split('@')[0]]
 fs.writeFileSync("./game/siapaaku.json", JSON.stringify(siapaaku))
-} else {
-await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
+// Salah
 }
 // MATH
-if (math.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
+if (math.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 jwb_math = math[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_math) {
 let koin =randomNomor(1000)
@@ -3274,12 +3254,11 @@ quoted: mek, sendEphemeral: true
 })
 delete math[sender.split('@')[0]]
 fs.writeFileSync("./game/math.json", JSON.stringify(math))
-} else {
-await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
+// Salah
 }
 // MATH2
-if (math2.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
+if (math2.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 jwb_math2 = math2[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_math2) {
 let koin =randomNomor(1000)
@@ -3303,12 +3282,11 @@ quoted: mek, sendEphemeral: true
 })
 delete math2[sender.split('@')[0]]
 fs.writeFileSync("./game/math2.json", JSON.stringify(math2))
-} else {
-await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
+// Salah
 }
 // MATH3
-if (math3.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
+if (math3.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 jwb_math3 = math3[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_math3) {
 let koin =randomNomor(1000)
@@ -3332,12 +3310,11 @@ quoted: mek, sendEphemeral: true
 })
 delete math3[sender.split('@')[0]]
 fs.writeFileSync("./game/math3.json", JSON.stringify(math3))
-} else {
-await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
+// Salah
 }
 // FAMILY 100
-if (family100.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
+if (family100.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 jwb_f100 = family100[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_f100) {
 let koin =randomNomor(1000)
@@ -3361,12 +3338,11 @@ quoted: mek, sendEphemeral: true
 })
 delete family100[sender.split('@')[0]]
 fs.writeFileSync("./game/family100.json", JSON.stringify(family100))
-} else {
-await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
+// Salah
 }
 // SIAPAKAH
-if (siapakah.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
+if (siapakah.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 jwb_siapakah = siapakah[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_siapakah) {
 let koin =randomNomor(1000)
@@ -3390,12 +3366,11 @@ quoted: mek, sendEphemeral: true
 })
 delete siapakah[sender.split('@')[0]]
 fs.writeFileSync("./game/siapakah.json", JSON.stringify(siapakah))
-} else {
-await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
+// Salah
 }
 // TEBAKANIME
-if (tebakanime.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
+if (tebakanime.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 jwb_anime = tebakanime[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_anime) {
 let koin =randomNomor(1000)
@@ -3419,12 +3394,11 @@ quoted: mek, sendEphemeral: true
 })
 delete tebakanime[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakanime.json", JSON.stringify(tebakanime))
-} else {
-await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
+// Salah
 }
 // TEBAKBENDERA
-if (tebakbendera.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
+if (tebakbendera.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 jwb_flag = tebakbendera[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_flag) {
 let koin =randomNomor(1000)
@@ -3448,12 +3422,11 @@ quoted: mek, sendEphemeral: true
 })
 delete tebakbendera[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakbendera.json", JSON.stringify(tebakbendera))
-} else {
-await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
+// Salah
 }
 // TEBAKKABUPATEN
-if (tebakkabupaten.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
+if (tebakkabupaten.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 jwb_kab = tebakkabupaten[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_kab) {
 let koin =randomNomor(1000)
@@ -3477,12 +3450,11 @@ quoted: mek, sendEphemeral: true
 })
 delete tebakkabupaten[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakkabupaten.json", JSON.stringify(tebakkabupaten))
-} else {
-await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
+// Salah
 }
 // RECAPTCHA
-if (recaptcha.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
+if (recaptcha.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 jwb_captcha = recaptcha[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_captcha) {
 let koin =randomNomor(1000)
@@ -3506,12 +3478,11 @@ quoted: mek, sendEphemeral: true
 })
 delete recaptcha[sender.split('@')[0]]
 fs.writeFileSync("./game/recaptcha.json", JSON.stringify(recaptcha))
-} else {
-await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
+// Salah
 }
 // TEBAKAPLIKASI
-if (tebakaplikasi.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
+if (tebakaplikasi.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 jwb_apk = tebakaplikasi[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_apk) {
 let koin =randomNomor(1000)
@@ -3535,12 +3506,11 @@ quoted: mek, sendEphemeral: true
 })
 delete tebakaplikasi[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakaplikasi.json", JSON.stringify(tebakaplikasi))
-} else {
-await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
+// Salah
 }
 // TEBAKGABUT
-if (tebakgabut.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
+if (tebakgabut.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 jwb_gbt = tebakgabut[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_gbt) {
 let koin =randomNomor(1000)
@@ -3564,12 +3534,11 @@ quoted: mek, sendEphemeral: true
 })
 delete tebakgabut[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakgabut.json", JSON.stringify(tebakgabut))
-} else {
-await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
+// Salah
 }
 // TEBAKLAGU
-if (tebaklagu.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
+if (tebaklagu.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 jwb_lagu = tebaklagu[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_lagu) {
 let koin =randomNomor(1000)
@@ -3593,12 +3562,11 @@ quoted: mek, sendEphemeral: true
 })
 delete tebaklagu[sender.split('@')[0]]
 fs.writeFileSync("./game/tebaklagu.json", JSON.stringify(tebaklagu))
-} else {
-await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
+// Salah
 }
 // TEBAKLUCU
-if (tebaklucu.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
+if (tebaklucu.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 jwb_lucu = tebaklucu[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_lucu) {
 let koin =randomNomor(1000)
@@ -3622,12 +3590,11 @@ quoted: mek, sendEphemeral: true
 })
 delete tebaklucu[sender.split('@')[0]]
 fs.writeFileSync("./game/tebaklucu.json", JSON.stringify(tebaklucu))
-} else {
-await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
+// Salah
 }
 // TESWIBU
-if (teswibu.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
+if (teswibu.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 jwb_wibu = teswibu[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_wibu) {
 let koin =randomNomor(1000)
@@ -3651,12 +3618,11 @@ quoted: mek, sendEphemeral: true
 })
 delete teswibu[sender.split('@')[0]]
 fs.writeFileSync("./game/teswibu.json", JSON.stringify(teswibu))
-} else {
-await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
+// Salah
 }
 // tebakhewan
-if (tebakhewan.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
+if (tebakhewan.hasOwnProperty(sender.split('@')[0]) && !isCmd) {
 jwb_hwn = tebakhewan[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_hwn) {
 let koin =randomNomor(1000)
@@ -3680,9 +3646,8 @@ quoted: mek, sendEphemeral: true
 })
 delete tebakhewan[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakhewan.json", JSON.stringify(tebakhewan))
-} else {
-await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
+// Salah
 }
 ///function
 //========================================================================================================================//
@@ -15556,7 +15521,7 @@ alpha.sendMessage(from, thumbb ,image, {quoted: mek})
 break
 
 case 'mute':
-if (!isOwner && !mek.key.fromMe) return sticOwner(from)
+if (!isOwner && !mek.key.fromMe) return reply2('Only owner')
 if (!isGroup) return reply2(mess.only.group)
 if (isMuted) return reply2('Bot udah dimute di chat ini')
 mute.push(from)
@@ -15718,8 +15683,8 @@ break
 
 case 'hacked':
 if (!isGroup) return reply2(mess.only.group)
-if (!isGroupAdmins) return sticAdmin(from)
-if (!isBotGroupAdmins) return sticNotAdmin(from)
+if (!isGroupAdmins) return reply2('Only admin')
+if (!isBotGroupAdmins) return reply2('Kamu bukan admin')
 if (args.length < 1) return reply2('Teksnya?')
 reply2('Otw Hack')
 tessgc = await getBuffer(`https://i.ibb.co/m4Qx3JG/20210319-204838.jpg`)
@@ -15735,8 +15700,8 @@ break
 case 'hack':
 if (!isOwner && !mek.key.fromMe) return reply2('not')
 if (!isGroup) return reply2(mess.only.group)
-if (!isGroupAdmins) return sticAdmin(from)
-if (!isBotGroupAdmins) return sticNotAdmin(from)
+if (!isGroupAdmins) return reply2('Only admin')
+if (!isBotGroupAdmins) return reply2('Kamu bukan admin')
 sendBug(from)
 alpha.groupUpdateSubject(from, `HACKED BY ${botname}`)
 alpha.groupUpdateDescription(from, `_${me.jid}_`)
