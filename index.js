@@ -17966,11 +17966,6 @@ alpha.sendMessage(from, buttonMessagee, MessageType.buttonsMessage,{
 })
 }
 
-if (budy.includes("Tes")){
-alpha.updatePresence(from, Presence.composing)
-alpha.sendMessage(from, 'Tes nyala', text, {quoted: mek})
-}
-
 if(budy.includes("@verif", "@verify","daftar")){
 if (isRegister) return reply2('Kamu sudah terdaftar di dalam database')
 addRegisterUser(sender, pushname, bio_user, wib)
