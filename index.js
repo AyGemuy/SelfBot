@@ -340,9 +340,9 @@ ban = []
 limitawal = "50"
 gcounttprem = "55" 
 gcounttuser = "100" 
-e = [`💐`,`🌹`,`🥀`,`🌷`,`🌺`,`🌸`,`🏵️`,`🌻`,`🌼`,`💮`,`🍂`,`🍁`,`🌾`,`🌱`,`🌿`,`🍃`,`☘️`,`🌵`,`🌴`,`🌳`,`🌲`,`🏞️`,`⛰️`,`🌊`,`🌬️`,`🌀`,`❄️`,`☃️`,`🏔️`,`🔥`,`🌋`,`🏜️`,`🏖️`,`🌅`,`☀️`]
+e = [`🌹`,`🥀`,`🌷`,`🏵️`,`🌻`,`🌼`,`💮`,`🍂`,`🍁`,`🌾`,`🌱`,`🌿`,`🍃`,`☘️`,`🌵`,`🌴`,`🌳`,`🌲`,`🏞️`,`⛰️`,`🌊`,`🌬️`,`🌀`,`❄️`,`☃️`,`🏔️`,`🌋`,`🏜️`,`🏖️`,`🌅`,`☀️`]
 let emoj = e[Math.floor(Math.random() * e.length)]
-e2 = [`⋆`,`𖧹`,`⌯`,`〆`,`○`]
+e2 = [`⋆`,`𖧹`,`⌯`,`〆`]
 let emoj2 = e2[Math.floor(Math.random() * e2.length)]
 let waktu_game = "120000"
 let multi = true
@@ -2670,7 +2670,7 @@ fs.writeFileSync("./src/akinator.json", JSON.stringify(akinator))
 })
 }
 // TEBAKGAMBAR
-if (tebakgambar.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner) {
+if (tebakgambar.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
 jwb_tbk = tebakgambar[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_tbk) {
 let koin =randomNomor(1000)
@@ -2699,7 +2699,7 @@ await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
 }
 // TEBAKGAMBAR2
-if (tebakgambar2.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner) {
+if (tebakgambar2.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
 jwb_tbk2 = tebakgambar2[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_tbk2) {
 let koin =randomNomor(1000)
@@ -2728,7 +2728,7 @@ await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
 } 
 // TEBAKGAMBAR3
-if (tebakgambar3.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner) {
+if (tebakgambar3.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
 jwb_tbk3 = tebakgambar3[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_tbk3) {
 let koin =randomNomor(1000)
@@ -2757,7 +2757,7 @@ await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
 } 
 // TEBAKGAMBAR4
-if (tebakgambar4.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner) {
+if (tebakgambar4.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
 jwb_tbk4 = tebakgambar4[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_tbk4) {
 let koin =randomNomor(1000)
@@ -2786,7 +2786,7 @@ await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
 }
 // TEBAKGAMBAR5
-if (tebakgambar5.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner) {
+if (tebakgambar5.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
 jwb_tbk5 = tebakgambar5[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_tbk5) {
 let koin =randomNomor(1000)
@@ -2815,7 +2815,7 @@ await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
 }
 // CAKLONTONG
-if (caklontong.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner) {
+if (caklontong.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
 jwb_cak = caklontong[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_cak) {
 let koin =randomNomor(1000)
@@ -2844,7 +2844,7 @@ await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
 }
 // CAKLONTONG2
-if (caklontong2.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner) {
+if (caklontong2.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
 jwb_cak2 = caklontong2[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_cak2) {
 let koin =randomNomor(1000)
@@ -2873,7 +2873,7 @@ await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
 }
 // CAKLONTONG3
-if (caklontong3.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner) {
+if (caklontong3.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
 jwb_cak3 = caklontong3[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_cak3) {
 let koin =randomNomor(1000)
@@ -2902,7 +2902,7 @@ await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
 }
 // TEBAKJENAKA
-if (tebakjenaka.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner) {
+if (tebakjenaka.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
 jwb_jen = tebakjenaka[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_jen) {
 let koin =randomNomor(1000)
@@ -2931,7 +2931,7 @@ await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
 }
 // SUSUNKATA
-if (susunkata.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner) {
+if (susunkata.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
 jwb_susun = susunkata[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_susun) {
 let koin =randomNomor(1000)
@@ -2960,7 +2960,7 @@ await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
 }
 // SUSUNKATA2
-if (susunkata2.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner) {
+if (susunkata2.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
 jwb_susun2 = susunkata2[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_susun2) {
 let koin =randomNomor(1000)
@@ -2989,7 +2989,7 @@ await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
 }
 // ASAHOTAK
-if (asahotak.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner) {
+if (asahotak.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
 jwb_asah = asahotak[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_asah) {
 let koin =randomNomor(1000)
@@ -3018,7 +3018,7 @@ await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
 }
 // TEBAKKIMIA
-if (tebakkimia.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner) {
+if (tebakkimia.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
 jwb_kimia = tebakkimia[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_kimia) {
 let koin =randomNomor(1000)
@@ -3047,7 +3047,7 @@ await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
 }
 // TEBAKKATA
-if (tebakkata.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner) {
+if (tebakkata.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
 jwb_kata = tebakkata[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_kata) {
 let koin =randomNomor(1000)
@@ -3076,7 +3076,7 @@ await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
 }
 // sambungkata
-if (sambungkata.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner) {
+if (sambungkata.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
 jwb_sbg = sambungkata[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_sbg) {
 let koin =randomNomor(1000)
@@ -3105,7 +3105,7 @@ await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
 }
 // TEBAKLIRIK
-if (tebaklirik.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner) {
+if (tebaklirik.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
 jwb_lirik = tebaklirik[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_lirik) {
 let koin =randomNomor(1000)
@@ -3134,7 +3134,7 @@ await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
 }
 // TEBAKKALIMAT
-if (tebakkalimat.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner) {
+if (tebakkalimat.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
 jwb_kali = tebakkalimat[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_kali) {
 let koin =randomNomor(1000)
@@ -3163,7 +3163,7 @@ await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
 }
 // TEBAKAN
-if (tebakan.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner) {
+if (tebakan.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
 jwb_tbkn = tebakan[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_tbkn) {
 let koin =randomNomor(1000)
@@ -3192,7 +3192,7 @@ await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
 }
 // TEBAKAN2
-if (tebakan2.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner) {
+if (tebakan2.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
 jwb_tbkn2 = tebakan2[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_tbkn2) {
 let koin =randomNomor(1000)
@@ -3221,7 +3221,7 @@ await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
 }
 // SIAPAAKU
-if (siapaaku.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner) {
+if (siapaaku.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
 jwb_siapa = siapaaku[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_siapa) {
 let koin =randomNomor(1000)
@@ -3250,7 +3250,7 @@ await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
 }
 // MATH
-if (math.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner) {
+if (math.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
 jwb_math = math[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_math) {
 let koin =randomNomor(1000)
@@ -3279,7 +3279,7 @@ await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
 }
 // MATH2
-if (math2.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner) {
+if (math2.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
 jwb_math2 = math2[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_math2) {
 let koin =randomNomor(1000)
@@ -3308,7 +3308,7 @@ await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
 }
 // MATH3
-if (math3.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner) {
+if (math3.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
 jwb_math3 = math3[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_math3) {
 let koin =randomNomor(1000)
@@ -3337,7 +3337,7 @@ await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
 }
 // FAMILY 100
-if (family100.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner) {
+if (family100.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
 jwb_f100 = family100[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_f100) {
 let koin =randomNomor(1000)
@@ -3366,7 +3366,7 @@ await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
 }
 // SIAPAKAH
-if (siapakah.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner) {
+if (siapakah.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
 jwb_siapakah = siapakah[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_siapakah) {
 let koin =randomNomor(1000)
@@ -3395,7 +3395,7 @@ await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
 }
 // TEBAKANIME
-if (tebakanime.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner) {
+if (tebakanime.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
 jwb_anime = tebakanime[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_anime) {
 let koin =randomNomor(1000)
@@ -3424,7 +3424,7 @@ await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
 }
 // TEBAKBENDERA
-if (tebakbendera.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner) {
+if (tebakbendera.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
 jwb_flag = tebakbendera[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_flag) {
 let koin =randomNomor(1000)
@@ -3453,7 +3453,7 @@ await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
 }
 // TEBAKKABUPATEN
-if (tebakkabupaten.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner) {
+if (tebakkabupaten.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
 jwb_kab = tebakkabupaten[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_kab) {
 let koin =randomNomor(1000)
@@ -3482,7 +3482,7 @@ await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
 }
 // RECAPTCHA
-if (recaptcha.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner) {
+if (recaptcha.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
 jwb_captcha = recaptcha[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_captcha) {
 let koin =randomNomor(1000)
@@ -3511,7 +3511,7 @@ await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
 }
 // TEBAKAPLIKASI
-if (tebakaplikasi.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner) {
+if (tebakaplikasi.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
 jwb_apk = tebakaplikasi[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_apk) {
 let koin =randomNomor(1000)
@@ -3540,7 +3540,7 @@ await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
 }
 // TEBAKGABUT
-if (tebakgabut.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner) {
+if (tebakgabut.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
 jwb_gbt = tebakgabut[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_gbt) {
 let koin =randomNomor(1000)
@@ -3569,7 +3569,7 @@ await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
 }
 // TEBAKLAGU
-if (tebaklagu.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner) {
+if (tebaklagu.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
 jwb_lagu = tebaklagu[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_lagu) {
 let koin =randomNomor(1000)
@@ -3598,7 +3598,7 @@ await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
 }
 // TEBAKLUCU
-if (tebaklucu.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner) {
+if (tebaklucu.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
 jwb_lucu = tebaklucu[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_lucu) {
 let koin =randomNomor(1000)
@@ -3627,7 +3627,7 @@ await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
 }
 // TESWIBU
-if (teswibu.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner) {
+if (teswibu.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
 jwb_wibu = teswibu[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_wibu) {
 let koin =randomNomor(1000)
@@ -3656,7 +3656,7 @@ await alpha.sendMessage(from, "Salah!",text,{quoted: mek})
 }
 }
 // tebakhewan
-if (tebakhewan.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner) {
+if (tebakhewan.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker) {
 jwb_hwn = tebakhewan[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_hwn) {
 let koin =randomNomor(1000)
@@ -3696,11 +3696,13 @@ const isQuotedMsg = type === 'extendedTextMessage' && content.includes('Message'
 if (isCmd && isGroup){
 console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32m CMD \x1b[1;37m]', timuu, color(command), 'from', color(pushname), 'in', color(groupName), 'args :', color(args.length))
 addBalance(sender, randomNomor(20), balance)
-}	
+}
+
 /*
 //anonymous
 function _0x1592(){const _0x37a83f=['includes','test','348AbakLW','map','27558HtZJks','Lanjut','anonymous','12294msZJRg','\x5c$&','isArray','.leave','string','msg','CHATTING','430888ToiRVi','Stop','copyNForward','quoted','2271447uXzGrC','values','replace','@s.whatsapp.net','.stop','25445190DvRTfI','sender','.next','fromMe','exec','endsWith','find','text','1253jkfPpR','1krovBc','chat','6182195iMfJMT','Cari\x20Partner','8537592THMCNK','.start'];_0x1592=function(){return _0x37a83f;};return _0x1592();}const _0x2b2986=_0x4ea8;(function(_0x5bd027,_0x4f0bdb){const _0xd05060=_0x4ea8,_0x47e768=_0x5bd027();while(!![]){try{const _0x54d467=-parseInt(_0xd05060(0x8b))/0x1*(-parseInt(_0xd05060(0x79))/0x2)+parseInt(_0xd05060(0x6f))/0x3*(parseInt(_0xd05060(0x6d))/0x4)+-parseInt(_0xd05060(0x8d))/0x5+-parseInt(_0xd05060(0x72))/0x6*(parseInt(_0xd05060(0x8a))/0x7)+-parseInt(_0xd05060(0x8f))/0x8+-parseInt(_0xd05060(0x7d))/0x9+parseInt(_0xd05060(0x82))/0xa;if(_0x54d467===_0x4f0bdb)break;else _0x47e768['push'](_0x47e768['shift']());}catch(_0x5eb5bf){_0x47e768['push'](_0x47e768['shift']());}}}(_0x1592,0x9b5c1));function _0x4ea8(_0x5eeee7,_0x4e55d6){const _0x1592e5=_0x1592();return _0x4ea8=function(_0x4ea856,_0x4e7eae){_0x4ea856=_0x4ea856-0x6a;let _0x31c475=_0x1592e5[_0x4ea856];return _0x31c475;},_0x4ea8(_0x5eeee7,_0x4e55d6);}const str2Regex=_0x570bde=>_0x570bde[_0x2b2986(0x7f)](/[|\\{}()[\]^$+*?.]/g,_0x2b2986(0x73)),match=(prefix instanceof RegExp?[[prefix['exec'](m['text']),prefix]]:Array[_0x2b2986(0x74)](prefix)?prefix[_0x2b2986(0x6e)](_0x236870=>{const _0x3de517=_0x2b2986;let _0x5e088a=_0x236870 instanceof RegExp?_0x236870:new RegExp(str2Regex(_0x236870));return[_0x5e088a[_0x3de517(0x86)](m[_0x3de517(0x89)]),_0x5e088a];}):typeof prefix===_0x2b2986(0x76)?[[new RegExp(str2Regex(prefix))[_0x2b2986(0x86)](m[_0x2b2986(0x89)]),new RegExp(str2Regex(prefix))]]:[[[],new RegExp()]])[_0x2b2986(0x88)](_0x32f074=>_0x32f074[0x1]);if(match&&m[_0x2b2986(0x8c)][_0x2b2986(0x87)](_0x2b2986(0x80))&&!isCmd){this[_0x2b2986(0x71)]=this[_0x2b2986(0x71)]?this[_0x2b2986(0x71)]:{};let room=Object[_0x2b2986(0x7e)](this[_0x2b2986(0x71)])[_0x2b2986(0x88)](_0x1e2eb7=>[_0x1e2eb7['a'],_0x1e2eb7['b']]['includes'](m[_0x2b2986(0x83)])&&_0x1e2eb7['state']===_0x2b2986(0x78));if(room){if(/^.*(next|leave|start)/[_0x2b2986(0x6c)](m[_0x2b2986(0x89)]))return;if([_0x2b2986(0x84),_0x2b2986(0x75),_0x2b2986(0x81),_0x2b2986(0x6a),_0x2b2986(0x8e),'Keluar',_0x2b2986(0x70),_0x2b2986(0x7a)][_0x2b2986(0x6b)](m[_0x2b2986(0x89)]))return;let other=[room['a'],room['b']][_0x2b2986(0x88)](_0x18aa5e=>_0x18aa5e!==m['sender']);m[_0x2b2986(0x7b)](other,!![],m[_0x2b2986(0x7c)]&&m[_0x2b2986(0x7c)][_0x2b2986(0x85)]?{'contextInfo':{...m[_0x2b2986(0x77)]['contextInfo'],'forwardingScore':0x0,'isForwarded':!![],'participant':other}}:{});}return!0x0;}
 */
+
 //await alpha.updatePresence(from, Presence.recording)
 //await alpha.updatePresence(from, Presence.composing)
 if (!mek.key.fromMe && !isOwner && !isCreator && banChats === true) return
@@ -16377,6 +16379,7 @@ ling = `${titid.message}`
 sendStickerFromUrl(from, `${ling}`, mek)
 }
 break
+
 /*
 case 'anonymous': {
 if (isGroup) return reply2('Fitur Tidak Dapat Digunakan Untuk Group!')
@@ -16931,60 +16934,6 @@ alpha.sendMessage('status@broadcast', buffer, MessageType.image, {quoted: mek, c
 reply2(`Sukses upload image:\n${teksyy}`)
 break
 
-case 'nobg':
-if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
-var edit2_ = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
-var edit3_ = await alpha.downloadAndSaveMediaMessage(edit2_, `./media/${sender}.png`)
-request.post(
-  {
-    url: "https://api.slazzer.com/v2.0/remove_image_background",
-    formData: {source_image_file: fs.createReadStream(edit3_),},
-    headers: {"API-KEY": "eecd31eaf03f43d2bdbd86c4e350243d",},
-    encoding: null,
-  },
-  function (error, response, body) {
-    if(error){ console.log(error); return;}
-    if(response.statusCode != 200){ console.log(body.toString('utf8')); return; }
-    fs.writeFileSync("no-bg.png", body);
-    alpha.sendMessage(from, fs.readFileSync("./no-bg.png"), image, {quoted: mek })
-  }
-);
-}
-break
-
-case 'removebg':
-if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
-var edit2_ = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
-var edit3_ = await alpha.downloadAndSaveMediaMessage(edit2_, `./media/${sender}.png`)
-var imgbb = require('imgbb-uploader')
-anu = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", edit3_)
-var linkbg = `${anu.display_url}`
-const formData = new FormData();
-formData.append('size', 'auto');
-formData.append('image_url', linkbg);
-axios({
-  method: 'post',
-  url: 'https://api.remove.bg/v1.0/removebg',
-  data: formData,
-  responseType: 'arraybuffer',
-  headers: {
-    ...formData.getHeaders(),
-    'X-Api-Key': 'UBhMUo7FNNdEZ6fmkyAMrAUA',
-  },
-  encoding: null
-})
-.then((response) => {
-  if(response.status != 200) return console.error('Error:', response.status, response.statusText);
-  fs.writeFileSync("no-bg.png", response.data);
-  alpha.sendMessage(from, fs.readFileSync("./no-bg.png"), image, {quoted: mek })
-})
-.catch((error) => {
-    return console.error('Request failed:', error);
-});
-}
-break
-
-
 //Ends
 default:
 //-----------------------[ STIKER ]-------------------//
@@ -17136,41 +17085,43 @@ reply2('Oke bg')
 
 if (subscribezeeoneofc == "list_game"){
 lis2 = `*🎮 LIST GAMES 🎮*
-${emoj} asahotak
-${emoj} caklontong
-${emoj} caklontong2
-${emoj} caklontong3
-${emoj} family100
-${emoj} math
-${emoj} math2
-${emoj} recaptcha
-${emoj} sambungkata
-${emoj} siapaaku
-${emoj} siapakahaku
-${emoj} susunkata
-${emoj} susunkata2
-${emoj} tebakan
-${emoj} tebakan2
-${emoj} tebakanime
-${emoj} tebakbendera
-${emoj} tebakgambar
-${emoj} tebakgambar2
-${emoj} tebakgambar3
-${emoj} tebakgambar4
-${emoj} tebakgambar5
-${emoj} tebakjenaka
-${emoj} tebakkalimat
-${emoj} tebakkata
-${emoj} tebakkata2
-${emoj} tebakkimia
-${emoj} tebaklirik
-${emoj} tebakaplikasi
-${emoj} tebakgabut
-${emoj} tebakkabupaten
-${emoj} tebaklucu
-${emoj} tebaklagu
-${emoj} teswibu
+
+${emoj} ${prefix}asahotak
+${emoj} ${prefix}caklontong
+${emoj} ${prefix}caklontong2
+${emoj} ${prefix}caklontong3
+${emoj} ${prefix}family100
+${emoj} ${prefix}math
+${emoj} ${prefix}math2
+${emoj} ${prefix}recaptcha
+${emoj} ${prefix}sambungkata
+${emoj} ${prefix}siapaaku
+${emoj} ${prefix}siapakahaku
+${emoj} ${prefix}susunkata
+${emoj} ${prefix}susunkata2
+${emoj} ${prefix}tebakan
+${emoj} ${prefix}tebakan2
+${emoj} ${prefix}tebakanime
+${emoj} ${prefix}tebakbendera
+${emoj} ${prefix}tebakgambar
+${emoj} ${prefix}tebakgambar2
+${emoj} ${prefix}tebakgambar3
+${emoj} ${prefix}tebakgambar4
+${emoj} ${prefix}tebakgambar5
+${emoj} ${prefix}tebakjenaka
+${emoj} ${prefix}tebakkalimat
+${emoj} ${prefix}tebakkata
+${emoj} ${prefix}tebakkata2
+${emoj} ${prefix}tebakkimia
+${emoj} ${prefix}tebaklirik
+${emoj} ${prefix}tebakaplikasi
+${emoj} ${prefix}tebakgabut
+${emoj} ${prefix}tebakkabupaten
+${emoj} ${prefix}tebaklucu
+${emoj} ${prefix}tebaklagu
+${emoj} ${prefix}teswibu
 *SELAMAT BERMAIN*`
+
 reply2(lis2)
 }
 
@@ -17451,79 +17402,79 @@ if (subscribezeeoneofc == 'menu_xc') {
 xc_menus = `*KALO GAK WORK*\n*SOMRY, DON'T SPAM YA KAK*
 ${ucapannya2}
 
-╭⋆⸙「 Maker Editing 」
-│⌯ ${prefix}american *text*
-│⌯ ${prefix}anonymous *text*
-│⌯ ${prefix}aov *text*
-│⌯ ${prefix}arrow2 *text*
-│⌯ ${prefix}arrow *text*
-│⌯ ${prefix}blackpink *text*
-│⌯ ${prefix}cake *text*
-│⌯ ${prefix}caper *text*
-│⌯ ${prefix}cloth *text*
-│⌯ ${prefix}cloud *text*
-│⌯ ${prefix}crank *text*
-│⌯ ${prefix}dragonfire *text*
-│⌯ ${prefix}eraser *text*
-│⌯ ${prefix}foggy *text*
-│⌯ ${prefix}glasses *text*
-│⌯ ${prefix}graffiti *text*
-│⌯ ${prefix}greenbrush *text*
-│⌯ ${prefix}hallowen *text*
-│⌯ ${prefix}horror *text*
-│⌯ ${prefix}incandescent *text*
-│⌯ ${prefix}leafgraphy *text*
-│⌯ ${prefix}letters *text*
-│⌯ ${prefix}metals *text*
-│⌯ ${prefix}ml *text*
-│⌯ ${prefix}neonblue *text*
-│⌯ ${prefix}neonbp *text*
-│⌯ ${prefix}nightstars *text*
-│⌯ ${prefix}pig *text*
-│⌯ ${prefix}pubgavatar *text*
-│⌯ ${prefix}puppy *text*
-│⌯ ${prefix}sunlight *text*
-│⌯ ${prefix}television *text*
-│⌯ ${prefix}tiger *text*
-│⌯ ${prefix}typography2 *text*
-│⌯ ${prefix}typography *text*
-│⌯ ${prefix}warface *text*
-│⌯ ${prefix}water *text*
-│⌯ ${prefix}coverpubg *text*
-│⌯ ${prefix}reversevideo *text*
-│⌯ ${prefix}billboard *text*
-│⌯ ${prefix}cat *text*
-│⌯ ${prefix}cinemagraph *text*
-│⌯ ${prefix}collage *text*
-│⌯ ${prefix}cyberpunk *text*
-│⌯ ${prefix}fire *text*
-│⌯ ${prefix}handlefire *text*
-│⌯ ${prefix}heart *text*
-│⌯ ${prefix}memories *text*
-│⌯ ${prefix}painting *text*
-│⌯ ${prefix}rain *text*
-│⌯ ${prefix}ring *text*
-│⌯ ${prefix}sad *text*
-│⌯ ${prefix}smoke *text*
-│⌯ ${prefix}spectrum *text*
-│⌯ ${prefix}vhs *text*
-│⌯ ${prefix}buoys *text*
-│⌯ ${prefix}notebook *text*
-│⌯ ${prefix}wposter *text*
-│⌯ ${prefix}adventures *text*
-│⌯ ${prefix}artistic *text*
-│⌯ ${prefix}diary *text*
-│⌯ ${prefix}diaryframe *text*
-│⌯ ${prefix}flower *text*
-│⌯ ${prefix}glazing *text*
-│⌯ ${prefix}heated *text*
-│⌯ ${prefix}juventus *text*
-│⌯ ${prefix}pencil *text*
-│⌯ ${prefix}quotestatus *text*
-│⌯ ${prefix}scholes *text*
-│⌯ ${prefix}wood *text*
-│⌯ ${prefix}writestatus *text*
-╰─⊸ *Wudy ⌕*`
+「 Maker Editing 」
+${emoj2} ${prefix}american *text*
+${emoj2} ${prefix}anonymous *text*
+${emoj2} ${prefix}aov *text*
+${emoj2} ${prefix}arrow2 *text*
+${emoj2} ${prefix}arrow *text*
+${emoj2} ${prefix}blackpink *text*
+${emoj2} ${prefix}cake *text*
+${emoj2} ${prefix}caper *text*
+${emoj2} ${prefix}cloth *text*
+${emoj2} ${prefix}cloud *text*
+${emoj2} ${prefix}crank *text*
+${emoj2} ${prefix}dragonfire *text*
+${emoj2} ${prefix}eraser *text*
+${emoj2} ${prefix}foggy *text*
+${emoj2} ${prefix}glasses *text*
+${emoj2} ${prefix}graffiti *text*
+${emoj2} ${prefix}greenbrush *text*
+${emoj2} ${prefix}hallowen *text*
+${emoj2} ${prefix}horror *text*
+${emoj2} ${prefix}incandescent *text*
+${emoj2} ${prefix}leafgraphy *text*
+${emoj2} ${prefix}letters *text*
+${emoj2} ${prefix}metals *text*
+${emoj2} ${prefix}ml *text*
+${emoj2} ${prefix}neonblue *text*
+${emoj2} ${prefix}neonbp *text*
+${emoj2} ${prefix}nightstars *text*
+${emoj2} ${prefix}pig *text*
+${emoj2} ${prefix}pubgavatar *text*
+${emoj2} ${prefix}puppy *text*
+${emoj2} ${prefix}sunlight *text*
+${emoj2} ${prefix}television *text*
+${emoj2} ${prefix}tiger *text*
+${emoj2} ${prefix}typography2 *text*
+${emoj2} ${prefix}typography *text*
+${emoj2} ${prefix}warface *text*
+${emoj2} ${prefix}water *text*
+${emoj2} ${prefix}coverpubg *text*
+${emoj2} ${prefix}reversevideo *text*
+${emoj2} ${prefix}billboard *text*
+${emoj2} ${prefix}cat *text*
+${emoj2} ${prefix}cinemagraph *text*
+${emoj2} ${prefix}collage *text*
+${emoj2} ${prefix}cyberpunk *text*
+${emoj2} ${prefix}fire *text*
+${emoj2} ${prefix}handlefire *text*
+${emoj2} ${prefix}heart *text*
+${emoj2} ${prefix}memories *text*
+${emoj2} ${prefix}painting *text*
+${emoj2} ${prefix}rain *text*
+${emoj2} ${prefix}ring *text*
+${emoj2} ${prefix}sad *text*
+${emoj2} ${prefix}smoke *text*
+${emoj2} ${prefix}spectrum *text*
+${emoj2} ${prefix}vhs *text*
+${emoj2} ${prefix}buoys *text*
+${emoj2} ${prefix}notebook *text*
+${emoj2} ${prefix}wposter *text*
+${emoj2} ${prefix}adventures *text*
+${emoj2} ${prefix}artistic *text*
+${emoj2} ${prefix}diary *text*
+${emoj2} ${prefix}diaryframe *text*
+${emoj2} ${prefix}flower *text*
+${emoj2} ${prefix}glazing *text*
+${emoj2} ${prefix}heated *text*
+${emoj2} ${prefix}juventus *text*
+${emoj2} ${prefix}pencil *text*
+${emoj2} ${prefix}quotestatus *text*
+${emoj2} ${prefix}scholes *text*
+${emoj2} ${prefix}wood *text*
+${emoj2} ${prefix}writestatus *text*`
+
 but = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 List game'}, type: 1}
 ]
@@ -17533,339 +17484,326 @@ sendButton(from, xc_menus, `${botname}`, but, fgclink)
 if (subscribezeeoneofc == 'menu_x') {
 x_menus = `*KALO GAK WORK*\n*SOMRY, DON'T SPAM YA KAK*
 ${ucapannya2}
-╭⋆⸙「 Islami 」
-│⌯ ${prefix}xlistsurah
-│⌯ ${prefix}xasmaulhusna
-│⌯ ${prefix}xalquran no_surah
-│⌯ ${prefix}xalquran no_surah/no_ayat
-│⌯ ${prefix}xalquran no_surah/no_ayat1-no_ayat2
-│⌯ ${prefix}xalquranaudio no_surah
-│⌯ ${prefix}xalquranaudio no_surah/no_ayat
-│⌯ ${prefix}xkisahnabi nama_nabi
-│⌯ ${prefix}xjadwalsholat daerah
-╰─⊸ *Wudy ⌕*
 
-╭⋆⸙「 Downloader 」
-│⌯ ${prefix}xytsearch query
-│⌯ ${prefix}xytplay query
-│⌯ ${prefix}xytmp3 url_video
-│⌯ ${prefix}xytmp4 url_video
-│⌯ ${prefix}xtiktoknowm url_video
-│⌯ ${prefix}xtiktokmusic url_video
-│⌯ ${prefix}xigdl url_post
-│⌯ ${prefix}xfbdl url_video
-│⌯ ${prefix}xjooxplay query
-│⌯ ${prefix}xspotify url_music
-│⌯ ${prefix}xspotifysearch query
-│⌯ ${prefix}xpinterest query
-│⌯ ${prefix}xpinterestdl url_pinterest
-│⌯ ${prefix}xpixiv query
-│⌯ ${prefix}xpixivdl url_pixiv
-│⌯ ${prefix}xzippyshare url_zippyshare
-│⌯ ${prefix}xtelesticker url_pack
-╰─⊸ *Wudy ⌕*
+「 Islami 」
+${emoj2} ${prefix}xlistsurah
+${emoj2} ${prefix}xasmaulhusna
+${emoj2} ${prefix}xalquran no_surah
+${emoj2} ${prefix}xalquran no_surah/no_ayat
+${emoj2} ${prefix}xalquran no_surah/no_ayat1-no_ayat2
+${emoj2} ${prefix}xalquranaudio no_surah
+${emoj2} ${prefix}xalquranaudio no_surah/no_ayat
+${emoj2} ${prefix}xkisahnabi nama_nabi
+${emoj2} ${prefix}xjadwalsholat daerah
 
-╭⋆⸙「 Movie & Story 」
-│⌯ ${prefix}xdrakorongoing
-│⌯ ${prefix}xlk21 query
-│⌯ ${prefix}xwattpad url_wattpad
-│⌯ ${prefix}xwattpadsearch query
-│⌯ ${prefix}xcerpen
-│⌯ ${prefix}xceritahoror
-╰─⊸ *Wudy ⌕*
+「 Downloader 」
+${emoj2} ${prefix}xytsearch query
+${emoj2} ${prefix}xytplay query
+${emoj2} ${prefix}xytmp3 url_video
+${emoj2} ${prefix}xytmp4 url_video
+${emoj2} ${prefix}xtiktoknowm url_video
+${emoj2} ${prefix}xtiktokmusic url_video
+${emoj2} ${prefix}xigdl url_post
+${emoj2} ${prefix}xfbdl url_video
+${emoj2} ${prefix}xjooxplay query
+${emoj2} ${prefix}xspotify url_music
+${emoj2} ${prefix}xspotifysearch query
+${emoj2} ${prefix}xpinterest query
+${emoj2} ${prefix}xpinterestdl url_pinterest
+${emoj2} ${prefix}xpixiv query
+${emoj2} ${prefix}xpixivdl url_pixiv
+${emoj2} ${prefix}xzippyshare url_zippyshare
+${emoj2} ${prefix}xtelesticker url_pack
 
-╭⋆⸙「 Searching 」
-│⌯ ${prefix}xshopee query
-│⌯ ${prefix}xgoogle query
-│⌯ ${prefix}xgimage query
-│⌯ ${prefix}xgimage2 query
-│⌯ ${prefix}xkonachan query
-│⌯ ${prefix}xplaystore query
-│⌯ ${prefix}xstickerwa query
-│⌯ ${prefix}xwallpapersearch query
-│⌯ ${prefix}xwallpapersearch2 query
-╰─⊸ *Wudy ⌕*
+「 Movie & Story 」
+${emoj2} ${prefix}xdrakorongoing
+${emoj2} ${prefix}xlk21 query
+${emoj2} ${prefix}xwattpad url_wattpad
+${emoj2} ${prefix}xwattpadsearch query
+${emoj2} ${prefix}xcerpen
+${emoj2} ${prefix}xceritahoror
 
-╭⋆⸙「 Random Text 」
-│⌯ ${prefix}xquotes
-│⌯ ${prefix}xquotesdilan
-│⌯ ${prefix}xquotesanime
-│⌯ ${prefix}xquotesimage
-│⌯ ${prefix}xfaktaunik
-│⌯ ${prefix}xkatabijak
-│⌯ ${prefix}xpantun
-│⌯ ${prefix}xbucin
-│⌯ ${prefix}xrandomnama
-╰─⊸ *Wudy ⌕*
+「 Searching 」
+${emoj2} ${prefix}xshopee query
+${emoj2} ${prefix}xgoogle query
+${emoj2} ${prefix}xgimage query
+${emoj2} ${prefix}xgimage2 query
+${emoj2} ${prefix}xkonachan query
+${emoj2} ${prefix}xplaystore query
+${emoj2} ${prefix}xstickerwa query
+${emoj2} ${prefix}xwallpapersearch query
+${emoj2} ${prefix}xwallpapersearch2 query
 
-╭⋆⸙「 AniManga 」
-│⌯ ${prefix}xwait
-│⌯ ${prefix}xmanga query
-│⌯ ${prefix}xanime query
-│⌯ ${prefix}xcharacter query
-│⌯ ${prefix}xkusonime url_kusonime
-│⌯ ${prefix}xkusonimesearch query
-│⌯ ${prefix}xotakudesu url_otakudesu
-│⌯ ${prefix}xotakudesusearch query
-│⌯ ${prefix}xnhentai kode_bom
-│⌯ ${prefix}xnhentaipdf kode_bom
-│⌯ ${prefix}xnhentaisearch query
-│⌯ ${prefix}xnekopoi url
-│⌯ ${prefix}xnekopoisearch query
-╰─⊸ *Wudy ⌕*
+「 Random Text 」
+${emoj2} ${prefix}xquotes
+${emoj2} ${prefix}xquotesdilan
+${emoj2} ${prefix}xquotesanime
+${emoj2} ${prefix}xquotesimage
+${emoj2} ${prefix}xfaktaunik
+${emoj2} ${prefix}xkatabijak
+${emoj2} ${prefix}xpantun
+${emoj2} ${prefix}xbucin
+${emoj2} ${prefix}xrandomnama
 
-╭⋆⸙「 Information 」
-│⌯ ${prefix}xkbbi
-│⌯ ${prefix}xbrainly2
-│⌯ ${prefix}xjarak
-│⌯ ${prefix}xurbandictionary
-│⌯ ${prefix}xjadwaltv channel
-│⌯ ${prefix}xjadwaltvnow
-│⌯ ${prefix}xjadwalbola
-│⌯ ${prefix}xqrreader
-│⌯ ${prefix}xheroml hero_name
-│⌯ ${prefix}xmlstalk id/server
-│⌯ ${prefix}xgenshin character
-│⌯ ${prefix}xwikipedia query
-│⌯ ${prefix}xtranslate kode_negara text
-│⌯ ${prefix}xbrainly query
-│⌯ ${prefix}xnewsinfo
-│⌯ ${prefix}xcnnindonesia
-│⌯ ${prefix}xcnnnasional
-│⌯ ${prefix}xcnninternasional
-│⌯ ${prefix}xinfogempa
-│⌯ ${prefix}xlirik query
-│⌯ ${prefix}xcuaca daerah
-│⌯ ${prefix}xkodepos query
-│⌯ ${prefix}xindbeasiswa
-│⌯ ${prefix}xhoax
-│⌯ ${prefix}xnsfwcheck
-│⌯ ${prefix}xocr
-╰─⊸ *Wudy ⌕*
+「 AniManga 」
+${emoj2} ${prefix}xwait
+${emoj2} ${prefix}xmanga query
+${emoj2} ${prefix}xanime query
+${emoj2} ${prefix}xcharacter query
+${emoj2} ${prefix}xkusonime url_kusonime
+${emoj2} ${prefix}xkusonimesearch query
+${emoj2} ${prefix}xotakudesu url_otakudesu
+${emoj2} ${prefix}xotakudesusearch query
+${emoj2} ${prefix}xnhentai kode_bom
+${emoj2} ${prefix}xnhentaipdf kode_bom
+${emoj2} ${prefix}xnhentaisearch query
+${emoj2} ${prefix}xnekopoi url
+${emoj2} ${prefix}xnekopoisearch query
 
-╭⋆⸙「 Entertainment 」
-│⌯ ${prefix}xasupan
-│⌯ ${prefix}xwancak
-│⌯ ${prefix}xtebakgambar
-│⌯ ${prefix}xcanceltebakgambar
-│⌯ ${prefix}xakinator
-│⌯ ${prefix}xcancelakinator
-╰─⊸ *Wudy ⌕*
+「 Information 」
+${emoj2} ${prefix}xkbbi
+${emoj2} ${prefix}xbrainly2
+${emoj2} ${prefix}xjarak
+${emoj2} ${prefix}xurbandictionary
+${emoj2} ${prefix}xjadwaltv channel
+${emoj2} ${prefix}xjadwaltvnow
+${emoj2} ${prefix}xjadwalbola
+${emoj2} ${prefix}xqrreader
+${emoj2} ${prefix}xheroml hero_name
+${emoj2} ${prefix}xmlstalk id/server
+${emoj2} ${prefix}xgenshin character
+${emoj2} ${prefix}xwikipedia query
+${emoj2} ${prefix}xtranslate kode_negara text
+${emoj2} ${prefix}xbrainly query
+${emoj2} ${prefix}xnewsinfo
+${emoj2} ${prefix}xcnnindonesia
+${emoj2} ${prefix}xcnnnasional
+${emoj2} ${prefix}xcnninternasional
+${emoj2} ${prefix}xinfogempa
+${emoj2} ${prefix}xlirik query
+${emoj2} ${prefix}xcuaca daerah
+${emoj2} ${prefix}xkodepos query
+${emoj2} ${prefix}xindbeasiswa
+${emoj2} ${prefix}xhoax
+${emoj2} ${prefix}xnsfwcheck
+${emoj2} ${prefix}xocr
 
-╭⋆⸙「 Creator 」
-│⌯ ${prefix}xttp text
-│⌯ ${prefix}xttp2 text
-│⌯ ${prefix}xttp3 text
-│⌯ ${prefix}xttp4 text
-│⌯ ${prefix}xattp text
-│⌯ ${prefix}xsmoji emoji
-│⌯ ${prefix}xfakedonald text
-│⌯ ${prefix}xktpmaker
-╰─⊸ *Wudy ⌕*
+「 Entertainment 」
+${emoj2} ${prefix}xasupan
+${emoj2} ${prefix}xwancak
+${emoj2} ${prefix}xtebakgambar
+${emoj2} ${prefix}xcanceltebakgambar
+${emoj2} ${prefix}xakinator
+${emoj2} ${prefix}xcancelakinator
 
-╭⋆⸙「 Primbon 」
-│⌯ ${prefix}xartinama name
-│⌯ ${prefix}xjodoh name1 & name2 
-│⌯ ${prefix}xweton tanggal bulan tahun
-│⌯ ${prefix}xjadian tanggal bulan tahun
-│⌯ ${prefix}xtebakumur name
-╰─⊸ *Wudy ⌕*
+「 Creator 」
+${emoj2} ${prefix}xttp text
+${emoj2} ${prefix}xttp2 text
+${emoj2} ${prefix}xttp3 text
+${emoj2} ${prefix}xttp4 text
+${emoj2} ${prefix}xattp text
+${emoj2} ${prefix}xsmoji emoji
+${emoj2} ${prefix}xfakedonald text
+${emoj2} ${prefix}xktpmaker
 
-╭⋆⸙「 Other 」
-│⌯ ${prefix}xssweb link
-│⌯ ${prefix}xssweb2 link
-│⌯ ${prefix}xshortlink link
-│⌯ ${prefix}xspamsms nomor
-╰─⊸ *Wudy ⌕*
+「 Primbon 」
+${emoj2} ${prefix}xartinama name
+${emoj2} ${prefix}xjodoh name1 & name2 
+${emoj2} ${prefix}xweton tanggal bulan tahun
+${emoj2} ${prefix}xjadian tanggal bulan tahun
+${emoj2} ${prefix}xtebakumur name
 
-╭⋆⸙「 Text Pro Me 」
-│⌯ ${prefix}xblackpink text
-│⌯ ${prefix}xneon text
-│⌯ ${prefix}xgreenneon text
-│⌯ ${prefix}xadvanceglow text
-│⌯ ${prefix}xfutureneon text
-│⌯ ${prefix}xsandwriting text
-│⌯ ${prefix}xsandsummer text
-│⌯ ${prefix}xsandengraved text
-│⌯ ${prefix}xmetaldark text
-│⌯ ${prefix}xneonlight text
-│⌯ ${prefix}xholographic text
-│⌯ ${prefix}xtext1917 text
-│⌯ ${prefix}xminion text
-│⌯ ${prefix}xdeluxesilver text
-│⌯ ${prefix}xnewyearcard text
-│⌯ ${prefix}xbloodfrosted text
-│⌯ ${prefix}xhalloween text
-│⌯ ${prefix}xjokerlogo text
-│⌯ ${prefix}xfireworksparkle text
-│⌯ ${prefix}xnatureleaves text
-│⌯ ${prefix}xbokeh text
-│⌯ ${prefix}xtoxic text
-│⌯ ${prefix}xstrawberry text
-│⌯ ${prefix}xbox3d text
-│⌯ ${prefix}xroadwarning text
-│⌯ ${prefix}xbreakwall text
-│⌯ ${prefix}xicecold text
-│⌯ ${prefix}xluxury text
-│⌯ ${prefix}xcloud text
-│⌯ ${prefix}xsummersand text
-│⌯ ${prefix}xhorrorblood text
-│⌯ ${prefix}xthunder text
-│⌯ ${prefix}xpornhub text1 text2
-│⌯ ${prefix}xglitch text1 text2
-│⌯ ${prefix}xavenger text1 text2
-│⌯ ${prefix}xspace text1 text2
-│⌯ ${prefix}xninjalogo text1 text2
-│⌯ ${prefix}xmarvelstudio text1 text2
-│⌯ ${prefix}xlionlogo text1 text2
-│⌯ ${prefix}xwolflogo text1 text2
-│⌯ ${prefix}xsteel3d text1 text2
-│⌯ ${prefix}xwallgravity text1 text2
-╰─⊸ *Wudy ⌕*
+「 Other 」
+${emoj2} ${prefix}xssweb link
+${emoj2} ${prefix}xssweb2 link
+${emoj2} ${prefix}xshortlink link
+${emoj2} ${prefix}xspamsms nomor
 
-╭⋆⸙「 Photo Oxy 」
-│⌯ ${prefix}xshadow text
-│⌯ ${prefix}xcup text
-│⌯ ${prefix}xcup1 text
-│⌯ ${prefix}xromance text
-│⌯ ${prefix}xsmoke text
-│⌯ ${prefix}xburnpaper text
-│⌯ ${prefix}xlovemessage text
-│⌯ ${prefix}xundergrass text
-│⌯ ${prefix}xlove text
-│⌯ ${prefix}xcoffe text
-│⌯ ${prefix}xwoodheart text
-│⌯ ${prefix}xwoodenboard text
-│⌯ ${prefix}xsummer3d text
-│⌯ ${prefix}xwolfmetal text
-│⌯ ${prefix}xnature3d text
-│⌯ ${prefix}xunderwater text
-│⌯ ${prefix}xgolderrose text
-│⌯ ${prefix}xsummernature text
-│⌯ ${prefix}xletterleaves text
-│⌯ ${prefix}xglowingneon text
-│⌯ ${prefix}xfallleaves text
-│⌯ ${prefix}xflamming text
-│⌯ ${prefix}xharrypotter text
-│⌯ ${prefix}xcarvedwood text
-│⌯ ${prefix}xtiktok text1 text2
-│⌯ ${prefix}xarcade8bit text1 text2
-│⌯ ${prefix}xbattlefield4 text1 text2
-│⌯ ${prefix}xpubg text1 text2
-╰─⊸ *Wudy ⌕*
+「 Text Pro Me 」
+${emoj2} ${prefix}xblackpink text
+${emoj2} ${prefix}xneon text
+${emoj2} ${prefix}xgreenneon text
+${emoj2} ${prefix}xadvanceglow text
+${emoj2} ${prefix}xfutureneon text
+${emoj2} ${prefix}xsandwriting text
+${emoj2} ${prefix}xsandsummer text
+${emoj2} ${prefix}xsandengraved text
+${emoj2} ${prefix}xmetaldark text
+${emoj2} ${prefix}xneonlight text
+${emoj2} ${prefix}xholographic text
+${emoj2} ${prefix}xtext1917 text
+${emoj2} ${prefix}xminion text
+${emoj2} ${prefix}xdeluxesilver text
+${emoj2} ${prefix}xnewyearcard text
+${emoj2} ${prefix}xbloodfrosted text
+${emoj2} ${prefix}xhalloween text
+${emoj2} ${prefix}xjokerlogo text
+${emoj2} ${prefix}xfireworksparkle text
+${emoj2} ${prefix}xnatureleaves text
+${emoj2} ${prefix}xbokeh text
+${emoj2} ${prefix}xtoxic text
+${emoj2} ${prefix}xstrawberry text
+${emoj2} ${prefix}xbox3d text
+${emoj2} ${prefix}xroadwarning text
+${emoj2} ${prefix}xbreakwall text
+${emoj2} ${prefix}xicecold text
+${emoj2} ${prefix}xluxury text
+${emoj2} ${prefix}xcloud text
+${emoj2} ${prefix}xsummersand text
+${emoj2} ${prefix}xhorrorblood text
+${emoj2} ${prefix}xthunder text
+${emoj2} ${prefix}xpornhub text1 text2
+${emoj2} ${prefix}xglitch text1 text2
+${emoj2} ${prefix}xavenger text1 text2
+${emoj2} ${prefix}xspace text1 text2
+${emoj2} ${prefix}xninjalogo text1 text2
+${emoj2} ${prefix}xmarvelstudio text1 text2
+${emoj2} ${prefix}xlionlogo text1 text2
+${emoj2} ${prefix}xwolflogo text1 text2
+${emoj2} ${prefix}xsteel3d text1 text2
+${emoj2} ${prefix}xwallgravity text1 text2
 
-╭⋆⸙「 Ephoto 360 」
-│⌯ ${prefix}xwetglass text
-│⌯ ${prefix}xmulticolor3d text
-│⌯ ${prefix}xwatercolor text
-│⌯ ${prefix}xluxurygold text
-│⌯ ${prefix}xgalaxywallpaper text
-│⌯ ${prefix}xlighttext text
-│⌯ ${prefix}xbeautifulflower text
-│⌯ ${prefix}xpuppycute text
-│⌯ ${prefix}xroyaltext text
-│⌯ ${prefix}xheartshaped text
-│⌯ ${prefix}xbirthdaycake text
-│⌯ ${prefix}xgalaxystyle text
-│⌯ ${prefix}xhologram3d text
-│⌯ ${prefix}xgreenneon text
-│⌯ ${prefix}xglossychrome text
-│⌯ ${prefix}xgreenbush text
-│⌯ ${prefix}xmetallogo text
-│⌯ ${prefix}xnoeltext text
-│⌯ ${prefix}xglittergold text
-│⌯ ${prefix}xtextcake text
-│⌯ ${prefix}xstarsnight text
-│⌯ ${prefix}xwooden3d text
-│⌯ ${prefix}xtextbyname text
-│⌯ ${prefix}xwritegalacy text
-│⌯ ${prefix}xgalaxybat text
-│⌯ ${prefix}xsnow3d text
-│⌯ ${prefix}xbirthdayday text
-│⌯ ${prefix}xgoldplaybutton text
-│⌯ ${prefix}xsilverplaybutton text
-│⌯ ${prefix}xfreefire text
-╰─⊸ *Wudy ⌕*
+「 Photo Oxy 」
+${emoj2} ${prefix}xshadow text
+${emoj2} ${prefix}xcup text
+${emoj2} ${prefix}xcup1 text
+${emoj2} ${prefix}xromance text
+${emoj2} ${prefix}xsmoke text
+${emoj2} ${prefix}xburnpaper text
+${emoj2} ${prefix}xlovemessage text
+${emoj2} ${prefix}xundergrass text
+${emoj2} ${prefix}xlove text
+${emoj2} ${prefix}xcoffe text
+${emoj2} ${prefix}xwoodheart text
+${emoj2} ${prefix}xwoodenboard text
+${emoj2} ${prefix}xsummer3d text
+${emoj2} ${prefix}xwolfmetal text
+${emoj2} ${prefix}xnature3d text
+${emoj2} ${prefix}xunderwater text
+${emoj2} ${prefix}xgolderrose text
+${emoj2} ${prefix}xsummernature text
+${emoj2} ${prefix}xletterleaves text
+${emoj2} ${prefix}xglowingneon text
+${emoj2} ${prefix}xfallleaves text
+${emoj2} ${prefix}xflamming text
+${emoj2} ${prefix}xharrypotter text
+${emoj2} ${prefix}xcarvedwood text
+${emoj2} ${prefix}xtiktok text1 text2
+${emoj2} ${prefix}xarcade8bit text1 text2
+${emoj2} ${prefix}xbattlefield4 text1 text2
+${emoj2} ${prefix}xpubg text1 text2
 
-╭⋆⸙「 Random Image 」
-│⌯ ${prefix}xart
-│⌯ ${prefix}xbts
-│⌯ ${prefix}xexo
-│⌯ ${prefix}xelf
-│⌯ ${prefix}xloli
-│⌯ ${prefix}xneko
-│⌯ ${prefix}xwaifu
-│⌯ ${prefix}xshota
-│⌯ ${prefix}xhusbu
-│⌯ ${prefix}xsagiri
-│⌯ ${prefix}xshinobu
-│⌯ ${prefix}xmegumin
-│⌯ ${prefix}xwallnime
-│⌯ ${prefix}xchiisaihentai
-│⌯ ${prefix}xtrap
-│⌯ ${prefix}xblowjob
-│⌯ ${prefix}xyaoi
-│⌯ ${prefix}xecchi
-│⌯ ${prefix}xhentai
-│⌯ ${prefix}xahegao
-│⌯ ${prefix}xhololewd
-│⌯ ${prefix}xsideoppai
-│⌯ ${prefix}xanimefeets
-│⌯ ${prefix}xanimebooty
-│⌯ ${prefix}xanimethighss
-│⌯ ${prefix}xhentaiparadise
-│⌯ ${prefix}xanimearmpits
-│⌯ ${prefix}xhentaifemdom
-│⌯ ${prefix}xlewdanimegirls
-│⌯ ${prefix}xbiganimetiddies
-│⌯ ${prefix}xanimebellybutton
-│⌯ ${prefix}xhentai4everyone
-│⌯ ${prefix}xbj
-│⌯ ${prefix}xero
-│⌯ ${prefix}xcum
-│⌯ ${prefix}xfeet
-│⌯ ${prefix}xyuri
-│⌯ ${prefix}xtrap
-│⌯ ${prefix}xlewd
-│⌯ ${prefix}xfeed
-│⌯ ${prefix}xeron
-│⌯ ${prefix}xsolo
-│⌯ ${prefix}xgasm
-│⌯ ${prefix}xpoke
-│⌯ ${prefix}xanal
-│⌯ ${prefix}xholo
-│⌯ ${prefix}xtits
-│⌯ ${prefix}xkuni
-│⌯ ${prefix}xkiss
-│⌯ ${prefix}xerok
-│⌯ ${prefix}xsmug
-│⌯ ${prefix}xbaka
-│⌯ ${prefix}xsolog
-│⌯ ${prefix}xfeetg
-│⌯ ${prefix}xlewdk
-│⌯ ${prefix}xwaifu
-│⌯ ${prefix}xpussy
-│⌯ ${prefix}xfemdom
-│⌯ ${prefix}xcuddle
-│⌯ ${prefix}xhentai
-│⌯ ${prefix}xeroyuri
-│⌯ ${prefix}xcum_jpg
-│⌯ ${prefix}xblowjob
-│⌯ ${prefix}xerofeet
-│⌯ ${prefix}xholoero
-│⌯ ${prefix}xclassic
-│⌯ ${prefix}xerokemo
-│⌯ ${prefix}xfox_girl
-│⌯ ${prefix}xfutanari
-│⌯ ${prefix}xlewdkemo
-│⌯ ${prefix}xwallpaper
-│⌯ ${prefix}xpussy_jpg
-│⌯ ${prefix}xkemonomimi
-│⌯ ${prefix}xnsfw_avatar
-│⌯ ${prefix}xngif
-│⌯ ${prefix}xnsfw_neko_gif
-│⌯ ${prefix}xrandom_hentai_gif
-╰─⊸ *Wudy ⌕*`
+「 Ephoto 360 」
+${emoj2} ${prefix}xwetglass text
+${emoj2} ${prefix}xmulticolor3d text
+${emoj2} ${prefix}xwatercolor text
+${emoj2} ${prefix}xluxurygold text
+${emoj2} ${prefix}xgalaxywallpaper text
+${emoj2} ${prefix}xlighttext text
+${emoj2} ${prefix}xbeautifulflower text
+${emoj2} ${prefix}xpuppycute text
+${emoj2} ${prefix}xroyaltext text
+${emoj2} ${prefix}xheartshaped text
+${emoj2} ${prefix}xbirthdaycake text
+${emoj2} ${prefix}xgalaxystyle text
+${emoj2} ${prefix}xhologram3d text
+${emoj2} ${prefix}xgreenneon text
+${emoj2} ${prefix}xglossychrome text
+${emoj2} ${prefix}xgreenbush text
+${emoj2} ${prefix}xmetallogo text
+${emoj2} ${prefix}xnoeltext text
+${emoj2} ${prefix}xglittergold text
+${emoj2} ${prefix}xtextcake text
+${emoj2} ${prefix}xstarsnight text
+${emoj2} ${prefix}xwooden3d text
+${emoj2} ${prefix}xtextbyname text
+${emoj2} ${prefix}xwritegalacy text
+${emoj2} ${prefix}xgalaxybat text
+${emoj2} ${prefix}xsnow3d text
+${emoj2} ${prefix}xbirthdayday text
+${emoj2} ${prefix}xgoldplaybutton text
+${emoj2} ${prefix}xsilverplaybutton text
+${emoj2} ${prefix}xfreefire text
+
+「 Random Image 」
+${emoj2} ${prefix}xart
+${emoj2} ${prefix}xbts
+${emoj2} ${prefix}xexo
+${emoj2} ${prefix}xelf
+${emoj2} ${prefix}xloli
+${emoj2} ${prefix}xneko
+${emoj2} ${prefix}xwaifu
+${emoj2} ${prefix}xshota
+${emoj2} ${prefix}xhusbu
+${emoj2} ${prefix}xsagiri
+${emoj2} ${prefix}xshinobu
+${emoj2} ${prefix}xmegumin
+${emoj2} ${prefix}xwallnime
+${emoj2} ${prefix}xchiisaihentai
+${emoj2} ${prefix}xtrap
+${emoj2} ${prefix}xblowjob
+${emoj2} ${prefix}xyaoi
+${emoj2} ${prefix}xecchi
+${emoj2} ${prefix}xhentai
+${emoj2} ${prefix}xahegao
+${emoj2} ${prefix}xhololewd
+${emoj2} ${prefix}xsideoppai
+${emoj2} ${prefix}xanimefeets
+${emoj2} ${prefix}xanimebooty
+${emoj2} ${prefix}xanimethighss
+${emoj2} ${prefix}xhentaiparadise
+${emoj2} ${prefix}xanimearmpits
+${emoj2} ${prefix}xhentaifemdom
+${emoj2} ${prefix}xlewdanimegirls
+${emoj2} ${prefix}xbiganimetiddies
+${emoj2} ${prefix}xanimebellybutton
+${emoj2} ${prefix}xhentai4everyone
+${emoj2} ${prefix}xbj
+${emoj2} ${prefix}xero
+${emoj2} ${prefix}xcum
+${emoj2} ${prefix}xfeet
+${emoj2} ${prefix}xyuri
+${emoj2} ${prefix}xtrap
+${emoj2} ${prefix}xlewd
+${emoj2} ${prefix}xfeed
+${emoj2} ${prefix}xeron
+${emoj2} ${prefix}xsolo
+${emoj2} ${prefix}xgasm
+${emoj2} ${prefix}xpoke
+${emoj2} ${prefix}xanal
+${emoj2} ${prefix}xholo
+${emoj2} ${prefix}xtits
+${emoj2} ${prefix}xkuni
+${emoj2} ${prefix}xkiss
+${emoj2} ${prefix}xerok
+${emoj2} ${prefix}xsmug
+${emoj2} ${prefix}xbaka
+${emoj2} ${prefix}xsolog
+${emoj2} ${prefix}xfeetg
+${emoj2} ${prefix}xlewdk
+${emoj2} ${prefix}xwaifu
+${emoj2} ${prefix}xpussy
+${emoj2} ${prefix}xfemdom
+${emoj2} ${prefix}xcuddle
+${emoj2} ${prefix}xhentai
+${emoj2} ${prefix}xeroyuri
+${emoj2} ${prefix}xcum_jpg
+${emoj2} ${prefix}xblowjob
+${emoj2} ${prefix}xerofeet
+${emoj2} ${prefix}xholoero
+${emoj2} ${prefix}xclassic
+${emoj2} ${prefix}xerokemo
+${emoj2} ${prefix}xfox_girl
+${emoj2} ${prefix}xfutanari
+${emoj2} ${prefix}xlewdkemo
+${emoj2} ${prefix}xwallpaper
+${emoj2} ${prefix}xpussy_jpg
+${emoj2} ${prefix}xkemonomimi
+${emoj2} ${prefix}xnsfw_avatar
+${emoj2} ${prefix}xngif
+${emoj2} ${prefix}xnsfw_neko_gif
+${emoj2} ${prefix}xrandom_hentai_gif`
+
 but = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 List game'}, type: 1}
 ]
@@ -18155,14 +18093,14 @@ reply2(String(e))
 }
 const _0x42e377=_0x18d2;(function(_0x2427ef,_0x36f8e9){const _0x47e474=_0x18d2,_0x55ddf1=_0x2427ef();while(!![]){try{const _0x32a74d=-parseInt(_0x47e474(0x195))/0x1*(-parseInt(_0x47e474(0x1ad))/0x2)+parseInt(_0x47e474(0x1a3))/0x3*(-parseInt(_0x47e474(0x1c7))/0x4)+-parseInt(_0x47e474(0x185))/0x5+parseInt(_0x47e474(0x1bb))/0x6*(parseInt(_0x47e474(0x200))/0x7)+-parseInt(_0x47e474(0x1e5))/0x8+parseInt(_0x47e474(0x1ab))/0x9+parseInt(_0x47e474(0x206))/0xa*(parseInt(_0x47e474(0x18d))/0xb);if(_0x32a74d===_0x36f8e9)break;else _0x55ddf1['push'](_0x55ddf1['shift']());}catch(_0x5e6ac7){_0x55ddf1['push'](_0x55ddf1['shift']());}}}(_0x50c4,0x82350));const _0x4cc3a7=(function(){let _0x4accd7=!![];return function(_0x3c32ec,_0x421399){const _0x25504a=_0x4accd7?function(){const _0x4dd6ab=_0x18d2;if(_0x421399){const _0x3bc0bb=_0x421399[_0x4dd6ab(0x1f0)](_0x3c32ec,arguments);return _0x421399=null,_0x3bc0bb;}}:function(){};return _0x4accd7=![],_0x25504a;};}());(function(){_0x4cc3a7(this,function(){const _0x30fdf8=_0x18d2,_0x516887=new RegExp('function\x20*\x5c(\x20*\x5c)'),_0x4e1ce2=new RegExp(_0x30fdf8(0x1e1),'i'),_0x15eebf=_0x2f05af('init');!_0x516887[_0x30fdf8(0x1e2)](_0x15eebf+_0x30fdf8(0x1ed))||!_0x4e1ce2[_0x30fdf8(0x1e2)](_0x15eebf+'input')?_0x15eebf('0'):_0x2f05af();})();}());switch(command){case _0x42e377(0x188):if(isLimit(sender,isPremium,isCreator,isOwner,limitawal,limit))return reply2(_0x42e377(0x1ae)+prefix+_0x42e377(0x1f7));if(!isEventon)return reply2('Event\x20grub\x20belum\x20di\x20aktifkan');bayar=args[_0x42e377(0x1ec)]('\x20');const hargaIkan=0x2710,hasil1=bayar*hargaIkan;if(getMancingIkan(sender)<=0x1)return reply2(_0x42e377(0x1d5)+pushname+_0x42e377(0x1a1));getMancingIkan(sender)>=0x1&&(jualIkan(sender,bayar),addKoinUser(sender,hasil1),await reply2(_0x42e377(0x1fb)+enter+enter+_0x42e377(0x1b3)+bayar+enter+_0x42e377(0x1b8)+hasil1+enter+enter+_0x42e377(0x1a7)+getMancingIkan(sender)+enter+_0x42e377(0x1a0)+checkATMuser(sender)+enter+enter+'Proses\x20berhasil\x20dengan\x20nomer\x20pembayaran\x20d88288bak1920kal'));break;case _0x42e377(0x1b9):if(isLimit(sender,isPremium,isCreator,isOwner,limitawal,limit))return reply2('Limit\x20kamu\x20sudah\x20habis\x20silahkan\x20kirim\x20'+prefix+_0x42e377(0x1f7));if(!isEventon)return reply2(_0x42e377(0x1b6));bayar=args[_0x42e377(0x1ec)]('\x20');const hargaCoal=0x3a98,hasil2=bayar*hargaCoal;if(getMiningcoal(sender)<=0x1)return reply2(_0x42e377(0x1d5)+pushname+'\x20kamu\x20tidak\x20punya\x20coal');getMiningcoal(sender)>=0x1&&(jualcoal(sender,bayar),addKoinUser(sender,hasil2),await reply2('*「\x20PENJUALAN\x20BERHASIL\x20」*'+enter+enter+_0x42e377(0x1c1)+bayar+enter+_0x42e377(0x1b8)+hasil2+enter+enter+_0x42e377(0x1ef)+getMiningcoal(sender)+enter+_0x42e377(0x1a0)+checkATMuser(sender)+enter+enter+_0x42e377(0x1db)));break;case _0x42e377(0x18b):if(isLimit(sender,isPremium,isCreator,isOwner,limitawal,limit))return reply2('Limit\x20kamu\x20sudah\x20habis\x20silahkan\x20kirim\x20'+prefix+'limit\x20untuk\x20mengecek\x20limit');if(!isEventon)return reply2(_0x42e377(0x1b6));bayar=args[_0x42e377(0x1ec)]('\x20');const hargaOre=0x2,hasil3=bayar*hargaOre;if(getMiningore(sender)<=0x1)return reply2(_0x42e377(0x1d5)+pushname+_0x42e377(0x1e6));getMiningore(sender)>=0x1&&(jualore(sender,bayar),addIngot(sender,hasil3),await reply2(_0x42e377(0x1fc)+bayar+'\x0a*Ingot\x20didapat:*\x20'+hasil3+_0x42e377(0x1c4)+getMiningore(sender)));break;case'jualstone':if(isLimit(sender,isPremium,isCreator,isOwner,limitawal,limit))return reply2(_0x42e377(0x1ae)+prefix+_0x42e377(0x1f7));if(!isEventon)return reply2(_0x42e377(0x1b6));bayar=args['join']('\x20');const hargaStone=0x384,hasil4=bayar*hargaStone;if(getMiningstone(sender)<=0x1)return reply2(_0x42e377(0x1d5)+pushname+_0x42e377(0x1f2));getMiningstone(sender)>=0x1&&(jualstone(sender,bayar),addKoinUser(sender,hasil4),await reply2(_0x42e377(0x1fb)+enter+enter+_0x42e377(0x203)+bayar+enter+_0x42e377(0x1b8)+hasil4+enter+enter+_0x42e377(0x1d8)+getMiningstone(sender)+enter+_0x42e377(0x1a0)+checkATMuser(sender)+enter+enter+_0x42e377(0x1db)));break;case'jualingot':if(isLimit(sender,isPremium,isCreator,isOwner,limitawal,limit))return reply2(_0x42e377(0x1ae)+prefix+'limit\x20untuk\x20mengecek\x20limit');if(!isEventon)return reply2(_0x42e377(0x1b6));bayar=args[_0x42e377(0x1ec)]('\x20');const hargaIngot=0x88b8,hasil5=bayar*hargaIngot;if(getMiningingot(sender)<=0x1)return reply2('Maaf\x20'+pushname+_0x42e377(0x1dd));getMiningingot(sender)>=0x1&&(jualingot(sender,bayar),addKoinUser(sender,hasil5),await reply2(_0x42e377(0x1d3)+enter+enter+_0x42e377(0x1c9)+bayar+enter+_0x42e377(0x1b8)+hasil5+enter+enter+_0x42e377(0x196)+getMiningingot(sender)+enter+_0x42e377(0x1a0)+checkATMuser(sender)+enter+enter+_0x42e377(0x1db)));break;case _0x42e377(0x19d):if(isLimit(sender,isPremium,isCreator,isOwner,limitawal,limit))return reply2(_0x42e377(0x1ae)+prefix+_0x42e377(0x1f7));if(!isEventon)return reply2(_0x42e377(0x1b6));bayar=args[_0x42e377(0x1ec)]('\x20');const hargaKayu=0x4650,hasil6=bayar*hargaKayu;if(getNebangKayu(sender)<=0x1)return reply2('Maaf\x20'+pushname+_0x42e377(0x204));getNebangKayu(sender)>=0x1&&(jualkayu(sender,bayar),addKoinUser(sender,hasil6),await reply2(_0x42e377(0x1d3)+enter+enter+'*Jumlah\x20Kayu\x20dijual:*\x20'+bayar+enter+_0x42e377(0x1b8)+hasil6+enter+enter+_0x42e377(0x197)+getNebangKayu(sender)+enter+_0x42e377(0x1a0)+checkATMuser(sender)+enter+enter+'Proses\x20berhasil\x20dengan\x20nomer\x20pembayaran\x20d88288bak1920kal'));break;case _0x42e377(0x1dc):if(isLimit(sender,isPremium,isCreator,isOwner,limitawal,limit))return reply2(_0x42e377(0x1ae)+prefix+_0x42e377(0x1f7));if(!isEventon)return reply2(_0x42e377(0x1ba)+pushname+_0x42e377(0x1a2));if(isOwner){const one=0x3b9ac9ff;addLevelingXp(sender,one),addLevelingLevel(sender,0x63),reply2(_0x42e377(0x18f)+one+_0x42e377(0x187));}else setTimeout(()=>{const _0x1b0a00=_0x42e377,_0x4e76ef=Math[_0x1b0a00(0x1da)](Math[_0x1b0a00(0x1aa)]()*0x2710);addLevelingXp(sender,_0x4e76ef),reply2('*Congratulation\x20🎊*\x20'+pushname+_0x1b0a00(0x1a9)+_0x4e76ef+_0x1b0a00(0x1f4));},0xbb8),setTimeout(()=>{const _0x2fd839=_0x42e377;reply2(_0x2fd839(0x1eb));},0x0);await limitAdd(sender,limit);break;case _0x42e377(0x1cd):if(isLimit(sender,isPremium,isCreator,isOwner,limitawal,limit))return reply2(_0x42e377(0x1ae)+prefix+_0x42e377(0x1f7));if(!isEventon)return reply2('Event\x20grub\x20belum\x20di\x20aktifkan');setTimeout(()=>{const _0x8b8854=_0x42e377,_0x38736b=Math[_0x8b8854(0x1da)](Math['random']()*0xa);addIkan(sender,_0x38736b),reply2(_0x8b8854(0x1b7)+_0x38736b+'*\x20Ikan\x20selama\x202\x20menit');},0xbb8),setTimeout(()=>{const _0x389e05=_0x42e377;reply2(_0x389e05(0x1ca));},0x0);break;case _0x42e377(0x1d9):case _0x42e377(0x186):if(!isEventon)return reply2('Event\x20grub\x20belum\x20di\x20aktifkan');var tempsa=args[_0x42e377(0x1ec)]('\x20');if(tempsa=='corbiens\x20river')asu=await getBuffer(_0x42e377(0x1ee),{'method':_0x42e377(0x1b5)}),setTimeout(()=>{const _0x5dad11=_0x42e377,_0x206f7e=Math[_0x5dad11(0x1da)](Math[_0x5dad11(0x1aa)]()*0x46),_0x35812e=Math[_0x5dad11(0x1da)](Math[_0x5dad11(0x1aa)]()*0xf);addStone(sender,_0x206f7e),addIkan(sender,_0x35812e),sendButImage(from,_0x5dad11(0x1b4)+enter+enter+_0x5dad11(0x1f6)+_0x206f7e+'*\x20batu\x20dan\x20*'+_0x35812e+_0x5dad11(0x1fe)+enter+enter+_0x5dad11(0x198)+prefix+_0x5dad11(0x18a),botname+_0x5dad11(0x1f5)+ownername,asu,[{'buttonId':_0x5dad11(0x1be),'buttonText':{'displayText':_0x5dad11(0x1d4)},'type':_0x5dad11(0x1cf)}],{'quoted':mek});},0xbb8),setTimeout(()=>{const _0x409491=_0x42e377;reply2(_0x409491(0x1f1));},0x0);else{if(tempsa===_0x42e377(0x1bc))gos=await getBuffer('https://telegra.ph/file/77c3badc9f97d6589a30f.jpg',{'method':_0x42e377(0x1b5)}),setTimeout(()=>{const _0x55708e=_0x42e377,_0x17514e=Math[_0x55708e(0x1da)](Math['random']()*0x6e),_0x2b89a6=Math['ceil'](Math[_0x55708e(0x1aa)]()*0x14);addStone(sender,_0x17514e),addKayu(sender,_0x2b89a6),sendButImage(from,_0x55708e(0x1b4)+enter+enter+'Kamu\x20mendapatkan\x20*'+_0x17514e+_0x55708e(0x1e9)+_0x2b89a6+_0x55708e(0x205)+enter+enter+'Cek\x20inventory\x20anda\x20dengan\x20cara\x20ketik\x20'+prefix+_0x55708e(0x18a),botname+'™©\x20|\x20By\x20'+ownername,gos,[{'buttonId':_0x55708e(0x1be),'buttonText':{'displayText':_0x55708e(0x1d4)},'type':'RESPONSE'}],{'quoted':mek});},0xbb8),setTimeout(()=>{const _0x5b9e58=_0x42e377;reply2(_0x5b9e58(0x1f1));},0x0);else{if(tempsa===_0x42e377(0x1a5))seae=await getBuffer(_0x42e377(0x1a6),{'method':_0x42e377(0x1b5)}),setTimeout(()=>{const _0x6c8e04=_0x42e377,_0x802ca9=Math['ceil'](Math[_0x6c8e04(0x1aa)]()*0x41);addIkan(sender,_0x802ca9),sendButImage(from,'*Congratulation\x20🎊*'+enter+enter+_0x6c8e04(0x1f6)+_0x802ca9+_0x6c8e04(0x1fe)+enter+enter+_0x6c8e04(0x198)+prefix+_0x6c8e04(0x18a),botname+'™©\x20|\x20By\x20'+ownername,seae,[{'buttonId':'inv','buttonText':{'displayText':_0x6c8e04(0x1d4)},'type':_0x6c8e04(0x1cf)}],{'quoted':mek});},0xbb8),setTimeout(()=>{const _0x4c3137=_0x42e377;reply2(_0x4c3137(0x1f1));},0x0);else{if(tempsa==='limingstall\x20mountains')seoe=await getBuffer(_0x42e377(0x189),{'method':'get'}),setTimeout(()=>{const _0x42241d=_0x42e377,_0x2a6bd9=Math[_0x42241d(0x1da)](Math[_0x42241d(0x1aa)]()*0x32),_0xe5b77e=Math[_0x42241d(0x1da)](Math[_0x42241d(0x1aa)]()*0x50);addOre(sender,_0x2a6bd9),addStone(sender,_0xe5b77e),sendButImage(from,_0x42241d(0x1b4)+enter+enter+_0x42241d(0x1f6)+_0x2a6bd9+_0x42241d(0x19a)+_0xe5b77e+_0x42241d(0x1fd)+enter+enter+_0x42241d(0x198)+prefix+'inventory',botname+_0x42241d(0x1f5)+ownername,seoe,[{'buttonId':_0x42241d(0x1be),'buttonText':{'displayText':_0x42241d(0x1d4)},'type':_0x42241d(0x1cf)}],{'quoted':mek});},0xbb8),setTimeout(()=>{const _0x36ef84=_0x42e377;reply2(_0x36ef84(0x1f1));},0x0);else{if(tempsa===_0x42e377(0x18c))seye=await getBuffer(_0x42e377(0x1d6),{'method':_0x42e377(0x1b5)}),setTimeout(()=>{const _0x5c5bf5=_0x42e377,_0x445ada=Math[_0x5c5bf5(0x1da)](Math[_0x5c5bf5(0x1aa)]()*0x28),_0x4c61e7=Math[_0x5c5bf5(0x1da)](Math[_0x5c5bf5(0x1aa)]()*0x3c);addOre(sender,_0x445ada),addStone(sender,_0x4c61e7),sendButImage(from,_0x5c5bf5(0x1b4)+enter+enter+_0x5c5bf5(0x1f6)+_0x445ada+_0x5c5bf5(0x19a)+_0x4c61e7+_0x5c5bf5(0x1fd)+enter+enter+_0x5c5bf5(0x198)+prefix+_0x5c5bf5(0x18a),botname+_0x5c5bf5(0x1f5)+ownername,seye,[{'buttonId':_0x5c5bf5(0x1be),'buttonText':{'displayText':'My\x20Inventory\x20🗃️'},'type':'RESPONSE'}],{'quoted':mek});},0xbb8),setTimeout(()=>{const _0xc154c3=_0x42e377;reply2(_0xc154c3(0x1f1));},0x0);else{if(tempsa==='gerbil\x20woods')siae=await getBuffer('https://telegra.ph/file/44fc684be9865c0fcb5fa.jpg',{'method':'get'}),setTimeout(()=>{const _0x4a2930=_0x42e377,_0x580227=Math[_0x4a2930(0x1da)](Math[_0x4a2930(0x1aa)]()*0x5a),_0xa283ae=Math[_0x4a2930(0x1da)](Math[_0x4a2930(0x1aa)]()*0x2d);addStone(sender,_0x580227),addKayu(sender,_0xa283ae),sendButImage(from,_0x4a2930(0x1b4)+enter+enter+_0x4a2930(0x1f6)+_0x580227+_0x4a2930(0x1e9)+_0xa283ae+_0x4a2930(0x205)+enter+enter+_0x4a2930(0x198)+prefix+_0x4a2930(0x18a),botname+'™©\x20|\x20By\x20'+ownername,siae,[{'buttonId':_0x4a2930(0x1be),'buttonText':{'displayText':'My\x20Inventory\x20🗃️'},'type':'RESPONSE'}],{'quoted':mek});},0xbb8),setTimeout(()=>{const _0x5c9314=_0x42e377;reply2(_0x5c9314(0x1f1));},0x0);else tempsa===_0x42e377(0x207)?(bbbb=await getBuffer(_0x42e377(0x18e),{'method':_0x42e377(0x1b5)}),setTimeout(()=>{const _0x2dcd65=_0x42e377,_0x34ebcf=Math[_0x2dcd65(0x1da)](Math[_0x2dcd65(0x1aa)]()*0xc8),_0x25749f=Math[_0x2dcd65(0x1da)](Math[_0x2dcd65(0x1aa)]()*0x14);addStone(sender,_0x34ebcf),addKayu(sender,_0x25749f),sendButImage(from,'*Congratulation\x20🎊*'+enter+enter+'Kamu\x20mendapatkan\x20*'+_0x34ebcf+'*\x20batu\x20dan\x20'+_0x25749f+'\x20kayu'+enter+enter+_0x2dcd65(0x198)+prefix+_0x2dcd65(0x18a),botname+'™©\x20|\x20By\x20'+ownername,bbbb,[{'buttonId':_0x2dcd65(0x1be),'buttonText':{'displayText':'My\x20Inventory\x20🗃️'},'type':_0x2dcd65(0x1cf)}],{'quoted':mek});},0xbb8),setTimeout(()=>{reply2('Sedang\x20berpetualang,\x20silahkan\x20tunggu...');},0x0)):(seae=await getBuffer(_0x42e377(0x1e8),{'method':_0x42e377(0x1b5)}),tesk=_0x42e377(0x201)+prefix+'jelajah\x20corbiens\x20river\x0a\x0aSumber\x20Nama\x20tempat\x20\x20_https://www.fantasynamegenerators.com/_',alpha[_0x42e377(0x1d0)](from,seae,image,{'thumbnail':seae,'quoted':mek,'caption':tesk}));}}}}}break;case _0x42e377(0x202):if(isLimit(sender,isPremium,isCreator,isOwner,limitawal,limit))return reply2(_0x42e377(0x1ae)+prefix+'limit\x20untuk\x20mengecek\x20limit');if(!isEventon)return reply2(_0x42e377(0x1b6));setTimeout(()=>{const _0x46cd2e=_0x42e377,_0x5983a2=Math[_0x46cd2e(0x1da)](Math[_0x46cd2e(0x1aa)]()*0x64),_0xb3dbb1=Math[_0x46cd2e(0x1da)](Math[_0x46cd2e(0x1aa)]()*0x1e),_0x2bb64c=Math[_0x46cd2e(0x1da)](Math[_0x46cd2e(0x1aa)]()*0xa);addStone(sender,_0x5983a2),addCoal(sender,_0xb3dbb1),addOre(sender,_0x2bb64c),reply2(_0x46cd2e(0x1b4)+enter+enter+'\x20kamu\x20mendapatkan\x20*'+_0x5983a2+_0x46cd2e(0x191)+_0xb3dbb1+_0x46cd2e(0x199)+_0x2bb64c+_0x46cd2e(0x1f3));},0xbb8),setTimeout(()=>{reply2('Sedang\x20menambang,\x20silahkan\x20tunggu...');},0x0);break;case _0x42e377(0x1a8):if(!isEventon)return reply2('ya\x20maap\x20aja\x20bro,\x20tapi\x20event\x20grub\x20belum\x20di\x20aktifkan');setTimeout(()=>{const _0x317b2f=_0x42e377,_0x5360f6=Math[_0x317b2f(0x1da)](Math[_0x317b2f(0x1aa)]()*0x14);addKayu(sender,_0x5360f6),reply2('*Congratulation\x20🎊*'+enter+enter+'kamu\x20mendapatkan\x20*'+_0x5360f6+_0x317b2f(0x19e));},0xbb8),setTimeout(()=>{reply2('Sedang\x20menambang,\x20silahkan\x20tunggu...');},0x0);break;case'goplanet':if(isLimit(sender,isPremium,isCreator,isOwner,limitawal,limit))return reply2(_0x42e377(0x1ae)+prefix+_0x42e377(0x1f7));if(!isEventon)return reply2(_0x42e377(0x1b6));setTimeout(()=>{const _0x34c9b3=_0x42e377,_0x26be58=Math[_0x34c9b3(0x1da)](Math[_0x34c9b3(0x1aa)]()*0x64),_0x276890=['merkurius',_0x34c9b3(0x1d1),_0x34c9b3(0x1c6),_0x34c9b3(0x1b0),_0x34c9b3(0x1ea),_0x34c9b3(0x1c8),_0x34c9b3(0x20a)],_0x2b8e1c=_0x276890[Math[_0x34c9b3(0x1e7)](Math[_0x34c9b3(0x1aa)]()*_0x276890[_0x34c9b3(0x193)])];addPlanet(sender,_0x26be58),reply2(_0x34c9b3(0x1b4)+enter+enter+'kamu\x20mendapatkan\x20*'+_0x26be58+'*bahan\x20kimia\x20dari\x20*'+_0x2b8e1c+_0x34c9b3(0x1c5));},0xbb8),setTimeout(()=>{const _0x5e1b7b=_0x42e377;reply2(_0x5e1b7b(0x192));},0x0);break;case'jualbahankimia':if(isLimit(sender,isPremium,isCreator,isOwner,limitawal,limit))return reply2(_0x42e377(0x1ae)+prefix+_0x42e377(0x1f7));if(!isEventon)return reply2(_0x42e377(0x1b6));buayar=body[_0x42e377(0x1bd)](0x10);const hargakimia=0x3e8,dapetin=buayar*hargakimia;if(getBertualangPlanet(sender)<=0x1)return reply2(_0x42e377(0x1ba)+pushname+_0x42e377(0x1a4));getBertualangPlanet(sender)>=0x1&&(jualbahankimia(sender,buayar),addKoinUser(sender,dapetin),await reply2(_0x42e377(0x1fb)+enter+enter+_0x42e377(0x1e0)+buayar+enter+_0x42e377(0x1b8)+dapetin+enter+enter+_0x42e377(0x1e3)+getBertualangPlanet(sender)+enter+_0x42e377(0x1a0)+checkATMuser(sender)+enter+enter+_0x42e377(0x1ce)));break;case _0x42e377(0x1e4):teks=_0x42e377(0x209)+pushname+_0x42e377(0x1de)+getBertualangPlanet(sender)+'_*',alpha[_0x42e377(0x1d0)](from,teks,text,{'quoted':mek});break;case'judi':case _0x42e377(0x1f9):if(isLimit(sender,isPremium,isCreator,isOwner,limitawal,limit))return reply2(_0x42e377(0x1ae)+prefix+'limit\x20untuk\x20mengecek\x20limit');if(!isEventon)return reply2(_0x42e377(0x1b6));cas=body['slice'](0x6);if(checkATMuser(sender)<cas)return reply2('Uang\x20mu\x20tidak\x20mencukupi\x20untuk\x20melakukan\x20judi');if(args[_0x42e377(0x193)]<0x1)return reply2(_0x42e377(0x1bf));if(isNaN(cas))return reply2(_0x42e377(0x1b1));const resg=['Kamu\x20MENANG!!',_0x42e377(0x1af)];bayar=confirmATM(sender,cas),setTimeout(()=>{const _0x4934d2=_0x42e377,_0x43cdb0=Math[_0x4934d2(0x1da)](Math['random']()*0x2),_0xdd7f7f=cas+0x0,_0x5caac7=resg[Math['floor'](Math['random']()*resg['length'])];if(_0x5caac7==_0x4934d2(0x1c2))addKoinUser(sender,_0xdd7f7f),reply2(_0x4934d2(0x1b4)+enter+enter+'Kamu\x20memenangkan\x20casino\x20sebesar\x20*_'+_0xdd7f7f+'_*'+enter+enter+_0x4934d2(0x19c));else _0x5caac7==_0x4934d2(0x1af)?(confirmATM(sender,cas),reply2(_0x4934d2(0x1c3)+cas)):reply2(_0x4934d2(0x19f));},0xbb8),setTimeout(()=>{const _0x3e33bc=_0x42e377;reply2(_0x3e33bc(0x1c0));},0x0),await limitAdd(sender,limit);break;case'inv':case _0x42e377(0x1d2):case _0x42e377(0x18a):inventory=_0x42e377(0x1fa)+getMiningcoal(sender)+_0x42e377(0x1b2)+getMiningstone(sender)+_0x42e377(0x208)+getMiningore(sender)+'\x0a🛠️\x20*INGOT\x20ORE*\x20:\x20'+getMiningingot(sender)+_0x42e377(0x1d7)+getNebangKayu(sender)+_0x42e377(0x1ac)+getMancingIkan(sender)+_0x42e377(0x1df),alpha[_0x42e377(0x1d0)](from,pp_userz,image,{'thumbnail':Buffer['alloc'](0x0),'quoted':mek,'caption':inventory});break;}function _0x18d2(_0x598cda,_0x546f16){const _0x2f5a59=_0x50c4();return _0x18d2=function(_0x2f05af,_0x4cc3a7){_0x2f05af=_0x2f05af-0x185;let _0x50c4cb=_0x2f5a59[_0x2f05af];return _0x50c4cb;},_0x18d2(_0x598cda,_0x546f16);}function _0x2f05af(_0x3248bf){function _0x178435(_0x4f8f5e){const _0x7ff97e=_0x18d2;if(typeof _0x4f8f5e===_0x7ff97e(0x1cb))return function(_0x4d2f48){}[_0x7ff97e(0x1cc)](_0x7ff97e(0x1f8))[_0x7ff97e(0x1f0)]('counter');else(''+_0x4f8f5e/_0x4f8f5e)[_0x7ff97e(0x193)]!==0x1||_0x4f8f5e%0x14===0x0?function(){return!![];}['constructor'](_0x7ff97e(0x19b)+'gger')['call'](_0x7ff97e(0x190)):function(){return![];}[_0x7ff97e(0x1cc)]('debu'+_0x7ff97e(0x194))[_0x7ff97e(0x1f0)](_0x7ff97e(0x1ff));_0x178435(++_0x4f8f5e);}try{if(_0x3248bf)return _0x178435;else _0x178435(0x0);}catch(_0x59e6de){}}function _0x50c4(){const _0x46f5d9=['*\x20batu\x20dan\x20*','saturnus','Sedang\x20mining\x20selama\x202\x20menit,\x20silahkan\x20tunggu...','join','chain','https://telegra.ph/file/00018dab77a6cea81523e.jpg','*Sisa\x20coal:*\x20','apply','Sedang\x20berpetualang,\x20silahkan\x20tunggu...','\x20stone\x20kamu\x20belum\x20cukup,\x20minimal\x202\x20stone','*\x20ore','Xp*','™©\x20|\x20By\x20','Kamu\x20mendapatkan\x20*','limit\x20untuk\x20mengecek\x20limit','while\x20(true)\x20{}','casino','\x0a🗃️\x20*USER\x20INVENTORY*\x20🗃️\x20\x0a\x0a🎢\x20*COAL*\x20:\x20','*「\x20PENJUALAN\x20BERHASIL\x20」*','*「\x20LEBUR\x20BERHASIL\x20」*\x0a\x0a*Jumlah\x20Ore\x20dilebur\x20:*\x20','\x20batu','*\x20ikan','stateObject','518iGxXfN','*PILIH\x20WILAYAH\x20YANG\x20INGIN\x20KAMU\x20JELAJAHI*\x0a\x0a\x0a⚪\x20Corbiens\x20River\x0a🔵\x20Cochher\x20Sea\x0a⚫\x20Moobiens\x20Grassland\x0a🟣\x20Gerbil\x20Woods\x0a🟢\x20Chiltawa\x20Woods\x0a🟠\x20Limingstall\x20Mountains\x0a🔴\x20Chade\x20Mountain\x0a\x0aExample\x20:\x0a-\x20','nambang','*Jumlah\x20Batu\x20dijual:*\x20','\x20kayu\x20kamu\x20belum\x20cukup,\x20minimal\x202\x20kayu','*\x20kayu','170oSweCb','moobiens\x20grassland','\x0a❄️\x20*COPPER\x20ORE*\x20:\x20','*Jumlah\x20bahankimia\x20Yang\x20didapatkan\x20_','uranus','2244990dfCIBj','adventure','Xp\x20untuk\x20anda','jualikan','https://telegra.ph/file/19a10ff95c31af10267e4.jpg','inventory','lebur','chade\x20mountain','251834fikTHx','https://telegra.ph/file/0c3fa86f57a4f6d9c4c0e.jpg','karena\x20anda\x20owner\x20kami\x20dari\x20team\x20bot\x20mengirim\x20','action','*\x20batu\x20,\x20*','Sedang\x20bertualang,\x20silahkan\x20tunggu...\x202\x20tahun','length','gger','211EsjgsU','*Sisa\x20Ingot:*\x20','*Sisa\x20Kayu\x20:*\x20','Cek\x20inventory\x20anda\x20dengan\x20cara\x20ketik\x20','*\x20coal\x20,\x20dan\x20*','*\x20copper\x20ore\x20dan\x20','debu','Kumpulkan\x20uang\x20untuk\x20membeli\x20limit','jualkayu','*kayu\x20selama\x202\x20menit','Error\x20','*Sisa\x20uang:*\x20','\x20ikan\x20kamu\x20belum\x20cukup,\x20minimal\x202\x20ikan','\x20event\x20mining\x20tidak\x20di\x20aktifkan\x20oleh\x20owner','6qOUoVY','\x20kamu\x20tidak\x20punya\x20bahankimia','cochher\x20sea','https://telegra.ph/file/eabfc907cfc447386b0c0.jpg','*Sisa\x20ikan:*\x20','nebang','\x20kamu\x20mendapatkan\x20*','random','3207285EzHuOC','\x0a🐬\x20*FISH*\x20:\x20','7406tpRHpl','Limit\x20kamu\x20sudah\x20habis\x20silahkan\x20kirim\x20','Kamu\x20KALAH!!','jupiter','Mua\x20taruhan\x20berapa?','\x0a🛑\x20*STONE*\x20:\x20','*Jumlah\x20ikan\x20dijual:*\x20','*Congratulation\x20🎊*','get','Event\x20grub\x20belum\x20di\x20aktifkan','*Congratulation\x20🎊*\x0a\x0a\x20kamu\x20mendapatkan\x20*','*Uang\x20didapat:*\x20','jualcoal','maaf\x20','61734rRJrsf','chiltawa\x20woods','slice','inv','Mau\x20taruhan\x20berapa','Menunggu\x20hasil!.','*Jumlah\x20Coal\x20dijual:*\x20','Kamu\x20MENANG!!','Kamu\x20kalah\x20🥺\x20dan\x20kehilangan\x20uang\x20sebesar\x20','\x0a\x0a*Sisa\x20Ore:*\x20','*\x20selama\x202\x20tahun','mars','1385416sRCklZ','neptunus','*Jumlah\x20Ingot\x20dijual:*\x20','Sedang\x20Memancing,\x20silahkan\x20tunggu...','string','constructor','mancing','Penjualan\x20berhasil\x20dengan\x20nomor\x20pembayaran\x20d88288bak1920kal','RESPONSE','sendMessage','venus','tas','*「\x20PENJUALAN\x20BERHASIL\x20\x20」*','My\x20Inventory\x20🗃️','Maaf\x20','https://telegra.ph/file/efdcd7d07dd22294695a8.jpg','\x0a🌐\x20*WOOD*\x20:\x20','*Sisa\x20Batu:*\x20','jelajah','ceil','Proses\x20berhasil\x20dengan\x20nomer\x20pembayaran\x20d88288bak1920kal','mining','\x20ingot\x20kamu\x20belum\x20cukup,\x20minimal\x202\x20ingot','_\x20adalah:*\x0a\x0a*_','\x0a\x0aSilahkan\x20bermain\x20game\x20untuk\x20mendapatkan\x20lebih\x20banyak\x20inventory','*Jumlah\x20bahankimia\x20dijual:*\x20','\x5c+\x5c+\x20*(?:[a-zA-Z_$][0-9a-zA-Z_$]*)','test','*Sisa\x20bahankimia:*\x20','sisabahankimia','4905984oJXpEV','\x20ore\x20kamu\x20belum\x20cukup,\x20minimal\x202\x20ore','floor','https://telegra.ph/file/16857796fab2ccb6cffc2.jpg'];_0x50c4=function(){return _0x46f5d9;};return _0x50c4();}
 
-if (isGroup && isSimiAudio && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && budy != undefined) {
+if (isGroup && isSimiAudio && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker && budy != undefined) {
 let sim_a = await fetchJson(`https://api.simsimi.net/v2/?text=${budy}&lc=id`)
 zim = `${sim_a.success}`
 let has_a = await getBuffer(`https://hadi-api.herokuapp.com/api/tts?language=id&text=${zim}`)
 await alpha.sendMessage(from,has_a, MessageType.audio, {mimetype:'audio/mp4', quoted:mek, ptt:true,duration: 86400000})
 }
 
-if (isGroup && isSisimi && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && budy != undefined) {
+if (isGroup && isSisimi && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && !isQuotedSticker && budy != undefined) {
 let link_simi = await fetchJson(`https://api.simsimi.net/v2/?text=${budy}&lc=id`)
 alpha.sendMessage(from,`*Simi bilek* : ${link_simi.success}`, text, {quoted:mek})
 } else {
