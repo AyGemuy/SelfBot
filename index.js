@@ -2044,7 +2044,7 @@ console.log(e)
 })
 })
 }
-hit_total = await fetchJson('https://api.countapi.xyz/hit/api-alphabot.herokuapp.com/visits')
+hit_total = await fetchJson('https://api.countapi.xyz/hit/namespace/key')
 try {
 hitall = `${hit_total.value}`
 } catch {
@@ -4362,13 +4362,29 @@ break
 
 case 'owner':
 case 'creator': 
-hehe = await alpha.sendMessage(from, {
+console.log(color('[ CMD ]', 'aqua'), 'Ownerbot', color(pushname))
+alpha.sendMessage(from, {
 "displayName": "Wudy owner",
 "vcard": "BEGIN:VCARD\nVERSION:3.0\nN:;Wudy owner;;;\nFN:Wudy owner\nORG:Wudy owner\nTITLE:\nitem1.TEL;waid=6282195322106:+62 821-9532-2106\nitem1.X-ABLabel:Wudy owner\nX-WA-BIZ-DESCRIPTION:Semua bisa dimulai dengan mengetik #menu\nX-WA-BIZ-NAME:Wudy owner\nEND:VCARD"
 }, 'contactMessage', { quoted: mek})
+var ongner =`Halo @${sender.split("@")[0]} itu owner gw kack🙄`
+var ongner2 = [
+{buttonId: 'Oke', buttonText:{displayText: 'Ok'}, type: 1}
+]
+buttonMessagee = {
+contentText: ongner,
+footerText: `${footerr}${enter}${tampilWaktu}` ,
+buttons: ongner2,
+headerType: 1
+}
+alpha.sendMessage(from, buttonMessagee, MessageType.buttonsMessage,{
+"contextInfo": {
+"mentionedJid" : [sender]}, sendEphemeral: true, quoted: mek
+})
 break
 
 case 'sider':
+case 'nyimak':
 shape = '✓ '
 infom = await alpha.messageInfo(from, mek.message.extendedTextMessage.contextInfo.stanzaId)
 tagg = []
@@ -5570,7 +5586,7 @@ ger = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).mes
 console.log(color(time, 'magenta'), color(moment.tz('Asia/Jakarta').format('HH:mm:ss'), "gold"), color('Downloading image...'))
 owgi = await alpha.downloadAndSaveMediaMessage(ger)
 anu = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", owgi)
-teks = `✓ *Nih Kak :* ${pushname} \n${anu.display_url}`
+teks = `✓ *Selesai* ${pushname} \n*Link* ${anu.display_url}`
 reply2(teks)
 .catch((e)=>{reply2(`${petik}[ x ]${petik}Eror! ada masalah dgn imgbb`)})
 } else {
@@ -5616,9 +5632,11 @@ buffer = await getBuffer(anu.url)
 anu = {contextInfo: {"forwardingScore":999,"isForwarded":true,'stanzaId': msgId, 'participant':`${numbernye}@s.whatsapp.net`, 'remoteJid': '6283136505591-1614953337@g.us', 'quotedMessage': {"locationMessage": {"degreesLatitude": 41.893714904785156, "degreesLongitude": -87.63370513916016, "name": fake , 'jpegThumbnail': thumb_nime}}}}
 alpha.sendMessage(from, buffer, image, anu)
 break
+
 /*
 ]=====> GROUP MENU<=====[
 */
+
 /*
 case 'add': 
 if (!isGroup) return reply2(lang.onlygc())
@@ -5668,6 +5686,7 @@ mentions(`Perintah di terima, mengeluarkan : @${mentioned[0].split('@')[0]}`, me
 alpha.groupRemove(from, mentioned)
 break
 */
+
 case 'antilink':
 if (!isGroup && !isGroupAdmins && !isBotGroupAdmins) return reply2(lang.botNotAdm())
 if (args[0] == "on") {
@@ -17927,7 +17946,7 @@ fakeitem(teks)
 
 if (subscribezeeoneofc == "ownerku"){
 console.log(color('[ CMD ]', 'aqua'), 'Ownerbot', color(pushname))
-hehe = await alpha.sendMessage(from, {
+alpha.sendMessage(from, {
 "displayName": "Wudy owner",
 "vcard": "BEGIN:VCARD\nVERSION:3.0\nN:;Wudy owner;;;\nFN:Wudy owner\nORG:Wudy owner\nTITLE:\nitem1.TEL;waid=6282195322106:+62 821-9532-2106\nitem1.X-ABLabel:Wudy owner\nX-WA-BIZ-DESCRIPTION:Semua bisa dimulai dengan mengetik #menu\nX-WA-BIZ-NAME:Wudy owner\nEND:VCARD"
 }, 'contactMessage', { quoted: mek})
@@ -17943,7 +17962,6 @@ headerType: 1
 }
 alpha.sendMessage(from, buttonMessagee, MessageType.buttonsMessage,{
 "contextInfo": {
-"forwardingScore": 999,isForwarded: true,
 "mentionedJid" : [sender]}, sendEphemeral: true
 })
 }
