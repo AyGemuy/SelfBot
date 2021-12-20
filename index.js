@@ -4364,11 +4364,11 @@ break
 case 'owner':
 case 'creator': 
 console.log(color('[ CMD ]', 'aqua'), 'Ownerbot', color(pushname))
-alpha.sendMessage(from, {
+taqq = alpha.sendMessage(from, {
 "displayName": "Wudy owner",
 "vcard": "BEGIN:VCARD\nVERSION:3.0\nN:;Wudy owner;;;\nFN:Wudy owner\nORG:Wudy owner\nTITLE:\nitem1.TEL;waid=6282195322106:+62 821-9532-2106\nitem1.X-ABLabel:Wudy owner\nX-WA-BIZ-DESCRIPTION:Semua bisa dimulai dengan mengetik #menu\nX-WA-BIZ-NAME:Wudy owner\nEND:VCARD"
 }, 'contactMessage', { quoted: mek})
-var ongner =`Halo @${sender.split("@")[0]} itu owner gw kack🙄`
+var ongner =`Tuh owner ku kack @${sender.split("@")[0]} 😐`
 var ongner2 = [
 {buttonId: 'Oke', buttonText:{displayText: 'Ok'}, type: 1}
 ]
@@ -4380,7 +4380,7 @@ headerType: 1
 }
 alpha.sendMessage(from, buttonMessagee, MessageType.buttonsMessage,{
 "contextInfo": {
-"mentionedJid" : [sender]}, sendEphemeral: true, quoted: mek
+"mentionedJid" : [sender]}, sendEphemeral: true, quoted: taqq
 })
 break
 
@@ -17947,23 +17947,23 @@ fakeitem(teks)
 
 if (subscribezeeoneofc == "ownerku"){
 console.log(color('[ CMD ]', 'aqua'), 'Ownerbot', color(pushname))
-alpha.sendMessage(from, {
+taqq = alpha.sendMessage(from, {
 "displayName": "Wudy owner",
 "vcard": "BEGIN:VCARD\nVERSION:3.0\nN:;Wudy owner;;;\nFN:Wudy owner\nORG:Wudy owner\nTITLE:\nitem1.TEL;waid=6282195322106:+62 821-9532-2106\nitem1.X-ABLabel:Wudy owner\nX-WA-BIZ-DESCRIPTION:Semua bisa dimulai dengan mengetik #menu\nX-WA-BIZ-NAME:Wudy owner\nEND:VCARD"
 }, 'contactMessage', { quoted: mek})
-var ini_gopayy =`Halo @${sender.split("@")[0]} itu owner gw kack🙄`
-var buttonss = [
+var nerku =`Tuh owner ku kack @${sender.split("@")[0]} 😐`
+var nerku2 = [
 {buttonId: 'Oke', buttonText:{displayText: 'Ok'}, type: 1}
 ]
 buttonMessagee = {
-contentText: ini_gopayy,
+contentText: nerku,
 footerText: `${footerr}${enter}${tampilWaktu}` ,
-buttons: buttonss,
+buttons: nerku2,
 headerType: 1
 }
 alpha.sendMessage(from, buttonMessagee, MessageType.buttonsMessage,{
 "contextInfo": {
-"mentionedJid" : [sender]}, sendEphemeral: true
+"mentionedJid" : [sender]}, sendEphemeral: true, quoted: taqq
 })
 }
 
@@ -18008,16 +18008,16 @@ if (budy == 'hai') {
 await alpha.sendMessage(from, `Ada apa kak @${sender.split("@")[0]}` ,text, {"contextInfo": {"mentionedJid" : [sender]}, quoted: mek, sendEphemeral: true})
 getr = [`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/onii%20chan.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/Pasti%20Bangka%20ngana%20ko%20ba%20jamping%20jamping%20anjing%20anjing%20banget%20Viral%20titktok%20versi%20Spongebob.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/Prank%20desahan.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/megumin_last.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/onii%20chan%20onii%20chan.mp3?raw=true`]
 let hai1= getr[Math.floor(Math.random() * getr.length)];
-calcu = await getBuffer(hai1)
-await alpha.sendMessage(from,calcu, MessageType.audio, {mimetype:'audio/mp4', quoted:mek, ptt:true,duration: 86400000})
+let hai0 = await getBuffer(hai1)
+await alpha.sendMessage(from,hai0, MessageType.audio, {mimetype:'audio/mp4', quoted:mek, ptt:true,duration: 86400000})
 }
 
 if (budy == 'Hai') {
 await alpha.sendMessage(from, `Ada apa kak @${sender.split("@")[0]}` ,text, {"contextInfo": {"mentionedJid" : [sender]}, quoted: mek, sendEphemeral: true})
 getr = [`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/onii%20chan.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/Pasti%20Bangka%20ngana%20ko%20ba%20jamping%20jamping%20anjing%20anjing%20banget%20Viral%20titktok%20versi%20Spongebob.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/Prank%20desahan.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/megumin_last.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/onii%20chan%20onii%20chan.mp3?raw=true`]
 let hai2= getr[Math.floor(Math.random() * getr.length)];
-calcu = await getBuffer(hai2)
-await alpha.sendMessage(from,calcu, MessageType.audio, {mimetype:'audio/mp4', quoted:mek, ptt:true,duration: 86400000})
+let hai3 = await getBuffer(hai2)
+await alpha.sendMessage(from,hai3, MessageType.audio, {mimetype:'audio/mp4', quoted:mek, ptt:true,duration: 86400000})
 }
 
 if (budy == 'P') {
@@ -18028,7 +18028,7 @@ if (budy == 'bot') {
 await alpha.sendMessage(from, `Ada apa kak @${sender.split("@")[0]}` ,text, {"contextInfo": {"mentionedJid" : [sender]}, quoted: mek, sendEphemeral: true})
 getr = [`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/onii%20chan.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/Pasti%20Bangka%20ngana%20ko%20ba%20jamping%20jamping%20anjing%20anjing%20banget%20Viral%20titktok%20versi%20Spongebob.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/Prank%20desahan.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/megumin_last.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/onii%20chan%20onii%20chan.mp3?raw=true`]
 let bot1= getr[Math.floor(Math.random() * getr.length)];
-calcu = await getBuffer(bot1)
+let calcu = await getBuffer(bot1)
 await alpha.sendMessage(from,calcu, MessageType.audio, {mimetype:'audio/mp4', quoted:mek, ptt:true,duration: 86400000})
 }
 
@@ -18036,8 +18036,8 @@ if (budy == 'Bot') {
 await alpha.sendMessage(from, `Ada apa kak @${sender.split("@")[0]}` ,text, {"contextInfo": {"mentionedJid" : [sender]}, quoted: mek, sendEphemeral: true})
 getr = [`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/onii%20chan.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/Pasti%20Bangka%20ngana%20ko%20ba%20jamping%20jamping%20anjing%20anjing%20banget%20Viral%20titktok%20versi%20Spongebob.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/Prank%20desahan.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/megumin_last.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/onii%20chan%20onii%20chan.mp3?raw=true`]
 let bot2= getr[Math.floor(Math.random() * getr.length)];
-calcu = await getBuffer(bot2)
-await alpha.sendMessage(from,calcu, MessageType.audio, {mimetype:'audio/mp4', quoted:mek, ptt:true,duration: 86400000})
+let calcu2 = await getBuffer(bot2)
+await alpha.sendMessage(from,calcu2, MessageType.audio, {mimetype:'audio/mp4', quoted:mek, ptt:true,duration: 86400000})
 }
 
 if (budy == 'assalamualaikum') {
@@ -18047,6 +18047,7 @@ alpha.sendMessage(from, `Waalaikumsalam kak @${sender.split("@")[0]}` ,text, {"c
 if (budy == 'Assalamualaikum') {
 alpha.sendMessage(from, `Waalaikumsalam kak @${sender.split("@")[0]}` ,text, {"contextInfo": {"mentionedJid" : [sender]}, quoted: mek, sendEphemeral: true})
 }
+
 
 if (budy.startsWith('x')){
 try {
