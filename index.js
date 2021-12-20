@@ -4978,7 +4978,7 @@ fs.unlinkSync(ran)
 .toFormat('webp')
 .save(ran)
 } else {
-reply2(`Kirim gambar dengan caption ${prefix}sticker atau tag gambar yang sudah dikirim\nDurasi sticker video 1-9 detik...`)
+reply2(`Reply gambar yang sudah dikirim\nDurasi sticker video 1-9 detik...`)
 }
 break
 
@@ -5083,7 +5083,7 @@ fs.unlinkSync(ran)
 .toFormat('webp')
 .save(ran)
 } else {
-reply2(`Kirim gambar dengan caption ${prefix}sticker atau tag gambar yang sudah dikirim\nDurasi sticker video 1-9 detik...`)
+reply2(`Reply gambar yang sudah dikirim\nDurasi sticker video 1-9 detik...`)
 }
 break
 
