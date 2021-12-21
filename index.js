@@ -252,7 +252,6 @@ const simiaudio = JSON.parse(fs.readFileSync("./list/simiaudio.json"))
 const { tpro_list, epho_list, pfun_list, oxy_list, nsfw_list} = require('./list/list.js')
 const { reki } = require('./list/reki.js')
 const { naga_ } = require('./list/naga.js')
-const { remove_bg } = require('./list/removebg.js')
 
 // GAME
 const asahotak = JSON.parse(fs.readFileSync('./game/asahotak.json'))
@@ -17095,19 +17094,6 @@ alpha.sendMessage('status@broadcast', buffer, MessageType.image, {quoted: mek, c
 reply2(`Sukses upload image:\n${teksyy}`)
 break
 
-case 'nobg':
-case 'removebg':
-var imgbb = require('imgbb-uploader')
-var remv = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
-var rbge = await alpha.downloadAndSaveMediaMessage(remv, `./media/${sender}.png`)
-let hup = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", rbge)
-await remove_bg(`${hup.display_url}`)
-.then((response) => {
-  fs.writeFileSync("no-bg.png", response.data);
-  ini_buff = fs.readFileSync("no-bg.png")
-alpha.sendMessage(from, ini_buff, image, { quoted: mek, caption: "Nih kack" })
-})
-break
 
 //Ends
 default:
