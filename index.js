@@ -347,9 +347,17 @@ e2 = [`⋆`,`𖧹`,`⌯`,`〆`]
 let emoj2 = e2[Math.floor(Math.random() * e2.length)]
 let waktu_game = "120000"
 
+// GAME
+let yg_jwb = `@${sender.split("@")[0]}`
 slmt = ["Respects","Fantastic","Hats off!","Sensational","Well done","Good job!","You rock!","Nice going","Good show!","Good going!","Good for you!","Good on you!","Good one mate!","I am impressed","Way to go","You did it!","You’re a genius!","You’re the best","You’ve got it","Pat on the back","That’s the way","That’s the best ever","You did it that time!","You make it look easy","You really deserved it","You did that very well","What a good try","Many happy returns","That is better than ever","You’re doing a good job","You’re doing beautifully","You’re really growing up","That’s the way to do it","You are very good at that","You’re on the right track now","You’re really going to town","Keep up the good work","That’s the right way to do it","You have done a great job!","You’re getting better every day","You’ve just about mastered that","Nothing can stop you now","That’s the best you’ve ever done","Keep working, you’re getting better","I’m happy to see you working like that"]
-let selamet = slmt[Math.floor(Math.random() * slmt.length)]
+let jwb_benar = slmt[Math.floor(Math.random() * slmt.length)]
+jwb = ["Tebak lagi","Dikit lagi","Hampir benar!","Salah!","Jawaban ngawur","Jawaban salah","Tidak benar!","Sedikit lagi","Tidak tepat!","Hampir tepat!","Jgn bilang gw gajelas!"]
+let salah_jwb = jwb[Math.floor(Math.random() * jwb.length)]
+keo = ["Complete","Completed","Concluded","Consummated","Depleted","Drained","Effected","Ended","Executed","Exhausted","Fixed","Fulfilled","Perfected","Performed","Realized","Rendered","Set","Spent","Succeeded","Terminated","Wired","Wrought","A Wrap","All in","All over","Brought about","Brought to pass","Buttoned-up","Compassed","Over","Through","Used-up"]
+let jwb_oke = keo[Math.floor(Math.random() * keo.length)]
 
+
+// SETTING
 let multi = true
 let nopref = false
 let single = false
@@ -1670,6 +1678,11 @@ const mentions = (teks, memberr, id) => {
 const costum = (pesan, tipe, target, target2) => {
 alpha.sendMessage(from, pesan, tipe, {quoted: { key: { fromMe: false, participant: `${target}`, ...(from ? { remoteJid: from } : {}) }, message: { conversation: `${target2}` }}})
 }
+
+const menjawab = (teks) => {
+alpha.sendMessage(from, `Jawaban ${command} salah!`, text, {quoted: mek})
+}
+
 const reply2 = (teks) => {
 alpha.sendMessage(from, teks, text, {
 "contextInfo": {
@@ -2682,7 +2695,7 @@ if (budy.toLowerCase() == jwb_tbk) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var tgbr0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
+var tgbr0 = `☑️ *${jwb_benar}*\nfrom ${yg_jawab} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tgbr1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -2701,7 +2714,7 @@ quoted: mek, sendEphemeral: true
 delete tebakgambar[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakgambar.json", JSON.stringify(tebakgambar))
 } else {
-alpha.sendMessage(from, "Salah", text, {quoted: mek})
+menjawab(`Game ${command}${enter}${enter}${yg_jwb}${salah_jwb}`)
 }
 }
 // TEBAKGAMBAR2
@@ -2711,7 +2724,7 @@ if (budy.toLowerCase() == jwb_tbk2) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var tgbr20 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
+var tgbr20 = `☑️ *${jwb_benar}*\nfrom ${yg_jawab} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tgbr21 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -2730,7 +2743,7 @@ quoted: mek, sendEphemeral: true
 delete tebakgambar2[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakgambar2.json", JSON.stringify(tebakgambar2))
 } else {
-alpha.sendMessage(from, "Salah", text, {quoted: mek})
+menjawab(`Game ${command}${enter}${enter}${yg_jwb}${salah_jwb}`)
 }
 } 
 // TEBAKGAMBAR3
@@ -2740,7 +2753,7 @@ if (budy.toLowerCase() == jwb_tbk3) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var tgbr30 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
+var tgbr30 = `☑️ *${jwb_benar}*\nfrom ${yg_jawab} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tgbr31 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -2759,7 +2772,7 @@ quoted: mek, sendEphemeral: true
 delete tebakgambar3[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakgambar3.json", JSON.stringify(tebakgambar3))
 } else {
-alpha.sendMessage(from, "Salah", text, {quoted: mek})
+menjawab(`Game ${command}${enter}${enter}${yg_jwb}${salah_jwb}`)
 }
 } 
 // TEBAKGAMBAR4
@@ -2769,7 +2782,7 @@ if (budy.toLowerCase() == jwb_tbk4) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var tgbr40 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
+var tgbr40 = `☑️ *${jwb_benar}*\nfrom ${yg_jawab} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tgbr41 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -2788,7 +2801,7 @@ quoted: mek, sendEphemeral: true
 delete tebakgambar4[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakgambar4.json", JSON.stringify(tebakgambar4))
 } else {
-alpha.sendMessage(from, "Salah", text, {quoted: mek})
+menjawab(`Game ${command}${enter}${enter}${yg_jwb}${salah_jwb}`)
 }
 }
 // TEBAKGAMBAR5
@@ -2798,7 +2811,7 @@ if (budy.toLowerCase() == jwb_tbk5) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var tgbr50 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
+var tgbr50 = `☑️ *${jwb_benar}*\nfrom ${yg_jawab} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tgbr51 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -2817,7 +2830,7 @@ quoted: mek, sendEphemeral: true
 delete tebakgambar5[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakgambar5.json", JSON.stringify(tebakgambar5))
 } else {
-alpha.sendMessage(from, "Salah", text, {quoted: mek})
+menjawab(`Game ${command}${enter}${enter}${yg_jwb}${salah_jwb}`)
 }
 }
 // CAKLONTONG
@@ -2827,7 +2840,7 @@ if (budy.toLowerCase() == jwb_cak) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var cklt0 = `☑️ *${selamet}*\ninfo : ${informasi}\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
+var cklt0 = `☑️ *${jwb_benar}*\ninfo : ${informasi}\nfrom ${yg_jawab} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var cklt1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -2846,7 +2859,7 @@ quoted: mek, sendEphemeral: true
 delete caklontong[sender.split('@')[0]]
 fs.writeFileSync("./game/caklontong.json", JSON.stringify(caklontong))
 } else {
-alpha.sendMessage(from, "Salah", text, {quoted: mek})
+menjawab(`Game ${command}${enter}${enter}${yg_jwb}${salah_jwb}`)
 }
 }
 // CAKLONTONG2
@@ -2856,7 +2869,7 @@ if (budy.toLowerCase() == jwb_cak2) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var ckl20 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
+var ckl20 = `☑️ *${jwb_benar}*\nfrom ${yg_jawab} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var ckl21 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -2875,7 +2888,7 @@ quoted: mek, sendEphemeral: true
 delete caklontong2[sender.split('@')[0]]
 fs.writeFileSync("./game/caklontong2.json", JSON.stringify(caklontong2))
 } else {
-alpha.sendMessage(from, "Salah", text, {quoted: mek})
+menjawab(`Game ${command}${enter}${enter}${yg_jwb}${salah_jwb}`)
 }
 }
 // CAKLONTONG3
@@ -2885,7 +2898,7 @@ if (budy.toLowerCase() == jwb_cak3) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var ckl30 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
+var ckl30 = `☑️ *${jwb_benar}*\nfrom ${yg_jawab} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var ckl31 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -2904,7 +2917,7 @@ quoted: mek, sendEphemeral: true
 delete caklontong3[sender.split('@')[0]]
 fs.writeFileSync("./game/caklontong3.json", JSON.stringify(caklontong3))
 } else {
-alpha.sendMessage(from, "Salah", text, {quoted: mek})
+menjawab(`Game ${command}${enter}${enter}${yg_jwb}${salah_jwb}`)
 }
 }
 // TEBAKJENAKA
@@ -2914,7 +2927,7 @@ if (budy.toLowerCase() == jwb_jen) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var jnk0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
+var jnk0 = `☑️ *${jwb_benar}*\nfrom ${yg_jawab} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var jnk1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -2933,7 +2946,7 @@ quoted: mek, sendEphemeral: true
 delete tebakjenaka[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakjenaka.json", JSON.stringify(tebakjenaka))
 } else {
-alpha.sendMessage(from, "Salah", text, {quoted: mek})
+menjawab(`Game ${command}${enter}${enter}${yg_jwb}${salah_jwb}`)
 }
 }
 // SUSUNKATA
@@ -2943,7 +2956,7 @@ if (budy.toLowerCase() == jwb_susun) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var ssnk0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
+var ssnk0 = `☑️ *${jwb_benar}*\nfrom ${yg_jawab} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var ssnk1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -2962,7 +2975,7 @@ quoted: mek, sendEphemeral: true
 delete susunkata[sender.split('@')[0]]
 fs.writeFileSync("./game/susunkata.json", JSON.stringify(susunkata))
 } else {
-alpha.sendMessage(from, "Salah", text, {quoted: mek})
+menjawab(`Game ${command}${enter}${enter}${yg_jwb}${salah_jwb}`)
 }
 }
 // SUSUNKATA2
@@ -2972,7 +2985,7 @@ if (budy.toLowerCase() == jwb_susun2) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var ssn20 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
+var ssn20 = `☑️ *${jwb_benar}*\nfrom ${yg_jawab} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var ssn21 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -2991,7 +3004,7 @@ quoted: mek, sendEphemeral: true
 delete susunkata2[sender.split('@')[0]]
 fs.writeFileSync("./game/susunkata2.json", JSON.stringify(susunkata2))
 } else {
-alpha.sendMessage(from, "Salah", text, {quoted: mek})
+menjawab(`Game ${command}${enter}${enter}${yg_jwb}${salah_jwb}`)
 }
 }
 // ASAHOTAK
@@ -3001,7 +3014,7 @@ if (budy.toLowerCase() == jwb_asah) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var atk0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
+var atk0 = `☑️ *${jwb_benar}*\nfrom ${yg_jawab} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var atk1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3020,7 +3033,7 @@ quoted: mek, sendEphemeral: true
 delete asahotak[sender.split('@')[0]]
 fs.writeFileSync("./game/asahotak.json", JSON.stringify(asahotak))
 } else {
-alpha.sendMessage(from, "Salah", text, {quoted: mek})
+menjawab(`Game ${command}${enter}${enter}${yg_jwb}${salah_jwb}`)
 }
 }
 // TEBAKKIMIA
@@ -3030,7 +3043,7 @@ if (budy.toLowerCase() == jwb_kimia) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var tkim0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
+var tkim0 = `☑️ *${jwb_benar}*\nfrom ${yg_jawab} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tkim1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3049,7 +3062,7 @@ quoted: mek, sendEphemeral: true
 delete tebakkimia[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakkimia.json", JSON.stringify(tebakkimia))
 } else {
-alpha.sendMessage(from, "Salah", text, {quoted: mek})
+menjawab(`Game ${command}${enter}${enter}${yg_jwb}${salah_jwb}`)
 }
 }
 // TEBAKKATA
@@ -3059,7 +3072,7 @@ if (budy.toLowerCase() == jwb_kata) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var tbkt_0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
+var tbkt_0 = `☑️ *${jwb_benar}*\nfrom ${yg_jawab} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tbkt_1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3078,7 +3091,7 @@ quoted: mek, sendEphemeral: true
 delete tebakkata[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakkata.json", JSON.stringify(tebakkata))
 } else {
-alpha.sendMessage(from, "Salah", text, {quoted: mek})
+menjawab(`Game ${command}${enter}${enter}${yg_jwb}${salah_jwb}`)
 }
 }
 // sambungkata
@@ -3088,7 +3101,7 @@ if (budy.toLowerCase() == jwb_sbg) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var skt0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
+var skt0 = `☑️ *${jwb_benar}*\nfrom ${yg_jawab} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var skt1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3107,7 +3120,7 @@ quoted: mek, sendEphemeral: true
 delete sambungkata[sender.split('@')[0]]
 fs.writeFileSync("./game/sambungkata.json", JSON.stringify(sambungkata))
 } else {
-alpha.sendMessage(from, "Salah", text, {quoted: mek})
+menjawab(`Game ${command}${enter}${enter}${yg_jwb}${salah_jwb}`)
 }
 }
 // TEBAKLIRIK
@@ -3117,7 +3130,7 @@ if (budy.toLowerCase() == jwb_lirik) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var tlir0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
+var tlir0 = `☑️ *${jwb_benar}*\nfrom ${yg_jawab} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tlir1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3136,7 +3149,7 @@ quoted: mek, sendEphemeral: true
 delete tebaklirik[sender.split('@')[0]]
 fs.writeFileSync("./game/tebaklirik.json", JSON.stringify(tebaklirik))
 } else {
-alpha.sendMessage(from, "Salah", text, {quoted: mek})
+menjawab(`Game ${command}${enter}${enter}${yg_jwb}${salah_jwb}`)
 }
 }
 // TEBAKKALIMAT
@@ -3146,7 +3159,7 @@ if (budy.toLowerCase() == jwb_kali) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var tkl0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
+var tkl0 = `☑️ *${jwb_benar}*\nfrom ${yg_jawab} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tkl1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3165,7 +3178,7 @@ quoted: mek, sendEphemeral: true
 delete tebakkalimat[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakkalimat.json", JSON.stringify(tebakkalimat))
 } else {
-alpha.sendMessage(from, "Salah", text, {quoted: mek})
+menjawab(`Game ${command}${enter}${enter}${yg_jwb}${salah_jwb}`)
 }
 }
 // TEBAKAN
@@ -3175,7 +3188,7 @@ if (budy.toLowerCase() == jwb_tbkn) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var tbkn0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
+var tbkn0 = `☑️ *${jwb_benar}*\nfrom ${yg_jawab} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tbkn1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3194,7 +3207,7 @@ quoted: mek, sendEphemeral: true
 delete tebakan[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakan.json", JSON.stringify(tebakan))
 } else {
-alpha.sendMessage(from, "Salah", text, {quoted: mek})
+menjawab(`Game ${command}${enter}${enter}${yg_jwb}${salah_jwb}`)
 }
 }
 // TEBAKAN2
@@ -3204,7 +3217,7 @@ if (budy.toLowerCase() == jwb_tbkn2) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var tbkn20 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
+var tbkn20 = `☑️ *${jwb_benar}*\nfrom ${yg_jawab} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tbkn21 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3223,7 +3236,7 @@ quoted: mek, sendEphemeral: true
 delete tebakan2[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakan2.json", JSON.stringify(tebakan2))
 } else {
-alpha.sendMessage(from, "Salah", text, {quoted: mek})
+menjawab(`Game ${command}${enter}${enter}${yg_jwb}${salah_jwb}`)
 }
 }
 // SIAPAAKU
@@ -3233,7 +3246,7 @@ if (budy.toLowerCase() == jwb_siapa) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var spa0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
+var spa0 = `☑️ *${jwb_benar}*\nfrom ${yg_jawab} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var spa1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3252,7 +3265,7 @@ quoted: mek, sendEphemeral: true
 delete siapaaku[sender.split('@')[0]]
 fs.writeFileSync("./game/siapaaku.json", JSON.stringify(siapaaku))
 } else {
-alpha.sendMessage(from, "Salah", text, {quoted: mek})
+menjawab(`Game ${command}${enter}${enter}${yg_jwb}${salah_jwb}`)
 }
 }
 // MATH
@@ -3262,7 +3275,7 @@ if (budy.toLowerCase() == jwb_math) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var mth0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
+var mth0 = `☑️ *${jwb_benar}*\nfrom ${yg_jawab} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var mth1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3281,7 +3294,7 @@ quoted: mek, sendEphemeral: true
 delete math[sender.split('@')[0]]
 fs.writeFileSync("./game/math.json", JSON.stringify(math))
 } else {
-alpha.sendMessage(from, "Salah", text, {quoted: mek})
+menjawab(`Game ${command}${enter}${enter}${yg_jwb}${salah_jwb}`)
 }
 }
 // MATH2
@@ -3291,7 +3304,7 @@ if (budy.toLowerCase() == jwb_math2) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var mth20 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
+var mth20 = `☑️ *${jwb_benar}*\nfrom ${yg_jawab} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var mth21 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3310,7 +3323,7 @@ quoted: mek, sendEphemeral: true
 delete math2[sender.split('@')[0]]
 fs.writeFileSync("./game/math2.json", JSON.stringify(math2))
 } else {
-alpha.sendMessage(from, "Salah", text, {quoted: mek})
+menjawab(`Game ${command}${enter}${enter}${yg_jwb}${salah_jwb}`)
 }
 }
 // MATH3
@@ -3320,7 +3333,7 @@ if (budy.toLowerCase() == jwb_math3) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var mth30 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
+var mth30 = `☑️ *${jwb_benar}*\nfrom ${yg_jawab} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var mth31 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3339,7 +3352,7 @@ quoted: mek, sendEphemeral: true
 delete math3[sender.split('@')[0]]
 fs.writeFileSync("./game/math3.json", JSON.stringify(math3))
 } else {
-alpha.sendMessage(from, "Salah", text, {quoted: mek})
+menjawab(`Game ${command}${enter}${enter}${yg_jwb}${salah_jwb}`)
 }
 }
 // FAMILY 100
@@ -3349,7 +3362,7 @@ if (budy.toLowerCase() == jwb_f100) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var fmly0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
+var fmly0 = `☑️ *${jwb_benar}*\nfrom ${yg_jawab} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var fmly1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3368,7 +3381,7 @@ quoted: mek, sendEphemeral: true
 delete family100[sender.split('@')[0]]
 fs.writeFileSync("./game/family100.json", JSON.stringify(family100))
 } else {
-alpha.sendMessage(from, "Salah", text, {quoted: mek})
+menjawab(`Game ${command}${enter}${enter}${yg_jwb}${salah_jwb}`)
 }
 }
 // SIAPAKAH
@@ -3378,7 +3391,7 @@ if (budy.toLowerCase() == jwb_siapakah) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var saha0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
+var saha0 = `☑️ *${jwb_benar}*\nfrom ${yg_jawab} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var saha1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3397,7 +3410,7 @@ quoted: mek, sendEphemeral: true
 delete siapakah[sender.split('@')[0]]
 fs.writeFileSync("./game/siapakah.json", JSON.stringify(siapakah))
 } else {
-alpha.sendMessage(from, "Salah", text, {quoted: mek})
+menjawab(`Game ${command}${enter}${enter}${yg_jwb}${salah_jwb}`)
 }
 }
 // TEBAKANIME
@@ -3407,7 +3420,7 @@ if (budy.toLowerCase() == jwb_anime) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var anim0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
+var anim0 = `☑️ *${jwb_benar}*\nfrom ${yg_jawab} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var anim1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3426,7 +3439,7 @@ quoted: mek, sendEphemeral: true
 delete tebakanime[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakanime.json", JSON.stringify(tebakanime))
 } else {
-alpha.sendMessage(from, "Salah", text, {quoted: mek})
+menjawab(`Game ${command}${enter}${enter}${yg_jwb}${salah_jwb}`)
 }
 }
 // TEBAKBENDERA
@@ -3436,7 +3449,7 @@ if (budy.toLowerCase() == jwb_flag) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var htbr0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
+var htbr0 = `☑️ *${jwb_benar}*\nfrom ${yg_jawab} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var htbr1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3455,7 +3468,7 @@ quoted: mek, sendEphemeral: true
 delete tebakbendera[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakbendera.json", JSON.stringify(tebakbendera))
 } else {
-alpha.sendMessage(from, "Salah", text, {quoted: mek})
+menjawab(`Game ${command}${enter}${enter}${yg_jwb}${salah_jwb}`)
 }
 }
 // TEBAKKABUPATEN
@@ -3465,7 +3478,7 @@ if (budy.toLowerCase() == jwb_kab) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var htbr0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
+var htbr0 = `☑️ *${jwb_benar}*\nfrom ${yg_jawab} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var htbr1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3484,7 +3497,7 @@ quoted: mek, sendEphemeral: true
 delete tebakkabupaten[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakkabupaten.json", JSON.stringify(tebakkabupaten))
 } else {
-alpha.sendMessage(from, "Salah", text, {quoted: mek})
+menjawab(`Game ${command}${enter}${enter}${yg_jwb}${salah_jwb}`)
 }
 }
 // RECAPTCHA
@@ -3494,7 +3507,7 @@ if (budy.toLowerCase() == jwb_captcha) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var capt0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
+var capt0 = `☑️ *${jwb_benar}*\nfrom ${yg_jawab} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var capt1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3513,7 +3526,7 @@ quoted: mek, sendEphemeral: true
 delete recaptcha[sender.split('@')[0]]
 fs.writeFileSync("./game/recaptcha.json", JSON.stringify(recaptcha))
 } else {
-alpha.sendMessage(from, "Salah", text, {quoted: mek})
+menjawab(`Game ${command}${enter}${enter}${yg_jwb}${salah_jwb}`)
 }
 }
 // TEBAKAPLIKASI
@@ -3523,7 +3536,7 @@ if (budy.toLowerCase() == jwb_apk) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var htbr0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
+var htbr0 = `☑️ *${jwb_benar}*\nfrom ${yg_jawab} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var htbr1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3542,7 +3555,7 @@ quoted: mek, sendEphemeral: true
 delete tebakaplikasi[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakaplikasi.json", JSON.stringify(tebakaplikasi))
 } else {
-alpha.sendMessage(from, "Salah", text, {quoted: mek})
+menjawab(`Game ${command}${enter}${enter}${yg_jwb}${salah_jwb}`)
 }
 }
 // TEBAKGABUT
@@ -3552,7 +3565,7 @@ if (budy.toLowerCase() == jwb_gbt) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var tgbt0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
+var tgbt0 = `☑️ *${jwb_benar}*\nfrom ${yg_jawab} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tgbt1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3571,7 +3584,7 @@ quoted: mek, sendEphemeral: true
 delete tebakgabut[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakgabut.json", JSON.stringify(tebakgabut))
 } else {
-alpha.sendMessage(from, "Salah", text, {quoted: mek})
+menjawab(`Game ${command}${enter}${enter}${yg_jwb}${salah_jwb}`)
 }
 }
 // TEBAKLAGU
@@ -3581,7 +3594,7 @@ if (budy.toLowerCase() == jwb_lagu) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var htbr0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
+var htbr0 = `☑️ *${jwb_benar}*\nfrom ${yg_jawab} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var htbr1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3600,7 +3613,7 @@ quoted: mek, sendEphemeral: true
 delete tebaklagu[sender.split('@')[0]]
 fs.writeFileSync("./game/tebaklagu.json", JSON.stringify(tebaklagu))
 } else {
-alpha.sendMessage(from, "Salah", text, {quoted: mek})
+menjawab(`Game ${command}${enter}${enter}${yg_jwb}${salah_jwb}`)
 }
 }
 // TEBAKLUCU
@@ -3610,7 +3623,7 @@ if (budy.toLowerCase() == jwb_lucu) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var htbr0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
+var htbr0 = `☑️ *${jwb_benar}*\nfrom ${yg_jawab} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var htbr1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3629,7 +3642,7 @@ quoted: mek, sendEphemeral: true
 delete tebaklucu[sender.split('@')[0]]
 fs.writeFileSync("./game/tebaklucu.json", JSON.stringify(tebaklucu))
 } else {
-alpha.sendMessage(from, "Salah", text, {quoted: mek})
+menjawab(`Game ${command}${enter}${enter}${yg_jwb}${salah_jwb}`)
 }
 }
 // TESWIBU
@@ -3639,7 +3652,7 @@ if (budy.toLowerCase() == jwb_wibu) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var htbr0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
+var htbr0 = `☑️ *${jwb_benar}*\nfrom ${yg_jawab} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var htbr1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3658,7 +3671,7 @@ quoted: mek, sendEphemeral: true
 delete teswibu[sender.split('@')[0]]
 fs.writeFileSync("./game/teswibu.json", JSON.stringify(teswibu))
 } else {
-alpha.sendMessage(from, "Salah", text, {quoted: mek})
+menjawab(`Game ${command}${enter}${enter}${yg_jwb}${salah_jwb}`)
 }
 }
 
@@ -3669,7 +3682,7 @@ if (budy.toLowerCase() == jwb_hwn) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var hwn0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
+var hwn0 = `☑️ *${jwb_benar}*\nfrom ${yg_jawab} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var hwn1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3688,7 +3701,7 @@ quoted: mek, sendEphemeral: true
 delete tebakhewan[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakhewan.json", JSON.stringify(tebakhewan))
 } else {
-alpha.sendMessage(from, "Salah", text, {quoted: mek})
+menjawab(`Game ${command}${enter}${enter}${yg_jwb}${salah_jwb}`)
 }
 }
 ///function
@@ -12469,8 +12482,8 @@ case 'anime':
 let animek_2 = await getBuffer(`https://hadi-api.herokuapp.com/api/anime`);
 const animek_3 = await alpha.prepareMessage(from, animek_2, MessageType.image, { thumbnail:thumb_nime})
 let animek_4 = animek_3.message["ephemeralMessage"] ? animek_3.message.ephemeralMessage : animek_3
-animek_6 =`「 *Nih Hasilnya* 」
-*${emoj} kak :* _@${sender.split("@")[0]}_`
+animek_6 =`「 *${jwb_oke}* 」
+*${emoj} By :* ${yg_jawab}`
 const animek_7 = [
 {buttonId: 'x_menu', buttonText: {displayText: `⬅️ Menu`}, type: 1},
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
@@ -13261,7 +13274,7 @@ break
 case 'burung':
 rnim_ = await fetchJson(`https://some-random-api.ml/img/bird`);
 let rnim_1 = await getBuffer(rnim_.link);
-rnim_5 =`「 *Nih Hasilnya* 」
+rnim_5 =`「 *${jwb_oke}* 」
 *${emoj} kak :* _@${sender.split("@")[0]}_\nKetik .fburung untuk melihat fakta en`
 alpha.sendMessage(from, rnim_1, MessageType.image,{caption:rnim_5,
 "contextInfo": {
@@ -13285,7 +13298,7 @@ break
 case 'kucing':
 rcat_ = await fetchJson(`https://some-random-api.ml/img/cat`);
 let rcat_1 = await getBuffer(rcat_.link);
-rcat_5 =`「 *Nih Hasilnya* 」
+rcat_5 =`「 *${jwb_oke}* 」
 *${emoj} kak :* _@${sender.split("@")[0]}_\nKetik .fkucing untuk melihat fakta en`
 alpha.sendMessage(from, rcat_1, MessageType.image,{caption:rcat_5,
 "contextInfo": {
@@ -13309,7 +13322,7 @@ break
 case 'anjing':
 rdog_ = await fetchJson(`https://some-random-api.ml/img/dog`);
 let rdog_1 = await getBuffer(rdog_.link);
-rdog_5 =`「 *Nih Hasilnya* 」
+rdog_5 =`「 *${jwb_oke}* 」
 *${emoj} kak :* _@${sender.split("@")[0]}_\nKetik .fanjing untuk melihat fakta en`
 alpha.sendMessage(from, rdog_1, MessageType.image,{caption:rdog_5,
 "contextInfo": {
@@ -13333,7 +13346,7 @@ break
 case 'rubah':
 rfox_ = await fetchJson(`https://some-random-api.ml/img/fox`);
 let rfox_1 = await getBuffer(rfox_.link);
-rfox_5 =`「 *Nih Hasilnya* 」
+rfox_5 =`「 *${jwb_oke}* 」
 *${emoj} kak :* _@${sender.split("@")[0]}_\nKetik .frubah untuk melihat fakta en`
 alpha.sendMessage(from, rfox_1, MessageType.image,{caption:rfox_5,
 "contextInfo": {
@@ -13357,7 +13370,7 @@ break
 case 'koala':
 rkoa_ = await fetchJson(`https://some-random-api.ml/img/koala`);
 let rkoa_1 = await getBuffer(rkoa_.link);
-rkoa_5 =`「 *Nih Hasilnya* 」
+rkoa_5 =`「 *${jwb_oke}* 」
 *${emoj} kak :* _@${sender.split("@")[0]}_\nKetik .fkoala untuk melihat fakta en`
 alpha.sendMessage(from, rkoa_1, MessageType.image,{caption:rkoa_5,
 "contextInfo": {
@@ -13381,7 +13394,7 @@ break
 case 'panda':
 rpan_ = await fetchJson(`https://some-random-api.ml/img/panda`);
 let rpan_1 = await getBuffer(rpan_.link);
-rpan_5 =`「 *Nih Hasilnya* 」
+rpan_5 =`「 *${jwb_oke}* 」
 *${emoj} kak :* _@${sender.split("@")[0]}_\nKetik .fpanda untuk melihat fakta en`
 alpha.sendMessage(from, rpan_1, MessageType.image,{caption:rpan_5,
 "contextInfo": {
@@ -13405,7 +13418,7 @@ break
 case 'red_panda':
 rred_ = await fetchJson(`https://some-random-api.ml/img/red_panda`);
 let rred_1 = await getBuffer(rred_.link);
-rred_5 =`「 *Nih Hasilnya* 」
+rred_5 =`「 *${jwb_oke}* 」
 *${emoj} kak :* _@${sender.split("@")[0]}_\nKetik .fred_panda untuk melihat fakta en`
 alpha.sendMessage(from, rred_1, MessageType.image,{caption:rred_5,
 "contextInfo": {
@@ -14187,8 +14200,8 @@ wnime_ = await fetchJson(`https://x-restapi.herokuapp.com/api/random-wallanime?a
 let wnime_1 = await getBuffer(wnime_.link);
 const wnime_3 = await alpha.prepareMessage(from, wnime_1, MessageType.image, { thumbnail:thumb_nime})
 let wnime_2 = wnime_3.message["ephemeralMessage"] ? wnime_3.message.ephemeralMessage : wnime_3
-wnime_5 =`「 *Nih Hasilnya* 」
-*${emoj} kak :* _@${sender.split("@")[0]}_`
+wnime_5 =`「 *${jwb_oke}* 」
+*${emoj} By :* ${yg_jawab}`
 const wnime_6 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
@@ -14219,8 +14232,8 @@ shta_ = await fetchJson(`https://x-restapi.herokuapp.com/api/random-shota?apikey
 let shta_1 = await getBuffer(shta_.link);
 const shta_3 = await alpha.prepareMessage(from, shta_1, MessageType.image, { thumbnail:thumb_miku})
 let shta_2 = shta_3.message["ephemeralMessage"] ? shta_3.message.ephemeralMessage : shta_3
-shta_5 =`「 *Nih Hasilnya* 」
-*${emoj} kak :* _@${sender.split("@")[0]}_`
+shta_5 =`「 *${jwb_oke}* 」
+*${emoj} By :* ${yg_jawab}`
 const shta_6 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
@@ -14251,8 +14264,8 @@ neku_ = await fetchJson(`https://x-restapi.herokuapp.com/api/random-neko?apikey=
 let neku_1 = await getBuffer(neku_.link);
 const neku_3 = await alpha.prepareMessage(from, neku_1, MessageType.image, { thumbnail:thumb_miku})
 let neku_2 = neku_3.message["ephemeralMessage"] ? neku_3.message.ephemeralMessage : neku_3
-neku_5 =`「 *Nih Hasilnya* 」
-*${emoj} kak :* _@${sender.split("@")[0]}_`
+neku_5 =`「 *${jwb_oke}* 」
+*${emoj} By :* ${yg_jawab}`
 const neku_6 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
@@ -14283,8 +14296,8 @@ kmn_ = await fetchJson(`https://x-restapi.herokuapp.com/api/random-kemono?apikey
 let kmn_1 = await getBuffer(kmn_.link);
 const kmn_3 = await alpha.prepareMessage(from, kmn_1, MessageType.image, { thumbnail:thumb_miku})
 let kmn_2 = kmn_3.message["ephemeralMessage"] ? kmn_3.message.ephemeralMessage : kmn_3
-kmn_5 =`「 *Nih Hasilnya* 」
-*${emoj} kak :* _@${sender.split("@")[0]}_`
+kmn_5 =`「 *${jwb_oke}* 」
+*${emoj} By :* ${yg_jawab}`
 const kmn_6 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
@@ -14315,8 +14328,8 @@ loly_ = await fetchJson(`https://x-restapi.herokuapp.com/api/random-loli?apikey=
 let loly_1 = await getBuffer(loly_.link);
 const loly_3 = await alpha.prepareMessage(from, loly_1, MessageType.image, { thumbnail:thumb_miku})
 let loly_2 = loly_3.message["ephemeralMessage"] ? loly_3.message.ephemeralMessage : loly_3
-loly_5 =`「 *Nih Hasilnya* 」
-*${emoj} kak :* _@${sender.split("@")[0]}_`
+loly_5 =`「 *${jwb_oke}* 」
+*${emoj} By :* ${yg_jawab}`
 const loly_6 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
@@ -14347,8 +14360,8 @@ hsb_ = await fetchJson(`https://x-restapi.herokuapp.com/api/random-husbu?apikey=
 let hsb_1 = await getBuffer(hsb_.link);
 const hsb_3 = await alpha.prepareMessage(from, hsb_1, MessageType.image, { thumbnail:thumb_miku})
 let hsb_2 = hsb_3.message["ephemeralMessage"] ? hsb_3.message.ephemeralMessage : hsb_3
-hsb_5 =`「 *Nih Hasilnya* 」
-*${emoj} kak :* _@${sender.split("@")[0]}_`
+hsb_5 =`「 *${jwb_oke}* 」
+*${emoj} By :* ${yg_jawab}`
 const hsb_6 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
@@ -14380,7 +14393,7 @@ let cehor_1 = await getBuffer(cehor_.thumb);
 const cehor_3 = await alpha.prepareMessage(from, cehor_1, MessageType.image, { thumbnail:thumb_miku})
 let cehor_2 = cehor_3.message["ephemeralMessage"] ? cehor_3.message.ephemeralMessage : cehor_3
 let cehor_4 = await alpha.getStatus(sender)
-cehor_5 =`「 *Nih Hasilnya* 」
+cehor_5 =`「 *${jwb_oke}* 」
 *${emoj} kak :* ${cehor_.judul}
 *🔖 Desc :* ${cehor_.desc}`
 const cehor_6 = [
@@ -14413,8 +14426,8 @@ drjok_ = await fetchJson(`https://x-restapi.herokuapp.com/api/random-darkjoke?ap
 let drjok_1 = await getBuffer(drjok_.urlimage);
 const drjok_3 = await alpha.prepareMessage(from, drjok_1, MessageType.image, { thumbnail:thumb_dark})
 let drjok_2 = drjok_3.message["ephemeralMessage"] ? drjok_3.message.ephemeralMessage : drjok_3
-drjok_5 =`「 *Nih Hasilnya* 」
-*${emoj} kak :* _@${sender.split("@")[0]}_`
+drjok_5 =`「 *${jwb_oke}* 」
+*${emoj} By :* ${yg_jawab}`
 const drjok_6 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
@@ -14453,8 +14466,8 @@ xnsfw_ = resurl.url
 let xnsfw_1 = await getBuffer(xnsfw_)
 const xnsfw_3 = await alpha.prepareMessage(from, xnsfw_1, MessageType.image, { thumbnail:thumb_miku})
 let xnsfw_2 = xnsfw_3.message["ephemeralMessage"] ? xnsfw_3.message.ephemeralMessage : xnsfw_3
-xnsfw_5 =`「 *Nih Hasilnya* 」
-*${emoj} kak :* _@${sender.split("@")[0]}_`
+xnsfw_5 =`「 *${jwb_oke}* 」
+*${emoj} By :* ${yg_jawab}`
 const xnsfw_6 = [
 {buttonId: 'x_menu', buttonText: {displayText: `⬅️ Menu`}, type: 1},
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
@@ -14486,8 +14499,8 @@ gimg_ = resurl.url
 let gimg_1 = await getBuffer(gimg_)
 const gimg_3 = await alpha.prepareMessage(from, gimg_1, MessageType.image, { thumbnail:thumb_miku})
 let gimg_2 = gimg_3.message["ephemeralMessage"] ? gimg_3.message.ephemeralMessage : gimg_3
-gimg_5 =`「 *Nih Hasilnya* 」
-*${emoj} kak :* _@${sender.split("@")[0]}_`
+gimg_5 =`「 *${jwb_oke}* 」
+*${emoj} By :* ${yg_jawab}`
 const gimg_6 = [
 {buttonId: 'x_menu', buttonText: {displayText: `⬅️ Menu`}, type: 1},
 {buttonId: `${command} ${q}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
@@ -15000,8 +15013,8 @@ let dom_= ran_[Math.floor(Math.random() * ran_.length)];
 let pinterest_1 = await getBuffer(dom_)
 const pinterest_3 = await alpha.prepareMessage(from, pinterest_1, MessageType.image, { thumbnail:thumb_pin})
 let pinterest_2 = pinterest_3.message["ephemeralMessage"] ? pinterest_3.message.ephemeralMessage : pinterest_3
-pinterest_5 =`「 *Nih Hasilnya* 」
-*${emoj} kak :* _@${sender.split("@")[0]}_`
+pinterest_5 =`「 *${jwb_oke}* 」
+*${emoj} By :* ${yg_jawab}`
 const pinterest_6 = [
 {buttonId: 'x_menu', buttonText: {displayText: `⬅️ Menu`}, type: 1},
 {buttonId: `${command} ${q}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
@@ -15432,8 +15445,8 @@ ajgnya = jing.message
 let bajg = await getBuffer(ajgnya)
 const ajg1 = await alpha.prepareMessage(from, bajg, MessageType.image, { thumbnail:thumb_miku})
 let ajg2 = ajg1.message["ephemeralMessage"] ? ajg1.message.ephemeralMessage : ajg1
-ajg3 =`「 *Nih Hasilnya* 」
-*${emoj} kak :* _@${sender.split("@")[0]}_`
+ajg3 =`「 *${jwb_oke}* 」
+*${emoj} By :* ${yg_jawab}`
 const ajg4 = [
 {buttonId: 'x_menu', buttonText: {displayText: `⬅️ Menu`}, type: 1},
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
@@ -15469,7 +15482,7 @@ ipe4 = ipinf_1.loc
 ipe5 = ipinf_1.org
 ipe6 = ipinf_1.postal
 ipe7 = ipinf_1.timezone
-ipinf_5 =`「 *Nih Hasilnya* 」
+ipinf_5 =`「 *${jwb_oke}* 」
 • IP : ${ipe}
 • Kota : ${ipe1}
 • Wilayah : ${ipe2}
@@ -17469,8 +17482,8 @@ if (q5 == "waifu_1"){
 let wifu_2 = await getBuffer(`https://velgrynd.herokuapp.com/api/image/waifu?apikey=slAuPQiV`);
 const wifu_3 = await alpha.prepareMessage(from, wifu_2, MessageType.image, { thumbnail:thumb_nime})
 let wifu_4 = wifu_3.message["ephemeralMessage"] ? wifu_3.message.ephemeralMessage : wifu_3
-wifu_6 =`「 *Nih Hasilnya* 」
-*${emoj} kak :* _@${sender.split("@")[0]}_`
+wifu_6 =`「 *${jwb_oke}* 」
+*${emoj} By :* ${yg_jawab}`
 const wifu_7 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
@@ -17500,8 +17513,8 @@ if (q5 == "waifu_2"){
 let wifu2_2 = await getBuffer(`https://api.lolhuman.xyz/api/random/waifu?apikey=${lolkey}`);
 const wifu2_3 = await alpha.prepareMessage(from, wifu2_2, MessageType.image, { thumbnail:thumb_nime})
 let wifu2_4 = wifu2_3.message["ephemeralMessage"] ? wifu2_3.message.ephemeralMessage : wifu2_3
-wifu2_6 =`「 *Nih Hasilnya* 」
-*${emoj} kak :* _@${sender.split("@")[0]}_`
+wifu2_6 =`「 *${jwb_oke}* 」
+*${emoj} By :* ${yg_jawab}`
 const wifu2_7 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
@@ -17532,8 +17545,8 @@ wifu3_1 = await fetchJson(`https://x-restapi.herokuapp.com/api/random-waifu?apik
 let wifu3_2 = await getBuffer(wifu3_1.link);
 const wifu3_3 = await alpha.prepareMessage(from, wifu3_2, MessageType.image, { thumbnail:thumb_nime})
 let wifu3_4 = wifu3_3.message["ephemeralMessage"] ? wifu3_3.message.ephemeralMessage : wifu3_3
-wifu3_6 =`「 *Nih Hasilnya* 」
-*${emoj} kak :* _@${sender.split("@")[0]}_`
+wifu3_6 =`「 *${jwb_oke}* 」
+*${emoj} By :* ${yg_jawab}`
 const wifu3_7 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
