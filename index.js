@@ -2676,7 +2676,7 @@ fs.writeFileSync("./src/akinator.json", JSON.stringify(akinator))
 })
 }
 // TEBAKGAMBAR
-if (tebakgambar.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner ) {
+if (tebakgambar.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_tbk = tebakgambar[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_tbk) {
 let koin =randomNomor(1000)
@@ -2705,7 +2705,7 @@ alpha.sendMessage(from, "Salah", text, {quoted: mek})
 }
 }
 // TEBAKGAMBAR2
-if (tebakgambar2.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner ) {
+if (tebakgambar2.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_tbk2 = tebakgambar2[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_tbk2) {
 let koin =randomNomor(1000)
@@ -2734,7 +2734,7 @@ alpha.sendMessage(from, "Salah", text, {quoted: mek})
 }
 } 
 // TEBAKGAMBAR3
-if (tebakgambar3.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner ) {
+if (tebakgambar3.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_tbk3 = tebakgambar3[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_tbk3) {
 let koin =randomNomor(1000)
@@ -2763,7 +2763,7 @@ alpha.sendMessage(from, "Salah", text, {quoted: mek})
 }
 } 
 // TEBAKGAMBAR4
-if (tebakgambar4.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner ) {
+if (tebakgambar4.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_tbk4 = tebakgambar4[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_tbk4) {
 let koin =randomNomor(1000)
@@ -2792,7 +2792,7 @@ alpha.sendMessage(from, "Salah", text, {quoted: mek})
 }
 }
 // TEBAKGAMBAR5
-if (tebakgambar5.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner ) {
+if (tebakgambar5.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_tbk5 = tebakgambar5[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_tbk5) {
 let koin =randomNomor(1000)
@@ -2821,7 +2821,7 @@ alpha.sendMessage(from, "Salah", text, {quoted: mek})
 }
 }
 // CAKLONTONG
-if (caklontong.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner ) {
+if (caklontong.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_cak = caklontong[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_cak) {
 let koin =randomNomor(1000)
@@ -2850,7 +2850,7 @@ alpha.sendMessage(from, "Salah", text, {quoted: mek})
 }
 }
 // CAKLONTONG2
-if (caklontong2.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner ) {
+if (caklontong2.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_cak2 = caklontong2[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_cak2) {
 let koin =randomNomor(1000)
@@ -2879,7 +2879,7 @@ alpha.sendMessage(from, "Salah", text, {quoted: mek})
 }
 }
 // CAKLONTONG3
-if (caklontong3.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner ) {
+if (caklontong3.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_cak3 = caklontong3[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_cak3) {
 let koin =randomNomor(1000)
@@ -2908,7 +2908,7 @@ alpha.sendMessage(from, "Salah", text, {quoted: mek})
 }
 }
 // TEBAKJENAKA
-if (tebakjenaka.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner ) {
+if (tebakjenaka.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_jen = tebakjenaka[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_jen) {
 let koin =randomNomor(1000)
@@ -2937,7 +2937,7 @@ alpha.sendMessage(from, "Salah", text, {quoted: mek})
 }
 }
 // SUSUNKATA
-if (susunkata.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner ) {
+if (susunkata.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_susun = susunkata[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_susun) {
 let koin =randomNomor(1000)
@@ -2966,7 +2966,7 @@ alpha.sendMessage(from, "Salah", text, {quoted: mek})
 }
 }
 // SUSUNKATA2
-if (susunkata2.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner ) {
+if (susunkata2.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_susun2 = susunkata2[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_susun2) {
 let koin =randomNomor(1000)
@@ -2995,7 +2995,7 @@ alpha.sendMessage(from, "Salah", text, {quoted: mek})
 }
 }
 // ASAHOTAK
-if (asahotak.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner ) {
+if (asahotak.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_asah = asahotak[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_asah) {
 let koin =randomNomor(1000)
@@ -3024,7 +3024,7 @@ alpha.sendMessage(from, "Salah", text, {quoted: mek})
 }
 }
 // TEBAKKIMIA
-if (tebakkimia.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner ) {
+if (tebakkimia.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_kimia = tebakkimia[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_kimia) {
 let koin =randomNomor(1000)
@@ -3053,7 +3053,7 @@ alpha.sendMessage(from, "Salah", text, {quoted: mek})
 }
 }
 // TEBAKKATA
-if (tebakkata.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner ) {
+if (tebakkata.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_kata = tebakkata[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_kata) {
 let koin =randomNomor(1000)
@@ -3082,7 +3082,7 @@ alpha.sendMessage(from, "Salah", text, {quoted: mek})
 }
 }
 // sambungkata
-if (sambungkata.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner ) {
+if (sambungkata.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_sbg = sambungkata[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_sbg) {
 let koin =randomNomor(1000)
@@ -3111,7 +3111,7 @@ alpha.sendMessage(from, "Salah", text, {quoted: mek})
 }
 }
 // TEBAKLIRIK
-if (tebaklirik.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner ) {
+if (tebaklirik.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_lirik = tebaklirik[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_lirik) {
 let koin =randomNomor(1000)
@@ -3140,7 +3140,7 @@ alpha.sendMessage(from, "Salah", text, {quoted: mek})
 }
 }
 // TEBAKKALIMAT
-if (tebakkalimat.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner ) {
+if (tebakkalimat.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_kali = tebakkalimat[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_kali) {
 let koin =randomNomor(1000)
@@ -3169,7 +3169,7 @@ alpha.sendMessage(from, "Salah", text, {quoted: mek})
 }
 }
 // TEBAKAN
-if (tebakan.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner ) {
+if (tebakan.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_tbkn = tebakan[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_tbkn) {
 let koin =randomNomor(1000)
@@ -3198,7 +3198,7 @@ alpha.sendMessage(from, "Salah", text, {quoted: mek})
 }
 }
 // TEBAKAN2
-if (tebakan2.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner ) {
+if (tebakan2.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_tbkn2 = tebakan2[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_tbkn2) {
 let koin =randomNomor(1000)
@@ -3227,7 +3227,7 @@ alpha.sendMessage(from, "Salah", text, {quoted: mek})
 }
 }
 // SIAPAAKU
-if (siapaaku.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner ) {
+if (siapaaku.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_siapa = siapaaku[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_siapa) {
 let koin =randomNomor(1000)
@@ -3256,7 +3256,7 @@ alpha.sendMessage(from, "Salah", text, {quoted: mek})
 }
 }
 // MATH
-if (math.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner ) {
+if (math.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_math = math[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_math) {
 let koin =randomNomor(1000)
@@ -3285,7 +3285,7 @@ alpha.sendMessage(from, "Salah", text, {quoted: mek})
 }
 }
 // MATH2
-if (math2.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner ) {
+if (math2.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_math2 = math2[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_math2) {
 let koin =randomNomor(1000)
@@ -3314,7 +3314,7 @@ alpha.sendMessage(from, "Salah", text, {quoted: mek})
 }
 }
 // MATH3
-if (math3.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner ) {
+if (math3.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_math3 = math3[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_math3) {
 let koin =randomNomor(1000)
@@ -3343,7 +3343,7 @@ alpha.sendMessage(from, "Salah", text, {quoted: mek})
 }
 }
 // FAMILY 100
-if (family100.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner ) {
+if (family100.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_f100 = family100[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_f100) {
 let koin =randomNomor(1000)
@@ -3372,7 +3372,7 @@ alpha.sendMessage(from, "Salah", text, {quoted: mek})
 }
 }
 // SIAPAKAH
-if (siapakah.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner ) {
+if (siapakah.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_siapakah = siapakah[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_siapakah) {
 let koin =randomNomor(1000)
@@ -3401,7 +3401,7 @@ alpha.sendMessage(from, "Salah", text, {quoted: mek})
 }
 }
 // TEBAKANIME
-if (tebakanime.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner ) {
+if (tebakanime.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_anime = tebakanime[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_anime) {
 let koin =randomNomor(1000)
@@ -3430,7 +3430,7 @@ alpha.sendMessage(from, "Salah", text, {quoted: mek})
 }
 }
 // TEBAKBENDERA
-if (tebakbendera.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner ) {
+if (tebakbendera.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_flag = tebakbendera[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_flag) {
 let koin =randomNomor(1000)
@@ -3459,7 +3459,7 @@ alpha.sendMessage(from, "Salah", text, {quoted: mek})
 }
 }
 // TEBAKKABUPATEN
-if (tebakkabupaten.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner ) {
+if (tebakkabupaten.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_kab = tebakkabupaten[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_kab) {
 let koin =randomNomor(1000)
@@ -3488,7 +3488,7 @@ alpha.sendMessage(from, "Salah", text, {quoted: mek})
 }
 }
 // RECAPTCHA
-if (recaptcha.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner ) {
+if (recaptcha.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_captcha = recaptcha[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_captcha) {
 let koin =randomNomor(1000)
@@ -3517,7 +3517,7 @@ alpha.sendMessage(from, "Salah", text, {quoted: mek})
 }
 }
 // TEBAKAPLIKASI
-if (tebakaplikasi.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner ) {
+if (tebakaplikasi.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_apk = tebakaplikasi[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_apk) {
 let koin =randomNomor(1000)
@@ -3546,7 +3546,7 @@ alpha.sendMessage(from, "Salah", text, {quoted: mek})
 }
 }
 // TEBAKGABUT
-if (tebakgabut.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner ) {
+if (tebakgabut.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_gbt = tebakgabut[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_gbt) {
 let koin =randomNomor(1000)
@@ -3575,7 +3575,7 @@ alpha.sendMessage(from, "Salah", text, {quoted: mek})
 }
 }
 // TEBAKLAGU
-if (tebaklagu.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner ) {
+if (tebaklagu.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_lagu = tebaklagu[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_lagu) {
 let koin =randomNomor(1000)
@@ -3604,7 +3604,7 @@ alpha.sendMessage(from, "Salah", text, {quoted: mek})
 }
 }
 // TEBAKLUCU
-if (tebaklucu.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner ) {
+if (tebaklucu.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_lucu = tebaklucu[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_lucu) {
 let koin =randomNomor(1000)
@@ -3633,7 +3633,7 @@ alpha.sendMessage(from, "Salah", text, {quoted: mek})
 }
 }
 // TESWIBU
-if (teswibu.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner ) {
+if (teswibu.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_wibu = teswibu[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_wibu) {
 let koin =randomNomor(1000)
@@ -3663,7 +3663,7 @@ alpha.sendMessage(from, "Salah", text, {quoted: mek})
 }
 
 // tebakhewan
-if (tebakhewan.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe && !isOwner ) {
+if (tebakhewan.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_hwn = tebakhewan[sender.split('@')[0]]
 if (budy.toLowerCase() == jwb_hwn) {
 let koin =randomNomor(1000)
