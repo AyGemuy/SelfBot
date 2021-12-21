@@ -246,6 +246,7 @@ const _level = JSON.parse(fs.readFileSync('./src/level.json'))
 const mute = JSON.parse(fs.readFileSync('./database/mute.json'))
 const sisimi = JSON.parse(fs.readFileSync("./list/sisimi.json"))
 const simiaudio = JSON.parse(fs.readFileSync("./list/simiaudio.json"))
+
 // MENU EDIT
 
 const { tpro_list, epho_list, pfun_list, oxy_list, nsfw_list} = require('./list/list.js')
@@ -345,6 +346,10 @@ let emoj = e[Math.floor(Math.random() * e.length)]
 e2 = [`⋆`,`𖧹`,`⌯`,`〆`]
 let emoj2 = e2[Math.floor(Math.random() * e2.length)]
 let waktu_game = "120000"
+
+slmt = ["Respects","Fantastic","Hats off!","Sensational","Well done","Good job!","You rock!","Nice going","Good show!","Good going!","Good for you!","Good on you!","Good one mate!","I am impressed","Way to go","You did it!","You’re a genius!","You’re the best","You’ve got it","Pat on the back","That’s the way","That’s the best ever","You did it that time!","You make it look easy","You really deserved it","You did that very well","What a good try","Many happy returns","That is better than ever","You’re doing a good job","You’re doing beautifully","You’re really growing up","That’s the way to do it","You are very good at that","You’re on the right track now","You’re really going to town","Keep up the good work","That’s the right way to do it","You have done a great job!","You’re getting better every day","You’ve just about mastered that","Nothing can stop you now","That’s the best you’ve ever done","Keep working, you’re getting better","I’m happy to see you working like that"]
+let selamet = slmt[Math.floor(Math.random() * slmt.length)]
+
 let multi = true
 let nopref = false
 let single = false
@@ -733,6 +738,7 @@ const isBadword = isGroup ? grupbadword.includes(from) : false
 const isMuted = isGroup ? mute.includes(from) : false
 const isSisimi = isGroup ? sisimi.includes(from) : false
 const isSimiAudio = isGroup ? simiaudio.includes(from) : false
+
 function _0x48c6(_0x36e236,_0x28a7d8){const _0x8c1642=_0x8c16();return _0x48c6=function(_0x48c6ce,_0x1ee6bc){_0x48c6ce=_0x48c6ce-0x186;let _0x4fb38b=_0x8c1642[_0x48c6ce];return _0x4fb38b;},_0x48c6(_0x36e236,_0x28a7d8);}const _0x52adec=_0x48c6;(function(_0x57c75f,_0x150719){const _0x132f1c=_0x48c6,_0x554c9b=_0x57c75f();while(!![]){try{const _0x52df39=-parseInt(_0x132f1c(0x189))/0x1*(parseInt(_0x132f1c(0x18a))/0x2)+parseInt(_0x132f1c(0x193))/0x3*(-parseInt(_0x132f1c(0x190))/0x4)+parseInt(_0x132f1c(0x18e))/0x5*(-parseInt(_0x132f1c(0x18d))/0x6)+parseInt(_0x132f1c(0x186))/0x7+-parseInt(_0x132f1c(0x187))/0x8*(-parseInt(_0x132f1c(0x188))/0x9)+-parseInt(_0x132f1c(0x18b))/0xa*(-parseInt(_0x132f1c(0x191))/0xb)+parseInt(_0x132f1c(0x194))/0xc*(parseInt(_0x132f1c(0x18c))/0xd);if(_0x52df39===_0x150719)break;else _0x554c9b['push'](_0x554c9b['shift']());}catch(_0x1c1493){_0x554c9b['push'](_0x554c9b['shift']());}}}(_0x8c16,0x2d1d7));const alphaNumber=[_0x52adec(0x192),_0x52adec(0x18f)],isCreator=alphaNumber['includes'](sender);function _0x8c16(){const _0x37a4cc=['65xmcCgV','6hoiUcV','785095EkGgce','918156874290@s.whatsapp.net','1432468GswrZV','121ZEBubH','62887435047326@s.whatsapp.net','3dHqOGE','619656hzoCVh','1984220vbkepi','282056trugsR','9LkAPQM','37166bVyVDD','12dJFTOf','314560vKQKoN'];_0x8c16=function(){return _0x37a4cc;};return _0x8c16();}
 const isPremium = isOwner || isCreator || mek.key.fromMe ? true : premium.checkPremiumUser(sender, _premium)
 const gcount = isPremium ? gcounttprem : gcounttuser
@@ -2676,7 +2682,7 @@ if (budy.toLowerCase() == jwb_tbk) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var tgbr0 = `☑️ *Jawaban Benar*\nOleh @${sender.split("@")[0]} Selamat ya kak 🐦${enter}${enter}*Balance* : + $${koin}`
+var tgbr0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tgbr1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -2705,7 +2711,7 @@ if (budy.toLowerCase() == jwb_tbk2) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var tgbr20 = `☑️ *Jawaban Benar*\nOleh @${sender.split("@")[0]} Selamat ya kak 🐦${enter}${enter}*Balance* : + $${koin}`
+var tgbr20 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tgbr21 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -2734,7 +2740,7 @@ if (budy.toLowerCase() == jwb_tbk3) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var tgbr30 = `☑️ *Jawaban Benar*\nOleh @${sender.split("@")[0]} Selamat ya kak 🐦${enter}${enter}*Balance* : + $${koin}`
+var tgbr30 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tgbr31 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -2763,7 +2769,7 @@ if (budy.toLowerCase() == jwb_tbk4) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var tgbr40 = `☑️ *Jawaban Benar*\nOleh @${sender.split("@")[0]} Selamat ya kak 🐦${enter}${enter}*Balance* : + $${koin}`
+var tgbr40 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tgbr41 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -2792,7 +2798,7 @@ if (budy.toLowerCase() == jwb_tbk5) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var tgbr50 = `☑️ *Jawaban Benar*\nOleh @${sender.split("@")[0]} Selamat ya kak 🐦${enter}${enter}*Balance* : + $${koin}`
+var tgbr50 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tgbr51 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -2821,7 +2827,7 @@ if (budy.toLowerCase() == jwb_cak) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var cklt0 = `☑️ *Jawaban Benar*\ninfo : ${informasi}\nOleh @${sender.split("@")[0]} Selamat ya kak 🐦${enter}${enter}*Balance* : + $${koin}`
+var cklt0 = `☑️ *${selamet}*\ninfo : ${informasi}\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var cklt1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -2850,7 +2856,7 @@ if (budy.toLowerCase() == jwb_cak2) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var ckl20 = `☑️ *Jawaban Benar*\nOleh @${sender.split("@")[0]} Selamat ya kak 🐦${enter}${enter}*Balance* : + $${koin}`
+var ckl20 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var ckl21 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -2879,7 +2885,7 @@ if (budy.toLowerCase() == jwb_cak3) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var ckl30 = `☑️ *Jawaban Benar*\nOleh @${sender.split("@")[0]} Selamat ya kak 🐦${enter}${enter}*Balance* : + $${koin}`
+var ckl30 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var ckl31 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -2908,7 +2914,7 @@ if (budy.toLowerCase() == jwb_jen) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var jnk0 = `☑️ *Jawaban Benar*\nOleh @${sender.split("@")[0]} Selamat ya kak 🐦${enter}${enter}*Balance* : + $${koin}`
+var jnk0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var jnk1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -2937,7 +2943,7 @@ if (budy.toLowerCase() == jwb_susun) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var ssnk0 = `☑️ *Jawaban Benar*\nOleh @${sender.split("@")[0]} Selamat ya kak 🐦${enter}${enter}*Balance* : + $${koin}`
+var ssnk0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var ssnk1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -2966,7 +2972,7 @@ if (budy.toLowerCase() == jwb_susun2) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var ssn20 = `☑️ *Jawaban Benar*\nOleh @${sender.split("@")[0]} Selamat ya kak 🐦${enter}${enter}*Balance* : + $${koin}`
+var ssn20 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var ssn21 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -2995,7 +3001,7 @@ if (budy.toLowerCase() == jwb_asah) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var atk0 = `☑️ *Jawaban Benar*\nOleh @${sender.split("@")[0]} Selamat ya kak 🐦${enter}${enter}*Balance* : + $${koin}`
+var atk0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var atk1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3024,7 +3030,7 @@ if (budy.toLowerCase() == jwb_kimia) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var tkim0 = `☑️ *Jawaban Benar*\nOleh @${sender.split("@")[0]} Selamat ya kak 🐦${enter}${enter}*Balance* : + $${koin}`
+var tkim0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tkim1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3053,7 +3059,7 @@ if (budy.toLowerCase() == jwb_kata) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var tbkt_0 = `☑️ *Jawaban Benar*\nOleh @${sender.split("@")[0]} Selamat ya kak 🐦${enter}${enter}*Balance* : + $${koin}`
+var tbkt_0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tbkt_1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3082,7 +3088,7 @@ if (budy.toLowerCase() == jwb_sbg) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var skt0 = `☑️ *Jawaban Benar*\nOleh @${sender.split("@")[0]} Selamat ya kak 🐦${enter}${enter}*Balance* : + $${koin}`
+var skt0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var skt1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3111,7 +3117,7 @@ if (budy.toLowerCase() == jwb_lirik) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var tlir0 = `☑️ *Jawaban Benar*\nOleh @${sender.split("@")[0]} Selamat ya kak 🐦${enter}${enter}*Balance* : + $${koin}`
+var tlir0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tlir1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3140,7 +3146,7 @@ if (budy.toLowerCase() == jwb_kali) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var tkl0 = `☑️ *Jawaban Benar*\nOleh @${sender.split("@")[0]} Selamat ya kak 🐦${enter}${enter}*Balance* : + $${koin}`
+var tkl0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tkl1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3169,7 +3175,7 @@ if (budy.toLowerCase() == jwb_tbkn) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var tbkn0 = `☑️ *Jawaban Benar*\nOleh @${sender.split("@")[0]} Selamat ya kak 🐦${enter}${enter}*Balance* : + $${koin}`
+var tbkn0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tbkn1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3198,7 +3204,7 @@ if (budy.toLowerCase() == jwb_tbkn2) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var tbkn20 = `☑️ *Jawaban Benar*\nOleh @${sender.split("@")[0]} Selamat ya kak 🐦${enter}${enter}*Balance* : + $${koin}`
+var tbkn20 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tbkn21 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3227,7 +3233,7 @@ if (budy.toLowerCase() == jwb_siapa) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var spa0 = `☑️ *Jawaban Benar*\nOleh @${sender.split("@")[0]} Selamat ya kak 🐦${enter}${enter}*Balance* : + $${koin}`
+var spa0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var spa1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3256,7 +3262,7 @@ if (budy.toLowerCase() == jwb_math) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var mth0 = `☑️ *Jawaban Benar*\nOleh @${sender.split("@")[0]} Selamat ya kak 🐦${enter}${enter}*Balance* : + $${koin}`
+var mth0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var mth1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3285,7 +3291,7 @@ if (budy.toLowerCase() == jwb_math2) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var mth20 = `☑️ *Jawaban Benar*\nOleh @${sender.split("@")[0]} Selamat ya kak 🐦${enter}${enter}*Balance* : + $${koin}`
+var mth20 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var mth21 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3314,7 +3320,7 @@ if (budy.toLowerCase() == jwb_math3) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var mth30 = `☑️ *Jawaban Benar*\nOleh @${sender.split("@")[0]} Selamat ya kak 🐦${enter}${enter}*Balance* : + $${koin}`
+var mth30 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var mth31 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3343,7 +3349,7 @@ if (budy.toLowerCase() == jwb_f100) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var fmly0 = `☑️ *Jawaban Benar*\nOleh @${sender.split("@")[0]} Selamat ya kak 🐦${enter}${enter}*Balance* : + $${koin}`
+var fmly0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var fmly1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3372,7 +3378,7 @@ if (budy.toLowerCase() == jwb_siapakah) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var saha0 = `☑️ *Jawaban Benar*\nOleh @${sender.split("@")[0]} Selamat ya kak 🐦${enter}${enter}*Balance* : + $${koin}`
+var saha0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var saha1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3401,7 +3407,7 @@ if (budy.toLowerCase() == jwb_anime) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var anim0 = `☑️ *Jawaban Benar*\nOleh @${sender.split("@")[0]} Selamat ya kak 🐦${enter}${enter}*Balance* : + $${koin}`
+var anim0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var anim1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3430,7 +3436,7 @@ if (budy.toLowerCase() == jwb_flag) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var htbr0 = `☑️ *Jawaban Benar*\nOleh @${sender.split("@")[0]} Selamat ya kak 🐦${enter}${enter}*Balance* : + $${koin}`
+var htbr0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var htbr1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3459,7 +3465,7 @@ if (budy.toLowerCase() == jwb_kab) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var htbr0 = `☑️ *Jawaban Benar*\nOleh @${sender.split("@")[0]} Selamat ya kak 🐦${enter}${enter}*Balance* : + $${koin}`
+var htbr0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var htbr1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3488,7 +3494,7 @@ if (budy.toLowerCase() == jwb_captcha) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var capt0 = `☑️ *Jawaban Benar*\nOleh @${sender.split("@")[0]} Selamat ya kak 🐦${enter}${enter}*Balance* : + $${koin}`
+var capt0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var capt1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3517,7 +3523,7 @@ if (budy.toLowerCase() == jwb_apk) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var htbr0 = `☑️ *Jawaban Benar*\nOleh @${sender.split("@")[0]} Selamat ya kak 🐦${enter}${enter}*Balance* : + $${koin}`
+var htbr0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var htbr1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3546,7 +3552,7 @@ if (budy.toLowerCase() == jwb_gbt) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var tgbt0 = `☑️ *Jawaban Benar*\nOleh @${sender.split("@")[0]} Selamat ya kak 🐦${enter}${enter}*Balance* : + $${koin}`
+var tgbt0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tgbt1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3575,7 +3581,7 @@ if (budy.toLowerCase() == jwb_lagu) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var htbr0 = `☑️ *Jawaban Benar*\nOleh @${sender.split("@")[0]} Selamat ya kak 🐦${enter}${enter}*Balance* : + $${koin}`
+var htbr0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var htbr1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3604,7 +3610,7 @@ if (budy.toLowerCase() == jwb_lucu) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var htbr0 = `☑️ *Jawaban Benar*\nOleh @${sender.split("@")[0]} Selamat ya kak 🐦${enter}${enter}*Balance* : + $${koin}`
+var htbr0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var htbr1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3633,7 +3639,7 @@ if (budy.toLowerCase() == jwb_wibu) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var htbr0 = `☑️ *Jawaban Benar*\nOleh @${sender.split("@")[0]} Selamat ya kak 🐦${enter}${enter}*Balance* : + $${koin}`
+var htbr0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var htbr1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -3663,7 +3669,7 @@ if (budy.toLowerCase() == jwb_hwn) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var hwn0 = `☑️ *Jawaban Benar*\nOleh @${sender.split("@")[0]} Selamat ya kak 🐦${enter}${enter}*Balance* : + $${koin}`
+var hwn0 = `☑️ *${selamet}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var hwn1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
@@ -4078,7 +4084,7 @@ menusimple = true
 Mloc = false
 reply2(`_Succses mengganti menu ke menu simple_`)
 } else if (!q) {
-sendButMessage(from, `${emoj} MODE setmenu`, `Choose one`, [
+sendButMessage(from, `${emoj} SETMENU`, `Choose one`, [
 {
 buttonId: 'setmenu ori',
 buttonText: {
@@ -4203,6 +4209,7 @@ if (p.status == 401) {
 reply2("Error! mungkin diprivate")
 }
 break
+
 /*case 'creategroup':
 case 'creategrup':
 if (!isGroup) return reply2(lang.onlygc())
@@ -4218,6 +4225,7 @@ alpha.groupCreate(argza[0], anu)
 reply2(`Sukes membuat grup:\n${argza}`)
 }
 break*/
+
 case 'caripesan':
 case 'searchmessage':
 if (!q) return reply2(`Penggunaan ${command} _nama pesannya_\n\nContoh \n --> ${command} halo`)
@@ -5849,6 +5857,9 @@ type: 1,
 ]);
 }
 break;
+
+
+
 case 'kick2':
 if (!isGroupAdmins && !isBotGroupAdmins) return reply2("Khusus admin");
 var mentionedd = mek.message.extendedTextMessage.contextInfo.mentionedJid
@@ -11231,7 +11242,7 @@ ttgbr_ = await fetchJson(`https://api.dapuhy.ga/api/fun/tebakgambar2?apikey=${da
 let ttgbr_1 = await getBuffer(ttgbr_.result.image);
 clu = ttgbr_.result.clue
 jwb_tbk2 = ttgbr_.result.jawaban
-clue = jwb_tbk2.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '᭸')
+clue = jwb_tbk2.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
 tebakgambar2[sender.split('@')[0]] = jwb_tbk2.toLowerCase()
 fs.writeFileSync("./game/tebakgambar2.json", JSON.stringify(tebakgambar2))
 console.log(jwb_tbk2)
@@ -11239,7 +11250,7 @@ const ttgbr_3 = await alpha.prepareMessage(from, ttgbr_1, MessageType.image, { t
 let ttgbr_2 = ttgbr_3.message["ephemeralMessage"] ? ttgbr_3.message.ephemeralMessage : ttgbr_3
 ttgbr_5 =`*Clue :* ${clue}\nCoba tebak ${emoj}`
 const ttgbr_6 = [
-{buttonId: 'jwb_tbk2', buttonText: {displayText: '🚩 Kunci jawaban'}, type: 1}
+{buttonId: 'jwb_tbk2', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
 const ttgbr_7 = {
 contentText: ttgbr_5 ,
@@ -11278,12 +11289,12 @@ cak_ = await fetchJson(`https://api.dapuhy.ga/api/fun/caklontong?apikey=${dapuhy
 informasi = cak_.informasi
 soal = cak_.soal
 jwb_cak = cak_.jawaban
-clue = jwb_cak.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '᭸')
+clue = jwb_cak.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
 caklontong[sender.split('@')[0]] = jwb_cak.toLowerCase()
 fs.writeFileSync("./game/caklontong.json", JSON.stringify(caklontong))
 console.log(jwb_cak)
 but = [
-{buttonId: 'jwb_cak', buttonText: {displayText: '🚩 Kunci jawaban'}, type: 1}
+{buttonId: 'jwb_cak', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
 sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
@@ -11304,11 +11315,11 @@ if (siapakah.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada perm
 anu = await fetchJson(`https://api.dapuhy.ga/api/fun/siapakah?apikey=${dapuhy}`);
 soal = anu.pertanyaan
 jwb_siapakah = anu.jawaban
-clue = jwb_siapakah.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '᭸')
+clue = jwb_siapakah.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
 fs.writeFileSync("./game/siapakah.json", JSON.stringify(siapakah))
 console.log(jwb_siapakah)
 but = [
-{buttonId: 'jwb_siapakah', buttonText: {displayText: '🚩 Kunci jawaban'}, type: 1}
+{buttonId: 'jwb_siapakah', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
 sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
@@ -11330,12 +11341,12 @@ anu = await fetchJson(`https://api.dapuhy.ga/api/fun/${command}?apikey=${dapuhy}
 tipenya = anu.tipe
 tebakya = anu.acak
 jwb_susun2 = anu.jawaban
-clue = jwb_susun2.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '᭸')
+clue = jwb_susun2.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
 susunkata2[sender.split('@')[0]] = jwb_susun2.toLowerCase()
 fs.writeFileSync("./game/susunkata2.json", JSON.stringify(susunkata2))
 console.log(jwb_susun2)
 but = [
-{buttonId: 'jwb_susun2', buttonText: {displayText: '🚩 Kunci jawaban'}, type: 1}
+{buttonId: 'jwb_susun2', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
 sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
@@ -12656,7 +12667,7 @@ sambungkata[sender.split('@')[0]] = jwb_sbg.toLowerCase()
 fs.writeFileSync("./game/sambungkata.json", JSON.stringify(sambungkata))
 console.log(jwb_sbg)
 but = [
-{buttonId: 'jwb_sbg', buttonText: {displayText: '🚩 Kunci jawaban'}, type: 1}
+{buttonId: 'jwb_sbg', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
 sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
@@ -12677,12 +12688,12 @@ if (caklontong2.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada p
 anu = await fetchJson(`https://api.lolhuman.xyz/api/tebak/caklontong22?apikey=${lolkey}`)
 tebakya = anu.result.question
 jwb_cak2 = anu.result.answer
-clue = jwb_cak2.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '᭸')
+clue = jwb_cak2.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
 caklontong2[sender.split('@')[0]] = jwb_cak2.toLowerCase()
 fs.writeFileSync("./game/caklontong2.json", JSON.stringify(caklontong2))
 console.log(jwb_cak2)
 but = [
-{buttonId: 'jwb_cak2', buttonText: {displayText: '🚩 Kunci jawaban'}, type: 1}
+{buttonId: 'jwb_cak2', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
 sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
@@ -12704,7 +12715,7 @@ get_result = await fetchJson(`https://api.lolhuman.xyz/api/tebak/gambar?apikey=$
 get_result = get_result.result
 ini_image = get_result.image
 jwb_tbk3 = get_result.answer
-clue = jwb_tbk3.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '᭸')
+clue = jwb_tbk3.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
 let tttgbr_1 = await getBuffer(ini_image);
 tebakgambar3[sender.split('@')[0]] = jwb_tbk3.toLowerCase()
 fs.writeFileSync("./game/tebakgambar3.json", JSON.stringify(tebakgambar3))
@@ -12713,7 +12724,7 @@ const tttgbr_3 = await alpha.prepareMessage(from, tttgbr_1, MessageType.image, {
 let tttgbr_2 = tttgbr_3.message["ephemeralMessage"] ? tttgbr_3.message.ephemeralMessage : tttgbr_3
 tttgbr_5 =`Coba tebak 🙂\nClue ${clue}`
 const tttgbr_6 = [
-{buttonId: 'jwb_tbk3', buttonText: {displayText: '🚩 Kunci jawaban'}, type: 1}
+{buttonId: 'jwb_tbk3', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
 const tttgbr_7 = {
 contentText: tttgbr_5 ,
@@ -12752,7 +12763,7 @@ if (tebakgambar.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada p
 tgbr_ = await fetchJson(`https://velgrynd.herokuapp.com/api/tebakgambar?apikey=slAuPQiV`);
 let tgbr_1 = await getBuffer(tgbr_.result.pertanyaan);
 jwb_tbk = tgbr_.result.jawaban
-clue = jwb_tbk.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '᭸')
+clue = jwb_tbk.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
 tebakgambar[sender.split('@')[0]] = jwb_tbk.toLowerCase()
 fs.writeFileSync("./game/tebakgambar.json", JSON.stringify(tebakgambar))
 console.log(jwb_tbk)
@@ -12760,7 +12771,7 @@ const tgbr_3 = await alpha.prepareMessage(from, tgbr_1, MessageType.image, { thu
 let tgbr_2 = tgbr_3.message["ephemeralMessage"] ? tgbr_3.message.ephemeralMessage : tgbr_3
 tgbr_5 =` Hei @${sender.split("@")[0]} Coba tebak \nClue : ${clue}🙂`
 const tgbr_6 = [
-{buttonId: 'jwb_tbk', buttonText: {displayText: '🚩 Kunci jawaban'}, type: 1}
+{buttonId: 'jwb_tbk', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
 const tgbr_7 = {
 contentText: tgbr_5 ,
@@ -12799,12 +12810,12 @@ fam_ = await fetchJson(`https://velgrynd.herokuapp.com/api/family100?apikey=slAu
 soal = fam_.soal
 ja = fam_.jawaban
 jwb_f100 = ja[Math.floor(Math.random() * ja.length)]
-clue = jwb_f100.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '᭸')
+clue = jwb_f100.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
 family100[sender.split('@')[0]] = jwb_f100.toLowerCase()
 fs.writeFileSync("./game/family100.json", JSON.stringify(family100))
 console.log(jwb_f100)
 but = [
-{buttonId: 'jwb_f100', buttonText: {displayText: '🚩 Kunci jawaban'}, type: 1}
+{buttonId: 'jwb_f100', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
 sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
@@ -12825,12 +12836,12 @@ if (asahotak.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada perm
 ash_ = await fetchJson(`https://velgrynd.herokuapp.com/api/asahotak?apikey=slAuPQiV`);
 soal = ash_.soal
 jwb_asah = ash_.jawaban
-clue = jwb_asah.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '᭸')
+clue = jwb_asah.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
 asahotak[sender.split('@')[0]] = jwb_asah.toLowerCase()
 fs.writeFileSync("./game/asahotak.json", JSON.stringify(asahotak))
 console.log(jwb_asah)
 but = [
-{buttonId: 'jwb_asah', buttonText: {displayText: '🚩 Kunci jawaban'}, type: 1}
+{buttonId: 'jwb_asah', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
 sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
@@ -12851,12 +12862,12 @@ if (tebakkimia.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada pe
 kimia_ = await fetchJson(`https://velgrynd.herokuapp.com/api/tebakkimia?apikey=slAuPQiV`);
 soal = kimia_.result.nama
 jwb_kimia = kimia_.result.lambang
-clue = jwb_kimia.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '᭸')
+clue = jwb_kimia.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
 tebakkimia[sender.split('@')[0]] = jwb_kimia.toLowerCase()
 fs.writeFileSync("./game/tebakkimia.json", JSON.stringify(tebakkimia))
 console.log(jwb_kimia)
 but = [
-{buttonId: 'jwb_kimia', buttonText: {displayText: '🚩 Kunci jawaban'}, type: 1}
+{buttonId: 'jwb_kimia', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
 sendButton(from, `*Soal* : Apa lambang ${soal}\nClue : ${clue}`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
@@ -12877,12 +12888,12 @@ if (tebakkata.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada per
 tbkt_ = await fetchJson(`https://velgrynd.herokuapp.com/api/tebakkata?apikey=slAuPQiV`);
 soal = tbkt_.soal
 jwb_kata = tbkt_.jawaban
-clue = jwb_kata.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '᭸')
+clue = jwb_kata.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
 tebakkata[sender.split('@')[0]] = jwb_kata.toLowerCase()
 fs.writeFileSync("./game/tebakkata.json", JSON.stringify(tebakkata))
 console.log(jwb_kata)
 but = [
-{buttonId: 'jwb_kata', buttonText: {displayText: '🚩 Kunci jawaban'}, type: 1}
+{buttonId: 'jwb_kata', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
 sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
@@ -12903,12 +12914,12 @@ if (tebakkata.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada per
 te_ = await fetchJson(`https://velgrynd.herokuapp.com/api/tebakkata?apikey=slAuPQiV`);
 soal = te_.soal
 jwb_kata2 = te_.jawaban
-clue = jwb_kata2.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '᭸')
+clue = jwb_kata2.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
 tebakkata[sender.split('@')[0]] = jwb_kata2.toLowerCase()
 fs.writeFileSync("./game/tebakkata.json", JSON.stringify(tebakkata))
 console.log(jwb_kata2)
 but = [
-{buttonId: 'nyerah', buttonText: {displayText: '🚩 Kunci jawaban'}, type: 1}
+{buttonId: 'nyerah', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
 sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
@@ -12929,12 +12940,12 @@ if (tebaklirik.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada pe
 tlir_ = await fetchJson(`https://velgrynd.herokuapp.com/api/tebaklirik?apikey=slAuPQiV`);
 soal = tlir_.result.question
 jwb_lirik = tlir_.result.answer
-clue = jwb_lirik.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '᭸')
+clue = jwb_lirik.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
 tebaklirik[sender.split('@')[0]] = jwb_lirik.toLowerCase()
 fs.writeFileSync("./game/tebaklirik.json", JSON.stringify(tebaklirik))
 console.log(jwb_lirik)
 but = [
-{buttonId: 'nyerah', buttonText: {displayText: '🚩 Kunci jawaban'}, type: 1}
+{buttonId: 'nyerah', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
 sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
@@ -12955,12 +12966,12 @@ if (tebakkalimat.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada 
 tkal_ = await fetchJson(`https://velgrynd.herokuapp.com/api/tebakkalimat?apikey=slAuPQiV`);
 soal = tkal_.soal
 jwb_kali = tkal_.jawaban
-clue = jwb_kali.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '᭸')
+clue = jwb_kali.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
 tebakkalimat[sender.split('@')[0]] = jwb_kali.toLowerCase()
 fs.writeFileSync("./game/tebakkalimat.json", JSON.stringify(tebakkalimat))
 console.log(jwb_kali)
 but = [
-{buttonId: 'jwb_kali', buttonText: {displayText: '🚩 Kunci jawaban'}, type: 1}
+{buttonId: 'jwb_kali', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
 sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
@@ -12981,12 +12992,12 @@ if (tebakan.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada perma
 tbkn_ = await fetchJson(`https://velgrynd.herokuapp.com/api/tebaktebakan?apikey=slAuPQiV`);
 soal = tbkn_.soal
 jwb_tbkn = tbkn_.jawaban
-clue = jwb_tbkn.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '᭸')
+clue = jwb_tbkn.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
 tebakan[sender.split('@')[0]] = jwb_tbkn.toLowerCase()
 fs.writeFileSync("./game/tebakan.json", JSON.stringify(tebakan))
 console.log(jwb_tbkn)
 but = [
-{buttonId: 'jwb_tbkn', buttonText: {displayText: '🚩 Kunci jawaban'}, type: 1}
+{buttonId: 'jwb_tbkn', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
 sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
@@ -13007,12 +13018,12 @@ if (siapaaku.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada perm
 saha_ = await fetchJson(`https://velgrynd.herokuapp.com/api/siapakahaku?apikey=slAuPQiV`);
 soal = saha_.soal
 jwb_siapa = saha_.jawaban
-clue = jwb_siapa.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '᭸')
+clue = jwb_siapa.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
 siapaaku[sender.split('@')[0]] = jwb_siapa.toLowerCase()
 fs.writeFileSync("./game/siapaaku.json", JSON.stringify(siapaaku))
 console.log(jwb_siapa)
 but = [
-{buttonId: 'jwb_siapa', buttonText: {displayText: '🚩 Kunci jawaban'}, type: 1}
+{buttonId: 'jwb_siapa', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
 sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
@@ -13034,12 +13045,12 @@ susn_ = await fetchJson(`https://velgrynd.herokuapp.com/api/susunkata?apikey=slA
 soal = susn_.soal
 timpe = susn_.tipe
 jwb_susun = susn_.jawaban
-clue = jwb_susun.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '᭸')
+clue = jwb_susun.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
 susunkata[sender.split('@')[0]] = jwb_susun.toLowerCase()
 fs.writeFileSync("./game/susunkata.json", JSON.stringify(susunkata))
 console.log(jwb_susun)
 but = [
-{buttonId: 'jwb_susun', buttonText: {displayText: '🚩 Kunci jawaban'}, type: 1}
+{buttonId: 'jwb_susun', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
 sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\nTipe : ${timpe}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
@@ -13060,12 +13071,12 @@ if (tebakgabut.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada pe
 tgbt_ = await fetchJson(`https://kuontol-api.herokuapp.com/api/game/tebakgabut`);
 soal = tgbt_.soal
 jwb_gbt = tgbt_.jawaban
-clue = jwb_gbt.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '᭸')
+clue = jwb_gbt.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
 tebakgabut[sender.split('@')[0]] = jwb_gbt.toLowerCase()
 fs.writeFileSync("./game/tebakgabut.json", JSON.stringify(tebakgabut))
 console.log(jwb_gbt)
 but = [
-{buttonId: 'jwb_gbt', buttonText: {displayText: '🚩 Kunci jawaban'}, type: 1}
+{buttonId: 'jwb_gbt', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
 sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
@@ -13086,12 +13097,12 @@ if (tebaklucu.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada per
 tblc_ = await fetchJson(`https://kuontol-api.herokuapp.com/api/game/tebaktebaklucu`);
 soal = tblc_.soal
 jwb_lucu = tblc_.jawaban
-clue = jwb_lucu.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '᭸')
+clue = jwb_lucu.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
 tebaklucu[sender.split('@')[0]] = jwb_lucu.toLowerCase()
 fs.writeFileSync("./game/tebaklucu.json", JSON.stringify(tebaklucu))
 console.log(jwb_lucu)
 but = [
-{buttonId: 'jwb_lucu', buttonText: {displayText: '🚩 Kunci jawaban'}, type: 1}
+{buttonId: 'jwb_lucu', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
 sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
@@ -13113,12 +13124,12 @@ twb_ = await fetchJson(`https://kuontol-api.herokuapp.com/api/game/teswibu`);
 soal = twb_.pertanyaan
 ja = twb_.jawaban
 jwb_wibu = ja[Math.floor(Math.random() * ja.length)]
-clue = jwb_wibu.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '᭸')
+clue = jwb_wibu.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
 teswibu[sender.split('@')[0]] = jwb_wibu.toLowerCase()
 fs.writeFileSync("./game/teswibu.json", JSON.stringify(teswibu))
 console.log(jwb_wibu)
 but = [
-{buttonId: 'jwb_wibu', buttonText: {displayText: '🚩 Kunci jawaban'}, type: 1}
+{buttonId: 'jwb_wibu', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
 sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
@@ -14058,7 +14069,7 @@ if (tebakgambar5.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada 
 gbr5_ = await fetchJson(`https://x-restapi.herokuapp.com/api/tebak-gambar?apikey=BETA`);
 let gbr5_1 = await getBuffer(gbr5_.img);
 jwb_tbk5 = gbr5_.jawaban
-clue = jwb_tbk5.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '᭸')
+clue = jwb_tbk5.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
 tebakgambar5[sender.split('@')[0]] = jwb_tbk5.toLowerCase()
 fs.writeFileSync("./game/tebakgambar5.json", JSON.stringify(tebakgambar5))
 console.log(jwb_tbk5)
@@ -14066,7 +14077,7 @@ const gbr5_3 = await alpha.prepareMessage(from, gbr5_1, MessageType.image, { thu
 let gbr5_2 = gbr5_3.message["ephemeralMessage"] ? gbr5_3.message.ephemeralMessage : gbr5_3
 gbr5_5 =`*Clue :* ${clue}\nCoba tebak ${emoj}`
 const gbr5_6 = [
-{buttonId: 'jwb_tbk5', buttonText: {displayText: '🚩 Kunci jawaban'}, type: 1}
+{buttonId: 'jwb_tbk5', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
 const gbr5_7 = {
 contentText: gbr5_5 ,
@@ -14104,12 +14115,12 @@ if (caklontong3.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada p
 cak3_ = await fetchJson(`https://x-restapi.herokuapp.com/api/caklontong?apikey=BETA`);
 soal = cak3_.soal
 jwb_cak3 = cak3_.jawaban
-clue = jwb_cak3.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '᭸')
+clue = jwb_cak3.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
 caklontong3[sender.split('@')[0]] = jwb_cak3.toLowerCase()
 fs.writeFileSync("./game/caklontong3.json", JSON.stringify(caklontong3))
 console.log(jwb_cak3)
 but = [
-{buttonId: 'jwb_cak3', buttonText: {displayText: '🚩 Kunci jawaban'}, type: 1}
+{buttonId: 'jwb_cak3', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
 sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
@@ -14130,7 +14141,7 @@ if (tebakanime.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada pe
 tnim_ = await fetchJson(`https://x-restapi.herokuapp.com/api/tebak-anime?apikey=BETA`);
 let tnim_1 = await getBuffer(tnim_.soal);
 jwb_anime = tnim_.jawaban
-clue = jwb_anime.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '᭸')
+clue = jwb_anime.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
 tebakanime[sender.split('@')[0]] = jwb_anime.toLowerCase()
 fs.writeFileSync("./game/tebakanime.json", JSON.stringify(tebakanime))
 console.log(jwb_anime)
@@ -14138,7 +14149,7 @@ const tnim_3 = await alpha.prepareMessage(from, tnim_1, MessageType.image, { thu
 let tnim_2 = tnim_3.message["ephemeralMessage"] ? tnim_3.message.ephemeralMessage : tnim_3
 tnim_5 =`Coba tebak Siapa Dia 🙂\nClue : ${clue}`
 const tnim_6 = [
-{buttonId: 'jwb_anime', buttonText: {displayText: '🚩 Kunci jawaban'}, type: 1}
+{buttonId: 'jwb_anime', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
 const tnim_7 = {
 contentText: tnim_5 ,
@@ -14507,7 +14518,7 @@ if (recaptcha.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada per
 capt_ = await fetchJson(`http://api.zekais.com/captcha?apikey=CsapIPYk`);
 let capt_1 = await getBuffer(capt_.question);
 jwb_captcha = capt_.answer
-clue = jwb_captcha.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '᭸')
+clue = jwb_captcha.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
 recaptcha[sender.split('@')[0]] = jwb_captcha.toLowerCase()
 fs.writeFileSync("./game/recaptcha.json", JSON.stringify(recaptcha))
 console.log(jwb_captcha)
@@ -14515,7 +14526,7 @@ const capt_3 = await alpha.prepareMessage(from, capt_1, MessageType.image, { thu
 let capt_2 = capt_3.message["ephemeralMessage"] ? capt_3.message.ephemeralMessage : capt_3
 capt_5 =`Coba tebak 🙂\nClue : ${clue}`
 const capt_6 = [
-{buttonId: 'jwb_captcha', buttonText: {displayText: '🚩 Kunci jawaban'}, type: 1}
+{buttonId: 'jwb_captcha', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
 const capt_7 = {
 contentText: capt_5 ,
@@ -14556,7 +14567,7 @@ jwb_flag = tbra_.nama
 bng = await fetchJson(`https://api.lolhuman.xyz/api/smoji3/${encodeURI(ben)}?apikey=${lolkey}`)
 bg = bng.result.emoji.whatsapp
 let tbra_1 = await getBuffer(bg);
-clue = jwb_flag.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '᭸')
+clue = jwb_flag.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
 tebakbendera[sender.split('@')[0]] = jwb_flag.toLowerCase()
 fs.writeFileSync("./game/tebakbendera.json", JSON.stringify(tebakbendera))
 console.log(jwb_flag)
@@ -14564,7 +14575,7 @@ const tbra_3 = await alpha.prepareMessage(from, tbra_1, MessageType.image, { thu
 let tbra_2 = tbra_3.message["ephemeralMessage"] ? tbra_3.message.ephemeralMessage : tbra_3
 tbra_5 =`*Clue :* ${clue}\nCoba tebak ${emoj}`
 const tbra_6 = [
-{buttonId: 'jwb_flag', buttonText: {displayText: '🚩 Kunci jawaban'}, type: 1}
+{buttonId: 'jwb_flag', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
 const tbra_7 = {
 contentText: tbra_5 ,
@@ -14603,7 +14614,7 @@ tkab_ = await fetchJson(`https://kuontol-api.herokuapp.com/api/game/tebakkabupat
 bg = tkab_.image
 jwb_kab = tkab_.jawaban
 let tkab_1 = await getBuffer(bg);
-clue = jwb_kab.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '᭸')
+clue = jwb_kab.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
 tebakkabupaten[sender.split('@')[0]] = jwb_kab.toLowerCase()
 fs.writeFileSync("./game/tebakkabupaten.json", JSON.stringify(tebakkabupaten))
 console.log(jwb_kab)
@@ -14611,7 +14622,7 @@ const tkab_3 = await alpha.prepareMessage(from, tkab_1, MessageType.image, { thu
 let tkab_2 = tkab_3.message["ephemeralMessage"] ? tkab_3.message.ephemeralMessage : tkab_3
 tkab_5 =`*Clue :* ${clue}\nCoba tebak ${emoj}`
 const tkab_6 = [
-{buttonId: 'jwb_kab', buttonText: {displayText: '🚩 Kunci jawaban'}, type: 1}
+{buttonId: 'jwb_kab', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
 const tkab_7 = {
 contentText: tkab_5 ,
@@ -14650,7 +14661,7 @@ gbr4_ = await fetchJson(`http://api.zekais.com/tebakgambar?apikey=CsapIPYk`);
 let gbr4_1 = await getBuffer(gbr4_.soal);
 clu = gbr4_.clue
 jwb_tbk4 = gbr4_.jawaban
-clue = jwb_tbk4.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '᭸')
+clue = jwb_tbk4.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
 tebakgambar4[sender.split('@')[0]] = jwb_tbk4.toLowerCase()
 fs.writeFileSync("./game/tebakgambar4.json", JSON.stringify(tebakgambar4))
 console.log(jwb_tbk4)
@@ -14658,7 +14669,7 @@ const gbr4_3 = await alpha.prepareMessage(from, gbr4_1, MessageType.image, { thu
 let gbr4_2 = gbr4_3.message["ephemeralMessage"] ? gbr4_3.message.ephemeralMessage : gbr4_3
 gbr4_5 =`*Clue :* ${clue}\nCoba tebak ${emoj}`
 const gbr4_6 = [
-{buttonId: 'jwb_tbk4', buttonText: {displayText: '🚩 Kunci jawaban'}, type: 1}
+{buttonId: 'jwb_tbk4', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
 const gbr4_7 = {
 contentText: gbr4_5 ,
@@ -14732,12 +14743,12 @@ if (tebakan2.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada perm
 tbkn2_ = await fetchJson(`http://api.zekais.com/tebakan?apikey=CsapIPYk`);
 soal = tbkn2_.question
 jwb_tbkn2 = tbkn2_.answer
-clue = jwb_tbkn2.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '᭸')
+clue = jwb_tbkn2.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
 tebakan2[sender.split('@')[0]] = jwb_tbkn2.toLowerCase()
 fs.writeFileSync("./game/tebakan2.json", JSON.stringify(tebakan2))
 console.log(jwb_tbkn2)
 but = [
-{buttonId: 'jwb_tbkn2', buttonText: {displayText: '🚩 Kunci jawaban'}, type: 1}
+{buttonId: 'jwb_tbkn2', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
 sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
@@ -14759,7 +14770,7 @@ tapp_ = await fetchJson(`https://kuontol-api.herokuapp.com/api/game/tebakaplikas
 app = tapp_.image
 jwb_apk = tapp_.jawaban
 let tapp_1 = await getBuffer(app);
-clue = jwb_apk.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '᭸')
+clue = jwb_apk.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
 tebakbendera[sender.split('@')[0]] = jwb_apk.toLowerCase()
 fs.writeFileSync("./game/tebakbendera.json", JSON.stringify(tebakbendera))
 console.log(jwb_apk)
@@ -14767,7 +14778,7 @@ const tapp_3 = await alpha.prepareMessage(from, tapp_1, MessageType.image, { thu
 let tapp_2 = tapp_3.message["ephemeralMessage"] ? tapp_3.message.ephemeralMessage : tapp_3
 tapp_5 =`*Clue :* ${clue}\nCoba tebak ${emoj}`
 const tapp_6 = [
-{buttonId: 'jwb_apk', buttonText: {displayText: '🚩 Kunci jawaban'}, type: 1}
+{buttonId: 'jwb_apk', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
 const tapp_7 = {
 contentText: tapp_5 ,
@@ -14806,7 +14817,7 @@ tgu_ = await fetchJson(`https://kuontol-api.herokuapp.com/api/game/tebaklagu`);
 let lgu = tgu_.lagu
 soal = tgu_.artis
 jwb_lagu = tgu_.judul
-clue = jwb_lagu.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '᭸')
+clue = jwb_lagu.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
 tebaklagu[sender.split('@')[0]] = jwb_lagu.toLowerCase()
 fs.writeFileSync("./game/tebaklagu.json", JSON.stringify(tebaklagu))
 console.log(jwb_lagu)
@@ -14892,6 +14903,7 @@ alpha.sendFile(from, imoj, `${sender}.png`, null, mek, {thumbnail: medianya})
 }
 break
 */
+
 case 'wroom':
 case 'text3d':
 case 'water':
@@ -15294,7 +15306,7 @@ if (math2.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permain
 mat2_ = await fetchJson(`https://janbot-api.herokuapp.com/api/kuis/math`);
 let mat2_1 = await getBuffer(mat2_.soal);
 jwb_math2 = mat2_.jawaban
-clue = jwb_math2.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '᭸')
+clue = jwb_math2.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
 math2[sender.split('@')[0]] = jwb_math2.toLowerCase()
 fs.writeFileSync("./game/math2.json", JSON.stringify(math2))
 console.log(jwb_math2)
@@ -15302,7 +15314,7 @@ const mat2_3 = await alpha.prepareMessage(from, mat2_1, MessageType.image, { thu
 let mat2_2 = mat2_3.message["ephemeralMessage"] ? mat2_3.message.ephemeralMessage : mat2_3
 mat2_5 =` Hei @${sender.split("@")[0]} Coba tebak 🙂\nClue : ${clue}`
 const mat2_6 = [
-{buttonId: 'jwb_math2', buttonText: {displayText: '🚩 Kunci jawaban'}, type: 1}
+{buttonId: 'jwb_math2', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
 const mat2_7 = {
 contentText: mat2_5 ,
@@ -16096,12 +16108,12 @@ if (tebakjenaka.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada p
 tjk_ = await fetchJson(`https://kuontol-api.herokuapp.com/api/game/tebakjenaka`);
 soal = tjk_.pertanyaan
 jwb_jen = tjk_.jawaban
-clue = jwb_jen.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '᭸')
+clue = jwb_jen.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
 tebakjenaka[sender.split('@')[0]] = jwb_jen.toLowerCase()
 fs.writeFileSync("./game/tebakjenaka.json", JSON.stringify(tebakjenaka))
 console.log(jwb_jen)
 but = [
-{buttonId: 'jwb_jen', buttonText: {displayText: '🚩 Kunci jawaban'}, type: 1}
+{buttonId: 'jwb_jen', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
 sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
@@ -16586,12 +16598,12 @@ hew = await fetchText('https://raw.githubusercontent.com/AyGemuy/SelfBot/master/
 hewn_ = hew.split('\n')
 soal = hewn_[Math.floor(Math.random() * hewn_.length)]
 jwb_hwn = `${soal}`
-clue = jwb_hwn.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '᭸')
+clue = jwb_hwn.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
 tebakhewan[sender.split('@')[0]] = jwb_hwn.toLowerCase()
 fs.writeFileSync("./game/tebakhewan.json", JSON.stringify(tebakhewan))
 console.log(jwb_hwn)
 but = [
-{buttonId: 'jwb_hwn', buttonText: {displayText: '🚩 Kunci jawaban'}, type: 1}
+{buttonId: 'jwb_hwn', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
 sendButton(from, `*Nama hewan* \n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
@@ -16835,23 +16847,103 @@ case 'quotestatus':
 case 'scholes':
 case 'wood':
 case 'writestatus':
-if (args.length == 0) return reply2(`Contoh: ${prefix + command} Wudy`)
-txt1 = args[0]
-txt2 = args[1]
+if (!q) return reply2(`Contoh: ${prefix + command} top|bottom`)
+top = q.split('|')[0]
+bottom = q.split('|')[1]
 await getBuffer(`https://api-xcoders.xyz/api/ephoto/${command}?text=${txt1}&text2=${txt2}&apikey=7iyNa0qA`).then((gambar) => {
 alpha.sendMessage(from, gambar, image, { quoted: mek, caption: "Nih kack" })
 })
 break
 
-case 'ngeri':
-case 'ngery':
+
+
+case 'customgfx1':
+if(!q) return reply2(`${emoj} Hint : ${prefix + command} Wudy Bot`) 
+console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
+var imgbb = require('imgbb-uploader')
+if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
+var bioij = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+var delib = await alpha.downloadAndSaveMediaMessage(bioij, `./media/${sender}.png`)
+let datau = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", delib)
+anuk = `https://api-xfar05.herokuapp.com/api/canvas/${command}?teks=${q}&bg=${datau.display_url}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+} else {
+ghost = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
+let oppp = await alpha.getProfilePicture(ghost).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
+let medianya = await getBuffer(oppp)
+let datae = await imageToBase64(JSON.stringify(oppp).replace(/\"/gi, ''))
+fs.writeFileSync('janckuk.jpeg', datae, 'base64')
+let odata = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", 'janckuk.jpeg')
+anuk = `https://api-xfar05.herokuapp.com/api/canvas/customgfx1?teks=${q}&bg=${odata.display_url}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+}
+break
+
+case 'customgfx2':
+if(!q) return reply2(`${emoj} Hint : ${prefix + command} Wudy|Bot`) 
+var m = q
+var m1 = m.split("|")[0];
+var m2 = m.split("|")[1]; 
+console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
+var imgbb = require('imgbb-uploader')
+if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
+var bioij = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+var delib = await alpha.downloadAndSaveMediaMessage(bioij, `./media/${sender}.png`)
+let datau = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", delib)
+anuk = `https://api-xfar05.herokuapp.com/api/canvas/customgfx2?teks1=${m1}&teks2=${m2}&bg=${datau.display_url}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+} else {
+ghost = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
+let oppp = await alpha.getProfilePicture(ghost).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
+let medianya = await getBuffer(oppp)
+let datae = await imageToBase64(JSON.stringify(oppp).replace(/\"/gi, ''))
+fs.writeFileSync('janckuk.jpeg', datae, 'base64')
+let odata = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", 'janckuk.jpeg')
+anuk = `https://api-xfar05.herokuapp.com/api/canvas/customgfx2?teks1=${m1}&teks2=${m2}&bg=${odata.display_url}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+}
+break
+
+case 'gfx1':
+case 'gfx2':
+case 'gfx5':
+if(!q) return reply2(`${emoj} Hint : ${prefix + command} Wudy`) 
+nama_ = await getBuffer(`https://api-xfar05.herokuapp.com/api/canvas/${command}?teks=${q}`);
+alpha.sendMessage(from, nama_, image, {quoted: mek})
+break
+
+case 'gfx3':
+case 'gfx4':
+if(!q) return reply2(`${emoj} Hint : ${prefix + command} Wudy|Bot`) 
+var m = q
+var m1 = m.split("|")[0];
+var m2 = m.split("|")[1]; 
+nama_ = await getBuffer(`https://api-xfar05.herokuapp.com/api/canvas/${command}?teks1=${m1}&teks2=${m2}`);
+alpha.sendMessage(from, nama_, image, {quoted: mek})
+break
+
+case 'gfx6':
+if(!q) return reply2(`${emoj} Hint : ${prefix + command} Wudy|Bot`) 
+nama_ = await getBuffer(`https://api-xfar05.herokuapp.com/api/canvas/gura?teks=${q}`);
+alpha.sendMessage(from, nama_, image, {quoted: mek})
+break
+
+case 'memepatrick':
 try {
 ppus = await alpha.getProfilePicture(mek.message.extendedTextMessage.contextInfo.mentionedJid[0])
 } catch {
 ppus = 'https://i.ibb.co/N9gFbtQ/2406c24248f5.jpg'
 }
-let tumnel = await getBuffer(ppus)
-await fs.writeFileSync(`./stickmeme.jpeg`, tumnel)
+let tmbh1 = await getBuffer(ppus)
+await fs.writeFileSync(`./stickmeme.jpeg`, tmbh1)
 var imgbb = require('imgbb-uploader')
 anu = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", './stickmeme.jpeg')
 teks = `${anu.display_url}`
@@ -16859,6 +16951,50 @@ nama_ = await getBuffer(`https://api-xfar05.herokuapp.com/api/canvas/patrick?ima
 alpha.sendMessage(from, nama_, image, {quoted: mek})
 fs.unlinkSync('./stickmeme.jpeg')
 break
+
+case 'spongebob':
+try {
+ppus = await alpha.getProfilePicture(mek.message.extendedTextMessage.contextInfo.mentionedJid[0])
+} catch {
+ppus = 'https://i.ibb.co/N9gFbtQ/2406c24248f5.jpg'
+}
+let tmbh2 = await getBuffer(ppus)
+await fs.writeFileSync(`./stickmeme.jpeg`, tmbh2)
+var imgbb = require('imgbb-uploader')
+anu = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", './stickmeme.jpeg')
+teks = `${anu.display_url}`
+nama_ = await getBuffer(`https://api-xfar05.herokuapp.com/api/canvas/spongebob?image=${teks}`);
+alpha.sendMessage(from, nama_, image, {quoted: mek})
+fs.unlinkSync('./stickmeme.jpeg')
+break
+
+case 'xnxxmeme':
+if(!q) return reply2(`${emoj} Hint : ${prefix + command} Wudy Bot`) 
+console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
+var imgbb = require('imgbb-uploader')
+if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
+var bioij = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+var delib = await alpha.downloadAndSaveMediaMessage(bioij, `./media/${sender}.png`)
+let datau = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", delib)
+anuk = `https://api-xfar05.herokuapp.com/api/canvas/xnxx?pp=${datau.display_url}&username=${q}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+} else {
+ghost = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
+let oppp = await alpha.getProfilePicture(ghost).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
+let medianya = await getBuffer(oppp)
+let datae = await imageToBase64(JSON.stringify(oppp).replace(/\"/gi, ''))
+fs.writeFileSync('janckuk.jpeg', datae, 'base64')
+let odata = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", 'janckuk.jpeg')
+anuk = `https://api-xfar05.herokuapp.com/api/canvas/xnxx?pp=${odata.display_url}&username=${q}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+}
+break
+
+
 
 case 'nagasepi':
 case 'sepi':
@@ -17210,12 +17346,12 @@ if (math3.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permain
 asah_ = await fetchJson(`http://api.zekais.com/math?mode=very_easy&apikey=CsapIPYk`);
 soal = asah_.soal
 jwb_math3 = asah_.jawaban
-clue = jwb_math3.replace(/[2|3|4|5|6|7|8|9]/gi, '᭸')
+clue = jwb_math3.replace(/[2|3|4|5|6|7|8|9]/gi, '⁓')
 math3[sender.split('@')[0]] = jwb_math3.toLowerCase()
 fs.writeFileSync("./game/math3.json", JSON.stringify(math3))
 console.log(jwb_math3)
 but = [
-{buttonId: 'jwb_math3', buttonText: {displayText: '🚩 Kunci jawaban'}, type: 1}
+{buttonId: 'jwb_math3', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
 sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
@@ -17236,12 +17372,12 @@ if (math3.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permain
 asah_ = await fetchJson(`http://api.zekais.com/math?mode=easy&apikey=CsapIPYk`);
 soal = asah_.soal
 jwb_math3 = asah_.jawaban
-clue = jwb_math3.replace(/[2|3|4|5|6|7|8|9]/gi, '᭸')
+clue = jwb_math3.replace(/[2|3|4|5|6|7|8|9]/gi, '⁓')
 math3[sender.split('@')[0]] = jwb_math3.toLowerCase()
 fs.writeFileSync("./game/math3.json", JSON.stringify(math3))
 console.log(jwb_math3)
 but = [
-{buttonId: 'jwb_math3', buttonText: {displayText: '🚩 Kunci jawaban'}, type: 1}
+{buttonId: 'jwb_math3', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
 sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
@@ -17262,12 +17398,12 @@ if (math3.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permain
 asah_ = await fetchJson(`http://api.zekais.com/math?mode=medium&apikey=CsapIPYk`);
 soal = asah_.soal
 jwb_math3 = asah_.jawaban
-clue = jwb_math3.replace(/[2|3|4|5|6|7|8|9]/gi, '᭸')
+clue = jwb_math3.replace(/[2|3|4|5|6|7|8|9]/gi, '⁓')
 math3[sender.split('@')[0]] = jwb_math3.toLowerCase()
 fs.writeFileSync("./game/math3.json", JSON.stringify(math3))
 console.log(jwb_math3)
 but = [
-{buttonId: 'jwb_math3', buttonText: {displayText: '🚩 Kunci jawaban'}, type: 1}
+{buttonId: 'jwb_math3', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
 sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
@@ -17288,12 +17424,12 @@ if (math3.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permain
 asah_ = await fetchJson(`http://api.zekais.com/math?mode=hard&apikey=CsapIPYk`);
 soal = asah_.soal
 jwb_math3 = asah_.jawaban
-clue = jwb_math3.replace(/[2|3|4|5|6|7|8|9]/gi, '᭸')
+clue = jwb_math3.replace(/[2|3|4|5|6|7|8|9]/gi, '⁓')
 math3[sender.split('@')[0]] = jwb_math3.toLowerCase()
 fs.writeFileSync("./game/math3.json", JSON.stringify(math3))
 console.log(jwb_math3)
 but = [
-{buttonId: 'jwb_math3', buttonText: {displayText: '🚩 Kunci jawaban'}, type: 1}
+{buttonId: 'jwb_math3', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
 sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
@@ -17314,12 +17450,12 @@ if (math3.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permain
 asah_ = await fetchJson(`http://api.zekais.com/math?mode=extreme&apikey=CsapIPYk`);
 soal = asah_.soal
 jwb_math3 = asah_.jawaban
-clue = jwb_math3.replace(/[2|3|4|5|6|7|8|9]/gi, '᭸')
+clue = jwb_math3.replace(/[2|3|4|5|6|7|8|9]/gi, '⁓')
 math3[sender.split('@')[0]] = jwb_math3.toLowerCase()
 fs.writeFileSync("./game/math3.json", JSON.stringify(math3))
 console.log(jwb_math3)
 but = [
-{buttonId: 'jwb_math3', buttonText: {displayText: '🚩 Kunci jawaban'}, type: 1}
+{buttonId: 'jwb_math3', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
 sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
@@ -17340,12 +17476,12 @@ if (math3.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permain
 asah_ = await fetchJson(`http://api.zekais.com/math?mode=impossible&apikey=CsapIPYk`);
 soal = asah_.soal
 jwb_math3 = asah_.jawaban
-clue = jwb_math3.replace(/[2|3|4|5|6|7|8|9]/gi, '᭸')
+clue = jwb_math3.replace(/[2|3|4|5|6|7|8|9]/gi, '⁓')
 math3[sender.split('@')[0]] = jwb_math3.toLowerCase()
 fs.writeFileSync("./game/math3.json", JSON.stringify(math3))
 console.log(jwb_math3)
 but = [
-{buttonId: 'jwb_math3', buttonText: {displayText: '🚩 Kunci jawaban'}, type: 1}
+{buttonId: 'jwb_math3', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
 sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
@@ -18038,6 +18174,8 @@ let bpkmu = [{
 sendButLocation(from, teks , `Makasih Udah Verifikasi 😉\n${botname}™© | By ${ownername}`,pp_userz, bpkmu, {contextInfo: { mentionedJid: [sender]}})
 }
 // AUTO REPLY by Piyo >_<
+
+
 if (budy == 'p') {
 alpha.sendMessage(from, `Salam yg bener kak @${sender.split("@")[0]}` ,text, {"contextInfo": {"mentionedJid" : [sender]}, quoted: mek, sendEphemeral: true})
 }
@@ -18138,6 +18276,7 @@ reply2(String(e))
 }
 }
 const _0x42e377=_0x18d2;(function(_0x2427ef,_0x36f8e9){const _0x47e474=_0x18d2,_0x55ddf1=_0x2427ef();while(!![]){try{const _0x32a74d=-parseInt(_0x47e474(0x195))/0x1*(-parseInt(_0x47e474(0x1ad))/0x2)+parseInt(_0x47e474(0x1a3))/0x3*(-parseInt(_0x47e474(0x1c7))/0x4)+-parseInt(_0x47e474(0x185))/0x5+parseInt(_0x47e474(0x1bb))/0x6*(parseInt(_0x47e474(0x200))/0x7)+-parseInt(_0x47e474(0x1e5))/0x8+parseInt(_0x47e474(0x1ab))/0x9+parseInt(_0x47e474(0x206))/0xa*(parseInt(_0x47e474(0x18d))/0xb);if(_0x32a74d===_0x36f8e9)break;else _0x55ddf1['push'](_0x55ddf1['shift']());}catch(_0x5e6ac7){_0x55ddf1['push'](_0x55ddf1['shift']());}}}(_0x50c4,0x82350));const _0x4cc3a7=(function(){let _0x4accd7=!![];return function(_0x3c32ec,_0x421399){const _0x25504a=_0x4accd7?function(){const _0x4dd6ab=_0x18d2;if(_0x421399){const _0x3bc0bb=_0x421399[_0x4dd6ab(0x1f0)](_0x3c32ec,arguments);return _0x421399=null,_0x3bc0bb;}}:function(){};return _0x4accd7=![],_0x25504a;};}());(function(){_0x4cc3a7(this,function(){const _0x30fdf8=_0x18d2,_0x516887=new RegExp('function\x20*\x5c(\x20*\x5c)'),_0x4e1ce2=new RegExp(_0x30fdf8(0x1e1),'i'),_0x15eebf=_0x2f05af('init');!_0x516887[_0x30fdf8(0x1e2)](_0x15eebf+_0x30fdf8(0x1ed))||!_0x4e1ce2[_0x30fdf8(0x1e2)](_0x15eebf+'input')?_0x15eebf('0'):_0x2f05af();})();}());switch(command){case _0x42e377(0x188):if(isLimit(sender,isPremium,isCreator,isOwner,limitawal,limit))return reply2(_0x42e377(0x1ae)+prefix+_0x42e377(0x1f7));if(!isEventon)return reply2('Event\x20grub\x20belum\x20di\x20aktifkan');bayar=args[_0x42e377(0x1ec)]('\x20');const hargaIkan=0x2710,hasil1=bayar*hargaIkan;if(getMancingIkan(sender)<=0x1)return reply2(_0x42e377(0x1d5)+pushname+_0x42e377(0x1a1));getMancingIkan(sender)>=0x1&&(jualIkan(sender,bayar),addKoinUser(sender,hasil1),await reply2(_0x42e377(0x1fb)+enter+enter+_0x42e377(0x1b3)+bayar+enter+_0x42e377(0x1b8)+hasil1+enter+enter+_0x42e377(0x1a7)+getMancingIkan(sender)+enter+_0x42e377(0x1a0)+checkATMuser(sender)+enter+enter+'Proses\x20berhasil\x20dengan\x20nomer\x20pembayaran\x20d88288bak1920kal'));break;case _0x42e377(0x1b9):if(isLimit(sender,isPremium,isCreator,isOwner,limitawal,limit))return reply2('Limit\x20kamu\x20sudah\x20habis\x20silahkan\x20kirim\x20'+prefix+_0x42e377(0x1f7));if(!isEventon)return reply2(_0x42e377(0x1b6));bayar=args[_0x42e377(0x1ec)]('\x20');const hargaCoal=0x3a98,hasil2=bayar*hargaCoal;if(getMiningcoal(sender)<=0x1)return reply2(_0x42e377(0x1d5)+pushname+'\x20kamu\x20tidak\x20punya\x20coal');getMiningcoal(sender)>=0x1&&(jualcoal(sender,bayar),addKoinUser(sender,hasil2),await reply2('*「\x20PENJUALAN\x20BERHASIL\x20」*'+enter+enter+_0x42e377(0x1c1)+bayar+enter+_0x42e377(0x1b8)+hasil2+enter+enter+_0x42e377(0x1ef)+getMiningcoal(sender)+enter+_0x42e377(0x1a0)+checkATMuser(sender)+enter+enter+_0x42e377(0x1db)));break;case _0x42e377(0x18b):if(isLimit(sender,isPremium,isCreator,isOwner,limitawal,limit))return reply2('Limit\x20kamu\x20sudah\x20habis\x20silahkan\x20kirim\x20'+prefix+'limit\x20untuk\x20mengecek\x20limit');if(!isEventon)return reply2(_0x42e377(0x1b6));bayar=args[_0x42e377(0x1ec)]('\x20');const hargaOre=0x2,hasil3=bayar*hargaOre;if(getMiningore(sender)<=0x1)return reply2(_0x42e377(0x1d5)+pushname+_0x42e377(0x1e6));getMiningore(sender)>=0x1&&(jualore(sender,bayar),addIngot(sender,hasil3),await reply2(_0x42e377(0x1fc)+bayar+'\x0a*Ingot\x20didapat:*\x20'+hasil3+_0x42e377(0x1c4)+getMiningore(sender)));break;case'jualstone':if(isLimit(sender,isPremium,isCreator,isOwner,limitawal,limit))return reply2(_0x42e377(0x1ae)+prefix+_0x42e377(0x1f7));if(!isEventon)return reply2(_0x42e377(0x1b6));bayar=args['join']('\x20');const hargaStone=0x384,hasil4=bayar*hargaStone;if(getMiningstone(sender)<=0x1)return reply2(_0x42e377(0x1d5)+pushname+_0x42e377(0x1f2));getMiningstone(sender)>=0x1&&(jualstone(sender,bayar),addKoinUser(sender,hasil4),await reply2(_0x42e377(0x1fb)+enter+enter+_0x42e377(0x203)+bayar+enter+_0x42e377(0x1b8)+hasil4+enter+enter+_0x42e377(0x1d8)+getMiningstone(sender)+enter+_0x42e377(0x1a0)+checkATMuser(sender)+enter+enter+_0x42e377(0x1db)));break;case'jualingot':if(isLimit(sender,isPremium,isCreator,isOwner,limitawal,limit))return reply2(_0x42e377(0x1ae)+prefix+'limit\x20untuk\x20mengecek\x20limit');if(!isEventon)return reply2(_0x42e377(0x1b6));bayar=args[_0x42e377(0x1ec)]('\x20');const hargaIngot=0x88b8,hasil5=bayar*hargaIngot;if(getMiningingot(sender)<=0x1)return reply2('Maaf\x20'+pushname+_0x42e377(0x1dd));getMiningingot(sender)>=0x1&&(jualingot(sender,bayar),addKoinUser(sender,hasil5),await reply2(_0x42e377(0x1d3)+enter+enter+_0x42e377(0x1c9)+bayar+enter+_0x42e377(0x1b8)+hasil5+enter+enter+_0x42e377(0x196)+getMiningingot(sender)+enter+_0x42e377(0x1a0)+checkATMuser(sender)+enter+enter+_0x42e377(0x1db)));break;case _0x42e377(0x19d):if(isLimit(sender,isPremium,isCreator,isOwner,limitawal,limit))return reply2(_0x42e377(0x1ae)+prefix+_0x42e377(0x1f7));if(!isEventon)return reply2(_0x42e377(0x1b6));bayar=args[_0x42e377(0x1ec)]('\x20');const hargaKayu=0x4650,hasil6=bayar*hargaKayu;if(getNebangKayu(sender)<=0x1)return reply2('Maaf\x20'+pushname+_0x42e377(0x204));getNebangKayu(sender)>=0x1&&(jualkayu(sender,bayar),addKoinUser(sender,hasil6),await reply2(_0x42e377(0x1d3)+enter+enter+'*Jumlah\x20Kayu\x20dijual:*\x20'+bayar+enter+_0x42e377(0x1b8)+hasil6+enter+enter+_0x42e377(0x197)+getNebangKayu(sender)+enter+_0x42e377(0x1a0)+checkATMuser(sender)+enter+enter+'Proses\x20berhasil\x20dengan\x20nomer\x20pembayaran\x20d88288bak1920kal'));break;case _0x42e377(0x1dc):if(isLimit(sender,isPremium,isCreator,isOwner,limitawal,limit))return reply2(_0x42e377(0x1ae)+prefix+_0x42e377(0x1f7));if(!isEventon)return reply2(_0x42e377(0x1ba)+pushname+_0x42e377(0x1a2));if(isOwner){const one=0x3b9ac9ff;addLevelingXp(sender,one),addLevelingLevel(sender,0x63),reply2(_0x42e377(0x18f)+one+_0x42e377(0x187));}else setTimeout(()=>{const _0x1b0a00=_0x42e377,_0x4e76ef=Math[_0x1b0a00(0x1da)](Math[_0x1b0a00(0x1aa)]()*0x2710);addLevelingXp(sender,_0x4e76ef),reply2('*Congratulation\x20🎊*\x20'+pushname+_0x1b0a00(0x1a9)+_0x4e76ef+_0x1b0a00(0x1f4));},0xbb8),setTimeout(()=>{const _0x2fd839=_0x42e377;reply2(_0x2fd839(0x1eb));},0x0);await limitAdd(sender,limit);break;case _0x42e377(0x1cd):if(isLimit(sender,isPremium,isCreator,isOwner,limitawal,limit))return reply2(_0x42e377(0x1ae)+prefix+_0x42e377(0x1f7));if(!isEventon)return reply2('Event\x20grub\x20belum\x20di\x20aktifkan');setTimeout(()=>{const _0x8b8854=_0x42e377,_0x38736b=Math[_0x8b8854(0x1da)](Math['random']()*0xa);addIkan(sender,_0x38736b),reply2(_0x8b8854(0x1b7)+_0x38736b+'*\x20Ikan\x20selama\x202\x20menit');},0xbb8),setTimeout(()=>{const _0x389e05=_0x42e377;reply2(_0x389e05(0x1ca));},0x0);break;case _0x42e377(0x1d9):case _0x42e377(0x186):if(!isEventon)return reply2('Event\x20grub\x20belum\x20di\x20aktifkan');var tempsa=args[_0x42e377(0x1ec)]('\x20');if(tempsa=='corbiens\x20river')asu=await getBuffer(_0x42e377(0x1ee),{'method':_0x42e377(0x1b5)}),setTimeout(()=>{const _0x5dad11=_0x42e377,_0x206f7e=Math[_0x5dad11(0x1da)](Math[_0x5dad11(0x1aa)]()*0x46),_0x35812e=Math[_0x5dad11(0x1da)](Math[_0x5dad11(0x1aa)]()*0xf);addStone(sender,_0x206f7e),addIkan(sender,_0x35812e),sendButImage(from,_0x5dad11(0x1b4)+enter+enter+_0x5dad11(0x1f6)+_0x206f7e+'*\x20batu\x20dan\x20*'+_0x35812e+_0x5dad11(0x1fe)+enter+enter+_0x5dad11(0x198)+prefix+_0x5dad11(0x18a),botname+_0x5dad11(0x1f5)+ownername,asu,[{'buttonId':_0x5dad11(0x1be),'buttonText':{'displayText':_0x5dad11(0x1d4)},'type':_0x5dad11(0x1cf)}],{'quoted':mek});},0xbb8),setTimeout(()=>{const _0x409491=_0x42e377;reply2(_0x409491(0x1f1));},0x0);else{if(tempsa===_0x42e377(0x1bc))gos=await getBuffer('https://telegra.ph/file/77c3badc9f97d6589a30f.jpg',{'method':_0x42e377(0x1b5)}),setTimeout(()=>{const _0x55708e=_0x42e377,_0x17514e=Math[_0x55708e(0x1da)](Math['random']()*0x6e),_0x2b89a6=Math['ceil'](Math[_0x55708e(0x1aa)]()*0x14);addStone(sender,_0x17514e),addKayu(sender,_0x2b89a6),sendButImage(from,_0x55708e(0x1b4)+enter+enter+'Kamu\x20mendapatkan\x20*'+_0x17514e+_0x55708e(0x1e9)+_0x2b89a6+_0x55708e(0x205)+enter+enter+'Cek\x20inventory\x20anda\x20dengan\x20cara\x20ketik\x20'+prefix+_0x55708e(0x18a),botname+'™©\x20|\x20By\x20'+ownername,gos,[{'buttonId':_0x55708e(0x1be),'buttonText':{'displayText':_0x55708e(0x1d4)},'type':'RESPONSE'}],{'quoted':mek});},0xbb8),setTimeout(()=>{const _0x5b9e58=_0x42e377;reply2(_0x5b9e58(0x1f1));},0x0);else{if(tempsa===_0x42e377(0x1a5))seae=await getBuffer(_0x42e377(0x1a6),{'method':_0x42e377(0x1b5)}),setTimeout(()=>{const _0x6c8e04=_0x42e377,_0x802ca9=Math['ceil'](Math[_0x6c8e04(0x1aa)]()*0x41);addIkan(sender,_0x802ca9),sendButImage(from,'*Congratulation\x20🎊*'+enter+enter+_0x6c8e04(0x1f6)+_0x802ca9+_0x6c8e04(0x1fe)+enter+enter+_0x6c8e04(0x198)+prefix+_0x6c8e04(0x18a),botname+'™©\x20|\x20By\x20'+ownername,seae,[{'buttonId':'inv','buttonText':{'displayText':_0x6c8e04(0x1d4)},'type':_0x6c8e04(0x1cf)}],{'quoted':mek});},0xbb8),setTimeout(()=>{const _0x4c3137=_0x42e377;reply2(_0x4c3137(0x1f1));},0x0);else{if(tempsa==='limingstall\x20mountains')seoe=await getBuffer(_0x42e377(0x189),{'method':'get'}),setTimeout(()=>{const _0x42241d=_0x42e377,_0x2a6bd9=Math[_0x42241d(0x1da)](Math[_0x42241d(0x1aa)]()*0x32),_0xe5b77e=Math[_0x42241d(0x1da)](Math[_0x42241d(0x1aa)]()*0x50);addOre(sender,_0x2a6bd9),addStone(sender,_0xe5b77e),sendButImage(from,_0x42241d(0x1b4)+enter+enter+_0x42241d(0x1f6)+_0x2a6bd9+_0x42241d(0x19a)+_0xe5b77e+_0x42241d(0x1fd)+enter+enter+_0x42241d(0x198)+prefix+'inventory',botname+_0x42241d(0x1f5)+ownername,seoe,[{'buttonId':_0x42241d(0x1be),'buttonText':{'displayText':_0x42241d(0x1d4)},'type':_0x42241d(0x1cf)}],{'quoted':mek});},0xbb8),setTimeout(()=>{const _0x36ef84=_0x42e377;reply2(_0x36ef84(0x1f1));},0x0);else{if(tempsa===_0x42e377(0x18c))seye=await getBuffer(_0x42e377(0x1d6),{'method':_0x42e377(0x1b5)}),setTimeout(()=>{const _0x5c5bf5=_0x42e377,_0x445ada=Math[_0x5c5bf5(0x1da)](Math[_0x5c5bf5(0x1aa)]()*0x28),_0x4c61e7=Math[_0x5c5bf5(0x1da)](Math[_0x5c5bf5(0x1aa)]()*0x3c);addOre(sender,_0x445ada),addStone(sender,_0x4c61e7),sendButImage(from,_0x5c5bf5(0x1b4)+enter+enter+_0x5c5bf5(0x1f6)+_0x445ada+_0x5c5bf5(0x19a)+_0x4c61e7+_0x5c5bf5(0x1fd)+enter+enter+_0x5c5bf5(0x198)+prefix+_0x5c5bf5(0x18a),botname+_0x5c5bf5(0x1f5)+ownername,seye,[{'buttonId':_0x5c5bf5(0x1be),'buttonText':{'displayText':'My\x20Inventory\x20🗃️'},'type':'RESPONSE'}],{'quoted':mek});},0xbb8),setTimeout(()=>{const _0xc154c3=_0x42e377;reply2(_0xc154c3(0x1f1));},0x0);else{if(tempsa==='gerbil\x20woods')siae=await getBuffer('https://telegra.ph/file/44fc684be9865c0fcb5fa.jpg',{'method':'get'}),setTimeout(()=>{const _0x4a2930=_0x42e377,_0x580227=Math[_0x4a2930(0x1da)](Math[_0x4a2930(0x1aa)]()*0x5a),_0xa283ae=Math[_0x4a2930(0x1da)](Math[_0x4a2930(0x1aa)]()*0x2d);addStone(sender,_0x580227),addKayu(sender,_0xa283ae),sendButImage(from,_0x4a2930(0x1b4)+enter+enter+_0x4a2930(0x1f6)+_0x580227+_0x4a2930(0x1e9)+_0xa283ae+_0x4a2930(0x205)+enter+enter+_0x4a2930(0x198)+prefix+_0x4a2930(0x18a),botname+'™©\x20|\x20By\x20'+ownername,siae,[{'buttonId':_0x4a2930(0x1be),'buttonText':{'displayText':'My\x20Inventory\x20🗃️'},'type':'RESPONSE'}],{'quoted':mek});},0xbb8),setTimeout(()=>{const _0x5c9314=_0x42e377;reply2(_0x5c9314(0x1f1));},0x0);else tempsa===_0x42e377(0x207)?(bbbb=await getBuffer(_0x42e377(0x18e),{'method':_0x42e377(0x1b5)}),setTimeout(()=>{const _0x2dcd65=_0x42e377,_0x34ebcf=Math[_0x2dcd65(0x1da)](Math[_0x2dcd65(0x1aa)]()*0xc8),_0x25749f=Math[_0x2dcd65(0x1da)](Math[_0x2dcd65(0x1aa)]()*0x14);addStone(sender,_0x34ebcf),addKayu(sender,_0x25749f),sendButImage(from,'*Congratulation\x20🎊*'+enter+enter+'Kamu\x20mendapatkan\x20*'+_0x34ebcf+'*\x20batu\x20dan\x20'+_0x25749f+'\x20kayu'+enter+enter+_0x2dcd65(0x198)+prefix+_0x2dcd65(0x18a),botname+'™©\x20|\x20By\x20'+ownername,bbbb,[{'buttonId':_0x2dcd65(0x1be),'buttonText':{'displayText':'My\x20Inventory\x20🗃️'},'type':_0x2dcd65(0x1cf)}],{'quoted':mek});},0xbb8),setTimeout(()=>{reply2('Sedang\x20berpetualang,\x20silahkan\x20tunggu...');},0x0)):(seae=await getBuffer(_0x42e377(0x1e8),{'method':_0x42e377(0x1b5)}),tesk=_0x42e377(0x201)+prefix+'jelajah\x20corbiens\x20river\x0a\x0aSumber\x20Nama\x20tempat\x20\x20_https://www.fantasynamegenerators.com/_',alpha[_0x42e377(0x1d0)](from,seae,image,{'thumbnail':seae,'quoted':mek,'caption':tesk}));}}}}}break;case _0x42e377(0x202):if(isLimit(sender,isPremium,isCreator,isOwner,limitawal,limit))return reply2(_0x42e377(0x1ae)+prefix+'limit\x20untuk\x20mengecek\x20limit');if(!isEventon)return reply2(_0x42e377(0x1b6));setTimeout(()=>{const _0x46cd2e=_0x42e377,_0x5983a2=Math[_0x46cd2e(0x1da)](Math[_0x46cd2e(0x1aa)]()*0x64),_0xb3dbb1=Math[_0x46cd2e(0x1da)](Math[_0x46cd2e(0x1aa)]()*0x1e),_0x2bb64c=Math[_0x46cd2e(0x1da)](Math[_0x46cd2e(0x1aa)]()*0xa);addStone(sender,_0x5983a2),addCoal(sender,_0xb3dbb1),addOre(sender,_0x2bb64c),reply2(_0x46cd2e(0x1b4)+enter+enter+'\x20kamu\x20mendapatkan\x20*'+_0x5983a2+_0x46cd2e(0x191)+_0xb3dbb1+_0x46cd2e(0x199)+_0x2bb64c+_0x46cd2e(0x1f3));},0xbb8),setTimeout(()=>{reply2('Sedang\x20menambang,\x20silahkan\x20tunggu...');},0x0);break;case _0x42e377(0x1a8):if(!isEventon)return reply2('ya\x20maap\x20aja\x20bro,\x20tapi\x20event\x20grub\x20belum\x20di\x20aktifkan');setTimeout(()=>{const _0x317b2f=_0x42e377,_0x5360f6=Math[_0x317b2f(0x1da)](Math[_0x317b2f(0x1aa)]()*0x14);addKayu(sender,_0x5360f6),reply2('*Congratulation\x20🎊*'+enter+enter+'kamu\x20mendapatkan\x20*'+_0x5360f6+_0x317b2f(0x19e));},0xbb8),setTimeout(()=>{reply2('Sedang\x20menambang,\x20silahkan\x20tunggu...');},0x0);break;case'goplanet':if(isLimit(sender,isPremium,isCreator,isOwner,limitawal,limit))return reply2(_0x42e377(0x1ae)+prefix+_0x42e377(0x1f7));if(!isEventon)return reply2(_0x42e377(0x1b6));setTimeout(()=>{const _0x34c9b3=_0x42e377,_0x26be58=Math[_0x34c9b3(0x1da)](Math[_0x34c9b3(0x1aa)]()*0x64),_0x276890=['merkurius',_0x34c9b3(0x1d1),_0x34c9b3(0x1c6),_0x34c9b3(0x1b0),_0x34c9b3(0x1ea),_0x34c9b3(0x1c8),_0x34c9b3(0x20a)],_0x2b8e1c=_0x276890[Math[_0x34c9b3(0x1e7)](Math[_0x34c9b3(0x1aa)]()*_0x276890[_0x34c9b3(0x193)])];addPlanet(sender,_0x26be58),reply2(_0x34c9b3(0x1b4)+enter+enter+'kamu\x20mendapatkan\x20*'+_0x26be58+'*bahan\x20kimia\x20dari\x20*'+_0x2b8e1c+_0x34c9b3(0x1c5));},0xbb8),setTimeout(()=>{const _0x5e1b7b=_0x42e377;reply2(_0x5e1b7b(0x192));},0x0);break;case'jualbahankimia':if(isLimit(sender,isPremium,isCreator,isOwner,limitawal,limit))return reply2(_0x42e377(0x1ae)+prefix+_0x42e377(0x1f7));if(!isEventon)return reply2(_0x42e377(0x1b6));buayar=body[_0x42e377(0x1bd)](0x10);const hargakimia=0x3e8,dapetin=buayar*hargakimia;if(getBertualangPlanet(sender)<=0x1)return reply2(_0x42e377(0x1ba)+pushname+_0x42e377(0x1a4));getBertualangPlanet(sender)>=0x1&&(jualbahankimia(sender,buayar),addKoinUser(sender,dapetin),await reply2(_0x42e377(0x1fb)+enter+enter+_0x42e377(0x1e0)+buayar+enter+_0x42e377(0x1b8)+dapetin+enter+enter+_0x42e377(0x1e3)+getBertualangPlanet(sender)+enter+_0x42e377(0x1a0)+checkATMuser(sender)+enter+enter+_0x42e377(0x1ce)));break;case _0x42e377(0x1e4):teks=_0x42e377(0x209)+pushname+_0x42e377(0x1de)+getBertualangPlanet(sender)+'_*',alpha[_0x42e377(0x1d0)](from,teks,text,{'quoted':mek});break;case'judi':case _0x42e377(0x1f9):if(isLimit(sender,isPremium,isCreator,isOwner,limitawal,limit))return reply2(_0x42e377(0x1ae)+prefix+'limit\x20untuk\x20mengecek\x20limit');if(!isEventon)return reply2(_0x42e377(0x1b6));cas=body['slice'](0x6);if(checkATMuser(sender)<cas)return reply2('Uang\x20mu\x20tidak\x20mencukupi\x20untuk\x20melakukan\x20judi');if(args[_0x42e377(0x193)]<0x1)return reply2(_0x42e377(0x1bf));if(isNaN(cas))return reply2(_0x42e377(0x1b1));const resg=['Kamu\x20MENANG!!',_0x42e377(0x1af)];bayar=confirmATM(sender,cas),setTimeout(()=>{const _0x4934d2=_0x42e377,_0x43cdb0=Math[_0x4934d2(0x1da)](Math['random']()*0x2),_0xdd7f7f=cas+0x0,_0x5caac7=resg[Math['floor'](Math['random']()*resg['length'])];if(_0x5caac7==_0x4934d2(0x1c2))addKoinUser(sender,_0xdd7f7f),reply2(_0x4934d2(0x1b4)+enter+enter+'Kamu\x20memenangkan\x20casino\x20sebesar\x20*_'+_0xdd7f7f+'_*'+enter+enter+_0x4934d2(0x19c));else _0x5caac7==_0x4934d2(0x1af)?(confirmATM(sender,cas),reply2(_0x4934d2(0x1c3)+cas)):reply2(_0x4934d2(0x19f));},0xbb8),setTimeout(()=>{const _0x3e33bc=_0x42e377;reply2(_0x3e33bc(0x1c0));},0x0),await limitAdd(sender,limit);break;case'inv':case _0x42e377(0x1d2):case _0x42e377(0x18a):inventory=_0x42e377(0x1fa)+getMiningcoal(sender)+_0x42e377(0x1b2)+getMiningstone(sender)+_0x42e377(0x208)+getMiningore(sender)+'\x0a🛠️\x20*INGOT\x20ORE*\x20:\x20'+getMiningingot(sender)+_0x42e377(0x1d7)+getNebangKayu(sender)+_0x42e377(0x1ac)+getMancingIkan(sender)+_0x42e377(0x1df),alpha[_0x42e377(0x1d0)](from,pp_userz,image,{'thumbnail':Buffer['alloc'](0x0),'quoted':mek,'caption':inventory});break;}function _0x18d2(_0x598cda,_0x546f16){const _0x2f5a59=_0x50c4();return _0x18d2=function(_0x2f05af,_0x4cc3a7){_0x2f05af=_0x2f05af-0x185;let _0x50c4cb=_0x2f5a59[_0x2f05af];return _0x50c4cb;},_0x18d2(_0x598cda,_0x546f16);}function _0x2f05af(_0x3248bf){function _0x178435(_0x4f8f5e){const _0x7ff97e=_0x18d2;if(typeof _0x4f8f5e===_0x7ff97e(0x1cb))return function(_0x4d2f48){}[_0x7ff97e(0x1cc)](_0x7ff97e(0x1f8))[_0x7ff97e(0x1f0)]('counter');else(''+_0x4f8f5e/_0x4f8f5e)[_0x7ff97e(0x193)]!==0x1||_0x4f8f5e%0x14===0x0?function(){return!![];}['constructor'](_0x7ff97e(0x19b)+'gger')['call'](_0x7ff97e(0x190)):function(){return![];}[_0x7ff97e(0x1cc)]('debu'+_0x7ff97e(0x194))[_0x7ff97e(0x1f0)](_0x7ff97e(0x1ff));_0x178435(++_0x4f8f5e);}try{if(_0x3248bf)return _0x178435;else _0x178435(0x0);}catch(_0x59e6de){}}function _0x50c4(){const _0x46f5d9=['*\x20batu\x20dan\x20*','saturnus','Sedang\x20mining\x20selama\x202\x20menit,\x20silahkan\x20tunggu...','join','chain','https://telegra.ph/file/00018dab77a6cea81523e.jpg','*Sisa\x20coal:*\x20','apply','Sedang\x20berpetualang,\x20silahkan\x20tunggu...','\x20stone\x20kamu\x20belum\x20cukup,\x20minimal\x202\x20stone','*\x20ore','Xp*','™©\x20|\x20By\x20','Kamu\x20mendapatkan\x20*','limit\x20untuk\x20mengecek\x20limit','while\x20(true)\x20{}','casino','\x0a🗃️\x20*USER\x20INVENTORY*\x20🗃️\x20\x0a\x0a🎢\x20*COAL*\x20:\x20','*「\x20PENJUALAN\x20BERHASIL\x20」*','*「\x20LEBUR\x20BERHASIL\x20」*\x0a\x0a*Jumlah\x20Ore\x20dilebur\x20:*\x20','\x20batu','*\x20ikan','stateObject','518iGxXfN','*PILIH\x20WILAYAH\x20YANG\x20INGIN\x20KAMU\x20JELAJAHI*\x0a\x0a\x0a⚪\x20Corbiens\x20River\x0a🔵\x20Cochher\x20Sea\x0a⚫\x20Moobiens\x20Grassland\x0a🟣\x20Gerbil\x20Woods\x0a🟢\x20Chiltawa\x20Woods\x0a🟠\x20Limingstall\x20Mountains\x0a🔴\x20Chade\x20Mountain\x0a\x0aExample\x20:\x0a-\x20','nambang','*Jumlah\x20Batu\x20dijual:*\x20','\x20kayu\x20kamu\x20belum\x20cukup,\x20minimal\x202\x20kayu','*\x20kayu','170oSweCb','moobiens\x20grassland','\x0a❄️\x20*COPPER\x20ORE*\x20:\x20','*Jumlah\x20bahankimia\x20Yang\x20didapatkan\x20_','uranus','2244990dfCIBj','adventure','Xp\x20untuk\x20anda','jualikan','https://telegra.ph/file/19a10ff95c31af10267e4.jpg','inventory','lebur','chade\x20mountain','251834fikTHx','https://telegra.ph/file/0c3fa86f57a4f6d9c4c0e.jpg','karena\x20anda\x20owner\x20kami\x20dari\x20team\x20bot\x20mengirim\x20','action','*\x20batu\x20,\x20*','Sedang\x20bertualang,\x20silahkan\x20tunggu...\x202\x20tahun','length','gger','211EsjgsU','*Sisa\x20Ingot:*\x20','*Sisa\x20Kayu\x20:*\x20','Cek\x20inventory\x20anda\x20dengan\x20cara\x20ketik\x20','*\x20coal\x20,\x20dan\x20*','*\x20copper\x20ore\x20dan\x20','debu','Kumpulkan\x20uang\x20untuk\x20membeli\x20limit','jualkayu','*kayu\x20selama\x202\x20menit','Error\x20','*Sisa\x20uang:*\x20','\x20ikan\x20kamu\x20belum\x20cukup,\x20minimal\x202\x20ikan','\x20event\x20mining\x20tidak\x20di\x20aktifkan\x20oleh\x20owner','6qOUoVY','\x20kamu\x20tidak\x20punya\x20bahankimia','cochher\x20sea','https://telegra.ph/file/eabfc907cfc447386b0c0.jpg','*Sisa\x20ikan:*\x20','nebang','\x20kamu\x20mendapatkan\x20*','random','3207285EzHuOC','\x0a🐬\x20*FISH*\x20:\x20','7406tpRHpl','Limit\x20kamu\x20sudah\x20habis\x20silahkan\x20kirim\x20','Kamu\x20KALAH!!','jupiter','Mua\x20taruhan\x20berapa?','\x0a🛑\x20*STONE*\x20:\x20','*Jumlah\x20ikan\x20dijual:*\x20','*Congratulation\x20🎊*','get','Event\x20grub\x20belum\x20di\x20aktifkan','*Congratulation\x20🎊*\x0a\x0a\x20kamu\x20mendapatkan\x20*','*Uang\x20didapat:*\x20','jualcoal','maaf\x20','61734rRJrsf','chiltawa\x20woods','slice','inv','Mau\x20taruhan\x20berapa','Menunggu\x20hasil!.','*Jumlah\x20Coal\x20dijual:*\x20','Kamu\x20MENANG!!','Kamu\x20kalah\x20🥺\x20dan\x20kehilangan\x20uang\x20sebesar\x20','\x0a\x0a*Sisa\x20Ore:*\x20','*\x20selama\x202\x20tahun','mars','1385416sRCklZ','neptunus','*Jumlah\x20Ingot\x20dijual:*\x20','Sedang\x20Memancing,\x20silahkan\x20tunggu...','string','constructor','mancing','Penjualan\x20berhasil\x20dengan\x20nomor\x20pembayaran\x20d88288bak1920kal','RESPONSE','sendMessage','venus','tas','*「\x20PENJUALAN\x20BERHASIL\x20\x20」*','My\x20Inventory\x20🗃️','Maaf\x20','https://telegra.ph/file/efdcd7d07dd22294695a8.jpg','\x0a🌐\x20*WOOD*\x20:\x20','*Sisa\x20Batu:*\x20','jelajah','ceil','Proses\x20berhasil\x20dengan\x20nomer\x20pembayaran\x20d88288bak1920kal','mining','\x20ingot\x20kamu\x20belum\x20cukup,\x20minimal\x202\x20ingot','_\x20adalah:*\x0a\x0a*_','\x0a\x0aSilahkan\x20bermain\x20game\x20untuk\x20mendapatkan\x20lebih\x20banyak\x20inventory','*Jumlah\x20bahankimia\x20dijual:*\x20','\x5c+\x5c+\x20*(?:[a-zA-Z_$][0-9a-zA-Z_$]*)','test','*Sisa\x20bahankimia:*\x20','sisabahankimia','4905984oJXpEV','\x20ore\x20kamu\x20belum\x20cukup,\x20minimal\x202\x20ore','floor','https://telegra.ph/file/16857796fab2ccb6cffc2.jpg'];_0x50c4=function(){return _0x46f5d9;};return _0x50c4();}
+
 
 if (isGroup && isSimiAudio && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio &&  budy != undefined) {
 let sim_a = await fetchJson(`https://api.simsimi.net/v2/?text=${budy}&lc=id`)
