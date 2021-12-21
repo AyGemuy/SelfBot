@@ -1,5 +1,4 @@
-{ "hewan" :
-{"a" :
+{ "hewan" : [
 "Albatros",
 "Alligator",
 "Alpaka",
@@ -17,9 +16,7 @@
 "Ayam",
 "Ayam betina",
 "Ayam Hutan",
-"Ayam jantan"
-},
-{"b" :
+"Ayam jantan",
 "Babi",
 "Babi hutan",
 "Babon",
@@ -51,52 +48,34 @@
 "Burung kiwi",
 "Burung layang",
 "Burung pelatuk",
-"Burung unta"
-},
-{"c" :
+"Burung unta",
 "Cacing",
 "Capung",
 "Cerpelai",
 "Cicak",
-"Cumi-cumi"
-},
-{"d" :
-"Domba"
-},
-{"e" :
+"Cumi-cumi",
+"Domba",
 "Elang",
-"Elang"
-},
-{"f" :
+"Elang",
 "Falkon",
-"Flamingo"
-},
-{"g" :
+"Flamingo",
 "Gagak",
 "Gagak besar",
 "Gajah",
-"Gurita"
-},
-{"h" :
+"Gurita",
 "Hamster",
 "Harimau",
 "Harimau Kumbang",
-"Hiu"
-},
-{"i" :
+"Hiu",
 "Iguana",
 "Ikan",
 "Ikan cucut",
 "Ikan pari",
 "Ikan teri",
-"Ikan tuna"
-},
-{"j" :
+"Ikan tuna",
 "Jaguar",
 "Jangkrik",
-"Jerapah"
-},
-{"k" :
+"Jerapah",
 "Kadal",
 "Kadal air",
 "Kakap",
@@ -136,9 +115,7 @@
 "Kura-kura",
 "Kuskus",
 "Kutu",
-"Kutu rambut"
-},
-{"l" :
+"Kutu rambut",
 "Laba-laba",
 "Lalat",
 "Landak",
@@ -150,9 +127,7 @@
 "Lobster",
 "Lumba-Lumba",
 "Lutung",
-"Luwak"
-},
-{"m" :
+"Luwak",
 "Macan tutul",
 "Maleo",
 "Mamut",
@@ -162,31 +137,23 @@
 "Monyet",
 "Mujair",
 "Murai",
-"Musang"
-},
-{"n" :
+"Musang",
 "Ngengat",
-"Nyamuk"
-},
-{"p" :
+"Nyamuk",
 "Panda",
 "Paus",
 "Pelikan",
 "Penyu",
 "Perkutut",
 "Platipus",
-"Puyuh"
-},
-{"r" :
+"Puyuh",
 "Rajawali",
 "Rangkong",
 "Rayap",
 "Remis",
 "Rubah",
 "Rusa",
-"Rusa besar"
-},
-{"s" :
+"Rusa besar",
 "Salamander",
 "Sapi",
 "Sarden",
@@ -198,9 +165,7 @@
 "Singa Laut",
 "Singa laut",
 "Siput",
-"Soang"
-},
-{"t" :
+"Soang",
 "Tabuhan",
 "Tarantula",
 "Tawon",
@@ -210,9 +175,7 @@
 "Tongkol",
 "Trenggiling",
 "Tupai",
-"Tupai tanah"
-},
-{"u" :
+"Tupai tanah",
 "Ubur-Ubur",
 "Udang",
 "Ular",
@@ -223,9 +186,6 @@
 "Ular kobra",
 "Ular piton",
 "Ulat bulu"
-"Unta"
-},
-{"z" :
-"Zebra"
-}
+"Unta",
+"Zebra"]
 }
