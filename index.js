@@ -18333,15 +18333,15 @@ const _0x42e377=_0x18d2;(function(_0x2427ef,_0x36f8e9){const _0x47e474=_0x18d2,_
 
 
 if (isGroup && isSimiAudio && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio &&  budy != undefined) {
-let sim_a = await fetchJson(`https://api.simsimi.net/v2/?text=${encodeURIComponent(budy)}&lc=id`)
+let sim_a = await fetchJson(`https://simsimi.info/api/?text=${budy}&lc=id`)
 zim = `${sim_a.success}`
 let has_a = await getBuffer(`https://hadi-api.herokuapp.com/api/tts?language=id&text=${zim}`)
 await alpha.sendMessage(from,has_a, MessageType.audio, {mimetype:'audio/mp4', quoted:mek, ptt:true,duration: 86400000})
 }
 
 if (isGroup && isSisimi && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && budy != undefined) {
-let link_simi = await fetchJson(`https://api.simsimi.net/v2/?text=${encodeURIComponent(budy)}&lc=id`)
-alpha.sendMessage(from,`*Simi bilek* : ${link_simi.success}`, text, {quoted:mek})
+let link_simi = await fetchJson(`https://simsimi.info/api/?text=${budy}&lc=id`)
+alpha.sendMessage(from,`*🐣Simi.* ${link_simi.success}`, text, {quoted:mek})
 } else {
 console.log(color('[ PRIVATE ]', 'aqua'), 'SELF-MODE', color(pushname))
 }		
