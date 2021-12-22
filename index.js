@@ -290,6 +290,7 @@ const tebaklagu = JSON.parse(fs.readFileSync('./game/tebaklagu.json'))
 const teswibu = JSON.parse(fs.readFileSync('./game/teswibu.json'))
 const tebakhewan = JSON.parse(fs.readFileSync('./game/tebakhewan.json'))
 const tebakbuah = JSON.parse(fs.readFileSync('./game/tebakbuah.json'))
+const tebakemoji = JSON.parse(fs.readFileSync('./game/cariemoj.json'))
 
 // END
 const akinator = JSON.parse(fs.readFileSync('./src/akinator.json'))
@@ -348,6 +349,9 @@ e = [`🌹`,`🥀`,`🌷`,`🏵️`,`🌻`,`🌼`,`💮`,`🍂`,`🍁`,`🌾`,`�
 let emoj = e[Math.floor(Math.random() * e.length)]
 e2 = [`⋆`,`𖧹`,`⌯`,`〆`]
 let emoj2 = e2[Math.floor(Math.random() * e2.length)]
+e3 = [`😄`,`😃`,`😀`,`😊`,`☺`,`😉`,`😍`,`😘`,`😚`,`😗`,`😙`,`😜`,`😝`,`😛`,`😳`,`😁`,`😔`,`😌`,`😒`,`😞`,`😣`,`😢`,`😂`,`😭`,`😪`,`😥`,`😰`,`😅`,`😓`,`😩`,`😫`,`😨`,`😱`,`😠`,`😡`,`😤`,`😖`,`😆`,`😋`,`😷`,`😎`,`😴`,`😵`,`😲`,`😟`,`😦`,`😧`,`😈`,`👿`,`😮`,`😬`,`😐`,`😕`,`😯`,`😶`,`😇`,`😏`,`😑`,`👲`,`👳`,`👮`,`👷`,`💂`,`👶`,`👦`,`👧`,`👨`,`👩`,`👴`,`👵`,`👱`,`👼`,`👸`,`😺`,`😸`,`😻`,`😽`,`😼`,`🙀`,`😿`,`😹`,`😾`,`👹`,`👺`,`🙈`,`🙉`,`🙊`,`💀`,`👽`,`💩`,`🔥`,`✨`,`🌟`,`💫`,`💥`,`💢`,`💦`,`💧`,`💤`,`💨`,`👂`,`👀`,`👃`,`👅`,`👄`,`👍`,`👎`,`👌`,`👊`,`✊`,`✌`,`👋`,`✋`,`👐`,`👆`,`👇`,`👉`,`👈`,`🙌`,`🙏`,`☝`,`👏`,`💪`,`🚶`,`🏃`,`💃`,`👫`,`👪`,`👬`,`👭`,`💏`,`💑`,`👯`,`🙆`,`🙅`,`💁`,`🙋`,`💆`,`💇`,`💅`,`👰`,`🙎`,`🙍`,`🙇`,`🎩`,`👑`,`👒`,`👟`,`👞`,`👡`,`👠`,`👢`,`👕`,`👔`,`👚`,`👗`,`🎽`,`👖`,`👘`,`👙`,`💼`,`👜`,`👝`,`👛`,`👓`,`🎀`,`🌂`,`💄`,`💛`,`💙`,`💜`,`💚`,`❤`,`💔`,`💗`,`💓`,`💕`,`💖`,`💞`,`💘`,`💌`,`💋`,`💍`,`💎`,`👤`,`👥`,`💬`,`👣`,`💭`,`🐶`,`🐺`,`🐱`,`🐭`,`🐹`,`🐰`,`🐸`,`🐯`,`🐨`,`🐻`,`🐷`,`🐽`,`🐮`,`🐗`,`🐵`,`🐒`,`🐴`,`🐑`,`🐘`,`🐼`,`🐧`,`🐦`,`🐤`,`🐥`,`🐣`,`🐔`,`🐍`,`🐢`,`🐛`,`🐝`,`🐜`,`🐞`,`🐌`,`🐙`,`🐚`,`🐠`,`🐟`,`🐬`,`🐳`,`🐋`,`🐄`,`🐏`,`🐀`,`🐃`,`🐅`,`🐇`,`🐉`,`🐎`,`🐐`,`🐓`,`🐕`,`🐖`,`🐁`,`🐂`,`🐲`,`🐡`,`🐊`,`🐫`,`🐪`,`🐆`,`🐈`,`🐩`,`🐾`,`💐`,`🌸`,`🌷`,`🍀`,`🌹`,`🌻`,`🌺`,`🍁`,`🍃`,`🍂`,`🌿`,`🌾`,`🍄`,`🌵`,`🌴`,`🌲`,`🌳`,`🌰`,`🌱`,`🌼`,`🌐`,`🌞`,`🌝`,`🌚`,`🌑`,`🌒`,`🌓`,`🌔`,`🌕`,`🌖`,`🌗`,`🌘`,`🌜`,`🌛`,`🌙`,`🌍`,`🌎`,`🌏`,`🌋`,`🌌`,`🌠`,`⭐`,`☀`,`⛅`,`☁`,`⚡`,`☔`,`❄`,`⛄`,`🌀`,`🌁`,`🌈`,`🌊`,`🎍`,`💝`,`🎎`,`🎒`,`🎓`,`🎏`,`🎆`,`🎇`,`🎐`,`🎑`,`🎃`,`👻`,`🎅`,`🎄`,`🎁`,`🎋`,`🎉`,`🎊`,`🎈`,`🎌`,`🔮`,`🎥`,`📷`,`📹`,`📼`,`💿`,`📀`,`💽`,`💾`,`💻`,`📱`,`☎`,`📞`,`📟`,`📠`,`📡`,`📺`,`📻`,`🔊`,`🔉`,`🔈`,`🔇`,`🔔`,`🔕`,`📢`,`📣`,`⏳`,`⌛`,`⏰`,`⌚`,`🔓`,`🔒`,`🔏`,`🔐`,`🔑`,`🔎`,`💡`,`🔦`,`🔆`,`🔅`,`🔌`,`🔋`,`🔍`,`🛁`,`🛀`,`🚿`,`🚽`,`🔧`,`🔩`,`🔨`,`🚪`,`🚬`,`💣`,`🔫`,`🔪`,`💊`,`💉`,`💰`,`💴`,`💵`,`💷`,`💶`,`💳`,`💸`,`📲`,`📧`,`📥`,`📤`,`✉`,`📩`,`📨`,`📯`,`📫`,`📪`,`📬`,`📭`,`📮`,`📦`,`📝`,`📄`,`📃`,`📑`,`📊`,`📈`,`📉`,`📜`,`📋`,`📅`,`📆`,`📇`,`📁`,`📂`,`✂`,`📌`,`📎`,`✒`,`✏`,`📏`,`📐`,`📕`,`📗`,`📘`,`📙`,`📓`,`📔`,`📒`,`📚`,`📖`,`🔖`,`📛`,`🔬`,`🔭`,`📰`,`🎨`,`🎬`,`🎤`,`🎧`,`🎼`,`🎵`,`🎶`,`🎹`,`🎻`,`🎺`,`🎷`,`🎸`,`👾`,`🎮`,`🃏`,`🎴`,`🀄`,`🎲`,`🎯`,`🏈`,`🏀`,`⚽`,`⚾`,`🎾`,`🎱`,`🏉`,`🎳`,`⛳`,`🚵`,`🚴`,`🏁`,`🏇`,`🏆`,`🎿`,`🏂`,`🏊`,`🏄`,`🎣`,`☕`,`🍵`,`🍶`,`🍼`,`🍺`,`🍻`,`🍸`,`🍹`,`🍷`,`🍴`,`🍕`,`🍔`,`🍟`,`🍗`,`🍖`,`🍝`,`🍛`,`🍤`,`🍱`,`🍣`,`🍥`,`🍙`,`🍘`,`🍚`,`🍜`,`🍲`,`🍢`,`🍡`,`🍳`,`🍞`,`🍩`,`🍮`,`🍦`,`🍨`,`🍧`,`🎂`,`🍰`,`🍪`,`🍫`,`🍬`,`🍭`,`🍯`,`🍎`,`🍏`,`🍊`,`🍋`,`🍒`,`🍇`,`🍉`,`🍓`,`🍑`,`🍈`,`🍌`,`🍐`,`🍍`,`🍠`,`🍆`,`🍅`,`🌽`,`🏠`,`🏡`,`🏫`,`🏢`,`🏣`,`🏥`,`🏦`,`🏪`,`🏩`,`🏨`,`💒`,`⛪`,`🏬`,`🏤`,`🌇`,`🌆`,`🏯`,`🏰`,`⛺`,`🏭`,`🗼`,`🗾`,`🗻`,`🌄`,`🌅`,`🌃`,`🗽`,`🌉`,`🎠`,`🎡`,`⛲`,`🎢`,`🚢`,`⛵`,`🚤`,`🚣`,`⚓`,`🚀`,`✈`,`💺`,`🚁`,`🚂`,`🚊`,`🚉`,`🚞`,`🚆`,`🚄`,`🚅`,`🚈`,`🚇`,`🚝`,`🚋`,`🚃`,`🚎`,`🚌`,`🚍`,`🚙`,`🚘`,`🚗`,`🚕`,`🚖`,`🚛`,`🚚`,`🚨`,`🚓`,`🚔`,`🚒`,`🚑`,`🚐`,`🚲`,`🚡`,`🚟`,`🚠`,`🚜`,`💈`,`🚏`,`🎫`,`🚦`,`🚥`,`⚠`,`🚧`,`🔰`,`⛽`,`🏮`,`🎰`,`♨`,`🗿`,`🎪`,`🎭`,`📍`,`🚩`,`⬆`,`⬇`,`⬅`,`➡`,`🔠`,`🔡`,`🔤`,`↗`,`↖`,`↘`,`↙`,`↔`,`↕`,`🔄`,`◀`,`▶`,`🔼`,`🔽`,`↩`,`↪`,`ℹ`,`⏪`,`⏩`,`⏫`,`⏬`,`⤵`,`⤴`,`🆗`,`🔀`,`🔁`,`🔂`,`🆕`,`🆙`,`🆒`,`🆓`,`🆖`,`📶`,`🎦`,`🈁`,`🈯`,`🈳`,`🈵`,`🈴`,`🈲`,`🉐`,`🈹`,`🈺`,`🈶`,`🈚`,`🚻`,`🚹`,`🚺`,`🚼`,`🚾`,`🚰`,`🚮`,`🅿`,`♿`,`🚭`,`🈷`,`🈸`,`🈂`,`Ⓜ`,`🛂`,`🛄`,`🛅`,`🛃`,`🉑`,`㊙`,`㊗`,`🆑`,`🆘`,`🆔`,`🚫`,`🔞`,`📵`,`🚯`,`🚱`,`🚳`,`🚷`,`🚸`,`⛔`,`✳`,`❇`,`❎`,`✅`,`✴`,`💟`,`🆚`,`📳`,`📴`,`🅰`,`🅱`,`🆎`,`🅾`,`💠`,`➿`,`♻`,`♈`,`♉`,`♊`,`♋`,`♌`,`♍`,`♎`,`♏`,`♐`,`♑`,`♒`,`♓`,`⛎`,`🔯`,`🏧`,`💹`,`💲`,`💱`,`©`,`®`,`™`,`〽`,`〰`,`🔝`,`🔚`,`🔙`,`🔛`,`🔜`,`❌`,`⭕`,`❗`,`❓`,`❕`,`❔`,`🔃`,`🕛`,`🕧`,`🕐`,`🕜`,`🕑`,`🕝`,`🕒`,`🕞`,`🕓`,`🕟`,`🕔`,`🕠`,`🕕`,`🕖`,`🕗`,`🕘`,`🕙`,`🕚`,`🕡`,`🕢`,`🕣`,`🕤`,`🕥`,`🕦`,`✖`,`➕`,`➖`,`➗`,`♠`,`♥`,`♣`,`♦`,`💮`,`💯`,`✔`,`☑`,`🔘`,`🔗`,`➰`,`🔱`,`🔲`,`🔳`,`◼`,`◻`,`◾`,`◽`,`▪`,`▫`,`🔺`,`⬜`,`⬛`,`⚫`,`⚪`,`🔴`,`🔵`,`🔻`,`🔶`,`🔷`,`🔸`,`🔹`];
+let emoj3 = e3[Math.floor(Math.random() * e3.length)]
+
 key = ["007bfd53a8d454e05cecc12036139ee2","bf63216d7cb102a3a60df8e493bbc673","bf9c1a877ad4759f7d01b0119d0bc354","96cdd712f558134f32966adbb94173bf","cd2c716e7ac3c66c81b730d998f2b49f"]
 let img_key = key[Math.floor(Math.random() * key.length)]
 
@@ -1899,7 +1903,7 @@ const fgif2 = {key: {participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "0
 const fgclink = {key: {participant: "0@s.whatsapp.net","remoteJid": "0@s.whatsapp.net"},"message": {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us","inviteCode": "m","groupName": "P", "caption": `✗ ${pushname} ✗\n𝐸𝑥𝑒𝑐 : ${command}`, 'jpegThumbnail': fs.readFileSync(`image/${fthumb}`)}}}
 const fgclink2 = {key: {participant: "0@s.whatsapp.net","remoteJid": "0@s.whatsapp.net"},"message": {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us","inviteCode": "m","groupName": "P", "caption": `${fake}`, 'jpegThumbnail': thumb_miku}}}
 const fvideo = {key: { fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "6289643739077-1613049930@g.us" } : {}) },message: { "videoMessage": { "title":`${creator}`, "h": `Hmm`,'seconds': '99999', 'caption': `${creator}`, 'jpegThumbnail': thumb_miku}}}
-const floc = {contextInfo: {"forwardingScore":999,"isForwarded":true,'stanzaId': msgId, 'participant':`${numbernye}@s.whatsapp.net`, 'remoteJid': '6283136505591-1614953337@g.us', 'quotedMessage': {"locationMessage": {"degreesLatitude": 41.893714904785156, "degreesLongitude": -87.63370513916016, "name": fake , 'jpegThumbnail': thumb_miku}}}}
+const floc = {contextInfo: {"forwardingScore":999,"isForwarded":true,'stanzaId': msgId, 'participant':`${numbernye}@s.whatsapp.net`, 'remoteJid': '6283136505591-1614953337@g.us', 'quotedMessage': {"locationMessage": {"degreesLatitude": 51.507351, "degreesLongitude": -0.127758, "name": fake , 'jpegThumbnail': thumb_miku}}}}
 const fkontak = { key: {participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: `6283136505591-1614953337@g.us` } : {}) }, message: { 'contactMessage': { 'displayName': `${cr}`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${cr},;;;\nFN:${cr},\nitem1.TEL;waid=${sender.split('@')[0]}:${sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': thumb_miku, thumbnail: thumb_miku,sendEphemeral: true}}}
 var fakeReplyList = ['ftroli', 'fdoc', 'fvn', 'fgif', 'fgclink', 'fvideo', 'floc', 'fkontak']
 var fakeReply = fakeReplyList[Math.floor(Math.random() * fakeReplyList.length)];
@@ -3858,6 +3862,36 @@ menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
 
+// CARIEMOJ
+if (cariemoj.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
+jwb_emoj = cariemoj[sender.split('@')[0]]
+if (budy.toLowerCase() == jwb_emoj) {
+let koin =randomNomor(1000)
+addLevelingLevel(sender, 1)
+addBalance(sender, koin, balance)
+var emo0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
+var emo1 = [
+{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
+{buttonId: `cariemoj`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+]
+emo1_ = {
+contentText: emo0,
+footerText: `${tampilTanggal}`,
+buttons: emo1,
+headerType: 1
+}
+alpha.sendMessage(from, emo1_, MessageType.buttonsMessage,{
+"contextInfo": {
+"forwardingScore": 999,isForwarded: true,
+"mentionedJid" : [sender]},
+quoted: mek, sendEphemeral: true
+})
+delete cariemoj[sender.split('@')[0]]
+fs.writeFileSync("./game/cariemoj.json", JSON.stringify(cariemoj))
+} else {
+menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
+}
+}
 
 ///function
 //========================================================================================================================//
@@ -4842,6 +4876,10 @@ vcard = 'BEGIN:VCARD\n'
 alpha.sendMessage(from, {displayName: `${nah}`, vcard: vcard}, contact)
 break
 
+case 'stikerwm':
+case 'stickerwm':
+case 'swm':
+case 'wm':
 case 'take':
 case 'colong':
 if (!isQuotedSticker) return reply2('```Reply stc nya```')
@@ -4854,68 +4892,7 @@ require('./lib/fetcher.js').createExif(satu, dua)
 require('./lib/fetcher.js').modStick(media_ , alpha, mek, from)
 break
 
-case 'stikerwm':
-case 'stickerwm':
-case 'swm':
-case 'wm':
-pe = args.join('')
-var a = pe.split("|")[0];
-var b = pe.split("|")[1];
-if (isMedia && !mek.message.videoMessage || isQuotedImage ) {
-const encmedia___ = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
-media___ = await alpha.downloadAndSaveMediaMessage(encmedia___)
-await createExif(a,b)
-out = getRandom('.webp')
-ffmpeg(media___)
-.on('error', (e) => {
-console.log(e)
-alpha.sendMessage(from, 'Terjadi kesalahan', 'conversation', { quoted: mek })
-fs.unlinkSync(media___)
-})
-.on('end', () => {
-_out = getRandom('.webp')
-spawn('webpmux', ['-set','exif','./sticker/data.exif', out, '-o', _out])
-.on('exit', () => {
-alpha.sendMessage(from, fs.readFileSync(_out),'stickerMessage', { quoted: mek })
-fs.unlinkSync(out)
-fs.unlinkSync(_out)
-fs.unlinkSync(media___)
-})
-})
-.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
-.toFormat('webp')
-.save(out) 
-} else if ((isMedia && mek.message.videoMessage.seconds < 11 || isQuotedVideo && mek.message.extendedTextMessage.contextInfo.quotedMessage.videoMessage.seconds < 11) && args.length == 0) {
-const encmedia___ = isQuotedVideo ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
-const media___ = await alpha.downloadAndSaveMediaMessage(encmedia___)
-pe = args.join('')
-var a = pe.split("|")[0];
-var b = pe.split("|")[1];
-await createExif(a,b)
-out = getRandom('.webp')
-ffmpeg(media___)
-.on('error', (e) => {
-console.log(e)
-alpha.sendMessage(from, 'Terjadi kesalahan', 'conversation', { quoted: mek })
-fs.unlinkSync(media___)
-})
-.on('end', () => {
-_out = getRandom('.webp')
-spawn('webpmux', ['-set','exif','./sticker/data.exif', out, '-o', _out])
-.on('exit', () => {
-alpha.sendMessage(from, fs.readFileSync(_out),'stickerMessage', { quoted: mek })
-fs.unlinkSync(out)
-fs.unlinkSync(_out)
-fs.unlinkSync(media___)
-})
-})
-.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
-.toFormat('webp')
-.save(out) 
-} else {
-reply2(`Kirim gambar dengan caption ${prefix}swm teks|teks atau tag gambar yang sudah dikirim`)
-}
-break
+
 
 case 'fdeface':
 ge = args.join('') 
@@ -5781,7 +5758,7 @@ if (!isNsfw) return reply2(lang.nsfwmo())
 // Wait //
 anu = await fetchJson(`https://waifu.pics/api/sfw/awoo`)
 buffer = await getBuffer(anu.url)
-anu = {contextInfo: {"forwardingScore":999,"isForwarded":true,'stanzaId': msgId, 'participant':`${numbernye}@s.whatsapp.net`, 'remoteJid': '6283136505591-1614953337@g.us', 'quotedMessage': {"locationMessage": {"degreesLatitude": 41.893714904785156, "degreesLongitude": -87.63370513916016, "name": fake , 'jpegThumbnail': thumb_nime}}}}
+anu = {contextInfo: {"forwardingScore":999,"isForwarded":true,'stanzaId': msgId, 'participant':`${numbernye}@s.whatsapp.net`, 'remoteJid': '6283136505591-1614953337@g.us', 'quotedMessage': {"locationMessage": {"degreesLatitude": 51.507351, "degreesLongitude": -0.127758, "name": fake , 'jpegThumbnail': thumb_nime}}}}
 alpha.sendMessage(from, buffer, image, anu)
 break
 
@@ -5790,7 +5767,7 @@ if (!isNsfw) return reply2(lang.nsfwmo())
 // Wait //
 anu = await fetchJson(`https://nekos.life/api/v2/img/blowjob`)
 buffer = await getBuffer(anu.url)
-anu = {contextInfo: {"forwardingScore":999,"isForwarded":true,'stanzaId': msgId, 'participant':`${numbernye}@s.whatsapp.net`, 'remoteJid': '6283136505591-1614953337@g.us', 'quotedMessage': {"locationMessage": {"degreesLatitude": 41.893714904785156, "degreesLongitude": -87.63370513916016, "name": fake , 'jpegThumbnail': thumb_nime}}}}
+anu = {contextInfo: {"forwardingScore":999,"isForwarded":true,'stanzaId': msgId, 'participant':`${numbernye}@s.whatsapp.net`, 'remoteJid': '6283136505591-1614953337@g.us', 'quotedMessage': {"locationMessage": {"degreesLatitude": 51.507351, "degreesLongitude": -0.127758, "name": fake , 'jpegThumbnail': thumb_nime}}}}
 alpha.sendMessage(from, buffer, image, anu)
 break
 
@@ -5799,7 +5776,7 @@ if (!isNsfw) return reply2(lang.nsfwmo())
 // Wait //
 anu = await fetchJson(`https://waifu.pics/api/sfw/megumin`)
 buffer = await getBuffer(anu.url)
-anu = {contextInfo: {"forwardingScore":999,"isForwarded":true,'stanzaId': msgId, 'participant':`${numbernye}@s.whatsapp.net`, 'remoteJid': '6283136505591-1614953337@g.us', 'quotedMessage': {"locationMessage": {"degreesLatitude": 41.893714904785156, "degreesLongitude": -87.63370513916016, "name": fake , 'jpegThumbnail': thumb_nime}}}}
+anu = {contextInfo: {"forwardingScore":999,"isForwarded":true,'stanzaId': msgId, 'participant':`${numbernye}@s.whatsapp.net`, 'remoteJid': '6283136505591-1614953337@g.us', 'quotedMessage': {"locationMessage": {"degreesLatitude": 51.507351, "degreesLongitude": -0.127758, "name": fake , 'jpegThumbnail': thumb_nime}}}}
 alpha.sendMessage(from, buffer, image, anu)
 break
 
@@ -5808,7 +5785,7 @@ if (!isNsfw) return reply2(lang.nsfwmo())
 // Wait //
 anu = await fetchJson(`https://waifu.pics/api/nsfw/trap`)
 buffer = await getBuffer(anu.url)
-anu = {contextInfo: {"forwardingScore":999,"isForwarded":true,'stanzaId': msgId, 'participant':`${numbernye}@s.whatsapp.net`, 'remoteJid': '6283136505591-1614953337@g.us', 'quotedMessage': {"locationMessage": {"degreesLatitude": 41.893714904785156, "degreesLongitude": -87.63370513916016, "name": fake , 'jpegThumbnail': thumb_nime}}}}
+anu = {contextInfo: {"forwardingScore":999,"isForwarded":true,'stanzaId': msgId, 'participant':`${numbernye}@s.whatsapp.net`, 'remoteJid': '6283136505591-1614953337@g.us', 'quotedMessage': {"locationMessage": {"degreesLatitude": 51.507351, "degreesLongitude": -0.127758, "name": fake , 'jpegThumbnail': thumb_nime}}}}
 alpha.sendMessage(from, buffer, image, anu)
 break
 
@@ -6907,7 +6884,7 @@ addVote(from,split[1],split[0],split[2],reply)
 break
 
 case 'jadibot':
-if(!mek.key.fromMe && !isOwner && !isCreator) return reply2(lang.callOwner())
+if(!mek.key.fromMe && !isOwner && !isCreator) return reply2('Suruh bot yang ketik')
 jadibot(reply2,alpha,from)
 break
 
@@ -14943,26 +14920,64 @@ computer = 'gunting';
 } else {
 computer = 'kertas';
 }
-
 if ( userspilih == computer ) {
 reply2(`Pertandingan Seri!`)
 } else if ( userspilih == 'batu' ) {
 if( computer == 'gunting' ) {
-alpha.sendMessage(from, `@${sender.split("@")[0]} memilih *🗿Batu* dan BOT *✂️Gunting*\n\n_Kamu menang!_` ,text, {"contextInfo": {"mentionedJid" : [sender]}, quoted: mek})
+let koin =randomNomor(1000)
+addLevelingLevel(sender, 1)
+addBalance(sender, koin, balance)
+ran = [ "batu","gunting","kertas" ]
+let batu1 = ran[Math.floor(Math.random() * ran.length)]
+but = [
+{buttonId: `${command} ${batu1}`, buttonText: {displayText: 'Suit lagi ♻️'}, type: 1}
+]
+sendButton(from, `@${sender.split("@")[0]} memilih *🗿Batu* dan BOT *✂️Gunting*\n\n_Kamu menang!_${enter}${enter}*Balance* : + $${koin}`, `${jwb_benar}`, but)
 } else {
-alpha.sendMessage(from, `@${sender.split("@")[0]} memilih *🗿Batu* dan BOT memilih *📄Kertas*\n\n_Kamu kalah_` ,text, {"contextInfo": {"mentionedJid" : [sender]}, quoted: mek})
+ran = [ "batu","gunting","kertas" ]
+let batu2 = ran[Math.floor(Math.random() * ran.length)]
+but = [
+{buttonId: `${command} ${batu2}`, buttonText: {displayText: 'Suit lagi ♻️'}, type: 1}
+]
+sendButton(from, `@${sender.split("@")[0]} memilih *🗿Batu* dan BOT memilih *📄Kertas*\n\n_Kamu kalah_` , `${jwb_salah}`, but)
 }
 } else if ( userspilih == 'gunting' ) {
 if( computer == 'batu' ) {
-alpha.sendMessage(from, `@${sender.split("@")[0]} memilih *✂️Gunting* dan BOT memilih *🗿Batu*\n\n_Kamu kalah_` ,text, {"contextInfo": {"mentionedJid" : [sender]}, quoted: mek})
+ran = [ "batu","gunting","kertas" ]
+let gunting1 = ran[Math.floor(Math.random() * ran.length)]
+but = [
+{buttonId: `${command} ${gunting1}`, buttonText: {displayText: 'Suit lagi ♻️'}, type: 1}
+]
+sendButton(from, `@${sender.split("@")[0]} memilih *✂️Gunting* dan BOT memilih *🗿Batu*\n\n_Kamu kalah_`, `${jwb_salah}`, but)
 } else {
-alpha.sendMessage(from, `@${sender.split("@")[0]} memilih *✂️Gunting* dan BOT *📄Kertas*\n\n_Kamu menang!_` ,text, {"contextInfo": {"mentionedJid" : [sender]}, quoted: mek})
+let koin =randomNomor(1000)
+addLevelingLevel(sender, 1)
+addBalance(sender, koin, balance)
+ran = [ "batu","gunting","kertas" ]
+let gunting2 = ran[Math.floor(Math.random() * ran.length)]
+but = [
+{buttonId: `${command} ${gunting2}`, buttonText: {displayText: 'Suit lagi ♻️'}, type: 1}
+]
+sendButton(from, `@${sender.split("@")[0]} memilih *✂️Gunting* dan BOT *📄Kertas*\n\n_Kamu menang!_${enter}${enter}*Balance* : + $${koin}`, `${jwb_benar}`, but)
 }
 } else if ( userspilih == 'kertas' ) {
 if( computer == 'batu' ) {
-alpha.sendMessage(from, `@${sender.split("@")[0]} memilih *📄Kertas* dan BOT *🗿Batu*\n\n_Kamu menang!_` ,text, {"contextInfo": {"mentionedJid" : [sender]}, quoted: mek})
+let koin =randomNomor(1000)
+addLevelingLevel(sender, 1)
+addBalance(sender, koin, balance)
+ran = [ "batu","gunting","kertas" ]
+let kertas1 = ran[Math.floor(Math.random() * ran.length)]
+but = [
+{buttonId: `${command} ${kertas1}`, buttonText: {displayText: 'Suit lagi ♻️'}, type: 1}
+]
+sendButton(from, `@${sender.split("@")[0]} memilih *📄Kertas* dan BOT *🗿Batu*\n\n_Kamu menang!_${enter}${enter}*Balance* : + $${koin}`, `${jwb_benar}`, but)
 } else {
-alpha.sendMessage(from, `@${sender.split("@")[0]} memilih *📄Kertas* dan bot memilih *✂️Gunting*\n\n_Kamu kalah_` ,text, {"contextInfo": {"mentionedJid" : [sender]}, quoted: mek})
+ran = [ "batu","gunting","kertas" ]
+let kertas2 = ran[Math.floor(Math.random() * ran.length)]
+but = [
+{buttonId: `${command} ${kertas2}`, buttonText: {displayText: 'Suit lagi ♻️'}, type: 1}
+]
+sendButton(from, `@${sender.split("@")[0]} memilih *📄Kertas* dan bot memilih *✂️Gunting*\n\n_Kamu kalah_`, `${jwb_kalah}`, but)
 }
 }
 break
@@ -16181,6 +16196,7 @@ alpha.sendMessage(from, omkeh, MessageType.audio, { quoted: mek, mimetype: 'audi
 break
 
 case 'ganteng':
+case 'wibu':
 case 'pki':
 case 'siapakah':
 case 'colikers':
@@ -16445,11 +16461,12 @@ break
 
 case 'game':
 case 'games':
+case 'permainan':
 mo = await fetchJson(`https://x-restapi.herokuapp.com/api/random-motivasi?apikey=BETA`)
 motiv = mo.motivasi
 list = []
-listmenu = [`asahotak`,`caklontong`,`caklontong2`,`caklontong3`,`family100`,`math`,`math2`,`recaptcha`,`sambungkata`,`siapaaku`,`siapakahaku`,`susunkata`,`susunkata2`,`tebakan`,`tebakan2`,`tebakanime`,`tebakbendera`,`tebakgambar`,`tebakgambar2`,`tebakgambar3`,`tebakgambar4`,`tebakgambar5`,`tebakjenaka`,`tebakkalimat`,`tebakkata`,`tebakkata2`,`tebakkimia`,`tebaklirik`,`tebakaplikasi`,`tebakgabut`,`tebakkabupaten`,`tebaklucu`,`tebaklagu`,`teswibu`]
-listmenuu = [`${emoj} Asah otak`,`${emoj} Cak lontong`,`${emoj} Cak lontong2`,`${emoj} Cak lontong3`,`${emoj} Family 100`,`${emoj} Math`,`${emoj} Math 2`,`${emoj} Recaptcha`,`${emoj} Sambung kata`,`${emoj} Siapa aku`,`${emoj} Siapakah aku`,`${emoj} Susun kata`,`${emoj} Susun kata2`,`${emoj} Tebakan`,`${emoj} Tebakan2`,`${emoj} Tebak anime`,`${emoj} Tebak bendera`,`${emoj} Tebak gambar`,`${emoj} Tebak gambar2`,`${emoj} Tebak gambar3`,`${emoj} Tebak gambar4`,`${emoj} Tebak gambar5`,`${emoj} Tebak jenaka`,`${emoj} Tebak kalimat`,`${emoj} Tebak kata`,`${emoj} Tebak kata2`,`${emoj} Tebak kimia`,`${emoj} Tebak lirik`,`${emoj} Tebak aplikasi`,`${emoj} Tebak gabut`,`${emoj} Tebak kabupaten`,`${emoj} Tebak lucu`,`${emoj} Tebak lagu`,`${emoj} Tes wibu`]
+listmenu = [`asahotak`,`caklontong`,`caklontong2`,`caklontong3`,`family100`,`math`,`math2`,`recaptcha`,`sambungkata`,`siapaaku`,`siapakahaku`,`susunkata`,`susunkata2`,`tebakan`,`tebakan2`,`tebakanime`,`tebakbendera`,`tebakgambar`,`tebakgambar2`,`tebakgambar3`,`tebakgambar4`,`tebakgambar5`,`tebakjenaka`,`tebakkalimat`,`tebakkata`,`tebakkata2`,`tebakkimia`,`tebaklirik`,`tebakaplikasi`,`tebakgabut`,`tebakkabupaten`,`tebaklucu`,`tebaklagu`,`teswibu`,`tebakhewan`,`tebakbuah`,`tebakemoji`]
+listmenuu = [`${emoj} Asah otak`,`${emoj} Cak lontong`,`${emoj} Cak lontong2`,`${emoj} Cak lontong3`,`${emoj} Family 100`,`${emoj} Math`,`${emoj} Math 2`,`${emoj} Recaptcha`,`${emoj} Sambung kata`,`${emoj} Siapa aku`,`${emoj} Siapakah aku`,`${emoj} Susun kata`,`${emoj} Susun kata2`,`${emoj} Tebakan`,`${emoj} Tebakan2`,`${emoj} Tebak anime`,`${emoj} Tebak bendera`,`${emoj} Tebak gambar`,`${emoj} Tebak gambar2`,`${emoj} Tebak gambar3`,`${emoj} Tebak gambar4`,`${emoj} Tebak gambar5`,`${emoj} Tebak jenaka`,`${emoj} Tebak kalimat`,`${emoj} Tebak kata`,`${emoj} Tebak kata2`,`${emoj} Tebak kimia`,`${emoj} Tebak lirik`,`${emoj} Tebak aplikasi`,`${emoj} Tebak gabut`,`${emoj} Tebak kabupaten`,`${emoj} Tebak lucu`,`${emoj} Tebak lagu`,`${emoj} Tes wibu`,`${emoj} Tebak hewan`,`${emoj} Tebak buah`,`${emoj} Tebak emoji`]
 nombor = 1
 nombor2 = 0
 for (let x of listmenu) {
@@ -16880,6 +16897,29 @@ fs.writeFileSync("./game/tebakbuah.json", JSON.stringify(tebakbuah))
 }
 break
 
+case 'tebakemoji':
+if (cariemoj.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
+jwb_emoj = `${emoj3}`
+cariemoj[sender.split('@')[0]] = jwb_emoj.toLowerCase()
+fs.writeFileSync("./game/cariemoj.json", JSON.stringify(cariemoj))
+console.log(jwb_emoj)
+but = [
+{buttonId: 'jwb_emoj', buttonText: {displayText: '🚩 jawaban'}, type: 1}
+]
+sendButton(from, `*Silahkan cari emoji berikut :* ${soal} \n\nSelamat menjawab ${emoj}${enter}${enter} *Note :* No spam menu game!`, `Waktu ${waktu_game}ms`, but)
+await sleep(`${waktu_game}`)
+if (cariemoj.hasOwnProperty(sender.split('@')[0])) {
+but = [
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
+{buttonId: 'list_game', buttonText: {displayText: '🎮 List game'}, type: 1},
+{buttonId: 'x_menu', buttonText: {displayText: '🌱 List menu'}, type: 1}
+]
+sendButton(from, `❌ Game berakhir..\n*Jawaban :* ${jwb_emoj}`, `Waktu habis ${waktu_game}ms`, but)
+delete cariemoj[sender.split('@')[0]]
+fs.writeFileSync("./game/cariemoj.json", JSON.stringify(cariemoj))
+}
+break
+
 
 case 'katasedih':
 ano = await fetchText(`https://raw.githubusercontent.com/masdevid/ID-OpinionWords/master/negative.txt`)
@@ -17285,7 +17325,7 @@ case 'upswlokasi':
 if (!isOwner && !mek.key.fromMe) return reply2(mess.only.ownerB)
 if (args.length < 1) return reply2('Teksnya?')
 teks = body.slice(12)
-alpha.sendMessage('status@broadcast', {degreesLatitude: 24.121231, degreesLongitude: 55.1121221, name:teks,address:`${NamaBot}`}, MessageType.location)
+alpha.sendMessage('status@broadcast', {degreesLatitude: 51.507351, degreesLongitude: -0.127758, name:teks,address:`${NamaBot}`}, MessageType.location)
 reply2(`Sukses upload lokasi:\n${teks}`)
 break	
 case 'upswsticker':
@@ -17506,6 +17546,10 @@ if (subscribezeeoneofc == 'jwb_buah') {
 menyerah(`@${sender.split("@")[0]} Membuka jawaban\nReply soal dan ketik: ${jwb_buah}`)
 }
 
+if (subscribezeeoneofc == 'jwb_emoj') {
+menyerah(`@${sender.split("@")[0]} Membuka jawaban\nReply soal dan ketik: ${jwb_emoj}`)
+}
+
 
 // END GAME HINT
 if (subscribezeeoneofc == "Oke"){
@@ -17551,6 +17595,7 @@ ${emoj} ${prefix}tebaklagu
 ${emoj} ${prefix}teswibu
 ${emoj} ${prefix}tebakhewan
 ${emoj} ${prefix}tebakbuah
+${emoj} ${prefix}tebakemoji
 
 *SELAMAT BERMAIN*`
 
