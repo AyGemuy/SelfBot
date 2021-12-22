@@ -2785,7 +2785,7 @@ addBalance(sender, koin, balance)
 var tgbr0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tgbr1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+{buttonId: `tebakgambar`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 tgbr1_ = {
 contentText: tgbr0,
@@ -2815,7 +2815,7 @@ addBalance(sender, koin, balance)
 var tgbr20 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tgbr21 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+{buttonId: `tebakgambar2`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 tgbr21_ = {
 contentText: tgbr20,
@@ -2845,7 +2845,7 @@ addBalance(sender, koin, balance)
 var tgbr30 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tgbr31 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+{buttonId: `tebakgambar3`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 tgbr31_ = {
 contentText: tgbr30,
@@ -2875,7 +2875,7 @@ addBalance(sender, koin, balance)
 var tgbr40 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tgbr41 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+{buttonId: `tebakgambar4`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 tgbr41_ = {
 contentText: tgbr40,
@@ -2905,7 +2905,7 @@ addBalance(sender, koin, balance)
 var tgbr50 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tgbr51 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+{buttonId: `tebakgambar5`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 tgbr51_ = {
 contentText: tgbr50,
@@ -2935,7 +2935,7 @@ addBalance(sender, koin, balance)
 var cklt0 = `☑️ *${jwb_benar}*\ninfo : ${informasi}\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var cklt1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+{buttonId: `caklontong`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 cklt1_ = {
 contentText: cklt0,
@@ -2965,7 +2965,7 @@ addBalance(sender, koin, balance)
 var ckl20 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var ckl21 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+{buttonId: `caklontong2`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 ckl21_ = {
 contentText: ckl20,
@@ -2995,7 +2995,7 @@ addBalance(sender, koin, balance)
 var ckl30 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var ckl31 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+{buttonId: `caklontong3`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 ckl31_ = {
 contentText: ckl30,
@@ -3025,7 +3025,7 @@ addBalance(sender, koin, balance)
 var jnk0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var jnk1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+{buttonId: `tebakjenaka`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 jnk1_ = {
 contentText: jnk0,
@@ -3055,7 +3055,7 @@ addBalance(sender, koin, balance)
 var ssnk0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var ssnk1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+{buttonId: `susunkata`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 ssnk1_ = {
 contentText: ssnk0,
@@ -3085,7 +3085,7 @@ addBalance(sender, koin, balance)
 var ssn20 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var ssn21 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+{buttonId: `susunkata2`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 ssn21_ = {
 contentText: ssn20,
@@ -3115,7 +3115,7 @@ addBalance(sender, koin, balance)
 var atk0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var atk1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+{buttonId: `asahotak`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 atk1_ = {
 contentText: atk0,
@@ -3145,7 +3145,7 @@ addBalance(sender, koin, balance)
 var tkim0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tkim1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+{buttonId: `tebakkimia`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 tkim1_ = {
 contentText: tkim0,
@@ -3175,7 +3175,7 @@ addBalance(sender, koin, balance)
 var tbkt_0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tbkt_1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+{buttonId: `tebakkata, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 tbkt_1_ = {
 contentText: tbkt_0,
@@ -3205,7 +3205,7 @@ addBalance(sender, koin, balance)
 var skt0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var skt1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+{buttonId: `sambungkata`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 skt1_ = {
 contentText: skt0,
@@ -3235,7 +3235,7 @@ addBalance(sender, koin, balance)
 var tlir0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tlir1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+{buttonId: `tebaklirik`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 tlir1_ = {
 contentText: tlir0,
@@ -3265,7 +3265,7 @@ addBalance(sender, koin, balance)
 var tkl0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tkl1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+{buttonId: `tebakkalimat`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 tkl1_ = {
 contentText: tkl0,
@@ -3295,7 +3295,7 @@ addBalance(sender, koin, balance)
 var tbkn0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tbkn1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+{buttonId: `tebakan`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 tbkn1_ = {
 contentText: tbkn0,
@@ -3325,7 +3325,7 @@ addBalance(sender, koin, balance)
 var tbkn20 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tbkn21 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+{buttonId: `tebakan2`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 tbkn21_ = {
 contentText: tbkn20,
@@ -3355,7 +3355,7 @@ addBalance(sender, koin, balance)
 var spa0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var spa1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+{buttonId: `siapaaku`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 spa1_ = {
 contentText: spa0,
@@ -3385,7 +3385,7 @@ addBalance(sender, koin, balance)
 var mth0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var mth1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+{buttonId: `math`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 mth1_ = {
 contentText: mth0,
@@ -3415,7 +3415,7 @@ addBalance(sender, koin, balance)
 var mth20 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var mth21 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+{buttonId: `math2`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 mth21_ = {
 contentText: mth20,
@@ -3445,7 +3445,7 @@ addBalance(sender, koin, balance)
 var mth30 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var mth31 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+{buttonId: `math3`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 mth31_ = {
 contentText: mth30,
@@ -3475,7 +3475,7 @@ addBalance(sender, koin, balance)
 var fmly0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var fmly1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+{buttonId: `family100`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 fmly1_ = {
 contentText: fmly0,
@@ -3505,7 +3505,7 @@ addBalance(sender, koin, balance)
 var saha0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var saha1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+{buttonId: `siapakah`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 saha1_ = {
 contentText: saha0,
@@ -3535,7 +3535,7 @@ addBalance(sender, koin, balance)
 var anim0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var anim1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+{buttonId: `tebakanime`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 anim1_ = {
 contentText: anim0,
@@ -3565,7 +3565,7 @@ addBalance(sender, koin, balance)
 var htbr0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var htbr1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+{buttonId: `tebakbendera`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 htbr1_ = {
 contentText: htbr0,
@@ -3595,7 +3595,7 @@ addBalance(sender, koin, balance)
 var htbr0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var htbr1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+{buttonId: `tebakkabupaten`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 htbr1_ = {
 contentText: htbr0,
@@ -3625,7 +3625,7 @@ addBalance(sender, koin, balance)
 var capt0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var capt1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+{buttonId: `recaptcha`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 capt1_ = {
 contentText: capt0,
@@ -3655,7 +3655,7 @@ addBalance(sender, koin, balance)
 var htbr0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var htbr1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+{buttonId: `tebakaplikasi`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 htbr1_ = {
 contentText: htbr0,
@@ -3685,7 +3685,7 @@ addBalance(sender, koin, balance)
 var tgbt0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tgbt1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+{buttonId: `tebakgabut`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 tgbt1_ = {
 contentText: tgbt0,
@@ -3715,7 +3715,7 @@ addBalance(sender, koin, balance)
 var htbr0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var htbr1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+{buttonId: `tebaklagu`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 htbr1_ = {
 contentText: htbr0,
@@ -3745,7 +3745,7 @@ addBalance(sender, koin, balance)
 var htbr0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var htbr1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+{buttonId: `tebaklucu`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 htbr1_ = {
 contentText: htbr0,
@@ -3775,7 +3775,7 @@ addBalance(sender, koin, balance)
 var htbr0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var htbr1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+{buttonId: `teswibu`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 htbr1_ = {
 contentText: htbr0,
@@ -3806,7 +3806,7 @@ addBalance(sender, koin, balance)
 var hwn0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var hwn1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+{buttonId: `tebakhewan`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 hwn1_ = {
 contentText: hwn0,
@@ -3837,7 +3837,7 @@ addBalance(sender, koin, balance)
 var buah0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var buah1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+{buttonId: `tebakbuah`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 buah1_ = {
 contentText: buah0,
@@ -11523,7 +11523,7 @@ console.log(jwb_cak)
 but = [
 {buttonId: 'jwb_cak', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
-sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
+sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nSelamat menjawab ${emoj}${enter}${enter} *Note :* No spam menu game!`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
 if (caklontong.hasOwnProperty(sender.split('@')[0])) {
 but = [
@@ -11548,7 +11548,7 @@ console.log(jwb_siapakah)
 but = [
 {buttonId: 'jwb_siapakah', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
-sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
+sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nSelamat menjawab ${emoj}${enter}${enter} *Note :* No spam menu game!`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
 if (siapakah.hasOwnProperty(sender.split('@')[0])) {
 but = [
@@ -11575,7 +11575,7 @@ console.log(jwb_susun2)
 but = [
 {buttonId: 'jwb_susun2', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
-sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
+sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nSelamat menjawab ${emoj}${enter}${enter} *Note :* No spam menu game!`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
 if (susunkata2.hasOwnProperty(sender.split('@')[0])) {
 but = [
@@ -12898,7 +12898,7 @@ console.log(jwb_sbg)
 but = [
 {buttonId: 'jwb_sbg', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
-sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
+sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nSelamat menjawab ${emoj}${enter}${enter} *Note :* No spam menu game!`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
 if (sambungkata.hasOwnProperty(sender.split('@')[0])) {
 but = [
@@ -12924,7 +12924,7 @@ console.log(jwb_cak2)
 but = [
 {buttonId: 'jwb_cak2', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
-sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
+sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nSelamat menjawab ${emoj}${enter}${enter} *Note :* No spam menu game!`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
 if (caklontong2.hasOwnProperty(sender.split('@')[0])) {
 but = [
@@ -13046,7 +13046,7 @@ console.log(jwb_f100)
 but = [
 {buttonId: 'jwb_f100', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
-sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
+sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nSelamat menjawab ${emoj}${enter}${enter} *Note :* No spam menu game!`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
 if (family100.hasOwnProperty(sender.split('@')[0])) {
 but = [
@@ -13072,7 +13072,7 @@ console.log(jwb_asah)
 but = [
 {buttonId: 'jwb_asah', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
-sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
+sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nSelamat menjawab ${emoj}${enter}${enter} *Note :* No spam menu game!`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
 if (asahotak.hasOwnProperty(sender.split('@')[0])) {
 but = [
@@ -13124,7 +13124,7 @@ console.log(jwb_kata)
 but = [
 {buttonId: 'jwb_kata', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
-sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
+sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nSelamat menjawab ${emoj}${enter}${enter} *Note :* No spam menu game!`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
 if (tebakkata.hasOwnProperty(sender.split('@')[0])) {
 but = [
@@ -13150,7 +13150,7 @@ console.log(jwb_kata2)
 but = [
 {buttonId: 'nyerah', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
-sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
+sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nSelamat menjawab ${emoj}${enter}${enter} *Note :* No spam menu game!`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
 if (tebakkata.hasOwnProperty(sender.split('@')[0])) {
 but = [
@@ -13176,7 +13176,7 @@ console.log(jwb_lirik)
 but = [
 {buttonId: 'nyerah', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
-sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
+sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nSelamat menjawab ${emoj}${enter}${enter} *Note :* No spam menu game!`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
 if (tebaklirik.hasOwnProperty(sender.split('@')[0])) {
 but = [
@@ -13202,7 +13202,7 @@ console.log(jwb_kali)
 but = [
 {buttonId: 'jwb_kali', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
-sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
+sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nSelamat menjawab ${emoj}${enter}${enter} *Note :* No spam menu game!`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
 if (tebakkalimat.hasOwnProperty(sender.split('@')[0])) {
 but = [
@@ -13228,7 +13228,7 @@ console.log(jwb_tbkn)
 but = [
 {buttonId: 'jwb_tbkn', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
-sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
+sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nSelamat menjawab ${emoj}${enter}${enter} *Note :* No spam menu game!`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
 if (tebakan.hasOwnProperty(sender.split('@')[0])) {
 but = [
@@ -13254,7 +13254,7 @@ console.log(jwb_siapa)
 but = [
 {buttonId: 'jwb_siapa', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
-sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
+sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nSelamat menjawab ${emoj}${enter}${enter} *Note :* No spam menu game!`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
 if (siapaaku.hasOwnProperty(sender.split('@')[0])) {
 but = [
@@ -13281,7 +13281,7 @@ console.log(jwb_susun)
 but = [
 {buttonId: 'jwb_susun', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
-sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\nTipe : ${timpe}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
+sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\nTipe : ${timpe}\n\nSelamat menjawab ${emoj}${enter}${enter} *Note :* No spam menu game!`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
 if (susunkata.hasOwnProperty(sender.split('@')[0])) {
 but = [
@@ -13307,7 +13307,7 @@ console.log(jwb_gbt)
 but = [
 {buttonId: 'jwb_gbt', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
-sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
+sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nSelamat menjawab ${emoj}${enter}${enter} *Note :* No spam menu game!`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
 if (tebakgabut.hasOwnProperty(sender.split('@')[0])) {
 but = [
@@ -13333,7 +13333,7 @@ console.log(jwb_lucu)
 but = [
 {buttonId: 'jwb_lucu', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
-sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
+sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nSelamat menjawab ${emoj}${enter}${enter} *Note :* No spam menu game!`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
 if (tebaklucu.hasOwnProperty(sender.split('@')[0])) {
 but = [
@@ -13360,7 +13360,7 @@ console.log(jwb_wibu)
 but = [
 {buttonId: 'jwb_wibu', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
-sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
+sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nSelamat menjawab ${emoj}${enter}${enter} *Note :* No spam menu game!`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
 if (teswibu.hasOwnProperty(sender.split('@')[0])) {
 but = [
@@ -14351,7 +14351,7 @@ console.log(jwb_cak3)
 but = [
 {buttonId: 'jwb_cak3', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
-sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
+sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nSelamat menjawab ${emoj}${enter}${enter} *Note :* No spam menu game!`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
 if (caklontong3.hasOwnProperty(sender.split('@')[0])) {
 but = [
@@ -14979,7 +14979,7 @@ console.log(jwb_tbkn2)
 but = [
 {buttonId: 'jwb_tbkn2', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
-sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
+sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nSelamat menjawab ${emoj}${enter}${enter} *Note :* No spam menu game!`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
 if (tebakan2.hasOwnProperty(sender.split('@')[0])) {
 but = [
@@ -16349,7 +16349,7 @@ console.log(jwb_jen)
 but = [
 {buttonId: 'jwb_jen', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
-sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
+sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nSelamat menjawab ${emoj}${enter}${enter} *Note :* No spam menu game!`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
 if (tebakjenaka.hasOwnProperty(sender.split('@')[0])) {
 but = [
@@ -16839,7 +16839,7 @@ console.log(jwb_hwn)
 but = [
 {buttonId: 'jwb_hwn', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
-sendButton(from, `*Nama hewan* \n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
+sendButton(from, `*Nama hewan* \n\n*Clue :* ${clue}\n\nSelamat menjawab ${emoj}${enter}${enter} *Note :* No spam menu game!`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
 if (tebakhewan.hasOwnProperty(sender.split('@')[0])) {
 but = [
@@ -16866,7 +16866,7 @@ console.log(jwb_buah)
 but = [
 {buttonId: 'jwb_buah', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
-sendButton(from, `*Buah-buahan* \n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
+sendButton(from, `*Buah-buahan* \n\n*Clue :* ${clue}\n\nSelamat menjawab ${emoj}${enter}${enter} *Note :* No spam menu game!`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
 if (tebakbuah.hasOwnProperty(sender.split('@')[0])) {
 but = [
@@ -17592,7 +17592,7 @@ console.log(jwb_math3)
 but = [
 {buttonId: 'jwb_math3', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
-sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
+sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nSelamat menjawab ${emoj}${enter}${enter} *Note :* No spam menu game!`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
 if (math3.hasOwnProperty(sender.split('@')[0])) {
 but = [
@@ -17618,7 +17618,7 @@ console.log(jwb_math3)
 but = [
 {buttonId: 'jwb_math3', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
-sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
+sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nSelamat menjawab ${emoj}${enter}${enter} *Note :* No spam menu game!`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
 if (math3.hasOwnProperty(sender.split('@')[0])) {
 but = [
@@ -17644,7 +17644,7 @@ console.log(jwb_math3)
 but = [
 {buttonId: 'jwb_math3', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
-sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
+sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nSelamat menjawab ${emoj}${enter}${enter} *Note :* No spam menu game!`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
 if (math3.hasOwnProperty(sender.split('@')[0])) {
 but = [
@@ -17670,7 +17670,7 @@ console.log(jwb_math3)
 but = [
 {buttonId: 'jwb_math3', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
-sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
+sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nSelamat menjawab ${emoj}${enter}${enter} *Note :* No spam menu game!`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
 if (math3.hasOwnProperty(sender.split('@')[0])) {
 but = [
@@ -17696,7 +17696,7 @@ console.log(jwb_math3)
 but = [
 {buttonId: 'jwb_math3', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
-sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
+sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nSelamat menjawab ${emoj}${enter}${enter} *Note :* No spam menu game!`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
 if (math3.hasOwnProperty(sender.split('@')[0])) {
 but = [
@@ -17722,7 +17722,7 @@ console.log(jwb_math3)
 but = [
 {buttonId: 'jwb_math3', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
-sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nApa hayoo... ${emoj}`, `Waktu ${waktu_game}ms`, but)
+sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nSelamat menjawab ${emoj}${enter}${enter} *Note :* No spam menu game!`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
 if (math3.hasOwnProperty(sender.split('@')[0])) {
 but = [
