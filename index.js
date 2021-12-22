@@ -290,7 +290,7 @@ const tebaklagu = JSON.parse(fs.readFileSync('./game/tebaklagu.json'))
 const teswibu = JSON.parse(fs.readFileSync('./game/teswibu.json'))
 const tebakhewan = JSON.parse(fs.readFileSync('./game/tebakhewan.json'))
 const tebakbuah = JSON.parse(fs.readFileSync('./game/tebakbuah.json'))
-const tebakemoji = JSON.parse(fs.readFileSync('./game/cariemoj.json'))
+const cariemoj = JSON.parse(fs.readFileSync('./game/cariemoj.json'))
 
 // END
 const akinator = JSON.parse(fs.readFileSync('./src/akinator.json'))
@@ -3509,7 +3509,7 @@ addBalance(sender, koin, balance)
 var saha0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var saha1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `siapakah`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+{buttonId: `siapakahaku`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 saha1_ = {
 contentText: saha0,
@@ -3872,7 +3872,7 @@ addBalance(sender, koin, balance)
 var emo0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var emo1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `cariemoj`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+{buttonId: `tebakemoji`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 emo1_ = {
 contentText: emo0,
@@ -16906,7 +16906,7 @@ console.log(jwb_emoj)
 but = [
 {buttonId: 'jwb_emoj', buttonText: {displayText: '🚩 jawaban'}, type: 1}
 ]
-sendButton(from, `*Silahkan cari emoji berikut :* ${soal} \n\nSelamat menjawab ${emoj}${enter}${enter} *Note :* No spam menu game!`, `Waktu ${waktu_game}ms`, but)
+sendButton(from, `*Silahkan cari emoji ini :* ${jwb_emoj}\n\nSelamat menjawab${enter}${enter} *Note :* No spam menu game!`, `Waktu ${waktu_game}ms`, but)
 await sleep(`${waktu_game}`)
 if (cariemoj.hasOwnProperty(sender.split('@')[0])) {
 but = [
