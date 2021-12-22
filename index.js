@@ -1905,7 +1905,7 @@ var fakeReplyList = ['ftroli', 'fdoc', 'fvn', 'fgif', 'fgclink', 'fvideo', 'floc
 var fakeReply = fakeReplyList[Math.floor(Math.random() * fakeReplyList.length)];
 
 const fssticker = (filesize) => {
-anu = await alpha.prepareMessageFromContent(from,{
+anu = alpha.prepareMessageFromContent(from,{
 "stickerMessage": {
 "url": m.quoted.url,
 "fileSha256": m.quoted.fileSha256.toString('base64'),
