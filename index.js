@@ -3175,7 +3175,7 @@ addBalance(sender, koin, balance)
 var tbkt_0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tbkt_1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `tebakkata, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+{buttonId: `tebakkata`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 tbkt_1_ = {
 contentText: tbkt_0,
