@@ -342,13 +342,17 @@ ban = []
 limitawal = "50"
 gcounttprem = "55" 
 gcounttuser = "100" 
+
+// RANDOM
 e = [`🌹`,`🥀`,`🌷`,`🏵️`,`🌻`,`🌼`,`💮`,`🍂`,`🍁`,`🌾`,`🌱`,`🌿`,`🍃`,`☘️`,`🌵`,`🌴`,`🌳`,`🌲`,`🏞️`,`⛰️`,`🌊`,`🌬️`,`🌀`,`❄️`,`☃️`,`🏔️`,`🌋`,`🏜️`,`🏖️`,`🌅`,`☀️`]
 let emoj = e[Math.floor(Math.random() * e.length)]
 e2 = [`⋆`,`𖧹`,`⌯`,`〆`]
 let emoj2 = e2[Math.floor(Math.random() * e2.length)]
-let waktu_game = "120000"
+key = ["007bfd53a8d454e05cecc12036139ee2","bf63216d7cb102a3a60df8e493bbc673","bf9c1a877ad4759f7d01b0119d0bc354","96cdd712f558134f32966adbb94173bf","cd2c716e7ac3c66c81b730d998f2b49f"]
+let img_key = key[Math.floor(Math.random() * key.length)]
 
 // GAME
+let waktu_game = "120000"
 slmt = ["Respects","Fantastic","Hats off!","Sensational","Well done","Good job!","You rock!","Nice going","Good show!","Good going!","Good for you!","Good on you!","Good one mate!","I am impressed","Way to go","You did it!","You’re a genius!","You’re the best","You’ve got it","Pat on the back","That’s the way","That’s the best ever","You did it that time!","You make it look easy","You really deserved it","You did that very well","What a good try","Many happy returns","That is better than ever","You’re doing a good job","You’re doing beautifully","You’re really growing up","That’s the way to do it","You are very good at that","You’re on the right track now","You’re really going to town","Keep up the good work","That’s the right way to do it","You have done a great job!","You’re getting better every day","You’ve just about mastered that","Nothing can stop you now","That’s the best you’ve ever done","Keep working, you’re getting better","I’m happy to see you working like that"]
 let jwb_benar = slmt[Math.floor(Math.random() * slmt.length)]
 jwb = ["Tebak lagi","Dikit lagi","Hampir benar!","Salah!","Jawaban ngawur","Jawaban salah","Tidak benar!","Sedikit lagi","Tidak tepat!","Hampir tepat!","Jgn bilang gw gajelas!"]
@@ -405,6 +409,8 @@ winawal = 1
 loseawal = 1 
 memberwin = 1 
 memberlose = 1 
+
+
 // THUMBNAIL
 thumb_nulis = fs.readFileSync(`image/nulis.jpg`)
 thumb_ktp = fs.readFileSync(`image/ktp.jpg`)
@@ -432,6 +438,7 @@ thumb_ajg = fs.readFileSync(`image/ajg.jpg`)
 thumb_coupl = fs.readFileSync(`image/coupl.jpg`)
 thumb_404 = fs.readFileSync(`image/404.jpg`)
 thumb_ind = fs.readFileSync(`image/ind.jpg`)
+
 //Credit For 404 SQUAD ( Gk usah di hapus mek)
 //Lingz
 //Felix
@@ -709,7 +716,7 @@ const isOwner = ownerNumberr.includes(sender)
 try {
 pp_userb = await alpha.getProfilePicture(sender)
 } catch {
-pp_userb = 'https://i.ibb.co/cXpJ5g5/4fcc3e5e3f1c.jpg'
+pp_userb = 'https://i.ibb.co/SxN4ymH/2860c9a59c9e.jpg'
 }
 let pp_userz = await getBuffer(pp_userb)
 const getGroupAdminss = (participants) => {
@@ -764,9 +771,9 @@ const alfa1 = `${targetpc}@s.whatsapp.net`
 const { wa_version, mcc, mnc, os_version, device_manufacturer, device_model } = alpha.user.phone
 const status = `${banChats ? 'SELF-MODE' : 'PUBLIC-MODE'}`
 q3 = Object.keys(mek.message)[0] == "buttonsResponseMessage" ? mek.message.buttonsResponseMessage.selectedButtonId : ""
-		q4 = Object.keys(mek.message)[0] == "buttonsResponseMessage" ? mek.message.buttonsResponseMessage.selectedButtonId : ""
-		q5 = Object.keys(mek.message)[0] == "listResponseMessage" ? mek.message.listResponseMessage.singleSelectReply.selectedRowId: ""
-		butresx = (type === 'buttonsResponseMessage') ? mek.message.buttonsResponseMessage.selectedDisplayText : ''
+q4 = Object.keys(mek.message)[0] == "buttonsResponseMessage" ? mek.message.buttonsResponseMessage.selectedButtonId : ""
+q5 = Object.keys(mek.message)[0] == "listResponseMessage" ? mek.message.listResponseMessage.singleSelectReply.selectedRowId: ""
+butresx = (type === 'buttonsResponseMessage') ? mek.message.buttonsResponseMessage.selectedDisplayText : ''
 q6 = (type == 'listResponseMessage') ? mek.message.listResponseMessage.singleSelectReply.selectedRowId : ''
 q7 = (type == 'listResponseMessage') ? mek.message.listResponseMessage.title : ''
 const conts = mek.key.fromMe ? alpha.user.jid : alpha.contacts[sender] || { notify: jid.replace(/@.+/, '') }
@@ -2385,7 +2392,7 @@ if (isGroup && !mek.key.fromMe && isAntiLink && !isGroupAdmins && !isOwner && !i
 if (budy.includes('https://chat.whatsapp.com/')) {
 alpha.updatePresence(from, Presence.composing)
 if (!isGroup) return
-reply2(` *「 GROUP LINK DETECTOR 」*\nKamu mengirimkan link grup chat, maaf kamu di kick dari grup :(`)
+reply2(` *「 GROUP LINK DETECTOR 」*\nKamu mengirimkan link grup chat`)
 setTimeout( () => {
 reply2('_Tapi boong_')
 }, 30000)
@@ -2406,7 +2413,7 @@ alpha.groupRemove(from, [sender])
 /*
 if (isGroup && !mek.key.fromMe && isAntiLink && !isGroupAdmins && !isOwner && !isCreator && isBotGroupAdmins){
 if (chatxs.match(/(https:\/\/chat.whatsapp.com)/gi)) {
-reply2(`「 G R O U P L I N K D E T E C T O R 」\n\nSepertinya kamu mengirimkan link grup, maaf kamu akan di kick`)
+reply2(`「 G R O U P L I N K D E T E C T O R 」\n\nSepertinya kamu mengirimkan link grup`)
 alpha.groupRemove(from, [sender])
 }
 }
@@ -2420,7 +2427,7 @@ alpha.sendMessage(from, 'Kak apa nih, ngeleg bot aku 😐', text, {quoted: mek})
 if (isGroup && isAntivirtex && !mek.key.fromMe && !isOwner) {
 if (budy.length > 1000) {
 if (isGroupAdmins) return reply2("admin bebas");
-reply2("「 A N T I V I R T E X D E T E C T E D 」 \n\nMaaf Kamu Akan Dikick");
+reply2("「 A N T I V I R T E X D E T E C T E D 」 \n\nSepertinya kamu mengirimkan virtex grup");
 alpha.groupRemove(from, [sender]);
 }
 }
@@ -2451,7 +2458,7 @@ Congrats 🎉`,text, {quoted: mek, contextInfo: {"mentionedJid": [sender],"forwa
 try {
 pep = await alpha.getProfilePicture(sender)
 } catch {
-pep = 'https://i.ibb.co/N9gFbtQ/2406c24248f5.jpg'
+pep = 'https://i.ibb.co/SxN4ymH/2860c9a59c9e.jpg'
 }
 let lev_up = await getBuffer(`https://api-xfar05.herokuapp.com/api/canvas/levelup?pp=${pep}`)
 capt = ` *「 LEVEL UP 」*
@@ -4012,7 +4019,7 @@ case 'help':
 try {
 chatt = await alpha.getProfilePicture(sender)
 } catch {
-chatt = 'https://i.ibb.co/N9gFbtQ/2406c24248f5.jpg'
+chatt = 'https://i.ibb.co/SxN4ymH/2860c9a59c9e.jpg'
 }
 let ch = await getBuffer(chatt)
 koko = `${targetpc}@s.whatsapp.net`
@@ -4350,7 +4357,7 @@ teks = `*L I S T P E R S O N A L C H A T*\nTOTAL PC: ${cpcp.length}\n\n`
 for(let i=0; i<cpcp.length; i++){
 conts = mek.key.fromMe ? mek.user.jid : alpha.contacts[cpcp[i]] || {notify: jid.replace(/@.+/, '')}
 pushnama = alpha.contacts[cpcp[i]] != undefined ? alpha.contacts[cpcp[i]].vname || alpha.contacts[cpcp[i]].notify : undefined
-teks += `• *Name :* ${pushnama}\n• *Tag :* @${cpcp[i].split("@")[0]}\n• *Wa.me :* wa.me/${cpcp[i].split("@")[0]}\n\n⌯────────⌕────────⌯\n\n`
+teks += `• *Name :* ${pushnama}\n• *Tag :* @${cpcp[i].split("@")[0]}\n• *Wa.me :* wa.me/${cpcp[i].split("@")[0]}\n\n⌯┅━━━━━━━━━━━━━━┅⌯\n\n`
 }
 mentions( teks, cpcp, true)
 break
@@ -4986,7 +4993,8 @@ sendMediaURL(from, dl_link).catch(() => reply2('error'))
 } catch (err) {
 reply2(mess.error.api)
 }
-break 
+break
+
 case 's2':
 if (isMedia && !mek.message.videoMessage || isQuotedImage) {
 const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
@@ -5058,7 +5066,7 @@ fs.unlinkSync(media)
 .on('end', async function () {
 console.log('Finish')
 exec(`webpmux -set exif ${addMetadata('Bot', 'Wudy')} ${ran} -o ${ran}`, async (error) => {
-if (error) return reply2('Lah kok emror')
+if (error) return reply2('Ulang!')
 await alpha.sendMessage(from, fs.readFileSync(ran), sticker, { mimetype: 'image/webp', quoted: mek })
 fs.unlinkSync(media)
 fs.unlinkSync(ran)
@@ -5206,13 +5214,13 @@ aramat = aramas.all
 var tbuff = await getBuffer(aramat[0].image)
 var ytresult = '';
 ytresult += '「 *YOUTUBE SEARCH* 」'
-ytresult += '\n⌯────────⌕────────⌯\n\n'
+ytresult += '\n⌯┅━━━━━━━━━━━━━━┅⌯\n\n'
 	aramas.all.map((video) => {
 ytresult += '🐣 Title: ' + video.title + '\n'
 ytresult += '🐤 Link: ' + video.url + '\n'
 ytresult += '🦊 Durasi: ' + video.timestamp + '\n'
 ytresult += '🐺 Views: ' + video.views + '\n'
-ytresult += '🦡 Upload: ' + video.ago + '\n⌯────────⌕────────⌯\n\n'
+ytresult += '🦡 Upload: ' + video.ago + '\n⌯┅━━━━━━━━━━━━━━┅⌯\n\n'
 });
 ytresult += '*WHATSAPP-BOT*'
 await fakethumb(tbuff,ytresult)
@@ -5355,9 +5363,9 @@ case 'brainly':
 if (args.length < 1) return reply2('Pertanyaan apa')
 brien = args.join(' ')
 brainly(`${brien}`).then(res => {
-teks = '⌯────────⌕────────⌯\n'
+teks = '⌯┅━━━━━━━━━━━━━━┅⌯\n'
 for (let Y of res.data) {
-teks += `\n*「 _BRAINLY_ 」*\n\n*➸ Pertanyaan:* ${Y.pertanyaan}\n\n*➸ Jawaban:* ${Y.jawaban[0].text}\n⌯────────⌕────────⌯\n`
+teks += `\n*「 _BRAINLY_ 」*\n\n*➸ Pertanyaan:* ${Y.pertanyaan}\n\n*➸ Jawaban:* ${Y.jawaban[0].text}\n⌯┅━━━━━━━━━━━━━━┅⌯\n`
 }
 alpha.sendMessage(from, teks, text,{quoted:mek,detectLinks: false}) 
 }) 
@@ -5377,13 +5385,13 @@ break
 case 'playstore':
 if(!q) return reply2('lu nyari apa?')
 let play = await hx.playstore(q)
-let store = '⌯────────⌕────────⌯\n'
+let store = '⌯┅━━━━━━━━━━━━━━┅⌯\n'
 for (let i of play){
 store += `\n*「 *PLAY STORE* 」*\n
 - *Nama* : ${i.name}
 - *Link* : ${i.link}\n
 - *Dev* : ${i.developer}
-- *Link Dev* : ${i.link_dev}\n⌯────────⌕────────⌯`
+- *Link Dev* : ${i.link_dev}\n⌯┅━━━━━━━━━━━━━━┅⌯`
 }
 reply2(store)
 break
@@ -5621,7 +5629,8 @@ fs.unlinkSync(anum)
 buffer = fs.readFileSync(ran)
 alpha.sendMessage(from, buffer, video, { quoted: mek, caption: 'Done... Jangan Lupa Subscribe client Botz' })
 fs.unlinkSync(ran)})
-break 
+break
+
 case 'tomp4':
 if ((isMedia && !mek.message.videoMessage || isQuotedSticker) && args.length == 0) {
 ger = isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
@@ -5643,7 +5652,7 @@ ger = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).mes
 // Wait //
 console.log(color(time, 'magenta'), color(moment.tz('Asia/Jakarta').format('HH:mm:ss'), "gold"), color('Downloading image...'))
 owgi = await alpha.downloadAndSaveMediaMessage(ger)
-anu = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", owgi)
+anu = await imgbb(`${img_key}`, owgi)
 teks = `✓ *Selesai* ${pushname} \n*Link* ${anu.display_url}`
 reply2(teks)
 .catch((e)=>{reply2(`${petik}[ x ]${petik}Eror! ada masalah dgn imgbb`)})
@@ -5990,7 +5999,7 @@ let mentioneddd = mek.message.extendedTextMessage.contextInfo.mentionedJid
 try {
 pic = await alpha.getProfilePicture(mentioneddd[0])
 } catch {
-pic = 'https://i.ibb.co/N9gFbtQ/2406c24248f5.jpg'
+pic = 'https://i.ibb.co/SxN4ymH/2860c9a59c9e.jpg'
 }
 seeer = `Nama : *${pushname}`
 thumbb = await getBuffer(pic)
@@ -6537,7 +6546,7 @@ break
 
 case 'ktpmaker':
 case 'ktp':
-if (args.length == 0) return reply2(`Usage: ${prefix + command} nik|provinsi|kabupaten|nama|tempat, tanggal lahir|jenis kelamin|jalan|rt/rw|kelurahan|kecamatan|agama|status nikah|pekerjaan|warga negara|berlaku sampai|url_image\n\n${emoj}Hint : ${prefix + command} 456127893132123|bumipertiwi|fatamorgana|LoL Human|mars, 99-99-9999|belum ditemukan|jl wardoyo|999/999|turese|imtuni|alhamdulillah islam|jomblo kack|mikirin dia|indo ori no kw|hari kiamat|https://i.ibb.co/Xb2pZ88/test.jpg`)
+if (args.length == 0) return reply2(`Usage: ${prefix + command} nik|provinsi|kabupaten|nama|tempat, tanggal lahir|jenis kelamin|jalan|rt/rw|kelurahan|kecamatan|agama|status nikah|pekerjaan|warga negara|berlaku sampai|url_image\n\n${emoj}Hint : ${prefix + command} 456127893132123|bumipertiwi|fatamorgana|LoL Human|mars, 99-99-9999|belum ditemukan|jl wardoyo|999/999|turese|imtuni|alhamdulillah islam|jomblo kack|mikirin dia|indo ori no kw|hari kiamat|https://i.ibb.co/SxN4ymH/2860c9a59c9e.jpg`)
 get_args = args.join(" ").split("|")
 nik = get_args[0]
 prov = get_args[1]
@@ -6700,7 +6709,7 @@ break
 case 'listrespon':
 teks = 'List Respon:\n'
 for (let i of filter) {
-teks += `• *Filter :* ${i.Filter}\n• *Jawab :* ${i.Jawaban}\n⌯────────⌕────────⌯\n`
+teks += `• *Filter :* ${i.Filter}\n• *Jawab :* ${i.Jawaban}\n⌯┅━━━━━━━━━━━━━━┅⌯\n`
 }
 teks += `Total : ${filter.length}`
 alpha.sendMessage(from, teks.trim(), extendedText, {quoted: mek})
@@ -7689,7 +7698,8 @@ break
 case 'descc':
 ngga = `• 𝐃𝐞𝐬𝐤𝐫𝐢𝐩𝐬𝐢 𝐆𝐫𝐮𝐩🍡\n\n${groupMetadata.desc}`
 reply2(ngga)
-break 
+break
+
 case 'welcome': 
 if (!isGroup)return reply2(mess.only.group)
 if (!isGroupAdmins && !mek.key.fromMe) return reply2(mess.only.admin) 
@@ -7732,7 +7742,8 @@ footerText: `${footerr}${enter}${tampilWaktu}`,
 buttons: linkr,
 headerType: 1 }
 return alpha.sendMessage(from, antl, MessageType.buttonsMessage)}
-break 
+break
+
 case 'group':
 if (!isGroupAdmins && !mek.key.fromMe) return reply2(mess.only.admin)
 if (!isGroup) return reply2(mess.only.group)
@@ -7813,7 +7824,7 @@ if (isQuotedAudio) {
 ger = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 // Wait //
 owgi = await alpha.downloadAndSaveMediaMessage(ger)
-Okelor = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", owgi)
+Okelor = await imgbb(`${img_key}`, owgi)
 teks=`*${emoj} 「 AUDIO TO URL 」 ${emoj}*
 *$Url : ${Okelor.display_url}*`
 reply2(teks) 
@@ -7821,7 +7832,7 @@ reply2(teks)
 ger = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 // Wait //
 owgi = await alpha.downloadAndSaveMediaMessage(ger)
-qbc = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", owgi)
+qbc = await imgbb(`${img_key}`, owgi)
 teks=`*${emoj} 「 IMAGE TO URL 」 ${emoj}*
 *Url : ${qbc.display_url}*`
 reply2(teks)
@@ -7829,7 +7840,7 @@ reply2(teks)
 ger = isQuotedVideo ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 // Wait //
 owgi = await alpha.downloadAndSaveMediaMessage(ger)
-ffff = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", owgi)
+ffff = await imgbb(`${img_key}`, owgi)
 teks=`*${emoj} 「 VIDEO TO URL 」 ${emoj}*
 *$Url : ${ffff.display_url}*`
 reply2(teks)
@@ -7837,12 +7848,13 @@ reply2(teks)
 ger = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 // Wait //
 owgi = await alpha.downloadAndSaveMediaMessage(ger)
-vrr = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", owgi)
+vrr = await imgbb(`${img_key}`, owgi)
 teks=`*${emoj} 「 STICKER TO URL 」 ${emoj}*
 *Url : ${vrr.display_url}*`
 reply2(teks)
 } 
-break 
+break
+
 case 'gelud':
 if (!isGroup) return reply2(mess.only.group)
 if (mek.message.extendedTextMessage.contextInfo.mentionedJid > 1) return reply2('Hanya bisa dengan 1 orang')
@@ -8166,7 +8178,7 @@ case 'ggs':
 if(!q) return reply2(`${emoj} Hint : ${prefix + command} mabar`) 
 teks = args.join(' ')
 res = await ggs({'query' : `${teks}`})
-let geges = '*⌯────────⌕────────⌯*\n\n'
+let geges = '*⌯┅━━━━━━━━━━━━━━┅⌯*\n\n'
 for (let i of res) {
 geges += `*Judul* : ${i.title}
 *Link* : ${i.link}
@@ -8269,7 +8281,8 @@ if (!q) return reply2('Teksnya bg?')
 // Wait //
 pButterfly(`${q}`).then(res => {
 sendMediaURL(from, res.url)})
-break 
+break
+
 case 'listbadword':
 if (isBanned) return
 let bi = `*List badword*\n\n`
@@ -8395,7 +8408,7 @@ ger = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTex
 owgi = await alpha.downloadMediaMessage(ger)
 await fs.writeFileSync(`./stickmeme.jpeg`, owgi)
 var imgbb = require('imgbb-uploader')
-anu = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", './stickmeme.jpeg')
+anu = await imgbb(`${img_key}`, './stickmeme.jpeg')
 teks = `${anu.display_url}`
 sendStickerFromUrl(from, `https://pecundang.herokuapp.com/api/memegen2?teks1=${top}&teks2=${bottom}&img_url=${teks}`, mek)
 fs.unlinkSync('./stickmeme.jpeg')
@@ -8415,7 +8428,7 @@ ger = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTex
 owgi = await alpha.downloadMediaMessage(ger)
 await fs.writeFileSync(`./stickmeme.jpeg`, owgi)
 var imgbb = require('imgbb-uploader')
-anu = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", './stickmeme.jpeg')
+anu = await imgbb(`${img_key}`, './stickmeme.jpeg')
 teks = `${anu.display_url}`
 sendStickerFromUrl(from, `https://api.memegen.link/images/custom/${top}/${bottom}.png?background=${teks}`, mek)
 fs.unlinkSync('./stickmeme.jpeg')
@@ -8431,7 +8444,7 @@ ger = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTex
 owgi = await alpha.downloadMediaMessage(ger)
 await fs.writeFileSync(`./stickmeme.jpeg`, owgi)
 var imgbb = require('imgbb-uploader')
-anu = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", './stickmeme.jpeg')
+anu = await imgbb(`${img_key}`, './stickmeme.jpeg')
 teks = `${anu.display_url}`
 sendStickerFromUrl(from, `https://api.memegen.link/images/custom/${top}.png?background=${teks}`, mek)
 fs.unlinkSync('./stickmeme.jpeg')
@@ -8447,7 +8460,7 @@ ger = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTex
 owgi = await alpha.downloadMediaMessage(ger)
 await fs.writeFileSync(`./stickmeme.jpeg`, owgi)
 var imgbb = require('imgbb-uploader')
-anu = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", './stickmeme.jpeg')
+anu = await imgbb(`${img_key}`, './stickmeme.jpeg')
 teks = `${anu.display_url}`
 sendStickerFromUrl(from, `https://api.memegen.link/images/custom/_/${bottom}.png?background=${teks}`, mek)
 fs.unlinkSync('./stickmeme.jpeg')
@@ -9664,10 +9677,10 @@ get_result = await fetchJson(`https://api.lolhuman.xyz/api/brainly2?apikey=${lol
 lala = get_result.result
 ini_txt = "Beberapa Pembahasan Dari Brainly :\n\n"
 for (var x of lala) {
-ini_txt += `⌯────────⌕────────⌯\n`
+ini_txt += `⌯┅━━━━━━━━━━━━━━┅⌯\n`
 ini_txt += `${petik}Pertanyaan :${petik}\n${x.question.content}\n\n`
 ini_txt += `${petik}Jawaban :${petik}\n${x.answer[0].content}\n`
-ini_txt += `⌯────────⌕────────⌯\n\n`
+ini_txt += `⌯┅━━━━━━━━━━━━━━┅⌯\n\n`
 }
 reply2(ini_txt)
 break
@@ -9688,13 +9701,13 @@ ini_txt += `${petik}◪ Garis Lintang :${petik} ${x.to.latitude}\n`
 ini_txt += `${petik}◪ Garis Bujur :${petik} ${x.to.longitude}\n\n`
 ini_txt += `${petik}◪ Jarak Tempuh :${petik} ${x.jarak}\n`
 ini_txt += `${petik}◪ Waktu Tempuh :${petik}\n`
-ini_txt += ` ⌯────────⌕────────⌯\n`
+ini_txt += ` ⌯┅━━━━━━━━━━━━━━┅⌯\n`
 ini_txt += `❍┤ Kereta Api : ${x.kereta_api}\n`
 ini_txt += `❍┤ Pesawat : ${x.pesawat}\n`
 ini_txt += `❍┤ Mobil : ${x.mobil}\n`
 ini_txt += `❍┤ Motor : ${x.motor}\n`
 ini_txt += `❍┤ Jalan Kaki : ${x.jalan_kaki}\n`
-ini_txt += ` ⌯────────⌕────────⌯\n`
+ini_txt += ` ⌯┅━━━━━━━━━━━━━━┅⌯\n`
 reply2(ini_txt)
 break
 
@@ -10587,11 +10600,11 @@ await alpha.sendMessage(from, ini_buffer, image, { quoted: mek, caption: "Nih ka
 break
 
 case 'xfaketoko':
-await faketoko(teks = "Tahu Bacem", url_image = "https://i.ibb.co/JdfQ73m/photo-2021-02-05-10-13-39.jpg", title = "Wudy", code = "IDR", price = 1000000)
+await faketoko(teks = "Tahu Bacem", url_image = "https://i.ibb.co/SxN4ymH/2860c9a59c9e.jpg", title = "Wudy", code = "IDR", price = 1000000)
 break
 
 case 'xktpmaker':
-if (args.length == 0) return reply2(`Usage: ${prefix + command} nik|provinsi|kabupaten|nama|tempat, tanggal lahir|jenis kelamin|jalan|rt/rw|kelurahan|kecamatan|agama|status nikah|pekerjaan|warga negara|berlaku sampai|url_image\n\nContoh: ${prefix + command} 456127893132123|bumipertiwi|fatamorgana|Wudy|mars, 99-99-9999|belum ditemukan|jl wardoyo|999/999|turese|imtuni|alhamdulillah islam|jomblo kack|mikirin dia|indo ori no kw|hari kiamat|https://i.ibb.co/Xb2pZ88/test.jpg`)
+if (args.length == 0) return reply2(`Usage: ${prefix + command} nik|provinsi|kabupaten|nama|tempat, tanggal lahir|jenis kelamin|jalan|rt/rw|kelurahan|kecamatan|agama|status nikah|pekerjaan|warga negara|berlaku sampai|url_image\n\nContoh: ${prefix + command} 456127893132123|bumipertiwi|fatamorgana|Wudy|mars, 99-99-9999|belum ditemukan|jl wardoyo|999/999|turese|imtuni|alhamdulillah islam|jomblo kack|mikirin dia|indo ori no kw|hari kiamat|https://i.ibb.co/SxN4ymH/2860c9a59c9e.jpg`)
 get_args = args.join(" ").split("|")
 nik = get_args[0]
 prov = get_args[1]
@@ -11458,7 +11471,7 @@ var imgbb = require('imgbb-uploader')
 if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 var bioij = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
 var delib = await alpha.downloadAndSaveMediaMessage(bioij, `./media/${sender}.png`)
-let datau = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", delib)
+let datau = await imgbb(`${img_key}`, delib)
 anuk = `https://api.dapuhy.ga/api/canvas/${command}?img=${datau.display_url}&apikey=${dapuhy}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
@@ -11469,7 +11482,7 @@ let oppp = await alpha.getProfilePicture(ghost).catch(_ => 'https://telegra.ph/f
 let medianya = await getBuffer(oppp)
 let datae = await imageToBase64(JSON.stringify(oppp).replace(/\"/gi, ''))
 fs.writeFileSync('janckuk.jpeg', datae, 'base64')
-let odata = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", 'janckuk.jpeg')
+let odata = await imgbb(`${img_key}`, 'janckuk.jpeg')
 anuk = `https://api.dapuhy.ga/api/canvas/${command}?img=${odata.display_url}&apikey=${dapuhy}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
@@ -12390,7 +12403,8 @@ get_result = ini_result.result
 ini_txt = `*Cuttly shortlink*`
 ini_txt += `Shortlink : ${get_result}`
 reply2(ini_txt)
-break 
+break
+
 case 'wallflare':
 rdm_ = await fetchJson(`https://hadi-api.herokuapp.com/api/wallpaperflare?query=${q}`)
 getr = rdm_.result
@@ -12665,7 +12679,8 @@ case 'ttp2':
 if (!q) return reply2(`Teks Nya Mana Kak?\nContoh :\n${prefix}attp ${botname}`)
 atetepe = await getBuffer(`https://api.lolhuman.xyz/api/${command}?apikey=${lolkey}&text=${encodeURIComponent(q)}`)
 alpha.sendMessage(from, atetepe, sticker, { quoted: mek })
-break 
+break
+
 case 'attp2':
 if(!q) return reply2(`${emoj} Hint : ${prefix + command} hai bg`)
 buffer = await getBuffer(`https://api.lolhuman.xyz/api/attp?apikey=${lolkey}&text=${encodeURIComponent(q)}`)
@@ -13230,7 +13245,7 @@ var imgbb = require('imgbb-uploader')
 if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 var bioij = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
 var delib = await alpha.downloadAndSaveMediaMessage(bioij, `./media/${sender}.png`)
-let datau = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", delib)
+let datau = await imgbb(`${img_key}`, delib)
 anuk = `https://some-random-api.ml/canvas/${command}?avatar=${odata.display_url}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
@@ -13241,7 +13256,7 @@ let oppp = await alpha.getProfilePicture(ghost).catch(_ => 'https://telegra.ph/f
 let medianya = await getBuffer(oppp)
 let datae = await imageToBase64(JSON.stringify(oppp).replace(/\"/gi, ''))
 fs.writeFileSync('janckuk.jpeg', datae, 'base64')
-let odata = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", 'janckuk.jpeg')
+let odata = await imgbb(`${img_key}`, 'janckuk.jpeg')
 anuk = `https://some-random-api.ml/canvas/${command}?avatar=${odata.display_url}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
@@ -13290,7 +13305,7 @@ var imgbb = require('imgbb-uploader')
 if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 var edit2_ = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
 var edit3_ = await alpha.downloadAndSaveMediaMessage(edit2_, `./media/${sender}.png`)
-let edit4_ = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", edit3_)
+let edit4_ = await imgbb(`${img_key}`, edit3_)
 anuk = `https://api-alphabot.herokuapp.com/api/image_editor/${command}?apikey=Alphabot&url=${edit4_.display_url}`
 sendStickerFromUrl(from, `${anuk}`, mek)
 } else {
@@ -13299,7 +13314,7 @@ let oppp = await alpha.getProfilePicture(ghost).catch(_ => 'https://telegra.ph/f
 let medianya = await getBuffer(oppp)
 let datae = await imageToBase64(JSON.stringify(oppp).replace(/\"/gi, ''))
 fs.writeFileSync('janckuk.jpeg', datae, 'base64')
-let odata = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", 'janckuk.jpeg')
+let odata = await imgbb(`${img_key}`, 'janckuk.jpeg')
 anuk = `https://api-alphabot.herokuapp.com/api/image_editor/${command}?apikey=Alphabot&url=${odata.display_url}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
@@ -13645,7 +13660,7 @@ break
 case 'bucin':
 rbuc_ = await fetchJson(`https://x-restapi.herokuapp.com/api/random-bucin?apikey=BETA`)
 var rbuc_1 = `${ucapannya2}
-⌯────────⌕────────⌯
+⌯┅━━━━━━━━━━━━━━┅⌯
 *${rbuc_.bucin}*`
 var rbuc_2 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
@@ -13669,7 +13684,7 @@ break
 case 'fakta':
 fakta_ = await fetchJson(`https://x-restapi.herokuapp.com/api/random-fakta?apikey=BETA`)
 var fakta_1 = `${ucapannya2}
-⌯────────⌕────────⌯
+⌯┅━━━━━━━━━━━━━━┅⌯
 *${fakta_.fakta}*`
 var fakta_2 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
@@ -13693,7 +13708,7 @@ break
 case 'katabijak':
 ktbjk_ = await fetchJson(`https://x-restapi.herokuapp.com/api/random-katabijak?apikey=BETA`)
 var ktbjk_1 = `${ucapannya2}
-⌯────────⌕────────⌯
+⌯┅━━━━━━━━━━━━━━┅⌯
 *${ktbjk_.katabijak}*`
 var ktbjk_2 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
@@ -13717,7 +13732,7 @@ break
 case 'motivasi':
 motvas_ = await fetchJson(`https://x-restapi.herokuapp.com/api/random-motivasi?apikey=BETA`)
 var motvas_1 = `${ucapannya2}
-⌯────────⌕────────⌯
+⌯┅━━━━━━━━━━━━━━┅⌯
 *${motvas_.motivasi}*`
 var motvas_2 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
@@ -13741,7 +13756,7 @@ break
 case 'pantun':
 pntn_ = await fetchJson(`https://x-restapi.herokuapp.com/api/random-pantun?apikey=BETA`)
 var pntn_1 = `${ucapannya2}
-⌯────────⌕────────⌯
+⌯┅━━━━━━━━━━━━━━┅⌯
 ${pntn_.pantun}`
 var pntn_2 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
@@ -14928,7 +14943,7 @@ if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0)
 // Wait //
 var bioij = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
 var delib = await alpha.downloadAndSaveMediaMessage(bioij, `./media/${sender}.png`)
-let datau = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", delib)
+let datau = await imgbb(`${img_key}`, delib)
 anuk = `${datau.display_url}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
@@ -14942,7 +14957,7 @@ let oppp = await alpha.getProfilePicture(ghost).catch(_ => 'https://telegra.ph/f
 let medianya = await getBuffer(oppp)
 let datae = await imageToBase64(JSON.stringify(oppp).replace(/\"/gi, ''))
 fs.writeFileSync('janckuk.jpeg', datae, 'base64')
-let odata = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", 'janckuk.jpeg')
+let odata = await imgbb(`${img_key}`, 'janckuk.jpeg')
 anuk = `${odata.display_url}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
@@ -15399,7 +15414,7 @@ break
 case 'fact':
 facten_ = await fetchJson(`https://catfact.ninja/fact`)
 var facten_1 = `${ucapannya2}
-⌯────────⌕────────⌯
+⌯┅━━━━━━━━━━━━━━┅⌯
 *English Fact*
 _${facten_.fact}_`
 var facten_2 = [
@@ -15425,9 +15440,9 @@ case 'umur':
 if(!q) return reply2(`${emoj} Hint : ${prefix + command} Wahyu`) 
 umur_ = await fetchJson(`https://api.agify.io/?name=${q}`)
 var umur_1 = `${ucapannya2}
-⌯────────⌕────────⌯
-*Umur* ${umur_.name}
-adalah : ${umur_.age}`
+⌯┅━━━━━━━━━━━━━━┅⌯
+*Umur* ${umur_.name ? umur_.name : 'Gak nemu namanya'}
+adalah : ${umur_.age ? umur_.age : 'Nih Umurnya'}`
 var umur_2 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
@@ -15451,7 +15466,7 @@ case 'gender':
 if(!q) return reply2(`${emoj} Hint : ${prefix + command} Wahyu`) 
 gen_ = await fetchJson(`https://api.genderize.io/?name=${q}`)
 var gen_1 = `${ucapannya2}
-⌯────────⌕────────⌯
+⌯┅━━━━━━━━━━━━━━┅⌯
 *Biodata* :
 Nama : ${gen_.name}
 Gender : ${gen_.gender}
@@ -15615,7 +15630,7 @@ ranpp = jdii[Math.floor(Math.random() * jdii.length)]
 try {
 pic = await alpha.getProfilePicture(ranpp)
 } catch {
-pic = 'https://i.ibb.co/N9gFbtQ/2406c24248f5.jpg'
+pic = 'https://i.ibb.co/SxN4ymH/2860c9a59c9e.jpg'
 }
 thumbb = await getBuffer(pic)
 alpha.sendMessage(from, thumbb ,image, {quoted: mek})
@@ -16108,7 +16123,7 @@ if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) &
 // Wait //
 ger = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek 
 owgi = await alpha.downloadAndSaveMediaMessage(ger)
-anu = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", owgi)
+anu = await imgbb(`${img_key}`, owgi)
 teks = `${anu.display_url}`
 ranp = getRandom('.gif')
 rano = getRandom('.webp')
@@ -16448,7 +16463,7 @@ var imgbb = require('imgbb-uploader')
 if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 var edit2_ = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
 var edit3_ = await alpha.downloadAndSaveMediaMessage(edit2_, `./media/${sender}.png`)
-let edit4_ = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", edit3_)
+let edit4_ = await imgbb(`${img_key}`, edit3_)
 titid = await fetchJson(`https://nekobot.xyz/api/imagegen?type=${command}&url=${edit4_.display_url}`, {method: 'get'})
 ling = `${titid.message}`
 sendStickerFromUrl(from, `${ling}`, mek)
@@ -16458,7 +16473,7 @@ let oppp = await alpha.getProfilePicture(ghost).catch(_ => 'https://telegra.ph/f
 let medianya = await getBuffer(oppp)
 let datae = await imageToBase64(JSON.stringify(oppp).replace(/\"/gi, ''))
 fs.writeFileSync('janckuk.jpeg', datae, 'base64')
-let odata = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", 'janckuk.jpeg')
+let odata = await imgbb(`${img_key}`, 'janckuk.jpeg')
 titid = await fetchJson(`https://nekobot.xyz/api/imagegen?type=${command}&url=${odata.display_url}`, {method: 'get'})
 ling = `${titid.message}`
 sendStickerFromUrl(from, `${ling}`, mek)
@@ -16783,7 +16798,7 @@ ger = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTex
 owgi = await alpha.downloadMediaMessage(ger)
 await fs.writeFileSync(`./stickmeme.jpeg`, owgi)
 var imgbb = require('imgbb-uploader')
-anu = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", './stickmeme.jpeg')
+anu = await imgbb(`${img_key}`, './stickmeme.jpeg')
 teks = `${anu.display_url}`
 buffer453 = await getBuffer (`https://api-xcoders.xyz/api/convert/reversevideo?url=${teks}&apikey=7iyNa0qA`)
 alpha.sendMessage(from, buffer453, video, { mimetype: 'video/mp4', quoted: mek })
@@ -16857,7 +16872,7 @@ ger = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTex
 owgi = await alpha.downloadMediaMessage(ger)
 await fs.writeFileSync(`./stickmeme.jpeg`, owgi)
 var imgbb = require('imgbb-uploader')
-anu = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", './stickmeme.jpeg')
+anu = await imgbb(`${img_key}`, './stickmeme.jpeg')
 teks = await getBuffer(`https://api-xcoders.xyz/api/ephoto/${command}?url=${anu.display_url}&apikey=7iyNa0qA`)
 alpha.sendMessage(from, teks, image, { quoted: mek, caption: "Nih kack" })
 fs.unlinkSync('./stickmeme.jpeg')
@@ -16875,7 +16890,7 @@ ger = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTex
 owgi = await alpha.downloadMediaMessage(ger)
 await fs.writeFileSync(`./stickmeme.jpeg`, owgi)
 var imgbb = require('imgbb-uploader')
-anu = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", './stickmeme.jpeg')
+anu = await imgbb(`${img_key}`, './stickmeme.jpeg')
 teks = await getBuffer(`https://api-xcoders.xyz/api/ephoto/${command}?url=${anu.display_url}&text=${top}&text2=${bottom}&apikey=7iyNa0qA`)
 alpha.sendMessage(from, teks, image, { quoted: mek, caption: "Nih kack" })
 fs.unlinkSync('./stickmeme.jpeg')
@@ -16891,7 +16906,7 @@ ger = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTex
 owgi = await alpha.downloadMediaMessage(ger)
 await fs.writeFileSync(`./stickmeme.jpeg`, owgi)
 var imgbb = require('imgbb-uploader')
-anu = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", './stickmeme.jpeg')
+anu = await imgbb(`${img_key}`, './stickmeme.jpeg')
 teks = await getBuffer(`https://api-xcoders.xyz/api/ephoto/adventure?url=${anu.display_url}&text=${top}&text2=${bottom}&apikey=7iyNa0qA`)
 alpha.sendMessage(from, teks, image, { quoted: mek, caption: "Nih kack" })
 fs.unlinkSync('./stickmeme.jpeg')
@@ -16910,7 +16925,7 @@ ger = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTex
 owgi = await alpha.downloadMediaMessage(ger)
 await fs.writeFileSync(`./stickmeme.jpeg`, owgi)
 var imgbb = require('imgbb-uploader')
-anu = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", './stickmeme.jpeg')
+anu = await imgbb(`${img_key}`, './stickmeme.jpeg')
 teks = await getBuffer(`https://api-xcoders.xyz/api/ephoto/${command}?url=${anu.display_url}&text=${top}&apikey=7iyNa0qA`)
 alpha.sendMessage(from, teks, image, { quoted: mek, caption: "Nih kack" })
 fs.unlinkSync('./stickmeme.jpeg')
@@ -16941,7 +16956,7 @@ var imgbb = require('imgbb-uploader')
 if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 var bioij = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
 var delib = await alpha.downloadAndSaveMediaMessage(bioij, `./media/${sender}.png`)
-let datau = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", delib)
+let datau = await imgbb(`${img_key}`, delib)
 anuk = `https://api-xfar05.herokuapp.com/api/canvas/${command}?teks=${q}&bg=${datau.display_url}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
@@ -16952,7 +16967,7 @@ let oppp = await alpha.getProfilePicture(ghost).catch(_ => 'https://telegra.ph/f
 let medianya = await getBuffer(oppp)
 let datae = await imageToBase64(JSON.stringify(oppp).replace(/\"/gi, ''))
 fs.writeFileSync('janckuk.jpeg', datae, 'base64')
-let odata = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", 'janckuk.jpeg')
+let odata = await imgbb(`${img_key}`, 'janckuk.jpeg')
 anuk = `https://api-xfar05.herokuapp.com/api/canvas/customgfx1?teks=${q}&bg=${odata.display_url}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
@@ -16970,7 +16985,7 @@ var imgbb = require('imgbb-uploader')
 if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 var bioij = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
 var delib = await alpha.downloadAndSaveMediaMessage(bioij, `./media/${sender}.png`)
-let datau = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", delib)
+let datau = await imgbb(`${img_key}`, delib)
 anuk = `https://api-xfar05.herokuapp.com/api/canvas/customgfx2?teks1=${m1}&teks2=${m2}&bg=${datau.display_url}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
@@ -16981,7 +16996,7 @@ let oppp = await alpha.getProfilePicture(ghost).catch(_ => 'https://telegra.ph/f
 let medianya = await getBuffer(oppp)
 let datae = await imageToBase64(JSON.stringify(oppp).replace(/\"/gi, ''))
 fs.writeFileSync('janckuk.jpeg', datae, 'base64')
-let odata = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", 'janckuk.jpeg')
+let odata = await imgbb(`${img_key}`, 'janckuk.jpeg')
 anuk = `https://api-xfar05.herokuapp.com/api/canvas/customgfx2?teks1=${m1}&teks2=${m2}&bg=${odata.display_url}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
@@ -17017,12 +17032,12 @@ case 'memepatrick':
 try {
 ppus = await alpha.getProfilePicture(mek.message.extendedTextMessage.contextInfo.mentionedJid[0])
 } catch {
-ppus = 'https://i.ibb.co/N9gFbtQ/2406c24248f5.jpg'
+ppus = 'https://i.ibb.co/SxN4ymH/2860c9a59c9e.jpg'
 }
 let tmbh1 = await getBuffer(ppus)
 await fs.writeFileSync(`./stickmeme.jpeg`, tmbh1)
 var imgbb = require('imgbb-uploader')
-anu = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", './stickmeme.jpeg')
+anu = await imgbb(`${img_key}`, './stickmeme.jpeg')
 teks = `${anu.display_url}`
 nama_ = await getBuffer(`https://api-xfar05.herokuapp.com/api/canvas/patrick?image=${teks}`);
 alpha.sendMessage(from, nama_, image, {quoted: mek})
@@ -17033,12 +17048,12 @@ case 'spongebob':
 try {
 ppus = await alpha.getProfilePicture(mek.message.extendedTextMessage.contextInfo.mentionedJid[0])
 } catch {
-ppus = 'https://i.ibb.co/N9gFbtQ/2406c24248f5.jpg'
+ppus = 'https://i.ibb.co/SxN4ymH/2860c9a59c9e.jpg'
 }
 let tmbh2 = await getBuffer(ppus)
 await fs.writeFileSync(`./stickmeme.jpeg`, tmbh2)
 var imgbb = require('imgbb-uploader')
-anu = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", './stickmeme.jpeg')
+anu = await imgbb(`${img_key}`, './stickmeme.jpeg')
 teks = `${anu.display_url}`
 nama_ = await getBuffer(`https://api-xfar05.herokuapp.com/api/canvas/spongebob?image=${teks}`);
 alpha.sendMessage(from, nama_, image, {quoted: mek})
@@ -17052,7 +17067,7 @@ var imgbb = require('imgbb-uploader')
 if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 var bioij = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
 var delib = await alpha.downloadAndSaveMediaMessage(bioij, `./media/${sender}.png`)
-let datau = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", delib)
+let datau = await imgbb(`${img_key}`, delib)
 anuk = `https://api-xfar05.herokuapp.com/api/canvas/xnxx?pp=${datau.display_url}&username=${q}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
@@ -17063,7 +17078,7 @@ let oppp = await alpha.getProfilePicture(ghost).catch(_ => 'https://telegra.ph/f
 let medianya = await getBuffer(oppp)
 let datae = await imageToBase64(JSON.stringify(oppp).replace(/\"/gi, ''))
 fs.writeFileSync('janckuk.jpeg', datae, 'base64')
-let odata = await imgbb("f7864144fe0b1fc22bd5f9a3f24397c7", 'janckuk.jpeg')
+let odata = await imgbb(`${img_key}`, 'janckuk.jpeg')
 anuk = `https://api-xfar05.herokuapp.com/api/canvas/xnxx?pp=${odata.display_url}&username=${q}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
