@@ -1903,6 +1903,82 @@ const floc = {contextInfo: {"forwardingScore":999,"isForwarded":true,'stanzaId':
 const fkontak = { key: {participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: `6283136505591-1614953337@g.us` } : {}) }, message: { 'contactMessage': { 'displayName': `${cr}`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${cr},;;;\nFN:${cr},\nitem1.TEL;waid=${sender.split('@')[0]}:${sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': thumb_miku, thumbnail: thumb_miku,sendEphemeral: true}}}
 var fakeReplyList = ['ftroli', 'fdoc', 'fvn', 'fgif', 'fgclink', 'fvideo', 'floc', 'fkontak']
 var fakeReply = fakeReplyList[Math.floor(Math.random() * fakeReplyList.length)];
+
+const fssticker = (filesize) => {
+anu = await alpha.prepareMessageFromContent(from,{
+"stickerMessage": {
+"url": m.quoted.url,
+"fileSha256": m.quoted.fileSha256.toString('base64'),
+"fileEncSha256": m.quoted.fileEncSha256.toString('base64'),
+"mediaKey": m.quoted.mediaKey.toString('base64'),
+"mimetype": m.quoted.mimetype,
+"height": m.quoted.height,
+"width": m.quoted.width,
+"directPath": m.quoted.directPath,
+"fileLength": filesize,
+"mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
+"isAnimated": m.quoted.isAnimated
+}
+}, {quoted: mek, contextInfo: { mentionedJid: [sender]}})
+alpha.relayWAMessage(anu)
+} 
+
+const fsimage = (teks, filesize) => {
+anu = alpha.prepareMessageFromContent(from,{
+"imageMessage": {
+"url": m.quoted.url,
+"mimetype": m.quoted.mimetype,
+"caption": teks,
+"fileSha256": m.quoted.fileSha256.toString('base64'),
+"fileLength": filesize,
+"height": m.quoted.height,
+"width": m.quoted.width,
+"mediaKey": m.quoted.mediaKey.toString('base64'),
+"fileEncSha256": m.quoted.fileEncSha256.toString('base64'),
+"directPath": m.quoted.directPath,
+"mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
+"jpegThumbnail": thumb_miku,
+"scansSidecar": "NzpuTEVBk75vpLp4WArEAbJzsMJ7i0ciK/LSe44IIbzdoLq9iltpTQ==",
+"scanLengths": [
+2411,
+6978,
+1298,
+861
+],
+"midQualityFileSha256": "w2l7NiU1z+b+lgCcmHyfJqbbxg3LFgWEB7F7Cle82Q4="
+}},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
+alpha.relayWAMessage(anu)
+} 
+
+
+const fsvideo = (teks, filesize) => {
+anu = alpha.prepareMessageFromContent(from,{
+"videoMessage": {
+"url": m.quoted.url,
+"mimetype": m.quoted.mimetype,
+"caption": teks,
+"fileSha256": m.quoted.fileSha256.toString('base64'),
+"fileLength": filsize,
+"height": m.quoted.height,
+"width": m.quoted.width,
+"mediaKey": m.quoted.mediaKey.toString('base64'),
+"fileEncSha256": m.quoted.fileEncSha256.toString('base64'),
+"directPath": m.quoted.directPath,
+"mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
+"jpegThumbnail": thumb_miku,
+"scansSidecar": "NzpuTEVBk75vpLp4WArEAbJzsMJ7i0ciK/LSe44IIbzdoLq9iltpTQ==",
+"scanLengths": [
+2411,
+6978,
+1298,
+861
+],
+"midQualityFileSha256": "w2l7NiU1z+b+lgCcmHyfJqbbxg3LFgWEB7F7Cle82Q4="
+}},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
+alpha.relayWAMessage(anu)
+}
+
+
 const fakeitem = (teks) => {
 alpha.sendMessage(from, teks, text, {
 quoted: {
@@ -6901,7 +6977,8 @@ break
 case 'size':
 if (args.length < 1) return reply2('Masukan angkanya')
 filsize = args[0]
-costick = await alpha.prepareMessageFromContent(from,{
+if (isQuotedSticker) {
+anu = await alpha.prepareMessageFromContent(from,{
 "stickerMessage": {
 "url": m.quoted.url,
 "fileSha256": m.quoted.fileSha256.toString('base64'),
@@ -6915,9 +6992,61 @@ costick = await alpha.prepareMessageFromContent(from,{
 "mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
 "isAnimated": m.quoted.isAnimated
 }
-}, {quoted:mek})
-alpha.relayWAMessage(costick)
+}, {quoted: mek, contextInfo: { mentionedJid: [sender]}})
+alpha.relayWAMessage(anu)
+} else if (isQuotedImage) {
+anu = alpha.prepareMessageFromContent(from,{
+"imageMessage": {
+"url": m.quoted.url,
+"mimetype": m.quoted.mimetype,
+"fileSha256": m.quoted.fileSha256.toString('base64'),
+"fileLength": filsize,
+"height": m.quoted.height,
+"width": m.quoted.width,
+"mediaKey": m.quoted.mediaKey.toString('base64'),
+"fileEncSha256": m.quoted.fileEncSha256.toString('base64'),
+"directPath": m.quoted.directPath,
+"mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
+"jpegThumbnail": thumb_miku,
+"scansSidecar": "NzpuTEVBk75vpLp4WArEAbJzsMJ7i0ciK/LSe44IIbzdoLq9iltpTQ==",
+"scanLengths": [
+2411,
+6978,
+1298,
+861
+],
+"midQualityFileSha256": "w2l7NiU1z+b+lgCcmHyfJqbbxg3LFgWEB7F7Cle82Q4="
+}},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
+alpha.relayWAMessage(anu)
+} else if (isQuotedVideo) {
+anu = alpha.prepareMessageFromContent(from,{
+"videoMessage": {
+"url": m.quoted.url,
+"mimetype": m.quoted.mimetype,
+"fileSha256": m.quoted.fileSha256.toString('base64'),
+"fileLength": filsize,
+"height": m.quoted.height,
+"width": m.quoted.width,
+"mediaKey": m.quoted.mediaKey.toString('base64'),
+"fileEncSha256": m.quoted.fileEncSha256.toString('base64'),
+"directPath": m.quoted.directPath,
+"mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
+"jpegThumbnail": thumb_miku,
+"scansSidecar": "NzpuTEVBk75vpLp4WArEAbJzsMJ7i0ciK/LSe44IIbzdoLq9iltpTQ==",
+"scanLengths": [
+2411,
+6978,
+1298,
+861
+],
+"midQualityFileSha256": "w2l7NiU1z+b+lgCcmHyfJqbbxg3LFgWEB7F7Cle82Q4="
+}},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
+alpha.relayWAMessage(anu)
+} else {
+reply2('Reply Stic/Img/Vid')
+}
 break
+
 case "colongsw": 
 if (!mek.key.fromMe) return
 if ((isMedia && !mek.message.videoMessage) || isQuotedImage) {
