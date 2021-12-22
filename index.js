@@ -355,7 +355,7 @@ let img_key = key[Math.floor(Math.random() * key.length)]
 let waktu_game = "120000"
 slmt = ["Respects","Fantastic","Hats off!","Sensational","Well done","Good job!","You rock!","Nice going","Good show!","Good going!","Good for you!","Good on you!","Good one mate!","I am impressed","Way to go","You did it!","You’re a genius!","You’re the best","You’ve got it","Pat on the back","That’s the way","That’s the best ever","You did it that time!","You make it look easy","You really deserved it","You did that very well","What a good try","Many happy returns","That is better than ever","You’re doing a good job","You’re doing beautifully","You’re really growing up","That’s the way to do it","You are very good at that","You’re on the right track now","You’re really going to town","Keep up the good work","That’s the right way to do it","You have done a great job!","You’re getting better every day","You’ve just about mastered that","Nothing can stop you now","That’s the best you’ve ever done","Keep working, you’re getting better","I’m happy to see you working like that"]
 let jwb_benar = slmt[Math.floor(Math.random() * slmt.length)]
-jwb = ["Tebak lagi","Dikit lagi","Hampir benar!","Salah!","Jawaban ngawur","Jawaban salah","Tidak benar!","Sedikit lagi","Tidak tepat!","Hampir tepat!","Jgn bilang gw gajelas!"]
+jwb = ["Tebak lagi","Dikit lagi","Hampir benar!","Salah!","Jawaban ngawur","Jawaban salah","Tidak benar!","Sedikit lagi","Tidak tepat!","Hampir tepat!"]
 let salah_jwb = jwb[Math.floor(Math.random() * jwb.length)]
 keo = ["Complete","Completed","Concluded","Consummated","Depleted","Drained","Effected","Ended","Executed","Exhausted","Fixed","Fulfilled","Perfected","Performed","Realized","Rendered","Set","Spent","Succeeded","Terminated","Wired","Wrought","A Wrap","All in","All over","Brought about","Brought to pass","Buttoned-up","Compassed","Over","Through","Used-up"]
 let jwb_oke = keo[Math.floor(Math.random() * keo.length)]
@@ -1687,7 +1687,7 @@ alpha.sendMessage(from, pesan, tipe, {quoted: { key: { fromMe: false, participan
 }
 
 const menjawab = (teks) => {
-alpha.sendMessage(from, teks, text, {quoted: mek})
+alpha.sendMessage(from, teks, text, {"contextInfo": {"mentionedJid" : [sender]}, quoted: mek, sendEphemeral: true})
 }
 const menyerah = (teks) => {
 alpha.sendMessage(from, teks, text, {"contextInfo": {"mentionedJid" : [sender]}, quoted: mek, sendEphemeral: true})
@@ -2784,7 +2784,8 @@ addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
 var tgbr0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tgbr1 = [
-{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
+{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 tgbr1_ = {
 contentText: tgbr0,
@@ -2801,7 +2802,7 @@ quoted: mek, sendEphemeral: true
 delete tebakgambar[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakgambar.json", JSON.stringify(tebakgambar))
 } else {
-menjawab(`Game ${command}${enter}${enter}@${sender.split("@")[0]}${salah_jwb}`)
+menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
 // TEBAKGAMBAR2
@@ -2813,7 +2814,8 @@ addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
 var tgbr20 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tgbr21 = [
-{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
+{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 tgbr21_ = {
 contentText: tgbr20,
@@ -2830,7 +2832,7 @@ quoted: mek, sendEphemeral: true
 delete tebakgambar2[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakgambar2.json", JSON.stringify(tebakgambar2))
 } else {
-menjawab(`Game ${command}${enter}${enter}@${sender.split("@")[0]}${salah_jwb}`)
+menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 } 
 // TEBAKGAMBAR3
@@ -2842,7 +2844,8 @@ addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
 var tgbr30 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tgbr31 = [
-{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
+{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 tgbr31_ = {
 contentText: tgbr30,
@@ -2859,7 +2862,7 @@ quoted: mek, sendEphemeral: true
 delete tebakgambar3[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakgambar3.json", JSON.stringify(tebakgambar3))
 } else {
-menjawab(`Game ${command}${enter}${enter}@${sender.split("@")[0]}${salah_jwb}`)
+menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 } 
 // TEBAKGAMBAR4
@@ -2871,7 +2874,8 @@ addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
 var tgbr40 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tgbr41 = [
-{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
+{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 tgbr41_ = {
 contentText: tgbr40,
@@ -2888,7 +2892,7 @@ quoted: mek, sendEphemeral: true
 delete tebakgambar4[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakgambar4.json", JSON.stringify(tebakgambar4))
 } else {
-menjawab(`Game ${command}${enter}${enter}@${sender.split("@")[0]}${salah_jwb}`)
+menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
 // TEBAKGAMBAR5
@@ -2900,7 +2904,8 @@ addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
 var tgbr50 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tgbr51 = [
-{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
+{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 tgbr51_ = {
 contentText: tgbr50,
@@ -2917,7 +2922,7 @@ quoted: mek, sendEphemeral: true
 delete tebakgambar5[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakgambar5.json", JSON.stringify(tebakgambar5))
 } else {
-menjawab(`Game ${command}${enter}${enter}@${sender.split("@")[0]}${salah_jwb}`)
+menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
 // CAKLONTONG
@@ -2929,7 +2934,8 @@ addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
 var cklt0 = `☑️ *${jwb_benar}*\ninfo : ${informasi}\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var cklt1 = [
-{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
+{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 cklt1_ = {
 contentText: cklt0,
@@ -2946,7 +2952,7 @@ quoted: mek, sendEphemeral: true
 delete caklontong[sender.split('@')[0]]
 fs.writeFileSync("./game/caklontong.json", JSON.stringify(caklontong))
 } else {
-menjawab(`Game ${command}${enter}${enter}@${sender.split("@")[0]}${salah_jwb}`)
+menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
 // CAKLONTONG2
@@ -2958,7 +2964,8 @@ addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
 var ckl20 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var ckl21 = [
-{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
+{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 ckl21_ = {
 contentText: ckl20,
@@ -2975,7 +2982,7 @@ quoted: mek, sendEphemeral: true
 delete caklontong2[sender.split('@')[0]]
 fs.writeFileSync("./game/caklontong2.json", JSON.stringify(caklontong2))
 } else {
-menjawab(`Game ${command}${enter}${enter}@${sender.split("@")[0]}${salah_jwb}`)
+menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
 // CAKLONTONG3
@@ -2987,7 +2994,8 @@ addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
 var ckl30 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var ckl31 = [
-{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
+{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 ckl31_ = {
 contentText: ckl30,
@@ -3004,7 +3012,7 @@ quoted: mek, sendEphemeral: true
 delete caklontong3[sender.split('@')[0]]
 fs.writeFileSync("./game/caklontong3.json", JSON.stringify(caklontong3))
 } else {
-menjawab(`Game ${command}${enter}${enter}@${sender.split("@")[0]}${salah_jwb}`)
+menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
 // TEBAKJENAKA
@@ -3016,7 +3024,8 @@ addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
 var jnk0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var jnk1 = [
-{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
+{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 jnk1_ = {
 contentText: jnk0,
@@ -3033,7 +3042,7 @@ quoted: mek, sendEphemeral: true
 delete tebakjenaka[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakjenaka.json", JSON.stringify(tebakjenaka))
 } else {
-menjawab(`Game ${command}${enter}${enter}@${sender.split("@")[0]}${salah_jwb}`)
+menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
 // SUSUNKATA
@@ -3045,7 +3054,8 @@ addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
 var ssnk0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var ssnk1 = [
-{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
+{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 ssnk1_ = {
 contentText: ssnk0,
@@ -3062,7 +3072,7 @@ quoted: mek, sendEphemeral: true
 delete susunkata[sender.split('@')[0]]
 fs.writeFileSync("./game/susunkata.json", JSON.stringify(susunkata))
 } else {
-menjawab(`Game ${command}${enter}${enter}@${sender.split("@")[0]}${salah_jwb}`)
+menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
 // SUSUNKATA2
@@ -3074,7 +3084,8 @@ addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
 var ssn20 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var ssn21 = [
-{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
+{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 ssn21_ = {
 contentText: ssn20,
@@ -3091,7 +3102,7 @@ quoted: mek, sendEphemeral: true
 delete susunkata2[sender.split('@')[0]]
 fs.writeFileSync("./game/susunkata2.json", JSON.stringify(susunkata2))
 } else {
-menjawab(`Game ${command}${enter}${enter}@${sender.split("@")[0]}${salah_jwb}`)
+menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
 // ASAHOTAK
@@ -3103,7 +3114,8 @@ addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
 var atk0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var atk1 = [
-{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
+{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 atk1_ = {
 contentText: atk0,
@@ -3120,7 +3132,7 @@ quoted: mek, sendEphemeral: true
 delete asahotak[sender.split('@')[0]]
 fs.writeFileSync("./game/asahotak.json", JSON.stringify(asahotak))
 } else {
-menjawab(`Game ${command}${enter}${enter}@${sender.split("@")[0]}${salah_jwb}`)
+menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
 // TEBAKKIMIA
@@ -3132,7 +3144,8 @@ addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
 var tkim0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tkim1 = [
-{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
+{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 tkim1_ = {
 contentText: tkim0,
@@ -3149,7 +3162,7 @@ quoted: mek, sendEphemeral: true
 delete tebakkimia[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakkimia.json", JSON.stringify(tebakkimia))
 } else {
-menjawab(`Game ${command}${enter}${enter}@${sender.split("@")[0]}${salah_jwb}`)
+menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
 // TEBAKKATA
@@ -3161,7 +3174,8 @@ addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
 var tbkt_0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tbkt_1 = [
-{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
+{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 tbkt_1_ = {
 contentText: tbkt_0,
@@ -3178,7 +3192,7 @@ quoted: mek, sendEphemeral: true
 delete tebakkata[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakkata.json", JSON.stringify(tebakkata))
 } else {
-menjawab(`Game ${command}${enter}${enter}@${sender.split("@")[0]}${salah_jwb}`)
+menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
 // sambungkata
@@ -3190,7 +3204,8 @@ addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
 var skt0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var skt1 = [
-{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
+{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 skt1_ = {
 contentText: skt0,
@@ -3207,7 +3222,7 @@ quoted: mek, sendEphemeral: true
 delete sambungkata[sender.split('@')[0]]
 fs.writeFileSync("./game/sambungkata.json", JSON.stringify(sambungkata))
 } else {
-menjawab(`Game ${command}${enter}${enter}@${sender.split("@")[0]}${salah_jwb}`)
+menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
 // TEBAKLIRIK
@@ -3219,7 +3234,8 @@ addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
 var tlir0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tlir1 = [
-{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
+{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 tlir1_ = {
 contentText: tlir0,
@@ -3236,7 +3252,7 @@ quoted: mek, sendEphemeral: true
 delete tebaklirik[sender.split('@')[0]]
 fs.writeFileSync("./game/tebaklirik.json", JSON.stringify(tebaklirik))
 } else {
-menjawab(`Game ${command}${enter}${enter}@${sender.split("@")[0]}${salah_jwb}`)
+menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
 // TEBAKKALIMAT
@@ -3248,7 +3264,8 @@ addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
 var tkl0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tkl1 = [
-{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
+{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 tkl1_ = {
 contentText: tkl0,
@@ -3265,7 +3282,7 @@ quoted: mek, sendEphemeral: true
 delete tebakkalimat[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakkalimat.json", JSON.stringify(tebakkalimat))
 } else {
-menjawab(`Game ${command}${enter}${enter}@${sender.split("@")[0]}${salah_jwb}`)
+menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
 // TEBAKAN
@@ -3277,7 +3294,8 @@ addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
 var tbkn0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tbkn1 = [
-{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
+{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 tbkn1_ = {
 contentText: tbkn0,
@@ -3294,7 +3312,7 @@ quoted: mek, sendEphemeral: true
 delete tebakan[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakan.json", JSON.stringify(tebakan))
 } else {
-menjawab(`Game ${command}${enter}${enter}@${sender.split("@")[0]}${salah_jwb}`)
+menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
 // TEBAKAN2
@@ -3306,7 +3324,8 @@ addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
 var tbkn20 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tbkn21 = [
-{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
+{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 tbkn21_ = {
 contentText: tbkn20,
@@ -3323,7 +3342,7 @@ quoted: mek, sendEphemeral: true
 delete tebakan2[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakan2.json", JSON.stringify(tebakan2))
 } else {
-menjawab(`Game ${command}${enter}${enter}@${sender.split("@")[0]}${salah_jwb}`)
+menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
 // SIAPAAKU
@@ -3335,7 +3354,8 @@ addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
 var spa0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var spa1 = [
-{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
+{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 spa1_ = {
 contentText: spa0,
@@ -3352,7 +3372,7 @@ quoted: mek, sendEphemeral: true
 delete siapaaku[sender.split('@')[0]]
 fs.writeFileSync("./game/siapaaku.json", JSON.stringify(siapaaku))
 } else {
-menjawab(`Game ${command}${enter}${enter}@${sender.split("@")[0]}${salah_jwb}`)
+menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
 // MATH
@@ -3364,7 +3384,8 @@ addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
 var mth0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var mth1 = [
-{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
+{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 mth1_ = {
 contentText: mth0,
@@ -3381,7 +3402,7 @@ quoted: mek, sendEphemeral: true
 delete math[sender.split('@')[0]]
 fs.writeFileSync("./game/math.json", JSON.stringify(math))
 } else {
-menjawab(`Game ${command}${enter}${enter}@${sender.split("@")[0]}${salah_jwb}`)
+menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
 // MATH2
@@ -3393,7 +3414,8 @@ addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
 var mth20 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var mth21 = [
-{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
+{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 mth21_ = {
 contentText: mth20,
@@ -3410,7 +3432,7 @@ quoted: mek, sendEphemeral: true
 delete math2[sender.split('@')[0]]
 fs.writeFileSync("./game/math2.json", JSON.stringify(math2))
 } else {
-menjawab(`Game ${command}${enter}${enter}@${sender.split("@")[0]}${salah_jwb}`)
+menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
 // MATH3
@@ -3422,7 +3444,8 @@ addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
 var mth30 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var mth31 = [
-{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
+{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 mth31_ = {
 contentText: mth30,
@@ -3439,7 +3462,7 @@ quoted: mek, sendEphemeral: true
 delete math3[sender.split('@')[0]]
 fs.writeFileSync("./game/math3.json", JSON.stringify(math3))
 } else {
-menjawab(`Game ${command}${enter}${enter}@${sender.split("@")[0]}${salah_jwb}`)
+menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
 // FAMILY 100
@@ -3451,7 +3474,8 @@ addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
 var fmly0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var fmly1 = [
-{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
+{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 fmly1_ = {
 contentText: fmly0,
@@ -3468,7 +3492,7 @@ quoted: mek, sendEphemeral: true
 delete family100[sender.split('@')[0]]
 fs.writeFileSync("./game/family100.json", JSON.stringify(family100))
 } else {
-menjawab(`Game ${command}${enter}${enter}@${sender.split("@")[0]}${salah_jwb}`)
+menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
 // SIAPAKAH
@@ -3480,7 +3504,8 @@ addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
 var saha0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var saha1 = [
-{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
+{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 saha1_ = {
 contentText: saha0,
@@ -3497,7 +3522,7 @@ quoted: mek, sendEphemeral: true
 delete siapakah[sender.split('@')[0]]
 fs.writeFileSync("./game/siapakah.json", JSON.stringify(siapakah))
 } else {
-menjawab(`Game ${command}${enter}${enter}@${sender.split("@")[0]}${salah_jwb}`)
+menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
 // TEBAKANIME
@@ -3509,7 +3534,8 @@ addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
 var anim0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var anim1 = [
-{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
+{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 anim1_ = {
 contentText: anim0,
@@ -3526,7 +3552,7 @@ quoted: mek, sendEphemeral: true
 delete tebakanime[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakanime.json", JSON.stringify(tebakanime))
 } else {
-menjawab(`Game ${command}${enter}${enter}@${sender.split("@")[0]}${salah_jwb}`)
+menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
 // TEBAKBENDERA
@@ -3538,7 +3564,8 @@ addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
 var htbr0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var htbr1 = [
-{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
+{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 htbr1_ = {
 contentText: htbr0,
@@ -3555,7 +3582,7 @@ quoted: mek, sendEphemeral: true
 delete tebakbendera[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakbendera.json", JSON.stringify(tebakbendera))
 } else {
-menjawab(`Game ${command}${enter}${enter}@${sender.split("@")[0]}${salah_jwb}`)
+menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
 // TEBAKKABUPATEN
@@ -3567,7 +3594,8 @@ addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
 var htbr0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var htbr1 = [
-{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
+{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 htbr1_ = {
 contentText: htbr0,
@@ -3584,7 +3612,7 @@ quoted: mek, sendEphemeral: true
 delete tebakkabupaten[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakkabupaten.json", JSON.stringify(tebakkabupaten))
 } else {
-menjawab(`Game ${command}${enter}${enter}@${sender.split("@")[0]}${salah_jwb}`)
+menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
 // RECAPTCHA
@@ -3596,7 +3624,8 @@ addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
 var capt0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var capt1 = [
-{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
+{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 capt1_ = {
 contentText: capt0,
@@ -3613,7 +3642,7 @@ quoted: mek, sendEphemeral: true
 delete recaptcha[sender.split('@')[0]]
 fs.writeFileSync("./game/recaptcha.json", JSON.stringify(recaptcha))
 } else {
-menjawab(`Game ${command}${enter}${enter}@${sender.split("@")[0]}${salah_jwb}`)
+menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
 // TEBAKAPLIKASI
@@ -3625,7 +3654,8 @@ addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
 var htbr0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var htbr1 = [
-{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
+{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 htbr1_ = {
 contentText: htbr0,
@@ -3642,7 +3672,7 @@ quoted: mek, sendEphemeral: true
 delete tebakaplikasi[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakaplikasi.json", JSON.stringify(tebakaplikasi))
 } else {
-menjawab(`Game ${command}${enter}${enter}@${sender.split("@")[0]}${salah_jwb}`)
+menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
 // TEBAKGABUT
@@ -3654,7 +3684,8 @@ addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
 var tgbt0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var tgbt1 = [
-{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
+{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 tgbt1_ = {
 contentText: tgbt0,
@@ -3671,7 +3702,7 @@ quoted: mek, sendEphemeral: true
 delete tebakgabut[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakgabut.json", JSON.stringify(tebakgabut))
 } else {
-menjawab(`Game ${command}${enter}${enter}@${sender.split("@")[0]}${salah_jwb}`)
+menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
 // TEBAKLAGU
@@ -3683,7 +3714,8 @@ addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
 var htbr0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var htbr1 = [
-{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
+{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 htbr1_ = {
 contentText: htbr0,
@@ -3700,7 +3732,7 @@ quoted: mek, sendEphemeral: true
 delete tebaklagu[sender.split('@')[0]]
 fs.writeFileSync("./game/tebaklagu.json", JSON.stringify(tebaklagu))
 } else {
-menjawab(`Game ${command}${enter}${enter}@${sender.split("@")[0]}${salah_jwb}`)
+menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
 // TEBAKLUCU
@@ -3712,7 +3744,8 @@ addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
 var htbr0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var htbr1 = [
-{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
+{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 htbr1_ = {
 contentText: htbr0,
@@ -3729,7 +3762,7 @@ quoted: mek, sendEphemeral: true
 delete tebaklucu[sender.split('@')[0]]
 fs.writeFileSync("./game/tebaklucu.json", JSON.stringify(tebaklucu))
 } else {
-menjawab(`Game ${command}${enter}${enter}@${sender.split("@")[0]}${salah_jwb}`)
+menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
 // TESWIBU
@@ -3741,7 +3774,8 @@ addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
 var htbr0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var htbr1 = [
-{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
+{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 htbr1_ = {
 contentText: htbr0,
@@ -3758,7 +3792,7 @@ quoted: mek, sendEphemeral: true
 delete teswibu[sender.split('@')[0]]
 fs.writeFileSync("./game/teswibu.json", JSON.stringify(teswibu))
 } else {
-menjawab(`Game ${command}${enter}${enter}@${sender.split("@")[0]}${salah_jwb}`)
+menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
 
@@ -3771,7 +3805,8 @@ addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
 var hwn0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var hwn1 = [
-{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
+{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 hwn1_ = {
 contentText: hwn0,
@@ -3788,7 +3823,7 @@ quoted: mek, sendEphemeral: true
 delete tebakhewan[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakhewan.json", JSON.stringify(tebakhewan))
 } else {
-menjawab(`Game ${command}${enter}${enter}@${sender.split("@")[0]}${salah_jwb}`)
+menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
 
@@ -3801,7 +3836,8 @@ addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
 var buah0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var buah1 = [
-{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1}
+{buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 buah1_ = {
 contentText: buah0,
@@ -3818,7 +3854,7 @@ quoted: mek, sendEphemeral: true
 delete tebakbuah[sender.split('@')[0]]
 fs.writeFileSync("./game/tebakbuah.json", JSON.stringify(tebakbuah))
 } else {
-menjawab(`Game ${command}${enter}${enter}@${sender.split("@")[0]}${salah_jwb}`)
+menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
 
@@ -15388,11 +15424,8 @@ break
 
 
 case 'readmore':
-if (args.length < 1) return reply2('Teks nya mana?')
-var kls = body.slice(9)
-var has = kls.split(" ")[0];
-var gas = kls.split(" ")[1];
-alpha.sendMessage(from, `${has}‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎${gas}`, text, { quoted: mek })
+if(!q) return reply2(`Teksnya?`)
+alpha.sendMessage(from, `${q}‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎`, text, { quoted: mek })
 break
 
 case 'ttp2': 
@@ -15930,16 +15963,24 @@ case 'hacked':
 if (!isGroup) return reply2(mess.only.group)
 if (!isGroupAdmins) return reply2('Only admin')
 if (!isBotGroupAdmins) return reply2('Kamu bukan admin')
-if (args.length < 1) return reply2('Teksnya?')
-reply2('Otw Hack')
-tessgc = await getBuffer(`https://i.ibb.co/m4Qx3JG/20210319-204838.jpg`)
-alpha.updateProfilePicture (from, tessgc)
+if (!q) return reply2('Teksnya?')
+alpha.updateProfilePicture (from, thumb_miku)
 await sleep(1000)
-alpha.groupUpdateSubject(from, `HACKED BY ${body.slice(8)}`)
+alpha.groupUpdateSubject(from, `Dikontoli oleh ${q}`)
 await sleep(1000)
-alpha.groupUpdateDescription(from, `_${pushname} telah meretas grup ini_`) 
+alpha.groupUpdateDescription(from, `${pushname} telah mengomtoli grup ini`) 
 await sleep(1000)
-alpha.sendMessage(from, 'Succes Hacked', text, {quoted: mek})
+alpha.sendMessage(from, `@${sender.split("@")[0]} Sukses mengomtoli grup ini`, text, {
+"contextInfo": {
+"forwardingScore": 999,isForwarded: true,
+"externalAdReply": {
+"title": `${ucapannya2}` ,
+"body": `${botname}`,
+"sourceUrl": apiku,
+"thumbnail": thumb_miku},
+"mentionedJid" : [sender]},
+quoted: mek, sendEphemeral: true
+})
 break
 
 case 'hack':
