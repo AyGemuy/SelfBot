@@ -616,7 +616,7 @@ let po = alpha.prepareMessageFromContent(from, {
 "buttonText": `SELECT HERE ${emoj}`,
 "footerText": `${botname}`,
 "listType": "SINGLE_SELECT",
-"sections": list}}, {quoted: mek})
+"sections": list}}, {"contextInfo": {"mentionedJid" : [sender]}, quoted: mek, sendEphemeral: true})
 return alpha.relayWAMessage(po, {waitForAck: true})
 }
 const sendButtDoc = (from, titel2) => {
@@ -12810,7 +12810,7 @@ anu = await getBuffer(`https://hardianto-chan.herokuapp.com/api/foliokiri?text=$
 alpha.sendMessage(from, anu, image, { quoted: mek, thumbnail: thumb_nulis})
 break
 
-case 'asupan':
+case 'asupan2':
 asu = await getBuffer(`https://hardianto-chan.herokuapp.com/api/asupan?apikey=hardianto`)
 alpha.sendMessage(from, asu, video, { quoted: mek})
 break
@@ -16799,6 +16799,17 @@ alpha.groupLeave(id)
 }
 break
 
+case 'leave':
+                    if (!mek.key.fromMe && !isOwner && !isCreator) return reply2(lang.onlyOwner())
+					setTimeout( () => {
+					alpha.groupLeave (from) 
+					}, 2000)
+					setTimeout( () => {
+					alpha.updatePresence(from, Presence.composing) 
+					reply2('OUT!')
+					}, 0)
+					break
+
 case 'mining':
 var minert = randomNomor(1000)
 addBalance(sender, minert, balance)
@@ -17411,53 +17422,47 @@ break
 
 	case 'dibc':
 	case 'bece':
-					alpha.updatePresence(from, Presence.composing)
-					if (!isOwner && !mek.key.fromMe) return reply2('Owner only')
-					if (args.length < 1) return reply2('Teksnya?')
-					anu = await alpha.chats.all()
-					if (isMedia && !mek.message.videoMessage || isQuotedImage) {
-						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
-						buff = await alpha.downloadMediaMessage(encmedia)
-						for (let _ of anu) {
-							alpha.sendMessage(_.jid, buff, image, { viewOnce:true, caption: `${body.slice(6)}`})
-						}
-						reply2(`Sukses mengirim Broadcast ${body.slice(6)}`)
-						} else if (isMedia && !mek.message.videoMessage || isQuotedVideo) {
-						const encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
-						buff = await alpha.downloadMediaMessage(encmedia)
-						for (let _ of anu) {
-							alpha.sendMessage(_.jid, buff, video, { viewOnce:true, caption: `${body.slice(6)}`})
-						}
-						reply2(`Sukses mengirim Broadcast ${body.slice(6)}`)
-						} else if (isMedia && !mek.message.videoMessage || isQuotedVideo) {
-						const encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
-						buff = await alpha.downloadMediaMessage(encmedia)
-						for (let _ of anu) {
-							alpha.sendMessage(_.jid, buff, video, { mimetype: Mimetype.gif, quoted: mek, contextInfo: { forwardingScore: 508, isForwarded: true}, caption: `${body.slice(6)}` })
-						}
-						reply2(`Sukses mengirim Broadcast ${body.slice(6)}`)
-					} else {
-						for (let _ of anu) {
-							//sendMess(_.jid, `${body.slice(6)}`)
-bc_1 = [
-{buttonId: `menu`, buttonText: {displayText: 'MENU📑'}, type: 1},
-{buttonId: `owner`, buttonText: {displayText: 'OWNER👤'}, type: 1}
-]
-const bc_2 = {
-    contentText: `${body.slice(6)}`,
-    footerText: '*_BROADCAST_*',
-    buttons: bc_1,
-    headerType: 1
+             if (!isOwner) return  reply2('Only owner')
+             if (!q) return reply2('Teks ?')
+             anu = await alpha.chats.all()
+             if (isMedia && !mek.message.videoMessage || isQuotedImage) {
+             const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
+             bc = await alpha.downloadMediaMessage(encmedia)
+             for (let _ of anu) {
+             alpha.sendMessage(_.jid, bc, image, {quoted:freply,caption: `*「 Broadcast 」*\n\n${q}`})
 }
-await alpha.sendMessage(_.jid, bc_2, MessageType.buttonsMessage, {quoted: mek})
-						}
-						reply2(`Sukses mengirim Broadcast:\n${body.slice(6)}`)
-					}
-					break
+             reply2('Suksess broadcast')
+             } else {
+             for (let _ of anu) {
+alpha.sendMessage(_.jid, 
+			{"contentText": `*「 Broadcast 」*\n${botname}\n*Isi Pesan :* ${q}`,
+			"footerText": '© Wudy',
+			"buttons": [
+			{"buttonId": `menu`,
+			"buttonText": {"displayText": "LIST MENU"
+			},"type": "RESPONSE"}
+			], "headerType": 1,
+			}, MessageType.buttonsMessage )
+}
+             reply2('Suksess broadcast')
+}
+             break
 
 case 'ohno':
 if(!q) return reply2(`${emoj} Hint : ${prefix + command} wudy`)
-sendStickerFromUrl(from, `https://api.lolhuman.xyz/api/creator/ohno?apikey=${lolkey}&text=${q}`, mek)
+let ohno_ = await getBuffer(from, `https://api.lolhuman.xyz/api/creator/ohno?apikey=${lolkey}&text=${q}`)
+alpha.sendMessage(from, ohno_, MessageType.image,{
+"contextInfo": {
+"forwardingScore": 999,isForwarded: true,
+"externalAdReply": {
+"title": `${ucapannya2}` ,
+"body": `${botname}`,
+"sourceUrl": apiku,
+"thumbnail": thumb_miku},
+"mentionedJid" : [sender]},
+caption: "Nih kack",
+quoted: mek, sendEphemeral: true
+})
 break
 
 case 'meme1':
