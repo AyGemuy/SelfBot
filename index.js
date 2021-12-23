@@ -17496,14 +17496,14 @@ await alpha.sendMessage(_.jid, bc_2, MessageType.buttonsMessage, {quoted: mek})
 
 case 'ohno':
 if(!q) return reply2(`${emoj} Hint : ${prefix + command} wudy`)
-sendStickerFromUrl(from, `${https://api.lolhuman.xyz/api/creator/ohno?apikey=${lolkey}&text=${q}`, mek)
+sendStickerFromUrl(from, `https://api.lolhuman.xyz/api/creator/ohno?apikey=${lolkey}&text=${q}`, mek)
 break
 
 case 'meme1':
 case 'meme4':
 case 'meme5':
 if(!q) return reply2(`${emoj} Hint : ${prefix + command} wudy`)
-sendStickerFromUrl(from, `${https://api.lolhuman.xyz/api/${command}?apikey=${lolkey}&text=${q}`, mek)
+sendStickerFromUrl(from, `https://api.lolhuman.xyz/api/${command}?apikey=${lolkey}&text=${q}`, mek)
 break
 
 case 'meme2':
@@ -17514,7 +17514,7 @@ case 'meme8':
 if(!q) return reply2(`${emoj} Hint : ${prefix + command} wudy|bot`)
 top = q.split('|')[0]
 bottom = q.split('|')[1]
-sendStickerFromUrl(from, `${https://api.lolhuman.xyz/api/${command}?apikey=${lolkey}&text1=${top}&text2=${bottom}`, mek)
+sendStickerFromUrl(from, `https://api.lolhuman.xyz/api/${command}?apikey=${lolkey}&text1=${top}&text2=${bottom}`, mek)
 break
 
 case 'meme':
@@ -17562,14 +17562,14 @@ if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) &
 var yug_ = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek 
 var yug1_ = await alpha.downloadAndSaveMediaMessage(yug_, `./media/${sender}.png`)
 let yug2_ = await imgbb(`${img_key}`, yug1_)
-sendStickerFromUrl(from, `${https://api.lolhuman.xyz/api/yugioh?apikey=${lolkey}&img=${yug2_.display_url}&title=${t1}&desc=${t2}&atk=${t3}&def=${t4}`, mek)
+sendStickerFromUrl(from, `https://api.lolhuman.xyz/api/yugioh?apikey=${lolkey}&img=${yug2_.display_url}&title=${t1}&desc=${t2}&atk=${t3}&def=${t4}`, mek)
 } else {
 ghost = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
 let yug3_ = await alpha.getProfilePicture(ghost).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
 let yug5_ = await imageToBase64(JSON.stringify(yug3_).replace(/\"/gi, ''))
 fs.writeFileSync('janckuk.jpeg', yug5_, 'base64')
 let yug6_ = await imgbb(`${img_key}`, 'janckuk.jpeg')
-sendStickerFromUrl(from, `${https://api.lolhuman.xyz/api/yugioh?apikey=${lolkey}&img=${yug6_.display_url}&title=${t1}&desc=${t2}&atk=${t3}&def=${t4}`, mek)
+sendStickerFromUrl(from, `https://api.lolhuman.xyz/api/yugioh?apikey=${lolkey}&img=${yug6_.display_url}&title=${t1}&desc=${t2}&atk=${t3}&def=${t4}`, mek)
 }
 break
 
