@@ -3876,7 +3876,7 @@ addBalance(sender, koin, balance)
 var emo0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
 var emo1 = [
 {buttonId: 'list_game', buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `tebakemoji`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+{buttonId: `cariemoji`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 emo1_ = {
 contentText: emo0,
@@ -4578,9 +4578,9 @@ break
 case 'owner':
 case 'creator': 
 console.log(color('[ CMD ]', 'aqua'), 'Ownerbot', color(pushname))
-taqq = alpha.sendMessage(from, {
+let taqq = alpha.sendMessage(from, {
 "displayName": "Wudy owner",
-"vcard": "BEGIN:VCARD\nVERSION:3.0\nN:;Wudy owner;;;\nFN:Wudy owner\nORG:Wudy owner\nTITLE:\nitem1.TEL;waid=6282195322106:+62 821-9532-2106\nitem1.X-ABLabel:Wudy owner\nX-WA-BIZ-DESCRIPTION:Semua bisa dimulai dengan mengetik #menu\nX-WA-BIZ-NAME:Wudy owner\nEND:VCARD"
+"vcard": "BEGIN:VCARD\nVERSION:3.0\nN:;Wudy owner;;;\nFN:Wudy owner\nORG:Wudy owner\nTITLE:\nitem1.TEL;waid=6282195322106:+62 821-9532-2106\nitem1.X-ABLabel:Wudy owner\nX-WA-BIZ-DESCRIPTION:Nih owner ku kack yg mengaktifkan aq.\nX-WA-BIZ-NAME:Wudy owner\nEND:VCARD"
 }, 'contactMessage', { quoted: mek})
 var ongner =`Tuh owner ku kack @${sender.split("@")[0]} 😐`
 var ongner2 = [
@@ -16432,8 +16432,8 @@ case 'permainan':
 mo = await fetchJson(`https://x-restapi.herokuapp.com/api/random-motivasi?apikey=BETA`)
 motiv = mo.motivasi
 list = []
-listmenu = [`asahotak`,`caklontong`,`caklontong2`,`caklontong3`,`family100`,`math`,`math2`,`recaptcha`,`sambungkata`,`siapaaku`,`siapakahaku`,`susunkata`,`susunkata2`,`tebakan`,`tebakan2`,`tebakanime`,`tebakbendera`,`tebakgambar`,`tebakgambar2`,`tebakgambar3`,`tebakgambar4`,`tebakgambar5`,`tebakjenaka`,`tebakkalimat`,`tebakkata`,`tebakkata2`,`tebakkimia`,`tebaklirik`,`tebakaplikasi`,`tebakgabut`,`tebakkabupaten`,`tebaklucu`,`tebaklagu`,`teswibu`,`tebakhewan`,`tebakbuah`,`tebakemoji`]
-listmenuu = [`${emoj} Asah otak`,`${emoj} Cak lontong`,`${emoj} Cak lontong2`,`${emoj} Cak lontong3`,`${emoj} Family 100`,`${emoj} Math`,`${emoj} Math 2`,`${emoj} Recaptcha`,`${emoj} Sambung kata`,`${emoj} Siapa aku`,`${emoj} Siapakah aku`,`${emoj} Susun kata`,`${emoj} Susun kata2`,`${emoj} Tebakan`,`${emoj} Tebakan2`,`${emoj} Tebak anime`,`${emoj} Tebak bendera`,`${emoj} Tebak gambar`,`${emoj} Tebak gambar2`,`${emoj} Tebak gambar3`,`${emoj} Tebak gambar4`,`${emoj} Tebak gambar5`,`${emoj} Tebak jenaka`,`${emoj} Tebak kalimat`,`${emoj} Tebak kata`,`${emoj} Tebak kata2`,`${emoj} Tebak kimia`,`${emoj} Tebak lirik`,`${emoj} Tebak aplikasi`,`${emoj} Tebak gabut`,`${emoj} Tebak kabupaten`,`${emoj} Tebak lucu`,`${emoj} Tebak lagu`,`${emoj} Tes wibu`,`${emoj} Tebak hewan`,`${emoj} Tebak buah`,`${emoj} Tebak emoji`]
+listmenu = [`asahotak`,`caklontong`,`caklontong2`,`caklontong3`,`family100`,`math`,`math2`,`recaptcha`,`sambungkata`,`siapaaku`,`siapakahaku`,`susunkata`,`susunkata2`,`tebakan`,`tebakan2`,`tebakanime`,`tebakbendera`,`tebakgambar`,`tebakgambar2`,`tebakgambar3`,`tebakgambar4`,`tebakgambar5`,`tebakjenaka`,`tebakkalimat`,`tebakkata`,`tebakkata2`,`tebakkimia`,`tebaklirik`,`tebakaplikasi`,`tebakgabut`,`tebakkabupaten`,`tebaklucu`,`tebaklagu`,`teswibu`,`tebakhewan`,`tebakbuah`,`cariemoji`]
+listmenuu = [`${emoj} Asah otak`,`${emoj} Cak lontong`,`${emoj} Cak lontong2`,`${emoj} Cak lontong3`,`${emoj} Family 100`,`${emoj} Math`,`${emoj} Math 2`,`${emoj} Recaptcha`,`${emoj} Sambung kata`,`${emoj} Siapa aku`,`${emoj} Siapakah aku`,`${emoj} Susun kata`,`${emoj} Susun kata2`,`${emoj} Tebakan`,`${emoj} Tebakan2`,`${emoj} Tebak anime`,`${emoj} Tebak bendera`,`${emoj} Tebak gambar`,`${emoj} Tebak gambar2`,`${emoj} Tebak gambar3`,`${emoj} Tebak gambar4`,`${emoj} Tebak gambar5`,`${emoj} Tebak jenaka`,`${emoj} Tebak kalimat`,`${emoj} Tebak kata`,`${emoj} Tebak kata2`,`${emoj} Tebak kimia`,`${emoj} Tebak lirik`,`${emoj} Tebak aplikasi`,`${emoj} Tebak gabut`,`${emoj} Tebak kabupaten`,`${emoj} Tebak lucu`,`${emoj} Tebak lagu`,`${emoj} Tes wibu`,`${emoj} Tebak hewan`,`${emoj} Tebak buah`,`${emoj} Cari emoji`]
 nombor = 1
 nombor2 = 0
 for (let x of listmenu) {
@@ -16864,7 +16864,7 @@ fs.writeFileSync("./game/tebakbuah.json", JSON.stringify(tebakbuah))
 }
 break
 
-case 'tebakemoji':
+case 'cariemoji':
 if (cariemoj.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
 jwb_emoj = `${emoj3}`
 cariemoj[sender.split('@')[0]] = jwb_emoj.toLowerCase()
@@ -17904,7 +17904,7 @@ ${emoj} ${prefix}tebaklagu
 ${emoj} ${prefix}teswibu
 ${emoj} ${prefix}tebakhewan
 ${emoj} ${prefix}tebakbuah
-${emoj} ${prefix}tebakemoji
+${emoj} ${prefix}cariemoji
 
 *SELAMAT BERMAIN*`
 
@@ -18666,9 +18666,9 @@ fs.unlinkSync("./media/" + from + ".json");
 
 if (budy.includes("Ownerbot",'ownerbot')){
 console.log(color('[ CMD ]', 'aqua'), 'Ownerbot', color(pushname))
-taqq = alpha.sendMessage(from, {
+let taqo = alpha.sendMessage(from, {
 "displayName": "Wudy owner",
-"vcard": "BEGIN:VCARD\nVERSION:3.0\nN:;Wudy owner;;;\nFN:Wudy owner\nORG:Wudy owner\nTITLE:\nitem1.TEL;waid=6282195322106:+62 821-9532-2106\nitem1.X-ABLabel:Wudy owner\nX-WA-BIZ-DESCRIPTION:Semua bisa dimulai dengan mengetik #menu\nX-WA-BIZ-NAME:Wudy owner\nEND:VCARD"
+"vcard": "BEGIN:VCARD\nVERSION:3.0\nN:;Wudy owner;;;\nFN:Wudy owner\nORG:Wudy owner\nTITLE:\nitem1.TEL;waid=6282195322106:+62 821-9532-2106\nitem1.X-ABLabel:Wudy owner\nX-WA-BIZ-DESCRIPTION:Nih owner ku kack yg mengaktifkan aq.\nX-WA-BIZ-NAME:Wudy owner\nEND:VCARD"
 }, 'contactMessage', { quoted: mek})
 varownku =`Tuh owner ku kack @${sender.split("@")[0]} 😐`
 varownku2 = [
@@ -18682,7 +18682,7 @@ headerType: 1
 }
 alpha.sendMessage(from, buttonMessagee, MessageType.buttonsMessage,{
 "contextInfo": {
-"mentionedJid" : [sender]}, sendEphemeral: true, quoted: taqq
+"mentionedJid" : [sender]}, sendEphemeral: true, quoted: taqo
 })
 }
 
@@ -18714,9 +18714,9 @@ fakeitem(teks)
 
 if (subscribezeeoneofc == "ownerku"){
 console.log(color('[ CMD ]', 'aqua'), 'Ownerbot', color(pushname))
-taqq = alpha.sendMessage(from, {
+let taqi = alpha.sendMessage(from, {
 "displayName": "Wudy owner",
-"vcard": "BEGIN:VCARD\nVERSION:3.0\nN:;Wudy owner;;;\nFN:Wudy owner\nORG:Wudy owner\nTITLE:\nitem1.TEL;waid=6282195322106:+62 821-9532-2106\nitem1.X-ABLabel:Wudy owner\nX-WA-BIZ-DESCRIPTION:Semua bisa dimulai dengan mengetik #menu\nX-WA-BIZ-NAME:Wudy owner\nEND:VCARD"
+"vcard": "BEGIN:VCARD\nVERSION:3.0\nN:;Wudy owner;;;\nFN:Wudy owner\nORG:Wudy owner\nTITLE:\nitem1.TEL;waid=6282195322106:+62 821-9532-2106\nitem1.X-ABLabel:Wudy owner\nX-WA-BIZ-DESCRIPTION:Nih owner ku kack yg mengaktifkan aq.\nX-WA-BIZ-NAME:Wudy owner\nEND:VCARD"
 }, 'contactMessage', { quoted: mek})
 var nerku =`Tuh owner ku kack @${sender.split("@")[0]} 😐`
 var nerku2 = [
@@ -18730,7 +18730,7 @@ headerType: 1
 }
 alpha.sendMessage(from, buttonMessagee, MessageType.buttonsMessage,{
 "contextInfo": {
-"mentionedJid" : [sender]}, sendEphemeral: true, quoted: taqq
+"mentionedJid" : [sender]}, sendEphemeral: true, quoted: taqi
 })
 }
 
