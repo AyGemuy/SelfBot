@@ -1,33 +1,21 @@
-FROM nikolaik/python-nodejs:latest
+FROM node:16.10.0-buster
 
 RUN apt-get update && \
   apt-get install -y \
   neofetch \
   chromium \
   ffmpeg \
-  webp \
   wget \
-  mc \
-  imagemagick && \
+  imagemagick \
+  graphicsmagick \
+  webp \
+  mc && \
   rm -rf /var/lib/apt/lists/*
 
 COPY package.json .
-RUN npm install 
-#RUN npm install @adiwajshing/baileys@3.5.2 
-#RUN npm audit fix
-#RUN npm install -g npm-check-updates
-#RUN ncu --upgrade
-#RUN npm install libwebp
-
-RUN mkdir /SelfBot
-WORKDIR /SelfBot
-COPY . /SelfBot
-RUN python3 -m pip install -r /SelfBot/requirements.txt
-ENV TZ=Asia/Jakarta
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-
-RUN ls
-
-EXPOSE 5000
-
-CMD ["npm", "start"]
+RUN npm install -g npm@8.3.0
+RUN npm install -g pm2
+RUN npm update
+COPY . .
+RUN pm2 save
+CMD ["pm2-runtime", "zeeone.js"]`
