@@ -335,7 +335,7 @@ lk = ["cc96c7fb66cae76c359e3641","78bd89cd7b4d6205e3e18061","4f1cc7a2294ebce0a7b
 let lolkey = lk[Math.floor(Math.random() * lk.length)]
 dp = ["AyGemuy24","ls7II19RQIYv1aS","kYR0hlaVZZPvv8B"]
 let dapuhy = dp[Math.floor(Math.random() * dp.length)]
-YuzApi = 'Yuzzu'
+
 zeksApikey = 'AyGemuy24'
 ApiZeks = 'https://api.zeks.me'
 thumbnail = setting.thumb
@@ -13677,53 +13677,16 @@ alpha.sendMessage(from, ini_txt3, audio, { mimetype: 'audio/mp4', quoted: mek, p
 break
 
 //LIST───────[ API YUZZU
-case 'mik':
-ku = await fetchJson(`https://yuzzu-api.herokuapp.com/api/simi?text=${q}`)
+case 'simi':
+ku = await fetchJson(`https://yuzzu-api.herokuapp.comapi/api/simi?text=${q}`)
 mik = ku.result
 reply2(ku.result)
 break
 
-case 'simi':
+case 'mik':
 if (!q) return reply2(`*Example :*\n${prefix + command} hello`)
 let link_si = await fetchJson(`https://api.simsimi.net/v2/?text=${q}&lc=id`)
 alpha.sendMessage(from,`*Simi bilek* : ${link_si.success}`, text, {quoted:mek})
-break
-
-case 'asupan2':
-anu = await fetchJson(`https://api-yuzzu.herokuapp.com/api/asupan?apikey=${YuzApi}`)
-ano = await getBuffer(anu.result.result)
-alpha.sendMessage(from, ano, video, { quoted: mek})
-break
-
-case 'asupant3':
-anu = await fetchJson(`https://api-yuzzu.herokuapp.com/api/asupan/tiktok?apikey=${YuzApi}`)
-ano = await getBuffer(anu.result.url)
-alpha.sendMessage(from, ano, video, { quoted: mek})
-break
-
-case 'hijaber': case 'santuy':
-case 'ukty': case 'bocil': case 'ghea':
-anu = await fetchJson(`https://api-yuzzu.herokuapp.com/api/asupan/${command}?apikey=${YuzApi}`)
-ano = await getBuffer(anu.result.url)
-alpha.sendMessage(from, ano, image, { quoted: mek, thumbnail: thumb_miku})
-break
-
-case 'meme':
-anu = await fetchJson(`https://api-yuzzu.herokuapp.com/api/darkjokes?apikey=${YuzApi}`)
-buff = await getBuffer(anu.result.result)
-gbutsan = [{buttonId:`meme`,buttonText:{displayText: 'Try Again ♻️'},type:1}]
-mhan = await alpha.prepareMessage(from, buff, image, {thumbnail: buff})
-const buttonMessagessss = {
-imageMessage: mhan.message.imageMessage,
-contentText: `Ngedark Bos`,
-footerText: '*_©Wudy Bot_*',
-buttons: gbutsan,
-headerType: 4
-}
-alpha.sendMessage(from, buttonMessagessss, MessageType.buttonsMessage, {
-thumbnail: thumb_miku,
-caption: 'Tes',
-quoted: mek})
 break
 
 //LIST───────[ API X REST
@@ -17695,6 +17658,53 @@ alpha.sendMessage(from, miss_7, MessageType.buttonsMessage,{
 quoted: mek, sendEphemeral: true
 })
 break
+
+case 'brightness':
+case 'captcha':
+case 'circle':
+case 'continued':
+case 'discordblack':
+case 'discordblue':
+case 'enhance':
+case 'gay2':
+case 'gay':
+case 'glass':
+case 'greyscale':
+case 'hitler':
+case 'invert':
+case 'komunis':
+case 'penjara':
+case 'petimati':
+case 'police':
+case 'putin':
+case 'sepia':
+case 'triger':
+case 'wasted':
+console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
+var imgbb = require('imgbb-uploader')
+if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) && args.length > 0) {
+var bioij = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek 
+var delib = await alpha.downloadAndSaveMediaMessage(bioij, `./media/${sender}.png`)
+let datau = await imgbb(`${img_key}`, delib)
+anuk = `https://janbot-api.herokuapp.com/api/imgedit/${command}?url=${datau.display_url}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+} else {
+ghost = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
+let oppp = await alpha.getProfilePicture(ghost).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
+let medianya = await getBuffer(oppp)
+let datae = await imageToBase64(JSON.stringify(oppp).replace(/\"/gi, ''))
+fs.writeFileSync('janckuk.jpeg', datae, 'base64')
+let odata = await imgbb(`${img_key}`, 'janckuk.jpeg')
+anuk = `https://janbot-api.herokuapp.com/api/imgedit/${command}?url=${odata.display_url}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+}
+break
+
+
 
 //Ends
 default:
