@@ -17161,8 +17161,6 @@ alpha.sendMessage(from, gambar, image, { quoted: mek, caption: "Nih kack" })
 })
 break
 
-
-
 case 'customgfx1':
 if(!q) return reply2(`${emoj} Hint : ${prefix + command} Wudy Bot`) 
 console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
@@ -17299,8 +17297,6 @@ console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
 }
 break
-
-
 
 case 'nagasepi':
 case 'sepi':
@@ -17503,7 +17499,35 @@ case 'meme1':
 case 'meme4':
 case 'meme5':
 if(!q) return reply2(`${emoj} Hint : ${prefix + command} wudy`)
-sendStickerFromUrl(from, `https://api.lolhuman.xyz/api/${command}?apikey=${lolkey}&text=${q}`, mek)
+
+let meme_1 = await getBuffer(`https://api.lolhuman.xyz/api/${command}?apikey=${lolkey}&text=${q}`);
+const meme_3 = await alpha.prepareMessage(from, meme_1, MessageType.image, { thumbnail:thumb_pro})
+let meme_2 = meme_3.message["ephemeralMessage"] ? meme_3.message.ephemeralMessage : meme_3
+meme_5 =` *@${sender.split("@")[0]}* Dah selesai ${emoj}`
+const meme_6 = [
+{buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
+{buttonId: 'x_menu', buttonText: {displayText: '🌱 List menu'}, type: 1},
+{buttonId: 'menu_x', buttonText: {displayText: '🍵 Lol menu'}, type: 1}
+]
+const meme_7 = {
+contentText: meme_5 ,
+footerText: `${footerr}${enter}${tampilWaktu}`,
+buttons: meme_6,
+headerType: 4,
+imageMessage: meme_2.message.imageMessage
+}
+alpha.sendMessage(from, meme_7, MessageType.buttonsMessage,{
+"contextInfo": {
+"forwardingScore": 999,isForwarded: true,
+"externalAdReply": {
+"title": `${ucapannya2}` ,
+"body": `${botname}`,
+"sourceUrl": apiku,
+"thumbnail": thumb_miku},
+"mentionedJid" : [sender]},
+quoted: mek, sendEphemeral: true
+})
+break
 break
 
 case 'meme2':
@@ -17514,7 +17538,34 @@ case 'meme8':
 if(!q) return reply2(`${emoj} Hint : ${prefix + command} wudy|bot`)
 top = q.split('|')[0]
 bottom = q.split('|')[1]
-sendStickerFromUrl(from, `https://api.lolhuman.xyz/api/${command}?apikey=${lolkey}&text1=${top}&text2=${bottom}`, mek)
+
+let meme2_1 = await getBuffer(`https://api.lolhuman.xyz/api/${command}?apikey=${lolkey}&text1=${top}&text2=${bottom}`);
+const meme2_3 = await alpha.prepareMessage(from, meme2_1, MessageType.image, { thumbnail:thumb_pro})
+let meme2_2 = meme2_3.message["ephemeralMessage"] ? meme2_3.message.ephemeralMessage : meme2_3
+meme2_5 =` *@${sender.split("@")[0]}* Dah selesai ${emoj}`
+const meme2_6 = [
+{buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
+{buttonId: 'x_menu', buttonText: {displayText: '🌱 List menu'}, type: 1},
+{buttonId: 'menu_x', buttonText: {displayText: '🍵 Lol menu'}, type: 1}
+]
+const meme2_7 = {
+contentText: meme2_5 ,
+footerText: `${footerr}${enter}${tampilWaktu}`,
+buttons: meme2_6,
+headerType: 4,
+imageMessage: meme2_2.message.imageMessage
+}
+alpha.sendMessage(from, meme2_7, MessageType.buttonsMessage,{
+"contextInfo": {
+"forwardingScore": 999,isForwarded: true,
+"externalAdReply": {
+"title": `${ucapannya2}` ,
+"body": `${botname}`,
+"sourceUrl": apiku,
+"thumbnail": thumb_miku},
+"mentionedJid" : [sender]},
+quoted: mek, sendEphemeral: true
+})
 break
 
 case 'meme':
