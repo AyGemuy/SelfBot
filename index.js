@@ -335,18 +335,41 @@ lk = ["cc96c7fb66cae76c359e3641","78bd89cd7b4d6205e3e18061","4f1cc7a2294ebce0a7b
 let lolkey = lk[Math.floor(Math.random() * lk.length)]
 dp = ["AyGemuy24","ls7II19RQIYv1aS","kYR0hlaVZZPvv8B"]
 let dapuhy = dp[Math.floor(Math.random() * dp.length)]
-
-zeksApikey = 'AyGemuy24'
+zk = ["aygemuy24","aygemuy242"]
+let zeksApikey = zk[Math.floor(Math.random() * zk.length)]
 ApiZeks = 'https://api.zeks.me'
-thumbnail = setting.thumb
-pp_bot = fs.readFileSync(`image/${thumbnail}`)
-fthumb = setting.fakethumb
-hit_today = []
-blocked = []
-ban = []
-limitawal = "50"
-gcounttprem = "55" 
-gcounttuser = "100" 
+
+// THUMBNAIL
+let thumbnail = setting.thumb
+let pp_bot = fs.readFileSync(`image/${thumbnail}`)
+let fthumb = setting.fakethumb
+let thumb_nulis = fs.readFileSync(`image/nulis.jpg`)
+let thumb_ktp = fs.readFileSync(`image/ktp.jpg`)
+let thumb_dark = fs.readFileSync(`image/dark.jpg`)
+let thumb_tes = fs.readFileSync(`image/tes.jpg`)
+let thumb_bc = fs.readFileSync(`image/bc.jpg`)
+let thumb_ig = fs.readFileSync(`image/ig.jpg`)
+let thumb_fb = fs.readFileSync(`image/fb.jpg`)
+let thumb_tw = fs.readFileSync(`image/tw.jpg`)
+let thumb_mod = fs.readFileSync(`image/mod.jpg`)
+let thumb_sam = fs.readFileSync(`image/sam.jpg`)
+let thumb_cap = fs.readFileSync(`image/cap.jpg`)
+let thumb_flag = fs.readFileSync(`image/flag.jpg`)
+let thumb_img = fs.readFileSync(`image/img.jpg`)
+let thumb_anim = fs.readFileSync(`image/anim.jpg`)
+let thumb_kim = fs.readFileSync(`image/kim.jpg`)
+let thumb_miku = fs.readFileSync(`image/miku.jpg`)
+let thumb_oxy = fs.readFileSync(`image/oxy.jpg`)
+let thumb_pro = fs.readFileSync(`image/pro.jpg`)
+let thumb_epho = fs.readFileSync(`image/epho.jpg`)
+let thumb_pfun = fs.readFileSync(`image/pfun.jpg`)
+let thumb_nime = fs.readFileSync(`image/nime.jpg`)
+let thumb_pin = fs.readFileSync(`image/pin.jpg`)
+let thumb_ajg = fs.readFileSync(`image/ajg.jpg`)
+let thumb_coupl = fs.readFileSync(`image/coupl.jpg`)
+let thumb_404 = fs.readFileSync(`image/404.jpg`)
+let thumb_ind = fs.readFileSync(`image/ind.jpg`)
+
 
 // RANDOM
 e = [`🌹`,`🥀`,`🌷`,`🏵️`,`🌻`,`🌼`,`💮`,`🍂`,`🍁`,`🌾`,`🌱`,`🌿`,`🍃`,`☘️`,`🌵`,`🌴`,`🌳`,`🌲`,`🏞️`,`⛰️`,`🌊`,`🌬️`,`🌀`,`❄️`,`☃️`,`🏔️`,`🌋`,`🏜️`,`🏖️`,`🌅`,`☀️`]
@@ -355,8 +378,6 @@ e2 = [`⋆`,`𖧹`,`⌯`,`〆`]
 let emoj2 = e2[Math.floor(Math.random() * e2.length)]
 e3 = [`😄`,`😃`,`😀`,`😊`,`☺`,`😉`,`😍`,`😘`,`😚`,`😗`,`😙`,`😜`,`😝`,`😛`,`😳`,`😁`,`😔`,`😌`,`😒`,`😞`,`😣`,`😢`,`😂`,`😭`,`😪`,`😥`,`😰`,`😅`,`😓`,`😩`,`😫`,`😨`,`😱`,`😠`,`😡`,`😤`,`😖`,`😆`,`😋`,`😷`,`😎`,`😴`,`😵`,`😲`,`😟`,`😦`,`😧`,`😈`,`👿`,`😮`,`😬`,`😐`,`😕`,`😯`,`😶`,`😇`,`😏`,`😑`,`👲`,`👳`,`👮`,`👷`,`💂`,`👶`,`👦`,`👧`,`👨`,`👩`,`👴`,`👵`,`👱`,`👼`,`👸`,`😺`,`😸`,`😻`,`😽`,`😼`,`🙀`,`😿`,`😹`,`😾`,`👹`,`👺`,`🙈`,`🙉`,`🙊`,`💀`,`👽`,`💩`,`🔥`,`✨`,`🌟`,`💫`,`💥`,`💢`,`💦`,`💧`,`💤`,`💨`,`👂`,`👀`,`👃`,`👅`,`👄`,`👍`,`👎`,`👌`,`👊`,`✊`,`✌`,`👋`,`✋`,`👐`,`👆`,`👇`,`👉`,`👈`,`🙌`,`🙏`,`☝`,`👏`,`💪`,`🚶`,`🏃`,`💃`,`👫`,`👪`,`👬`,`👭`,`💏`,`💑`,`👯`,`🙆`,`🙅`,`💁`,`🙋`,`💆`,`💇`,`💅`,`👰`,`🙎`,`🙍`,`🙇`,`🎩`,`👑`,`👒`,`👟`,`👞`,`👡`,`👠`,`👢`,`👕`,`👔`,`👚`,`👗`,`🎽`,`👖`,`👘`,`👙`,`💼`,`👜`,`👝`,`👛`,`👓`,`🎀`,`🌂`,`💄`,`💛`,`💙`,`💜`,`💚`,`❤`,`💔`,`💗`,`💓`,`💕`,`💖`,`💞`,`💘`,`💌`,`💋`,`💍`,`💎`,`👤`,`👥`,`💬`,`👣`,`💭`,`🐶`,`🐺`,`🐱`,`🐭`,`🐹`,`🐰`,`🐸`,`🐯`,`🐨`,`🐻`,`🐷`,`🐽`,`🐮`,`🐗`,`🐵`,`🐒`,`🐴`,`🐑`,`🐘`,`🐼`,`🐧`,`🐦`,`🐤`,`🐥`,`🐣`,`🐔`,`🐍`,`🐢`,`🐛`,`🐝`,`🐜`,`🐞`,`🐌`,`🐙`,`🐚`,`🐠`,`🐟`,`🐬`,`🐳`,`🐋`,`🐄`,`🐏`,`🐀`,`🐃`,`🐅`,`🐇`,`🐉`,`🐎`,`🐐`,`🐓`,`🐕`,`🐖`,`🐁`,`🐂`,`🐲`,`🐡`,`🐊`,`🐫`,`🐪`,`🐆`,`🐈`,`🐩`,`🐾`,`💐`,`🌸`,`🌷`,`🍀`,`🌹`,`🌻`,`🌺`,`🍁`,`🍃`,`🍂`,`🌿`,`🌾`,`🍄`,`🌵`,`🌴`,`🌲`,`🌳`,`🌰`,`🌱`,`🌼`,`🌐`,`🌞`,`🌝`,`🌚`,`🌑`,`🌒`,`🌓`,`🌔`,`🌕`,`🌖`,`🌗`,`🌘`,`🌜`,`🌛`,`🌙`,`🌍`,`🌎`,`🌏`,`🌋`,`🌌`,`🌠`,`⭐`,`☀`,`⛅`,`☁`,`⚡`,`☔`,`❄`,`⛄`,`🌀`,`🌁`,`🌈`,`🌊`,`🎍`,`💝`,`🎎`,`🎒`,`🎓`,`🎏`,`🎆`,`🎇`,`🎐`,`🎑`,`🎃`,`👻`,`🎅`,`🎄`,`🎁`,`🎋`,`🎉`,`🎊`,`🎈`,`🎌`,`🔮`,`🎥`,`📷`,`📹`,`📼`,`💿`,`📀`,`💽`,`💾`,`💻`,`📱`,`☎`,`📞`,`📟`,`📠`,`📡`,`📺`,`📻`,`🔊`,`🔉`,`🔈`,`🔇`,`🔔`,`🔕`,`📢`,`📣`,`⏳`,`⌛`,`⏰`,`⌚`,`🔓`,`🔒`,`🔏`,`🔐`,`🔑`,`🔎`,`💡`,`🔦`,`🔆`,`🔅`,`🔌`,`🔋`,`🔍`,`🛁`,`🛀`,`🚿`,`🚽`,`🔧`,`🔩`,`🔨`,`🚪`,`🚬`,`💣`,`🔫`,`🔪`,`💊`,`💉`,`💰`,`💴`,`💵`,`💷`,`💶`,`💳`,`💸`,`📲`,`📧`,`📥`,`📤`,`✉`,`📩`,`📨`,`📯`,`📫`,`??`,`📬`,`📭`,`📮`,`📦`,`📝`,`📄`,`📃`,`📑`,`📊`,`📈`,`📉`,`📜`,`📋`,`📅`,`📆`,`📇`,`📁`,`📂`,`✂`,`📌`,`📎`,`✒`,`✏`,`📏`,`📐`,`📕`,`📗`,`📘`,`📙`,`📓`,`📔`,`📒`,`📚`,`📖`,`🔖`,`📛`,`🔬`,`🔭`,`📰`,`🎨`,`🎬`,`🎤`,`🎧`,`🎼`,`🎵`,`🎶`,`🎹`,`🎻`,`🎺`,`🎷`,`🎸`,`👾`,`🎮`,`🃏`,`🎴`,`🀄`,`🎲`,`🎯`,`🏈`,`🏀`,`⚽`,`⚾`,`🎾`,`🎱`,`🏉`,`🎳`,`⛳`,`🚵`,`🚴`,`🏁`,`🏇`,`🏆`,`🎿`,`🏂`,`🏊`,`🏄`,`🎣`,`☕`,`🍵`,`🍶`,`🍼`,`🍺`,`🍻`,`🍸`,`🍹`,`🍷`,`🍴`,`🍕`,`🍔`,`🍟`,`🍗`,`🍖`,`🍝`,`🍛`,`🍤`,`🍱`,`🍣`,`🍥`,`🍙`,`🍘`,`🍚`,`🍜`,`🍲`,`🍢`,`🍡`,`🍳`,`🍞`,`🍩`,`🍮`,`🍦`,`🍨`,`🍧`,`🎂`,`🍰`,`🍪`,`🍫`,`🍬`,`🍭`,`🍯`,`🍎`,`🍏`,`🍊`,`🍋`,`🍒`,`🍇`,`🍉`,`🍓`,`🍑`,`🍈`,`🍌`,`🍐`,`🍍`,`🍠`,`🍆`,`🍅`,`🌽`,`🏠`,`🏡`,`🏫`,`🏢`,`🏣`,`🏥`,`🏦`,`🏪`,`🏩`,`🏨`,`💒`,`⛪`,`🏬`,`🏤`,`🌇`,`🌆`,`🏯`,`🏰`,`⛺`,`🏭`,`🗼`,`🗾`,`🗻`,`🌄`,`🌅`,`🌃`,`🗽`,`🌉`,`🎠`,`🎡`,`⛲`,`🎢`,`🚢`,`⛵`,`🚤`,`🚣`,`⚓`,`🚀`,`✈`,`💺`,`🚁`,`🚂`,`🚊`,`🚉`,`🚞`,`🚆`,`🚄`,`🚅`,`🚈`,`🚇`,`🚝`,`🚋`,`🚃`,`🚎`,`🚌`,`🚍`,`🚙`,`🚘`,`🚗`,`🚕`,`🚖`,`🚛`,`🚚`,`🚨`,`🚓`,`🚔`,`🚒`,`🚑`,`🚐`,`🚲`,`🚡`,`🚟`,`🚠`,`🚜`,`💈`,`🚏`,`🎫`,`🚦`,`🚥`,`⚠`,`🚧`,`🔰`,`⛽`,`🏮`,`🎰`,`♨`,`🗿`,`🎪`,`🎭`,`📍`,`🚩`,`⬆`,`⬇`,`⬅`,`➡`,`🔠`,`🔡`,`🔤`,`↗`,`↖`,`↘`,`↙`,`↔`,`↕`,`🔄`,`◀`,`▶`,`🔼`,`🔽`,`↩`,`↪`,`ℹ`,`⏪`,`⏩`,`⏫`,`⏬`,`⤵`,`⤴`,`🆗`,`🔀`,`🔁`,`🔂`,`🆕`,`🆙`,`🆒`,`🆓`,`🆖`,`📶`,`🎦`,`🈁`,`🈯`,`🈳`,`🈵`,`🈴`,`🈲`,`🉐`,`🈹`,`🈺`,`🈶`,`🈚`,`🚻`,`🚹`,`🚺`,`🚼`,`🚾`,`🚰`,`🚮`,`🅿`,`♿`,`🚭`,`🈷`,`🈸`,`🈂`,`Ⓜ`,`🛂`,`🛄`,`🛅`,`🛃`,`🉑`,`㊙`,`㊗`,`🆑`,`🆘`,`🆔`,`🚫`,`🔞`,`📵`,`🚯`,`🚱`,`🚳`,`🚷`,`🚸`,`⛔`,`✳`,`❇`,`❎`,`✅`,`✴`,`💟`,`🆚`,`📳`,`📴`,`🅰`,`🅱`,`🆎`,`🅾`,`💠`,`➿`,`♻`,`♈`,`♉`,`♊`,`♋`,`♌`,`♍`,`♎`,`♏`,`♐`,`♑`,`♒`,`♓`,`⛎`,`🔯`,`🏧`,`💹`,`💲`,`💱`,`©`,`®`,`™`,`〽`,`〰`,`🔝`,`🔚`,`🔙`,`🔛`,`🔜`,`❌`,`⭕`,`❗`,`❓`,`❕`,`❔`,`🔃`,`🕛`,`🕧`,`🕐`,`🕜`,`🕑`,`🕝`,`🕒`,`🕞`,`🕓`,`🕟`,`🕔`,`🕠`,`🕕`,`🕖`,`🕗`,`🕘`,`🕙`,`🕚`,`🕡`,`🕢`,`🕣`,`🕤`,`🕥`,`🕦`,`✖`,`➕`,`➖`,`➗`,`♠`,`♥`,`♣`,`♦`,`💮`,`💯`,`✔`,`☑`,`🔘`,`🔗`,`➰`,`🔱`,`🔲`,`🔳`,`◼`,`◻`,`◾`,`◽`,`▪`,`▫`,`🔺`,`⬜`,`⬛`,`⚫`,`⚪`,`🔴`,`🔵`,`🔻`,`🔶`,`🔷`,`🔸`,`🔹`];
 let emoj3 = e3[Math.floor(Math.random() * e3.length)]
-
-
 
 
 // GAME
@@ -378,35 +399,35 @@ let menusimple = true
 let Mloc = false
 let autobio = setting.autobio
 let antihidetag = setting.antihidetag
-banChats = setting.self_mode
-autorespon = false
-offline = false
-readGc = false 
-readPc = false 
-antitrol = false
-bugc = false
-autovn = false
-autoketik = false
-autoregister = setting.user_register
-img = setting.img
-baper = `${emoj} Wudy`
-apiku = 'https://wa.link/l8owsw'
-gc_wa_lu = 'https://chat.whatsapp.com/Eg5Iw7OxLjWIx66ArQpwTA'
-targetpc = setting.ownerNumberr
-owner = targetpc
-fake = setting.fake
-footerr = `Wudy 〆 ${emoj}`
-numbernye = '0'
-waktu = 'Nothing'
-alasan = 'Nothing'
-botname = setting.botname
-ownername = setting.ownername
-peknem = setting.ownername
-ownerNumber = setting.ownerNumber
-cr = setting.cr
-petik = '*'
-titik =`...`
-enter ='\n'
+let banChats = setting.self_mode
+let autorespon = false
+let offline = false
+let readGc = false 
+let readPc = false 
+let antitrol = false
+let bugc = false
+let autovn = false
+let autoketik = false
+let autoregister = setting.user_register
+let img = setting.img
+let baper = `${emoj} Wudy`
+let apiku = 'https://wa.link/l8owsw'
+let gc_wa_lu = 'https://chat.whatsapp.com/Eg5Iw7OxLjWIx66ArQpwTA'
+let targetpc = setting.ownerNumberr
+let owner = targetpc
+let fake = setting.fake
+let footerr = `Wudy 〆 ${emoj}`
+let numbernye = '0'
+let waktu = 'Nothing'
+let alasan = 'Nothing'
+let botname = setting.botname
+let ownername = setting.ownername
+let peknem = setting.ownername
+let ownerNumber = setting.ownerNumber
+let cr = setting.cr
+let petik = '*'
+let titik =`...`
+let enter ='\n'
 msgId="B826873620DD5947E683E3ABE663F263"
 ky_ttt = []
 tttawal= ["0️⃣","1️⃣","2️⃣","3️⃣","4️⃣","5️⃣","6️⃣","7️⃣","8️⃣","9️⃣"]
@@ -417,35 +438,13 @@ winawal = 1
 loseawal = 1 
 memberwin = 1 
 memberlose = 1 
+hit_today = []
+blocked = []
+ban = []
+limitawal = "50"
+gcounttprem = "55" 
+gcounttuser = "100" 
 
-
-// THUMBNAIL
-thumb_nulis = fs.readFileSync(`image/nulis.jpg`)
-thumb_ktp = fs.readFileSync(`image/ktp.jpg`)
-thumb_dark = fs.readFileSync(`image/dark.jpg`)
-thumb_tes = fs.readFileSync(`image/tes.jpg`)
-thumb_bc = fs.readFileSync(`image/bc.jpg`)
-thumb_ig = fs.readFileSync(`image/ig.jpg`)
-thumb_fb = fs.readFileSync(`image/fb.jpg`)
-thumb_tw = fs.readFileSync(`image/tw.jpg`)
-thumb_mod = fs.readFileSync(`image/mod.jpg`)
-thumb_sam = fs.readFileSync(`image/sam.jpg`)
-thumb_cap = fs.readFileSync(`image/cap.jpg`)
-thumb_flag = fs.readFileSync(`image/flag.jpg`)
-thumb_img = fs.readFileSync(`image/img.jpg`)
-thumb_anim = fs.readFileSync(`image/anim.jpg`)
-thumb_kim = fs.readFileSync(`image/kim.jpg`)
-thumb_miku = fs.readFileSync(`image/miku.jpg`)
-thumb_oxy = fs.readFileSync(`image/oxy.jpg`)
-thumb_pro = fs.readFileSync(`image/pro.jpg`)
-thumb_epho = fs.readFileSync(`image/epho.jpg`)
-thumb_pfun = fs.readFileSync(`image/pfun.jpg`)
-thumb_nime = fs.readFileSync(`image/nime.jpg`)
-thumb_pin = fs.readFileSync(`image/pin.jpg`)
-thumb_ajg = fs.readFileSync(`image/ajg.jpg`)
-thumb_coupl = fs.readFileSync(`image/coupl.jpg`)
-thumb_404 = fs.readFileSync(`image/404.jpg`)
-thumb_ind = fs.readFileSync(`image/ind.jpg`)
 
 //Credit For 404 SQUAD ( Gk usah di hapus mek)
 //Lingz
@@ -4594,7 +4593,7 @@ headerType: 1
 }
 alpha.sendMessage(from, buttonMessagee, MessageType.buttonsMessage,{
 "contextInfo": {
-"mentionedJid" : [sender]}, sendEphemeral: true, quoted: taqq
+"mentionedJid" : [sender]}, sendEphemeral: true
 })
 break
 
@@ -18682,7 +18681,7 @@ headerType: 1
 }
 alpha.sendMessage(from, buttonMessagee, MessageType.buttonsMessage,{
 "contextInfo": {
-"mentionedJid" : [sender]}, sendEphemeral: true, quoted: taqo
+"mentionedJid" : [sender]}, sendEphemeral: true
 })
 }
 
@@ -18730,7 +18729,7 @@ headerType: 1
 }
 alpha.sendMessage(from, buttonMessagee, MessageType.buttonsMessage,{
 "contextInfo": {
-"mentionedJid" : [sender]}, sendEphemeral: true, quoted: taqi
+"mentionedJid" : [sender]}, sendEphemeral: true
 })
 }
 
