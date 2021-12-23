@@ -18459,25 +18459,17 @@ sendButLocation(from, teks , `Makasih Udah Verifikasi 😉\n${botname}™© | By
 }
 // AUTO REPLY by Piyo >_<
 
-
+if (!mek.key.fromMe && budy != undefined) {
 if (budy == 'p') {
 alpha.sendMessage(from, `Salam yg bener kak @${sender.split("@")[0]}` ,text, {"contextInfo": {"mentionedJid" : [sender]}, quoted: mek, sendEphemeral: true})
 }
 
 if (budy == 'hai') {
 await alpha.sendMessage(from, `Ada apa kak @${sender.split("@")[0]}` ,text, {"contextInfo": {"mentionedJid" : [sender]}, quoted: mek, sendEphemeral: true})
-getr = [`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/onii%20chan.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/Pasti%20Bangka%20ngana%20ko%20ba%20jamping%20jamping%20anjing%20anjing%20banget%20Viral%20titktok%20versi%20Spongebob.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/Prank%20desahan.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/megumin_last.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/onii%20chan%20onii%20chan.mp3?raw=true`]
-let hai1= getr[Math.floor(Math.random() * getr.length)];
-let hai0 = await getBuffer(hai1)
-await alpha.sendMessage(from,hai0, MessageType.audio, {mimetype:'audio/mp4', quoted:mek, ptt:true,duration: 86400000})
 }
 
 if (budy == 'Hai') {
 await alpha.sendMessage(from, `Ada apa kak @${sender.split("@")[0]}` ,text, {"contextInfo": {"mentionedJid" : [sender]}, quoted: mek, sendEphemeral: true})
-getr = [`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/onii%20chan.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/Pasti%20Bangka%20ngana%20ko%20ba%20jamping%20jamping%20anjing%20anjing%20banget%20Viral%20titktok%20versi%20Spongebob.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/Prank%20desahan.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/megumin_last.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/onii%20chan%20onii%20chan.mp3?raw=true`]
-let hai2= getr[Math.floor(Math.random() * getr.length)];
-let hai3 = await getBuffer(hai2)
-await alpha.sendMessage(from,hai3, MessageType.audio, {mimetype:'audio/mp4', quoted:mek, ptt:true,duration: 86400000})
 }
 
 if (budy == 'P') {
@@ -18486,18 +18478,10 @@ alpha.sendMessage(from, `Salam yg bener kak @${sender.split("@")[0]}` ,text, {"c
 
 if (budy == 'bot') {
 await alpha.sendMessage(from, `Ada apa kak @${sender.split("@")[0]}` ,text, {"contextInfo": {"mentionedJid" : [sender]}, quoted: mek, sendEphemeral: true})
-getr = [`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/onii%20chan.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/Pasti%20Bangka%20ngana%20ko%20ba%20jamping%20jamping%20anjing%20anjing%20banget%20Viral%20titktok%20versi%20Spongebob.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/Prank%20desahan.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/megumin_last.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/onii%20chan%20onii%20chan.mp3?raw=true`]
-let bot1= getr[Math.floor(Math.random() * getr.length)];
-let calcu = await getBuffer(bot1)
-await alpha.sendMessage(from,calcu, MessageType.audio, {mimetype:'audio/mp4', quoted:mek, ptt:true,duration: 86400000})
 }
 
 if (budy == 'Bot') {
 await alpha.sendMessage(from, `Ada apa kak @${sender.split("@")[0]}` ,text, {"contextInfo": {"mentionedJid" : [sender]}, quoted: mek, sendEphemeral: true})
-getr = [`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/onii%20chan.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/Pasti%20Bangka%20ngana%20ko%20ba%20jamping%20jamping%20anjing%20anjing%20banget%20Viral%20titktok%20versi%20Spongebob.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/Prank%20desahan.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/megumin_last.mp3?raw=true`,`https://github.com/IndonesianDev/whatsapp-bot/blob/main/desahan/onii%20chan%20onii%20chan.mp3?raw=true`]
-let bot2= getr[Math.floor(Math.random() * getr.length)];
-let calcu2 = await getBuffer(bot2)
-await alpha.sendMessage(from,calcu2, MessageType.audio, {mimetype:'audio/mp4', quoted:mek, ptt:true,duration: 86400000})
 }
 
 if (budy == 'assalamualaikum') {
@@ -18507,7 +18491,7 @@ alpha.sendMessage(from, `Waalaikumsalam kak @${sender.split("@")[0]}` ,text, {"c
 if (budy == 'Assalamualaikum') {
 alpha.sendMessage(from, `Waalaikumsalam kak @${sender.split("@")[0]}` ,text, {"contextInfo": {"mentionedJid" : [sender]}, quoted: mek, sendEphemeral: true})
 }
-
+}
 
 if (budy.startsWith('x')){
 try {
