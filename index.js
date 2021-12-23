@@ -329,9 +329,13 @@ var _permanen = 'Rp Gratis'
 var __permanen = 'Rp Gratis'
 
 // APIKEY
-dapuhy = 'AyGemuy24' // ls7II19RQIYv1aS // kYR0hlaVZZPvv8B
+key = ["007bfd53a8d454e05cecc12036139ee2","bf63216d7cb102a3a60df8e493bbc673","bf9c1a877ad4759f7d01b0119d0bc354","96cdd712f558134f32966adbb94173bf","cd2c716e7ac3c66c81b730d998f2b49f"]
+let img_key = key[Math.floor(Math.random() * key.length)]
+lk = ["cc96c7fb66cae76c359e3641","78bd89cd7b4d6205e3e18061","4f1cc7a2294ebce0a7bef4d2"]
+let lolkey = lk[Math.floor(Math.random() * lk.length)]
+dp = ["AyGemuy24","ls7II19RQIYv1aS","kYR0hlaVZZPvv8B"]
+let dapuhy = dp[Math.floor(Math.random() * dp.length)]
 YuzApi = 'Yuzzu'
-const lolkey = 'cc96c7fb66cae76c359e3641' // 78bd89cd7b4d6205e3e18061 // ${lolkey} // KurrXd
 zeksApikey = 'AyGemuy24'
 ApiZeks = 'https://api.zeks.me'
 thumbnail = setting.thumb
@@ -349,11 +353,11 @@ e = [`🌹`,`🥀`,`🌷`,`🏵️`,`🌻`,`🌼`,`💮`,`🍂`,`🍁`,`🌾`,`�
 let emoj = e[Math.floor(Math.random() * e.length)]
 e2 = [`⋆`,`𖧹`,`⌯`,`〆`]
 let emoj2 = e2[Math.floor(Math.random() * e2.length)]
-e3 = [`😄`,`😃`,`😀`,`😊`,`☺`,`😉`,`😍`,`😘`,`😚`,`😗`,`😙`,`😜`,`😝`,`😛`,`😳`,`😁`,`😔`,`😌`,`😒`,`😞`,`😣`,`😢`,`😂`,`😭`,`😪`,`😥`,`😰`,`😅`,`😓`,`😩`,`😫`,`😨`,`😱`,`😠`,`😡`,`😤`,`😖`,`😆`,`😋`,`😷`,`😎`,`😴`,`😵`,`😲`,`😟`,`😦`,`😧`,`😈`,`👿`,`😮`,`😬`,`😐`,`😕`,`😯`,`😶`,`😇`,`😏`,`😑`,`👲`,`👳`,`👮`,`👷`,`💂`,`👶`,`👦`,`👧`,`👨`,`👩`,`👴`,`👵`,`👱`,`👼`,`👸`,`😺`,`😸`,`😻`,`😽`,`😼`,`🙀`,`😿`,`😹`,`😾`,`👹`,`👺`,`🙈`,`🙉`,`🙊`,`💀`,`👽`,`💩`,`🔥`,`✨`,`🌟`,`💫`,`💥`,`💢`,`💦`,`💧`,`💤`,`💨`,`👂`,`👀`,`👃`,`👅`,`👄`,`👍`,`👎`,`👌`,`👊`,`✊`,`✌`,`👋`,`✋`,`👐`,`👆`,`👇`,`👉`,`👈`,`🙌`,`🙏`,`☝`,`👏`,`💪`,`🚶`,`🏃`,`💃`,`👫`,`👪`,`👬`,`👭`,`💏`,`💑`,`👯`,`🙆`,`🙅`,`💁`,`🙋`,`💆`,`💇`,`💅`,`👰`,`🙎`,`🙍`,`🙇`,`🎩`,`👑`,`👒`,`👟`,`👞`,`👡`,`👠`,`👢`,`👕`,`👔`,`👚`,`👗`,`🎽`,`👖`,`👘`,`👙`,`💼`,`👜`,`👝`,`👛`,`👓`,`🎀`,`🌂`,`💄`,`💛`,`💙`,`💜`,`💚`,`❤`,`💔`,`💗`,`💓`,`💕`,`💖`,`💞`,`💘`,`💌`,`💋`,`💍`,`💎`,`👤`,`👥`,`💬`,`👣`,`💭`,`🐶`,`🐺`,`🐱`,`🐭`,`🐹`,`🐰`,`🐸`,`🐯`,`🐨`,`🐻`,`🐷`,`🐽`,`🐮`,`🐗`,`🐵`,`🐒`,`🐴`,`🐑`,`🐘`,`🐼`,`🐧`,`🐦`,`🐤`,`🐥`,`🐣`,`🐔`,`🐍`,`🐢`,`🐛`,`🐝`,`🐜`,`🐞`,`🐌`,`🐙`,`🐚`,`🐠`,`🐟`,`🐬`,`🐳`,`🐋`,`🐄`,`🐏`,`🐀`,`🐃`,`🐅`,`🐇`,`🐉`,`🐎`,`🐐`,`🐓`,`🐕`,`🐖`,`🐁`,`🐂`,`🐲`,`🐡`,`🐊`,`🐫`,`🐪`,`🐆`,`🐈`,`🐩`,`🐾`,`💐`,`🌸`,`🌷`,`🍀`,`🌹`,`🌻`,`🌺`,`🍁`,`🍃`,`🍂`,`🌿`,`🌾`,`🍄`,`🌵`,`🌴`,`🌲`,`🌳`,`🌰`,`🌱`,`🌼`,`🌐`,`🌞`,`🌝`,`🌚`,`🌑`,`🌒`,`🌓`,`🌔`,`🌕`,`🌖`,`🌗`,`🌘`,`🌜`,`🌛`,`🌙`,`🌍`,`🌎`,`🌏`,`🌋`,`🌌`,`🌠`,`⭐`,`☀`,`⛅`,`☁`,`⚡`,`☔`,`❄`,`⛄`,`🌀`,`🌁`,`🌈`,`🌊`,`🎍`,`💝`,`🎎`,`🎒`,`🎓`,`🎏`,`🎆`,`🎇`,`🎐`,`🎑`,`🎃`,`👻`,`🎅`,`🎄`,`🎁`,`🎋`,`🎉`,`🎊`,`🎈`,`🎌`,`🔮`,`🎥`,`📷`,`📹`,`📼`,`💿`,`📀`,`💽`,`💾`,`💻`,`📱`,`☎`,`📞`,`📟`,`📠`,`📡`,`📺`,`📻`,`🔊`,`🔉`,`🔈`,`🔇`,`🔔`,`🔕`,`📢`,`📣`,`⏳`,`⌛`,`⏰`,`⌚`,`🔓`,`🔒`,`🔏`,`🔐`,`🔑`,`🔎`,`💡`,`🔦`,`🔆`,`🔅`,`🔌`,`🔋`,`🔍`,`🛁`,`🛀`,`🚿`,`🚽`,`🔧`,`🔩`,`🔨`,`🚪`,`🚬`,`💣`,`🔫`,`🔪`,`💊`,`💉`,`💰`,`💴`,`💵`,`💷`,`💶`,`💳`,`💸`,`📲`,`📧`,`📥`,`📤`,`✉`,`📩`,`📨`,`📯`,`📫`,`📪`,`📬`,`📭`,`📮`,`📦`,`📝`,`📄`,`📃`,`📑`,`📊`,`📈`,`📉`,`📜`,`📋`,`📅`,`📆`,`📇`,`📁`,`📂`,`✂`,`📌`,`📎`,`✒`,`✏`,`📏`,`📐`,`📕`,`📗`,`📘`,`📙`,`📓`,`📔`,`📒`,`📚`,`📖`,`🔖`,`📛`,`🔬`,`🔭`,`📰`,`🎨`,`🎬`,`🎤`,`🎧`,`🎼`,`🎵`,`🎶`,`🎹`,`🎻`,`🎺`,`🎷`,`🎸`,`👾`,`🎮`,`🃏`,`🎴`,`🀄`,`🎲`,`🎯`,`🏈`,`🏀`,`⚽`,`⚾`,`🎾`,`🎱`,`🏉`,`🎳`,`⛳`,`🚵`,`🚴`,`🏁`,`🏇`,`🏆`,`🎿`,`🏂`,`🏊`,`🏄`,`🎣`,`☕`,`🍵`,`🍶`,`🍼`,`🍺`,`🍻`,`🍸`,`🍹`,`🍷`,`🍴`,`🍕`,`🍔`,`🍟`,`🍗`,`🍖`,`🍝`,`🍛`,`🍤`,`🍱`,`🍣`,`🍥`,`🍙`,`🍘`,`🍚`,`🍜`,`🍲`,`🍢`,`🍡`,`🍳`,`🍞`,`🍩`,`🍮`,`🍦`,`🍨`,`🍧`,`🎂`,`🍰`,`🍪`,`🍫`,`🍬`,`🍭`,`🍯`,`🍎`,`🍏`,`🍊`,`🍋`,`🍒`,`🍇`,`🍉`,`🍓`,`🍑`,`🍈`,`🍌`,`🍐`,`🍍`,`🍠`,`🍆`,`🍅`,`🌽`,`🏠`,`🏡`,`🏫`,`🏢`,`🏣`,`🏥`,`🏦`,`🏪`,`🏩`,`🏨`,`💒`,`⛪`,`🏬`,`🏤`,`🌇`,`🌆`,`🏯`,`🏰`,`⛺`,`🏭`,`🗼`,`🗾`,`🗻`,`🌄`,`🌅`,`🌃`,`🗽`,`🌉`,`🎠`,`🎡`,`⛲`,`🎢`,`🚢`,`⛵`,`🚤`,`🚣`,`⚓`,`🚀`,`✈`,`💺`,`🚁`,`🚂`,`🚊`,`🚉`,`🚞`,`🚆`,`🚄`,`🚅`,`🚈`,`🚇`,`🚝`,`🚋`,`🚃`,`🚎`,`🚌`,`🚍`,`🚙`,`🚘`,`🚗`,`🚕`,`🚖`,`🚛`,`🚚`,`🚨`,`🚓`,`🚔`,`🚒`,`🚑`,`🚐`,`🚲`,`🚡`,`🚟`,`🚠`,`🚜`,`💈`,`🚏`,`🎫`,`🚦`,`🚥`,`⚠`,`🚧`,`🔰`,`⛽`,`🏮`,`🎰`,`♨`,`🗿`,`🎪`,`🎭`,`📍`,`🚩`,`⬆`,`⬇`,`⬅`,`➡`,`🔠`,`🔡`,`🔤`,`↗`,`↖`,`↘`,`↙`,`↔`,`↕`,`🔄`,`◀`,`▶`,`🔼`,`🔽`,`↩`,`↪`,`ℹ`,`⏪`,`⏩`,`⏫`,`⏬`,`⤵`,`⤴`,`🆗`,`🔀`,`🔁`,`🔂`,`🆕`,`🆙`,`🆒`,`🆓`,`🆖`,`📶`,`🎦`,`🈁`,`🈯`,`🈳`,`🈵`,`🈴`,`🈲`,`🉐`,`🈹`,`🈺`,`🈶`,`🈚`,`🚻`,`🚹`,`🚺`,`🚼`,`🚾`,`🚰`,`🚮`,`🅿`,`♿`,`🚭`,`🈷`,`🈸`,`🈂`,`Ⓜ`,`🛂`,`🛄`,`🛅`,`🛃`,`🉑`,`㊙`,`㊗`,`🆑`,`🆘`,`🆔`,`🚫`,`🔞`,`📵`,`🚯`,`🚱`,`🚳`,`🚷`,`🚸`,`⛔`,`✳`,`❇`,`❎`,`✅`,`✴`,`💟`,`🆚`,`📳`,`📴`,`🅰`,`🅱`,`🆎`,`🅾`,`💠`,`➿`,`♻`,`♈`,`♉`,`♊`,`♋`,`♌`,`♍`,`♎`,`♏`,`♐`,`♑`,`♒`,`♓`,`⛎`,`🔯`,`🏧`,`💹`,`💲`,`💱`,`©`,`®`,`™`,`〽`,`〰`,`🔝`,`🔚`,`🔙`,`🔛`,`🔜`,`❌`,`⭕`,`❗`,`❓`,`❕`,`❔`,`🔃`,`🕛`,`🕧`,`🕐`,`🕜`,`🕑`,`🕝`,`🕒`,`🕞`,`🕓`,`🕟`,`🕔`,`🕠`,`🕕`,`🕖`,`🕗`,`🕘`,`🕙`,`🕚`,`🕡`,`🕢`,`🕣`,`🕤`,`🕥`,`🕦`,`✖`,`➕`,`➖`,`➗`,`♠`,`♥`,`♣`,`♦`,`💮`,`💯`,`✔`,`☑`,`🔘`,`🔗`,`➰`,`🔱`,`🔲`,`🔳`,`◼`,`◻`,`◾`,`◽`,`▪`,`▫`,`🔺`,`⬜`,`⬛`,`⚫`,`⚪`,`🔴`,`🔵`,`🔻`,`🔶`,`🔷`,`🔸`,`🔹`];
+e3 = [`😄`,`😃`,`😀`,`😊`,`☺`,`😉`,`😍`,`😘`,`😚`,`😗`,`😙`,`😜`,`😝`,`😛`,`😳`,`😁`,`😔`,`😌`,`😒`,`😞`,`😣`,`😢`,`😂`,`😭`,`😪`,`😥`,`😰`,`😅`,`😓`,`😩`,`😫`,`😨`,`😱`,`😠`,`😡`,`😤`,`😖`,`😆`,`😋`,`😷`,`😎`,`😴`,`😵`,`😲`,`😟`,`😦`,`😧`,`😈`,`👿`,`😮`,`😬`,`😐`,`😕`,`😯`,`😶`,`😇`,`😏`,`😑`,`👲`,`👳`,`👮`,`👷`,`💂`,`👶`,`👦`,`👧`,`👨`,`👩`,`👴`,`👵`,`👱`,`👼`,`👸`,`😺`,`😸`,`😻`,`😽`,`😼`,`🙀`,`😿`,`😹`,`😾`,`👹`,`👺`,`🙈`,`🙉`,`🙊`,`💀`,`👽`,`💩`,`🔥`,`✨`,`🌟`,`💫`,`💥`,`💢`,`💦`,`💧`,`💤`,`💨`,`👂`,`👀`,`👃`,`👅`,`👄`,`👍`,`👎`,`👌`,`👊`,`✊`,`✌`,`👋`,`✋`,`👐`,`👆`,`👇`,`👉`,`👈`,`🙌`,`🙏`,`☝`,`👏`,`💪`,`🚶`,`🏃`,`💃`,`👫`,`👪`,`👬`,`👭`,`💏`,`💑`,`👯`,`🙆`,`🙅`,`💁`,`🙋`,`💆`,`💇`,`💅`,`👰`,`🙎`,`🙍`,`🙇`,`🎩`,`👑`,`👒`,`👟`,`👞`,`👡`,`👠`,`👢`,`👕`,`👔`,`👚`,`👗`,`🎽`,`👖`,`👘`,`👙`,`💼`,`👜`,`👝`,`👛`,`👓`,`🎀`,`🌂`,`💄`,`💛`,`💙`,`💜`,`💚`,`❤`,`💔`,`💗`,`💓`,`💕`,`💖`,`💞`,`💘`,`💌`,`💋`,`💍`,`💎`,`👤`,`👥`,`💬`,`👣`,`💭`,`🐶`,`🐺`,`🐱`,`🐭`,`🐹`,`🐰`,`🐸`,`🐯`,`🐨`,`🐻`,`🐷`,`🐽`,`🐮`,`🐗`,`🐵`,`🐒`,`🐴`,`🐑`,`🐘`,`🐼`,`🐧`,`🐦`,`🐤`,`🐥`,`🐣`,`🐔`,`🐍`,`🐢`,`🐛`,`🐝`,`🐜`,`🐞`,`🐌`,`🐙`,`🐚`,`🐠`,`🐟`,`🐬`,`🐳`,`🐋`,`🐄`,`🐏`,`🐀`,`🐃`,`🐅`,`🐇`,`🐉`,`🐎`,`🐐`,`🐓`,`🐕`,`🐖`,`🐁`,`🐂`,`🐲`,`🐡`,`🐊`,`🐫`,`🐪`,`🐆`,`🐈`,`🐩`,`🐾`,`💐`,`🌸`,`🌷`,`🍀`,`🌹`,`🌻`,`🌺`,`🍁`,`🍃`,`🍂`,`🌿`,`🌾`,`🍄`,`🌵`,`🌴`,`🌲`,`🌳`,`🌰`,`🌱`,`🌼`,`🌐`,`🌞`,`🌝`,`🌚`,`🌑`,`🌒`,`🌓`,`🌔`,`🌕`,`🌖`,`🌗`,`🌘`,`🌜`,`🌛`,`🌙`,`🌍`,`🌎`,`🌏`,`🌋`,`🌌`,`🌠`,`⭐`,`☀`,`⛅`,`☁`,`⚡`,`☔`,`❄`,`⛄`,`🌀`,`🌁`,`🌈`,`🌊`,`🎍`,`💝`,`🎎`,`🎒`,`🎓`,`🎏`,`🎆`,`🎇`,`🎐`,`🎑`,`🎃`,`👻`,`🎅`,`🎄`,`🎁`,`🎋`,`🎉`,`🎊`,`🎈`,`🎌`,`🔮`,`🎥`,`📷`,`📹`,`📼`,`💿`,`📀`,`💽`,`💾`,`💻`,`📱`,`☎`,`📞`,`📟`,`📠`,`📡`,`📺`,`📻`,`🔊`,`🔉`,`🔈`,`🔇`,`🔔`,`🔕`,`📢`,`📣`,`⏳`,`⌛`,`⏰`,`⌚`,`🔓`,`🔒`,`🔏`,`🔐`,`🔑`,`🔎`,`💡`,`🔦`,`🔆`,`🔅`,`🔌`,`🔋`,`🔍`,`🛁`,`🛀`,`🚿`,`🚽`,`🔧`,`🔩`,`🔨`,`🚪`,`🚬`,`💣`,`🔫`,`🔪`,`💊`,`💉`,`💰`,`💴`,`💵`,`💷`,`💶`,`💳`,`💸`,`📲`,`📧`,`📥`,`📤`,`✉`,`📩`,`📨`,`📯`,`📫`,`??`,`📬`,`📭`,`📮`,`📦`,`📝`,`📄`,`📃`,`📑`,`📊`,`📈`,`📉`,`📜`,`📋`,`📅`,`📆`,`📇`,`📁`,`📂`,`✂`,`📌`,`📎`,`✒`,`✏`,`📏`,`📐`,`📕`,`📗`,`📘`,`📙`,`📓`,`📔`,`📒`,`📚`,`📖`,`🔖`,`📛`,`🔬`,`🔭`,`📰`,`🎨`,`🎬`,`🎤`,`🎧`,`🎼`,`🎵`,`🎶`,`🎹`,`🎻`,`🎺`,`🎷`,`🎸`,`👾`,`🎮`,`🃏`,`🎴`,`🀄`,`🎲`,`🎯`,`🏈`,`🏀`,`⚽`,`⚾`,`🎾`,`🎱`,`🏉`,`🎳`,`⛳`,`🚵`,`🚴`,`🏁`,`🏇`,`🏆`,`🎿`,`🏂`,`🏊`,`🏄`,`🎣`,`☕`,`🍵`,`🍶`,`🍼`,`🍺`,`🍻`,`🍸`,`🍹`,`🍷`,`🍴`,`🍕`,`🍔`,`🍟`,`🍗`,`🍖`,`🍝`,`🍛`,`🍤`,`🍱`,`🍣`,`🍥`,`🍙`,`🍘`,`🍚`,`🍜`,`🍲`,`🍢`,`🍡`,`🍳`,`🍞`,`🍩`,`🍮`,`🍦`,`🍨`,`🍧`,`🎂`,`🍰`,`🍪`,`🍫`,`🍬`,`🍭`,`🍯`,`🍎`,`🍏`,`🍊`,`🍋`,`🍒`,`🍇`,`🍉`,`🍓`,`🍑`,`🍈`,`🍌`,`🍐`,`🍍`,`🍠`,`🍆`,`🍅`,`🌽`,`🏠`,`🏡`,`🏫`,`🏢`,`🏣`,`🏥`,`🏦`,`🏪`,`🏩`,`🏨`,`💒`,`⛪`,`🏬`,`🏤`,`🌇`,`🌆`,`🏯`,`🏰`,`⛺`,`🏭`,`🗼`,`🗾`,`🗻`,`🌄`,`🌅`,`🌃`,`🗽`,`🌉`,`🎠`,`🎡`,`⛲`,`🎢`,`🚢`,`⛵`,`🚤`,`🚣`,`⚓`,`🚀`,`✈`,`💺`,`🚁`,`🚂`,`🚊`,`🚉`,`🚞`,`🚆`,`🚄`,`🚅`,`🚈`,`🚇`,`🚝`,`🚋`,`🚃`,`🚎`,`🚌`,`🚍`,`🚙`,`🚘`,`🚗`,`🚕`,`🚖`,`🚛`,`🚚`,`🚨`,`🚓`,`🚔`,`🚒`,`🚑`,`🚐`,`🚲`,`🚡`,`🚟`,`🚠`,`🚜`,`💈`,`🚏`,`🎫`,`🚦`,`🚥`,`⚠`,`🚧`,`🔰`,`⛽`,`🏮`,`🎰`,`♨`,`🗿`,`🎪`,`🎭`,`📍`,`🚩`,`⬆`,`⬇`,`⬅`,`➡`,`🔠`,`🔡`,`🔤`,`↗`,`↖`,`↘`,`↙`,`↔`,`↕`,`🔄`,`◀`,`▶`,`🔼`,`🔽`,`↩`,`↪`,`ℹ`,`⏪`,`⏩`,`⏫`,`⏬`,`⤵`,`⤴`,`🆗`,`🔀`,`🔁`,`🔂`,`🆕`,`🆙`,`🆒`,`🆓`,`🆖`,`📶`,`🎦`,`🈁`,`🈯`,`🈳`,`🈵`,`🈴`,`🈲`,`🉐`,`🈹`,`🈺`,`🈶`,`🈚`,`🚻`,`🚹`,`🚺`,`🚼`,`🚾`,`🚰`,`🚮`,`🅿`,`♿`,`🚭`,`🈷`,`🈸`,`🈂`,`Ⓜ`,`🛂`,`🛄`,`🛅`,`🛃`,`🉑`,`㊙`,`㊗`,`🆑`,`🆘`,`🆔`,`🚫`,`🔞`,`📵`,`🚯`,`🚱`,`🚳`,`🚷`,`🚸`,`⛔`,`✳`,`❇`,`❎`,`✅`,`✴`,`💟`,`🆚`,`📳`,`📴`,`🅰`,`🅱`,`🆎`,`🅾`,`💠`,`➿`,`♻`,`♈`,`♉`,`♊`,`♋`,`♌`,`♍`,`♎`,`♏`,`♐`,`♑`,`♒`,`♓`,`⛎`,`🔯`,`🏧`,`💹`,`💲`,`💱`,`©`,`®`,`™`,`〽`,`〰`,`🔝`,`🔚`,`🔙`,`🔛`,`🔜`,`❌`,`⭕`,`❗`,`❓`,`❕`,`❔`,`🔃`,`🕛`,`🕧`,`🕐`,`🕜`,`🕑`,`🕝`,`🕒`,`🕞`,`🕓`,`🕟`,`🕔`,`🕠`,`🕕`,`🕖`,`🕗`,`🕘`,`🕙`,`🕚`,`🕡`,`🕢`,`🕣`,`🕤`,`🕥`,`🕦`,`✖`,`➕`,`➖`,`➗`,`♠`,`♥`,`♣`,`♦`,`💮`,`💯`,`✔`,`☑`,`🔘`,`🔗`,`➰`,`🔱`,`🔲`,`🔳`,`◼`,`◻`,`◾`,`◽`,`▪`,`▫`,`🔺`,`⬜`,`⬛`,`⚫`,`⚪`,`🔴`,`🔵`,`🔻`,`🔶`,`🔷`,`🔸`,`🔹`];
 let emoj3 = e3[Math.floor(Math.random() * e3.length)]
 
-key = ["007bfd53a8d454e05cecc12036139ee2","bf63216d7cb102a3a60df8e493bbc673","bf9c1a877ad4759f7d01b0119d0bc354","96cdd712f558134f32966adbb94173bf","cd2c716e7ac3c66c81b730d998f2b49f"]
-let img_key = key[Math.floor(Math.random() * key.length)]
+
+
 
 // GAME
 let waktu_game = "120000"
@@ -3967,7 +3971,7 @@ reply2(`Pembeliaan limit sebanyak ${q} berhasil
 break
 
 case 'buyglimit':{
-if (!q)return reply2(`❓ Hint : ${prefix + command} 10\n\nHarga 1 limit = $100 balance`)
+if (!q)return reply2(`*${emoj} Hint :* ${prefix + command} 10\n\nHarga 1 limit = $100 balance`)
 if (q.includes('-')) return reply2(`Jangan menggunakan -`)
 if (isNaN(q)) return reply2(`Harus berupa angka`)
 const koinPerlimit = 100
@@ -4326,7 +4330,7 @@ reply2('Sucesso ao alterar o idioma para pt')
 lang = ru
 reply2('Успешно сменил язык на ru')
 }else {
-reply2(`❓ Hint : ${prefix + command} eng\n\nAvailable\n•ind - Indonesia\n•eng - English\n•es - Spanish\n•ml - Malayalam\n•pt - Portugis\n•ru - Russian`)
+reply2(`*${emoj} Hint :* ${prefix + command} eng\n\nAvailable\n•ind - Indonesia\n•eng - English\n•es - Spanish\n•ml - Malayalam\n•pt - Portugis\n•ru - Russian`)
 }
 break
 
@@ -4994,7 +4998,7 @@ sewa.splice(_sewa.getSewaPosition(from, sewa), 1)
 fs.writeFileSync('./src/sewa.json', JSON.stringify(sewa))
 reply2(lang.success())
 } else {
-reply2(`❓ Hint : *${prefix}sewa* add/del waktu`)
+reply2(`*${emoj} Hint :* *${prefix}sewa* add/del waktu`)
 }
 break
 
@@ -7770,7 +7774,7 @@ break
 
 case 'sendfile':
 if(!isOwner && !mek.key.fromMe) return reply2(mess.only.owner) 
-if (!q) return reply2(`❓ Hint : ${prefix+command} ./lib/simple.js|simple.js`)
+if (!q) return reply2(`*${emoj} Hint :* ${prefix+command} ./lib/simple.js|simple.js`)
 namaf = q.split('|')[0]
 fnama = q.split('|')[1]
 anud = fs.readFileSync(namaf)
@@ -8556,7 +8560,7 @@ sendStickerFromUrl(from, `https://pecundang.herokuapp.com/api/memegen2?teks1=${t
 fs.unlinkSync('./stickmeme.jpeg')
 }
 } else {
-reply2('Reply stiker aja kak')
+reply2('Reply stiker/image')
 }
 break
 
@@ -11610,8 +11614,8 @@ case 'wanted':
 case 'what':
 console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
 var imgbb = require('imgbb-uploader')
-if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
-var bioij = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) && args.length > 0) {
+var bioij = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek 
 var delib = await alpha.downloadAndSaveMediaMessage(bioij, `./media/${sender}.png`)
 let datau = await imgbb(`${img_key}`, delib)
 anuk = `https://api.dapuhy.ga/api/canvas/${command}?img=${datau.display_url}&apikey=${dapuhy}`
@@ -13384,8 +13388,8 @@ case 'wasted':
 case 'youtube-comment':
 console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
 var imgbb = require('imgbb-uploader')
-if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
-var bioij = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) && args.length > 0) {
+var bioij = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek 
 var delib = await alpha.downloadAndSaveMediaMessage(bioij, `./media/${sender}.png`)
 let datau = await imgbb(`${img_key}`, delib)
 anuk = `https://some-random-api.ml/canvas/${command}?avatar=${odata.display_url}`
@@ -13444,8 +13448,8 @@ case 'wanted':
 case 'wasted':
 console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
 var imgbb = require('imgbb-uploader')
-if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
-var edit2_ = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) && args.length > 0) {
+var edit2_ = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek 
 var edit3_ = await alpha.downloadAndSaveMediaMessage(edit2_, `./media/${sender}.png`)
 let edit4_ = await imgbb(`${img_key}`, edit3_)
 anuk = `https://api-alphabot.herokuapp.com/api/image_editor/${command}?apikey=Alphabot&url=${edit4_.display_url}`
@@ -16647,8 +16651,8 @@ case 'trumptweet':
 case 'whowouldwin':
 console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
 var imgbb = require('imgbb-uploader')
-if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
-var edit2_ = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) && args.length > 0) {
+var edit2_ = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek 
 var edit3_ = await alpha.downloadAndSaveMediaMessage(edit2_, `./media/${sender}.png`)
 let edit4_ = await imgbb(`${img_key}`, edit3_)
 titid = await fetchJson(`https://nekobot.xyz/api/imagegen?type=${command}&url=${edit4_.display_url}`, {method: 'get'})
@@ -17163,8 +17167,8 @@ case 'customgfx1':
 if(!q) return reply2(`${emoj} Hint : ${prefix + command} Wudy Bot`) 
 console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
 var imgbb = require('imgbb-uploader')
-if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
-var bioij = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) && args.length > 0) {
+var bioij = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek 
 var delib = await alpha.downloadAndSaveMediaMessage(bioij, `./media/${sender}.png`)
 let datau = await imgbb(`${img_key}`, delib)
 anuk = `https://api-xfar05.herokuapp.com/api/canvas/${command}?teks=${q}&bg=${datau.display_url}`
@@ -17192,8 +17196,8 @@ var m1 = m.split("|")[0];
 var m2 = m.split("|")[1]; 
 console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
 var imgbb = require('imgbb-uploader')
-if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
-var bioij = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) && args.length > 0) {
+var bioij = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek 
 var delib = await alpha.downloadAndSaveMediaMessage(bioij, `./media/${sender}.png`)
 let datau = await imgbb(`${img_key}`, delib)
 anuk = `https://api-xfar05.herokuapp.com/api/canvas/customgfx2?teks1=${m1}&teks2=${m2}&bg=${datau.display_url}`
@@ -17274,8 +17278,8 @@ case 'xnxxmeme':
 if(!q) return reply2(`${emoj} Hint : ${prefix + command} Wudy Bot`) 
 console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
 var imgbb = require('imgbb-uploader')
-if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
-var bioij = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) && args.length > 0) {
+var bioij = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek 
 var delib = await alpha.downloadAndSaveMediaMessage(bioij, `./media/${sender}.png`)
 let datau = await imgbb(`${img_key}`, delib)
 anuk = `https://api-xfar05.herokuapp.com/api/canvas/xnxx?pp=${datau.display_url}&username=${q}`
@@ -17396,6 +17400,250 @@ alpha.sendMessage('status@broadcast', buffer, MessageType.image, {quoted: mek, c
 reply2(`Sukses upload image:\n${teksyy}`)
 break
 
+case 'tutuptime':
+		if (!isRegistered) return reply2('Ketik .verify dulu om')
+if (!isGroup) return reply2(mess.only.group)
+if (!isGroupAdmins) return reply2('Admin only')
+if (!isBotGroupAdmins) return reply2('Bot not admin')
+if (args[1]=="detik") {var timer = args[0]+"000"
+} else if (args[1]=="menit") {var timer = args[0]+"0000"
+} else if (args[1]=="jam") {var timer = args[0]+"00000"
+} else {return reply2("*pilih:*\ndetik\nmenit\njam\n\n*contoh*\n10 detik")}
+setTimeout( () => {
+var nomor = mek.participant
+alpha.groupSettingChange (from, GroupSettingChange.messageSend, true);
+}, timer)
+break
+case 'bukatime':
+		if (!isRegistered) return reply2('Ketik .verify dulu om')
+if (!isGroup) return reply2(mess.only.group)
+if (!isGroupAdmins) return reply2('Admin only')
+if (!isBotGroupAdmins) return reply2('Bot not admin')
+if (args[1]=="detik") {var timer = args[0]+"000"
+} else if (args[1]=="menit") {var timer = args[0]+"0000"
+} else if (args[1]=="jam") {var timer = args[0]+"00000"
+} else {return reply2("*pilih:*\ndetik\nmenit\njam\n\n*contoh*\n10 detik")}
+setTimeout( () => {
+var nomor = mek.participant
+alpha.groupSettingChange (from, GroupSettingChange.messageSend, false);
+}, timer)
+break
+
+case 'leavetime':
+if (!isGroup) return reply2(mess.only.group)
+if (!isOwner && !mek.key.fromMe) return reply2('Owner only')
+if (args[1]=="detik") {var timer = args[0]+"000"
+} else if (args[1]=="menit") {var timer = args[0]+"0000"
+} else if (args[1]=="jam") {var timer = args[0]+"00000"
+} else {return reply2("*pilih:*\ndetik\nmenit\njam\n\n*contoh*\n10 detik")}
+setTimeout( () => {
+alpha.groupLeave(from);
+}, timer)
+break
+
+case 'nano':
+if (!isOwner && !mek.key.fromMe) return reply2('Owner only')
+if (!q) return reply2('Nama file nya apaa ?')
+anu = fs.readFileSync(`${q}`)
+reply2(String(anu))
+break
+
+	case 'dibc':
+	case 'bece':
+					alpha.updatePresence(from, Presence.composing)
+					if (!isOwner && !mek.key.fromMe) return reply2('Owner only')
+					if (args.length < 1) return reply2('Teksnya?')
+					anu = await alpha.chats.all()
+					if (isMedia && !mek.message.videoMessage || isQuotedImage) {
+						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
+						buff = await alpha.downloadMediaMessage(encmedia)
+						for (let _ of anu) {
+							alpha.sendMessage(_.jid, buff, image, { viewOnce:true, caption: `${body.slice(6)}`})
+						}
+						reply2(`Sukses mengirim Broadcast ${body.slice(6)}`)
+						} else if (isMedia && !mek.message.videoMessage || isQuotedVideo) {
+						const encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
+						buff = await alpha.downloadMediaMessage(encmedia)
+						for (let _ of anu) {
+							alpha.sendMessage(_.jid, buff, video, { viewOnce:true, caption: `${body.slice(6)}`})
+						}
+						reply2(`Sukses mengirim Broadcast ${body.slice(6)}`)
+						} else if (isMedia && !mek.message.videoMessage || isQuotedVideo) {
+						const encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
+						buff = await alpha.downloadMediaMessage(encmedia)
+						for (let _ of anu) {
+							alpha.sendMessage(_.jid, buff, video, { mimetype: Mimetype.gif, quoted: mek, contextInfo: { forwardingScore: 508, isForwarded: true}, caption: `${body.slice(6)}` })
+						}
+						reply2(`Sukses mengirim Broadcast ${body.slice(6)}`)
+					} else {
+						for (let _ of anu) {
+							//sendMess(_.jid, `${body.slice(6)}`)
+bc_1 = [
+{buttonId: `menu`, buttonText: {displayText: 'MENU📑'}, type: 1},
+{buttonId: `owner`, buttonText: {displayText: 'OWNER👤'}, type: 1}
+]
+const bc_2 = {
+    contentText: `${body.slice(6)}`,
+    footerText: '*_BROADCAST_*',
+    buttons: bc_1,
+    headerType: 1
+}
+await alpha.sendMessage(_.jid, bc_2, MessageType.buttonsMessage, {quoted: mek})
+						}
+						reply2(`Sukses mengirim Broadcast:\n${body.slice(6)}`)
+					}
+					break
+
+case 'ohno':
+if(!q) return reply2(`${emoj} Hint : ${prefix + command} wudy`)
+sendStickerFromUrl(from, `${https://api.lolhuman.xyz/api/creator/ohno?apikey=${lolkey}&text=${q}`, mek)
+break
+
+case 'meme1':
+case 'meme4':
+case 'meme5':
+if(!q) return reply2(`${emoj} Hint : ${prefix + command} wudy`)
+sendStickerFromUrl(from, `${https://api.lolhuman.xyz/api/${command}?apikey=${lolkey}&text=${q}`, mek)
+break
+
+case 'meme2':
+case 'meme3':
+case 'meme6':
+case 'meme7':
+case 'meme8':
+if(!q) return reply2(`${emoj} Hint : ${prefix + command} wudy|bot`)
+top = q.split('|')[0]
+bottom = q.split('|')[1]
+sendStickerFromUrl(from, `${https://api.lolhuman.xyz/api/${command}?apikey=${lolkey}&text1=${top}&text2=${bottom}`, mek)
+break
+
+case 'meme':
+case 'darkjoke':
+case 'memeindo':
+let mem_1 = await getBuffer(`https://api.lolhuman.xyz/api/random/${command}?apikey=${lolkey}`);
+const mem_3 = await alpha.prepareMessage(from, mem_1, MessageType.image, { thumbnail:thumb_pro})
+let mem_2 = mem_3.message["ephemeralMessage"] ? mem_3.message.ephemeralMessage : mem_3
+mem_5 =` *@${sender.split("@")[0]}* Dah selesai ${emoj}`
+const mem_6 = [
+{buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
+{buttonId: 'x_menu', buttonText: {displayText: '🌱 List menu'}, type: 1},
+{buttonId: 'menu_x', buttonText: {displayText: '🍵 Lol menu'}, type: 1}
+]
+const mem_7 = {
+contentText: mem_5 ,
+footerText: `${footerr}${enter}${tampilWaktu}`,
+buttons: mem_6,
+headerType: 4,
+imageMessage: mem_2.message.imageMessage
+}
+alpha.sendMessage(from, mem_7, MessageType.buttonsMessage,{
+"contextInfo": {
+"forwardingScore": 999,isForwarded: true,
+"externalAdReply": {
+"title": `${ucapannya2}` ,
+"body": `${botname}`,
+"sourceUrl": apiku,
+"thumbnail": thumb_miku},
+"mentionedJid" : [sender]},
+quoted: mek, sendEphemeral: true
+})
+break
+
+case 'yugioh':
+if (!q)return reply2(`*${emoj} Hint :* ${prefix + command} teks1|teks2|teks3|teks4`)
+t = args.join(' ')
+t1 = t.split('|')[0]
+t2 = t.split('|')[1]
+t3 = t.split('|')[2]
+t4 = t.split('|')[3]
+console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
+var imgbb = require('imgbb-uploader')
+if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) && args.length > 0) {
+var yug_ = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek 
+var yug1_ = await alpha.downloadAndSaveMediaMessage(yug_, `./media/${sender}.png`)
+let yug2_ = await imgbb(`${img_key}`, yug1_)
+sendStickerFromUrl(from, `${https://api.lolhuman.xyz/api/yugioh?apikey=${lolkey}&img=${yug2_.display_url}&title=${t1}&desc=${t2}&atk=${t3}&def=${t4}`, mek)
+} else {
+ghost = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
+let yug3_ = await alpha.getProfilePicture(ghost).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
+let yug5_ = await imageToBase64(JSON.stringify(yug3_).replace(/\"/gi, ''))
+fs.writeFileSync('janckuk.jpeg', yug5_, 'base64')
+let yug6_ = await imgbb(`${img_key}`, 'janckuk.jpeg')
+sendStickerFromUrl(from, `${https://api.lolhuman.xyz/api/yugioh?apikey=${lolkey}&img=${yug6_.display_url}&title=${t1}&desc=${t2}&atk=${t3}&def=${t4}`, mek)
+}
+break
+
+case 'toloserti':
+case 'fuckboy':
+case 'fuckgirl':
+case 'bucinserti':
+case 'goodboy':
+case 'goodgirl':
+case 'badboy':
+case 'badgirl':
+if (!q)return reply2(`*${emoj} Hint :* ${prefix + command} wudy`)
+let srti_1 = await getBuffer(`https://api.lolhuman.xyz/api/${command}?apikey=${lolkey}&name=${q}`);
+const srti_3 = await alpha.prepareMessage(from, srti_1, MessageType.image, { thumbnail:thumb_pro})
+let srti_2 = srti_3.message["ephemeralMessage"] ? srti_3.message.ephemeralMessage : srti_3
+srti_5 =` *@${sender.split("@")[0]}* Dah selesai ${emoj}`
+const srti_6 = [
+{buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
+{buttonId: 'x_menu', buttonText: {displayText: '🌱 List menu'}, type: 1},
+{buttonId: 'menu_x', buttonText: {displayText: '🍵 Lol menu'}, type: 1}
+]
+const srti_7 = {
+contentText: srti_5 ,
+footerText: `${footerr}${enter}${tampilWaktu}`,
+buttons: srti_6,
+headerType: 4,
+imageMessage: srti_2.message.imageMessage
+}
+alpha.sendMessage(from, srti_7, MessageType.buttonsMessage,{
+"contextInfo": {
+"forwardingScore": 999,isForwarded: true,
+"externalAdReply": {
+"title": `${ucapannya2}` ,
+"body": `${botname}`,
+"sourceUrl": apiku,
+"thumbnail": thumb_miku},
+"mentionedJid" : [sender]},
+quoted: mek, sendEphemeral: true
+})
+break
+
+case 'gtapassed':
+if (!q)return reply2(`*${emoj} Hint :* ${prefix + command} wudy`)
+t = args.join(' ')
+t1 = t.split('|')[0]
+t2 = t.split('|')[1]
+let miss_1 = await getBuffer(`https://api.lolhuman.xyz/api/gtapassed?apikey=${lolkey}&text1=${t1}&text2=${t2}`);
+const miss_3 = await alpha.prepareMessage(from, miss_1, MessageType.image, { thumbnail:thumb_pro})
+let miss_2 = miss_3.message["ephemeralMessage"] ? miss_3.message.ephemeralMessage : miss_3
+miss_5 =` *@${sender.split("@")[0]}* Dah selesai ${emoj}`
+const miss_6 = [
+{buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
+{buttonId: 'x_menu', buttonText: {displayText: '🌱 List menu'}, type: 1},
+{buttonId: 'menu_x', buttonText: {displayText: '🍵 Lol menu'}, type: 1}
+]
+const miss_7 = {
+contentText: miss_5 ,
+footerText: `${footerr}${enter}${tampilWaktu}`,
+buttons: miss_6,
+headerType: 4,
+imageMessage: miss_2.message.imageMessage
+}
+alpha.sendMessage(from, miss_7, MessageType.buttonsMessage,{
+"contextInfo": {
+"forwardingScore": 999,isForwarded: true,
+"externalAdReply": {
+"title": `${ucapannya2}` ,
+"body": `${botname}`,
+"sourceUrl": apiku,
+"thumbnail": thumb_miku},
+"mentionedJid" : [sender]},
+quoted: mek, sendEphemeral: true
+})
+break
 
 //Ends
 default:
