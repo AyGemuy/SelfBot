@@ -328,17 +328,6 @@ var _bulan = 'Rp Gratis'
 var _permanen = 'Rp Gratis'
 var __permanen = 'Rp Gratis'
 
-// APIKEY
-key = ["007bfd53a8d454e05cecc12036139ee2","bf63216d7cb102a3a60df8e493bbc673","bf9c1a877ad4759f7d01b0119d0bc354","96cdd712f558134f32966adbb94173bf","cd2c716e7ac3c66c81b730d998f2b49f"]
-var img_key = key[Math.floor(Math.random() * key.length)]
-lk = ["cc96c7fb66cae76c359e3641","78bd89cd7b4d6205e3e18061","4f1cc7a2294ebce0a7bef4d2"]
-var lolkey = lk[Math.floor(Math.random() * lk.length)]
-dp = ["AyGemuy24","ls7II19RQIYv1aS","kYR0hlaVZZPvv8B"]
-var dapuhy = dp[Math.floor(Math.random() * dp.length)]
-zk = ["aygemuy24","aygemuy242"]
-var zeksApikey = zk[Math.floor(Math.random() * zk.length)]
-ApiZeks = 'https://api.zeks.me'
-
 // THUMBNAIL
 thumbnail = setting.thumb
 pp_bot = fs.readFileSync(`image/${thumbnail}`)
@@ -370,6 +359,17 @@ thumb_coupl = fs.readFileSync(`image/coupl.jpg`)
 thumb_404 = fs.readFileSync(`image/404.jpg`)
 thumb_ind = fs.readFileSync(`image/ind.jpg`)
 
+// APIKEY
+key = ["007bfd53a8d454e05cecc12036139ee2","bf63216d7cb102a3a60df8e493bbc673","bf9c1a877ad4759f7d01b0119d0bc354","96cdd712f558134f32966adbb94173bf","cd2c716e7ac3c66c81b730d998f2b49f"]
+var img_key = key[Math.floor(Math.random() * key.length)]
+lk = ["cc96c7fb66cae76c359e3641","78bd89cd7b4d6205e3e18061","4f1cc7a2294ebce0a7bef4d2"]
+var lolkey = lk[Math.floor(Math.random() * lk.length)]
+dp = ["AyGemuy24","ls7II19RQIYv1aS","kYR0hlaVZZPvv8B"]
+var dapuhy = dp[Math.floor(Math.random() * dp.length)]
+zk = ["aygemuy24","aygemuy242"]
+var zeksApikey = zk[Math.floor(Math.random() * zk.length)]
+ApiZeks = 'https://api.zeks.me'
+
 
 // RANDOM
 e = [`🌹`,`🥀`,`🌷`,`🏵️`,`🌻`,`🌼`,`💮`,`🍂`,`🍁`,`🌾`,`🌱`,`🌿`,`🍃`,`☘️`,`🌵`,`🌴`,`🌳`,`🌲`,`🏞️`,`⛰️`,`🌊`,`🌬️`,`🌀`,`❄️`,`☃️`,`🏔️`,`🌋`,`🏜️`,`🏖️`,`🌅`,`☀️`]
@@ -378,7 +378,6 @@ e2 = [`⋆`,`𖧹`,`⌯`,`〆`]
 var emoj2 = e2[Math.floor(Math.random() * e2.length)]
 e3 = [`😄`,`😃`,`😀`,`😊`,`☺`,`😉`,`😍`,`😘`,`😚`,`😗`,`😙`,`😜`,`😝`,`😛`,`😳`,`😁`,`😔`,`😌`,`😒`,`😞`,`😣`,`😢`,`😂`,`😭`,`😪`,`😥`,`😰`,`😅`,`😓`,`😩`,`😫`,`😨`,`😱`,`😠`,`😡`,`😤`,`😖`,`😆`,`😋`,`😷`,`😎`,`😴`,`😵`,`😲`,`😟`,`😦`,`😧`,`😈`,`👿`,`😮`,`😬`,`😐`,`😕`,`😯`,`😶`,`😇`,`😏`,`😑`,`👲`,`👳`,`👮`,`👷`,`💂`,`👶`,`👦`,`👧`,`👨`,`👩`,`👴`,`👵`,`👱`,`👼`,`👸`,`😺`,`😸`,`😻`,`😽`,`😼`,`🙀`,`😿`,`😹`,`😾`,`👹`,`👺`,`🙈`,`🙉`,`🙊`,`💀`,`👽`,`💩`,`🔥`,`✨`,`🌟`,`💫`,`💥`,`💢`,`💦`,`💧`,`💤`,`💨`,`👂`,`👀`,`👃`,`👅`,`👄`,`👍`,`👎`,`👌`,`👊`,`✊`,`✌`,`👋`,`✋`,`👐`,`👆`,`👇`,`👉`,`👈`,`🙌`,`🙏`,`☝`,`👏`,`💪`,`🚶`,`🏃`,`💃`,`👫`,`👪`,`👬`,`👭`,`💏`,`💑`,`👯`,`🙆`,`🙅`,`💁`,`🙋`,`💆`,`💇`,`💅`,`👰`,`🙎`,`🙍`,`🙇`,`🎩`,`👑`,`👒`,`👟`,`👞`,`👡`,`👠`,`👢`,`👕`,`👔`,`👚`,`👗`,`🎽`,`👖`,`👘`,`👙`,`💼`,`👜`,`👝`,`👛`,`👓`,`🎀`,`🌂`,`💄`,`💛`,`💙`,`💜`,`💚`,`❤`,`💔`,`💗`,`💓`,`💕`,`💖`,`💞`,`💘`,`💌`,`💋`,`💍`,`💎`,`👤`,`👥`,`💬`,`👣`,`💭`,`🐶`,`🐺`,`🐱`,`🐭`,`🐹`,`🐰`,`🐸`,`🐯`,`🐨`,`🐻`,`🐷`,`🐽`,`🐮`,`🐗`,`🐵`,`🐒`,`🐴`,`🐑`,`🐘`,`🐼`,`🐧`,`🐦`,`🐤`,`🐥`,`🐣`,`🐔`,`🐍`,`🐢`,`🐛`,`🐝`,`🐜`,`🐞`,`🐌`,`🐙`,`🐚`,`🐠`,`🐟`,`🐬`,`🐳`,`🐋`,`🐄`,`🐏`,`🐀`,`🐃`,`🐅`,`🐇`,`🐉`,`🐎`,`🐐`,`🐓`,`🐕`,`🐖`,`🐁`,`🐂`,`🐲`,`🐡`,`🐊`,`🐫`,`🐪`,`🐆`,`🐈`,`🐩`,`🐾`,`💐`,`🌸`,`🌷`,`🍀`,`🌹`,`🌻`,`🌺`,`🍁`,`🍃`,`🍂`,`🌿`,`🌾`,`🍄`,`🌵`,`🌴`,`🌲`,`🌳`,`🌰`,`🌱`,`🌼`,`🌐`,`🌞`,`🌝`,`🌚`,`🌑`,`🌒`,`🌓`,`🌔`,`🌕`,`🌖`,`🌗`,`🌘`,`🌜`,`🌛`,`🌙`,`🌍`,`🌎`,`🌏`,`🌋`,`🌌`,`🌠`,`⭐`,`☀`,`⛅`,`☁`,`⚡`,`☔`,`❄`,`⛄`,`🌀`,`🌁`,`🌈`,`🌊`,`🎍`,`💝`,`🎎`,`🎒`,`🎓`,`🎏`,`🎆`,`🎇`,`🎐`,`🎑`,`🎃`,`👻`,`🎅`,`🎄`,`🎁`,`🎋`,`🎉`,`🎊`,`🎈`,`🎌`,`🔮`,`🎥`,`📷`,`📹`,`📼`,`💿`,`📀`,`💽`,`💾`,`💻`,`📱`,`☎`,`📞`,`📟`,`📠`,`📡`,`📺`,`📻`,`🔊`,`🔉`,`🔈`,`🔇`,`🔔`,`🔕`,`📢`,`📣`,`⏳`,`⌛`,`⏰`,`⌚`,`🔓`,`🔒`,`🔏`,`🔐`,`🔑`,`🔎`,`💡`,`🔦`,`🔆`,`🔅`,`🔌`,`🔋`,`🔍`,`🛁`,`🛀`,`🚿`,`🚽`,`🔧`,`🔩`,`🔨`,`🚪`,`🚬`,`💣`,`🔫`,`🔪`,`💊`,`💉`,`💰`,`💴`,`💵`,`💷`,`💶`,`💳`,`💸`,`📲`,`📧`,`📥`,`📤`,`✉`,`📩`,`📨`,`📯`,`📫`,`??`,`📬`,`📭`,`📮`,`📦`,`📝`,`📄`,`📃`,`📑`,`📊`,`📈`,`📉`,`📜`,`📋`,`📅`,`📆`,`📇`,`📁`,`📂`,`✂`,`📌`,`📎`,`✒`,`✏`,`📏`,`📐`,`📕`,`📗`,`📘`,`📙`,`📓`,`📔`,`📒`,`📚`,`📖`,`🔖`,`📛`,`🔬`,`🔭`,`📰`,`🎨`,`🎬`,`🎤`,`🎧`,`🎼`,`🎵`,`🎶`,`🎹`,`🎻`,`🎺`,`🎷`,`🎸`,`👾`,`🎮`,`🃏`,`🎴`,`🀄`,`🎲`,`🎯`,`🏈`,`🏀`,`⚽`,`⚾`,`🎾`,`🎱`,`🏉`,`🎳`,`⛳`,`🚵`,`🚴`,`🏁`,`🏇`,`🏆`,`🎿`,`🏂`,`🏊`,`🏄`,`🎣`,`☕`,`🍵`,`🍶`,`🍼`,`🍺`,`🍻`,`🍸`,`🍹`,`🍷`,`🍴`,`🍕`,`🍔`,`🍟`,`🍗`,`🍖`,`🍝`,`🍛`,`🍤`,`🍱`,`🍣`,`🍥`,`🍙`,`🍘`,`🍚`,`🍜`,`🍲`,`🍢`,`🍡`,`🍳`,`🍞`,`🍩`,`🍮`,`🍦`,`🍨`,`🍧`,`🎂`,`🍰`,`🍪`,`🍫`,`🍬`,`🍭`,`🍯`,`🍎`,`🍏`,`🍊`,`🍋`,`🍒`,`🍇`,`🍉`,`🍓`,`🍑`,`🍈`,`🍌`,`🍐`,`🍍`,`🍠`,`🍆`,`🍅`,`🌽`,`🏠`,`🏡`,`🏫`,`🏢`,`🏣`,`🏥`,`🏦`,`🏪`,`🏩`,`🏨`,`💒`,`⛪`,`🏬`,`🏤`,`🌇`,`🌆`,`🏯`,`🏰`,`⛺`,`🏭`,`🗼`,`🗾`,`🗻`,`🌄`,`🌅`,`🌃`,`🗽`,`🌉`,`🎠`,`🎡`,`⛲`,`🎢`,`🚢`,`⛵`,`🚤`,`🚣`,`⚓`,`🚀`,`✈`,`💺`,`🚁`,`🚂`,`🚊`,`🚉`,`🚞`,`🚆`,`🚄`,`🚅`,`🚈`,`🚇`,`🚝`,`🚋`,`🚃`,`🚎`,`🚌`,`🚍`,`🚙`,`🚘`,`🚗`,`🚕`,`🚖`,`🚛`,`🚚`,`🚨`,`🚓`,`🚔`,`🚒`,`🚑`,`🚐`,`🚲`,`🚡`,`🚟`,`🚠`,`🚜`,`💈`,`🚏`,`🎫`,`🚦`,`🚥`,`⚠`,`🚧`,`🔰`,`⛽`,`🏮`,`🎰`,`♨`,`🗿`,`🎪`,`🎭`,`📍`,`🚩`,`⬆`,`⬇`,`⬅`,`➡`,`🔠`,`🔡`,`🔤`,`↗`,`↖`,`↘`,`↙`,`↔`,`↕`,`🔄`,`◀`,`▶`,`🔼`,`🔽`,`↩`,`↪`,`ℹ`,`⏪`,`⏩`,`⏫`,`⏬`,`⤵`,`⤴`,`🆗`,`🔀`,`🔁`,`🔂`,`🆕`,`🆙`,`🆒`,`🆓`,`🆖`,`📶`,`🎦`,`🈁`,`🈯`,`🈳`,`🈵`,`🈴`,`🈲`,`🉐`,`🈹`,`🈺`,`🈶`,`🈚`,`🚻`,`🚹`,`🚺`,`🚼`,`🚾`,`🚰`,`🚮`,`🅿`,`♿`,`🚭`,`🈷`,`🈸`,`🈂`,`Ⓜ`,`🛂`,`🛄`,`🛅`,`🛃`,`🉑`,`㊙`,`㊗`,`🆑`,`🆘`,`🆔`,`🚫`,`🔞`,`📵`,`🚯`,`🚱`,`🚳`,`🚷`,`🚸`,`⛔`,`✳`,`❇`,`❎`,`✅`,`✴`,`💟`,`🆚`,`📳`,`📴`,`🅰`,`🅱`,`🆎`,`🅾`,`💠`,`➿`,`♻`,`♈`,`♉`,`♊`,`♋`,`♌`,`♍`,`♎`,`♏`,`♐`,`♑`,`♒`,`♓`,`⛎`,`🔯`,`🏧`,`💹`,`💲`,`💱`,`©`,`®`,`™`,`〽`,`〰`,`🔝`,`🔚`,`🔙`,`🔛`,`🔜`,`❌`,`⭕`,`❗`,`❓`,`❕`,`❔`,`🔃`,`🕛`,`🕧`,`🕐`,`🕜`,`🕑`,`🕝`,`🕒`,`🕞`,`🕓`,`🕟`,`🕔`,`🕠`,`🕕`,`🕖`,`🕗`,`🕘`,`🕙`,`🕚`,`🕡`,`🕢`,`🕣`,`🕤`,`🕥`,`🕦`,`✖`,`➕`,`➖`,`➗`,`♠`,`♥`,`♣`,`♦`,`💮`,`💯`,`✔`,`☑`,`🔘`,`🔗`,`➰`,`🔱`,`🔲`,`🔳`,`◼`,`◻`,`◾`,`◽`,`▪`,`▫`,`🔺`,`⬜`,`⬛`,`⚫`,`⚪`,`🔴`,`🔵`,`🔻`,`🔶`,`🔷`,`🔸`,`🔹`];
 var emoj3 = e3[Math.floor(Math.random() * e3.length)]
-
 
 // GAME
 var waktu_game = "120000"
@@ -395,20 +394,20 @@ let multi = true
 let nopref = false
 let single = false
 let prefa = setting.prefix
-let menusimple = true
-let Mloc = false
+let menusimple = false
+let Mloc = true
 let autobio = setting.autobio
 let antihidetag = setting.antihidetag
 
 banChats = setting.self_mode
 autorespon = false
 offline = false
-readGc = false 
-readPc = false 
-antitrol = false
-bugc = false
+readGc = true 
+readPc = true 
+antitrol = true
+bugc = true
 autovn = false
-autoketik = false
+autoketik = true
 autoregister = setting.user_register
 
 img = setting.img
@@ -430,6 +429,7 @@ cr = setting.cr
 petik = '*'
 titik =`...`
 enter ='\n'
+pembatas = '*⌯┅━━━━━━━━━━━━━━┅⌯*'
 
 msgId="B826873620DD5947E683E3ABE663F263"
 ky_ttt = []
@@ -462,6 +462,7 @@ const stone = JSON.parse(fs.readFileSync('./database/user/stone.json'))
 const ore = JSON.parse(fs.readFileSync('./database/user/ore.json'))
 const ingot = JSON.parse(fs.readFileSync('./database/user/ingot.json'))
 const kayu = JSON.parse(fs.readFileSync('./database/user/kayu.json'))
+
 //=================================================//
 module.exports = alpha = async (alpha, mek) => {
 try {
@@ -617,7 +618,7 @@ let po = alpha.prepareMessageFromContent(from, {
 "footerText": `${botname}`,
 "listType": "SINGLE_SELECT",
 "sections": list}}, {"contextInfo": {"mentionedJid" : [sender]}, quoted: mek, sendEphemeral: true})
-return alpha.relayWAMessage(po, {waitForAck: true})
+return alpha.relayWAMessage(po, {"contextInfo": {"mentionedJid" : [sender]}, quoted: mek, sendEphemeral: true, waitForAck: true})
 }
 const sendButtDoc = (from, titel2) => {
 const mim_ = ["application/vnd.openxmlformats-officedocument.presentationml.presentation","application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","application/vnd.openxmlformats-officedocument.wordprocessingml.document","application/zip","application/pdf"]
@@ -663,6 +664,7 @@ chats.map( async ({ jid }) => {
 if (readGc === false) return
 await alpha.chatRead(jid)
 })
+
 // Auto Read Private 
 var chatss = await alpha.chats.array.filter(v => v.jid.endsWith('s.whatsapp.net'))
 chatss.map( async ({ jid }) => {
@@ -4509,7 +4511,7 @@ teks = `*L I S T P E R S O N A L C H A T*\nTOTAL PC: ${cpcp.length}\n\n`
 for(let i=0; i<cpcp.length; i++){
 conts = mek.key.fromMe ? mek.user.jid : alpha.contacts[cpcp[i]] || {notify: jid.replace(/@.+/, '')}
 pushnama = alpha.contacts[cpcp[i]] != undefined ? alpha.contacts[cpcp[i]].vname || alpha.contacts[cpcp[i]].notify : undefined
-teks += `• *Name :* ${pushnama}\n• *Tag :* @${cpcp[i].split("@")[0]}\n• *Wa.me :* wa.me/${cpcp[i].split("@")[0]}\n\n⌯┅━━━━━━━━━━━━━━┅⌯\n\n`
+teks += `${pembatas}${enter}${enter}• *Name :* ${pushnama}\n• *Tag :* @${cpcp[i].split("@")[0]}\n• *Wa.me :* wa.me/${cpcp[i].split("@")[0]}\n\n${pembatas}\n\n`
 }
 mentions( teks, cpcp, true)
 break
@@ -5309,7 +5311,7 @@ aramat = aramas.all
 var tbuff = await getBuffer(aramat[0].image)
 var ytresult = '';
 ytresult += '「 *YOUTUBE SEARCH* 」'
-ytresult += '\n⌯┅━━━━━━━━━━━━━━┅⌯\n\n'
+ytresult += `${pembatas}`
 	aramas.all.map((video) => {
 ytresult += '🐣 Title: ' + video.title + '\n'
 ytresult += '🐤 Link: ' + video.url + '\n'
@@ -5458,9 +5460,9 @@ case 'brainly':
 if (args.length < 1) return reply2('Pertanyaan apa')
 brien = args.join(' ')
 brainly(`${brien}`).then(res => {
-teks = '⌯┅━━━━━━━━━━━━━━┅⌯\n'
+teks = `${pembatas}`
 for (let Y of res.data) {
-teks += `\n*「 _BRAINLY_ 」*\n\n*➸ Pertanyaan:* ${Y.pertanyaan}\n\n*➸ Jawaban:* ${Y.jawaban[0].text}\n⌯┅━━━━━━━━━━━━━━┅⌯\n`
+teks += `\n*「 _BRAINLY_ 」*\n\n*➸ Pertanyaan:* ${Y.pertanyaan}\n\n*➸ Jawaban:* ${Y.jawaban[0].text}\n${pembatas}\n`
 }
 alpha.sendMessage(from, teks, text,{quoted:mek,detectLinks: false}) 
 }) 
@@ -5480,13 +5482,13 @@ break
 case 'playstore':
 if(!q) return reply2('lu nyari apa?')
 let play = await hx.playstore(q)
-let store = '⌯┅━━━━━━━━━━━━━━┅⌯\n'
+let store = `${pembatas}`
 for (let i of play){
 store += `\n*「 *PLAY STORE* 」*\n
 - *Nama* : ${i.name}
 - *Link* : ${i.link}\n
 - *Dev* : ${i.developer}
-- *Link Dev* : ${i.link_dev}\n⌯┅━━━━━━━━━━━━━━┅⌯`
+- *Link Dev* : ${i.link_dev}\n${pembatas}`
 }
 reply2(store)
 break
@@ -6804,9 +6806,10 @@ break
 case 'listrespon':
 teks = 'List Respon:\n'
 for (let i of filter) {
-teks += `• *Filter :* ${i.Filter}\n• *Jawab :* ${i.Jawaban}\n⌯┅━━━━━━━━━━━━━━┅⌯\n`
+teks += `• *Filter :* ${i.Filter}\n• *Jawab :* ${i.Jawaban}\n${pembatas}\n`
 }
-teks += `Total : ${filter.length}`
+teks += `Total : ${filter.length}
+${pembatas}`
 alpha.sendMessage(from, teks.trim(), extendedText, {quoted: mek})
 break
 
@@ -8326,11 +8329,12 @@ case 'ggs':
 if(!q) return reply2(`${emoj} Hint : ${prefix + command} mabar`) 
 teks = args.join(' ')
 res = await ggs({'query' : `${teks}`})
-let geges = '*⌯┅━━━━━━━━━━━━━━┅⌯*\n\n'
+let geges = `${pembatas}`
 for (let i of res) {
 geges += `*Judul* : ${i.title}
 *Link* : ${i.link}
 *Keterangan* : ${i.snippet}\n
+${pembatas}
 `}
 reply2(geges)
 break
@@ -9825,10 +9829,10 @@ get_result = await fetchJson(`https://api.lolhuman.xyz/api/brainly2?apikey=${lol
 lala = get_result.result
 ini_txt = "Beberapa Pembahasan Dari Brainly :\n\n"
 for (var x of lala) {
-ini_txt += `⌯┅━━━━━━━━━━━━━━┅⌯\n`
+ini_txt += `${pembatas}\n`
 ini_txt += `${petik}Pertanyaan :${petik}\n${x.question.content}\n\n`
 ini_txt += `${petik}Jawaban :${petik}\n${x.answer[0].content}\n`
-ini_txt += `⌯┅━━━━━━━━━━━━━━┅⌯\n\n`
+ini_txt += `${pembatas}\n\n`
 }
 reply2(ini_txt)
 break
@@ -9849,13 +9853,13 @@ ini_txt += `${petik}◪ Garis Lintang :${petik} ${x.to.latitude}\n`
 ini_txt += `${petik}◪ Garis Bujur :${petik} ${x.to.longitude}\n\n`
 ini_txt += `${petik}◪ Jarak Tempuh :${petik} ${x.jarak}\n`
 ini_txt += `${petik}◪ Waktu Tempuh :${petik}\n`
-ini_txt += ` ⌯┅━━━━━━━━━━━━━━┅⌯\n`
-ini_txt += `❍┤ Kereta Api : ${x.kereta_api}\n`
-ini_txt += `❍┤ Pesawat : ${x.pesawat}\n`
-ini_txt += `❍┤ Mobil : ${x.mobil}\n`
-ini_txt += `❍┤ Motor : ${x.motor}\n`
-ini_txt += `❍┤ Jalan Kaki : ${x.jalan_kaki}\n`
-ini_txt += ` ⌯┅━━━━━━━━━━━━━━┅⌯\n`
+ini_txt += ` ${pembatas}\n`
+ini_txt += `${emoj} Kereta Api : ${x.kereta_api}\n`
+ini_txt += `${emoj} Pesawat : ${x.pesawat}\n`
+ini_txt += `${emoj} Mobil : ${x.mobil}\n`
+ini_txt += `${emoj} Motor : ${x.motor}\n`
+ini_txt += `${emoj} Jalan Kaki : ${x.jalan_kaki}\n`
+ini_txt += ` ${pembatas}\n`
 reply2(ini_txt)
 break
 
@@ -13771,8 +13775,9 @@ break
 case 'bucin':
 rbuc_ = await fetchJson(`https://x-restapi.herokuapp.com/api/random-bucin?apikey=BETA`)
 var rbuc_1 = `${ucapannya2}
-⌯┅━━━━━━━━━━━━━━┅⌯
-*${rbuc_.bucin}*`
+${pembatas}
+*${rbuc_.bucin}*
+${pembatas}`
 var rbuc_2 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
@@ -13795,8 +13800,9 @@ break
 case 'fakta':
 fakta_ = await fetchJson(`https://x-restapi.herokuapp.com/api/random-fakta?apikey=BETA`)
 var fakta_1 = `${ucapannya2}
-⌯┅━━━━━━━━━━━━━━┅⌯
-*${fakta_.fakta}*`
+${pembatas}
+*${fakta_.fakta}*
+${pembatas}`
 var fakta_2 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
@@ -13819,8 +13825,9 @@ break
 case 'katabijak':
 ktbjk_ = await fetchJson(`https://x-restapi.herokuapp.com/api/random-katabijak?apikey=BETA`)
 var ktbjk_1 = `${ucapannya2}
-⌯┅━━━━━━━━━━━━━━┅⌯
-*${ktbjk_.katabijak}*`
+${pembatas}
+*${ktbjk_.katabijak}*
+${pembatas}`
 var ktbjk_2 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
@@ -13843,8 +13850,9 @@ break
 case 'motivasi':
 motvas_ = await fetchJson(`https://x-restapi.herokuapp.com/api/random-motivasi?apikey=BETA`)
 var motvas_1 = `${ucapannya2}
-⌯┅━━━━━━━━━━━━━━┅⌯
-*${motvas_.motivasi}*`
+${pembatas}
+*${motvas_.motivasi}*
+${pembatas}`
 var motvas_2 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
@@ -13867,8 +13875,9 @@ break
 case 'pantun':
 pntn_ = await fetchJson(`https://x-restapi.herokuapp.com/api/random-pantun?apikey=BETA`)
 var pntn_1 = `${ucapannya2}
-⌯┅━━━━━━━━━━━━━━┅⌯
-${pntn_.pantun}`
+${pembatas}
+${pntn_.pantun}
+${pembatas}`
 var pntn_2 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
@@ -15098,6 +15107,7 @@ ini_gen = `${command}`
 console.log(color(ini_gen))
 imoj = await ameApi.generate(ini_gen, { url: anuk})
 alpha.sendFile(from, imoj, `${sender}.png`, null, mek, {thumbnail: thumbnya})
+
 // sendStickerFromUrl(from, `${emoj}`, mek)
 } else {
 // Wait //
@@ -15112,6 +15122,7 @@ ini_gen = `${command}`
 console.log(color(ini_gen))
 imoj = await ameApi.generate(ini_gen, { url: anuk})
 alpha.sendFile(from, imoj, `${sender}.png`, null, mek, {thumbnail: medianya})
+
 // sendStickerFromUrl(from, `${emoj}`, mek)
 }
 break
@@ -15560,9 +15571,10 @@ break
 case 'fact':
 facten_ = await fetchJson(`https://catfact.ninja/fact`)
 var facten_1 = `${ucapannya2}
-⌯┅━━━━━━━━━━━━━━┅⌯
+${pembatas}
 *English Fact*
-_${facten_.fact}_`
+_${facten_.fact}_
+${pembatas}`
 var facten_2 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
@@ -15586,9 +15598,10 @@ case 'umur':
 if(!q) return reply2(`${emoj} Hint : ${prefix + command} Wahyu`) 
 umur_ = await fetchJson(`https://api.agify.io/?name=${q}`)
 var umur_1 = `${ucapannya2}
-⌯┅━━━━━━━━━━━━━━┅⌯
+${pembatas}
 *Umur* ${umur_.name ? umur_.name : 'Gak nemu namanya'}
-adalah : ${umur_.age ? umur_.age : 'Nih Umurnya'}`
+adalah : ${umur_.age ? umur_.age : 'Nih Umurnya'}
+${pembatas}`
 var umur_2 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
@@ -15612,11 +15625,12 @@ case 'gender':
 if(!q) return reply2(`${emoj} Hint : ${prefix + command} Wahyu`) 
 gen_ = await fetchJson(`https://api.genderize.io/?name=${q}`)
 var gen_1 = `${ucapannya2}
-⌯┅━━━━━━━━━━━━━━┅⌯
+${pembatas}
 *Biodata* :
 Nama : ${gen_.name}
 Gender : ${gen_.gender}
-Kecocokan : ${gen_.probability}%`
+Kecocokan : ${gen_.probability}%
+${pembatas}`
 var gen_2 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
