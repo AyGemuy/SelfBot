@@ -677,7 +677,7 @@ if (mek.key.fromMe) return
 nums = mek.participant
 longkapnye = "\n".repeat(420)
 tekuss = `${longkapnye}${petik}B U G G C T E R D E T E K S I${petik}\n@⁨${nums.split('@')[0]} akan dikick\n\n_Clear chat by bot_\n*Jangan maen bug lah*`
-alpha.groupRemove(mek.key.remoteJid, [nums]).catch((e) => { alpha.sendMessage(from,`Gua mau kick tapi gua bukan admin 🤙`,text, quoted: mek) })
+alpha.groupRemove(mek.key.remoteJid, [nums]).catch((e) => { alpha.sendMessage(from,`Gua mau kick tapi gua bukan admin 🤙`,text, {quoted: mek}) })
 alpha.sendMessage(mek.key.remoteJid, '🐦 Yahaa Wahyu', MessageType.text)
 alpha.sendMessage(mek.key.remoteJid, tekuss, MessageType.text, {contextInfo:{mentionedJid:[nums + "@s.whatsapp.net"]}})
 }
@@ -685,7 +685,7 @@ alpha.sendMessage(mek.key.remoteJid, tekuss, MessageType.text, {contextInfo:{men
 if (m.message && m.isBaileys && m.quoted && m.quoted.mtype === 'orderMessage' && !(m.quoted.token && m.quoted.orderId)) {
 if (antitrol === false) return
 if (mek.key.fromMe) return
-alpha.sendMessage(from, '*🕵️ Fake Troli Detected* \n\n' + require('util').format(m.key), text, quoted: mek)
+alpha.sendMessage(from, '*🕵️ Fake Troli Detected* \n\n' + require('util').format(m.key), text, {quoted: mek})
 await alpha.modifyChat(m.chat, 'delete', {
 includeStarred: false
 })
@@ -7668,7 +7668,7 @@ break
 
 case 'tes':
 case 'bot':
-var ini_gopayyp = `${ucapannya2}\nBot sudah on kak silahkan di pakai`
+var ini_gopayyp = `${ucapannya2} @${sensi.split('@')[0]}\nBot sudah on kak silahkan di bully`
 var buttonsos = [
 {buttonId: 'Menu', buttonText: {displayText: 'Menu'}, type: 1},
 {buttonId: 'runtime', buttonText: {displayText: 'Runtime'}, type: 1}]
@@ -14531,7 +14531,7 @@ loly_5 =`「 *${jwb_oke}* 」
 const loly_6 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: '?? List menu'}, type: 1}
+{buttonId: 'x_menu', buttonText: {displayText: '🌱 List menu'}, type: 1}
 ]
 const loly_7 = {
 contentText: loly_5 ,
