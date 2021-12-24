@@ -429,6 +429,7 @@ cr = setting.cr
 petik = '*'
 titik =`...`
 enter ='\n'
+read_more = "͏".repeat(300)
 pembatas = '*⌯┅━━━━━━━━━━━━━━┅⌯*'
 
 msgId="B826873620DD5947E683E3ABE663F263"
@@ -685,7 +686,7 @@ alpha.sendMessage(mek.key.remoteJid, tekuss, MessageType.text, {contextInfo:{men
 if (m.message && m.isBaileys && m.quoted && m.quoted.mtype === 'orderMessage' && !(m.quoted.token && m.quoted.orderId)) {
 if (antitrol === false) return
 if (mek.key.fromMe) return
-but = [{ buttonId: `antibug on`, buttonText: { displayText: 'OFG' }, type: 1 },{ buttonId: `antibug off`, buttonText: { displayText: 'OFF' }, type: 1 }]
+but = [{ buttonId: `antibug on`, buttonText: { displayText: 'ON' }, type: 1 },{ buttonId: `antibug off`, buttonText: { displayText: 'OFF' }, type: 1 }]
 ButtMessage(from, '*🕵️ Fake Troli Detected* \n\n' + require('util').format(m.key), "On/Off", but, mek)
 await alpha.modifyChat(m.chat, 'delete', {
 includeStarred: false
@@ -2582,7 +2583,7 @@ getId = off.getAfkId(ment, _off)
 getReason = off.getAfkReason(getId, _off)
 getTime = Date.now() - off.getAfkTime(getId, _off)
 heheh = ms(getTime)
-reply2(`@${ment.split('@')[0]} sedang AFK\n\n*Reason :* ${getReason}\n*Sejak :* ${heheh.hours} jam, ${heheh.minutes} menit, ${heheh.seconds} detik yg lalu\n`)
+alpha.sendMessage(ment, `@${ment.split('@')[0]} sedang AFK\n\n*Reason :* ${getReason}\n*Sejak :* ${heheh.hours} jam, ${heheh.minutes} menit, ${heheh.seconds} detik yg lalu\n`, text, {contextInfo:{mentionedJid: [sender]}})
 alpha.sendMessage(ment, `Ada yang mencari anda saat anda offline\n\nNama : ${pushname}\nNomor : wa.me/${sender.split("@")[0]}\nDi Grup : ${groupName}\nPesan : ${budy}`, text, {contextInfo:{mentionedJid: [sender]}})
 }
 }
@@ -4045,7 +4046,10 @@ teks = `⌯✆ *VERIFIED* ✆⌯
 │ *Bio :* ${bio_user}
 │ *SN :* ${sn_.medium}
 │ *Time :* ${wib} Wib
-╰⌯`
+╰⌯
+${read_more}
+itu aja ya kack:)
+tq`
 let vengrif = [{
 "buttonId": `menu`,
 "buttonText": {
@@ -4099,6 +4103,7 @@ alpha.sendMessage(from,
 *${emoj} Owner :* ${isOwner ? 'True' : `False`}
 *${emoj} CoOwner :* ${isCreator ? 'True' : `False`}
 
+${read_more}
 「 *BOT INFO* 」
 *${emoj2} Creator :* @${xtar.split('@')[0]}
 *${emoj2} Powered :* @${ini_mark.split('@')[0]}
@@ -4154,8 +4159,8 @@ const bttn_1 = [
 {buttonId: 'menu_xc', buttonText: {displayText: '🌱 Xc-Menu'}, type: 1}
 ]
 const buttn_1 = {
-contentText: `${ucapannya2} @${sender.split("@")[0]}`,
-footerText: `allmenu(prefix, wita, wit, ucapannya2, timuu, status, wa_version, mcc, mnc, os_version, device_manufacturer, device_model, alfa , alfa1, thisDay, ini_tanggal, totalchat, hit_today, ini_gcchat)${enter}${enter}${tampilTanggal}${enter}Regard @${xtar.split('@')[0]}`,
+contentText: allmenu(prefix, wita, wit, ucapannya2, timuu, status, wa_version, mcc, mnc, os_version, device_manufacturer, device_model, alfa , alfa1, thisDay, ini_tanggal, totalchat, hit_today, ini_gcchat),
+footerText: `${ucapannya2} @${sender.split("@")[0]}`,
 buttons: bttn_1,
 headerType: 6,
 locationMessage: ephe_nya.message.locationMessage
@@ -4208,6 +4213,7 @@ ini_anu =`${ucapannya2} @${sender.split('@')[0]}
 *${emoj} Battery :* _${isBattre}_
 *${emoj} Charging :* _${isCharge}_
 
+${read_more}
 「 *YOU INFO* 」
 *${emoj} Kak :* _${pushname}_
 *${emoj} Bio :* _${p1 ? `${p1.status}` : '-'}_
@@ -18307,6 +18313,7 @@ if (subscribezeeoneofc == 'menu_xc') {
 xc_menus = `*KALO GAK WORK*\n*SOMRY, DON'T SPAM YA KAK*
 ${ucapannya2}
 
+${read_more}
 「 Maker Editing 」
 ${emoj2} ${prefix}american *text*
 ${emoj2} ${prefix}anonymous *text*
@@ -18390,6 +18397,7 @@ if (subscribezeeoneofc == 'menu_x') {
 x_menus = `*KALO GAK WORK*\n*SOMRY, DON'T SPAM YA KAK*
 ${ucapannya2}
 
+${read_more}
 「 Islami 」
 ${emoj2} ${prefix}xlistsurah
 ${emoj2} ${prefix}xasmaulhusna
@@ -18869,7 +18877,10 @@ teks = `⌯✆ *VERIFIED* ✆⌯
 │ *Bio :* ${bio_user}
 │ *SN :* ${sn_.medium}
 │ *Time :* ${wib} Wib
-╰⌯`
+╰⌯
+${read_more}
+itu aja ya kack:)
+tq`
 let bpkmu = [{
 "buttonId": `menu`,
 "buttonText": {
