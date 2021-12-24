@@ -4075,6 +4075,12 @@ break
 
 case 'menu':
 if(menusimple == false){
+	try {
+pepek = await alpha.getProfilePicture(sender)
+} catch {
+pepek = 'https://i.ibb.co/SxN4ymH/2860c9a59c9e.jpg'
+}
+let pekpek = await getBuffer(pepek)
 xtar = `${targetpc}@s.whatsapp.net`
 let xbi = await alpha.getStatus(sender)
 anunya = process.uptime()
@@ -4125,7 +4131,7 @@ buttons: [
 "fileEncSha256": "NI9ykWUcXKquea4BmH7GgzhMb3pAeqqwE+MTFbH/Wk8=",
 "directPath": "/v/t62.7119-24/35160407_568282564396101_3119299043264875885_n.enc?ccb=11-4&oh=d43befa9a76b69d757877c3d430a0752&oe=61915CEC",
 "mediaKeyTimestamp": "1634472176",
-"jpegThumbnail": pp_userz}},
+"jpegThumbnail": pekpek}},
 MessageType.buttonsMessage,
 { quoted: mek,sendEphemeral: true,
 thumbnail: fs.readFileSync(`image/miku.jpg`),
@@ -4134,7 +4140,7 @@ isForwarded: true,
 "mentionedJid" : [sender,xtar,ini_mark],
 externalAdReply: { title: `${botname}`,
 body: `${tampilTanggal}`,
-thumbnail: pp_userz,
+thumbnail: pekpek,
 mediaType:"2",
 previewType: "VIDEO",
 mediaUrl: pelink_}}})
