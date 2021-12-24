@@ -394,15 +394,15 @@ let multi = true
 let nopref = false
 let single = false
 let prefa = setting.prefix
-let menusimple = false
-let Mloc = true
+let menusimple = true
+let Mloc = false
 let autobio = setting.autobio
 let antihidetag = setting.antihidetag
 
 banChats = setting.self_mode
 autorespon = false
 offline = false
-readGc = true 
+readGc = false 
 readPc = true 
 antitrol = true
 bugc = true
@@ -677,7 +677,7 @@ if (mek.key.fromMe) return
 nums = mek.participant
 longkapnye = "\n".repeat(420)
 tekuss = `${longkapnye}${petik}B U G G C T E R D E T E K S I${petik}\n@⁨${nums.split('@')[0]} akan dikick\n\n_Clear chat by bot_\n*Jangan maen bug lah*`
-alpha.groupRemove(mek.key.remoteJid, [nums]).catch((e) => { reply2(`Gua mau kick tapi gua bukan admin 🤙`) })
+alpha.groupRemove(mek.key.remoteJid, [nums]).catch((e) => { alpha.sendMessage(from,`Gua mau kick tapi gua bukan admin 🤙`,text, quoted: mek) })
 alpha.sendMessage(mek.key.remoteJid, '🐦 Yahaa Wahyu', MessageType.text)
 alpha.sendMessage(mek.key.remoteJid, tekuss, MessageType.text, {contextInfo:{mentionedJid:[nums + "@s.whatsapp.net"]}})
 }
@@ -685,7 +685,7 @@ alpha.sendMessage(mek.key.remoteJid, tekuss, MessageType.text, {contextInfo:{men
 if (m.message && m.isBaileys && m.quoted && m.quoted.mtype === 'orderMessage' && !(m.quoted.token && m.quoted.orderId)) {
 if (antitrol === false) return
 if (mek.key.fromMe) return
-reply2('*🕵️ Fake Troli Detected* \n\n' + require('util').format(m.key))
+alpha.sendMessage(from, '*🕵️ Fake Troli Detected* \n\n' + require('util').format(m.key), text, quoted: mek)
 await alpha.modifyChat(m.chat, 'delete', {
 includeStarred: false
 })
@@ -770,7 +770,7 @@ function _0x48c6(_0x36e236,_0x28a7d8){const _0x8c1642=_0x8c16();return _0x48c6=f
 const isPremium = isOwner || isCreator || mek.key.fromMe ? true : premium.checkPremiumUser(sender, _premium)
 const gcount = isPremium ? gcounttprem : gcounttuser
 const isBanned = banned.includes(sender)
-if (isCmd && isBanned) return reply2(lang.benned())
+if (isCmd && isBanned) return alpha.sendMessage(from, "Kena ban", text, {quoted: mek})
 const isVote = isGroup ? voting.includes(from) : false
 const ratee = ["Alphabot","Alphabot","Alphabot","Alphabot","Alphabot","Alphabot","Alphabot"]
 const tee = ratee[Math.floor(Math.random() * ratee.length)]
@@ -1641,26 +1641,26 @@ ane.push(i.jid)
 alpha.sendMessage(from, buffer, sticker, { sendEphemeral: true, contextInfo: { mentionedJid: ane } })
 }
 const promoteAdmin = async function(to, target=[]){
-if(!target.length > 0) { return reply2("No target..") }
+if(!target.length > 0) { return alpha.sendMessage(from, "No target..", text, {quoted: mek}) }
 let g = await alpha.groupMetadata(to)
 let owner = g.owner.replace("c.us","s.whatsapp.net")
 let me = alpha.user.jid
 for (i of target){
 if (!i.includes(me) && !i.includes(owner)){
 const res = await alpha.groupMakeAdmin(to, [i])
-reply2(`Hm..... @${mentioned[0].split('@')[0]} JABATANMU DINAIKAN AKU BANGGA PADAMU`)
+alpha.sendMessage(from, `Hm..... @${mentioned[0].split('@')[0]} JABATANMU DINAIKAN AKU BANGGA PADAMU`,text, {quoted: mek})
 }
 }
 }
 const demoteAdmin = async function(to, target=[]){
-if(!target.length > 0) { return reply2("No target..") }
+if(!target.length > 0) { return alpha.sendMessage(from, "No target..", text, {quoted: mek}) }
 let g = await alpha.groupMetadata(to)
 let owner = g.owner.replace("c.us","s.whatsapp.net")
 let me = alpha.user.jid
 for (i of target){
 if (!i.includes(me) && !i.includes(owner)){
 const res = await alpha.groupDemoteAdmin(to, [i])
-reply2(`Hm..... @${mentioned[0].split('@')[0]} JABATANMU TURUNKAN SAYA IKUT SEDIH`)
+alpha.sendMessage(from, `Hm..... @${mentioned[0].split('@')[0]} JABATANMU TURUNKAN SAYA IKUT SEDIH`,text, {quoted: mek})
 
 }
 }
@@ -1687,7 +1687,7 @@ alpha.groupAdd(from, orangnya)
 }
 const sendFileFromStorage = (path, type, options) => {
 alpha.sendMessage(from, fs.readFileSync(path), type, options).catch(e => {
-reply2('Terjadi kesalahan')
+alpha.sendMessage(from, 'Terjadi kesalahan', text, {quoted: mek})
 console.log(e)
 })
 }
@@ -14531,7 +14531,7 @@ loly_5 =`「 *${jwb_oke}* 」
 const loly_6 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: '🌱 List menu'}, type: 1}
+{buttonId: 'x_menu', buttonText: {displayText: '?? List menu'}, type: 1}
 ]
 const loly_7 = {
 contentText: loly_5 ,
