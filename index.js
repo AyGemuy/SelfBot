@@ -16464,7 +16464,7 @@ rowId: `${prefix}${x}`
 }
 list.push(yy)
 }
-listmsg(from, `${ucapanWaktu}`, `${ucapannya2}\n\n${motiv}*`, list)
+listmsg(from, `${ucapanWaktu}`, `${ucapannya2} @${sender.split('@')[0]}\n\n*Motivasi hari ini :* \n${motiv}`, list)
 break
 
 case '3d-nature':
@@ -16757,7 +16757,7 @@ if (!isOwner && !mek.key.fromMe) return reply2('owner')
 listMsg = {
 buttonText: `Gift`,
 footerText: '',
-description: `JANGAN DIBUKA`,
+description: `JANGAN DIBUKA @${sender.split('@')[0]}`,
 sections: [
 {
 "title": `Bagaimana hadiahnya?`,
@@ -17952,7 +17952,7 @@ rowId: ``
 }
 list.push(yy)
 }
-listmsg(from, `${ucapanWaktu}`, `${ucapannya2}\n\n*Fact :* ${fak}`, list)
+listmsg(from, `${ucapanWaktu}`, `${ucapannya2} @${sender.split('@')[0]}\n\n*Fakta hari ini :* \n${fak}`, list)
 }
 
 if (q5 == "very_easy"){
