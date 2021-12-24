@@ -11627,7 +11627,7 @@ ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
 } else if (!isQuotedImage) {
-var dpuh2 = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
+var dpuh2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
 var dpah2 = await alpha.downloadAndSaveMediaMessage(dpuh2, `./media/${sender}.png`)
 let dpih2 = await imgbb(`${img_key}`, dpah2)
 anuk = `https://api.dapuhy.ga/api/canvas/${command}?img=${dpih2.display_url}&apikey=${dapuhy}`
@@ -13410,7 +13410,7 @@ ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
 } else if (!isQuotedImage) {
-var smra2 = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
+var smra2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
 var smri2 = await alpha.downloadAndSaveMediaMessage(smra2, `./media/${sender}.png`)
 let smru2 = await imgbb(`${img_key}`, smri2)
 anuk = `https://some-random-api.ml/canvas/${command}?avatar=${smru2.display_url}`
@@ -13479,7 +13479,7 @@ ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
 } else if (!isQuotedImage) {
-var lpha2 = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
+var lpha2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
 var lphi2 = await alpha.downloadAndSaveMediaMessage(lpha2, `./media/${sender}.png`)
 let lphu2 = await imgbb(`${img_key}`, lphi2)
 anuk = `https://api-alphabot.herokuapp.com/api/image_editor/${command}?apikey=Alphabot&url=${lphu2.display_url}`
@@ -16667,7 +16667,7 @@ ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
 } else if (!isQuotedImage) {
-var nka2 = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
+var nka2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
 var nki2 = await alpha.downloadAndSaveMediaMessage(nka2, `./media/${sender}.png`)
 let nku2 = await imgbb(`${img_key}`, nki2)
 titid = await fetchJson(`https://nekobot.xyz/api/imagegen?type=${command}&url=${nku2.display_url}`, {method: 'get'})
@@ -17207,7 +17207,7 @@ ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
 } else if (!isQuotedImage) {
-var fara2 = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
+var fara2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
 var fari2 = await alpha.downloadAndSaveMediaMessage(fara2, `./media/${sender}.png`)
 let faru2 = await imgbb(`${img_key}`, fari2)
 anuk = `https://api-xfar05.herokuapp.com/api/canvas/customgfx1?teks=${q}&bg=${faru2.display_url}`
@@ -17247,7 +17247,7 @@ ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
 } else if (!isQuotedImage) {
-var fara_2 = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
+var fara_2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
 var fari_2 = await alpha.downloadAndSaveMediaMessage(fara_2, `./media/${sender}.png`)
 let faru_2 = await imgbb(`${img_key}`, fari_2)
 anuk = `https://api-xfar05.herokuapp.com/api/canvas/customgfx2?teks1=${m1}&teks2=${m2}&bg=${faru_2.display_url}`
@@ -17339,7 +17339,7 @@ ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
 } else if (!isQuotedImage) {
-var fara__2 = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
+var fara__2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
 var fari__2 = await alpha.downloadAndSaveMediaMessage(fara__2, `./media/${sender}.png`)
 let faru__2 = await imgbb(`${img_key}`, fari__2)
 anuk = `https://api-xfar05.herokuapp.com/api/canvas/xnxx?pp=${faru__2.display_url}&username=${q}`
@@ -17673,7 +17673,7 @@ let yeg = await imgbb(`${img_key}`, yig)
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `https://api.lolhuman.xyz/api/yugioh?apikey=${lolkey}&img=${yeg.display_url}&title=${t1}&desc=${t2}&atk=${t3}&def=${t4}`, mek)
 } else if (!isQuotedImage) {
-var yug2 = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
+var yug2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
 var yig2 = await alpha.downloadAndSaveMediaMessage(yug2, `./media/${sender}.png`)
 let yeg2 = await imgbb(`${img_key}`, yig2)
 console.log(color(ini_gen))
@@ -17795,7 +17795,7 @@ ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
 } else if (!isQuotedImage) {
-var jan2 = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
+var jan2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
 var jin2 = await alpha.downloadAndSaveMediaMessage(jan2, `./media/${sender}.png`)
 let jun2 = await imgbb(`${img_key}`, jin2)
 anuk = `https://janbot-api.herokuapp.com/api/imgedit/${command}?url=${jun2.display_url}`
