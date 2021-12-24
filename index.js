@@ -11586,80 +11586,6 @@ fs.writeFileSync("./game/susunkata2.json", JSON.stringify(susunkata2))
 }
 break
 
-case 'ad':
-case 'airpods':
-case 'approved':
-case 'bill':
-case 'bjp':
-case 'blur':
-case 'bobross':
-case 'captcha':
-case 'circle':
-case 'communism':
-case 'confusedstonk':
-case 'continued':
-case 'crush':
-case 'delete':
-case 'discordblack':
-case 'discordblue':
-case 'facepalm':
-case 'gay':
-case 'greyscale':
-case 'hacker2':
-case 'hacker':
-case 'hitler':
-case 'invert':
-case 'jail':
-case 'karaba':
-case 'linus':
-case 'meth':
-case 'mms':
-case 'notstonk':
-case 'police':
-case 'poutine':
-// case 'removebg':
-case 'rip':
-case 'sepia':
-case 'stonk':
-case 'tatoo':
-case 'thomas':
-case 'trash':
-case 'triggered':
-case 'udf':
-case 'wanted':
-case 'what':
-console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
-var imgbb = require('imgbb-uploader')
-if (!isQuotedSticker) {
-var dpuh = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-var dpah = await alpha.downloadAndSaveMediaMessage(dpuh, `./media/${sender}.png`)
-let dpih = await imgbb(`${img_key}`, dpah)
-anuk = `https://api.dapuhy.ga/api/canvas/${command}?img=${dpih.display_url}&apikey=${dapuhy}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-} else if (!isQuotedImage) {
-var dpuh2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
-var dpah2 = await alpha.downloadAndSaveMediaMessage(dpuh2, `./media/${sender}.png`)
-let dpih2 = await imgbb(`${img_key}`, dpah2)
-anuk = `https://api.dapuhy.ga/api/canvas/${command}?img=${dpih2.display_url}&apikey=${dapuhy}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-} else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
-dpah3 = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
-let dpuh3 = await alpha.getProfilePicture(dpah3).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
-let dpih3 = await imageToBase64(JSON.stringify(dpuh3).replace(/\"/gi, ''))
-fs.writeFileSync('janckuk.jpeg', dpih3, 'base64')
-let dpeh3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
-anuk = `https://api.dapuhy.ga/api/canvas/${command}?img=${dpeh3.display_url}&apikey=${dapuhy}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-} else {
-reply2('Reply stc/img')
-}
-break
 
 case 'batues':
 case 'exontol':
@@ -13381,137 +13307,8 @@ fs.writeFileSync("./game/teswibu.json", JSON.stringify(teswibu))
 break
 
 //LIST───────[ API SOME RANDOM
-case 'blue':
-// case 'blur':
-case 'blurple':
-case 'blurple2':
-case 'brightness':
-case 'color':
-case 'colorviewer':
-case 'comrade':
-// case 'gay':
-case 'glass':
-case 'green':
-// case 'greyscale':
-case 'hex':
-case 'horny':
-// case 'invert':
-case 'invertgreyscale':
-case 'its-so-stupid':
-// case 'jail':
-case 'lolice':
-case 'passed':
-case 'pixelate':
-case 'red':
-case 'rgb':
-// case 'sepia':
-case 'simpcard':
-case 'threshold':
-// case 'triggered':
-case 'tweet':
-case 'wasted':
-case 'youtube-comment':
-console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
-var imgbb = require('imgbb-uploader')
-if (!isQuotedSticker) {
-var smra = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-var smri = await alpha.downloadAndSaveMediaMessage(smra, `./media/${sender}.png`)
-let smru = await imgbb(`${img_key}`, smri)
-anuk = `https://some-random-api.ml/canvas/${command}?avatar=${smru.display_url}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-} else if (!isQuotedImage) {
-var smra2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
-var smri2 = await alpha.downloadAndSaveMediaMessage(smra2, `./media/${sender}.png`)
-let smru2 = await imgbb(`${img_key}`, smri2)
-anuk = `https://some-random-api.ml/canvas/${command}?avatar=${smru2.display_url}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-} else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
-smri3 = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
-let smra3 = await alpha.getProfilePicture(smri3).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
-let smru3 = await imageToBase64(JSON.stringify(smra3).replace(/\"/gi, ''))
-fs.writeFileSync('janckuk.jpeg', smru3, 'base64')
-let smre3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
-anuk = `https://some-random-api.ml/canvas/${command}?avatar=${smre3.display_url}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-} else {
-reply2('Reply stc/img')
-}
-break
 
-case '3000years':
-case 'approved':
-case 'beautiful':
-case 'blur':
-case 'brazzers':
-case 'burn':
-case 'challenger':
-case 'circle':
-case 'contrast':
-case 'ddungeon':
-case 'deepfry':
-case 'dictator':
-case 'distort':
-case 'fire':
-case 'gay':
-case 'glitch':
-case 'greyscale':
-case 'instagram':
-case 'invert':
-case 'jail':
-case 'lookwhatkarenhave':
-case 'missionpassed':
-case 'moustache':
-case 'ps4':
-case 'redple':
-case 'rejected':
-case 'rip':
-case 'scary':
-case 'sepia':
-case 'sharpen':
-case 'sniper':
-case 'thanos':
-case 'triggered':
-case 'utatoo':
-case 'wanted':
-case 'wasted':
-console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
-var imgbb = require('imgbb-uploader')
-if (!isQuotedSticker) {
-var lpha = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-var lphi = await alpha.downloadAndSaveMediaMessage(lpha, `./media/${sender}.png`)
-let lphu = await imgbb(`${img_key}`, lphi)
-anuk = `https://api-alphabot.herokuapp.com/api/image_editor/${command}?apikey=Alphabot&url=${lphu.display_url}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-} else if (!isQuotedImage) {
-var lpha2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
-var lphi2 = await alpha.downloadAndSaveMediaMessage(lpha2, `./media/${sender}.png`)
-let lphu2 = await imgbb(`${img_key}`, lphi2)
-anuk = `https://api-alphabot.herokuapp.com/api/image_editor/${command}?apikey=Alphabot&url=${lphu2.display_url}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-} else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
-lphi3 = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
-let lpha3 = await alpha.getProfilePicture(lphi3).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
-let lphu3 = await imageToBase64(JSON.stringify(lpha3).replace(/\"/gi, ''))
-fs.writeFileSync('janckuk.jpeg', lphu3, 'base64')
-let lphe3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
-anuk = `https://api-alphabot.herokuapp.com/api/image_editor/${command}?apikey=Alphabot&url=${lphe3.display_url}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-} else {
-reply2('Reply stc/img')
-}
-break
+
 
 case 'burung':
 rnim_ = await fetchJson(`https://some-random-api.ml/img/bird`);
@@ -15167,6 +14964,332 @@ alpha.sendFile(from, imoj, `${sender}.png`, null, mek, {thumbnail: medianya})
 break
 */
 
+case 'blue':
+// case 'blur':
+case 'blurple':
+case 'blurple2':
+case 'brightness':
+case 'color':
+case 'colorviewer':
+case 'comrade':
+// case 'gay':
+case 'glass':
+case 'green':
+// case 'greyscale':
+case 'hex':
+case 'horny':
+// case 'invert':
+case 'invertgreyscale':
+case 'its-so-stupid':
+// case 'jail':
+case 'lolice':
+case 'passed':
+case 'pixelate':
+case 'red':
+case 'rgb':
+// case 'sepia':
+case 'simpcard':
+case 'threshold':
+// case 'triggered':
+case 'tweet':
+case 'wasted':
+case 'youtube-comment':
+console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
+var imgbb = require('imgbb-uploader')
+if (!isQuotedSticker) {
+var smra = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+var smri = await alpha.downloadAndSaveMediaMessage(smra, `./media/${sender}.png`)
+let smru = await imgbb(`${img_key}`, smri)
+anuk = `https://some-random-api.ml/canvas/${command}?avatar=${smru.display_url}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+} else if (!isQuotedImage) {
+var smra2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
+var smri2 = await alpha.downloadAndSaveMediaMessage(smra2, `./media/${sender}.png`)
+let smru2 = await imgbb(`${img_key}`, smri2)
+anuk = `https://some-random-api.ml/canvas/${command}?avatar=${smru2.display_url}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+} else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
+smri3 = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
+let smra3 = await alpha.getProfilePicture(smri3).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
+let smru3 = await imageToBase64(JSON.stringify(smra3).replace(/\"/gi, ''))
+fs.writeFileSync('janckuk.jpeg', smru3, 'base64')
+let smre3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
+anuk = `https://some-random-api.ml/canvas/${command}?avatar=${smre3.display_url}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+} else {
+reply2('Reply stc/img')
+}
+break
+
+case '3000years':
+case 'approved':
+case 'beautiful':
+case 'blur':
+case 'brazzers':
+case 'burn':
+case 'challenger':
+case 'circle':
+case 'contrast':
+case 'ddungeon':
+case 'deepfry':
+case 'dictator':
+case 'distort':
+case 'fire':
+case 'gay':
+case 'glitch':
+case 'greyscale':
+case 'instagram':
+case 'invert':
+case 'jail':
+case 'lookwhatkarenhave':
+case 'missionpassed':
+case 'moustache':
+case 'ps4':
+case 'redple':
+case 'rejected':
+case 'rip':
+case 'scary':
+case 'sepia':
+case 'sharpen':
+case 'sniper':
+case 'thanos':
+case 'triggered':
+case 'utatoo':
+case 'wanted':
+case 'wasted':
+console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
+var imgbb = require('imgbb-uploader')
+if (!isQuotedSticker) {
+var lpha = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+var lphi = await alpha.downloadAndSaveMediaMessage(lpha, `./media/${sender}.png`)
+let lphu = await imgbb(`${img_key}`, lphi)
+anuk = `https://api-alphabot.herokuapp.com/api/image_editor/${command}?apikey=Alphabot&url=${lphu.display_url}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+} else if (!isQuotedImage) {
+var lpha2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
+var lphi2 = await alpha.downloadAndSaveMediaMessage(lpha2, `./media/${sender}.png`)
+let lphu2 = await imgbb(`${img_key}`, lphi2)
+anuk = `https://api-alphabot.herokuapp.com/api/image_editor/${command}?apikey=Alphabot&url=${lphu2.display_url}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+} else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
+lphi3 = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
+let lpha3 = await alpha.getProfilePicture(lphi3).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
+let lphu3 = await imageToBase64(JSON.stringify(lpha3).replace(/\"/gi, ''))
+fs.writeFileSync('janckuk.jpeg', lphu3, 'base64')
+let lphe3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
+anuk = `https://api-alphabot.herokuapp.com/api/image_editor/${command}?apikey=Alphabot&url=${lphe3.display_url}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+} else {
+reply2('Reply stc/img')
+}
+break
+
+case 'animeface':
+case 'awooify':
+case 'baguette':
+case 'blurpify':
+// case 'captcha':
+case 'changemymind':
+case 'clickforhentai':
+case 'clyde':
+case 'ddlc':
+// case 'deepfry':
+// case 'fact':
+case 'iphonex':
+case 'jpeg':
+case 'kannagen':
+case 'kidnap':
+case 'kms':
+// case 'lolice':
+case 'magik':
+case 'nichijou':
+case 'osu':
+case 'phcomment':
+case 'ship':
+case 'stickbug':
+case 'threats':
+// case 'trap':
+// case 'trash':
+case 'trumptweet':
+// case 'tweet':
+case 'whowouldwin':
+console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
+var imgbb = require('imgbb-uploader')
+if (!isQuotedSticker) {
+var nka = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+var nki = await alpha.downloadAndSaveMediaMessage(nka, `./media/${sender}.png`)
+let nku = await imgbb(`${img_key}`, nki)
+titid = await fetchJson(`https://nekobot.xyz/api/imagegen?type=${command}&url=${nku.display_url}`, {method: 'get'})
+anuk = `${titid.message}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+} else if (!isQuotedImage) {
+var nka2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
+var nki2 = await alpha.downloadAndSaveMediaMessage(nka2, `./media/${sender}.png`)
+let nku2 = await imgbb(`${img_key}`, nki2)
+titid = await fetchJson(`https://nekobot.xyz/api/imagegen?type=${command}&url=${nku2.display_url}`, {method: 'get'})
+anuk = `${titid.message}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+} else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
+nki3 = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
+let nka3 = await alpha.getProfilePicture(nki3).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
+let nku3 = await imageToBase64(JSON.stringify(nka3).replace(/\"/gi, ''))
+fs.writeFileSync('janckuk.jpeg', nku3, 'base64')
+let nke3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
+titid = await fetchJson(`https://nekobot.xyz/api/imagegen?type=${command}&url=${nke3.display_url}`, {method: 'get'})
+anuk = `${titid.message}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+} else {
+reply2('Reply stc/img')
+}
+break
+
+case 'brightness':
+case 'captcha':
+case 'circle':
+case 'continued':
+case 'discordblack':
+case 'discordblue':
+case 'enhance':
+case 'gay2':
+case 'gay':
+case 'glass':
+case 'greyscale':
+case 'hitler':
+case 'invert':
+case 'komunis':
+case 'penjara':
+case 'petimati':
+case 'police':
+case 'putin':
+case 'sepia':
+case 'triger':
+case 'wasted':
+console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
+var imgbb = require('imgbb-uploader')
+if (!isQuotedSticker) {
+var jan = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+var jin = await alpha.downloadAndSaveMediaMessage(jan, `./media/${sender}.png`)
+let jun = await imgbb(`${img_key}`, jin)
+anuk = `https://janbot-api.herokuapp.com/api/imgedit/${command}?url=${jun.display_url}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+} else if (!isQuotedImage) {
+var jan2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
+var jin2 = await alpha.downloadAndSaveMediaMessage(jan2, `./media/${sender}.png`)
+let jun2 = await imgbb(`${img_key}`, jin2)
+anuk = `https://janbot-api.herokuapp.com/api/imgedit/${command}?url=${jun2.display_url}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+} else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
+jin3 = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
+let jan3 = await alpha.getProfilePicture(jin3).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
+let jun3 = await imageToBase64(JSON.stringify(jan3).replace(/\"/gi, ''))
+fs.writeFileSync('janckuk.jpeg', jun3, 'base64')
+let jen3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
+anuk = `https://janbot-api.herokuapp.com/api/imgedit/${command}?url=${jen3.display_url}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+} else {
+reply2('Reply stc/img')
+}
+break
+
+case 'ad':
+case 'airpods':
+case 'approved':
+case 'bill':
+case 'bjp':
+case 'blur':
+case 'bobross':
+case 'captcha':
+case 'circle':
+case 'communism':
+case 'confusedstonk':
+case 'continued':
+case 'crush':
+case 'delete':
+case 'discordblack':
+case 'discordblue':
+case 'facepalm':
+case 'gay':
+case 'greyscale':
+case 'hacker2':
+case 'hacker':
+case 'hitler':
+case 'invert':
+case 'jail':
+case 'karaba':
+case 'linus':
+case 'meth':
+case 'mms':
+case 'notstonk':
+case 'police':
+case 'poutine':
+// case 'removebg':
+case 'rip':
+case 'sepia':
+case 'stonk':
+case 'tatoo':
+case 'thomas':
+case 'trash':
+case 'triggered':
+case 'udf':
+case 'wanted':
+case 'what':
+console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
+var imgbb = require('imgbb-uploader')
+if (!isQuotedSticker) {
+var dpuh = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+var dpah = await alpha.downloadAndSaveMediaMessage(dpuh, `./media/${sender}.png`)
+let dpih = await imgbb(`${img_key}`, dpah)
+anuk = `https://api.dapuhy.ga/api/canvas/${command}?img=${dpih.display_url}&apikey=${dapuhy}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+} else if (!isQuotedImage) {
+var dpuh2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
+var dpah2 = await alpha.downloadAndSaveMediaMessage(dpuh2, `./media/${sender}.png`)
+let dpih2 = await imgbb(`${img_key}`, dpah2)
+anuk = `https://api.dapuhy.ga/api/canvas/${command}?img=${dpih2.display_url}&apikey=${dapuhy}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+} else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
+dpah3 = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
+let dpuh3 = await alpha.getProfilePicture(dpah3).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
+let dpih3 = await imageToBase64(JSON.stringify(dpuh3).replace(/\"/gi, ''))
+fs.writeFileSync('janckuk.jpeg', dpih3, 'base64')
+let dpeh3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
+anuk = `https://api.dapuhy.ga/api/canvas/${command}?img=${dpeh3.display_url}&apikey=${dapuhy}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+} else {
+reply2('Reply stc/img')
+}
+break
+
 case 'wroom':
 case 'text3d':
 case 'water':
@@ -16638,70 +16761,6 @@ anu = alpha.prepareMessageFromContent(from,{
 alpha.relayWAMessage(anu)
 break
 
-case 'animeface':
-case 'awooify':
-case 'baguette':
-case 'blurpify':
-// case 'captcha':
-case 'changemymind':
-case 'clickforhentai':
-case 'clyde':
-case 'ddlc':
-// case 'deepfry':
-// case 'fact':
-case 'iphonex':
-case 'jpeg':
-case 'kannagen':
-case 'kidnap':
-case 'kms':
-// case 'lolice':
-case 'magik':
-case 'nichijou':
-case 'osu':
-case 'phcomment':
-case 'ship':
-case 'stickbug':
-case 'threats':
-// case 'trap':
-// case 'trash':
-case 'trumptweet':
-// case 'tweet':
-case 'whowouldwin':
-console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
-var imgbb = require('imgbb-uploader')
-if (!isQuotedSticker) {
-var nka = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-var nki = await alpha.downloadAndSaveMediaMessage(nka, `./media/${sender}.png`)
-let nku = await imgbb(`${img_key}`, nki)
-titid = await fetchJson(`https://nekobot.xyz/api/imagegen?type=${command}&url=${nku.display_url}`, {method: 'get'})
-anuk = `${titid.message}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-} else if (!isQuotedImage) {
-var nka2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
-var nki2 = await alpha.downloadAndSaveMediaMessage(nka2, `./media/${sender}.png`)
-let nku2 = await imgbb(`${img_key}`, nki2)
-titid = await fetchJson(`https://nekobot.xyz/api/imagegen?type=${command}&url=${nku2.display_url}`, {method: 'get'})
-anuk = `${titid.message}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-} else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
-nki3 = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
-let nka3 = await alpha.getProfilePicture(nki3).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
-let nku3 = await imageToBase64(JSON.stringify(nka3).replace(/\"/gi, ''))
-fs.writeFileSync('janckuk.jpeg', nku3, 'base64')
-let nke3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
-titid = await fetchJson(`https://nekobot.xyz/api/imagegen?type=${command}&url=${nke3.display_url}`, {method: 'get'})
-anuk = `${titid.message}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-} else {
-reply2('Reply stc/img')
-}
-break
 
 /*
 case 'anonymous': {
@@ -17775,59 +17834,6 @@ quoted: mek, sendEphemeral: true
 })
 break
 
-case 'brightness':
-case 'captcha':
-case 'circle':
-case 'continued':
-case 'discordblack':
-case 'discordblue':
-case 'enhance':
-case 'gay2':
-case 'gay':
-case 'glass':
-case 'greyscale':
-case 'hitler':
-case 'invert':
-case 'komunis':
-case 'penjara':
-case 'petimati':
-case 'police':
-case 'putin':
-case 'sepia':
-case 'triger':
-case 'wasted':
-console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
-var imgbb = require('imgbb-uploader')
-if (!isQuotedSticker) {
-var jan = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-var jin = await alpha.downloadAndSaveMediaMessage(jan, `./media/${sender}.png`)
-let jun = await imgbb(`${img_key}`, jin)
-anuk = `https://janbot-api.herokuapp.com/api/imgedit/${command}?url=${jun.display_url}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-} else if (!isQuotedImage) {
-var jan2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
-var jin2 = await alpha.downloadAndSaveMediaMessage(jan2, `./media/${sender}.png`)
-let jun2 = await imgbb(`${img_key}`, jin2)
-anuk = `https://janbot-api.herokuapp.com/api/imgedit/${command}?url=${jun2.display_url}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-} else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
-jin3 = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
-let jan3 = await alpha.getProfilePicture(jin3).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
-let jun3 = await imageToBase64(JSON.stringify(jan3).replace(/\"/gi, ''))
-fs.writeFileSync('janckuk.jpeg', jun3, 'base64')
-let jen3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
-anuk = `https://janbot-api.herokuapp.com/api/imgedit/${command}?url=${jen3.display_url}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-} else {
-reply2('Reply stc/img')
-}
-break
 
 
 
