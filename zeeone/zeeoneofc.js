@@ -1,6 +1,7 @@
 
 const help = (prefix, wita, wit, ucapannya2, timuu, status, wa_version, mcc, mnc, os_version, device_manufacturer, device_model, alfa , alfa1, thisDay, ini_tanggal, totalchat, hit_today, ini_gcchat, latensi, teks)=> {
-	return`「 *WUDY BOT INFO*   」
+	return`${ucapannya2}
+「 *WUDY BOT INFO*   」
 	
 *Mode :* ${status}
 *Prefix :* ${prefix}
@@ -84,7 +85,8 @@ const download = (prefix) => {
 }
 
 const allmenu = (prefix, wita, wit, ucapannya2, timuu, status, wa_version, mcc, mnc, os_version, device_manufacturer, device_model, alfa , alfa1, thisDay, ini_tanggal, totalchat, hit_today, ini_gcchat, latensi, teks)  => {
-	return `「 *WUDY BOT INFO*   」
+	return `${ucapannya2}
+「 *WUDY BOT INFO*   」
 	
 *Mode :* ${status}
 *Prefix :* ${prefix}
@@ -261,7 +263,8 @@ const allmenu = (prefix, wita, wit, ucapannya2, timuu, status, wa_version, mcc, 
 }
 
 const xallmenu = (prefix, wita, wit, ucapannya2, timuu, status, wa_version, mcc, mnc, os_version, device_manufacturer, device_model, alfa , alfa1, thisDay, ini_tanggal, totalchat, hit_today, ini_gcchat, latensi, teks)  => {
-	return `「 *WUDY BOT INFO*   」
+	return `${ucapannya2}
+「 *WUDY BOT INFO*   」
 
 *Mode :* ${status}
 *Prefix :* ${prefix}
