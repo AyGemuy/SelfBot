@@ -2816,8 +2816,6 @@ fs.writeFileSync("./game/tebakgambar.json", JSON.stringify(tebakgambar))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
-} else {
-menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // TEBAKGAMBAR2
 if (tebakgambar2.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -2848,8 +2846,6 @@ fs.writeFileSync("./game/tebakgambar2.json", JSON.stringify(tebakgambar2))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
-} else {
-menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 } 
 // TEBAKGAMBAR3
 if (tebakgambar3.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -2880,8 +2876,6 @@ fs.writeFileSync("./game/tebakgambar3.json", JSON.stringify(tebakgambar3))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
-} else {
-menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 } 
 // TEBAKGAMBAR4
 if (tebakgambar4.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -2912,8 +2906,6 @@ fs.writeFileSync("./game/tebakgambar4.json", JSON.stringify(tebakgambar4))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
-} else {
-menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // TEBAKGAMBAR5
 if (tebakgambar5.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -2944,8 +2936,6 @@ fs.writeFileSync("./game/tebakgambar5.json", JSON.stringify(tebakgambar5))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
-} else {
-menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // CAKLONTONG
 if (caklontong.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -2976,8 +2966,6 @@ fs.writeFileSync("./game/caklontong.json", JSON.stringify(caklontong))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
-} else {
-menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // CAKLONTONG2
 if (caklontong2.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3008,8 +2996,6 @@ fs.writeFileSync("./game/caklontong2.json", JSON.stringify(caklontong2))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
-} else {
-menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // CAKLONTONG3
 if (caklontong3.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3040,8 +3026,6 @@ fs.writeFileSync("./game/caklontong3.json", JSON.stringify(caklontong3))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
-} else {
-menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // TEBAKJENAKA
 if (tebakjenaka.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3072,8 +3056,6 @@ fs.writeFileSync("./game/tebakjenaka.json", JSON.stringify(tebakjenaka))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
-} else {
-menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // SUSUNKATA
 if (susunkata.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3104,8 +3086,6 @@ fs.writeFileSync("./game/susunkata.json", JSON.stringify(susunkata))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
-} else {
-menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // SUSUNKATA2
 if (susunkata2.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3136,8 +3116,6 @@ fs.writeFileSync("./game/susunkata2.json", JSON.stringify(susunkata2))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
-} else {
-menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // ASAHOTAK
 if (asahotak.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3168,8 +3146,6 @@ fs.writeFileSync("./game/asahotak.json", JSON.stringify(asahotak))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
-} else {
-menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // TEBAKKIMIA
 if (tebakkimia.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3200,8 +3176,6 @@ fs.writeFileSync("./game/tebakkimia.json", JSON.stringify(tebakkimia))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
-} else {
-menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // TEBAKKATA
 if (tebakkata.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3232,8 +3206,6 @@ fs.writeFileSync("./game/tebakkata.json", JSON.stringify(tebakkata))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
-} else {
-menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // sambungkata
 if (sambungkata.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3264,8 +3236,6 @@ fs.writeFileSync("./game/sambungkata.json", JSON.stringify(sambungkata))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
-} else {
-menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // TEBAKLIRIK
 if (tebaklirik.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3296,8 +3266,6 @@ fs.writeFileSync("./game/tebaklirik.json", JSON.stringify(tebaklirik))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
-} else {
-menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // TEBAKKALIMAT
 if (tebakkalimat.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3328,8 +3296,6 @@ fs.writeFileSync("./game/tebakkalimat.json", JSON.stringify(tebakkalimat))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
-} else {
-menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // TEBAKAN
 if (tebakan.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3360,8 +3326,6 @@ fs.writeFileSync("./game/tebakan.json", JSON.stringify(tebakan))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
-} else {
-menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // TEBAKAN2
 if (tebakan2.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3392,8 +3356,6 @@ fs.writeFileSync("./game/tebakan2.json", JSON.stringify(tebakan2))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
-} else {
-menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // SIAPAAKU
 if (siapaaku.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3424,8 +3386,6 @@ fs.writeFileSync("./game/siapaaku.json", JSON.stringify(siapaaku))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
-} else {
-menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // MATH
 if (math.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3456,8 +3416,6 @@ fs.writeFileSync("./game/math.json", JSON.stringify(math))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
-} else {
-menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // MATH2
 if (math2.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3488,8 +3446,6 @@ fs.writeFileSync("./game/math2.json", JSON.stringify(math2))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
-} else {
-menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // MATH3
 if (math3.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3520,8 +3476,6 @@ fs.writeFileSync("./game/math3.json", JSON.stringify(math3))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
-} else {
-menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // FAMILY 100
 if (family100.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3552,8 +3506,6 @@ fs.writeFileSync("./game/family100.json", JSON.stringify(family100))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
-} else {
-menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // SIAPAKAH
 if (siapakah.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3584,8 +3536,6 @@ fs.writeFileSync("./game/siapakah.json", JSON.stringify(siapakah))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
-} else {
-menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // TEBAKANIME
 if (tebakanime.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3616,8 +3566,6 @@ fs.writeFileSync("./game/tebakanime.json", JSON.stringify(tebakanime))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
-} else {
-menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // TEBAKBENDERA
 if (tebakbendera.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3648,8 +3596,6 @@ fs.writeFileSync("./game/tebakbendera.json", JSON.stringify(tebakbendera))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
-} else {
-menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // TEBAKKABUPATEN
 if (tebakkabupaten.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3680,8 +3626,6 @@ fs.writeFileSync("./game/tebakkabupaten.json", JSON.stringify(tebakkabupaten))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
-} else {
-menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // RECAPTCHA
 if (recaptcha.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3712,8 +3656,6 @@ fs.writeFileSync("./game/recaptcha.json", JSON.stringify(recaptcha))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
-} else {
-menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // TEBAKAPLIKASI
 if (tebakaplikasi.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3744,8 +3686,6 @@ fs.writeFileSync("./game/tebakaplikasi.json", JSON.stringify(tebakaplikasi))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
-} else {
-menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // TEBAKGABUT
 if (tebakgabut.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3776,8 +3716,6 @@ fs.writeFileSync("./game/tebakgabut.json", JSON.stringify(tebakgabut))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
-} else {
-menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // TEBAKLAGU
 if (tebaklagu.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3808,8 +3746,6 @@ fs.writeFileSync("./game/tebaklagu.json", JSON.stringify(tebaklagu))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
-} else {
-menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // TEBAKLUCU
 if (tebaklucu.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3840,8 +3776,6 @@ fs.writeFileSync("./game/tebaklucu.json", JSON.stringify(tebaklucu))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
-} else {
-menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // TESWIBU
 if (teswibu.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3872,8 +3806,6 @@ fs.writeFileSync("./game/teswibu.json", JSON.stringify(teswibu))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
-} else {
-menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 
 // tebakhewan
@@ -3905,8 +3837,6 @@ fs.writeFileSync("./game/tebakhewan.json", JSON.stringify(tebakhewan))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
-} else {
-menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 
 // TEBAKBUAH
@@ -3938,8 +3868,6 @@ fs.writeFileSync("./game/tebakbuah.json", JSON.stringify(tebakbuah))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
-} else {
-menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 
 // CARIEMOJ
@@ -3971,8 +3899,6 @@ fs.writeFileSync("./game/cariemoj.json", JSON.stringify(cariemoj))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
-} else {
-menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 
 ///function
@@ -11529,7 +11455,7 @@ quoted: mek, sendEphemeral: true
 break
 
 case 'tebakgambar2':
-if (tebakgambar2.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
+if (tebakgambar2.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
 ttgbr_ = await fetchJson(`https://api.dapuhy.ga/api/fun/tebakgambar2?apikey=${dapuhy}`);
 let ttgbr_1 = await getBuffer(ttgbr_.result.image);
 clu = ttgbr_.result.clue
@@ -11576,7 +11502,7 @@ fs.writeFileSync("./game/tebakgambar2.json", JSON.stringify(tebakgambar2))
 break
 
 case 'caklontong':
-if (caklontong.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
+if (caklontong.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
 cak_ = await fetchJson(`https://api.dapuhy.ga/api/fun/caklontong?apikey=${dapuhy}`);
 informasi = cak_.informasi
 soal = cak_.soal
@@ -11603,7 +11529,7 @@ fs.writeFileSync("./game/caklontong.json", JSON.stringify(caklontong))
 break
 
 case 'siapakahaku':
-if (siapakah.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
+if (siapakah.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
 anu = await fetchJson(`https://api.dapuhy.ga/api/fun/siapakah?apikey=${dapuhy}`);
 soal = anu.pertanyaan
 jwb_siapakah = anu.jawaban
@@ -11628,7 +11554,7 @@ fs.writeFileSync("./game/siapakah.json", JSON.stringify(siapakah))
 break
 
 case 'susunkata2':
-if (susunkata2.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
+if (susunkata2.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
 anu = await fetchJson(`https://api.dapuhy.ga/api/fun/${command}?apikey=${dapuhy}`);
 tipenya = anu.tipe
 tebakya = anu.acak
@@ -12961,7 +12887,7 @@ await alpha.sendMessage(from, ini_buffer, sticker)
 break
 
 case 'sambungkata':
-if (sambungkata.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
+if (sambungkata.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
 ini_txt = args.join(" ")
 get_result = await fetchJson(`https://api.lolhuman.xyz/api/sambungkata?apikey=${lolkey}&text=${ini_txt}`)
 jwb_sbg = get_result.result
@@ -12987,7 +12913,7 @@ fs.writeFileSync("./game/sambungkata.json", JSON.stringify(sambungkata))
 break
 
 case 'caklontong2':
-if (caklontong2.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
+if (caklontong2.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
 anu = await fetchJson(`https://api.lolhuman.xyz/api/tebak/caklontong22?apikey=${lolkey}`)
 tebakya = anu.result.question
 jwb_cak2 = anu.result.answer
@@ -13013,7 +12939,7 @@ fs.writeFileSync("./game/caklontong2.json", JSON.stringify(caklontong2))
 break
 
 case 'tebakgambar3':
-if (tebakgambar3.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
+if (tebakgambar3.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
 get_result = await fetchJson(`https://api.lolhuman.xyz/api/tebak/gambar?apikey=${lolkey}`)
 get_result = get_result.result
 ini_image = get_result.image
@@ -13062,7 +12988,7 @@ break
 
 //LIST───────[ API VELGRYND
 case 'tebakgambar':
-if (tebakgambar.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
+if (tebakgambar.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
 tgbr_ = await fetchJson(`https://velgrynd.herokuapp.com/api/tebakgambar?apikey=slAuPQiV`);
 let tgbr_1 = await getBuffer(tgbr_.result.pertanyaan);
 jwb_tbk = tgbr_.result.jawaban
@@ -13108,7 +13034,7 @@ fs.writeFileSync("./game/tebakgambar.json", JSON.stringify(tebakgambar))
 break
 
 case 'family100':
-if (family100.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
+if (family100.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
 fam_ = await fetchJson(`https://velgrynd.herokuapp.com/api/family100?apikey=slAuPQiV`);
 soal = fam_.soal
 ja = fam_.jawaban
@@ -13135,7 +13061,7 @@ fs.writeFileSync("./game/family100.json", JSON.stringify(family100))
 break
 
 case 'asahotak':
-if (asahotak.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
+if (asahotak.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
 ash_ = await fetchJson(`https://velgrynd.herokuapp.com/api/asahotak?apikey=slAuPQiV`);
 soal = ash_.soal
 jwb_asah = ash_.jawaban
@@ -13161,7 +13087,7 @@ fs.writeFileSync("./game/asahotak.json", JSON.stringify(asahotak))
 break
 
 case 'tebakkimia':
-if (tebakkimia.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
+if (tebakkimia.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
 kimia_ = await fetchJson(`https://velgrynd.herokuapp.com/api/tebakkimia?apikey=slAuPQiV`);
 soal = kimia_.result.nama
 jwb_kimia = kimia_.result.lambang
@@ -13187,7 +13113,7 @@ fs.writeFileSync("./game/tebakkimia.json", JSON.stringify(tebakkimia))
 break
 
 case 'tebakkata':
-if (tebakkata.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
+if (tebakkata.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
 tbkt_ = await fetchJson(`https://velgrynd.herokuapp.com/api/tebakkata?apikey=slAuPQiV`);
 soal = tbkt_.soal
 jwb_kata = tbkt_.jawaban
@@ -13213,7 +13139,7 @@ fs.writeFileSync("./game/tebakkata.json", JSON.stringify(tebakkata))
 break
 
 case 'tebakkata2':
-if (tebakkata.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
+if (tebakkata.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
 te_ = await fetchJson(`https://velgrynd.herokuapp.com/api/tebakkata?apikey=slAuPQiV`);
 soal = te_.soal
 jwb_kata2 = te_.jawaban
@@ -13239,7 +13165,7 @@ fs.writeFileSync("./game/tebakkata.json", JSON.stringify(tebakkata))
 break
 
 case 'tebaklirik':
-if (tebaklirik.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
+if (tebaklirik.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
 tlir_ = await fetchJson(`https://velgrynd.herokuapp.com/api/tebaklirik?apikey=slAuPQiV`);
 soal = tlir_.result.question
 jwb_lirik = tlir_.result.answer
@@ -13265,7 +13191,7 @@ fs.writeFileSync("./game/tebaklirik.json", JSON.stringify(tebaklirik))
 break
 
 case 'tebakkalimat':
-if (tebakkalimat.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
+if (tebakkalimat.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
 tkal_ = await fetchJson(`https://velgrynd.herokuapp.com/api/tebakkalimat?apikey=slAuPQiV`);
 soal = tkal_.soal
 jwb_kali = tkal_.jawaban
@@ -13291,7 +13217,7 @@ fs.writeFileSync("./game/tebakkalimat.json", JSON.stringify(tebakkalimat))
 break
 
 case 'tebakan':
-if (tebakan.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
+if (tebakan.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
 tbkn_ = await fetchJson(`https://velgrynd.herokuapp.com/api/tebaktebakan?apikey=slAuPQiV`);
 soal = tbkn_.soal
 jwb_tbkn = tbkn_.jawaban
@@ -13317,7 +13243,7 @@ fs.writeFileSync("./game/tebakan.json", JSON.stringify(tebakan))
 break
 
 case 'siapaaku':
-if (siapaaku.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
+if (siapaaku.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
 saha_ = await fetchJson(`https://velgrynd.herokuapp.com/api/siapakahaku?apikey=slAuPQiV`);
 soal = saha_.soal
 jwb_siapa = saha_.jawaban
@@ -13343,7 +13269,7 @@ fs.writeFileSync("./game/siapaaku.json", JSON.stringify(siapaaku))
 break
 
 case 'susunkata':
-if (susunkata.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
+if (susunkata.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
 susn_ = await fetchJson(`https://velgrynd.herokuapp.com/api/susunkata?apikey=slAuPQiV`);
 soal = susn_.soal
 timpe = susn_.tipe
@@ -13370,7 +13296,7 @@ fs.writeFileSync("./game/susunkata.json", JSON.stringify(susunkata))
 break
 
 case 'tebakgabut':
-if (tebakgabut.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
+if (tebakgabut.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
 tgbt_ = await fetchJson(`https://kuontol-api.herokuapp.com/api/game/tebakgabut`);
 soal = tgbt_.soal
 jwb_gbt = tgbt_.jawaban
@@ -13396,7 +13322,7 @@ fs.writeFileSync("./game/tebakgabut.json", JSON.stringify(tebakgabut))
 break
 
 case 'tebaklucu':
-if (tebaklucu.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
+if (tebaklucu.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
 tblc_ = await fetchJson(`https://kuontol-api.herokuapp.com/api/game/tebaktebaklucu`);
 soal = tblc_.soal
 jwb_lucu = tblc_.jawaban
@@ -13422,7 +13348,7 @@ fs.writeFileSync("./game/tebaklucu.json", JSON.stringify(tebaklucu))
 break
 
 case 'teswibu':
-if (teswibu.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
+if (teswibu.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
 twb_ = await fetchJson(`https://kuontol-api.herokuapp.com/api/game/teswibu`);
 soal = twb_.pertanyaan
 ja = twb_.jawaban
@@ -14356,7 +14282,7 @@ quoted: mek, sendEphemeral: true
 break
 
 case 'tebakgambar5':
-if (tebakgambar5.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
+if (tebakgambar5.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
 gbr5_ = await fetchJson(`https://x-restapi.herokuapp.com/api/tebak-gambar?apikey=BETA`);
 let gbr5_1 = await getBuffer(gbr5_.img);
 jwb_tbk5 = gbr5_.jawaban
@@ -14402,7 +14328,7 @@ fs.writeFileSync("./game/tebakgambar5.json", JSON.stringify(tebakgambar5))
 break
 
 case 'caklontong3':
-if (caklontong3.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
+if (caklontong3.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
 cak3_ = await fetchJson(`https://x-restapi.herokuapp.com/api/caklontong?apikey=BETA`);
 soal = cak3_.soal
 jwb_cak3 = cak3_.jawaban
@@ -14428,7 +14354,7 @@ fs.writeFileSync("./game/caklontong3.json", JSON.stringify(caklontong3))
 break
 
 case 'tebakanime':
-if (tebakanime.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
+if (tebakanime.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
 tnim_ = await fetchJson(`https://x-restapi.herokuapp.com/api/tebak-anime?apikey=BETA`);
 let tnim_1 = await getBuffer(tnim_.soal);
 jwb_anime = tnim_.jawaban
@@ -14805,7 +14731,7 @@ break
 
 //───────────────[ FITUR GAME ]───────────────//
 case 'recaptcha':
-if (recaptcha.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
+if (recaptcha.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
 capt_ = await fetchJson(`http://api.zekais.com/captcha?apikey=CsapIPYk`);
 let capt_1 = await getBuffer(capt_.question);
 jwb_captcha = capt_.answer
@@ -14851,7 +14777,7 @@ fs.writeFileSync("./game/recaptcha.json", JSON.stringify(recaptcha))
 break
 
 case 'tebakbendera':
-if (tebakbendera.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
+if (tebakbendera.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
 tbra_ = await fetchJson(`https://kuontol-api.herokuapp.com/api/game/tebakbendera`)
 ben = tbra_.bendera
 jwb_flag = tbra_.nama
@@ -14900,7 +14826,7 @@ fs.writeFileSync("./game/tebakbendera.json", JSON.stringify(tebakbendera))
 break
 
 case 'tebakkabupaten':
-if (tebakkabupaten.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
+if (tebakkabupaten.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
 tkab_ = await fetchJson(`https://kuontol-api.herokuapp.com/api/game/tebakkabupaten`)
 bg = tkab_.image
 jwb_kab = tkab_.jawaban
@@ -14947,7 +14873,7 @@ fs.writeFileSync("./game/tebakkabupaten.json", JSON.stringify(tebakkabupaten))
 break
 
 case 'tebakgambar4':
-if (tebakgambar4.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
+if (tebakgambar4.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
 gbr4_ = await fetchJson(`http://api.zekais.com/tebakgambar?apikey=CsapIPYk`);
 let gbr4_1 = await getBuffer(gbr4_.soal);
 clu = gbr4_.clue
@@ -15068,7 +14994,7 @@ sendButton(from, `@${sender.split("@")[0]} memilih *📄Kertas* dan bot memilih 
 break
 
 case 'tebakan2':
-if (tebakan2.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
+if (tebakan2.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
 tbkn2_ = await fetchJson(`http://api.zekais.com/tebakan?apikey=CsapIPYk`);
 soal = tbkn2_.question
 jwb_tbkn2 = tbkn2_.answer
@@ -15094,7 +15020,7 @@ fs.writeFileSync("./game/tebakan2.json", JSON.stringify(tebakan2))
 break
 
 case 'tebakaplikasi':
-if (tebakaplikasi.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
+if (tebakaplikasi.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
 tapp_ = await fetchJson(`https://kuontol-api.herokuapp.com/api/game/tebakaplikasi`)
 app = tapp_.image
 jwb_apk = tapp_.jawaban
@@ -15141,7 +15067,7 @@ fs.writeFileSync("./game/tebakaplikasi.json", JSON.stringify(tebakaplikasi))
 break
 
 case 'tebaklagu':
-if (tebaklagu.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
+if (tebaklagu.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
 tgu_ = await fetchJson(`https://kuontol-api.herokuapp.com/api/game/tebaklagu`);
 let lgu = tgu_.lagu
 soal = tgu_.artis
@@ -15630,7 +15556,7 @@ quoted: mek, sendEphemeral: true
 break
 
 case 'math2':
-if (math2.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
+if (math2.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
 mat2_ = await fetchJson(`https://janbot-api.herokuapp.com/api/kuis/math`);
 let mat2_1 = await getBuffer(mat2_.soal);
 jwb_math2 = mat2_.jawaban
@@ -16444,7 +16370,7 @@ quoted: mek, sendEphemeral: true
 break
 
 case 'tebakjenaka':
-if (tebakjenaka.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
+if (tebakjenaka.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
 tjk_ = await fetchJson(`https://kuontol-api.herokuapp.com/api/game/tebakjenaka`);
 soal = tjk_.pertanyaan
 jwb_jen = tjk_.jawaban
@@ -16959,7 +16885,7 @@ reply2(awikwok)
 break
 
 case 'tebakhewan':
-if (tebakhewan.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
+if (tebakhewan.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
 hew = await fetchText('https://raw.githubusercontent.com/AyGemuy/SelfBot/master/game/hewan.json')
 hewn_ = hew.split('\n')
 soal = hewn_[Math.floor(Math.random() * hewn_.length)]
@@ -16986,7 +16912,7 @@ fs.writeFileSync("./game/tebakhewan.json", JSON.stringify(tebakhewan))
 break
 
 case 'tebakbuah':
-if (tebakbuah.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
+if (tebakbuah.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
 buh = await fetchText('https://raw.githubusercontent.com/AyGemuy/SelfBot/master/game/buah.json')
 buwh_ = buh.split('\n')
 soal = buwh_[Math.floor(Math.random() * buwh_.length)]
@@ -17013,7 +16939,7 @@ fs.writeFileSync("./game/tebakbuah.json", JSON.stringify(tebakbuah))
 break
 
 case 'cariemoji':
-if (cariemoj.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
+if (cariemoj.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
 jwb_emoj = `${emoj3}`
 cariemoj[sender.split('@')[0]] = jwb_emoj.toLowerCase()
 fs.writeFileSync("./game/cariemoj.json", JSON.stringify(cariemoj))
@@ -18128,7 +18054,7 @@ listmsg(from, `${ucapanWaktu}`, `${ucapannya2} @${sender.split('@')[0]}\n\n*Fakt
 }
 
 if (q5 == "very_easy"){
-if (math3.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
+if (math3.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
 asah_ = await fetchJson(`http://api.zekais.com/math?mode=very_easy&apikey=CsapIPYk`);
 soal = asah_.soal
 jwb_math3 = asah_.jawaban
@@ -18154,7 +18080,7 @@ fs.writeFileSync("./game/math3.json", JSON.stringify(math3))
 }
 
 if (q5 == "easy"){
-if (math3.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
+if (math3.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
 asah_ = await fetchJson(`http://api.zekais.com/math?mode=easy&apikey=CsapIPYk`);
 soal = asah_.soal
 jwb_math3 = asah_.jawaban
@@ -18180,7 +18106,7 @@ fs.writeFileSync("./game/math3.json", JSON.stringify(math3))
 }
 
 if (q5 == "medium"){
-if (math3.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
+if (math3.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
 asah_ = await fetchJson(`http://api.zekais.com/math?mode=medium&apikey=CsapIPYk`);
 soal = asah_.soal
 jwb_math3 = asah_.jawaban
@@ -18206,7 +18132,7 @@ fs.writeFileSync("./game/math3.json", JSON.stringify(math3))
 }
 
 if (q5 == "hard"){
-if (math3.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
+if (math3.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
 asah_ = await fetchJson(`http://api.zekais.com/math?mode=hard&apikey=CsapIPYk`);
 soal = asah_.soal
 jwb_math3 = asah_.jawaban
@@ -18232,7 +18158,7 @@ fs.writeFileSync("./game/math3.json", JSON.stringify(math3))
 }
 
 if (q5 == "extreme"){
-if (math3.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
+if (math3.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
 asah_ = await fetchJson(`http://api.zekais.com/math?mode=extreme&apikey=CsapIPYk`);
 soal = asah_.soal
 jwb_math3 = asah_.jawaban
@@ -18258,7 +18184,7 @@ fs.writeFileSync("./game/math3.json", JSON.stringify(math3))
 }
 
 if (q5 == "impossible"){
-if (math3.hasOwnProperty(sender.split('@')[0])) return reply2("Masih ada permainan yang sedang berlangsung")
+if (math3.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
 asah_ = await fetchJson(`http://api.zekais.com/math?mode=impossible&apikey=CsapIPYk`);
 soal = asah_.soal
 jwb_math3 = asah_.jawaban
