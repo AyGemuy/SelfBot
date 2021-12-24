@@ -685,7 +685,8 @@ alpha.sendMessage(mek.key.remoteJid, tekuss, MessageType.text, {contextInfo:{men
 if (m.message && m.isBaileys && m.quoted && m.quoted.mtype === 'orderMessage' && !(m.quoted.token && m.quoted.orderId)) {
 if (antitrol === false) return
 if (mek.key.fromMe) return
-alpha.sendMessage(from, '*🕵️ Fake Troli Detected* \n\n' + require('util').format(m.key), text, {quoted: mek})
+but = [{ buttonId: `antibug on`, buttonText: { displayText: 'OFG' }, type: 1 },{ buttonId: `antibug off`, buttonText: { displayText: 'OFF' }, type: 1 }]
+ButtMessage(from, '*🕵️ Fake Troli Detected* \n\n' + require('util').format(m.key), "On/Off", but, mek)
 await alpha.modifyChat(m.chat, 'delete', {
 includeStarred: false
 })
@@ -698,8 +699,8 @@ await alpha.updatePresence(from, Presence.recording)
 if (autoketik === false) return
 await alpha.updatePresence(from, Presence.composing)
 }
-body = (type === 'conversation' && mek.message.conversation.startsWith(prefix)) ? mek.message.conversation : (type == 'imageMessage') && mek.message.imageMessage.caption.startsWith(prefix) ? mek.message.imageMessage.caption : (type == 'videoMessage') && mek.message.videoMessage.caption.startsWith(prefix) ? mek.message.videoMessage.caption : (type == 'extendedTextMessage') && mek.message.extendedTextMessage.text.startsWith(prefix) ? mek.message.extendedTextMessage.text : (type == 'listResponseMessage') && mek.message.listResponseMessage.singleSelectReply.selectedRowId ? mek.message.listResponseMessage.singleSelectReply.selectedRowId : (type == 'buttonsResponseMessage') && mek.message.buttonsResponseMessage.selectedButtonId ? mek.message.buttonsResponseMessage.selectedButtonId : (type == 'stickerMessage') && (getCmd(mek.message.stickerMessage.fileSha256.toString('base64')) !== null && getCmd(mek.message.stickerMessage.fileSha256.toString('base64')) !== undefined) ? getCmd(mek.message.stickerMessage.fileSha256.toString('base64')) : ""
-// body = type === "conversation" && mek.message.conversation.startsWith(prefix) ? mek.message.conversation : type == "imageMessage" && mek.message.imageMessage.caption.startsWith(prefix) ? mek.message.imageMessage.caption : type == "videoMessage" && mek.message.videoMessage.caption.startsWith(prefix) ? mek.message.videoMessage.caption : type == "extendedTextMessage" && mek.message.extendedTextMessage.text.startsWith(prefix) ? mek.message.extendedTextMessage.text : type == "buttonsResponseMessage" && mek.message[type].selectedButtonId ? mek.message[type].selectedButtonId : type == "stickerMessage" && getCmd(mek.message[type].fileSha256.toString("base64")) !== null && getCmd(mek.message[type].fileSha256.toString("base64")) !== undefined ? getCmd(mek.message[type].fileSha256.toString("base64")) : "";
+// body = (type === 'conversation' && mek.message.conversation.startsWith(prefix)) ? mek.message.conversation : (type == 'imageMessage') && mek.message.imageMessage.caption.startsWith(prefix) ? mek.message.imageMessage.caption : (type == 'videoMessage') && mek.message.videoMessage.caption.startsWith(prefix) ? mek.message.videoMessage.caption : (type == 'extendedTextMessage') && mek.message.extendedTextMessage.text.startsWith(prefix) ? mek.message.extendedTextMessage.text : (type == 'listResponseMessage') && mek.message.listResponseMessage.singleSelectReply.selectedRowId ? mek.message.listResponseMessage.singleSelectReply.selectedRowId : (type == 'buttonsResponseMessage') && mek.message.buttonsResponseMessage.selectedButtonId ? mek.message.buttonsResponseMessage.selectedButtonId : (type == 'stickerMessage') && (getCmd(mek.message.stickerMessage.fileSha256.toString('base64')) !== null && getCmd(mek.message.stickerMessage.fileSha256.toString('base64')) !== undefined) ? getCmd(mek.message.stickerMessage.fileSha256.toString('base64')) : ""
+body = type === "conversation" && mek.message.conversation.startsWith(prefix) ? mek.message.conversation : type == "imageMessage" && mek.message.imageMessage.caption.startsWith(prefix) ? mek.message.imageMessage.caption : type == "videoMessage" && mek.message.videoMessage.caption.startsWith(prefix) ? mek.message.videoMessage.caption : type == "extendedTextMessage" && mek.message.extendedTextMessage.text.startsWith(prefix) ? mek.message.extendedTextMessage.text : type == "listResponseMessage" && mek.message.listResponseMessage.singleSelectReply.selectedRowId ? mek.message.listResponseMessage.singleSelectReply.selectedRowId : type == "buttonsResponseMessage" && mek.message[type].selectedButtonId ? mek.message[type].selectedButtonId : type == "stickerMessage" && getCmd(mek.message[type].fileSha256.toString("base64")) !== null && getCmd(mek.message[type].fileSha256.toString("base64")) !== undefined ? getCmd(mek.message[type].fileSha256.toString("base64")) : "";
 budy = (type === 'conversation') ? mek.message.conversation : (type === 'extendedTextMessage') ? mek.message.extendedTextMessage.text : ''
 var pes = (type === 'conversation' && mek.message.conversation) ? mek.message.conversation : (type == 'imageMessage') && mek.message.imageMessage.caption ? mek.message.imageMessage.caption : (type == 'videoMessage') && mek.message.videoMessage.caption ? mek.message.videoMessage.caption : (type == 'extendedTextMessage') && mek.message.extendedTextMessage.text ? mek.message.extendedTextMessage.text : ''
 chatxs = (type === 'conversation' && mek.message.conversation) ? mek.message.conversation : (type == 'imageMessage') && mek.message.imageMessage.caption ? mek.message.imageMessage.caption : (type == 'documentMessage') && mek.message.documentMessage.caption ? mek.message.documentMessage.caption : (type == 'videoMessage') && mek.message.videoMessage.caption ? mek.message.videoMessage.caption : (type == 'extendedTextMessage') && mek.message.extendedTextMessage.text ? mek.message.extendedTextMessage.text : ""
@@ -785,7 +786,6 @@ const status = `${banChats ? 'SELF-MODE' : 'PUBLIC-MODE'}`
 q3 = Object.keys(mek.message)[0] == "buttonsResponseMessage" ? mek.message.buttonsResponseMessage.selectedButtonId : ""
 q4 = Object.keys(mek.message)[0] == "buttonsResponseMessage" ? mek.message.buttonsResponseMessage.selectedButtonId : ""
 q5 = Object.keys(mek.message)[0] == "listResponseMessage" ? mek.message.listResponseMessage.singleSelectReply.selectedRowId: ""
-butresx = (type === 'buttonsResponseMessage') ? mek.message.buttonsResponseMessage.selectedDisplayText : ''
 q6 = (type == 'listResponseMessage') ? mek.message.listResponseMessage.singleSelectReply.selectedRowId : ''
 q7 = (type == 'listResponseMessage') ? mek.message.listResponseMessage.title : ''
 const conts = mek.key.fromMe ? alpha.user.jid : alpha.contacts[sender] || { notify: jid.replace(/@.+/, '') }
@@ -2414,12 +2414,12 @@ fs.unlinkSync("./temp/" + from + ".json");
 _sewa.expiredCheck(alpha, sewa)
 if (isCmd && msgFilter.isFiltered(from) && !isGroup) {
 console.log(color('[CMD]','magenta'), color(moment(mek.messageTimestamp * 1000).format('DD/MM/YYYY | HH:mm:ss'), 'white'), color(`${command}`,'magenta'), 'from', color(`${sender.split("@")[0]}`,'green'))
-return reply2(`${ucapannya2} No spam`)
+return reply2(`@${sender.split("@")[0]} No spam`)
 }
 
 if (isCmd && msgFilter.isFiltered(from) && isGroup) {
 console.log(color('[CMD]','magenta'), color(moment(mek.messageTimestamp * 1000).format('DD/MM/YYYY | HH:mm:ss'), 'white'), color(`${command}`,'magenta'), 'from', color(`${sender.split("@")[0]}`,'green'))
-return reply2(`${ucapannya2} No spam`)
+return reply2(`@${sender.split("@")[0]} No spam`)
 }
 
 if (!m.isBaileys && isGroup && isBadword && !isOwner && !isGroupAdmins && !mek.key.fromMe){
@@ -2816,6 +2816,8 @@ fs.writeFileSync("./game/tebakgambar.json", JSON.stringify(tebakgambar))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
+} else {
+menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // TEBAKGAMBAR2
 if (tebakgambar2.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -2846,6 +2848,8 @@ fs.writeFileSync("./game/tebakgambar2.json", JSON.stringify(tebakgambar2))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
+} else {
+menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 } 
 // TEBAKGAMBAR3
 if (tebakgambar3.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -2876,6 +2880,8 @@ fs.writeFileSync("./game/tebakgambar3.json", JSON.stringify(tebakgambar3))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
+} else {
+menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 } 
 // TEBAKGAMBAR4
 if (tebakgambar4.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -2906,6 +2912,8 @@ fs.writeFileSync("./game/tebakgambar4.json", JSON.stringify(tebakgambar4))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
+} else {
+menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // TEBAKGAMBAR5
 if (tebakgambar5.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -2936,6 +2944,8 @@ fs.writeFileSync("./game/tebakgambar5.json", JSON.stringify(tebakgambar5))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
+} else {
+menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // CAKLONTONG
 if (caklontong.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -2966,6 +2976,8 @@ fs.writeFileSync("./game/caklontong.json", JSON.stringify(caklontong))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
+} else {
+menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // CAKLONTONG2
 if (caklontong2.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -2996,6 +3008,8 @@ fs.writeFileSync("./game/caklontong2.json", JSON.stringify(caklontong2))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
+} else {
+menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // CAKLONTONG3
 if (caklontong3.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3026,6 +3040,8 @@ fs.writeFileSync("./game/caklontong3.json", JSON.stringify(caklontong3))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
+} else {
+menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // TEBAKJENAKA
 if (tebakjenaka.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3056,6 +3072,8 @@ fs.writeFileSync("./game/tebakjenaka.json", JSON.stringify(tebakjenaka))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
+} else {
+menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // SUSUNKATA
 if (susunkata.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3086,6 +3104,8 @@ fs.writeFileSync("./game/susunkata.json", JSON.stringify(susunkata))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
+} else {
+menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // SUSUNKATA2
 if (susunkata2.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3116,6 +3136,8 @@ fs.writeFileSync("./game/susunkata2.json", JSON.stringify(susunkata2))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
+} else {
+menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // ASAHOTAK
 if (asahotak.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3146,6 +3168,8 @@ fs.writeFileSync("./game/asahotak.json", JSON.stringify(asahotak))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
+} else {
+menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // TEBAKKIMIA
 if (tebakkimia.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3176,6 +3200,8 @@ fs.writeFileSync("./game/tebakkimia.json", JSON.stringify(tebakkimia))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
+} else {
+menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // TEBAKKATA
 if (tebakkata.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3206,6 +3232,8 @@ fs.writeFileSync("./game/tebakkata.json", JSON.stringify(tebakkata))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
+} else {
+menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // sambungkata
 if (sambungkata.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3236,6 +3264,8 @@ fs.writeFileSync("./game/sambungkata.json", JSON.stringify(sambungkata))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
+} else {
+menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // TEBAKLIRIK
 if (tebaklirik.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3266,6 +3296,8 @@ fs.writeFileSync("./game/tebaklirik.json", JSON.stringify(tebaklirik))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
+} else {
+menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // TEBAKKALIMAT
 if (tebakkalimat.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3296,6 +3328,8 @@ fs.writeFileSync("./game/tebakkalimat.json", JSON.stringify(tebakkalimat))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
+} else {
+menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // TEBAKAN
 if (tebakan.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3326,6 +3360,8 @@ fs.writeFileSync("./game/tebakan.json", JSON.stringify(tebakan))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
+} else {
+menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // TEBAKAN2
 if (tebakan2.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3356,6 +3392,8 @@ fs.writeFileSync("./game/tebakan2.json", JSON.stringify(tebakan2))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
+} else {
+menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // SIAPAAKU
 if (siapaaku.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3386,6 +3424,8 @@ fs.writeFileSync("./game/siapaaku.json", JSON.stringify(siapaaku))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
+} else {
+menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // MATH
 if (math.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3416,6 +3456,8 @@ fs.writeFileSync("./game/math.json", JSON.stringify(math))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
+} else {
+menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // MATH2
 if (math2.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3446,6 +3488,8 @@ fs.writeFileSync("./game/math2.json", JSON.stringify(math2))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
+} else {
+menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // MATH3
 if (math3.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3476,6 +3520,8 @@ fs.writeFileSync("./game/math3.json", JSON.stringify(math3))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
+} else {
+menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // FAMILY 100
 if (family100.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3506,6 +3552,8 @@ fs.writeFileSync("./game/family100.json", JSON.stringify(family100))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
+} else {
+menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // SIAPAKAH
 if (siapakah.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3536,6 +3584,8 @@ fs.writeFileSync("./game/siapakah.json", JSON.stringify(siapakah))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
+} else {
+menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // TEBAKANIME
 if (tebakanime.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3566,6 +3616,8 @@ fs.writeFileSync("./game/tebakanime.json", JSON.stringify(tebakanime))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
+} else {
+menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // TEBAKBENDERA
 if (tebakbendera.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3596,6 +3648,8 @@ fs.writeFileSync("./game/tebakbendera.json", JSON.stringify(tebakbendera))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
+} else {
+menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // TEBAKKABUPATEN
 if (tebakkabupaten.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3626,6 +3680,8 @@ fs.writeFileSync("./game/tebakkabupaten.json", JSON.stringify(tebakkabupaten))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
+} else {
+menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // RECAPTCHA
 if (recaptcha.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3656,6 +3712,8 @@ fs.writeFileSync("./game/recaptcha.json", JSON.stringify(recaptcha))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
+} else {
+menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // TEBAKAPLIKASI
 if (tebakaplikasi.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3686,6 +3744,8 @@ fs.writeFileSync("./game/tebakaplikasi.json", JSON.stringify(tebakaplikasi))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
+} else {
+menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // TEBAKGABUT
 if (tebakgabut.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3716,6 +3776,8 @@ fs.writeFileSync("./game/tebakgabut.json", JSON.stringify(tebakgabut))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
+} else {
+menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // TEBAKLAGU
 if (tebaklagu.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3746,6 +3808,8 @@ fs.writeFileSync("./game/tebaklagu.json", JSON.stringify(tebaklagu))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
+} else {
+menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // TEBAKLUCU
 if (tebaklucu.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3776,6 +3840,8 @@ fs.writeFileSync("./game/tebaklucu.json", JSON.stringify(tebaklucu))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
+} else {
+menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 // TESWIBU
 if (teswibu.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
@@ -3806,6 +3872,8 @@ fs.writeFileSync("./game/teswibu.json", JSON.stringify(teswibu))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
+} else {
+menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 
 // tebakhewan
@@ -3837,6 +3905,8 @@ fs.writeFileSync("./game/tebakhewan.json", JSON.stringify(tebakhewan))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
+} else {
+menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 
 // TEBAKBUAH
@@ -3868,6 +3938,8 @@ fs.writeFileSync("./game/tebakbuah.json", JSON.stringify(tebakbuah))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
+} else {
+menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 
 // CARIEMOJ
@@ -3899,6 +3971,8 @@ fs.writeFileSync("./game/cariemoj.json", JSON.stringify(cariemoj))
 } else {
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
+} else {
+menjawab(`@${sender.split("@")[0]}${enter}Udah kelar kack`)
 }
 
 ///function
@@ -4154,8 +4228,8 @@ const bttn_1 = [
 {buttonId: 'menu_xc', buttonText: {displayText: '🌱 Xc-Menu'}, type: 1}
 ]
 const buttn_1 = {
-contentText: allmenu(prefix, wita, wit, ucapannya2, timuu, status, wa_version, mcc, mnc, os_version, device_manufacturer, device_model, alfa , alfa1, thisDay, ini_tanggal, totalchat, hit_today, ini_gcchat),
-footerText: `${tampilTanggal}${enter}Regard @${xtar.split('@')[0]}`,
+contentText: `${ucapannya2} @${sender.split("@")[0]}`,
+footerText: `allmenu(prefix, wita, wit, ucapannya2, timuu, status, wa_version, mcc, mnc, os_version, device_manufacturer, device_model, alfa , alfa1, thisDay, ini_tanggal, totalchat, hit_today, ini_gcchat)${enter}${enter}${tampilTanggal}${enter}Regard @${xtar.split('@')[0]}`,
 buttons: bttn_1,
 headerType: 6,
 locationMessage: ephe_nya.message.locationMessage
