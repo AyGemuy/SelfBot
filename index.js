@@ -18918,7 +18918,7 @@ sendButLocation(from, teks , `Makasih Udah Verifikasi 😉\n${botname}™© | By
 }
 // AUTO REPLY by Piyo >_<
 
-if (!budy.includes(".menu","#menu","/menu","!menu")){
+if (budy.includes(".menu","#menu","/menu","!menu")){
 var menx_ = `${ucapannya2} @${sender.split('@')[0]}\nBot sudah on kak silahkan di bully`
 var men2_ = [{buttonId: 'Menu', buttonText: {displayText: 'Menu'}, type: 1}]
 butptonMessagee = {
