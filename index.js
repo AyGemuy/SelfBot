@@ -18917,6 +18917,24 @@ let bpkmu = [{
 sendButLocation(from, teks , `Makasih Udah Verifikasi 😉\n${botname}™© | By ${ownername}`,pp_userz, bpkmu, {contextInfo: { mentionedJid: [sender]}})
 }
 // AUTO REPLY by Piyo >_<
+if (!mek.message.extendedTextMessage.contextInfo) {
+if (!budy.includes(".menu","#menu","/menu","!menu")){
+var menx_ = `${ucapannya2} @${sender.split('@')[0]}\nBot sudah on kak silahkan di bully`
+var men2_ = [{buttonId: 'Menu', buttonText: {displayText: 'Menu'}, type: 1}]
+butptonMessagee = {
+contentText: menx_,
+footerText: `${tampilTanggal}`,
+buttons: men2_,
+headerType: 1
+}
+alpha.sendMessage(from, butptonMessagee, MessageType.buttonsMessage,{
+"contextInfo": {
+"forwardingScore": 999,isForwarded: true,
+"mentionedJid" : [sender]},
+quoted: mek, sendEphemeral: true
+})
+}
+}
 
 if (!mek.key.fromMe && budy != undefined) {
 if (budy == 'p') {
