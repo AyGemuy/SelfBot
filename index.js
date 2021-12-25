@@ -4911,8 +4911,8 @@ if (!isQuotedSticker) return reply2('```Reply stc nya```')
 encmedia_ = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 media_ = await alpha.downloadAndSaveMediaMessage(encmedia_)
 anu = args.join(' ').split('|')
-satu = anu[0] !== '' ? anu[0] : `Kosong`
-dua = typeof anu[1] !== 'undefined' ? anu[1] : `Kosong`
+satu = anu[0] !== '' ? anu[0] : "'
+dua = typeof anu[1] !== 'undefined' ? anu[1] : ""
 require('./lib/fetcher.js').createExif(satu, dua)
 require('./lib/fetcher.js').modStick(media_ , alpha, mek, from)
 break
@@ -13118,7 +13118,7 @@ await sleep(`${waktu_game}`)
 if (tebaklirik.hasOwnProperty(sender.split('@')[0])) {
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: 'list_game', buttonText: {displayText: '🎮 List game'}, type: 1},
+{buttonId: 'list_game', buttonText: {displayText: '?? List game'}, type: 1},
 {buttonId: 'x_menu', buttonText: {displayText: '🌱 List menu'}, type: 1}
 ]
 sendButton(from, `❌ Game berakhir..\n*Jawaban :* ${jwb_lirik}`, `Waktu habis ${waktu_game}ms`, but)
