@@ -4911,7 +4911,7 @@ if (!isQuotedSticker) return reply2('```Reply stc nya```')
 encmedia_ = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 media_ = await alpha.downloadAndSaveMediaMessage(encmedia_)
 anu = args.join(' ').split('|')
-satu = anu[0] !== '' ? anu[0] : "'
+satu = anu[0] !== '' ? anu[0] : ""
 dua = typeof anu[1] !== 'undefined' ? anu[1] : ""
 require('./lib/fetcher.js').createExif(satu, dua)
 require('./lib/fetcher.js').modStick(media_ , alpha, mek, from)
