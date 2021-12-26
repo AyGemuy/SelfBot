@@ -17050,7 +17050,7 @@ break
 
 case 'tebakhewan':
 if (tebakhewan.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
-hew = await fetchText('https://raw.githubusercontent.com/AyGemuy/SelfBot/master/game/hewan.json')
+hew = await fetchText('https://raw.githubusercontent.com/AyGemuy/SelfBot/master/game/hewan.json?token=AV5PRH23XUAQDVPR3X5SKETBY7CWG')
 hewn_ = hew.split('\n')
 soal = hewn_[Math.floor(Math.random() * hewn_.length)]
 jwb_hwn = `${soal}`
@@ -17077,7 +17077,7 @@ break
 
 case 'tebakbuah':
 if (tebakbuah.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
-buh = await fetchText('https://raw.githubusercontent.com/AyGemuy/SelfBot/master/game/buah.json')
+buh = await fetchText('https://raw.githubusercontent.com/AyGemuy/SelfBot/master/game/buah.json?token=AV5PRH6ERUWU3ZOMURIFFS3BY7CY6')
 buwh_ = buh.split('\n')
 soal = buwh_[Math.floor(Math.random() * buwh_.length)]
 jwb_buah = `${soal}`
