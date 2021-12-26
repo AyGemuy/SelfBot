@@ -2660,6 +2660,7 @@ fs.writeFileSync('./database/mute.json', JSON.stringify(mute))
 reply2('Bot telah diunmute di group ini')
 }
 }
+
 // FUNTION CHAT \\
 const getpc = async function(totalchat){
 let pc = []
@@ -2823,6 +2824,7 @@ fs.writeFileSync("./game/tebakgambar.json", JSON.stringify(tebakgambar))
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
+
 // TEBAKGAMBAR2
 if (tebakgambar2.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_tbk2 = tebakgambar2[sender.split('@')[0]]
@@ -2913,6 +2915,7 @@ fs.writeFileSync("./game/tebakgambar4.json", JSON.stringify(tebakgambar4))
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
+
 // TEBAKGAMBAR5
 if (tebakgambar5.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_tbk5 = tebakgambar5[sender.split('@')[0]]
@@ -2943,6 +2946,7 @@ fs.writeFileSync("./game/tebakgambar5.json", JSON.stringify(tebakgambar5))
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
+
 // CAKLONTONG
 if (caklontong.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_cak = caklontong[sender.split('@')[0]]
@@ -2973,6 +2977,7 @@ fs.writeFileSync("./game/caklontong.json", JSON.stringify(caklontong))
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
+
 // CAKLONTONG2
 if (caklontong2.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_cak2 = caklontong2[sender.split('@')[0]]
@@ -3003,6 +3008,7 @@ fs.writeFileSync("./game/caklontong2.json", JSON.stringify(caklontong2))
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
+
 // CAKLONTONG3
 if (caklontong3.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_cak3 = caklontong3[sender.split('@')[0]]
@@ -3033,6 +3039,7 @@ fs.writeFileSync("./game/caklontong3.json", JSON.stringify(caklontong3))
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
+
 // TEBAKJENAKA
 if (tebakjenaka.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_jen = tebakjenaka[sender.split('@')[0]]
@@ -3063,6 +3070,7 @@ fs.writeFileSync("./game/tebakjenaka.json", JSON.stringify(tebakjenaka))
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
+
 // SUSUNKATA
 if (susunkata.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_susun = susunkata[sender.split('@')[0]]
@@ -3093,6 +3101,7 @@ fs.writeFileSync("./game/susunkata.json", JSON.stringify(susunkata))
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
+
 // SUSUNKATA2
 if (susunkata2.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_susun2 = susunkata2[sender.split('@')[0]]
@@ -3123,6 +3132,7 @@ fs.writeFileSync("./game/susunkata2.json", JSON.stringify(susunkata2))
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
+
 // ASAHOTAK
 if (asahotak.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_asah = asahotak[sender.split('@')[0]]
@@ -3130,18 +3140,18 @@ if (budy.toLowerCase() == jwb_asah) {
 let koin =randomNomor(1000)
 addLevelingLevel(sender, 1)
 addBalance(sender, koin, balance)
-var atk0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
-var atk1 = [
+var aot0 = `☑️ *${jwb_benar}*\nfrom @${sender.split("@")[0]} thanks 🐦${enter}${enter}*Balance* : + $${koin}`
+var aot1 = [
 {buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
 {buttonId: `asahotak`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
-atk1_ = {
-contentText: atk0,
+aot1_ = {
+contentText: aot0,
 footerText: `${tampilTanggal}`,
-buttons: atk1,
+buttons: aot1,
 headerType: 1
 }
-alpha.sendMessage(from, atk1_, MessageType.buttonsMessage,{
+alpha.sendMessage(from, aot1_, MessageType.buttonsMessage,{
 "contextInfo": {
 "forwardingScore": 999,isForwarded: true,
 "mentionedJid" : [sender]},
@@ -3153,6 +3163,7 @@ fs.writeFileSync("./game/asahotak.json", JSON.stringify(asahotak))
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
+
 // TEBAKKIMIA
 if (tebakkimia.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_kimia = tebakkimia[sender.split('@')[0]]
@@ -3183,6 +3194,7 @@ fs.writeFileSync("./game/tebakkimia.json", JSON.stringify(tebakkimia))
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
+
 // TEBAKKATA
 if (tebakkata.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_kata = tebakkata[sender.split('@')[0]]
@@ -3213,6 +3225,7 @@ fs.writeFileSync("./game/tebakkata.json", JSON.stringify(tebakkata))
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
+
 // sambungkata
 if (sambungkata.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_sbg = sambungkata[sender.split('@')[0]]
@@ -3243,6 +3256,7 @@ fs.writeFileSync("./game/sambungkata.json", JSON.stringify(sambungkata))
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
+
 // TEBAKLIRIK
 if (tebaklirik.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_lirik = tebaklirik[sender.split('@')[0]]
@@ -3273,6 +3287,7 @@ fs.writeFileSync("./game/tebaklirik.json", JSON.stringify(tebaklirik))
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
+
 // TEBAKKALIMAT
 if (tebakkalimat.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_kali = tebakkalimat[sender.split('@')[0]]
@@ -3303,6 +3318,7 @@ fs.writeFileSync("./game/tebakkalimat.json", JSON.stringify(tebakkalimat))
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
+
 // TEBAKAN
 if (tebakan.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_tbkn = tebakan[sender.split('@')[0]]
@@ -3333,6 +3349,7 @@ fs.writeFileSync("./game/tebakan.json", JSON.stringify(tebakan))
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
+
 // TEBAKAN2
 if (tebakan2.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_tbkn2 = tebakan2[sender.split('@')[0]]
@@ -3363,6 +3380,7 @@ fs.writeFileSync("./game/tebakan2.json", JSON.stringify(tebakan2))
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
+
 // SIAPAAKU
 if (siapaaku.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_siapa = siapaaku[sender.split('@')[0]]
@@ -3393,6 +3411,7 @@ fs.writeFileSync("./game/siapaaku.json", JSON.stringify(siapaaku))
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
+
 // MATH
 if (math.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_math = math[sender.split('@')[0]]
@@ -3423,6 +3442,7 @@ fs.writeFileSync("./game/math.json", JSON.stringify(math))
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
+
 // MATH2
 if (math2.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_math2 = math2[sender.split('@')[0]]
@@ -3453,6 +3473,7 @@ fs.writeFileSync("./game/math2.json", JSON.stringify(math2))
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
+
 // MATH3
 if (math3.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_math3 = math3[sender.split('@')[0]]
@@ -3483,6 +3504,7 @@ fs.writeFileSync("./game/math3.json", JSON.stringify(math3))
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
+
 // FAMILY 100
 if (family100.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_f100 = family100[sender.split('@')[0]]
@@ -3513,6 +3535,7 @@ fs.writeFileSync("./game/family100.json", JSON.stringify(family100))
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
+
 // SIAPAKAH
 if (siapakah.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_siapakah = siapakah[sender.split('@')[0]]
@@ -3543,6 +3566,7 @@ fs.writeFileSync("./game/siapakah.json", JSON.stringify(siapakah))
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
+
 // TEBAKANIME
 if (tebakanime.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_anime = tebakanime[sender.split('@')[0]]
@@ -3573,6 +3597,7 @@ fs.writeFileSync("./game/tebakanime.json", JSON.stringify(tebakanime))
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
+
 // TEBAKBENDERA
 if (tebakbendera.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_flag = tebakbendera[sender.split('@')[0]]
@@ -3603,6 +3628,7 @@ fs.writeFileSync("./game/tebakbendera.json", JSON.stringify(tebakbendera))
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
+
 // TEBAKKABUPATEN
 if (tebakkabupaten.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_kab = tebakkabupaten[sender.split('@')[0]]
@@ -3633,6 +3659,7 @@ fs.writeFileSync("./game/tebakkabupaten.json", JSON.stringify(tebakkabupaten))
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
+
 // RECAPTCHA
 if (recaptcha.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_captcha = recaptcha[sender.split('@')[0]]
@@ -3663,6 +3690,7 @@ fs.writeFileSync("./game/recaptcha.json", JSON.stringify(recaptcha))
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
+
 // TEBAKAPLIKASI
 if (tebakaplikasi.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_apk = tebakaplikasi[sender.split('@')[0]]
@@ -3693,6 +3721,7 @@ fs.writeFileSync("./game/tebakaplikasi.json", JSON.stringify(tebakaplikasi))
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
+
 // TEBAKGABUT
 if (tebakgabut.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_gbt = tebakgabut[sender.split('@')[0]]
@@ -3723,6 +3752,7 @@ fs.writeFileSync("./game/tebakgabut.json", JSON.stringify(tebakgabut))
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
+
 // TEBAKLAGU
 if (tebaklagu.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_lagu = tebaklagu[sender.split('@')[0]]
@@ -3753,6 +3783,7 @@ fs.writeFileSync("./game/tebaklagu.json", JSON.stringify(tebaklagu))
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
+
 // TEBAKLUCU
 if (tebaklucu.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_lucu = tebaklucu[sender.split('@')[0]]
@@ -3783,6 +3814,7 @@ fs.writeFileSync("./game/tebaklucu.json", JSON.stringify(tebaklucu))
 menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 }
 }
+
 // TESWIBU
 if (teswibu.hasOwnProperty(sender.split('@')[0]) && !isCmd && !mek.key.fromMe ) {
 jwb_wibu = teswibu[sender.split('@')[0]]
