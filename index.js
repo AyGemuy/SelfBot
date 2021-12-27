@@ -430,7 +430,7 @@ cr = setting.cr
 petik = '*'
 titik =`...`
 enter ='\n'
-read_more = "͏".repeat(420)
+read_more = "͏".repeat(300)
 pembatas = '*⌯┅━━━━━━━━━━━━━━┅⌯*'
 
 msgId="B826873620DD5947E683E3ABE663F263"
@@ -4075,9 +4075,11 @@ sendButLocation(from, userProcfile , `${botname}™© | By ${ownername}`,pp_user
 }
 break
 
+
 case 'verify':
 case 'verif':
 case 'daftar':
+case 'regis':
 if (isRegister) return reply2('Kamu sudah terdaftar di dalam database')
 try {
 ppgc = await alpha.getProfilePicture(from)
@@ -4103,14 +4105,10 @@ teks = `⌯✆ *VERIFIED* ✆⌯
 │ *Bio :* ${bio_user}
 │ *SN :* ${sn_.medium}
 │ *Time :* ${wib} Wib
-╰⌯
-${read_more}
-itu aja ya kack:)
-tq`
+╰⌯`
 let vengrif = [
-{buttonId: 'x_menu', buttonText: {displayText: '🌱 List-Menu'}, type: 1},
-{buttonId: 'menu_x', buttonText: {displayText: '🌱 Lol-Menu'}, type: 1},
-{buttonId: 'menu_xc', buttonText: {displayText: '🌱 Xc-Menu'}, type: 1}
+{buttonId: `menu`, buttonText: {displayText: '🌱 List-Menu'}, type: 1},
+{buttonId: `me`, buttonText: {displayText: '☂️ Profil'}, type: 1}
 ]
 sendButLocation(from, teks , `Makasih Udah Verifikasi 😉\n${botname}™© | By ${ownername}`,pp_verify, vengrif, {contextInfo: { mentionedJid: [sender]}})
 break
@@ -4401,9 +4399,9 @@ break
 
 case 'allmenu':
 let papao = [{
-"buttonId": 'x_menu',
+"buttonId": 'menu_xc',
 "buttonText": {
-"displayText": "🔥 Menu X"
+"displayText": "🔥 Menu Xc"
 },
 "type": "RESPONSE"
 },{
@@ -18930,7 +18928,8 @@ alpha.sendMessage(from, buttonMessagee, MessageType.buttonsMessage,{
 })
 }
 
-if(budy.includes("@verif", "@verify","daftar")){
+// AUTO REPLY by Piyo >_<
+if (budy.includes("@verify","@verif","daftar")){
 if (isRegister) return reply2('Kamu sudah terdaftar di dalam database')
 try {
 ppgc = await alpha.getProfilePicture(from)
@@ -18944,10 +18943,9 @@ ppor = 'https://audiopromedia.co.id/wp-content/uploads/2021/06/Screenshot_2021-0
 }
 let pp_verify = await getBuffer(`https://hadi-api.herokuapp.com/api/card/verify2?name=${encodeURIComponent(pushname)}&memverify=${encodeURIComponent(groupMembers.length)}&gcname=${encodeURIComponent(groupName)}&gcicon=${encodeURIComponent(ppgc)}&pp=${encodeURIComponent(ppor)}&bg=${encodeURIComponent(bg_verify)}`)
 addRegisterUser(sender, pushname, bio_user, wib)
+sn_ = await fetchJson('https://api.caranya.my.id/gen-password')
 let ran_blc = randomNomor(50)
 addBalance(sender, ran_blc, balance)
-addLevelingId(sender)
-sn_ = await fetchJson('https://api.caranya.my.id/gen-password')
 fs.writeFileSync('./database/user/register.json', JSON.stringify(register))
 teks = `⌯✆ *VERIFIED* ✆⌯
 
@@ -18957,36 +18955,12 @@ teks = `⌯✆ *VERIFIED* ✆⌯
 │ *Bio :* ${bio_user}
 │ *SN :* ${sn_.medium}
 │ *Time :* ${wib} Wib
-╰⌯
-${read_more}
-itu aja ya kack:)
-tq`
-let bpkmu = [
-{buttonId: 'x_menu', buttonText: {displayText: '🌱 List-Menu'}, type: 1},
-{buttonId: 'menu_x', buttonText: {displayText: '🌱 Lol-Menu'}, type: 1},
-{buttonId: 'menu_xc', buttonText: {displayText: '🌱 Xc-Menu'}, type: 1}
+╰⌯`
+let vengrif = [
+{buttonId: 'Oke', buttonText: {displayText: '👋 Thanks'}, type: 1}
 ]
-sendButLocation(from, teks , `Makasih Udah Verifikasi 😉\n${botname}™© | By ${ownername}`,pp_verify, bpkmu, {contextInfo: { mentionedJid: [sender]}})
+sendButLocation(from, teks , `Makasih Udah Verifikasi 😉\n${botname}™© | By ${ownername}`,pp_verify, vengrif, {contextInfo: { mentionedJid: [sender]}})
 }
-// AUTO REPLY by Piyo >_<
-
-if (budy.includes(".menu","#menu","/menu","!menu")){
-var menx_ = `${ucapannya2} @${sender.split('@')[0]}\nBot sudah on kak silahkan di bully`
-var men2_ = [{buttonId: 'Menu', buttonText: {displayText: 'Menu'}, type: 1}]
-butptonMessagee = {
-contentText: menx_,
-footerText: `${tampilTanggal}`,
-buttons: men2_,
-headerType: 1
-}
-alpha.sendMessage(from, butptonMessagee, MessageType.buttonsMessage,{
-"contextInfo": {
-"forwardingScore": 999,isForwarded: true,
-"mentionedJid" : [sender]},
-quoted: mek, sendEphemeral: true
-})
-}
-
 
 if (!mek.key.fromMe && budy != undefined) {
 if (budy == 'p') {
