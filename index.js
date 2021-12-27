@@ -731,9 +731,16 @@ const isOwner = ownerNumberr.includes(sender)
 try {
 pp_userb = await alpha.getProfilePicture(sender)
 } catch {
-pp_userb = 'https://i.ibb.co/SxN4ymH/2860c9a59c9e.jpg'
+pp_userb = 'https://audiopromedia.co.id/wp-content/uploads/2021/06/Screenshot_2021-06-19-16-22-16-937_com.miui_.gallery.jpg'
 }
 let pp_userz = await getBuffer(pp_userb)
+
+try {
+ppgc = await alpha.getProfilePicture(from)
+} catch {
+ppgc = 'https://audiopromedia.co.id/wp-content/uploads/2021/06/Screenshot_2021-06-19-16-22-16-937_com.miui_.gallery.jpg'
+}
+
 const getGroupAdminss = (participants) => {
 admins = []
 for (let i of participants) {
@@ -2548,7 +2555,7 @@ Congrats 🎉`,text, {quoted: mek, contextInfo: {"mentionedJid": [sender],"forwa
 try {
 pep = await alpha.getProfilePicture(sender)
 } catch {
-pep = 'https://i.ibb.co/SxN4ymH/2860c9a59c9e.jpg'
+pep = 'https://audiopromedia.co.id/wp-content/uploads/2021/06/Screenshot_2021-06-19-16-22-16-937_com.miui_.gallery.jpg'
 }
 let lev_up = await getBuffer(`https://api-xfar05.herokuapp.com/api/canvas/levelup?pp=${pep}`)
 capt = ` *「 LEVEL UP 」*
@@ -4083,14 +4090,7 @@ case 'verif':
 case 'daftar':
 case 'regis':
 if (isRegister) return reply2('Kamu sudah terdaftar di dalam database')
-if (ppgc) {
-await alpha.getProfilePicture(from)
-} else if (ppor) {
-await alpha.getProfilePicture(sender)
-} else {
-'https://audiopromedia.co.id/wp-content/uploads/2021/06/Screenshot_2021-06-19-16-22-16-937_com.miui_.gallery.jpg'
-}
-let pp_verify = await getBuffer(`https://hadi-api.herokuapp.com/api/card/verify2?name=${encodeURIComponent(pushname)}&memverify=${encodeURIComponent(groupMembers.length)}&gcname=${encodeURIComponent(groupName)}&gcicon=${encodeURIComponent(ppgc)}&pp=${encodeURIComponent(ppor)}&bg=${encodeURIComponent(bg_verify)}`)
+let pp_verify = await getBuffer(`https://hadi-api.herokuapp.com/api/card/verify2?name=${encodeURIComponent(pushname)}&memverify=${encodeURIComponent(groupMembers.length)}&gcname=${encodeURIComponent(groupName)}&gcicon=${encodeURIComponent(ppgc)}&pp=${encodeURIComponent(pp_userb)}&bg=${encodeURIComponent(bg_verify)}`)
 addRegisterUser(sender, pushname, bio_user, wib)
 sn_ = await fetchJson('https://api.caranya.my.id/gen-password')
 let ran_blc = randomNomor(50)
@@ -4129,7 +4129,7 @@ if(menusimple == false){
 	try {
 pepek = await alpha.getProfilePicture(sender)
 } catch {
-pepek = 'https://i.ibb.co/SxN4ymH/2860c9a59c9e.jpg'
+pepek = 'https://audiopromedia.co.id/wp-content/uploads/2021/06/Screenshot_2021-06-19-16-22-16-937_com.miui_.gallery.jpg'
 }
 let pekpek = await getBuffer(pepek)
 xtar = `${targetpc}@s.whatsapp.net`
@@ -4231,7 +4231,7 @@ case 'help':
 try {
 chatt = await alpha.getProfilePicture(sender)
 } catch {
-chatt = 'https://i.ibb.co/SxN4ymH/2860c9a59c9e.jpg'
+chatt = 'https://audiopromedia.co.id/wp-content/uploads/2021/06/Screenshot_2021-06-19-16-22-16-937_com.miui_.gallery.jpg'
 }
 let ch = await getBuffer(chatt)
 koko = `${targetpc}@s.whatsapp.net`
@@ -6174,7 +6174,7 @@ let mentioneddd = mek.message.extendedTextMessage.contextInfo.mentionedJid
 try {
 pic = await alpha.getProfilePicture(mentioneddd[0])
 } catch {
-pic = 'https://i.ibb.co/SxN4ymH/2860c9a59c9e.jpg'
+pic = 'https://audiopromedia.co.id/wp-content/uploads/2021/06/Screenshot_2021-06-19-16-22-16-937_com.miui_.gallery.jpg'
 }
 seeer = `Nama : *${pushname}`
 thumbb = await getBuffer(pic)
@@ -6721,7 +6721,7 @@ break
 
 case 'ktpmaker':
 case 'ktp':
-if (args.length == 0) return reply2(`Usage: ${prefix + command} nik|provinsi|kabupaten|nama|tempat, tanggal lahir|jenis kelamin|jalan|rt/rw|kelurahan|kecamatan|agama|status nikah|pekerjaan|warga negara|berlaku sampai|url_image\n\n${emoj}Hint : ${prefix + command} 456127893132123|bumipertiwi|fatamorgana|LoL Human|mars, 99-99-9999|belum ditemukan|jl wardoyo|999/999|turese|imtuni|alhamdulillah islam|jomblo kack|mikirin dia|indo ori no kw|hari kiamat|https://i.ibb.co/SxN4ymH/2860c9a59c9e.jpg`)
+if (args.length == 0) return reply2(`Usage: ${prefix + command} nik|provinsi|kabupaten|nama|tempat, tanggal lahir|jenis kelamin|jalan|rt/rw|kelurahan|kecamatan|agama|status nikah|pekerjaan|warga negara|berlaku sampai|url_image\n\n${emoj}Hint : ${prefix + command} 456127893132123|bumipertiwi|fatamorgana|LoL Human|mars, 99-99-9999|belum ditemukan|jl wardoyo|999/999|turese|imtuni|alhamdulillah islam|jomblo kack|mikirin dia|indo ori no kw|hari kiamat|https://audiopromedia.co.id/wp-content/uploads/2021/06/Screenshot_2021-06-19-16-22-16-937_com.miui_.gallery.jpg`)
 get_args = args.join(" ").split("|")
 nik = get_args[0]
 prov = get_args[1]
@@ -10850,11 +10850,11 @@ await alpha.sendMessage(from, ini_buffer, image, { quoted: mek, caption: "Nih ka
 break
 
 case 'xfaketoko':
-await faketoko(teks = "Tahu Bacem", url_image = "https://i.ibb.co/SxN4ymH/2860c9a59c9e.jpg", title = "Wudy", code = "IDR", price = 1000000)
+await faketoko(teks = "Tahu Bacem", url_image = "https://audiopromedia.co.id/wp-content/uploads/2021/06/Screenshot_2021-06-19-16-22-16-937_com.miui_.gallery.jpg", title = "Wudy", code = "IDR", price = 1000000)
 break
 
 case 'xktpmaker':
-if (args.length == 0) return reply2(`Usage: ${prefix + command} nik|provinsi|kabupaten|nama|tempat, tanggal lahir|jenis kelamin|jalan|rt/rw|kelurahan|kecamatan|agama|status nikah|pekerjaan|warga negara|berlaku sampai|url_image\n\nContoh: ${prefix + command} 456127893132123|bumipertiwi|fatamorgana|Wudy|mars, 99-99-9999|belum ditemukan|jl wardoyo|999/999|turese|imtuni|alhamdulillah islam|jomblo kack|mikirin dia|indo ori no kw|hari kiamat|https://i.ibb.co/SxN4ymH/2860c9a59c9e.jpg`)
+if (args.length == 0) return reply2(`Usage: ${prefix + command} nik|provinsi|kabupaten|nama|tempat, tanggal lahir|jenis kelamin|jalan|rt/rw|kelurahan|kecamatan|agama|status nikah|pekerjaan|warga negara|berlaku sampai|url_image\n\nContoh: ${prefix + command} 456127893132123|bumipertiwi|fatamorgana|Wudy|mars, 99-99-9999|belum ditemukan|jl wardoyo|999/999|turese|imtuni|alhamdulillah islam|jomblo kack|mikirin dia|indo ori no kw|hari kiamat|https://audiopromedia.co.id/wp-content/uploads/2021/06/Screenshot_2021-06-19-16-22-16-937_com.miui_.gallery.jpg`)
 get_args = args.join(" ").split("|")
 nik = get_args[0]
 prov = get_args[1]
@@ -16049,7 +16049,7 @@ ranpp = jdii[Math.floor(Math.random() * jdii.length)]
 try {
 pic = await alpha.getProfilePicture(ranpp)
 } catch {
-pic = 'https://i.ibb.co/SxN4ymH/2860c9a59c9e.jpg'
+pic = 'https://audiopromedia.co.id/wp-content/uploads/2021/06/Screenshot_2021-06-19-16-22-16-937_com.miui_.gallery.jpg'
 }
 thumbb = await getBuffer(pic)
 alpha.sendMessage(from, thumbb ,image, {quoted: mek})
@@ -17468,7 +17468,7 @@ case 'memepatrick':
 try {
 ppus = await alpha.getProfilePicture(mek.message.extendedTextMessage.contextInfo.mentionedJid[0])
 } catch {
-ppus = 'https://i.ibb.co/SxN4ymH/2860c9a59c9e.jpg'
+ppus = 'https://audiopromedia.co.id/wp-content/uploads/2021/06/Screenshot_2021-06-19-16-22-16-937_com.miui_.gallery.jpg'
 }
 let tmbh1 = await getBuffer(ppus)
 await fs.writeFileSync(`./stickmeme.jpeg`, tmbh1)
@@ -17484,7 +17484,7 @@ case 'spongebob':
 try {
 ppus = await alpha.getProfilePicture(mek.message.extendedTextMessage.contextInfo.mentionedJid[0])
 } catch {
-ppus = 'https://i.ibb.co/SxN4ymH/2860c9a59c9e.jpg'
+ppus = 'https://audiopromedia.co.id/wp-content/uploads/2021/06/Screenshot_2021-06-19-16-22-16-937_com.miui_.gallery.jpg'
 }
 let tmbh2 = await getBuffer(ppus)
 await fs.writeFileSync(`./stickmeme.jpeg`, tmbh2)
@@ -18931,14 +18931,7 @@ alpha.sendMessage(from, buttonMessagee, MessageType.buttonsMessage,{
 // AUTO REPLY by Piyo >_<
 if (budy.includes("@verify","@verif","daftar")){
 if (isRegister) return reply2('Kamu sudah terdaftar di dalam database')
-if (ppgc) {
-await alpha.getProfilePicture(from)
-} else if (ppor) {
-await alpha.getProfilePicture(sender)
-} else {
-'https://audiopromedia.co.id/wp-content/uploads/2021/06/Screenshot_2021-06-19-16-22-16-937_com.miui_.gallery.jpg'
-}
-let pp_verify = await getBuffer(`https://hadi-api.herokuapp.com/api/card/verify2?name=${encodeURIComponent(pushname)}&memverify=${encodeURIComponent(groupMembers.length)}&gcname=${encodeURIComponent(groupName)}&gcicon=${encodeURIComponent(ppgc)}&pp=${encodeURIComponent(ppor)}&bg=${encodeURIComponent(bg_verify)}`)
+let pp_verify = await getBuffer(`https://hadi-api.herokuapp.com/api/card/verify2?name=${encodeURIComponent(pushname)}&memverify=${encodeURIComponent(groupMembers.length)}&gcname=${encodeURIComponent(groupName)}&gcicon=${encodeURIComponent(ppgc)}&pp=${encodeURIComponent(pp_userzb)}&bg=${encodeURIComponent(bg_verify)}`)
 addRegisterUser(sender, pushname, bio_user, wib)
 sn_ = await fetchJson('https://api.caranya.my.id/gen-password')
 let ran_blc = randomNomor(50)
