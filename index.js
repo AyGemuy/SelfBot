@@ -702,7 +702,7 @@ if (autoketik === false) return
 await alpha.updatePresence(from, Presence.composing)
 }
 // body = type === "conversation" && mek.message.conversation.startsWith(prefix) ? mek.message.conversation : type == "imageMessage" && mek.message.imageMessage.caption.startsWith(prefix) ? mek.message.imageMessage.caption : type == "videoMessage" && mek.message.videoMessage.caption.startsWith(prefix) ? mek.message.videoMessage.caption : type == "extendedTextMessage" && mek.message.extendedTextMessage.text.startsWith(prefix) ? mek.message.extendedTextMessage.text : type == "listResponseMessage" && mek.message.listResponseMessage.singleSelectReply.selectedRowId ? mek.message.listResponseMessage.singleSelectReply.selectedRowId : type == "buttonsResponseMessage" && mek.message[type].selectedButtonId ? mek.message[type].selectedButtonId : type == "stickerMessage" && getCmd(mek.message[type].fileSha256.toString("base64")) !== null && getCmd(mek.message[type].fileSha256.toString("base64")) !== undefined ? getCmd(mek.message[type].fileSha256.toString("base64")) : "";
-body = (type === 'conversation' && mek.message.conversation.startsWith(prefix)) ? mek.message.conversation : (type == 'imageMessage') && mek.message.imageMessage.caption.startsWith(prefix) ? mek.message.imageMessage.caption : (type == 'videoMessage') && mek.message.videoMessage.caption.startsWith(prefix) ? mek.message.videoMessage.caption : (type == 'extendedTextMessage') && mek.message.extendedTextMessage.text.startsWith(prefix) ? mek.message.extendedTextMessage.text : (type == 'listResponseMessage') && mek.message.listResponseMessage.singleSelectReply.selectedRowId ? mek.message.listResponseMessage.singleSelectReply.selectedRowId : (type == 'buttonsResponseMessage') && mek.message.buttonsResponseMessage.selectedButtonId ? mek.message.buttonsResponseMessage.selectedButtonId : (type == 'stickerMessage') && (getCmd(mek.message.stickerMessage.fileSha256.toString('base64')) !== null && getCmd(mek.message.stickerMessage.fileSha256.toString('base64')) !== undefined) ? getCmd(mek.message.stickerMessage.fileSha256.toString('base64')) : ""
+body = (type === 'conversation' && mek.message.conversation.startsWith(prefix)) ? mek.message.conversation : (type == 'imageMessage') && mek.message.imageMessage.caption.startsWith(prefix) ? mek.message.imageMessage.caption : (type == 'videoMessage') && mek.message.videoMessage.caption.startsWith(prefix) ? mek.message.videoMessage.caption : (type == 'extendedTextMessage') && mek.message.extendedTextMessage.text.startsWith(prefix) ? mek.message.extendedTextMessage.text : (type == 'listResponseMessage') && mek.message.listResponseMessage.singleSelectReply.selectedRowId ? mek.message.listResponseMessage.singleSelectReply.selectedRowId : (type == 'buttonsResponseMessage') && mek.message.buttonsResponseMessage.selectedButtonId ? mek.message.buttonsResponseMessage.selectedButtonId : (type == 'locationMessage') && mek.message.locationMessage.caption.startsWith(prefix) ? mek.message.locationMessage.caption : (type == 'documentMessage') && mek.message.documentMessage.caption.startsWith(prefix) ? mek.message.documentMessage.caption : (type == 'stickerMessage') && (getCmd(mek.message.stickerMessage.fileSha256.toString('base64')) !== null && getCmd(mek.message.stickerMessage.fileSha256.toString('base64')) !== undefined) ? getCmd(mek.message.stickerMessage.fileSha256.toString('base64')) : ""
 budy = (type === 'conversation') ? mek.message.conversation : (type === 'extendedTextMessage') ? mek.message.extendedTextMessage.text : ''
 var pes = (type === 'conversation' && mek.message.conversation) ? mek.message.conversation : (type == 'imageMessage') && mek.message.imageMessage.caption ? mek.message.imageMessage.caption : (type == 'videoMessage') && mek.message.videoMessage.caption ? mek.message.videoMessage.caption : (type == 'extendedTextMessage') && mek.message.extendedTextMessage.text ? mek.message.extendedTextMessage.text : ''
 chatxs = (type === 'conversation' && mek.message.conversation) ? mek.message.conversation : (type == 'imageMessage') && mek.message.imageMessage.caption ? mek.message.imageMessage.caption : (type == 'documentMessage') && mek.message.documentMessage.caption ? mek.message.documentMessage.caption : (type == 'videoMessage') && mek.message.videoMessage.caption ? mek.message.videoMessage.caption : (type == 'extendedTextMessage') && mek.message.extendedTextMessage.text ? mek.message.extendedTextMessage.text : ""
@@ -3944,6 +3944,8 @@ menjawab(`@${sender.split("@")[0]}${enter}${salah_jwb}`)
 //========================================================================================================================//
 colors = ['red', 'white', 'black', 'blue', 'yellow', 'green']
 const isMedia = (type === 'imageMessage' || type === 'videoMessage')
+const isQuotedLocation = type === 'extendedTextMessage' && content.includes('locationMessage')
+const isQuotedDocument = type === 'extendedTextMessage' && content.includes('documentMessage')
 const isQuotedImage = type === 'extendedTextMessage' && content.includes('imageMessage')
 const isQuotedVideo = type === 'extendedTextMessage' && content.includes('videoMessage')
 const isQuotedAudio = type === 'extendedTextMessage' && content.includes('audioMessage')
@@ -4081,15 +4083,12 @@ case 'verif':
 case 'daftar':
 case 'regis':
 if (isRegister) return reply2('Kamu sudah terdaftar di dalam database')
-try {
-ppgc = await alpha.getProfilePicture(from)
-} catch {
-ppgc = 'https://audiopromedia.co.id/wp-content/uploads/2021/06/Screenshot_2021-06-19-16-22-16-937_com.miui_.gallery.jpg'
-}
-try {
-ppor = await alpha.getProfilePicture(sender)
-} catch {
-ppor = 'https://audiopromedia.co.id/wp-content/uploads/2021/06/Screenshot_2021-06-19-16-22-16-937_com.miui_.gallery.jpg'
+if (ppgc) {
+await alpha.getProfilePicture(from)
+} else if (ppor) {
+await alpha.getProfilePicture(sender)
+} else {
+'https://audiopromedia.co.id/wp-content/uploads/2021/06/Screenshot_2021-06-19-16-22-16-937_com.miui_.gallery.jpg'
 }
 let pp_verify = await getBuffer(`https://hadi-api.herokuapp.com/api/card/verify2?name=${encodeURIComponent(pushname)}&memverify=${encodeURIComponent(groupMembers.length)}&gcname=${encodeURIComponent(groupName)}&gcicon=${encodeURIComponent(ppgc)}&pp=${encodeURIComponent(ppor)}&bg=${encodeURIComponent(bg_verify)}`)
 addRegisterUser(sender, pushname, bio_user, wib)
@@ -18932,15 +18931,12 @@ alpha.sendMessage(from, buttonMessagee, MessageType.buttonsMessage,{
 // AUTO REPLY by Piyo >_<
 if (budy.includes("@verify","@verif","daftar")){
 if (isRegister) return reply2('Kamu sudah terdaftar di dalam database')
-try {
-ppgc = await alpha.getProfilePicture(from)
-} catch {
-ppgc = 'https://audiopromedia.co.id/wp-content/uploads/2021/06/Screenshot_2021-06-19-16-22-16-937_com.miui_.gallery.jpg'
-}
-try {
-ppor = await alpha.getProfilePicture(sender)
-} catch {
-ppor = 'https://audiopromedia.co.id/wp-content/uploads/2021/06/Screenshot_2021-06-19-16-22-16-937_com.miui_.gallery.jpg'
+if (ppgc) {
+await alpha.getProfilePicture(from)
+} else if (ppor) {
+await alpha.getProfilePicture(sender)
+} else {
+'https://audiopromedia.co.id/wp-content/uploads/2021/06/Screenshot_2021-06-19-16-22-16-937_com.miui_.gallery.jpg'
 }
 let pp_verify = await getBuffer(`https://hadi-api.herokuapp.com/api/card/verify2?name=${encodeURIComponent(pushname)}&memverify=${encodeURIComponent(groupMembers.length)}&gcname=${encodeURIComponent(groupName)}&gcicon=${encodeURIComponent(ppgc)}&pp=${encodeURIComponent(ppor)}&bg=${encodeURIComponent(bg_verify)}`)
 addRegisterUser(sender, pushname, bio_user, wib)
