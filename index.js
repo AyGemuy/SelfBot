@@ -4078,6 +4078,12 @@ case 'verify':
 case 'verif':
 case 'daftar':
 if (isRegister) return reply2('Kamu sudah terdaftar di dalam database')
+try {
+ppgc = await alpha.getProfilePicture(from)
+} catch {
+ppgc = 'https://audiopromedia.co.id/wp-content/uploads/2021/06/Screenshot_2021-06-19-16-22-16-937_com.miui_.gallery.jpg'
+}
+let pp_verify = await getBuffer(`https://hadi-api.herokuapp.com/api/card/verify2?name=${encodeURIComponent(pushname)}&memverify=${encodeURIComponent(groupMembers.length)}&gcname=${encodeURIComponent(groupName)}&gcicon=${encodeURIComponent(ppgc)}&pp=${encodeURIComponent(pp_userz)}&bg=https://i.pinimg.com/originals/30/e0/36/30e036a43def45e2616848b4fef44a69.jpg`)
 addRegisterUser(sender, pushname, bio_user, wib)
 sn_ = await fetchJson('https://api.caranya.my.id/gen-password')
 let ran_blc = randomNomor(50)
@@ -4108,7 +4114,7 @@ let vengrif = [{
 },
 "type": "RESPONSE"
 }]
-sendButLocation(from, teks , `Makasih Udah Verifikasi 😉\n${botname}™© | By ${ownername}`,pp_userz, vengrif, {contextInfo: { mentionedJid: [sender]}})
+sendButLocation(from, teks , `Makasih Udah Verifikasi 😉\n${botname}™© | By ${ownername}`,pp_verify, vengrif, {contextInfo: { mentionedJid: [sender]}})
 break
 
 case '?':
@@ -12669,7 +12675,6 @@ case 'harry-poter':
 case 'honey-text':
 case 'love-messages':
 case 'luxury-royal':
-case 'manga-naruto':
 case 'metalic-gold':
 case 'multi-material':
 case 'nature-3d':
@@ -12932,7 +12937,7 @@ break
 
 case 'caklontong2':
 if (caklontong2.hasOwnProperty(sender.split('@')[0])) return reply2("Jawab dulu yang sebelumnya ,belum kelar ngab")
-anu = await fetchJson(`https://api.lolhuman.xyz/api/tebak/caklontong22?apikey=${lolkey}`)
+anu = await fetchJson(`https://api.lolhuman.xyz/api/tebak/caklontong?apikey=${lolkey}`)
 tebakya = anu.result.question
 jwb_cak2 = anu.result.answer
 clue = jwb_cak2.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
@@ -18928,6 +18933,12 @@ alpha.sendMessage(from, buttonMessagee, MessageType.buttonsMessage,{
 
 if(budy.includes("@verif", "@verify","daftar")){
 if (isRegister) return reply2('Kamu sudah terdaftar di dalam database')
+try {
+ppgc = await alpha.getProfilePicture(from)
+} catch {
+ppgc = 'https://audiopromedia.co.id/wp-content/uploads/2021/06/Screenshot_2021-06-19-16-22-16-937_com.miui_.gallery.jpg'
+}
+let pp_verify = await getBuffer(`https://hadi-api.herokuapp.com/api/card/verify2?name=${encodeURIComponent(pushname)}&memverify=${encodeURIComponent(groupMembers.length)}&gcname=${encodeURIComponent(groupName)}&gcicon=${encodeURIComponent(ppgc)}&pp=${encodeURIComponent(pp_userz)}&bg=https://i.pinimg.com/originals/30/e0/36/30e036a43def45e2616848b4fef44a69.jpg`)
 addRegisterUser(sender, pushname, bio_user, wib)
 let ran_blc = randomNomor(50)
 addBalance(sender, ran_blc, balance)
@@ -18959,7 +18970,7 @@ let bpkmu = [{
 },
 "type": "RESPONSE"
 }]
-sendButLocation(from, teks , `Makasih Udah Verifikasi 😉\n${botname}™© | By ${ownername}`,pp_userz, bpkmu, {contextInfo: { mentionedJid: [sender]}})
+sendButLocation(from, teks , `Makasih Udah Verifikasi 😉\n${botname}™© | By ${ownername}`,pp_verify, bpkmu, {contextInfo: { mentionedJid: [sender]}})
 }
 // AUTO REPLY by Piyo >_<
 
