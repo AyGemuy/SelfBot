@@ -398,10 +398,9 @@ let single = false
 let prefa = setting.prefix
 let menusimple = true
 let Mloc = false
-let autobio = setting.autobio
-let antihidetag = setting.antihidetag
-
-banChats = setting.self_mode
+let autobio = true
+let antihidetag = true
+banChats = false
 autorespon = false
 offline = false
 readGc = false 
@@ -410,7 +409,7 @@ antitrol = true
 bugc = true
 autovn = false
 autoketik = true
-autoregister = setting.user_register
+autoregister = true
 
 img = setting.img
 baper = `${emoj} Wudy`
@@ -431,7 +430,7 @@ cr = setting.cr
 petik = '*'
 titik =`...`
 enter ='\n'
-read_more = "͏".repeat(300)
+read_more = "͏".repeat(420)
 pembatas = '*⌯┅━━━━━━━━━━━━━━┅⌯*'
 
 msgId="B826873620DD5947E683E3ABE663F263"
