@@ -4107,19 +4107,11 @@ teks = `⌯✆ *VERIFIED* ✆⌯
 ${read_more}
 itu aja ya kack:)
 tq`
-let vengrif = [{
-"buttonId": `menu`,
-"buttonText": {
-"displayText": "🌱 List menu"
-},
-"type": "RESPONSE"
-},{
-"buttonId": `me`,
-"buttonText": {
-"displayText": "🚀 Profil"
-},
-"type": "RESPONSE"
-}]
+let vengrif = [
+{buttonId: 'x_menu', buttonText: {displayText: '🌱 List-Menu'}, type: 1},
+{buttonId: 'menu_x', buttonText: {displayText: '🌱 Lol-Menu'}, type: 1},
+{buttonId: 'menu_xc', buttonText: {displayText: '🌱 Xc-Menu'}, type: 1}
+]
 sendButLocation(from, teks , `Makasih Udah Verifikasi 😉\n${botname}™© | By ${ownername}`,pp_verify, vengrif, {contextInfo: { mentionedJid: [sender]}})
 break
 
@@ -18969,19 +18961,11 @@ teks = `⌯✆ *VERIFIED* ✆⌯
 ${read_more}
 itu aja ya kack:)
 tq`
-let bpkmu = [{
-"buttonId": `menu`,
-"buttonText": {
-"displayText": "🌱 List menu"
-},
-"type": "RESPONSE"
-},{
-"buttonId": `me`,
-"buttonText": {
-"displayText": "🚀 Profil"
-},
-"type": "RESPONSE"
-}]
+let bpkmu = [
+{buttonId: 'x_menu', buttonText: {displayText: '🌱 List-Menu'}, type: 1},
+{buttonId: 'menu_x', buttonText: {displayText: '🌱 Lol-Menu'}, type: 1},
+{buttonId: 'menu_xc', buttonText: {displayText: '🌱 Xc-Menu'}, type: 1}
+]
 sendButLocation(from, teks , `Makasih Udah Verifikasi 😉\n${botname}™© | By ${ownername}`,pp_verify, bpkmu, {contextInfo: { mentionedJid: [sender]}})
 }
 // AUTO REPLY by Piyo >_<
