@@ -4083,7 +4083,12 @@ ppgc = await alpha.getProfilePicture(from)
 } catch {
 ppgc = 'https://audiopromedia.co.id/wp-content/uploads/2021/06/Screenshot_2021-06-19-16-22-16-937_com.miui_.gallery.jpg'
 }
-let pp_verify = await getBuffer(`https://hadi-api.herokuapp.com/api/card/verify2?name=${encodeURIComponent(pushname)}&memverify=${encodeURIComponent(groupMembers.length)}&gcname=${encodeURIComponent(groupName)}&gcicon=${encodeURIComponent(ppgc)}&pp=${encodeURIComponent(pp_userz)}&bg=https://i.pinimg.com/originals/30/e0/36/30e036a43def45e2616848b4fef44a69.jpg`)
+try {
+ppor = await alpha.getProfilePicture(sender)
+} catch {
+ppor = 'https://audiopromedia.co.id/wp-content/uploads/2021/06/Screenshot_2021-06-19-16-22-16-937_com.miui_.gallery.jpg'
+}
+let pp_verify = await getBuffer(`https://hadi-api.herokuapp.com/api/card/verify2?name=${encodeURIComponent(pushname)}&memverify=${encodeURIComponent(groupMembers.length)}&gcname=${encodeURIComponent(groupName)}&gcicon=${encodeURIComponent(ppor)}&pp=${encodeURIComponent(ppgc)}&bg=https://i.pinimg.com/originals/30/e0/36/30e036a43def45e2616848b4fef44a69.jpg`)
 addRegisterUser(sender, pushname, bio_user, wib)
 sn_ = await fetchJson('https://api.caranya.my.id/gen-password')
 let ran_blc = randomNomor(50)
@@ -18938,7 +18943,12 @@ ppgc = await alpha.getProfilePicture(from)
 } catch {
 ppgc = 'https://audiopromedia.co.id/wp-content/uploads/2021/06/Screenshot_2021-06-19-16-22-16-937_com.miui_.gallery.jpg'
 }
-let pp_verify = await getBuffer(`https://hadi-api.herokuapp.com/api/card/verify2?name=${encodeURIComponent(pushname)}&memverify=${encodeURIComponent(groupMembers.length)}&gcname=${encodeURIComponent(groupName)}&gcicon=${encodeURIComponent(ppgc)}&pp=${encodeURIComponent(pp_userz)}&bg=https://i.pinimg.com/originals/30/e0/36/30e036a43def45e2616848b4fef44a69.jpg`)
+try {
+ppor = await alpha.getProfilePicture(sender)
+} catch {
+ppor = 'https://audiopromedia.co.id/wp-content/uploads/2021/06/Screenshot_2021-06-19-16-22-16-937_com.miui_.gallery.jpg'
+}
+let pp_verify = await getBuffer(`https://hadi-api.herokuapp.com/api/card/verify2?name=${encodeURIComponent(pushname)}&memverify=${encodeURIComponent(groupMembers.length)}&gcname=${encodeURIComponent(groupName)}&gcicon=${encodeURIComponent(ppor)}&pp=${encodeURIComponent(ppgc)}&bg=https://i.pinimg.com/originals/30/e0/36/30e036a43def45e2616848b4fef44a69.jpg`)
 addRegisterUser(sender, pushname, bio_user, wib)
 let ran_blc = randomNomor(50)
 addBalance(sender, ran_blc, balance)
