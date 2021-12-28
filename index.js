@@ -8678,7 +8678,6 @@ case 'memestick':
 case 'stickmeme':
 case 'stcmeme':
 case 'smeme':
-/*
 if (!isQuotedSticker) return reply1('Reply Stiker!')
 if (!q) return reply1(`Contoh: ${prefix + command} top|bottom`)
 top = q.split('|')[0]
@@ -8693,37 +8692,9 @@ teks = `${anu.display_url}`
 sendStickerFromUrl(from, `https://api.memegen.link/images/custom/${top}/${bottom}.png?background=${teks}`, mek)
 fs.unlinkSync('./stickmeme.jpeg')
 }
-*/
-console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
-var imgbb = require('imgbb-uploader')
-if (!q) return reply1(`Contoh: ${prefix + command} top|bottom`)
-top = q.split('|')[0]
-bottom = q.split('|')[1]
-if (!isQuotedSticker) {
-ger = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-owgi = await alpha.downloadMediaMessage(ger)
-await fs.writeFileSync(`./stickmeme.jpeg`, owgi)
-var imgbb = require('imgbb-uploader')
-anu = await imgbb(`${img_key}`, './stickmeme.jpeg')
-teks = `${anu.display_url}`
-sendStickerFromUrl(from, `https://api.memegen.link/images/custom/${top}/${bottom}.png?background=${teks}`, mek)
-fs.unlinkSync('./stickmeme.jpeg')
-} else if (!isQuotedImage) {
-var dpuh2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
-owgi = await alpha.downloadMediaMessage(dpuh2)
-await fs.writeFileSync(`./stickmeme.jpeg`, owgi)
-var imgbb = require('imgbb-uploader')
-anu = await imgbb(`${img_key}`, './stickmeme.jpeg')
-teks = `${anu.display_url}`
-sendStickerFromUrl(from, `https://api.memegen.link/images/custom/${top}/${bottom}.png?background=${teks}`, mek)
-fs.unlinkSync('./stickmeme.jpeg')
-} else {
-reply1('Reply stc/img')
-}
 break
 
 case 'smeme3':
-/*
 if (!isQuotedSticker) return reply1('Reply Stiker!')
 if (!q) return reply1(`Contoh: ${prefix + command} top`)
 top = q.split('|')[0]
@@ -8737,36 +8708,9 @@ teks = `${anu.display_url}`
 sendStickerFromUrl(from, `https://api.memegen.link/images/custom/${top}.png?background=${teks}`, mek)
 fs.unlinkSync('./stickmeme.jpeg')
 }
-*/
-console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
-var imgbb = require('imgbb-uploader')
-if (!q) return reply1(`Contoh: ${prefix + command} top|bottom`)
-if (!isQuotedSticker) {
-ger = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-owgi = await alpha.downloadMediaMessage(ger)
-await fs.writeFileSync(`./stickmeme.jpeg`, owgi)
-var imgbb = require('imgbb-uploader')
-anu = await imgbb(`${img_key}`, './stickmeme.jpeg')
-teks = `${anu.display_url}`
-sendStickerFromUrl(from, `https://api.memegen.link/images/custom/${q}.png?background=${teks}`, mek)
-fs.unlinkSync('./stickmeme.jpeg')
-} else if (!isQuotedImage) {
-var dpuh2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
-owgi = await alpha.downloadMediaMessage(dpuh2)
-await fs.writeFileSync(`./stickmeme.jpeg`, owgi)
-var imgbb = require('imgbb-uploader')
-anu = await imgbb(`${img_key}`, './stickmeme.jpeg')
-teks = `${anu.display_url}`
-sendStickerFromUrl(from, `https://api.memegen.link/images/custom/${q}.png?background=${teks}`, mek)
-fs.unlinkSync('./stickmeme.jpeg')
-} else {
-reply1('Reply stc/img')
-}
-break
 break
 
 case 'smeme4':
-/*
 if (!isQuotedSticker) return reply1('Reply Stiker!')
 if (!q) return reply1(`Contoh: ${prefix + command} top`)
 bottom = q.split('|')[0]
@@ -8780,32 +8724,6 @@ teks = `${anu.display_url}`
 sendStickerFromUrl(from, `https://api.memegen.link/images/custom/_/${bottom}.png?background=${teks}`, mek)
 fs.unlinkSync('./stickmeme.jpeg')
 }
-*/
-console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
-var imgbb = require('imgbb-uploader')
-if (!q) return reply1(`Contoh: ${prefix + command} top|bottom`)
-if (!isQuotedSticker) {
-ger = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-owgi = await alpha.downloadMediaMessage(ger)
-await fs.writeFileSync(`./stickmeme.jpeg`, owgi)
-var imgbb = require('imgbb-uploader')
-anu = await imgbb(`${img_key}`, './stickmeme.jpeg')
-teks = `${anu.display_url}`
-sendStickerFromUrl(from, `https://api.memegen.link/images/custom/_/${q}.png?background=${teks}`, mek)
-fs.unlinkSync('./stickmeme.jpeg')
-} else if (!isQuotedImage) {
-var dpuh2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
-owgi = await alpha.downloadMediaMessage(dpuh2)
-await fs.writeFileSync(`./stickmeme.jpeg`, owgi)
-var imgbb = require('imgbb-uploader')
-anu = await imgbb(`${img_key}`, './stickmeme.jpeg')
-teks = `${anu.display_url}`
-sendStickerFromUrl(from, `https://api.memegen.link/images/custom/_/${q}.png?background=${teks}`, mek)
-fs.unlinkSync('./stickmeme.jpeg')
-} else {
-reply1('Reply stc/img')
-}
-break
 break
 
 case 'volume':
@@ -17542,7 +17460,6 @@ sendStickerFromUrl(from, `${anuk}`, mek)
 reply1('Reply stc/img')
 }
 break
-break
 
 case 'gfx1':
 case 'gfx2':
@@ -17858,7 +17775,6 @@ alpha.sendMessage(from, meme_7, MessageType.buttonsMessage,{
 "mentionedJid" : [sender]},
 quoted: mek, sendEphemeral: true
 })
-break
 break
 
 case 'meme2':
