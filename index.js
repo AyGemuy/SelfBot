@@ -8660,12 +8660,12 @@ case 'memestick':
 case 'stickmeme':
 case 'stcmeme':
 case 'smeme':
-q = args.join(' ')
-top = q.split('|')[0]
-bottom = q.split('|')[1]
 console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
 var imgbb = require('imgbb-uploader')
 if (!isQuotedSticker) {
+if (!q) return reply1('Teksnya bg?')
+top = q.split('|')[0]
+bottom = q.split('|')[1]
 var smu = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 var sma = await alpha.downloadAndSaveMediaMessage(smu, `./media/${sender}.png`)
 let smi = await imgbb(`${img_key}`, sma)
@@ -8674,6 +8674,9 @@ ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
 } else if (!isQuotedImage) {
+if (!q) return reply1('Teksnya bg?')
+top = q.split('|')[0]
+bottom = q.split('|')[1]
 var smu2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
 var sma2 = await alpha.downloadAndSaveMediaMessage(smu2, `./media/${sender}.png`)
 let smi2 = await imgbb(`${img_key}`, sma2)
@@ -8682,6 +8685,9 @@ ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
 } else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
+if (!q) return reply1('Teksnya bg?')
+top = q.split('|')[0]
+bottom = q.split('|')[1]
 sma3 = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
 let smu3 = await alpha.getProfilePicture(sma3).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
 let smi3 = await imageToBase64(JSON.stringify(smu3).replace(/\"/gi, ''))
@@ -8697,12 +8703,12 @@ reply1('Reply stc/img caption top|bottom')
 break
 
 case 'smeme2':
-q = args.join(' ')
-top = q.split('|')[0]
-bottom = q.split('|')[1]
 console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
 var imgbb = require('imgbb-uploader')
 if (!isQuotedSticker) {
+if (!q) return reply1('Teksnya bg?')
+top = q.split('|')[0]
+bottom = q.split('|')[1]
 var smaa = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 var smii = await alpha.downloadAndSaveMediaMessage(smaa, `./media/${sender}.png`)
 let smuu = await imgbb(`${img_key}`, smii)
@@ -8711,6 +8717,9 @@ ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
 } else if (!isQuotedImage) {
+if (!q) return reply1('Teksnya bg?')
+top = q.split('|')[0]
+bottom = q.split('|')[1]
 var smaa2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
 var smii2 = await alpha.downloadAndSaveMediaMessage(smaa2, `./media/${sender}.png`)
 let smuu2 = await imgbb(`${img_key}`, smii2)
@@ -8719,6 +8728,9 @@ ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
 } else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
+if (!q) return reply1('Teksnya bg?')
+top = q.split('|')[0]
+bottom = q.split('|')[1]
 smii3 = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
 let smaa3 = await alpha.getProfilePicture(smii3).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
 let smuu3 = await imageToBase64(JSON.stringify(smaa3).replace(/\"/gi, ''))
@@ -8734,33 +8746,34 @@ reply1('Reply stc/img caption top|bottom')
 break
 
 case 'smeme3':
-q = args.join(' ')
-top = q.split(' ')[0]
 console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
 var imgbb = require('imgbb-uploader')
 if (!isQuotedSticker) {
+if (!q) return reply1('Teksnya bg?')
 var smaa3 = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 var smii3 = await alpha.downloadAndSaveMediaMessage(smaa3, `./media/${sender}.png`)
 let smuu3 = await imgbb(`${img_key}`, smii3)
-anuk = `https://api.memegen.link/images/custom/${top}.png?background=${smuu3}`
+anuk = `https://api.memegen.link/images/custom/${q}.png?background=${smuu3}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
 } else if (!isQuotedImage) {
+if (!q) return reply1('Teksnya bg?')
 var smaa32 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
 var smii32 = await alpha.downloadAndSaveMediaMessage(smaa32, `./media/${sender}.png`)
 let smuu32 = await imgbb(`${img_key}`, smii32)
-anuk = `https://api.memegen.link/images/custom/${top}.png?background=${smuu32}`
+anuk = `https://api.memegen.link/images/custom/${q}.png?background=${smuu32}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
 } else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
+if (!q) return reply1('Teksnya bg?')
 smii33 = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
 let smaa33 = await alpha.getProfilePicture(smii33).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
 let smuu33 = await imageToBase64(JSON.stringify(smaa33).replace(/\"/gi, ''))
 fs.writeFileSync('janckuk.jpeg', smuu33, 'base64')
 let smee33 = await imgbb(`${img_key}`, 'janckuk.jpeg')
-anuk = `https://api.memegen.link/images/custom/${top}.png?background=${smuu33}`
+anuk = `https://api.memegen.link/images/custom/${q}.png?background=${smuu33}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
@@ -8770,33 +8783,34 @@ reply1('Reply stc/img caption top')
 break
 
 case 'smeme4':
-q = args.join(' ')
-bottom = q.split(' ')[0]
 console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
 var imgbb = require('imgbb-uploader')
 if (!isQuotedSticker) {
+if (!q) return reply1('Teksnya bg?')
 var smaa4 = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 var smii4 = await alpha.downloadAndSaveMediaMessage(smaa4, `./media/${sender}.png`)
 let smuu4 = await imgbb(`${img_key}`, smii4)
-anuk = `https://api.memegen.link/images/custom/_/${bottom}.png?background=${smuu4}`
+anuk = `https://api.memegen.link/images/custom/_/${q}.png?background=${smuu4}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
 } else if (!isQuotedImage) {
+if (!q) return reply1('Teksnya bg?')
 var smaa42 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
 var smii42 = await alpha.downloadAndSaveMediaMessage(smaa42, `./media/${sender}.png`)
 let smuu42 = await imgbb(`${img_key}`, smii42)
-anuk = `https://api.memegen.link/images/custom/_/${bottom}.png?background=${smuu42}`
+anuk = `https://api.memegen.link/images/custom/_/${q}.png?background=${smuu42}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
 } else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
+if (!q) return reply1('Teksnya bg?')
 smii43 = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
 let smaa43 = await alpha.getProfilePicture(smii43).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
 let smuu43 = await imageToBase64(JSON.stringify(smaa43).replace(/\"/gi, ''))
 fs.writeFileSync('janckuk.jpeg', smuu43, 'base64')
 let smee43 = await imgbb(`${img_key}`, 'janckuk.jpeg')
-anuk = `https://api.memegen.link/images/custom/_/${bottom}.png?background=${smuu43}`
+anuk = `https://api.memegen.link/images/custom/_/${q}.png?background=${smuu43}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
