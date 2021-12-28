@@ -191,6 +191,10 @@ wudy4_getVideo
 } = require("./scrappe/srapp4.js");
 // const { } = require("./scrappe/srapp5.js");
 const { wudy6_ssweb } = require("./scrappe/srapp6.js");
+const { convertSticker } = require("./list/swm.js")
+const { dafontSearch, dafontDown } = require('./list/dafont.js')
+const { jagoKata } = require('./list/jagokata.js')
+
 const fakeimage = fs.readFileSync ('./media/menu2.jpeg')
 const setGelud = require('./lib/gameGelud.js')
 const { downloadig, igstory } = require("./lib/instadl.js");
@@ -4116,7 +4120,7 @@ teks = `⌯✆ *VERIFIED* ✆⌯
 │ *Time :* ${wib} Wib
 ╰⌯`
 let vengrif = [
-{buttonId: 'x_menu', buttonText: {displayText: '🌱 List-Menu'}, type: 1},
+{buttonId: 'x_menu', buttonText: {displayText: '?? List-Menu'}, type: 1},
 {buttonId: 'menu_x', buttonText: {displayText: '🌱 Lol-Menu'}, type: 1},
 {buttonId: 'menu_xc', buttonText: {displayText: '🌱 Xc-Menu'}, type: 1}
 ]
@@ -4969,7 +4973,7 @@ case 'swm':
 case 'wm':
 case 'take':
 case 'colong':
-if (!isQuotedSticker) return reply1('```Reply stc nya```')
+if (!isQuotedSticker) {
 encmedia_ = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 media_ = await alpha.downloadAndSaveMediaMessage(encmedia_)
 anu = args.join(' ').split('|')
@@ -4977,6 +4981,17 @@ satu = anu[0] !== '' ? anu[0] : ""
 dua = typeof anu[1] !== 'undefined' ? anu[1] : ""
 require('./lib/fetcher.js').createExif(satu, dua)
 require('./lib/fetcher.js').modStick(media_ , alpha, mek, from)
+} else if (!isQuotedImage) {
+encmedia_ = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
+media_ = await alpha.downloadAndSaveMediaMessage(encmedia_)
+anu = args.join(' ').split('|')
+satu = anu[0] !== '' ? anu[0] : ""
+dua = typeof anu[1] !== 'undefined' ? anu[1] : ""
+require('./lib/fetcher.js').createExif(satu, dua)
+require('./lib/fetcher.js').modStick(media_ , alpha, mek, from)
+} else {
+reply1('```Reply stc/img nya```')
+}
 break
 
 
@@ -16710,6 +16725,11 @@ pfft = ranstik[Math.floor(Math.random() * ranstik.length)]
 res = await fetchJson(`https://api.satou-chan.xyz/api/endpoint/${pfft}`)
 inibuff = res.url
 sendStickerFromUrl(from, inibuff,{quoted: mek})
+var rstik = ["neko","kitsune","hug","pat","waifu","cry","kiss","slap","smug","punch","nekolewd"]
+pfft = rstik[Math.floor(Math.random() * rstik.length)]
+res = await fetchJson(`https://neko-love.xyz/api/v1/${pfft}`)
+inibuff = res.url
+sendStickerFromUrl(from, inibuff,{quoted: mek})
 break
 
 case 'game':
@@ -17953,6 +17973,94 @@ hmm = await alpha.sendMessage(from,sfxnye, MessageType.audio, {mimetype:'audio/m
 alpha.sendMessage(from,`${sfxnya.name}`, MessageType.text, {quoted:hmm})
 break
 
+case 'dafontdown':
+if (args.length < 1) return reply1('Link Nya Mana? ')
+if(!isUrl(args[0]) && !args[0].includes('dafont')) return reply1(mess.error.Iv)
+teks = args.join(' ')
+res = await dafontDown(teks) 
+result = `❒「  *${botname}*  」
+├ *Judul :* ${res[0].judul}
+├ *Style :* ${res[0].style}
+├ *Nama File :* ${res[0].output}
+└ *Isi File :* ${res[0].isi}`
+reply1(result)
+sendFileFromUrl(res[0].down, document, {mimetype: 'font/ttf', filename: res[0].output, quoted: mek})
+break
+case 'dafontsearch':
+case 'dafonts':
+if (args.length < 1) return reply1('Apa Yang Mau Di Cari? ')
+teks = args.join(' ')
+reply1(mess.wait)
+res = await dafontSearch(teks)
+a = res[0]
+result = `❒「  *${botname}*  」
+├ *Judul :* ${a.judul}
+├ *Style :* ${a.style}
+└ *Link :* ${a.link}
+`
+reply1(result)
+break
+case 'preview':
+if (body.endsWith("-font")) {
+if (args.length < 1) return reply1('Teks Sama Ukuran Nya Mana? ')
+if (!body.includes("|")) return reply1(`Ketik *${prefix}preview Teks|Ukuran|Font -font`)
+mentah = args.join(' ').replace("-font", "")
+teks = mentah.split('|')
+if (isNaN(parseInt(teks[1]))) return reply1("Pake Angka Gan")
+reply1(mess.wait)
+size = teks[1]
+isi = teks[0]
+res = await dafontSearch(teks[2])
+a = res[0]
+result = `❒「  *${botname}*  」
+├ *Judul :* ${a.judul}
+├ *Style :* ${a.style}
+└ *Link :* ${a.link}
+`
+reply1(result)
+res = await dafontDown(a.link) 
+bup = await getBuffer(res[0].down)
+const hasil = await fs.writeFileSync(res[0].output, bup)
+exec(`unzip ${res[0].output}`, (err) => {
+if (err) return
+fs.unlinkSync(res[0].output)
+font = `./${res[0].isi[0]}.ttf`
+exec(`magick 'blank.png' -gravity center -fill '#ffff' -font '${font}' -size 1280x710 -pointsize ${size} -interline-spacing 7.5 -annotate 0 '${isi}' 'quotes.jpg'`, (err) => {
+if (err) return reply1('err') 
+sendFileFromStorage('quotes.jpg', image,{quoted: msg})
+fs.unlinkSync('quotes.jpg')
+fs.unlinkSync(font)
+})
+})
+return
+}
+if(!isQuotedDocument) return reply1('Tag font Yang Akan Di Jadikan Foto')
+if (args.length < 1) return reply1('Teks Sama Ukuran Nya Mana? ')
+if (!body.includes("|")) return reply1(`Ketik *${prefix}preview Teks|Ukuran* Sambil Tag Font`)
+mentah = args.join(' ')
+teks = mentah.split('|')
+if (isNaN(parseInt(teks[1]))) return reply1("Pake Angka Gan")
+reply1(mess.wait)
+font = await downloadM('save')
+size = teks[1]
+isi = teks[0]
+exec(`magick 'blank.png' -gravity center -fill '#ffff' -font '${font}' -size 1280x710 -pointsize ${size} -interline-spacing 7.5 -annotate 0 '${isi}' 'quotes.jpg'`, (err) => {
+if (err) return reply1('err') 
+sendFileFromStorage('quotes.jpg', image,{quoted: msg})
+fs.unlinkSync('quotes.jpg')
+fs.unlinkSync(font)
+})
+break
+
+case 'quote':
+case 'katamutiara':
+if (args.length < 1) return reply1('Yang mau di cari apaan?')
+teks = args.join(' ')
+res = await jagoKata(teks)
+let hasil = `*“* ${res[0].isi} *”*
+_~${res[0].by}_`
+reply1(hasil)
+break
 
 //Ends
 default:
