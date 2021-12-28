@@ -1739,12 +1739,12 @@ quoted: mek, sendEphemeral: true
 }
 const jaditroli = (teks) => {
 res = alpha.prepareMessageFromContent(from,
-{ "orderMessage": { "itemCount": 1000000,
+{ "orderMessage": { "itemCount": 2021,
 "message": teks,
 "footerText": `${ucapannya2}`, 
 "thumbnail": thumb_miku,
 "surface": 'CATALOG' }
-}, {quoted: mek})
+}, {quoted: mek, contextInfo: { mentionedJid: [sender]}})
 alpha.relayWAMessage(res)
 }
 const jadigc = (teks) => {
@@ -1755,7 +1755,7 @@ grup = alpha.prepareMessageFromContent(from,
 "footerText": `${ucapannya2}`,
 "jpegThumbnail": thumb_miku,
 "caption": teks}
-}, {quoted: mek})
+}, {quoted: mek, contextInfo: { mentionedJid: [sender]}})
 alpha.relayWAMessage(grup)
 }
 const jadicatalog = (teks) => {
@@ -1785,7 +1785,7 @@ anu = alpha.prepareMessageFromContent(from,{
 "businessOwnerJid": `${ownerJid}`,
 "contextInfo": {
 	"forwardingScore": 9999,
-	"isForwarded": true
+	"isForwarded": false
 }
 }
 },{quoted: mek, contextInfo: { mentionedJid: [sender]}})
@@ -2593,6 +2593,7 @@ fs.writeFileSync('./src/afk.json', JSON.stringify(_off))
 ckck = `\n*@${key.split('@')[0]}* terdeteksi ${asd.presences[key].lastKnownPresence == 'composing' ? 'sedang mengetik...' : 'sedang merekam...'}\nSekarang dia sudah tidak AFK\n`
 alpha.sendMessage(asd.jid, ckck.trim(), text, {thumbnail: fs.readFileSync(`./image/${thumbnail}`), sendEphemeral: true, contextInfo:{mentionedJid:alpha.parseMention(ckck)}})
 }}}}})
+
 if (isGroup) {
 for (let ment of mentionUser) {
 if (off.checkAfkUser(ment, _off)) {
@@ -2600,8 +2601,8 @@ getId = off.getAfkId(ment, _off)
 getReason = off.getAfkReason(getId, _off)
 getTime = Date.now() - off.getAfkTime(getId, _off)
 heheh = ms(getTime)
-alpha.sendMessage(ment, `@${ment.split('@')[0]} sedang AFK\n\n*Reason :* ${getReason}\n*Sejak :* ${heheh.hours} jam, ${heheh.minutes} menit, ${heheh.seconds} detik yg lalu\n`, text, {contextInfo:{mentionedJid: [sender]}})
-alpha.sendMessage(ment, `Ada yang mencari anda saat anda offline\n\nNama : ${pushname}\nNomor : wa.me/${sender.split("@")[0]}\nDi Grup : ${groupName}\nPesan : ${budy}`, text, {contextInfo:{mentionedJid: [sender]}})
+alpha.sendMessage(ment, `@${ment.split('@')[0]} sedang AFK\n\n*Reason :* ${getReason}\n*Sejak :* ${heheh.hours} jam, ${heheh.minutes} menit, ${heheh.seconds} detik yg lalu\n`, text, {contextInfo:{mentionedJid: [sender, ment]}})
+alpha.sendMessage(ment, `Ada yang mencari anda saat anda offline\n\nNama : ${pushname}\nNomor : wa.me/${sender.split("@")[0]}\nDi Grup : ${groupName}\nPesan : ${budy}`, text, {contextInfo:{mentionedJid: [sender, ment]}})
 }
 }
 
@@ -5671,7 +5672,7 @@ break
 
 case 'twmp4':
 case 'twitter':
-if (args.length < 1) return reply1('Link?')
+if (args.length < 1) return reply1('Linknya?')
 lin = args[0]
 // Wait //
 hx.twitter(lin).then(res => {
@@ -5684,7 +5685,7 @@ sendMediaURL(from, Anu, 'Done!')
 break
 
 case 'twmp3':
-if (args.length < 1) return reply1('Link?')
+if (args.length < 1) return reply1('Linknya?')
 lin = args[0]
 // Wait //
 hx.twitter(lin).then(async (res) => {
@@ -8143,7 +8144,7 @@ reply1('Tidak ada sesi yang berlangsung')
 break
 
 case 'mediafire2':
-if (args.length < 1) return reply1('Link Nya Mana? ')
+if (args.length < 1) return reply1('Linknya?')
 if(!isUrl(args[0]) && !args[0].includes('mediafire')) return reply1(mess.error.Iv)
 teks = args.join(' ')
 res = await mediafireDl(teks)
@@ -8198,7 +8199,7 @@ break
 case 'igdl':
 case 'instagram':
 if (!isUrl(args[0]) && !args[0].includes('instagram.com')) return reply1(mess.Iv)
-if (args.length < 1) return reply1('Link?')
+if (args.length < 1) return reply1('Linknya?')
 lin = args[0] 
 hx.igdl(lin).then(res => { 
 Anu = res[0].downloadUrl
@@ -8213,7 +8214,7 @@ sendMediaURL(from, Anu, 'Done!')
 break
 
 case 'fbmp4':
-if (args.length < 1) return reply1('Link?')
+if (args.length < 1) return reply1('Linknya?')
 lin = args[0] 
 hx.fbdown(lin).then(res => { 
 Anu = res.HD
@@ -8228,7 +8229,7 @@ sendMediaURL(from, Anu, 'Done!')
 break
 
 case 'fbmp3':
-if (args.length < 1) return reply1('Link?')
+if (args.length < 1) return reply1('Linknya?')
 lin = args[0] 
 hx.fbdown(lin).then(async (res) => { 
 Anu = res.HD
@@ -8326,7 +8327,7 @@ await fakethumb(tbuff,ytresult)
 break 			
 case 'twmp4':
 case 'twittermp4':
-if (args.length < 1) return reply1('Link?')
+if (args.length < 1) return reply1('Linknya?')
 lin = args[0] 
 hx.twitter(lin).then(res => { 
 Anu = res.SD
@@ -8342,7 +8343,7 @@ break
 
 case 'twmp3':
 case 'twittermp3':
-if (args.length < 1) return reply1('Link?') 
+if (args.length < 1) return reply1('Linknya?') 
 lin = args[0] 
 hx.twitter(lin).then(async (res) => { 
 Anu = res.SD
@@ -9079,7 +9080,7 @@ if(!q) return reply1(`${emoj} Hint : ${prefix + command} ${pilih_dulu}`)
 let rimg_1 = await getBuffer(`https://kuontol-api.herokuapp.com/api/randomimage/${q}`);
 const rimg_3 = await alpha.prepareMessage(from, rimg_1, MessageType.image, { thumbnail:thumb_pro})
 let rimg_2 = rimg_3.message["ephemeralMessage"] ? rimg_3.message.ephemeralMessage : rimg_3
-rimg_5 =` *@${sender.split("@")[0]}* Dah selesai ${emoj}`
+rimg_5 = `*${jwb_oke}* ${emoj}`
 const rimg_6 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
 {buttonId: 'x_menu', buttonText: {displayText: '🌱 List menu'}, type: 1},
@@ -11472,10 +11473,6 @@ if(args.length == 0 ) {
 let bresss = mek.message.extendedTextMessage.contextInfo.quotedMessage.conversation
 let tetees = await getBuffer(`https://hadi-api.herokuapp.com/api/tts?language=id&text=${bresss}`)
 await alpha.sendMessage(from, tetees, MessageType.audio, {mimetype:'audio/mp4', quoted:mek, ptt:true,duration: 86400000})
-} else if(args.join(' ')) {
-ngab = args.join(' ')
-let tetees = await getBuffer(`https://hadi-api.herokuapp.com/api/tts?language=id&text=${ngab}`)
-await alpha.sendMessage(from, tetees, MessageType.audio, {mimetype:'audio/mp4', quoted:mek, ptt:true,duration: 86400000})
 } else if (!budy.includes("af","sq","ar","hy","ca","zh","zh-cn","zh-tw","zh-yue","hr","cs","da","nl","en","en-au","en-uk","en-us","eo","fi","fr","de","el","ht","hi","hu","is","id","it","ja","ko","la","lv","mk","no","pl","pt","pt-br","ro","ru","sr","sk","es","es-es","es-us","sw","sv","ta","th","tr","vi","cy")){
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} id helo`) 
 var vn = q
@@ -11483,7 +11480,11 @@ var vn1 = vn.split(" ")[0];
 var vn2 = vn.split(" ")[1]; 
 let tetees = await getBuffer(`https://hadi-api.herokuapp.com/api/tts?language=${vn1}&text=${vn2}`)
 await alpha.sendMessage(from, tetees, MessageType.audio, {mimetype:'audio/mp4', quoted:mek, ptt:true,duration: 86400000})
-} 
+} else if(args.join(' ')) {
+ngab = args.join(' ')
+let tetees = await getBuffer(`https://hadi-api.herokuapp.com/api/tts?language=id&text=${ngab}`)
+await alpha.sendMessage(from, tetees, MessageType.audio, {mimetype:'audio/mp4', quoted:mek, ptt:true,duration: 86400000})
+}
 break
 
 case 'asupan':
@@ -11705,7 +11706,7 @@ case 'darkjokes':
 rdmg_ = `https://api.dapuhy.ga/api/randomimage/${command}?apikey=${dapuhy}`
 let rdmg_1 = await getBuffer(rdmg_);
 alpha.sendMessage(from, rdmg_1, MessageType.image,{
-	caption : 'oke',
+caption : `*${jwb_oke}* ${emoj}`,
 "contextInfo": {
 "forwardingScore": 999,isForwarded: false,
 "externalAdReply": {
@@ -11745,7 +11746,7 @@ if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy Bot`)
 let poxy_1 = await getBuffer(`https://api.dapuhy.ga/api/photooxy/${command}?text=${q}&apikey=${dapuhy}`);
 const poxy_3 = await alpha.prepareMessage(from, poxy_1, MessageType.image, { thumbnail:thumb_oxy})
 let poxy_2 = poxy_3.message["ephemeralMessage"] ? poxy_3.message.ephemeralMessage : poxy_3
-poxy_5 =`@${sender.split("@")[0]} Dah selesai ${emoj}`
+poxy_5 = `*${jwb_oke}* ${emoj}`
 const poxy_6 = [
 {buttonId: 'x_menu', buttonText: {displayText: `⬅️ Menu`}, type: 1},
 {buttonId: `${command} ${q}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
@@ -11868,7 +11869,7 @@ if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy Bot`)
 let txtpr_1 = await getBuffer(`https://api.dapuhy.ga/api/textpro/${command}?text=${q}&apikey=${dapuhy}`);
 const txtpr_3 = await alpha.prepareMessage(from, txtpr_1, MessageType.image, { thumbnail:thumb_pro})
 let txtpr_2 = txtpr_3.message["ephemeralMessage"] ? txtpr_3.message.ephemeralMessage : txtpr_3
-txtpr_5 =` *@${sender.split("@")[0]}* Dah selesai ${emoj}`
+txtpr_5 = `*${jwb_oke}* ${emoj}`
 const txtpr_6 = [
 {buttonId: 'x_menu', buttonText: {displayText: `⬅️ Menu`}, type: 1},
 {buttonId: `textpro_list`, buttonText: {displayText: 'Textpro List'}, type: 1}
@@ -11944,7 +11945,7 @@ if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy Bot`)
 let ephto_1 = await getBuffer(`https://api.dapuhy.ga/api/ephoto/${command}?text=${q}&apikey=${dapuhy}`);
 const ephto_3 = await alpha.prepareMessage(from, ephto_1, MessageType.image, { thumbnail:thumb_epho})
 let ephto_2 = ephto_3.message["ephemeralMessage"] ? ephto_3.message.ephemeralMessage : ephto_3
-ephto_5 =` *@${sender.split("@")[0]}* Dah selesai ${emoj}`
+ephto_5 = `*${jwb_oke}* ${emoj}`
 const ephto_6 = [
 {buttonId: 'x_menu', buttonText: {displayText: `⬅️ Menu`}, type: 1},
 {buttonId: `ephoto_list`, buttonText: {displayText: 'Ephoto List'}, type: 1}
@@ -11991,7 +11992,7 @@ if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy Bot`)
 let pfun_1 = await getBuffer(`https://api.dapuhy.ga/api/photofunia/${command}?text=${q}&apikey=${dapuhy}`);
 const pfun_3 = await alpha.prepareMessage(from, pfun_1, MessageType.image, { thumbnail:thumb_pfun})
 let pfun_2 = pfun_3.message["ephemeralMessage"] ? pfun_3.message.ephemeralMessage : pfun_3
-pfun_5 =` *@${sender.split("@")[0]}* Dah selesai ${emoj}`
+pfun_5 = `*${jwb_oke}* ${emoj}`
 const pfun_6 = [
 {buttonId: 'x_menu', buttonText: {displayText: `⬅️ Menu`}, type: 1},
 {buttonId: `pfun_list`, buttonText: {displayText: `${emoj} Photofunia List`}, type: 1}
@@ -12087,7 +12088,7 @@ let oxy2_ = await getBuffer(`https://api-alphabot.herokuapp.com/api/photooxy/${c
 let oxy2_1 = await getBuffer(oxy2_);
 const oxy2_3 = await alpha.prepareMessage(from, oxy2_1, MessageType.image, { thumbnail:thumb_pro})
 let oxy2_2 = oxy2_3.message["ephemeralMessage"] ? oxy2_3.message.ephemeralMessage : oxy2_3
-oxy2_5 =` *@${sender.split("@")[0]}* Dah selesai ${emoj}`
+oxy2_5 = `*${jwb_oke}* ${emoj}`
 const oxy2_6 = [
 {buttonId: 'x_menu', buttonText: {displayText: `⬅️ Menu`}, type: 1},
 {buttonId: `oxy_list`, buttonText: {displayText: `${emoj} PhotoOxy List`}, type: 1}
@@ -12169,7 +12170,7 @@ if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy Bot`)
 let oxxy_1 = await getBuffer(`https://api-alphabot.herokuapp.com/api/photooxy/${command}?apikey=Alphabot&text=${q}`);
 const oxxy_3 = await alpha.prepareMessage(from, oxxy_1, MessageType.image, { thumbnail:thumb_pro})
 let oxxy_2 = oxxy_3.message["ephemeralMessage"] ? oxxy_3.message.ephemeralMessage : oxxy_3
-oxxy_5 =` *@${sender.split("@")[0]}* Dah selesai ${emoj}`
+oxxy_5 = `*${jwb_oke}* ${emoj}`
 const oxxy_6 = [
 {buttonId: 'x_menu', buttonText: {displayText: `⬅️ Menu`}, type: 1},
 {buttonId: `oxy_list`, buttonText: {displayText: `${emoj} PhotoOxy List`}, type: 1}
@@ -12230,7 +12231,7 @@ let tpr2_ = await getBuffer(`https://api-alphabot.herokuapp.com/api/textpro/${co
 let tpr2_1 = await getBuffer(tpr2_);
 const tpr2_3 = await alpha.prepareMessage(from, tpr2_1, MessageType.image, { thumbnail:thumb_pro})
 let tpr2_2 = tpr2_3.message["ephemeralMessage"] ? tpr2_3.message.ephemeralMessage : tpr2_3
-tpr2_5 =` *@${sender.split("@")[0]}* Dah selesai ${emoj}`
+tpr2_5 = `*${jwb_oke}* ${emoj}`
 const tpr2_6 = [
 {buttonId: 'x_menu', buttonText: {displayText: `⬅️ Menu`}, type: 1},
 {buttonId: `textpro_list`, buttonText: {displayText: 'TextPro List'}, type: 1}
@@ -12411,7 +12412,7 @@ if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy Bot`)
 let tpr_1 = await getBuffer(`https://api-alphabot.herokuapp.com/api/textpro/${command}?text=${q}&apikey=Alphabot`);
 const tpr_3 = await alpha.prepareMessage(from, tpr_1, MessageType.image, { thumbnail:thumb_pro})
 let tpr_2 = tpr_3.message["ephemeralMessage"] ? tpr_3.message.ephemeralMessage : tpr_3
-tpr_5 =` *@${sender.split("@")[0]}* Dah selesai ${emoj}`
+tpr_5 = `*${jwb_oke}* ${emoj}`
 const tpr_6 = [
 {buttonId: 'x_menu', buttonText: {displayText: `⬅️ Menu`}, type: 1},
 {buttonId: `textpro_list`, buttonText: {displayText: 'Textpro List'}, type: 1}
@@ -12448,7 +12449,7 @@ aud = qt.result.audio.primary
 taf = qt.result.surah.tafsir.id
 sur = qt.result.surah.name.long
 sur2 = qt.result.surah.name.transliteration.id
-var qur_0 = `*🌱 Okey , Ditemukan Silahkan Dipilih*`
+var qur_0 = `*🌱 ${jwb_oke}, Silahkan Dipilih*`
 var qur_1 = [
 {buttonId: 'Quran_text', buttonText: {displayText: '📖 Teks'}, type: 1},
 {buttonId: 'Quran_audio', buttonText: {displayText: '🎙️ Audio'}, type: 1}
@@ -12508,7 +12509,7 @@ case 'yuri':
 let nsfw2_1 = await getBuffer(`https://api-alphabot.herokuapp.com/api/nsfw/v2/${command}?apikey=Alphabot`);
 const nsfw2_3 = await alpha.prepareMessage(from, nsfw2_1, MessageType.image, { thumbnail:thumb_pro})
 let nsfw2_2 = nsfw2_3.message["ephemeralMessage"] ? nsfw2_3.message.ephemeralMessage : nsfw2_3
-nsfw2_5 =` *@${sender.split("@")[0]}* Dah selesai ${emoj}`
+nsfw2_5 = `*${jwb_oke}* ${emoj}`
 const nsfw2_6 = [
 {buttonId: 'x_menu', buttonText: {displayText: `⬅️ Menu`}, type: 1},
 {buttonId: `nsfw_list`, buttonText: {displayText: 'NSFW List'}, type: 1}
@@ -12619,7 +12620,7 @@ getr = rdm_.result
 let wflar= getr[Math.floor(Math.random() * getr.length)];
 let rdm_1 = await getBuffer(wflar);
 alpha.sendMessage(from, rdm_1, MessageType.image,{
-	caption : 'oke',
+caption : `*${jwb_oke}* ${emoj}`,
 "contextInfo": {
 "forwardingScore": 999,isForwarded: false,
 "externalAdReply": {
@@ -12636,7 +12637,7 @@ case 'wallhd':
 hdw_ = `https://hadi-api.herokuapp.com/api/wallpaperhd?q=${q}`
 let hdw_1 = await getBuffer(hdw_);
 alpha.sendMessage(from, hdw_1, MessageType.image,{
-	caption : 'oke',
+caption : `*${jwb_oke}* ${emoj}`,
 "contextInfo": {
 "forwardingScore": 999,isForwarded: false,
 "externalAdReply": {
@@ -12653,7 +12654,7 @@ case 'wallanime':
 wnim_ = `https://hadi-api.herokuapp.com/api/walpaperanime?q=${q}`
 let wnim_1 = await getBuffer(wnim_);
 alpha.sendMessage(from, wnim_1, MessageType.image,{
-	caption : 'oke',
+caption : `*${jwb_oke}* ${emoj}`,
 "contextInfo": {
 "forwardingScore": 999,isForwarded: false,
 "externalAdReply": {
@@ -12739,8 +12740,7 @@ case 'anime':
 let animek_2 = await getBuffer(`https://hadi-api.herokuapp.com/api/anime`);
 const animek_3 = await alpha.prepareMessage(from, animek_2, MessageType.image, { thumbnail:thumb_nime})
 let animek_4 = animek_3.message["ephemeralMessage"] ? animek_3.message.ephemeralMessage : animek_3
-animek_6 =`「 *${jwb_oke}* 」
-*${emoj} By :* @${sender.split("@")[0]}`
+animek_6 = `*${jwb_oke}* ${emoj}`
 const animek_7 = [
 {buttonId: 'x_menu', buttonText: {displayText: `⬅️ Menu`}, type: 1},
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
@@ -14317,8 +14317,7 @@ wnime_ = await fetchJson(`https://x-restapi.herokuapp.com/api/random-wallanime?a
 let wnime_1 = await getBuffer(wnime_.link);
 const wnime_3 = await alpha.prepareMessage(from, wnime_1, MessageType.image, { thumbnail:thumb_nime})
 let wnime_2 = wnime_3.message["ephemeralMessage"] ? wnime_3.message.ephemeralMessage : wnime_3
-wnime_5 =`「 *${jwb_oke}* 」
-*${emoj} By :* @${sender.split("@")[0]}`
+wnime_5 = `*${jwb_oke}* ${emoj}`
 const wnime_6 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
@@ -14349,8 +14348,7 @@ shta_ = await fetchJson(`https://x-restapi.herokuapp.com/api/random-shota?apikey
 let shta_1 = await getBuffer(shta_.link);
 const shta_3 = await alpha.prepareMessage(from, shta_1, MessageType.image, { thumbnail:thumb_miku})
 let shta_2 = shta_3.message["ephemeralMessage"] ? shta_3.message.ephemeralMessage : shta_3
-shta_5 =`「 *${jwb_oke}* 」
-*${emoj} By :* @${sender.split("@")[0]}`
+shta_5 = `*${jwb_oke}* ${emoj}`
 const shta_6 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
@@ -14381,8 +14379,7 @@ neku_ = await fetchJson(`https://x-restapi.herokuapp.com/api/random-neko?apikey=
 let neku_1 = await getBuffer(neku_.link);
 const neku_3 = await alpha.prepareMessage(from, neku_1, MessageType.image, { thumbnail:thumb_miku})
 let neku_2 = neku_3.message["ephemeralMessage"] ? neku_3.message.ephemeralMessage : neku_3
-neku_5 =`「 *${jwb_oke}* 」
-*${emoj} By :* @${sender.split("@")[0]}`
+neku_5 = `*${jwb_oke}* ${emoj}`
 const neku_6 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
@@ -14413,8 +14410,7 @@ kmn_ = await fetchJson(`https://x-restapi.herokuapp.com/api/random-kemono?apikey
 let kmn_1 = await getBuffer(kmn_.link);
 const kmn_3 = await alpha.prepareMessage(from, kmn_1, MessageType.image, { thumbnail:thumb_miku})
 let kmn_2 = kmn_3.message["ephemeralMessage"] ? kmn_3.message.ephemeralMessage : kmn_3
-kmn_5 =`「 *${jwb_oke}* 」
-*${emoj} By :* @${sender.split("@")[0]}`
+kmn_5 = `*${jwb_oke}* ${emoj}`
 const kmn_6 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
@@ -14445,8 +14441,7 @@ loly_ = await fetchJson(`https://x-restapi.herokuapp.com/api/random-loli?apikey=
 let loly_1 = await getBuffer(loly_.link);
 const loly_3 = await alpha.prepareMessage(from, loly_1, MessageType.image, { thumbnail:thumb_miku})
 let loly_2 = loly_3.message["ephemeralMessage"] ? loly_3.message.ephemeralMessage : loly_3
-loly_5 =`「 *${jwb_oke}* 」
-*${emoj} By :* @${sender.split("@")[0]}`
+loly_5 = `*${jwb_oke}* ${emoj}`
 const loly_6 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
@@ -14477,8 +14472,7 @@ hsb_ = await fetchJson(`https://x-restapi.herokuapp.com/api/random-husbu?apikey=
 let hsb_1 = await getBuffer(hsb_.link);
 const hsb_3 = await alpha.prepareMessage(from, hsb_1, MessageType.image, { thumbnail:thumb_miku})
 let hsb_2 = hsb_3.message["ephemeralMessage"] ? hsb_3.message.ephemeralMessage : hsb_3
-hsb_5 =`「 *${jwb_oke}* 」
-*${emoj} By :* @${sender.split("@")[0]}`
+hsb_5 = `*${jwb_oke}* ${emoj}`
 const hsb_6 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
@@ -14543,8 +14537,7 @@ drjok_ = await fetchJson(`https://x-restapi.herokuapp.com/api/random-darkjoke?ap
 let drjok_1 = await getBuffer(drjok_.urlimage);
 const drjok_3 = await alpha.prepareMessage(from, drjok_1, MessageType.image, { thumbnail:thumb_dark})
 let drjok_2 = drjok_3.message["ephemeralMessage"] ? drjok_3.message.ephemeralMessage : drjok_3
-drjok_5 =`「 *${jwb_oke}* 」
-*${emoj} By :* @${sender.split("@")[0]}`
+drjok_5 = `*${jwb_oke}* ${emoj}`
 const drjok_6 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
@@ -14583,8 +14576,7 @@ xnsfw_ = resurl.url
 let xnsfw_1 = await getBuffer(xnsfw_)
 const xnsfw_3 = await alpha.prepareMessage(from, xnsfw_1, MessageType.image, { thumbnail:thumb_miku})
 let xnsfw_2 = xnsfw_3.message["ephemeralMessage"] ? xnsfw_3.message.ephemeralMessage : xnsfw_3
-xnsfw_5 =`「 *${jwb_oke}* 」
-*${emoj} By :* @${sender.split("@")[0]}`
+xnsfw_5 = `*${jwb_oke}* ${emoj}`
 const xnsfw_6 = [
 {buttonId: 'x_menu', buttonText: {displayText: `⬅️ Menu`}, type: 1},
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
@@ -14616,8 +14608,7 @@ gimg_ = resurl.url
 let gimg_1 = await getBuffer(gimg_)
 const gimg_3 = await alpha.prepareMessage(from, gimg_1, MessageType.image, { thumbnail:thumb_miku})
 let gimg_2 = gimg_3.message["ephemeralMessage"] ? gimg_3.message.ephemeralMessage : gimg_3
-gimg_5 =`「 *${jwb_oke}* 」
-*${emoj} By :* @${sender.split("@")[0]}`
+gimg_5 = `*${jwb_oke}* ${emoj}`
 const gimg_6 = [
 {buttonId: 'x_menu', buttonText: {displayText: `⬅️ Menu`}, type: 1},
 {buttonId: `${command} ${q}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
@@ -15505,8 +15496,7 @@ let dom_= ran_[Math.floor(Math.random() * ran_.length)];
 let pinterest_1 = await getBuffer(dom_)
 const pinterest_3 = await alpha.prepareMessage(from, pinterest_1, MessageType.image, { thumbnail:thumb_pin})
 let pinterest_2 = pinterest_3.message["ephemeralMessage"] ? pinterest_3.message.ephemeralMessage : pinterest_3
-pinterest_5 =`「 *${jwb_oke}* 」
-*${emoj} By :* @${sender.split("@")[0]}`
+pinterest_5 = `*${jwb_oke}* ${emoj}`
 const pinterest_6 = [
 {buttonId: 'x_menu', buttonText: {displayText: `⬅️ Menu`}, type: 1},
 {buttonId: `${command} ${q}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
@@ -15571,7 +15561,7 @@ break
 case 'apakah':
 if (!budy.includes("@")){
 apakah = q
-const apa =['Iya','Tidak','Bisa Jadi','Coba Ulangi']
+const apa = ['*Iya*','*Tidak*','*Bisa Jadi*','*Coba Ulangi*','*YNKTS*','*Emang napa*','*Dahlah gw bingung*']
 const kah = apa[Math.floor(Math.random() * apa.length)]
 var tkkk = `*Pertanyaan :* ${command} ${apakah}\n*Jawaban :* ${kah}`
 alpha.sendMessage(from, tkkk, MessageType.text,{quoted: mek, sendEphemeral: true
@@ -15595,7 +15585,7 @@ case 'gantengcek':
 case 'cekganteng':
 if (!budy.includes("@")){
 ganteng = q
-const gan =['10','30','20','40','50','60','70','62','74','83','97','100','29','94','75','82','41','39']
+const gan = ['*10*','*30*','*20*','*40*','*50*','*60*','*70*','*62*','*74*','*83*','*97*','*100*','*29*','*94*','*75*','*82*','*41*','*39*']
 const teng = gan[Math.floor(Math.random() * gan.length)]
 var gnteng = `*Pertanyaan :* ${command} ${ganteng}\n*Jawaban :* ${teng}%`
 alpha.sendMessage(from, gnteng, MessageType.text,{quoted: mek, sendEphemeral: true
@@ -15603,7 +15593,7 @@ alpha.sendMessage(from, gnteng, MessageType.text,{quoted: mek, sendEphemeral: tr
 } else if (budy.includes("@")){
 ganteng = q
 ghost = mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
-const gan2 =['10','30','20','40','50','60','70','62','74','83','97','100','29','94','75','82','41','39']
+const gan2 = ['*10*','*30*','*20*','*40*','*50*','*60*','*70*','*62*','*74*','*83*','*97*','*100*','*29*','*94*','*75*','*82*','*41*','*39*']
 const teng2 = gan2[Math.floor(Math.random() * gan2.length)]
 var gnteng2 = `*Pertanyaan :* ${command} ${ganteng}\n*Jawaban :* ${teng2}%`
 alpha.sendMessage(from, gnteng2, MessageType.text,{
@@ -15616,23 +15606,23 @@ break
 case 'cekwatak':
 var namao = pushname
 var prfx = await alpha.getProfilePicture(sender)
-const watak = ['top deh pokoknya','penyayang','pemurah','Pemarah','Pemaaf','Penurut','Baik','baperan','Baik-Hati','penyabar','UwU','Suka Membantu']
+const watak = ['*top deh pokoknya*','*penyayang*','*pemurah*','*Pemarah*','*Pemaaf*','*Penurut*','*Baik*','*baperan*','*Baik-Hati*','*penyabar*','*UwU*','*Suka Membantu*']
 const wtk = watak[Math.floor(Math.random() * (watak.length))]
-const ratenyaasu = ['100%','95%','90%','85%','80%','75%','70%','65%','60%','55%','50%','45%','40%','35%','30%','25%','20%','15%','10%','5%']
+const ratenyaasu = ['*100%*','*95%*','*90%*','*85%*','*80%*','*75%*','*70%*','*65%*','*60%*','*55%*','*50%*','*45%*','*40%*','*35%*','*30%*','*25%*','*20%*','*15%*','*10%*','*5%*']
 const akhlak = ratenyaasu[Math.floor(Math.random() * (ratenyaasu.length))]
-const sifat = ['Penolong','Suka Membantu','Saling Menolong','Perhatian','Ngak Cuek','Romantis','Dermawan','Cool','Peduli Kepada Sesama','Suka Berkata Kasar']
+const sifat = ['*Penolong*','*Suka Membantu*','*Saling Menolong*','*Perhatian*','*Ngak Cuek*','*Romantis*','*Dermawan*','*Cool*','*Peduli Kepada Sesama*','*Suka Berkata Kasar*']
 const sft = sifat[Math.floor(Math.random() * (sifat.length))]
-const hobby = ['Memasak','Membantu Atok','Mabar','Nobar','Coli','Colmek','Sosmedtan','Membantu Orang lain','Nonton Anime','Nonton Drakor','Naik Motor','Nyanyi','Menari','Bertumbuk','Menggambar','Foto fotoan Ga jelas','Maen Game','Berbicara Sendiri']
+const hobby = ['*Memasak*','*Membantu Atok*','*Mabar*','*Nobar*','*Coli*','*Colmek*','*Sosmedtan*','*Membantu Orang lain*','*Nonton Anime*','*Nonton Drakor*','*Naik Motor*','*Nyanyi*','*Menari*','*Bertumbuk*','*Menggambar*','*Foto fotoan Ga jelas*','*Maen Game*','*Berbicara Sendiri*']
 const hby = hobby[Math.floor(Math.random() * (hobby.length))]
-const kelebihan = ['Soleh dan Soleha','Pintar','Rajin','Teladan']
+const kelebihan = ['*Soleh dan Soleha*','*Pintar*','*Rajin*','*Teladan*']
 const klbh = kelebihan[Math.floor(Math.random() * (kelebihan.length))]
-const tipe = ['cool','idaman','Alami','Keren','Ideal','Dia Bamget','normal','elite','epic','Legend']
+const tipe = ['*cool*','*idaman*','*Alami*','*Keren*','*Ideal*','*Dia Bamget*','*normal*','*elite*','*epic*','*Legend*']
 const typo = tipe[Math.floor(Math.random() * (tipe.length))]
 await reply1(`[ INTROGASI SUKSES ]\n\n[Nama]:${namao}\n\n[Watak]:${wtk}\n\n[Akhlak✨]:${akhlak}\n\n[Sifat]:${sft}\n\n[Hobby]:${hby}\n\n[Tipe]:${typo}\n\n[Kelebihan]:${klbh}\n\nNote\n\n_ini hanya main main_`)
 break
 
 case 'hobby':
-const kan =['Coli','baca buku','Tadi','ngeliat org mandi','Nonton bokep','sepedaan','Baca wattpad','belajar','Main discord','menabung']
+const kan = ['*Coli*','*baca buku*','*Tadi*','*ngeliat org mandi*','*Nonton bokep*','*sepedaan*','*Baca wattpad*','*belajar*','*Main discord*','*menabung*']
 const hooo = kan[Math.floor(Math.random() * kan.length)]
 reply1('Pertanyaan : *hoby*\n\nJawaban : '+ hooo)
 break
@@ -15641,7 +15631,7 @@ case 'bisakah':
 case 'benarkah':
 if (!budy.includes("@")){
 bisakah = q
-const bisa =['Bisa','Tidak Bisa','Coba Ulangi','Ya mana gw tau']
+const bisa = ['*Bisa*','*Tidak Bisa*','*Coba Ulangi*','*Ya mana gw tau*']
 const keh = bisa[Math.floor(Math.random() * bisa.length)]
 var biskeh = `*Pertanyaan :* ${command} ${bisakah}\n*Jawaban :* ${keh}`
 alpha.sendMessage(from, biskeh, MessageType.text,{quoted: mek, sendEphemeral: true
@@ -15677,7 +15667,7 @@ alpha.sendMessage(from, kpkeh, MessageType.text,{quoted: mek, sendEphemeral: tru
 } else if (budy.includes("@")){
 kapankah = q
 ghost = mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
-const kapan2 =['Besok','Lusa','Tadi','4 Hari Lagi','5 Hari Lagi','6 Hari Lagi','1 Minggu Lagi','2 Minggu Lagi','3 Minggu Lagi','1 Bulan Lagi','2 Bulan Lagi','3 Bulan Lagi','4 Bulan Lagi','5 Bulan Lagi','6 Bulan Lagi','1 Tahun Lagi','2 Tahun Lagi','3 Tahun Lagi','4 Tahun Lagi','5 Tahun Lagi','6 Tahun Lagi','1 Abad lagi','3 Hari Lagi']
+const kapan2 = ['*Besok*','*Lusa*','*Tadi*','*4 Hari Lagi*','*5 Hari Lagi*','*6 Hari Lagi*','*1 Minggu Lagi*','*2 Minggu Lagi*','*3 Minggu Lagi*','*1 Bulan Lagi*','*2 Bulan Lagi*','*3 Bulan Lagi*','*4 Bulan Lagi*','*5 Bulan Lagi*','*6 Bulan Lagi*','*1 Tahun Lagi*','*2 Tahun Lagi*','*3 Tahun Lagi*','*4 Tahun Lagi*','*5 Tahun Lagi*','*6 Tahun Lagi*','*1 Abad lagi*','*3 Hari Lagi*']
 const koh2 = kapan2[Math.floor(Math.random() * kapan2.length)]
 var kpkeh2 = `*Pertanyaan :* ${command} ${kapankah}\n*Jawaban :* ${koh2}`
 alpha.sendMessage(from, kpkeh2, MessageType.text,{
@@ -15937,8 +15927,7 @@ ajgnya = jing.message
 let bajg = await getBuffer(ajgnya)
 const ajg1 = await alpha.prepareMessage(from, bajg, MessageType.image, { thumbnail:thumb_miku})
 let ajg2 = ajg1.message["ephemeralMessage"] ? ajg1.message.ephemeralMessage : ajg1
-ajg3 =`「 *${jwb_oke}* 」
-*${emoj} By :* @${sender.split("@")[0]}`
+ajg3 = `*${jwb_oke}* ${emoj}`
 const ajg4 = [
 {buttonId: 'x_menu', buttonText: {displayText: `⬅️ Menu`}, type: 1},
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
@@ -16465,7 +16454,7 @@ case 'pki':
 case 'siapakah':
 case 'colikers':
 case 'kuntul':
-case 'babii':
+case 'babi':
 case 'beban':
 case 'bego':
 case 'tolol':
@@ -16802,7 +16791,7 @@ ini_buffer = await getBuffer(`https://kuontol-api.herokuapp.com/api/photooxy/${c
 alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Dah selesai , Req by: ${pushname}\nKetik *${prefix}oxy_list* untuk melihat menu yang lain`})
 break
 
-case 'tytyd':
+case 'tyd':
 reply1('Oke nyala')
 break
 
@@ -16873,7 +16862,7 @@ anu = alpha.prepareMessageFromContent(from,{
 "businessOwnerJid": `${ownerJid}`,
 "contextInfo": {
 	"forwardingScore": 9999,
-	"isForwarded": true
+	"isForwarded": false
 }
 }
 },{quoted: mek, contextInfo: { mentionedJid: [sender]}})
@@ -17751,7 +17740,7 @@ if(!q) return reply1(`${emoj} Hint : ${prefix + command} wudy`)
 let meme_1 = await getBuffer(`https://api.lolhuman.xyz/api/${command}?apikey=${lolkey}&text=${q}`);
 const meme_3 = await alpha.prepareMessage(from, meme_1, MessageType.image, { thumbnail:thumb_pro})
 let meme_2 = meme_3.message["ephemeralMessage"] ? meme_3.message.ephemeralMessage : meme_3
-meme_5 =` *@${sender.split("@")[0]}* Dah selesai ${emoj}`
+meme_5 = `*${jwb_oke}* ${emoj}`
 const meme_6 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
 {buttonId: 'x_menu', buttonText: {displayText: '🌱 List menu'}, type: 1},
@@ -17789,7 +17778,7 @@ bottom = q.split('|')[1]
 let meme2_1 = await getBuffer(`https://api.lolhuman.xyz/api/${command}?apikey=${lolkey}&text1=${top}&text2=${bottom}`);
 const meme2_3 = await alpha.prepareMessage(from, meme2_1, MessageType.image, { thumbnail:thumb_pro})
 let meme2_2 = meme2_3.message["ephemeralMessage"] ? meme2_3.message.ephemeralMessage : meme2_3
-meme2_5 =` *@${sender.split("@")[0]}* Dah selesai ${emoj}`
+meme2_5 = `*${jwb_oke}* ${emoj}`
 const meme2_6 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
 {buttonId: 'x_menu', buttonText: {displayText: '🌱 List menu'}, type: 1},
@@ -17821,7 +17810,7 @@ case 'memeindo':
 let mem_1 = await getBuffer(`https://api.lolhuman.xyz/api/random/${command}?apikey=${lolkey}`);
 const mem_3 = await alpha.prepareMessage(from, mem_1, MessageType.image, { thumbnail:thumb_pro})
 let mem_2 = mem_3.message["ephemeralMessage"] ? mem_3.message.ephemeralMessage : mem_3
-mem_5 =` *@${sender.split("@")[0]}* Dah selesai ${emoj}`
+mem_5 = `*${jwb_oke}* ${emoj}`
 const mem_6 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
 {buttonId: 'x_menu', buttonText: {displayText: '🌱 List menu'}, type: 1},
@@ -17893,7 +17882,7 @@ if (!q)return reply1(`*${emoj} Hint :* ${prefix + command} wudy`)
 let srti_1 = await getBuffer(`https://api.lolhuman.xyz/api/${command}?apikey=${lolkey}&name=${q}`);
 const srti_3 = await alpha.prepareMessage(from, srti_1, MessageType.image, { thumbnail:thumb_pro})
 let srti_2 = srti_3.message["ephemeralMessage"] ? srti_3.message.ephemeralMessage : srti_3
-srti_5 =` *@${sender.split("@")[0]}* Dah selesai ${emoj}`
+srti_5 = `*${jwb_oke}* ${emoj}`
 const srti_6 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
 {buttonId: 'x_menu', buttonText: {displayText: '🌱 List menu'}, type: 1},
@@ -17927,7 +17916,7 @@ t2 = t.split('|')[1]
 let miss_1 = await getBuffer(`https://api.lolhuman.xyz/api/gtapassed?apikey=${lolkey}&text1=${t1}&text2=${t2}`);
 const miss_3 = await alpha.prepareMessage(from, miss_1, MessageType.image, { thumbnail:thumb_pro})
 let miss_2 = miss_3.message["ephemeralMessage"] ? miss_3.message.ephemeralMessage : miss_3
-miss_5 =` *@${sender.split("@")[0]}* Dah selesai ${emoj}`
+miss_5 = `*${jwb_oke}* ${emoj}`
 const miss_6 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
 {buttonId: 'x_menu', buttonText: {displayText: '🌱 List menu'}, type: 1},
@@ -18307,8 +18296,7 @@ if (q5 == "waifu_1"){
 let wifu_2 = await getBuffer(`https://velgrynd.herokuapp.com/api/image/waifu?apikey=slAuPQiV`);
 const wifu_3 = await alpha.prepareMessage(from, wifu_2, MessageType.image, { thumbnail:thumb_nime})
 let wifu_4 = wifu_3.message["ephemeralMessage"] ? wifu_3.message.ephemeralMessage : wifu_3
-wifu_6 =`「 *${jwb_oke}* 」
-*${emoj} By :* @${sender.split("@")[0]}`
+wifu_6 = `*${jwb_oke}* ${emoj}`
 const wifu_7 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
@@ -18338,8 +18326,7 @@ if (q5 == "waifu_2"){
 let wifu2_2 = await getBuffer(`https://api.lolhuman.xyz/api/random/waifu?apikey=${lolkey}`);
 const wifu2_3 = await alpha.prepareMessage(from, wifu2_2, MessageType.image, { thumbnail:thumb_nime})
 let wifu2_4 = wifu2_3.message["ephemeralMessage"] ? wifu2_3.message.ephemeralMessage : wifu2_3
-wifu2_6 =`「 *${jwb_oke}* 」
-*${emoj} By :* @${sender.split("@")[0]}`
+wifu2_6 = `*${jwb_oke}* ${emoj}`
 const wifu2_7 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
@@ -18370,8 +18357,7 @@ wifu3_1 = await fetchJson(`https://x-restapi.herokuapp.com/api/random-waifu?apik
 let wifu3_2 = await getBuffer(wifu3_1.link);
 const wifu3_3 = await alpha.prepareMessage(from, wifu3_2, MessageType.image, { thumbnail:thumb_nime})
 let wifu3_4 = wifu3_3.message["ephemeralMessage"] ? wifu3_3.message.ephemeralMessage : wifu3_3
-wifu3_6 =`「 *${jwb_oke}* 」
-*${emoj} By :* @${sender.split("@")[0]}`
+wifu3_6 = `*${jwb_oke}* ${emoj}`
 const wifu3_7 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
