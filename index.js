@@ -17988,18 +17988,15 @@ sendFileFromUrl(res[0].down, document, {mimetype: 'font/ttf', filename: res[0].o
 break
 case 'dafontsearch':
 case 'dafonts':
+case 'dafont':
 if (args.length < 1) return reply1('Apa Yang Mau Di Cari? ')
 teks = args.join(' ')
-reply1(mess.wait)
 res = await dafontSearch(teks)
 a = res[0]
-result = `❒「  *${botname}*  」
-├ *Judul :* ${a.judul}
-├ *Style :* ${a.style}
-└ *Link :* ${a.link}
-`
-reply1(result)
+but = [{buttonId: `dafontdown ${a.link}`, buttonText: {displayText: 'Download Font'}, type: 1}]
+sendButton(from, `「  *${botname}*  」${enter}*Judul :* ${a.judul}${enter}*Style :* ${a.style}${enter}*Link :* ${a.link}`, `Download dibawah`, but)
 break
+
 case 'preview':
 if (body.endsWith("-font")) {
 if (args.length < 1) return reply1('Teks Sama Ukuran Nya Mana? ')
@@ -18012,12 +18009,9 @@ size = teks[1]
 isi = teks[0]
 res = await dafontSearch(teks[2])
 a = res[0]
-result = `❒「  *${botname}*  」
-├ *Judul :* ${a.judul}
-├ *Style :* ${a.style}
-└ *Link :* ${a.link}
-`
-reply1(result)
+but = [{buttonId: `dafontdown ${a.link}`, buttonText: {displayText: 'Download Font'}, type: 1}]
+sendButton(from, `「  *${botname}*  」${enter}*Judul :* ${a.judul}${enter}*Style :* ${a.style}${enter}*Link :* ${a.link}`, `Download dibawah`, but)
+
 res = await dafontDown(a.link) 
 bup = await getBuffer(res[0].down)
 const hasil = await fs.writeFileSync(res[0].output, bup)
@@ -18057,9 +18051,8 @@ case 'katamutiara':
 if (args.length < 1) return reply1('Yang mau di cari apaan?')
 teks = args.join(' ')
 res = await jagoKata(teks)
-let hasil = `*“* ${res[0].isi} *”*
-_~${res[0].by}_`
-reply1(hasil)
+but = [{buttonId: `${command}${q}`, buttonText: {displayText: 'Quote again'}, type: 1}]
+sendButton(from, `*“* ${res[0].isi} *”*${enter}_~${res[0].by}_`, `Thanks for read it!`, but)
 break
 
 //Ends
