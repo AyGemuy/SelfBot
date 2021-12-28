@@ -8660,6 +8660,7 @@ case 'memestick':
 case 'stickmeme':
 case 'stcmeme':
 case 'smeme':
+q = args.join(' ')
 top = q.split('|')[0]
 bottom = q.split('|')[1]
 console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
@@ -8696,6 +8697,9 @@ reply1('Reply stc/img caption top|bottom')
 break
 
 case 'smeme2':
+q = args.join(' ')
+top = q.split('|')[0]
+bottom = q.split('|')[1]
 console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
 var imgbb = require('imgbb-uploader')
 if (!isQuotedSticker) {
@@ -8730,7 +8734,8 @@ reply1('Reply stc/img caption top|bottom')
 break
 
 case 'smeme3':
-top = q.split('|')[0]
+q = args.join(' ')
+top = q.split(' ')[0]
 console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
 var imgbb = require('imgbb-uploader')
 if (!isQuotedSticker) {
@@ -8765,7 +8770,8 @@ reply1('Reply stc/img caption top')
 break
 
 case 'smeme4':
-bottom = q.split('|')[0]
+q = args.join(' ')
+bottom = q.split(' ')[0]
 console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
 var imgbb = require('imgbb-uploader')
 if (!isQuotedSticker) {
