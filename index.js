@@ -16438,7 +16438,6 @@ break
 case 'ganteng':
 case 'wibu':
 case 'pki':
-case 'siapakah':
 case 'colikers':
 case 'kuntul':
 case 'babi':
@@ -16469,6 +16468,10 @@ case 'ngewibu':
 case 'puki':
 case 'pantex':
 case 'pantek':
+case 'komtol':
+case 'kontol':
+case 'memeq':
+case 'memek':
 if (!isGroup) return reply1(mess.only.group)
 membr = []
 const pff = groupMembers
