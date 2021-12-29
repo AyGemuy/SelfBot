@@ -7315,7 +7315,7 @@ break
 case 'ssmap':
 if (args.length < 1) return reply1('Kota apa?')
 teks = args[0]
-buff = await getBuffer(`https://api-xcoders.xyz/api/maker/ssmap?query=${q}&apikey=7iyNa0qA`)
+buff = await getBuffer(`https://api-xcoders.xyz/api/maker/ssmap?query=${q}&apikey=farhan`)
 alpha.sendMessage(from, buff, image, {quoted: mek, caption : `Screenshot from ${teks}`})
 break
 
@@ -12890,7 +12890,7 @@ break
 //LIST───────[ API XTEAM
 case 'ttp3': 
 case 'ttp': 
-anuk = `https://api-xcoders.xyz/api/maker/${command}?text=${encodeURIComponent(q)}&apikey=7iyNa0qA`
+anuk = `https://api-xcoders.xyz/api/maker/${command}?text=${encodeURIComponent(q)}&apikey=farhan`
 sendStickerFromUrl(from, `${anuk}`, mek)
 break
 
@@ -17188,7 +17188,7 @@ await fs.writeFileSync(`./stickmeme.jpeg`, owgi)
 var imgbb = require('imgbb-uploader')
 anu = await imgbb(`${img_key}`, './stickmeme.jpeg')
 teks = `${anu.display_url}`
-buffer453 = await getBuffer (`https://api-xcoders.xyz/api/convert/reversevideo?url=${teks}&apikey=7iyNa0qA`)
+buffer453 = await getBuffer (`https://api-xcoders.xyz/api/convert/reversevideo?url=${teks}&apikey=farhan`)
 alpha.sendMessage(from, buffer453, video, { mimetype: 'video/mp4', quoted: mek })
 fs.unlinkSync('./stickmeme.jpeg')
 }
@@ -17234,7 +17234,7 @@ case 'water':
 case 'coverpubg':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} Wudy`)
 ini_txt = args.join(" ")
-await getBuffer(`https://api-xcoders.xyz/api/ephoto/${command}?text=${ini_txt}&apikey=7iyNa0qA`).then((gambar) => {
+await getBuffer(`https://api-xcoders.xyz/api/ephoto/${command}?text=${ini_txt}&apikey=farhan`).then((gambar) => {
 alpha.sendMessage(from, gambar, image, { quoted: mek, caption: "Nih kack" })
 })
 break
@@ -17261,7 +17261,7 @@ owgi = await alpha.downloadMediaMessage(ger)
 await fs.writeFileSync(`./stickmeme.jpeg`, owgi)
 var imgbb = require('imgbb-uploader')
 anu = await imgbb(`${img_key}`, './stickmeme.jpeg')
-teks = await getBuffer(`https://api-xcoders.xyz/api/ephoto/${command}?url=${anu.display_url}&apikey=7iyNa0qA`)
+teks = await getBuffer(`https://api-xcoders.xyz/api/ephoto/${command}?url=${anu.display_url}&apikey=farhan`)
 alpha.sendMessage(from, teks, image, { quoted: mek, caption: "Nih kack" })
 fs.unlinkSync('./stickmeme.jpeg')
 }
@@ -17279,7 +17279,7 @@ owgi = await alpha.downloadMediaMessage(ger)
 await fs.writeFileSync(`./stickmeme.jpeg`, owgi)
 var imgbb = require('imgbb-uploader')
 anu = await imgbb(`${img_key}`, './stickmeme.jpeg')
-teks = await getBuffer(`https://api-xcoders.xyz/api/ephoto/${command}?url=${anu.display_url}&text=${top}&text2=${bottom}&apikey=7iyNa0qA`)
+teks = await getBuffer(`https://api-xcoders.xyz/api/ephoto/${command}?url=${anu.display_url}&text=${top}&text2=${bottom}&apikey=farhan`)
 alpha.sendMessage(from, teks, image, { quoted: mek, caption: "Nih kack" })
 fs.unlinkSync('./stickmeme.jpeg')
 }
@@ -17295,7 +17295,7 @@ owgi = await alpha.downloadMediaMessage(ger)
 await fs.writeFileSync(`./stickmeme.jpeg`, owgi)
 var imgbb = require('imgbb-uploader')
 anu = await imgbb(`${img_key}`, './stickmeme.jpeg')
-teks = await getBuffer(`https://api-xcoders.xyz/api/ephoto/adventure?url=${anu.display_url}&text=${top}&text2=${bottom}&apikey=7iyNa0qA`)
+teks = await getBuffer(`https://api-xcoders.xyz/api/ephoto/adventure?url=${anu.display_url}&text=${top}&text2=${bottom}&apikey=farhan`)
 alpha.sendMessage(from, teks, image, { quoted: mek, caption: "Nih kack" })
 fs.unlinkSync('./stickmeme.jpeg')
 }
@@ -17314,7 +17314,7 @@ owgi = await alpha.downloadMediaMessage(ger)
 await fs.writeFileSync(`./stickmeme.jpeg`, owgi)
 var imgbb = require('imgbb-uploader')
 anu = await imgbb(`${img_key}`, './stickmeme.jpeg')
-teks = await getBuffer(`https://api-xcoders.xyz/api/ephoto/${command}?url=${anu.display_url}&text=${top}&apikey=7iyNa0qA`)
+teks = await getBuffer(`https://api-xcoders.xyz/api/ephoto/${command}?url=${anu.display_url}&text=${top}&apikey=farhan`)
 alpha.sendMessage(from, teks, image, { quoted: mek, caption: "Nih kack" })
 fs.unlinkSync('./stickmeme.jpeg')
 }
@@ -17330,7 +17330,7 @@ case 'writestatus':
 if (!q) return reply1(`Contoh: ${prefix + command} top|bottom`)
 top = q.split('|')[0]
 bottom = q.split('|')[1]
-await getBuffer(`https://api-xcoders.xyz/api/ephoto/${command}?text=${txt1}&text2=${txt2}&apikey=7iyNa0qA`).then((gambar) => {
+await getBuffer(`https://api-xcoders.xyz/api/ephoto/${command}?text=${txt1}&text2=${txt2}&apikey=farhan`).then((gambar) => {
 alpha.sendMessage(from, gambar, image, { quoted: mek, caption: "Nih kack" })
 })
 break
