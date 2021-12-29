@@ -5378,7 +5378,7 @@ fakethumb(buffer, `Nih kak ${pushname}`)
 fs.unlinkSync(ran)
 })
 } else if (!isQuotedLocation) {
-encmediaa = = isQuotedLocation ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
+encmediaa = isQuotedLocation ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 mediaa = await alpha.downloadAndSaveMediaMessage(encmediaa)
 ran = getRandom('.png')
 exec(`ffmpeg -i ${mediaa} ${ran}`, (err) => {
