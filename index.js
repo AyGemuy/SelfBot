@@ -18278,7 +18278,7 @@ footerText: `Thanks @${sender.split("@")[0]} !`,
 buttons: cobutt,
 headerType: 4
 }
-await alpha.sendMessage(from, cobutt_, MessageType.buttonsMessage)})
+await alpha.sendMessage(from, cobutt_, MessageType.buttonsMessage)
 break
 case 'fb':
 case 'ifunny':
@@ -18301,7 +18301,7 @@ footerText: `Thanks @${sender.split("@")[0]} !`,
 buttons: fbbutt,
 headerType: 4
 }
-await alpha.sendMessage(from, fbbutt_, MessageType.buttonsMessage)})
+await alpha.sendMessage(from, fbbutt_, MessageType.buttonsMessage)
 break
 case 'joox':
 if (args.length < 1) return reply1(`Kirim perintah *${prefix}${command}* query`)
@@ -18321,7 +18321,7 @@ footerText: `Thanks @${sender.split("@")[0]} !`,
 buttons: joxbutt,
 headerType: 4
 }
-await alpha.sendMessage(from, joxbutt_, MessageType.buttonsMessage)})
+await alpha.sendMessage(from, joxbutt_, MessageType.buttonsMessage)
 break
 case 'xnxx':
 case 'xvideos':
@@ -18341,7 +18341,7 @@ footerText: `Thanks @${sender.split("@")[0]} !`,
 buttons: xnbutt,
 headerType: 4
 }
-await alpha.sendMessage(from, xnbutt_, MessageType.buttonsMessage)})
+await alpha.sendMessage(from, xnbutt_, MessageType.buttonsMessage)
 break
 
 // MAKER
