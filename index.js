@@ -18207,10 +18207,10 @@ hent_ = await fetchJson(`https://api-xcoders.xyz/api/anime/${command}?query=${q}
 let hent___ = await getBuffer(hent_.result.thumbnail[0]);
 const hent__ = await alpha.prepareMessage(from, hent___, MessageType.image, { thumbnail:thumb_img})
 let hent_0 = hent__.message["ephemeralMessage"] ? hent__.message.ephemeralMessage : hent__
-let gece = '「 *NEKO* 」\n\n'
+let nekmo = '「 *NEKO* 」\n\n'
 for (let g of hent_.result) {
-gece += `*Nama*: ${g.title}\n*Link*: ${g.url}\n\n`}
-var hent_1 = `${ucapannya2}\n ${gece}`
+nekmo += `*Nama*: ${g.title}\n*Link*: ${g.url}\n\n`}
+var hent_1 = `${ucapannya2}\n ${nekmo}`
 var hent_2 = [
 {buttonId: 'x_menu' , buttonText: {displayText: `⬅️ Menu`}, type: 1},
 {buttonId: `${command} ${q}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
