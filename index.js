@@ -18087,7 +18087,7 @@ case 'swm2':
 case 'codenhentai':
 if (args.join(' ')) {
 kod = args.join(' ')
-var tod = await fetchJson(`https://api-xcoders.xyz/api/anime/codenhentai?code=${kod}&apikey=7iyNa0qA`);
+tod = await fetchJson(`https://api-xcoders.xyz/api/anime/codenhentai?code=${kod}&apikey=7iyNa0qA`);
 ide = tod.titleID
 jep = tod.titleJP
 cod = tod.code
@@ -18124,7 +18124,7 @@ alpha.sendMessage(from, hen_7, MessageType.buttonsMessage,{
 quoted: mek, sendEphemeral: true
 })
 } else if (!q) {
-var tod = await fetchJson(`https://api-xcoders.xyz/api/anime/randomnhentai?apikey=7iyNa0qA`);
+tod = await fetchJson(`https://api-xcoders.xyz/api/anime/randomnhentai?apikey=7iyNa0qA`);
 ide = tod.titleID
 jep = tod.titleJP
 cod = tod.code
@@ -18404,7 +18404,7 @@ break
 // TOOLS
 case 'headers':
 if (args.length < 1) return reply1(`Kirim perintah *${prefix}${command}* http://google.com`)
-var tod = await fetchJson(`https://api-xcoders.xyz/api/tools/headers?url=${q}&apikey=7iyNa0qA`);
+tod = await fetchJson(`https://api-xcoders.xyz/api/tools/headers?url=${q}&apikey=7iyNa0qA`);
 ide = tod.result
 a = ide.date
 b = ide.expires
@@ -18443,7 +18443,7 @@ sendButton(from, `${heder}`, `Test`, but)
 break
 case 'pageurl':
 if (args.length < 1) return reply1(`Kirim perintah *${prefix}${command}* http://google.com`)
-var tod = await fetchJson(`https://api-xcoders.xyz/api/tools/pageurl?url=${q}&apikey=7iyNa0qA`);
+tod = await fetchJson(`https://api-xcoders.xyz/api/tools/pageurl?url=${q}&apikey=7iyNa0qA`);
 ide = tod.result
 const pageur = `${ide}`
 but = [
