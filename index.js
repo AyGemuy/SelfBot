@@ -4489,7 +4489,7 @@ break
 
 case 'getbio':
 if (!isGroup) return reply1(lang.onlygc())
-if (args.length < 1) return reply1('_TAG ORANGNYA_')
+if (!q) return reply1('_TAG ORANGNYA_')
 mentionedd = mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
 const p = await alpha.getStatus(`${mentionedd}`, MessageType.text)
 reply1(p.status)
@@ -4501,7 +4501,7 @@ break
 /*case 'creategroup':
 case 'creategrup':
 if (!isGroup) return reply1(lang.onlygc())
-if (args.length < 1) return reply1(`Penggunaan ${prefix}creategrup nama grup|@tag member`)
+if (!q) return reply1(`Penggunaan ${prefix}creategrup nama grup|@tag member`)
 argza = args.split('|')
 if (mek.message.extendedTextMessage != undefined){
 mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
@@ -4562,7 +4562,7 @@ break
 case 'spam':
 if (!isGroup) return reply1(lang.onlygc())
 if (!isGroupAdmins) return reply1(lang.onlygcAdmin())
-if (args.length < 1) return reply1(`Penggunaan ${prefix}spam teks|jumlahspam`)
+if (!q) return reply1(`Penggunaan ${prefix}spam teks|jumlahspam`)
 argzi = args.split("|")
 if (!argzi) return reply1(`Penggunaan ${prefix}spam teks|jumlah`)
 if (isNaN(argzi[1])) return reply1(`harus berupa angka`)
@@ -4855,7 +4855,7 @@ break
 
 case 'fitnah':
 if (!mek.key.fromMe && !isOwner && !isCreator) return reply1(lang.onlyOwner())
-if (args.length < 1) return reply1(`Usage :\n${prefix}fitnah [@tag|pesan|balasanbot]]\n\nEx : \n${prefix}fitnah @tagmember|hai|hai juga`)
+if (!q) return reply1(`Usage :\n${prefix}fitnah [@tag|pesan|balasanbot]]\n\nEx : \n${prefix}fitnah @tagmember|hai|hai juga`)
 var gh = args.join('')
 mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 var replace = gh.split("|")[0];
@@ -4975,7 +4975,7 @@ var pen = ge.split("|")[1];
 var pn = ge.split("|")[2];
 var be = ge.split("|")[3];
 const fde = `kirim/reply image dengan capion ${prefix}fdeface link|title|desc|teks`
-if (args.length < 1) return reply1(fde)
+if (!q) return reply1(fde)
 const dipes = isQuotedSticker || isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 const tipes = await alpha.downloadAndSaveMediaMessage(dipes) 
 const bufer = fs.readFileSync(tipes)
@@ -5059,7 +5059,7 @@ break
 case 'sewa':
 if (!isGroup)return reply1(lang.onlygc())
 if (!mek.key.fromMe && !isOwner && !isCreator) return reply1(lang.onlyOwner())
-if (args.length < 1) return reply1(`Penggunaan :\n*${prefix}sewa* add/del waktu`)
+if (!q) return reply1(`Penggunaan :\n*${prefix}sewa* add/del waktu`)
 if (args[0] === 'add'){
 _sewa.addSewaGroup(from, args[1], sewa)
 reply1(lang.success())
@@ -5392,7 +5392,7 @@ fs.unlinkSync(ran)
 
 case 'ytsearch':
 case 'yts':
-if (args.length < 1) return reply1('Tolong masukan query!')
+if (!q) return reply1('Tolong masukan query!')
 var srch = args.join(' ');
 try {
 var aramas = await yts(srch);
@@ -5425,7 +5425,7 @@ break
 
 case 'setprefix':
 if (!mek.key.fromMe && !isOwner && !isCreator) return reply1(lang.onlyOwner())
-if (args.length < 1) return reply1(`*Format Error!*\n\n*Example :*\n •${prefix + command} multi\n •${prefix + command} nopref\n •${prefix + command} #`)
+if (!q) return reply1(`*Format Error!*\n\n*Example :*\n •${prefix + command} multi\n •${prefix + command} nopref\n •${prefix + command} #`)
 if((args[0]) == 'multi'){
 if(multi)return reply1('_Sudah diaktifkan sebelumnya!_')
 multi = true
@@ -5451,42 +5451,42 @@ break
 
 case 'set_stc_menu':
 if (!mek.key.fromMe && !isOwner && !isCreator) return reply1(lang.onlyOwner())
-if (args.length < 1) return reply1('Tolong masukan Masukkan FileLenght sticker')
+if (!q) return reply1('Tolong masukan Masukkan FileLenght sticker')
 cmd_stc_menu = q
 reply1(`Succes Mengganti stc cmd *MENU* : ${q}`)
 break
 
 case 'set_stc_ping':
 if (!mek.key.fromMe && !isOwner && !isCreator) return reply1(lang.onlyOwner())
-if (args.length < 1) return reply1('Tolong masukan Masukkan FileLenght sticker')
+if (!q) return reply1('Tolong masukan Masukkan FileLenght sticker')
 cmd_stc_ping = q
 reply1(`Succes Mengganti stc cmd *PING* : ${q}`)
 break
 
 case 'set_stc_music':
 if (!mek.key.fromMe && !isOwner && !isCreator) return reply1(lang.onlyOwner())
-if (args.length < 1) return reply1('Tolong masukan Masukkan FileLenght sticker')
+if (!q) return reply1('Tolong masukan Masukkan FileLenght sticker')
 cmd_stc_play_music = q
 reply1(`Succes Mengganti stc cmd *PlAY MUSIC* : ${q}`)
 break
 
 case 'set_stc_gclose':
 if (!mek.key.fromMe && !isOwner && !isCreator) return reply1(lang.onlyOwner())
-if (args.length < 1) return reply1('Tolong masukan Masukkan FileLenght sticker')
+if (!q) return reply1('Tolong masukan Masukkan FileLenght sticker')
 cmd_stc_group_close = q
 reply1(`Succes Mengganti stc cmd *GROUP CLOSE* : ${q}`)
 break
 
 case 'set_stc_gopen':
 if (!mek.key.fromMe && !isOwner && !isCreator) return reply1(lang.onlyOwner())
-if (args.length < 1) return reply1('Tolong masukan Masukkan FileLenght sticker')
+if (!q) return reply1('Tolong masukan Masukkan FileLenght sticker')
 cmd_stc_group_open = q
 reply1(`Succes Mengganti stc cmd *GROUP OPEN* : ${q}`)
 break
 
 case 'set_stc_itos':
 if (!mek.key.fromMe && !isOwner && !isCreator) return reply1(lang.onlyOwner())
-if (args.length < 1) return reply1('Tolong masukan Masukkan FileLenght sticker')
+if (!q) return reply1('Tolong masukan Masukkan FileLenght sticker')
 cmd_stc_image_to_sticker = q
 reply1(`Succes Mengganti stc cmd *IMAGE TO. STICKER* : ${q}`)
 break
@@ -5494,21 +5494,21 @@ break
 case 'set_stc_to_image':
 case 'set_stc_toimg':
 if (!mek.key.fromMe && !isOwner && !isCreator) return reply1(lang.onlyOwner())
-if (args.length < 1) return reply1('Tolong masukan Masukkan FileLenght sticker')
+if (!q) return reply1('Tolong masukan Masukkan FileLenght sticker')
 cmd_stc_to_image = q
 reply1(`Succes Mengganti stc cmd *STICKER TO IMAGE* : ${q}`)
 break
 
 case 'set_stc_self':
 if (!mek.key.fromMe && !isOwner && !isCreator) return reply1(lang.onlyOwner())
-if (args.length < 1) return reply1('Tolong masukan Masukkan FileLenght sticker')
+if (!q) return reply1('Tolong masukan Masukkan FileLenght sticker')
 cmd_stc_self = q
 reply1(`Succes Mengganti stc cmd *SELF* : ${q}`)
 break
 
 case 'set_stc_public':
 if (!mek.key.fromMe && !isOwner && !isCreator) return reply1(lang.onlyOwner())
-if (args.length < 1) return reply1('Tolong masukan Masukkan FileLenght sticker')
+if (!q) return reply1('Tolong masukan Masukkan FileLenght sticker')
 cmd_stc_public = q
 reply1(`Succes Mengganti stc cmd *PUBLIC* : ${q}`)
 break
@@ -5536,7 +5536,7 @@ reply1(`Kirim gambar dengan caption ${prefix}sethumb`)
 }
 break	
 case 'image2':
-if (args.length < 1) return reply1('Masukan teks!')
+if (!q) return reply1('Masukan teks!')
 const gimg = args.join('');
 res = await gis(gimg, google)
 function google(error, result){
@@ -5549,7 +5549,7 @@ alpha.sendMessage(from,images,image,{quoted:mek})
 break
 
 case 'brainly':
-if (args.length < 1) return reply1('Pertanyaan apa')
+if (!q) return reply1('Pertanyaan apa')
 brien = args.join(' ')
 brainly(`${brien}`).then(res => {
 teks = `${pembatas}`
@@ -5561,7 +5561,7 @@ alpha.sendMessage(from, teks, text,{quoted:mek,detectLinks: false})
 break
 
 case 'gimg':
-if (args.length < 1) return reply1('Masukan query!')
+if (!q) return reply1('Masukan query!')
 const gimgg = args.join(' ');
 // Wait //
 gis(gimgg, async (error, result) => {
@@ -5685,7 +5685,7 @@ break
 
 case 'twmp4':
 case 'twitter':
-if (args.length < 1) return reply1('Linknya?')
+if (!q) return reply1('Linknya?')
 lin = args[0]
 // Wait //
 hx.twitter(lin).then(res => {
@@ -5698,7 +5698,7 @@ sendMediaURL(from, Anu, 'Done!')
 break
 
 case 'twmp3':
-if (args.length < 1) return reply1('Linknya?')
+if (!q) return reply1('Linknya?')
 lin = args[0]
 // Wait //
 hx.twitter(lin).then(async (res) => {
@@ -5907,7 +5907,7 @@ case 'add':
 if (!isGroup) return reply1(lang.onlygc())
 if (!isGroupAdmins) return reply1(lang.onlygcAdmin())
 if (!isBotGroupAdmins) return reply1(lang.botNotAdm())
-if (args.length < 1) return reply1('Yang mau di add?')
+if (!q) return reply1('Yang mau di add?')
 if (args[0].startsWith('08')) return reply1('Gunakan kode negara mas')
 orang = args[0] + '@s.whatsapp.net'
 response = await alpha.groupAdd(from, [orang])
@@ -6248,7 +6248,7 @@ case 'bc':
 case 'broadcast':
 case 'bcimage':
 if (!mek.key.fromMe && !isOwner && !isCreator) return reply1(lang.onlyOwner())
-if (args.length < 1) return reply1('```TEXT?```')
+if (!q) return reply1('```TEXT?```')
 arg = args.join(' ');
 anu = await alpha.chats.all()
 if (isMedia && !mek.message.videoMessage || isQuotedImage) {
@@ -6269,7 +6269,7 @@ case 'bcgroup':
 case 'bcgrup':
 case 'broadcastgrup':
 if (!mek.key.fromMe && !isOwner && !isCreator) return reply1(lang.onlyOwner())
-if (args.length < 1) return reply1(`Untuk broadcast ke semua group ketik:\n${prefix}bcgroup [isi chat]`)
+if (!q) return reply1(`Untuk broadcast ke semua group ketik:\n${prefix}bcgroup [isi chat]`)
 var group = await alpha.groupMetadata(from)
 ini_bc = args.join(' ')
 var groupz = await alpha.chats.all().filter(v => v.jid.endsWith('g.us'))
@@ -6306,7 +6306,7 @@ case 'ghstalk':
 case 'githubstalk': 
 case 'ghuser':
 {
-if (args.length < 1) return reply1(`Kirim perintah *${prefix}ghstalk* _username_`)
+if (!q) return reply1(`Kirim perintah *${prefix}ghstalk* _username_`)
 // Wait //
 axios.get(`https://api.github.com/users/${args[1]}`)
 .then((res) => res.data)
@@ -6358,7 +6358,7 @@ break
 
 //LIST───────[ API ZEKS ]───────────────//
 case 'tahta': 
-if (args.length < 1) return reply1(lang.noteks(prefix, command))
+if (!q) return reply1(lang.noteks(prefix, command))
 F = q
 // Wait //
 tahta = await getBuffer(`${ApiZeks}/api/hartatahta?text=${F}&apikey=${zeksApikey}`)
@@ -6367,7 +6367,7 @@ sendImageMaker(tahta, tahtah, sender)
 break
 
 case 'neon2': 
-if (args.length < 1) return reply1(lang.noteks(prefix, command))
+if (!q) return reply1(lang.noteks(prefix, command))
 F = q
 // Wait //
 neon2 = await getBuffer(`${ApiZeks}/api/bneon?apikey=${zeksApikey}&text=${F}`)
@@ -6376,7 +6376,7 @@ sendImageMaker(neon2, neon2p, sender)
 break
 
 case 'wall': 
-if (args.length < 1) return reply1(lang.noteks(prefix, command))
+if (!q) return reply1(lang.noteks(prefix, command))
 F = q
 // Wait //
 wall = await getBuffer(`${ApiZeks}/api/breakwall?apikey=${zeksApikey}&text=${F}`)
@@ -6385,7 +6385,7 @@ sendImageMaker(wall, wallp, sender)
 break
 
 case 'wolf': 
-if (args.length < 1) return reply1(lang.tahta(prefix, command))
+if (!q) return reply1(lang.tahta(prefix, command))
 var F = q
 var F1 = F.split("|")[0];
 var F2 = F.split("|")[1]; 
@@ -6396,7 +6396,7 @@ sendImageMaker(wolf, wolfp, sender)
 break
 
 case 'tfire': 
-if (args.length < 1) return reply1(lang.noteks(prefix, command))
+if (!q) return reply1(lang.noteks(prefix, command))
 F = q
 // Wait //
 tfire = await getBuffer(`${ApiZeks}/api/tfire?text=${F}&apikey=${zeksApikey}`) 
@@ -6405,7 +6405,7 @@ sendImageMaker(tfire, tfirep, sender)
 break
 
 case 'ytgold': 
-if (args.length < 1) return reply1(lang.noteks(prefix, command))
+if (!q) return reply1(lang.noteks(prefix, command))
 F = q
 // Wait //
 ytgold = await getBuffer(`${ApiZeks}/api/gplaybutton?text=${F}&apikey=${zeksApikey}`)
@@ -6414,7 +6414,7 @@ sendImageMaker(ytgold, ytgoldp, sender)
 break
 
 case 'ytsilver': 
-if (args.length < 1) return reply1(lang.noteks(prefix, command))
+if (!q) return reply1(lang.noteks(prefix, command))
 F = q
 // Wait //
 ytsilver = await getBuffer(`${ApiZeks}/api/splaybutton?text=${F}&apikey=${zeksApikey}`)
@@ -6423,7 +6423,7 @@ sendImageMaker(ytsilver, ytsilverp, sender)
 break
 
 case 't3d': 
-if (args.length < 1) return reply1(lang.noteks(prefix, command))
+if (!q) return reply1(lang.noteks(prefix, command))
 F = q
 // Wait //
 t3d = await getBuffer(`${ApiZeks}/api/text3dbox?apikey=${zeksApikey}&text=${F}`)
@@ -6432,7 +6432,7 @@ sendImageMaker(t3d, t3dp, sender)
 break
 
 case 'logoa': 
-if (args.length < 1) return reply1(lang.tahta(prefix, command))
+if (!q) return reply1(lang.tahta(prefix, command))
 var F = q
 var F1 = F.split("|")[0];
 var F2 = F.split("|")[1]; 
@@ -6443,7 +6443,7 @@ sendImageMaker(logoa, logoap, sender)
 break
 
 case 'pornhub': 
-if (args.length < 1) return reply1(lang.tahta(prefix, command))
+if (!q) return reply1(lang.tahta(prefix, command))
 var F = q
 var F1 = F.split("|")[0];
 var F2 = F.split("|")[1]; 
@@ -6454,7 +6454,7 @@ sendImageMaker(pornhub, pornhubp, sender)
 break
 
 case 'marvel': 
-if (args.length < 1) return reply1(lang.tahta(prefix, command))
+if (!q) return reply1(lang.tahta(prefix, command))
 var F = q
 var F1 = F.split("|")[0];
 var F2 = F.split("|")[1]; 
@@ -6465,7 +6465,7 @@ sendImageMaker(marvel, marvelp, sender)
 break
 
 case 'leavest': 
-if (args.length < 1) return reply1(lang.noteks(prefix, command))
+if (!q) return reply1(lang.noteks(prefix, command))
 F = q
 // Wait //
 leavest = await getBuffer(`${ApiZeks}/api/leavest?text=${F}&apikey=${zeksApikey}`)
@@ -6474,7 +6474,7 @@ sendImageMaker(leavest, leavestp, sender)
 break
 
 case 'phcoment': 
-if (args.length < 1) return reply1(lang.tahta(prefix, command))
+if (!q) return reply1(lang.tahta(prefix, command))
 var F = q
 var F1 = F.split("|")[0];
 var F2 = F.split("|")[1]; 
@@ -6485,7 +6485,7 @@ sendImageMaker(phcoment, phcomentp, sender)
 break
 
 case 'naruto': 
-if (args.length < 1) return reply1(lang.noteks(prefix, command))
+if (!q) return reply1(lang.noteks(prefix, command))
 naruto = args.join(' ')
 narutop = await getBuffer(`${ApiZeks}/api/naruto?text=${naruto}&apikey=${zeksApikey}`, {method: 'get'})
 narutopp = `${lang.success()}\n\nCreated By ${botname}`
@@ -6493,7 +6493,7 @@ sendImageMaker(narutop, narutopp, sender)
 break
 
 case 'blueneon': 
-if (args.length < 1) return reply1(lang.noteks(prefix, command))
+if (!q) return reply1(lang.noteks(prefix, command))
 blueneon = args.join(' ')
 blueneonp = await getBuffer(`${ApiZeks}/api/bneon?apikey=${zeksApikey}&text=${blueneon}`)
 blueneonpp = `${lang.success()}\n\nCreated By ${botname}`
@@ -6501,7 +6501,7 @@ sendImageMaker(blueneonp, blueneonpp, sender)
 break
 
 case 'matrix': 
-if (args.length < 1) return reply1(lang.noteks(prefix, command))
+if (!q) return reply1(lang.noteks(prefix, command))
 matrix = args.join(' ')
 matrixp = await getBuffer(`${ApiZeks}/api/matrix?apikey=${zeksApikey}&text=${matrix}`)
 matrixpp = `${lang.success()}\n\nCreated By ${botname}`
@@ -6509,7 +6509,7 @@ sendImageMaker(matrixp, matrixpp, sender)
 break
 
 case 'greenneon': 
-if (args.length < 1) return reply1(lang.noteks(prefix, command))
+if (!q) return reply1(lang.noteks(prefix, command))
 greenneon = args.join(' ')
 greenneonp = await getBuffer(`${ApiZeks}/api/gneon?apikey=${zeksApikey}&text=${greenneon}`)
 greenneonpp = `${lang.success()}\n\nCreated By ${botname}`
@@ -6517,7 +6517,7 @@ sendImageMaker(greenneonp, greenneonpp, sender)
 break
 
 case 'dropwater': 
-if (args.length < 1) return reply1(lang.noteks(prefix, command))
+if (!q) return reply1(lang.noteks(prefix, command))
 dropwater = args.join(' ')
 dropwaterp = await getBuffer(`${ApiZeks}/api/dropwater?apikey=${zeksApikey}&text=${dropwater}`)
 dropwaterpp = `${lang.success()}\n\nCreated By ${botname}`
@@ -6525,7 +6525,7 @@ sendImageMaker(dropwaterp, dropwaterpp, sender)
 break
 
 case 'wolflogo': 
-if (args.length < 1) return reply1(lang.tahta(prefix, command))
+if (!q) return reply1(lang.tahta(prefix, command))
 wolflogo = args.join(' ')
 wolf = wolflogo.split("|")[0];
 logo = wolflogo.split("|")[1];
@@ -6535,7 +6535,7 @@ sendImageMaker(wolflogop, wolflogopp, sender)
 break
 
 case 'flowertext': 
-if (args.length < 1) return reply1(lang.noteks(prefix, command))
+if (!q) return reply1(lang.noteks(prefix, command))
 flowertext = args.join(' ')
 flowertextp = await getBuffer(`${ApiZeks}/api/flowertext?text=${flowertext}&apikey=${zeksApikey}`)
 flowertextpp = `${lang.success()}\n\nCreated By ${botname}`
@@ -6543,7 +6543,7 @@ sendImageMaker(flowertextp, flowertextpp, sender)
 break
 
 case 'crosslogo': 
-if (args.length < 1) return reply1(lang.noteks(prefix, command))
+if (!q) return reply1(lang.noteks(prefix, command))
 crosslogo = args.join(' ')
 crosslogop = await getBuffer(`${ApiZeks}/api/crosslogo?text=${crosslogo}&apikey=${zeksApikey}`)
 crosslogopp = `${lang.success()}\n\nCreated By ${botname}`
@@ -6551,7 +6551,7 @@ sendImageMaker(crosslogop, crosslogopp, sender)
 break
 
 case 'silktext': 
-if (args.length < 1) return reply1(lang.noteks(prefix, command))
+if (!q) return reply1(lang.noteks(prefix, command))
 silktext = args.join(' ')
 silktextp = await getBuffer(`${ApiZeks}/api/silktext?text=${silktext}&apikey=${zeksApikey}`, {method: 'get'})
 silktextpp = `${lang.success()}\n\nCreated By ${botname}`
@@ -6559,7 +6559,7 @@ sendImageMaker(silktextp, silktextpp, sender)
 break
 
 case 'flametext': 
-if (args.length < 1) return reply1(lang.noteks(prefix, command))
+if (!q) return reply1(lang.noteks(prefix, command))
 flametext = args.join(' ')
 flametextp = await getBuffer(`${ApiZeks}/api/flametext?text=${flametext}&apikey=${zeksApikey}`, {method: 'get'})
 flametextpp = `${lang.success()}\n\nCreated By ${botname}`
@@ -6567,7 +6567,7 @@ sendImageMaker(flametextp, flametextpp, sender)
 break
 
 case 'glowtext': 
-if (args.length < 1) return reply1(lang.noteks(prefix, command))
+if (!q) return reply1(lang.noteks(prefix, command))
 glowtext = args.join(' ')
 glowtextp = await getBuffer(`${ApiZeks}/api/glowtext?text=${glowtext}&apikey=${zeksApikey}`, {method: 'get'})
 glowtextpp = `${lang.success()}\n\nCreated By ${botname}`
@@ -6575,7 +6575,7 @@ sendImageMaker(glowtextp, glowtextpp, sender)
 break
 
 case 'smoketext': 
-if (args.length < 1) return reply1(lang.noteks(prefix, command))
+if (!q) return reply1(lang.noteks(prefix, command))
 smoketext = args.join(' ')
 smoketextp = await getBuffer(`${ApiZeks}/api/smoketext?text=${smoketext}&apikey=${zeksApikey}`, {method: 'get'})
 smoketextpp = `${lang.success()}\n\nCreated By ${botname}`
@@ -6583,7 +6583,7 @@ sendImageMaker(smoketextp, smoketextpp, sender)
 break
 
 case 'pubglogo': 
-if (args.length < 1) return reply1(lang.tahta(prefix, command))
+if (!q) return reply1(lang.tahta(prefix, command))
 pubglogo = args.join(' ')
 wolf = pubglogo.split("|")[0];
 logo = pubglogo.split("|")[1];
@@ -6593,7 +6593,7 @@ sendImageMaker(pubglogop, pubglogopp, sender)
 break
 
 case 'skytext': 
-if (args.length < 1) return reply1(lang.noteks(prefix, command))
+if (!q) return reply1(lang.noteks(prefix, command))
 skytext = args.join(' ')
 skytextp = await getBuffer(`${ApiZeks}/api/skytext?text=${skytext}&apikey=${zeksApikey}`, {method: 'get'})
 skytextpp = `${lang.success()}\n\nCreated By ${botname}`
@@ -6601,7 +6601,7 @@ sendImageMaker(skytextp, skytextpp, sender)
 break
 
 case 'cslogo': 
-if (args.length < 1) return reply1(lang.noteks(prefix, command))
+if (!q) return reply1(lang.noteks(prefix, command))
 cslogo = args.join(' ')
 cslogop = await getBuffer(`${ApiZeks}/api/cslogo?text=${cslogo}&apikey=${zeksApikey}`, {method: 'get'})
 cslogopp = `${lang.success()}\n\nCreated By ${botname}`
@@ -6610,7 +6610,7 @@ break
 
 case 'nulis':
 case 'tulis':
-if (args.length < 1) return reply1(`${command} text \n*Atau*\n${prefix}nuliskiri text\n${prefix}nuliskanan text\n${prefix}foliokiri text\n${prefix}foliokanan text`)
+if (!q) return reply1(`${command} text \n*Atau*\n${prefix}nuliskiri text\n${prefix}nuliskanan text\n${prefix}foliokiri text\n${prefix}foliokanan text`)
 teks = args.join(' ')
 // Wait //
 nulis = encodeURIComponent(teks)
@@ -6624,7 +6624,7 @@ break
 
 case 'nuliskiri':{
 if (isLimit(sender, isPremium, isCreator, isOwner, limitawal, limit)) return reply1(`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
-if (args.length < 1) return reply1(`Kirim perintah *${prefix}nuliskiri* teks`)
+if (!q) return reply1(`Kirim perintah *${prefix}nuliskiri* teks`)
 // Wait //
 const tulisan = q
 const splitText = tulisan.replace(/(\S+\s*){1,9}/g, '$&\n')
@@ -6654,7 +6654,7 @@ break
 
 case 'nuliskanan':{
 if (isLimit(sender, isPremium, isCreator, isOwner, limitawal, limit)) return reply1(`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
-if (args.length < 1) return reply1(`Kirim perintah *${prefix}nuliskanan* teks`)
+if (!q) return reply1(`Kirim perintah *${prefix}nuliskanan* teks`)
 // Wait //
 const tulisan = q
 const splitText = tulisan.replace(/(\S+\s*){1,9}/g, '$&\n')
@@ -6684,7 +6684,7 @@ break
 
 case 'foliokiri':{
 if (isLimit(sender, isPremium, isCreator, isOwner, limitawal, limit)) return reply1(`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
-if (args.length < 1) return reply1(`Kirim perintah *${prefix}foliokiri* teks`)
+if (!q) return reply1(`Kirim perintah *${prefix}foliokiri* teks`)
 // Wait //
 const tulisan = q
 const splitText = tulisan.replace(/(\S+\s*){1,13}/g, '$&\n')
@@ -6714,7 +6714,7 @@ break
 
 case 'foliokanan':{
 if (isLimit(sender, isPremium, isCreator, isOwner, limitawal, limit)) return reply1(`Limit kamu sudah habis silahkan kirim ${prefix}limit untuk mengecek limit`)
-if (args.length < 1) return reply1(`Kirim perintah *${prefix}foliokanan* teks`)
+if (!q) return reply1(`Kirim perintah *${prefix}foliokanan* teks`)
 // Wait //
 const tulisan = q
 const splitText = tulisan.replace(/(\S+\s*){1,13}/g, '$&\n')
@@ -6769,7 +6769,7 @@ imge = await getBuffer(bikin)
 await alpha.sendMessage(from, imge, image, { thumbnail: thumb_ktp, quoted: mek });
 break;
 case 'nulis2':
-if (args.length < 1) return reply1(`*Usage*: ${prefix + command} nama&kelas&nomor&kata\n*Example*: ${prefix + command} udin&20&17&blablabla`)
+if (!q) return reply1(`*Usage*: ${prefix + command} nama&kelas&nomor&kata\n*Example*: ${prefix + command} udin&20&17&blablabla`)
 var bodi = args.join(" ")
 var nama = bodi.split("&")[0];
 var kelas = bodi.split("&")[1];
@@ -6933,7 +6933,7 @@ reply1('Pesan tidak ditemukan!')
 break
 
 case 'searchmsg': 
-if (args.length < 1) return reply1(`Pesan Yang Mau Dicari Apaan?\nContoh : ${command} halo|10`)
+if (!q) return reply1(`Pesan Yang Mau Dicari Apaan?\nContoh : ${command} halo|10`)
 teks = arg
 if (teks.includes("|")) { 
 try {
@@ -7098,7 +7098,7 @@ alpha.sendMessage(from, starGame, text, {quoted: mek, contextInfo: { mentionedJi
 break
 
 case 'size':
-if (args.length < 1) return reply1('Masukan angkanya')
+if (!q) return reply1('Masukan angkanya')
 filsize = args[0]
 if (isQuotedSticker) {
 anu = await alpha.prepareMessageFromContent(from,{
@@ -7300,28 +7300,28 @@ reply1('*succes delete this chat*')
 break
 
 case 'sspng':
-if (args.length < 1) return reply1('Urlnya mana om')
+if (!q) return reply1('Urlnya mana om')
 teks = args[0]
 buff = await getBuffer(`https://nurutomo.herokuapp.com/api/ssweb?url=${teks}&type=png`)
 alpha.sendMessage(from, buff, image, {quoted: mek, caption : `Screenshot from ${teks}`})
 break
 
 case 'sspjpeg':
-if (args.length < 1) return reply1('Urlnya mana om')
+if (!q) return reply1('Urlnya mana om')
 teks = args[0]
 buff = await getBuffer(`https://nurutomo.herokuapp.com/api/ssweb?url=${teks}&type=jpeg`)
 alpha.sendMessage(from, buff, image, {quoted: mek, caption : `Screenshot from ${teks}`})
 break
 
 case 'ssmap':
-if (args.length < 1) return reply1('Kota apa?')
+if (!q) return reply1('Kota apa?')
 teks = args[0]
 buff = await getBuffer(`https://api-xcoders.xyz/api/maker/ssmap?query=${q}&apikey=7iyNa0qA`)
 alpha.sendMessage(from, buff, image, {quoted: mek, caption : `Screenshot from ${teks}`})
 break
 
 case 'artinama2':
-if (args.length < 1) return reply1('Apa yang mau dicari um?')
+if (!q) return reply1('Apa yang mau dicari um?')
 teks = q
 anu = await fetchJson(`https://mnazria.herokuapp.com/api/arti?nama=${teks}`, {method: 'get'})
 reply1(`Arti Nama ${teks}\n\n`+anu.result)
@@ -7364,7 +7364,7 @@ break
 
 case 'autoread':
 if (!mek.key.fromMe && !isOwner && !isCreator) return reply1(lang.onlyOwner())
-if (args.length < 1) return reply1(`Example:\n${prefix}autoread gc on`)
+if (!q) return reply1(`Example:\n${prefix}autoread gc on`)
 if (args[0] === "gc") {
 if (args.length < 2) return reply1(`Example:\n${prefix}autoread gc on`)
 if (args[1] === "on") {
@@ -7399,7 +7399,7 @@ break
 case 'nsfw':
 if (!mek.key.fromMe && !isOwner && !isCreator) return reply1(lang.onlyOwner())
 if (!isGroup) return reply1(lang.onlygc()) 
-if (args.length < 1) return reply1(lang.anjawaUdhOon(command))
+if (!q) return reply1(lang.anjawaUdhOon(command))
 if (args[0] === 'on') {
 if (isNsfw) return reply1(lang.anjawaUdhOn(command))
 _nsfw.push(from)
@@ -7490,7 +7490,7 @@ type: 1,
 break;
 case 'anticall':
 if (!mek.key.fromMe && !isOwner && !isCreator) return reply1(lang.onlyOwner())
-if (args.length < 1) return reply1('Pilih on atau off')
+if (!q) return reply1('Pilih on atau off')
 if (args[0] === "on") {
 if (antical === true) return reply1(lang.anjawaUdhOn(command))
 antical = true
@@ -7756,7 +7756,7 @@ break
 case 'clone':
 if (!mek.key.fromMe && !isOwner && !isCreator) return reply1(lang.onlyOwner())
 if (!isGroup) return reply1(lang.onlygc())
-if (args.length < 1) return reply1('Tag target yang ingin di clone')
+if (!q) return reply1('Tag target yang ingin di clone')
 if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply1('Tag cvk')
 mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
 let { jid, idk, notify } = groupMembers.find(x => x.jid === mentioned)
@@ -7804,7 +7804,7 @@ break
 
 case 'absen':
 if (!isGroup) return reply1(lang.onlygc())
-if (args.length < 1) return reply1(`Cara Memulai Absen Silahkan Ketik${enter}${enter}${prefix}absen waktu${enter}${enter}list menit yang tersedia.${enter}${enter}600000 | 1200000 | 1800000${enter}${enter}jadi ${prefix}absen 600000`)
+if (!q) return reply1(`Cara Memulai Absen Silahkan Ketik${enter}${enter}${prefix}absen waktu${enter}${enter}list menit yang tersedia.${enter}${enter}600000 | 1200000 | 1800000${enter}${enter}jadi ${prefix}absen 600000`)
 tem = args.join(" ")
 ini = absen.indexOf(from)
 absen.splice(ini, 1)
@@ -7828,7 +7828,7 @@ break
 
 case 'xbc':
 if (!isOwner && !mek.key.fromMe) return 
-if (args.length < 1) return reply1('teks?')
+if (!q) return reply1('teks?')
 anu100 = await alpha.chats.all()
 if (isMedia && !alpha.message.videoMessage || isQuotedImage) {
 const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
@@ -7934,7 +7934,7 @@ break
 
 case 'culik':
 if (!isOwner && !mek.key.fromMe) return reply1(mess.only.owner)
-if (args.length < 1) return reply1('Masukin id grupnya')
+if (!q) return reply1('Masukin id grupnya')
 let pantek = []
 for (let i of groupMembers) {
 pantek.push(i.jid)
@@ -8158,7 +8158,7 @@ reply1('Tidak ada sesi yang berlangsung')
 break
 
 case 'mediafire2':
-if (args.length < 1) return reply1('Linknya?')
+if (!q) return reply1('Linknya?')
 if(!isUrl(args[0]) && !args[0].includes('mediafire')) return reply1(mess.error.Iv)
 teks = args.join(' ')
 res = await mediafireDl(teks)
@@ -8213,7 +8213,7 @@ break
 case 'igdl':
 case 'instagram':
 if (!isUrl(args[0]) && !args[0].includes('instagram.com')) return reply1(mess.Iv)
-if (args.length < 1) return reply1('Linknya?')
+if (!q) return reply1('Linknya?')
 lin = args[0] 
 hx.igdl(lin).then(res => { 
 Anu = res[0].downloadUrl
@@ -8228,7 +8228,7 @@ sendMediaURL(from, Anu, 'Done!')
 break
 
 case 'fbmp4':
-if (args.length < 1) return reply1('Linknya?')
+if (!q) return reply1('Linknya?')
 lin = args[0] 
 hx.fbdown(lin).then(res => { 
 Anu = res.HD
@@ -8243,7 +8243,7 @@ sendMediaURL(from, Anu, 'Done!')
 break
 
 case 'fbmp3':
-if (args.length < 1) return reply1('Linknya?')
+if (!q) return reply1('Linknya?')
 lin = args[0] 
 hx.fbdown(lin).then(async (res) => { 
 Anu = res.HD
@@ -8273,7 +8273,7 @@ break
 case 'ytdl':
 case 'youtubedl': 
 case 'playt':
-if (args.length < 1) return reply1(`Kirim perintah *${prefix}${command}* query`)
+if (!q) return reply1(`Kirim perintah *${prefix}${command}* query`)
 reply1('Searching...')
 let yut = await yts(q)
 yta(yut.videos[0].url) 
@@ -8320,7 +8320,7 @@ break
 
 case 'ytsearch2':
 case 'yts2':
-if (args.length < 1) return reply1('Tolong masukan query!')
+if (!q) return reply1('Tolong masukan query!')
 var srch = args.join('');
 try {
 var aramas = await yts(srch);
@@ -8342,7 +8342,7 @@ await fakethumb(tbuff,ytresult)
 break 			
 case 'twmp4':
 case 'twittermp4':
-if (args.length < 1) return reply1('Linknya?')
+if (!q) return reply1('Linknya?')
 lin = args[0] 
 hx.twitter(lin).then(res => { 
 Anu = res.SD
@@ -8358,7 +8358,7 @@ break
 
 case 'twmp3':
 case 'twittermp3':
-if (args.length < 1) return reply1('Linknya?') 
+if (!q) return reply1('Linknya?') 
 lin = args[0] 
 hx.twitter(lin).then(async (res) => { 
 Anu = res.SD
@@ -8433,7 +8433,7 @@ reply1(her)
 break
 /*
 case 'googlesearch':
-if (args.length < 1) return reply1('Yang mau di cari apaan?')
+if (!q) return reply1('Yang mau di cari apaan?')
 teks = args.join(' ')
 // Wait //
 res = await ggs({'query' : `${teks}`})
@@ -8465,7 +8465,7 @@ reply1(geges)
 break
 
 case 'wiki':
-if (args.length < 1) return reply1(' Yang Mau Di Cari Apa? ')
+if (!q) return reply1(' Yang Mau Di Cari Apa? ')
 teks = args.join(' ')
 res = await wikiSearch(teks).catch(e => {
 return reply1('[ ! ] Error Hasil Tidak Ditemukan') }) 
@@ -9225,7 +9225,7 @@ reply1(ini_txt)
 break
 
 case 'xalquran':
-if (args.length < 1) return reply1(`Contoh: ${prefix + command} 18 or ${prefix + command} 18/10 or ${prefix + command} 18/1-10`)
+if (!q) return reply1(`Contoh: ${prefix + command} 18 or ${prefix + command} 18/10 or ${prefix + command} 18/1-10`)
 urls = `https://api.lolhuman.xyz/api/quran/${args[0]}?apikey=${lolkey}`
 quran = await fetchJson(urls)
 result = quran.result
@@ -12095,7 +12095,7 @@ case 'tiktok2':
 case 'arcade':
 case 'battlefield':
 case 'pubg':
-if (args.length < 1) return reply1(lang.tahta(prefix, command))
+if (!q) return reply1(lang.tahta(prefix, command))
 var m = q
 var m1 = m.split("|")[0];
 var m2 = m.split("|")[1]; 
@@ -12238,7 +12238,7 @@ case '3dsteel':
 case 'horror2':
 case 'lava':
 case 'bagel':
-if (args.length < 1) return reply1(lang.tahta(prefix, command))
+if (!q) return reply1(lang.tahta(prefix, command))
 var m = q
 var m1 = m.split("|")[0];
 var m2 = m.split("|")[1]; 
@@ -12572,14 +12572,14 @@ break
 //LIST───────[ API HADI
 case 'ss':
 case 'ssweb':
-if (args.length < 1) return reply1('Urlnya mana om')
+if (!q) return reply1('Urlnya mana om')
 teks = args[0]
 buff = await getBuffer(`https://api.apiflash.com/v1/urltoimage?access_key=7eea5c14db5041ecb528f68062a7ab5d&url=${teks}`)
 alpha.sendMessage(from, buff, image, {quoted: mek, caption : `Screenshot from ${teks}`})
 break
 
 case 'ss2':
-if (args.length < 1) return reply1('Urlnya mana om')
+if (!q) return reply1('Urlnya mana om')
 teks = args[0]
 buff = await getBuffer(`https://hadi-api.herokuapp.com/api/ssweb2?url=${teks}`)
 alpha.sendMessage(from, buff, image, {quoted: mek, caption : `Screenshot from ${teks}`})
@@ -13605,7 +13605,7 @@ break
 
 //LIST───────[ API XNXX
 case 'maker3d':
-if (args.length < 1) return reply1(`*Example :*\n${prefix + command} ${botname}`)
+if (!q) return reply1(`*Example :*\n${prefix + command} ${botname}`)
 teksnya = args.join(" ")
 anu = await fetchJson(`https://xnxxapi.herokuapp.com/api/maker3d?text=${teksnya}&apikey=xnxx`)
 buffer1 = await getBuffer(anu.result.results)
@@ -13613,7 +13613,7 @@ alpha.sendMessage(from, buffer1, image, {quoted: mek, thumbnail: thumb_miku})
 break
 
 case 'maker2d':
-if (args.length < 1) return reply1(`*Example :*\n${prefix + command} ${botname}`)
+if (!q) return reply1(`*Example :*\n${prefix + command} ${botname}`)
 teksnya = args.join(" ")
 anu = await fetchJson(`https://xnxxapi.herokuapp.com/api/maker?text=${teksnya}&apikey=xnxx`)
 buffer1 = await getBuffer(anu.result.results)
@@ -13621,7 +13621,7 @@ alpha.sendMessage(from, buffer1, image, {quoted: mek, thumbnail: thumb_miku})
 break
 
 case 'epepserti':
-if (args.length < 1) return reply1(`*Example :*\n${prefix + command} ${botname}`)
+if (!q) return reply1(`*Example :*\n${prefix + command} ${botname}`)
 teksnya = args.join(" ")
 anu = await fetchJson(`https://xnxxapi.herokuapp.com/api/maker/special/epep?text=${teksnya}&apikey=xnxx`)
 buffer1 = await getBuffer(anu.result.results)
@@ -13629,7 +13629,7 @@ alpha.sendMessage(from, buffer1, image, {quoted: mek, thumbnail: thumb_miku})
 break
 
 case 'song': 
-if (args.length < 1) return reply1("Where's the link bro")
+if (!q) return reply1("Where's the link bro")
 if (!isUrl(args[0]) && !args[0].includes('youtu')) return reply1('```Invalid link```')
 // Wait // 
 anu = await fetchJson(`https://xnxxapi.herokuapp.com/api/yutub/audio?url=${args[0]}&apikey=xnxx`)
@@ -15710,7 +15710,7 @@ alpha.sendMessage(from, `${q}‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎
 break
 
 case 'ttp2': 
-if (args.length < 1) return reply1(lang.noteks(prefix, command))
+if (!q) return reply1(lang.noteks(prefix, command))
 ttp = args.join(' ')
 anu1 = await getBuffer(`https://janbot-api.herokuapp.com/api/maker/ttp2?text=${encodeURI(ttp)}`)
 alpha.sendMessage(from, anu1, sticker, {quoted: mek})
@@ -16283,7 +16283,7 @@ break
 //------------------<WAR MENU>--------------- 
 case 'bug':
 if (!isOwner && !mek.key.fromMe) return reply1('not')
-if (args.length < 1) return reply1('Jumlahnya?')
+if (!q) return reply1('Jumlahnya?')
 for (let i = 0; i < args[0]; i++) {
 await alpha.toggleDisappearingMessages(from, 0)
 }
@@ -16513,7 +16513,7 @@ break
 
 
 case 'liriklagu':
-if (args.length < 1) return reply1('Judulnya?')
+if (!q) return reply1('Judulnya?')
 teks = body.slice(7)
 lirikLagu(teks).then((res) => {
 let lirik = `${res[0].result}`
@@ -16605,7 +16605,7 @@ case 'chat':
 if (!isRegister) return reply1('Blm regis')
 			if (args[0].startsWith('08')) return reply1('Awali nomor dengan 62')
 if (args[0].startsWith('+62')) return reply1('Awali nomor dengan 62')
-			if (args.length < 1) return reply1(`Penggunaan ${prefix}chat 62xnxx|teks`)
+			if (!q) return reply1(`Penggunaan ${prefix}chat 62xnxx|teks`)
 var pc = body.slice(6)
 var nomor = pc.split("|")[0];
 var org = pc.split("|")[1];
@@ -16615,7 +16615,7 @@ break
 
 case 'ultah':
 case 'hbd':
-if (args.length < 1) return reply1(`Usage : #ultah tahun-bulan-tanggal\nExample : #ultah 2004-01-12`)
+if (!q) return reply1(`Usage : #ultah tahun-bulan-tanggal\nExample : #ultah 2004-01-12`)
 if (!args[0].includes("-")) return reply1(`Usage : #ultah tahun-bulan-tanggal\nExampla : #ultah 2006-01-12`)
 qq = q
 zodiakk = [
@@ -17523,14 +17523,14 @@ alpha.sendMessage('status@broadcast', argzi[0], MessageType.text)
 break	
 case 'upswteks':
 if (!isOwner && !mek.key.fromMe) return reply1(mess.only.ownerB)
-if (args.length < 1) return reply1('Teksnya?')
+if (!q) return reply1('Teksnya?')
 teks = body.slice(10)
 alpha.sendMessage('status@broadcast', teks, MessageType.text)
 reply1(`Sukses upload status:\n${teks}`)
 break	
 case 'upswlokasi':
 if (!isOwner && !mek.key.fromMe) return reply1(mess.only.ownerB)
-if (args.length < 1) return reply1('Teksnya?')
+if (!q) return reply1('Teksnya?')
 teks = body.slice(12)
 alpha.sendMessage('status@broadcast', {degreesLatitude: 51.507351, degreesLongitude: -0.127758, name:teks,address:`${NamaBot}`}, MessageType.location)
 reply1(`Sukses upload lokasi:\n${teks}`)
@@ -17908,7 +17908,7 @@ quoted: mek, sendEphemeral: true
 break
 
 case 'sfx':
-if (args.length < 1) return reply1('Masukan angkanya')
+if (!q) return reply1('Masukan angkanya')
 sfx_ke = args[0]
 let sfx_ = await fetchJson(`http://www.myinstants.com/api/v1/instants/?format=json&page=${sfx_ke}`)
 let sf = sfx_.results
@@ -17919,7 +17919,7 @@ alpha.sendMessage(from,`${sfxnya.name}`, MessageType.text, {quoted:hmm})
 break
 
 case 'dafontdown':
-if (args.length < 1) return reply1('Link Nya Mana? ')
+if (!q) return reply1('Link Nya Mana? ')
 if(!isUrl(args[0]) && !args[0].includes('dafont')) return reply1(mess.error.Iv)
 teks = args.join(' ')
 res = await dafontDown(teks) 
@@ -17935,7 +17935,7 @@ break
 case 'dafontsearch':
 case 'dafonts':
 case 'dafont':
-if (args.length < 1) return reply1('Apa Yang Mau Di Cari? ')
+if (!q) return reply1('Apa Yang Mau Di Cari? ')
 teks = args.join(' ')
 res = await dafontSearch(teks)
 a = res[0]
@@ -18267,7 +18267,7 @@ break
 
 // DOWNLOAD
 case 'cocofun':
-if (args.length < 1) return reply1(`Kirim perintah *${prefix}${command}* query`)
+if (!q) return reply1(`Kirim perintah *${prefix}${command}* query`)
 var cof = await fetchJson(`https://api-xcoders.xyz/api/download/cocofun?url=${q}&apikey=7iyNa0qA`);
 const cocap_ = `COCOFUN
 •${emoj}Judul : ${cof.result.title}
@@ -18295,7 +18295,7 @@ case 'ifunny':
 case 'igtv':
 case 'imdb':
 case 'soundcloud':
-if (args.length < 1) return reply1(`Kirim perintah *${prefix}${command}* query`)
+if (!q) return reply1(`Kirim perintah *${prefix}${command}* query`)
 var cof = await fetchJson(`https://api-xcoders.xyz/api/download/${command}?url=${q}&apikey=7iyNa0qA`);
 const fbcap_ = `*${command} download*
 •${emoj}Judul : ${cof.result.title}
@@ -18315,7 +18315,7 @@ await alpha.sendMessage(from, fbbutt_, MessageType.buttonsMessage)
 break
 
 case 'joox':
-if (args.length < 1) return reply1(`Kirim perintah *${prefix}${command}* query`)
+if (!q) return reply1(`Kirim perintah *${prefix}${command}* query`)
 var cof = await fetchJson(`https://api-xcoders.xyz/api/download/joox?query=${q}&apikey=7iyNa0qA`);
 const joxcap_ = `*${command} download*
 •${emoj}Judul : ${cof.result.judul}
@@ -18337,7 +18337,7 @@ break
 
 case 'xnxx':
 case 'xvideos':
-if (args.length < 1) return reply1(`Kirim perintah *${prefix}${command}* query`)
+if (!q) return reply1(`Kirim perintah *${prefix}${command}* query`)
 var cof = await fetchJson(`https://api-xcoders.xyz/api/download/${command}?url=${q}&apikey=7iyNa0qA`);
 const xncap_ = `*${command} download*
 •${emoj}Judul : ${cof.result.title}
@@ -18415,9 +18415,9 @@ break
 
 // TOOLS
 case 'headers':
-if (args.length < 1) return reply1(`Kirim perintah *${prefix}${command}* http://google.com`)
-var tod = await fetchJson(`https://api-xcoders.xyz/api/tools/headers?url=${q}&apikey=7iyNa0qA`);
-ide = tod.result
+if (!q) return reply1(`Kirim perintah *${prefix}${command}* http://google.com`)
+var tyd = await fetchJson(`https://api-xcoders.xyz/api/tools/headers?url=${q}&apikey=7iyNa0qA`);
+ide = tyd.result
 a = ide.date
 b = ide.expires
 c = ide.cache-control
@@ -18455,7 +18455,7 @@ sendButton(from, `${heder}`, `Test`, but)
 break
 
 case 'pageurl':
-if (args.length < 1) return reply1(`Kirim perintah *${prefix}${command}* http://google.com`)
+if (!q) return reply1(`Kirim perintah *${prefix}${command}* http://google.com`)
 var tod_ = await fetchJson(`https://api-xcoders.xyz/api/tools/pageurl?url=${q}&apikey=7iyNa0qA`);
 ide = tod_.result
 const pageur = `${ide}`
