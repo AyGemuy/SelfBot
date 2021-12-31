@@ -5727,7 +5727,7 @@ const latensi = speed() - timestamp
 exec(`neofetch --stdout`, (error, stdout, stderr) => {
 const child = stdout.toString('utf-8')
 const teks = child.replace(/Memory:/, "Ram:")
-const pingnya = `${petik}${teks}Speed: ${latensi.toFixed(4)} Second${petik}`
+const pingnya = `${teks}Speed: *${latensi.toFixed(4)}* Second`
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
 {buttonId: 'statiktiknya', buttonText: {displayText: '🎮 Bot Stats'}, type: 1},
@@ -18479,6 +18479,33 @@ but = [
 sendButton(from, `${pageur}`, `Test`, but)
 break
 
+case 'setnamegc':
+              if (!isRegistered) return reply1('Not register')
+					if (!isGroup) return reply1(mess.only.group)
+					if (!isGroupAdmins) return sticAdmin(from)
+              if (!isBotGroupAdmins) return sticNotAdmin(from)
+					alpha.groupUpdateSubject(from, `${body.slice(11)}`)
+					reply1(`Sukses mengganti nama grup ke ${body.slice(11)}`)
+					break					
+				case 'setdeskgc':
+				case 'setdescgc':
+              if (!isRegistered) return reply1('Not register')
+					if (!isGroup) return reply1(mess.only.group)
+					if (!isGroupAdmins) return sticAdmin(from)
+                   if (!isBotGroupAdmins) return sticNotAdmin(from)
+					alpha.groupUpdateDescription(from, `${body.slice(10)}`)
+					reply1(`Sukses mengganti deskripsi grup ke ${body.slice(10)}`)
+					break
+				case 'setprofile':
+				case 'setpp':
+				alpha.updatePresence(from, Presence.composing)
+				if (!isQuotedImage) return reply1('Reply imagenya!')
+					if (!isOwner && !mek.key.fromMe) return sticOwner(from)
+					enmedu_ = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					medu_ = await alpha.downloadAndSaveMediaMessage(enmedu_)
+					await alpha.updateProfilePicture(botNumber, medu_)
+					reply1('Sukses')
+					break
 
 //Ends
 default:
@@ -19483,9 +19510,7 @@ teks = `⌯✆ *VERIFIED* ✆⌯
 │ *Time :* ${wib} Wib
 ╰⌯`
 let vengrif = [
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1},
-{buttonId: 'menu_x', buttonText: {displayText: `${emoj3} Lol-Menu`}, type: 1},
-{buttonId: 'menu_xc', buttonText: {displayText: '🌱 Xc-Menu'}, type: 1}
+{buttonId: 'Oke', buttonText: {displayText: `${emoj} Ok`}, type: 1}
 ]
 sendButLocation(from, teks , `Makasih Udah Verifikasi 😉\n${botname}™© | By ${ownername}`,pp_verify, vengrif, {contextInfo: { mentionedJid: [sender]}})
 }
