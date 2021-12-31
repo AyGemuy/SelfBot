@@ -18578,7 +18578,7 @@ alpha.sendMessage(from, qimg_4, MessageType.buttonsMessage,{
 "contextInfo": {
 "forwardingScore": 999,isForwarded: false,
 quoted: mek, sendEphemeral: true
-})
+}})
 }
 if (q5 == "q_islam"){
 susn_ = await fetchJson(`https://mysakura.herokuapp.com/api/quote/islami?apikey=sakura404`);
