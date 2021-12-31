@@ -18507,10 +18507,100 @@ case 'setnamegc':
 					reply1('Sukses')
 					break
 
+case 'quote':
+case 'quotes':
+const quot_ = [
+{title: 'Anime', description: "", rowId:"q_anime"},
+{title: 'Bijak', description: "", rowId:"q_bijak"},
+{title: 'Gambar', description: "", rowId:"q_gambar"},
+{title: 'Islami', description: "", rowId:"q_islam"},
+{title: 'Joker', description: "", rowId:"q_joker"}
+]
+const quot_1 = [{title: "🌹 ⸙ PILIH MODE ⸙ 🌹", rows: quot_}]
+const quot_2 = {
+buttonText: '🔥 Pilih Mode!',
+description: `*${ucapannya2} @${sender.split("@")[0]}*\n\nSilahkan pilih jenis dibawah`,
+sections: quot_1,
+footerText: `Thanks @${sender.split("@")[0]} !`,
+listType: 1
+}
+await alpha.sendMessage(from, quot_2, MessageType.listMessage, {
+"contextInfo": {
+"forwardingScore": 999,isForwarded: false,
+"mentionedJid" : [sender]},
+quoted: mek, sendEphemeral: true
+})
+break
+
 //Ends
 default:
 //-----------------------[ STIKER ]-------------------//
 //______________//
+if (q5 == "q_anime"){
+susn_ = await fetchJson(`https://mysakura.herokuapp.com/api/quote/anime?apikey=sakura404`);
+quontes = susn_.quotes
+but = [
+{buttonId: `quotes`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
+{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+]
+sendButton(from, `*Quote :* ${quontes}`, `Thanks @${sender.split("@")[0]} !`, but)
+}
+if (q5 == "q_bijak"){
+susn_ = await fetchJson(`https://mysakura.herokuapp.com/api/quote/bijak?apikey=sakura404`);
+quontes = susn_.result.quotes
+but = [
+{buttonId: `quotes`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
+{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+]
+sendButton(from, `*Quote :* ${quontes}`, `Thanks @${sender.split("@")[0]} !`, but)
+}
+if (q5 == "q_gambar"){
+susn_ = await fetchJson(`https://mysakura.herokuapp.com/api/quote/gambar?apikey=sakura404`);
+let qatabijak = susn_.url
+let qatabijak_ = await getBuffer(qatabijak);
+const qimg_ = await alpha.prepareMessage(from, tttgbr_1, MessageType.image, { thumbnail:thumb_img})
+let qimg_1 = qimg_.message["ephemeralMessage"] ? qimg_.message.ephemeralMessage : qimg_
+qimg_2 = `*${jwb_oke}* ${emoj}`
+const qimg_3 = [
+{buttonId: 'x_menu' , buttonText: {displayText: `⬅️ Menu`}, type: 1},
+{buttonId: `quotes}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+]
+const qimg_4 = {
+contentText: qimg_2 ,
+footerText: `Thanks @${sender.split("@")[0]} !`,
+buttons: qimg_3,
+headerType: 4,
+imageMessage: qimg_1.message.imageMessage
+}
+alpha.sendMessage(from, qimg_4, MessageType.buttonsMessage,{
+"contextInfo": {
+"forwardingScore": 999,isForwarded: false,
+quoted: mek, sendEphemeral: true
+})
+}
+if (q5 == "q_islam"){
+susn_ = await fetchJson(`https://mysakura.herokuapp.com/api/quote/islami?apikey=sakura404`);
+quontes = susn_.result
+but = [
+{buttonId: `quotes`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
+{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+]
+sendButton(from, `*Quote :* ${quontes}`, `Thanks @${sender.split("@")[0]} !`, but)
+}
+if (q5 == "q_joker"){
+susn_ = await fetchJson(`https://mysakura.herokuapp.com/api/quote/joker?apikey=sakura404`);
+quontes = susn_.result.quotes
+but = [
+{buttonId: `quotes`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
+{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+]
+sendButton(from, `*Quote :* ${quontes}`, `Thanks @${sender.split("@")[0]} !`, but)
+}
+
 // GAME HINT
 if (subscribezeeoneofc == 'jwb_anime') {
 menyerah(`@${sender.split("@")[0]} Membuka jawaban\nReply soal dan ketik: ${jwb_anime}`)
