@@ -7198,6 +7198,7 @@ fs.unlinkSync(owgi);
 reply1("Reply sw foto / video yg mau dicolong")
 }
 break
+
 case "listonline": 
 let id = args && /\d+\-\d+@g.us/.test(args[0]) ? args[0] : m.chat;
 try {
@@ -8256,6 +8257,7 @@ khs = await getBuffer(Anu)
 alpha.sendMessage(from, khs, audio, {quoted:mek, mimetype:'audio/mp4', filename:'clientgans.mp3', ptt:true})
 })
 break
+
 case'twit':
 case'tw':
 if (!isUrl(args[0]) && !args[0].includes('twitter.com')) return reply1(mess.Iv)
@@ -17615,6 +17617,7 @@ var nomor = mek.participant
 alpha.groupSettingChange (from, GroupSettingChange.messageSend, true);
 }, timer)
 break
+
 case 'bukatime':
 		if (!isRegistered) return reply1('Ketik .verify dulu om')
 if (!isGroup) return reply1(mess.only.group)
@@ -18085,16 +18088,16 @@ case 'swm2':
 
 // ANIME
 case 'codenhentai':
-if (args.join(' ')) {
+if (!q) return reply1('Masukkan kode')
 kod = args.join(' ')
-tod = await fetchJson(`https://api-xcoders.xyz/api/anime/codenhentai?code=${kod}&apikey=7iyNa0qA`);
-ide = tod.titleID
-jep = tod.titleJP
-cod = tod.code
-taq = tod.code
-cok = tod.thumbnail
-cov = cok[Math.floor(Math.random() * cok.length)];
-let hen_1 = await getBuffer(tod.thumbnail);
+var tod__ = await fetchJson(`https://api-xcoders.xyz/api/anime/codenhentai?code=${kod}&apikey=7iyNa0qA`);
+ide = tod__.titleID
+jep = tod__.titleJP
+cod = tod__.code
+taq = tod__.code
+cok = tod__.thumbnail
+let cov = cok[Math.floor(Math.random() * cok.length)];
+let hen_1 = await getBuffer(cov);
 const hen_3 = await alpha.prepareMessage(from, hen_1, MessageType.image, { thumbnail:thumb_miku})
 let hen_2 = hen_3.message["ephemeralMessage"] ? hen_3.message.ephemeralMessage : hen_3
 hen_5 = `Title id : ${ide}
@@ -18123,15 +18126,17 @@ alpha.sendMessage(from, hen_7, MessageType.buttonsMessage,{
 "mentionedJid" : [sender]},
 quoted: mek, sendEphemeral: true
 })
-} else if (!q) {
-tod = await fetchJson(`https://api-xcoders.xyz/api/anime/randomnhentai?apikey=7iyNa0qA`);
-ide = tod.titleID
-jep = tod.titleJP
-cod = tod.code
-taq = tod.code
-cok = tod.thumbnail
-cov = cok[Math.floor(Math.random() * cok.length)];
-let hen__1 = await getBuffer(tod.thumbnail);
+break
+
+case 'randomhentai':
+var tod___ = await fetchJson(`https://api-xcoders.xyz/api/anime/randomnhentai?apikey=7iyNa0qA`);
+ide = tod___.titleID
+jep = tod___.titleJP
+cod = tod___.code
+taq = tod___.code
+cok = tod___.thumbnail
+let cov_ = cok[Math.floor(Math.random() * cok.length)];
+let hen__1 = await getBuffer(cov);
 const hen__3 = await alpha.prepareMessage(from, hen__1, MessageType.image, { thumbnail:thumb_miku})
 let hen__2 = hen__3.message["ephemeralMessage"] ? hen__3.message.ephemeralMessage : hen__3
 hen__5 = `Title id : ${ide}
@@ -18160,12 +18165,13 @@ alpha.sendMessage(from, hen__7, MessageType.buttonsMessage,{
 "mentionedJid" : [sender]},
 quoted: mek, sendEphemeral: true
 })
-}
 break
+
 case 'downurl':
 kus = args.join(' ')
 sendMediaURL(`${kus}`);
 break
+
 case 'neko':
 case 'loli':
 case 'husbu':
@@ -18198,6 +18204,7 @@ alpha.sendMessage(from, hus_7, MessageType.buttonsMessage,{
 quoted: mek, sendEphemeral: true
 })
 break
+
 case 'searchnekopoi':
 case 'searchnhentai':
 case 'kusonime':
@@ -18239,6 +18246,7 @@ anu = await imgbb(`${img_key}`, owgi)
 mp4 = await getBuffer(`https://api-xcoders.xyz/api/convert/reversevideo?url=${anu.display_url}&apikey=7iyNa0qA`)
 alpha.sendMessage(from, mp4, video, {mimetype: 'video/mp4', quoted: mek, caption: mess.success})
 break
+
 case 'towebp':
 var imgbb = require('imgbb-uploader')
 encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
@@ -18247,6 +18255,7 @@ anu = await imgbb(`${img_key}`, owgi)
 webp = await getBuffer(`https://api-xcoders.xyz/api/convert/towebp?url=${anu.display_url}&apikey=7iyNa0qA`)
 alpha.sendMessage(from, webp, image, {quoted: mek, caption: mess.success})
 break
+
 case 'webp2mp4':
 var imgbb = require('imgbb-uploader')
 ger = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
@@ -18280,6 +18289,7 @@ headerType: 4
 }
 await alpha.sendMessage(from, cobutt_, MessageType.buttonsMessage)
 break
+
 case 'fb':
 case 'ifunny':
 case 'igtv':
@@ -18303,6 +18313,7 @@ headerType: 4
 }
 await alpha.sendMessage(from, fbbutt_, MessageType.buttonsMessage)
 break
+
 case 'joox':
 if (args.length < 1) return reply1(`Kirim perintah *${prefix}${command}* query`)
 var cof = await fetchJson(`https://api-xcoders.xyz/api/download/joox?query=${q}&apikey=7iyNa0qA`);
@@ -18323,6 +18334,7 @@ headerType: 4
 }
 await alpha.sendMessage(from, joxbutt_, MessageType.buttonsMessage)
 break
+
 case 'xnxx':
 case 'xvideos':
 if (args.length < 1) return reply1(`Kirim perintah *${prefix}${command}* query`)
@@ -18404,7 +18416,7 @@ break
 // TOOLS
 case 'headers':
 if (args.length < 1) return reply1(`Kirim perintah *${prefix}${command}* http://google.com`)
-tod = await fetchJson(`https://api-xcoders.xyz/api/tools/headers?url=${q}&apikey=7iyNa0qA`);
+var tod = await fetchJson(`https://api-xcoders.xyz/api/tools/headers?url=${q}&apikey=7iyNa0qA`);
 ide = tod.result
 a = ide.date
 b = ide.expires
@@ -18441,10 +18453,11 @@ but = [
 ]
 sendButton(from, `${heder}`, `Test`, but)
 break
+
 case 'pageurl':
 if (args.length < 1) return reply1(`Kirim perintah *${prefix}${command}* http://google.com`)
-tod = await fetchJson(`https://api-xcoders.xyz/api/tools/pageurl?url=${q}&apikey=7iyNa0qA`);
-ide = tod.result
+var tod_ = await fetchJson(`https://api-xcoders.xyz/api/tools/pageurl?url=${q}&apikey=7iyNa0qA`);
+ide = tod_.result
 const pageur = `${ide}`
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
