@@ -18440,7 +18440,6 @@ but = [
 {buttonId: 'x_menu', buttonText: {displayText: '🌱 List menu'}, type: 1}
 ]
 sendButton(from, `${heder}`, `Test`, but)
-})
 break
 case 'pageurl':
 if (args.length < 1) return reply1(`Kirim perintah *${prefix}${command}* http://google.com`)
@@ -18453,7 +18452,6 @@ but = [
 {buttonId: 'x_menu', buttonText: {displayText: '🌱 List menu'}, type: 1}
 ]
 sendButton(from, `${pageur}`, `Test`, but)
-})
 break
 
 
