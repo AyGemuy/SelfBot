@@ -15555,11 +15555,11 @@ fanc = fan.result
 reply1(fanc)
 break
 
-case 'quotes':
+case 'quote':
 fan = await fetchJson(`https://kocakz.herokuapp.com/api/random/text/quotes`)
 fanc = fan.result
 by = fanc.by
-qu = fanc.qu
+qu = fanc.quote
 hzl = `*Quotes :* ${qu} \nBy _${by}_`
 alpha.sendMessage(from, hzl, text,{quoted:mek})
 break
@@ -18507,7 +18507,6 @@ case 'setnamegc':
 					reply1('Sukses')
 					break
 
-case 'quote':
 case 'quotes':
 const quot_ = [
 {title: 'Anime', description: "", rowId:"q_anime"},
@@ -18542,7 +18541,7 @@ quontes = susn_.quotes
 but = [
 {buttonId: `quotes`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
 {buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `menu`, buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
 ]
 sendButton(from, `*Quote :* ${quontes}`, `Thanks @${sender.split("@")[0]} !`, but)
 }
@@ -18552,7 +18551,7 @@ quontes = susn_.result.quotes
 but = [
 {buttonId: `quotes`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
 {buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `menu`, buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
 ]
 sendButton(from, `*Quote :* ${quontes}`, `Thanks @${sender.split("@")[0]} !`, but)
 }
@@ -18564,8 +18563,8 @@ const qimg_ = await alpha.prepareMessage(from, tttgbr_1, MessageType.image, { th
 let qimg_1 = qimg_.message["ephemeralMessage"] ? qimg_.message.ephemeralMessage : qimg_
 qimg_2 = `*${jwb_oke}* ${emoj}`
 const qimg_3 = [
-{buttonId: 'x_menu' , buttonText: {displayText: `⬅️ Menu`}, type: 1},
-{buttonId: `quotes}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+{buttonId: `menu`, buttonText: {displayText: `${emoj} List-Menu`}, type: 1},
+{buttonId: `quotes`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 const qimg_4 = {
 contentText: qimg_2 ,
@@ -18586,7 +18585,7 @@ quontes = susn_.result
 but = [
 {buttonId: `quotes`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
 {buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `menu`, buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
 ]
 sendButton(from, `*Quote :* ${quontes}`, `Thanks @${sender.split("@")[0]} !`, but)
 }
@@ -18596,7 +18595,7 @@ quontes = susn_.result.quotes
 but = [
 {buttonId: `quotes`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
 {buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `menu`, buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
 ]
 sendButton(from, `*Quote :* ${quontes}`, `Thanks @${sender.split("@")[0]} !`, but)
 }
@@ -18797,7 +18796,7 @@ if (math3.hasOwnProperty(sender.split('@')[0])) {
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
 {buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `menu`, buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_math3}`, `Waktu habis ${waktu_game}ms`, but)
 delete math3[sender.split('@')[0]]
@@ -18823,7 +18822,7 @@ if (math3.hasOwnProperty(sender.split('@')[0])) {
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
 {buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `menu`, buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_math3}`, `Waktu habis ${waktu_game}ms`, but)
 delete math3[sender.split('@')[0]]
@@ -18849,7 +18848,7 @@ if (math3.hasOwnProperty(sender.split('@')[0])) {
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
 {buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `menu`, buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_math3}`, `Waktu habis ${waktu_game}ms`, but)
 delete math3[sender.split('@')[0]]
@@ -18875,7 +18874,7 @@ if (math3.hasOwnProperty(sender.split('@')[0])) {
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
 {buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `menu`, buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_math3}`, `Waktu habis ${waktu_game}ms`, but)
 delete math3[sender.split('@')[0]]
@@ -18901,7 +18900,7 @@ if (math3.hasOwnProperty(sender.split('@')[0])) {
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
 {buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `menu`, buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_math3}`, `Waktu habis ${waktu_game}ms`, but)
 delete math3[sender.split('@')[0]]
@@ -18927,7 +18926,7 @@ if (math3.hasOwnProperty(sender.split('@')[0])) {
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
 {buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `menu`, buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_math3}`, `Waktu habis ${waktu_game}ms`, but)
 delete math3[sender.split('@')[0]]
@@ -18943,7 +18942,7 @@ wifu_6 = `*${jwb_oke}* ${emoj}`
 const wifu_7 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `menu`, buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
 ]
 const wifu_8 = {
 contentText: wifu_6 ,
@@ -18973,7 +18972,7 @@ wifu2_6 = `*${jwb_oke}* ${emoj}`
 const wifu2_7 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `menu`, buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
 ]
 const wifu2_8 = {
 contentText: wifu2_6 ,
@@ -19004,7 +19003,7 @@ wifu3_6 = `*${jwb_oke}* ${emoj}`
 const wifu3_7 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `menu`, buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
 ]
 const wifu3_8 = {
 contentText: wifu3_6 ,
@@ -19554,7 +19553,7 @@ teks = `*「 STATISTIK BOT 」*
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
 {buttonId: 'statiktiknya', buttonText: {displayText: '🎮 Bot Stats'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `menu`, buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
 ]
 sendButton(from, `${teks}`, `Pilih salah satu`, but, mek)
 }
