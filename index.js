@@ -4044,10 +4044,10 @@ console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32m CMD \x1b[1;37m]', timuu, colo
 addBalance(sender, randomNomor(20), balance)
 }
 
-/*
+
 //anonymous
 function _0x1592(){const _0x37a83f=['includes','test','348AbakLW','map','27558HtZJks','Lanjut','anonymous','12294msZJRg','\x5c$&','isArray','.leave','string','msg','CHATTING','430888ToiRVi','Stop','copyNForward','quoted','2271447uXzGrC','values','replace','@s.whatsapp.net','.stop','25445190DvRTfI','sender','.next','fromMe','exec','endsWith','find','text','1253jkfPpR','1krovBc','chat','6182195iMfJMT','Cari\x20Partner','8537592THMCNK','.start'];_0x1592=function(){return _0x37a83f;};return _0x1592();}const _0x2b2986=_0x4ea8;(function(_0x5bd027,_0x4f0bdb){const _0xd05060=_0x4ea8,_0x47e768=_0x5bd027();while(!![]){try{const _0x54d467=-parseInt(_0xd05060(0x8b))/0x1*(-parseInt(_0xd05060(0x79))/0x2)+parseInt(_0xd05060(0x6f))/0x3*(parseInt(_0xd05060(0x6d))/0x4)+-parseInt(_0xd05060(0x8d))/0x5+-parseInt(_0xd05060(0x72))/0x6*(parseInt(_0xd05060(0x8a))/0x7)+-parseInt(_0xd05060(0x8f))/0x8+-parseInt(_0xd05060(0x7d))/0x9+parseInt(_0xd05060(0x82))/0xa;if(_0x54d467===_0x4f0bdb)break;else _0x47e768['push'](_0x47e768['shift']());}catch(_0x5eb5bf){_0x47e768['push'](_0x47e768['shift']());}}}(_0x1592,0x9b5c1));function _0x4ea8(_0x5eeee7,_0x4e55d6){const _0x1592e5=_0x1592();return _0x4ea8=function(_0x4ea856,_0x4e7eae){_0x4ea856=_0x4ea856-0x6a;let _0x31c475=_0x1592e5[_0x4ea856];return _0x31c475;},_0x4ea8(_0x5eeee7,_0x4e55d6);}const str2Regex=_0x570bde=>_0x570bde[_0x2b2986(0x7f)](/[|\\{}()[\]^$+*?.]/g,_0x2b2986(0x73)),match=(prefix instanceof RegExp?[[prefix['exec'](m['text']),prefix]]:Array[_0x2b2986(0x74)](prefix)?prefix[_0x2b2986(0x6e)](_0x236870=>{const _0x3de517=_0x2b2986;let _0x5e088a=_0x236870 instanceof RegExp?_0x236870:new RegExp(str2Regex(_0x236870));return[_0x5e088a[_0x3de517(0x86)](m[_0x3de517(0x89)]),_0x5e088a];}):typeof prefix===_0x2b2986(0x76)?[[new RegExp(str2Regex(prefix))[_0x2b2986(0x86)](m[_0x2b2986(0x89)]),new RegExp(str2Regex(prefix))]]:[[[],new RegExp()]])[_0x2b2986(0x88)](_0x32f074=>_0x32f074[0x1]);if(match&&m[_0x2b2986(0x8c)][_0x2b2986(0x87)](_0x2b2986(0x80))&&!isCmd){this[_0x2b2986(0x71)]=this[_0x2b2986(0x71)]?this[_0x2b2986(0x71)]:{};let room=Object[_0x2b2986(0x7e)](this[_0x2b2986(0x71)])[_0x2b2986(0x88)](_0x1e2eb7=>[_0x1e2eb7['a'],_0x1e2eb7['b']]['includes'](m[_0x2b2986(0x83)])&&_0x1e2eb7['state']===_0x2b2986(0x78));if(room){if(/^.*(next|leave|start)/[_0x2b2986(0x6c)](m[_0x2b2986(0x89)]))return;if([_0x2b2986(0x84),_0x2b2986(0x75),_0x2b2986(0x81),_0x2b2986(0x6a),_0x2b2986(0x8e),'Keluar',_0x2b2986(0x70),_0x2b2986(0x7a)][_0x2b2986(0x6b)](m[_0x2b2986(0x89)]))return;let other=[room['a'],room['b']][_0x2b2986(0x88)](_0x18aa5e=>_0x18aa5e!==m['sender']);m[_0x2b2986(0x7b)](other,!![],m[_0x2b2986(0x7c)]&&m[_0x2b2986(0x7c)][_0x2b2986(0x85)]?{'contextInfo':{...m[_0x2b2986(0x77)]['contextInfo'],'forwardingScore':0x0,'isForwarded':!![],'participant':other}}:{});}return!0x0;}
-*/
+
 
 //await alpha.updatePresence(from, Presence.recording)
             //await alpha.updatePresence(from, Presence.composing)
@@ -12292,6 +12292,16 @@ alpha.sendMessage(from, asu, video, { quoted: mek})
 break
 
 //LIST───────[ API XTEAM
+
+case 'ttp5': 
+if (!q) return reply1(lang.noteks(prefix, command))
+ttp = args.join(' ')
+anuk = `${OjanApi}/api/maker/ttp2?text=${encodeURI(ttp)}`
+sendStickerFromUrl(from, `${anuk}`, mek)
+ini_buffer = await getBuffer(`${anuk}`)
+await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+break
+
 case 'ttp3': 
 case 'ttp': 
 anuk = `${XcoderApi}/api/maker/${command}?text=${encodeURIComponent(q)}&apikey=7iyNa0qA`
@@ -12336,6 +12346,7 @@ case 'dadu2':
 ini_buffer = await getBuffer(`${LolApi}/api/convert/towebp?apikey=${lolkey}&img=${OjanApi}/api/maker/dadu`)
 await alpha.sendMessage(from, ini_buffer, sticker)
 break
+
 
 case 'dadu':
 case 'patrick':
@@ -13128,8 +13139,7 @@ ${pembatas}
 ${pembatas}`
 var rbuc_2 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 rbuc_3 = {
 contentText: rbuc_1,
@@ -13153,8 +13163,7 @@ ${pembatas}
 ${pembatas}`
 var fakta_2 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 fakta_3 = {
 contentText: fakta_1,
@@ -13178,8 +13187,7 @@ ${pembatas}
 ${pembatas}`
 var ktbjk_2 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 ktbjk_3 = {
 contentText: ktbjk_1,
@@ -13203,8 +13211,7 @@ ${pembatas}
 ${pembatas}`
 var motvas_2 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 motvas_3 = {
 contentText: motvas_1,
@@ -13228,8 +13235,7 @@ ${pntn_.pantun}
 ${pembatas}`
 var pntn_2 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 pntn_3 = {
 contentText: pntn_1,
@@ -13719,8 +13725,7 @@ let wnime_2 = wnime_3.message["ephemeralMessage"] ? wnime_3.message.ephemeralMes
 wnime_5 = `*${jwb_oke}* ${emoj}`
 const wnime_6 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 const wnime_7 = {
 contentText: wnime_5 ,
@@ -13750,8 +13755,7 @@ let shta_2 = shta_3.message["ephemeralMessage"] ? shta_3.message.ephemeralMessag
 shta_5 = `*${jwb_oke}* ${emoj}`
 const shta_6 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 const shta_7 = {
 contentText: shta_5 ,
@@ -13781,8 +13785,7 @@ let neku_2 = neku_3.message["ephemeralMessage"] ? neku_3.message.ephemeralMessag
 neku_5 = `*${jwb_oke}* ${emoj}`
 const neku_6 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 const neku_7 = {
 contentText: neku_5 ,
@@ -13812,8 +13815,7 @@ let kmn_2 = kmn_3.message["ephemeralMessage"] ? kmn_3.message.ephemeralMessage :
 kmn_5 = `*${jwb_oke}* ${emoj}`
 const kmn_6 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 const kmn_7 = {
 contentText: kmn_5 ,
@@ -13843,8 +13845,7 @@ let loly_2 = loly_3.message["ephemeralMessage"] ? loly_3.message.ephemeralMessag
 loly_5 = `*${jwb_oke}* ${emoj}`
 const loly_6 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 const loly_7 = {
 contentText: loly_5 ,
@@ -13874,8 +13875,7 @@ let hsb_2 = hsb_3.message["ephemeralMessage"] ? hsb_3.message.ephemeralMessage :
 hsb_5 = `*${jwb_oke}* ${emoj}`
 const hsb_6 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 const hsb_7 = {
 contentText: hsb_5 ,
@@ -13908,8 +13908,7 @@ cehor_5 =`「 *${jwb_oke}* 」
 *🔖 Desc :* ${cehor_.desc}`
 const cehor_6 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 const cehor_7 = {
 contentText: cehor_5 ,
@@ -13939,8 +13938,7 @@ let drjok_2 = drjok_3.message["ephemeralMessage"] ? drjok_3.message.ephemeralMes
 drjok_5 = `*${jwb_oke}* ${emoj}`
 const drjok_6 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 const drjok_7 = {
 contentText: drjok_5 ,
@@ -14628,13 +14626,6 @@ if(!q) return reply1(`Teksnya?`)
 alpha.sendMessage(from, `${q}‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎‎`, text, { quoted: mek })
 break
 
-case 'ttp2': 
-if (!q) return reply1(lang.noteks(prefix, command))
-ttp = args.join(' ')
-anu1 = await getBuffer(`${OjanApi}/api/maker/ttp2?text=${encodeURI(ttp)}`)
-alpha.sendMessage(from, anu1, sticker, {quoted: mek})
-break
-
 case 'woii':
 var value = body.slice(5)
 var group = await alpha.groupMetadata(from)
@@ -14713,7 +14704,7 @@ const math3_1 = [
 ]
 const math3_2 = [{title: "🌹 ⸙ MATH MODE ⸙ 🌹", rows: math3_1}]
 const math3_3 = {
-buttonText: '🔥 Pilih Mode!',
+buttonText: `${emoj2} Pilih mode!`
 description: `*${ucapannya2} @${sender.split("@")[0]}*\n\nSilahkan pilih jenis dibawah`,
 sections: math3_2,
 footerText: `Thanks @${sender.split("@")[0]} !`,
@@ -14781,8 +14772,7 @@ _${facten_.fact}_
 ${pembatas}`
 var facten_2 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 facten_3 = {
 contentText: facten_1,
@@ -14808,8 +14798,7 @@ adalah : ${umur_.age ? umur_.age : 'Nih Umurnya'}
 ${pembatas}`
 var umur_2 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 umur_3 = {
 contentText: umur_1,
@@ -14837,8 +14826,7 @@ Kecocokan : ${gen_.probability}%
 ${pembatas}`
 var gen_2 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 gen_3 = {
 contentText: gen_1,
@@ -15297,88 +15285,17 @@ addMetadata(bapack, kapack)
 reply1(`Success ubah wm sticker`)
 break 
 //sound
-case 'sound1':
-case 'sound2':
-case 'sound3':
-case 'sound4':
-case 'sound5':
-case 'sound6':
-case 'sound7':
-case 'sound8':
-case 'sound9':
-case 'sound10':
-case 'sound11':
-case 'sound12':
-case 'sound13':
-case 'sound14':
-case 'sound15':
-case 'sound16':
-case 'sound17':
-case 'sound18':
-case 'sound19':
-case 'sound20':
-case 'sound21':
-case 'sound22':
-case 'sound23':
-case 'sound24':
-case 'sound25':
-case 'sound26':
-case 'sound27':
-case 'sound28':
-case 'sound29':
-case 'sound30':
-case 'sound31':
-case 'sound32':
-case 'sound33':
-case 'sound34':
-case 'sound35':
-case 'sound36':
-case 'sound37':
-case 'sound38':
-case 'sound39':
-case 'sound40':
-case 'sound41':
-case 'sound42':
-case 'sound43':
-case 'sound44':
-case 'sound45':
-case 'sound46':
-case 'sound47':
-case 'sound48':
-case 'sound49':
-case 'sound50':
-case 'sound51':
-case 'sound52':
-case 'sound53':
-case 'sound54':
-case 'sound55':
-case 'sound56':
-case 'sound57':
-case 'sound58':
-case 'sound59':
-case 'sound60':
-case 'sound61':
-case 'sound62':
-case 'sound63':
-case 'sound64':
-case 'sound65':
-case 'sound66':
-case 'sound67':
-case 'sound68':
-case 'sound69':
-case 'sound70':
-omkeh = await getBuffer(`https://hansxd.nasihosting.com/sound/${command}.mp3`)
-alpha.sendMessage(from, omkeh, MessageType.audio, { quoted: mek, mimetype: 'audio/mp4', ptt: true })
-break
 
-case 'sound71':
-case 'sound71':
-case 'sound72':
-case 'sound73':
-case 'sound74':
-case 'sound75':
-omkeh = await getBuffer(`https://ojankyaa.000webhostapp.com/sound/${command}.mp3`)
+case 'sound':
+if (!q) return reply1('Masukan angkanya 1-75')
+sfx_ke = args[0]
+try {
+omkeh = await getBuffer(`https://hansxd.nasihosting.com/sound/sound${sfx_ke}.mp3`)
 alpha.sendMessage(from, omkeh, MessageType.audio, { quoted: mek, mimetype: 'audio/mp4', ptt: true })
+} catch {
+omkeh = await getBuffer(`https://ojankyaa.000webhostapp.com/sound/sound${sfx_ke}.mp3`)
+alpha.sendMessage(from, omkeh, MessageType.audio, { quoted: mek, mimetype: 'audio/mp4', ptt: true })
+}
 break
 
 case 'ganteng':
@@ -15760,17 +15677,16 @@ anu = alpha.prepareMessageFromContent(from,{
 alpha.relayWAMessage(anu)
 break
 
-
-/*
-case 'anonymous': {
-if (isGroup) return reply1('Fitur Tidak Dapat Digunakan Untuk Group!')
+// ANONYMOUS CHAT
+case 'anonymous':
+if (!isGroup) return reply1('Fitur Tidak Dapat Digunakan Untuk Group!')
 this.anonymous = this.anonymous ? this.anonymous : {}
 sendMess(m.chat, `Welcome To Anonymous Chat\n\n${prefix}start - Search Partner\n${prefix}leave - Keluar Sesi Anonymous\n${prefix}next - Skip Sesi Anonymous\n${prefix}menu - All Menu`)
-}
 break
 
-case 'keluar': case 'leave': {
-if (isGroup) return reply1('Fitur Tidak Dapat Digunakan Untuk Group!')
+case 'keluar':
+case 'leave':
+if (!isGroup) return reply1('Fitur Tidak Dapat Digunakan Untuk Group!')
 this.anonymous = this.anonymous ? this.anonymous : {}
 let room = Object.values(this.anonymous).find(room => room.check(m.sender))
 if (!room) {
@@ -15781,10 +15697,12 @@ m.reply1('_Ok_')
 let other = room.other(m.sender)
 if (other) await sendMess(other, `_*Partner meninggalkan chat..*_`)
 delete this.anonymous[room.id]
-if (command === 'leave') break
-}
-case 'mulai': case 'start': {
-if (isGroup) return reply1('Fitur Tidak Dapat Digunakan Untuk Group!')
+if (command === 'leave')
+break
+
+case 'mulai':
+case 'start':
+if (!isGroup) return reply1('Fitur Tidak Dapat Digunakan Untuk Group!')
 this.anonymous = this.anonymous ? this.anonymous : {}
 
 if (Object.values(this.anonymous).find(room => room.check(m.sender))) {
@@ -15814,9 +15732,10 @@ if (room) {
 	await sendMess(m.chat, `_*Menunggu Partner...*_`)
 }
 break
-}
-case 'next': case 'lanjut': {
-if (isGroup) return reply1('Fitur Tidak Dapat Digunakan Untuk Group!')
+
+case 'next':
+case 'lanjut':
+if (!isGroup) return reply1('Fitur Tidak Dapat Digunakan Untuk Group!')
 this.anonymous = this.anonymous ? this.anonymous : {}
 let romeo = Object.values(this.anonymous).find(room => room.check(m.sender))
 if (!romeo) {
@@ -15849,8 +15768,7 @@ if (room) {
 	await sendText(m.chat, `_*Menunggu Partner...*_`, m)
 }
 break
-}
-*/
+
 
 case 'gstik':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} 1`)
@@ -16676,7 +16594,7 @@ quoted: mek, sendEphemeral: true
 break
 
 case 'sfx':
-if (!q) return reply1('Masukan angkanya')
+if (!q) return reply1('Masukan angkanya 1-500')
 sfx_ke = args[0]
 let sfx_ = await fetchJson(`http://www.myinstants.com/api/v1/instants/?format=json&page=${sfx_ke}`)
 let sf = sfx_.results
@@ -16703,7 +16621,7 @@ break
 case 'dafontsearch':
 case 'dafonts':
 case 'dafont':
-if (!q) return reply1('Apa Yang Mau Di Cari? ')
+if (!q) return reply1('Nama font nya? ')
 teks = args.join(' ')
 res = await dafontSearch(teks)
 a = res[0]
@@ -16950,8 +16868,7 @@ let hus_2 = hus_3.message["ephemeralMessage"] ? hus_3.message.ephemeralMessage :
 hus_5 = `*${jwb_oke}* ${emoj}`
 const hus_6 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
 const hus_7 = {
 contentText: hus_5 ,
@@ -17271,7 +17188,7 @@ const quot_ = [
 ]
 const quot_1 = [{title: "🌹 ⸙ PILIH MODE ⸙ 🌹", rows: quot_}]
 const quot_2 = {
-buttonText: '🔥 Pilih Mode!',
+buttonText: `${emoj2} Pilih mode!`
 description: `*${ucapannya2} @${sender.split("@")[0]}*\n\nSilahkan pilih jenis dibawah`,
 sections: quot_1,
 footerText: `Thanks @${sender.split("@")[0]} !`,
