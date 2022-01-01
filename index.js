@@ -11733,303 +11733,6 @@ quoted: mek, sendEphemeral: true
 })
 break
 
-case 'burnpaper':
-case 'butterfly':
-case 'coffecup':
-case 'coffecup2':
-case 'csgobanner':
-case 'cup':
-case 'cup2':
-case 'doubleheart':
-case 'flaming':
-case 'greenleaves':
-case 'harrypotter':
-case 'lolbanner':
-case 'lovemessage':
-case 'naruto':
-case 'nightsky':
-case 'romantic':
-case 'roses':
-case 'shadow':
-case 'smoke':
-case 'undergrass':
-case 'underwater':
-case 'whitecube':
-case 'wolfmetal':
-if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy Bot`) 
-let poxy_1 = await getBuffer(`https://api.dapuhy.ga/api/photooxy/${command}?text=${q}&apikey=${dapuhy}`);
-const poxy_3 = await alpha.prepareMessage(from, poxy_1, MessageType.image, { thumbnail:thumb_oxy})
-let poxy_2 = poxy_3.message["ephemeralMessage"] ? poxy_3.message.ephemeralMessage : poxy_3
-poxy_5 = `*${jwb_oke}* ${emoj}`
-const poxy_6 = [
-{buttonId: 'x_menu', buttonText: {displayText: `⬅️ Menu`}, type: 1},
-{buttonId: `${command} ${q}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
-]
-const poxy_7 = {
-contentText: poxy_5 ,
-footerText: `Thanks @${sender.split("@")[0]} !`,
-buttons: poxy_6,
-headerType: 4,
-imageMessage: poxy_2.message.imageMessage
-}
-alpha.sendMessage(from, poxy_7, MessageType.buttonsMessage,{
-"contextInfo": {
-"forwardingScore": 999,isForwarded: false,
-"externalAdReply": {
-"title": `${ucapannya2}` ,
-"body": `${botname}`,
-"sourceUrl": apiku,
-"thumbnail": thumb_oxy},
-"mentionedJid" : [sender]},
-quoted: mek, sendEphemeral: true
-})
-break
-
-case '3dbox':
-case '3dglowing':
-case '3dglue':
-case '3dneonlight':
-case '3dstone':
-case '3dunderwater':
-case 'abstragold':
-case 'artpapercut':
-case 'bearlogo':
-case 'berry':
-case 'biscuit':
-case 'blackpink':
-case 'blood':
-case 'bluegem':
-case 'bluemetal':
-case 'bokeh':
-case 'bread':
-case 'breakwall':
-case 'brokenglass':
-case 'bronzeglitter':
-case 'captainamerica':
-case 'chocolatecake':
-case 'christmas':
-case 'cloud2':
-case 'cloud':
-case 'decorategreen':
-case 'deluxesilver':
-case 'denim':
-case 'dropwater':
-case 'embossed':
-case 'engraved3d':
-case 'erodedmetal':
-case 'fabric':
-case 'fiction':
-case 'fireworksparkle':
-case 'fruitjuice':
-case 'futuristic':
-case 'glosycarbon':
-case 'greenhorror':
-case 'greenneon':
-case 'halloween':
-case 'harrypotter':
-case 'holographic':
-case 'honey':
-case 'horror':
-case 'horrorblood':
-case 'icecold':
-case 'koifish':
-case 'lava':
-case 'logojoker':
-case 'luxurygold':
-case 'magmahot':
-case 'marble':
-case 'matrixstyle':
-case 'metaldark':
-case 'metalpurple':
-case 'metalrainbow':
-case 'minion':
-case 'naturalleaves':
-case 'neon2':
-case 'neon':
-case 'neondevil':
-case 'neonlight2':
-case 'neonlight':
-case 'newyear2':
-case 'newyear':
-case 'pinksparkling':
-case 'plasticbagdrug':
-case 'pupleglass':
-case 'purplegem':
-case 'purpleshiny':
-case 'rainbowequalizer':
-case 'roadwarning':
-case 'robot':
-case 'rock':
-case 'rusymetal':
-case 'shinymetal':
-case 'skeleton':
-case 'snow':
-case 'steel':
-case 'strawberry':
-case 'summerbeach':
-case 'summery':
-case 'thunder':
-case 'toxic':
-case 'transformer':
-case 'ultragloss':
-case 'wicker':
-case 'wonderfulgraffiti':
-case 'wood':
-case 'writing':
-case 'xmascards':
-case 'yellowglass':
-case 'yellowjewelry':
-if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy Bot`) 
-let txtpr_1 = await getBuffer(`https://api.dapuhy.ga/api/textpro/${command}?text=${q}&apikey=${dapuhy}`);
-const txtpr_3 = await alpha.prepareMessage(from, txtpr_1, MessageType.image, { thumbnail:thumb_pro})
-let txtpr_2 = txtpr_3.message["ephemeralMessage"] ? txtpr_3.message.ephemeralMessage : txtpr_3
-txtpr_5 = `*${jwb_oke}* ${emoj}`
-const txtpr_6 = [
-{buttonId: 'x_menu', buttonText: {displayText: `⬅️ Menu`}, type: 1},
-{buttonId: `textpro_list`, buttonText: {displayText: 'Textpro List'}, type: 1}
-]
-const txtpr_7 = {
-contentText: txtpr_5 ,
-footerText: `Thanks @${sender.split("@")[0]} !`,
-buttons: txtpr_6,
-headerType: 4,
-imageMessage: txtpr_2.message.imageMessage
-}
-alpha.sendMessage(from, txtpr_7, MessageType.buttonsMessage,{
-"contextInfo": {
-"forwardingScore": 999,isForwarded: false,
-"externalAdReply": {
-"title": `${ucapannya2}` ,
-"body": `${botname}`,
-"sourceUrl": apiku,
-"thumbnail": thumb_pro},
-"mentionedJid" : [sender]},
-quoted: mek, sendEphemeral: true
-})
-break
-
-case '3dcrack':
-case '3dhologram':
-case '3dshiny':
-case '3dunderwater':
-case '1917':
-case 'artpapercut':
-case 'bearlogo':
-case 'birthdaycake':
-case 'blackpink':
-case 'blackpinkneon':
-case 'brokenglass':
-case 'cake':
-case 'cakes':
-case 'cloud':
-case 'clouds':
-case 'galaxy':
-case 'galaxybat':
-case 'galaxystyle':
-case 'glow':
-case 'glowing':
-case 'graffiti2':
-case 'graffiti3':
-case 'graffiti5':
-case 'graffiti':
-case 'graffiticolor':
-case 'greenbrush':
-case 'hotmetalic':
-case 'lighteffects':
-case 'lightgalaxy':
-case 'metal':
-case 'neon2':
-case 'neon':
-case 'neondevil':
-case 'neonlight':
-case 'pubgmascot':
-case 'snake':
-case 'startsnight2':
-case 'startsnight':
-case 'summerbeach2':
-case 'summerbeach':
-case 'thunder':
-case 'watercolor':
-case 'wetglass':
-case 'wooden3d':
-case 'wordgreen':
-case 'writingchalk':
-case 'zombie3d':
-if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy Bot`) 
-let ephto_1 = await getBuffer(`https://api.dapuhy.ga/api/ephoto/${command}?text=${q}&apikey=${dapuhy}`);
-const ephto_3 = await alpha.prepareMessage(from, ephto_1, MessageType.image, { thumbnail:thumb_epho})
-let ephto_2 = ephto_3.message["ephemeralMessage"] ? ephto_3.message.ephemeralMessage : ephto_3
-ephto_5 = `*${jwb_oke}* ${emoj}`
-const ephto_6 = [
-{buttonId: 'x_menu', buttonText: {displayText: `⬅️ Menu`}, type: 1},
-{buttonId: `ephoto_list`, buttonText: {displayText: 'Ephoto List'}, type: 1}
-]
-const ephto_7 = {
-contentText: ephto_5 ,
-footerText: `Thanks @${sender.split("@")[0]} !`,
-buttons: ephto_6,
-headerType: 4,
-imageMessage: ephto_2.message.imageMessage
-}
-alpha.sendMessage(from, ephto_7, MessageType.buttonsMessage,{
-"contextInfo": {
-"forwardingScore": 999,isForwarded: false,
-"externalAdReply": {
-"title": `${ucapannya2}` ,
-"body": `${botname}`,
-"sourceUrl": apiku,
-"thumbnail": thumb_epho},
-"mentionedJid" : [sender]},
-quoted: mek, sendEphemeral: true
-})
-break
-
-case 'airballoon':
-case 'beachsign':
-case 'blinkinglights':
-case 'bracelet':
-case 'cemeterygates':
-case 'christmas':
-case 'denimembroidery':
-case 'einstein':
-case 'fortunecookie':
-case 'lightgraffiti':
-case 'lightwriting':
-case 'lovelock':
-case 'neonsign':
-case 'nightmare':
-case 'pendant':
-case 'planebanner':
-case 'rugbyball':
-case 'rustywriting':
-if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy Bot`) 
-let pfun_1 = await getBuffer(`https://api.dapuhy.ga/api/photofunia/${command}?text=${q}&apikey=${dapuhy}`);
-const pfun_3 = await alpha.prepareMessage(from, pfun_1, MessageType.image, { thumbnail:thumb_pfun})
-let pfun_2 = pfun_3.message["ephemeralMessage"] ? pfun_3.message.ephemeralMessage : pfun_3
-pfun_5 = `*${jwb_oke}* ${emoj}`
-const pfun_6 = [
-{buttonId: 'x_menu', buttonText: {displayText: `⬅️ Menu`}, type: 1},
-{buttonId: `pfun_list`, buttonText: {displayText: `${emoj} Photofunia List`}, type: 1}
-]
-const pfun_7 = {
-contentText: pfun_5 ,
-footerText: `Thanks @${sender.split("@")[0]} !`,
-buttons: pfun_6,
-headerType: 4,
-imageMessage: pfun_2.message.imageMessage
-}
-alpha.sendMessage(from, pfun_7, MessageType.buttonsMessage,{
-"contextInfo": {
-"forwardingScore": 999,isForwarded: false,
-"externalAdReply": {
-"title": `${ucapannya2}` ,
-"body": `${botname}`,
-"sourceUrl": apiku,
-"thumbnail": thumb_pfun},
-"mentionedJid" : [sender]},
-quoted: mek, sendEphemeral: true
-})
-break
 
 case 'pasangan':
 case 'ppcp':
@@ -12087,369 +11790,6 @@ quoted: mek, sendEphemeral: true
 break
 
 //LIST───────[ API ALPHA
-//2 TEXT
-case 'captain_as':
-case 'smoke':
-case 'tiktok2': 
-case 'arcade':
-case 'battlefield':
-case 'pubg':
-if (!q) return reply1(lang.tahta(prefix, command))
-var m = q
-var m1 = m.split("|")[0];
-var m2 = m.split("|")[1]; 
-let oxy2_ = await getBuffer(`https://api-alphabot.herokuapp.com/api/photooxy/${command}?apikey=Alphabot&text=${m1}&text2=${m2}`)
-let oxy2_1 = await getBuffer(oxy2_);
-const oxy2_3 = await alpha.prepareMessage(from, oxy2_1, MessageType.image, { thumbnail:thumb_pro})
-let oxy2_2 = oxy2_3.message["ephemeralMessage"] ? oxy2_3.message.ephemeralMessage : oxy2_3
-oxy2_5 = `*${jwb_oke}* ${emoj}`
-const oxy2_6 = [
-{buttonId: 'x_menu', buttonText: {displayText: `⬅️ Menu`}, type: 1},
-{buttonId: `oxy_list`, buttonText: {displayText: `${emoj} PhotoOxy List`}, type: 1}
-]
-const oxy2_7 = {
-contentText: oxy2_5 ,
-footerText: `Thanks @${sender.split("@")[0]} !`,
-buttons: oxy2_6,
-headerType: 4,
-imageMessage: oxy2_2.message.imageMessage
-}
-alpha.sendMessage(from, oxy2_7, MessageType.buttonsMessage,{
-"contextInfo": {
-"forwardingScore": 999,isForwarded: false,
-"externalAdReply": {
-"title": `${ucapannya2}` ,
-"body": `${botname}`,
-"sourceUrl": apiku,
-"thumbnail": thumb_pro},
-"mentionedJid" : [sender]},
-quoted: mek, sendEphemeral: true
-})
-break
-
-//1 TEXT
-case '3dglowing':
-case '3dligth':
-case '3dnature':
-case '3dsummer':
-case 'avatar':
-case 'bcake':
-case 'burnpaper':
-case 'butterfly':
-case 'camouflage':
-case 'cemetery':
-case 'cname':
-case 'coffecup2':
-case 'coffeecup':
-case 'crisp':
-case 'embroidery':
-case 'flaming':
-case 'flower':
-case 'funnycup':
-case 'fur':
-case 'glowneon':
-case 'glowrainbow':
-case 'goldenrose':
-case 'graffiti':
-case 'harry':
-case 'heart':
-case 'honey':
-case 'luxury':
-case 'metallic':
-case 'nightsky':
-case 'rainbow':
-case 'romantic':
-case 'shadow':
-case 'simple':
-case 'smoke':
-case 'smokyneon':
-case 'striking':
-case 'sweet':
-case 'typography':
-case 'typography':
-case 'underfall':
-case 'underflower2':
-case 'underflower':
-case 'undergrass':
-case 'underwater':
-case 'vector':
-case 'vintage':
-case 'watermelon':
-case 'whitecube':
-case 'wolf_metal':
-case 'wood':
-case 'woodblock':
-case 'wooden':
-if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy Bot`) 
-let oxxy_1 = await getBuffer(`https://api-alphabot.herokuapp.com/api/photooxy/${command}?apikey=Alphabot&text=${q}`);
-const oxxy_3 = await alpha.prepareMessage(from, oxxy_1, MessageType.image, { thumbnail:thumb_pro})
-let oxxy_2 = oxxy_3.message["ephemeralMessage"] ? oxxy_3.message.ephemeralMessage : oxxy_3
-oxxy_5 = `*${jwb_oke}* ${emoj}`
-const oxxy_6 = [
-{buttonId: 'x_menu', buttonText: {displayText: `⬅️ Menu`}, type: 1},
-{buttonId: `oxy_list`, buttonText: {displayText: `${emoj} PhotoOxy List`}, type: 1}
-]
-const oxxy_7 = {
-contentText: oxxy_5 ,
-footerText: `Thanks @${sender.split("@")[0]} !`,
-buttons: oxxy_6,
-headerType: 4,
-imageMessage: oxxy_2.message.imageMessage
-}
-alpha.sendMessage(from, oxxy_7, MessageType.buttonsMessage,{
-"contextInfo": {
-"forwardingScore": 999,isForwarded: false,
-"externalAdReply": {
-"title": `${ucapannya2}` ,
-"body": `${botname}`,
-"sourceUrl": apiku,
-"thumbnail": thumb_pro},
-"mentionedJid" : [sender]},
-quoted: mek, sendEphemeral: true
-})
-break
-
-//2 TEXT
-case 'halloween2':
-case 'horror':
-case 'game8bit':
-case 'layered':
-case 'glitch2':
-case 'coolg':
-case 'coolwg':
-case 'realistic':
-case 'space3d':
-case 'gtiktok':
-case 'stone':
-case 'marvel':
-case 'marvel2':
-case 'pornhub':
-case 'avengers':
-case 'metalr':
-case 'metalg':
-case 'metalg2':
-case 'halloween2':
-case 'lion':
-case 'wolf_bw':
-case 'wolf_g':
-case 'ninja':
-case '3dsteel':
-case 'horror2':
-case 'lava':
-case 'bagel':
-if (!q) return reply1(lang.tahta(prefix, command))
-var m = q
-var m1 = m.split("|")[0];
-var m2 = m.split("|")[1]; 
-let tpr2_ = await getBuffer(`https://api-alphabot.herokuapp.com/api/textpro/${command}?apikey=Alphabot&text=${m1}&text2=${m2}`)
-let tpr2_1 = await getBuffer(tpr2_);
-const tpr2_3 = await alpha.prepareMessage(from, tpr2_1, MessageType.image, { thumbnail:thumb_pro})
-let tpr2_2 = tpr2_3.message["ephemeralMessage"] ? tpr2_3.message.ephemeralMessage : tpr2_3
-tpr2_5 = `*${jwb_oke}* ${emoj}`
-const tpr2_6 = [
-{buttonId: 'x_menu', buttonText: {displayText: `⬅️ Menu`}, type: 1},
-{buttonId: `textpro_list`, buttonText: {displayText: 'TextPro List'}, type: 1}
-]
-const tpr2_7 = {
-contentText: tpr2_5 ,
-footerText: `Thanks @${sender.split("@")[0]} !`,
-buttons: tpr2_6,
-headerType: 4,
-imageMessage: tpr2_2.message.imageMessage
-}
-alpha.sendMessage(from, tpr2_7, MessageType.buttonsMessage,{
-"contextInfo": {
-"forwardingScore": 999,isForwarded: false,
-"externalAdReply": {
-"title": `${ucapannya2}` ,
-"body": `${botname}`,
-"sourceUrl": apiku,
-"thumbnail": thumb_pro},
-"mentionedJid" : [sender]},
-quoted: mek, sendEphemeral: true
-})
-break 
-//1 TEXT
-case '3dbox':
-case '3dchrome':
-case '3dglue':
-case '3dstone':
-case 'abstra':
-case 'advanced':
-case 'balloon2':
-case 'balloon3':
-case 'balloon4':
-case 'balloon5':
-case 'balloon6':
-case 'balloon7':
-case 'balloon':
-case 'bear':
-case 'berry':
-case 'biscuit':
-case 'blackpink':
-case 'blood2':
-case 'blood':
-case 'bokeh':
-case 'bread':
-case 'broken':
-case 'candy':
-case 'captain_as2':
-case 'carbon':
-case 'chocolate':
-case 'chrismast':
-case 'christmas':
-case 'cloudsky':
-case 'darkg':
-case 'decorate2':
-case 'decorate':
-case 'decorative':
-case 'deluxe2':
-case 'demon':
-case 'denim':
-case 'discovery':
-case 'dropwater':
-case 'drug':
-case 'embossed':
-case 'engraved':
-case 'equalizer':
-case 'fabric':
-case 'fiction':
-case 'firework':
-case 'gemb':
-case 'glass2':
-case 'glass3':
-case 'glass4':
-case 'glass5':
-case 'glass6':
-case 'glass7':
-case 'glass8':
-case 'glass':
-case 'glitch':
-case 'glitter2':
-case 'glitter3':
-case 'glitter4':
-case 'glitter5':
-case 'glitter6':
-case 'glitter7':
-case 'glitter':
-case 'gloss':
-case 'glossy':
-case 'glossyb':
-case 'glossyc':
-case 'gneon':
-case 'golden':
-case 'gradient2':
-case 'gradient':
-case 'halloween':
-case 'harry_potter':
-case 'holographic':
-case 'honey':
-case 'ice':
-case 'jewelry2':
-case 'jewelry3':
-case 'jewelry4':
-case 'jewelry5':
-case 'jewelry6':
-case 'jewelry7':
-case 'jewelry8':
-case 'jewelry':
-case 'joker':
-case 'juice':
-case 'koifish':
-case 'luxury':
-case 'magma':
-case 'marble2':
-case 'marble':
-case 'matrix':
-case 'metalb2':
-case 'metalb':
-case 'metaldark':
-case 'metale':
-case 'metalg':
-case 'metalh':
-case 'metallic':
-case 'metalr':
-case 'metals':
-case 'minion':
-case 'multicolor':
-case 'natural':
-case 'neon2':
-case 'neon':
-case 'neonc':
-case 'neonlight':
-case 'neonligth2':
-case 'neon_devil':
-case 'neon_light':
-case 'newyear2':
-case 'newyear':
-case 'oscar':
-case 'papercut':
-case 'peridot':
-case 'purple':
-case 'purpleg':
-case 'rainbow':
-case 'roadw':
-case 'robot':
-case 'rock':
-case 'rusty':
-case 'scifi':
-case 'shiny':
-case 'sircuit':
-case 'skeleton':
-case 'sketch':
-case 'snow':
-case 'sparkling2':
-case 'sparkling3':
-case 'sparkling4':
-case 'sparkling5':
-case 'sparkling6':
-case 'sparkling7':
-case 'sparkling':
-case 'steel':
-case 'strawberry':
-case 'summer':
-case 'summery':
-case 'thunder2':
-case 'thunder':
-case 'toxic':
-case 'transformer':
-case 'underwater':
-case 'wall':
-case 'watercolor':
-case 'water_pipe':
-case 'wicker':
-case 'wonderfulg':
-case 'wood':
-case 'writing':
-case 'xmas':
-if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy Bot`) 
-let tpr_1 = await getBuffer(`https://api-alphabot.herokuapp.com/api/textpro/${command}?text=${q}&apikey=Alphabot`);
-const tpr_3 = await alpha.prepareMessage(from, tpr_1, MessageType.image, { thumbnail:thumb_pro})
-let tpr_2 = tpr_3.message["ephemeralMessage"] ? tpr_3.message.ephemeralMessage : tpr_3
-tpr_5 = `*${jwb_oke}* ${emoj}`
-const tpr_6 = [
-{buttonId: 'x_menu', buttonText: {displayText: `⬅️ Menu`}, type: 1},
-{buttonId: `textpro_list`, buttonText: {displayText: 'Textpro List'}, type: 1}
-]
-const tpr_7 = {
-contentText: tpr_5 ,
-footerText: `Thanks @${sender.split("@")[0]} !`,
-buttons: tpr_6,
-headerType: 4,
-imageMessage: tpr_2.message.imageMessage
-}
-alpha.sendMessage(from, tpr_7, MessageType.buttonsMessage,{
-"contextInfo": {
-"forwardingScore": 999,isForwarded: false,
-"externalAdReply": {
-"title": `${ucapannya2}` ,
-"body": `${botname}`,
-"sourceUrl": apiku,
-"thumbnail": thumb_pro},
-"mentionedJid" : [sender]},
-quoted: mek, sendEphemeral: true
-})
-break
 
 case 'quran':
 if(!q) return reply1(`*Cth :* ${prefix + command} 2|1`)
@@ -12893,6 +12233,8 @@ case 'ttp3':
 case 'ttp': 
 anuk = `https://api-xcoders.xyz/api/maker/${command}?text=${encodeURIComponent(q)}&apikey=7iyNa0qA`
 sendStickerFromUrl(from, `${anuk}`, mek)
+ini_buffer = await getBuffer(`${anuk}`)
+alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 break
 
 case 'ttp4': 
@@ -14992,466 +14334,8 @@ fs.writeFileSync("./game/tebaklagu.json", JSON.stringify(tebaklagu))
 }
 break
 
-//───────────────[ FITUR MAKER ]───────────────//
-/*
-case 'wanted':
-case 'utatoo':
-case 'unsharpen':
-case 'thanos':
-case 'sniper':
-case 'sharpen':
-// case 'sepia':
-case 'scary':
-case 'rip':
-case 'redple':
-case 'rejected':
-case 'posterize':
-case 'ps4':
-case 'pixelize':
-case 'missionpassed':
-case 'moustache':
-case 'lookwhatkarenhave':
-// case 'jail':
-// case 'invert':
-case 'instagram':
-// case 'greyscale':
-case 'glitch':
-// case 'gay':
-case 'frame':
-case 'fire':
-case 'distort':
-case 'dictator':
-// case 'deepfry':
-case 'ddungeon':
-case 'circle':
-case 'challenger':
-case 'burn':
-case 'brazzers':
-case 'beautiful':
-console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
-var imgbb = require('imgbb-uploader')
-if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
-// Wait //
-var bioij = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
-var delib = await alpha.downloadAndSaveMediaMessage(bioij, `./media/${sender}.png`)
-let datau = await imgbb(`${img_key}`, delib)
-anuk = `${datau.display_url}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-imoj = await ameApi.generate(ini_gen, { url: anuk})
-alpha.sendFile(from, imoj, `${sender}.png`, null, mek, {thumbnail: thumbnya})
 
-// sendStickerFromUrl(from, `${emoj}`, mek)
-} else {
-// Wait //
-ghost = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
-let oppp = await alpha.getProfilePicture(ghost).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
-let medianya = await getBuffer(oppp)
-let datae = await imageToBase64(JSON.stringify(oppp).replace(/\"/gi, ''))
-fs.writeFileSync('janckuk.jpeg', datae, 'base64')
-let odata = await imgbb(`${img_key}`, 'janckuk.jpeg')
-anuk = `${odata.display_url}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-imoj = await ameApi.generate(ini_gen, { url: anuk})
-alpha.sendFile(from, imoj, `${sender}.png`, null, mek, {thumbnail: medianya})
 
-// sendStickerFromUrl(from, `${emoj}`, mek)
-}
-break
-*/
-
-case 'blue':
-// case 'blur':
-case 'blurple':
-case 'blurple2':
-case 'brightness':
-case 'color':
-case 'colorviewer':
-case 'comrade':
-// case 'gay':
-case 'glass':
-case 'green':
-// case 'greyscale':
-case 'hex':
-case 'horny':
-// case 'invert':
-case 'invertgreyscale':
-case 'its-so-stupid':
-// case 'jail':
-case 'lolice':
-case 'passed':
-case 'pixelate':
-case 'red':
-case 'rgb':
-// case 'sepia':
-case 'simpcard':
-case 'threshold':
-// case 'triggered':
-case 'tweet':
-case 'wasted':
-case 'youtube-comment':
-console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
-var imgbb = require('imgbb-uploader')
-if (!isQuotedSticker) {
-var smra = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-var smri = await alpha.downloadAndSaveMediaMessage(smra, `./media/${sender}.png`)
-let smru = await imgbb(`${img_key}`, smri)
-anuk = `https://some-random-api.ml/canvas/${command}?avatar=${smru.display_url}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-} else if (!isQuotedImage) {
-var smra2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
-var smri2 = await alpha.downloadAndSaveMediaMessage(smra2, `./media/${sender}.png`)
-let smru2 = await imgbb(`${img_key}`, smri2)
-anuk = `https://some-random-api.ml/canvas/${command}?avatar=${smru2.display_url}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-} else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
-smri3 = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
-let smra3 = await alpha.getProfilePicture(smri3).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
-let smru3 = await imageToBase64(JSON.stringify(smra3).replace(/\"/gi, ''))
-fs.writeFileSync('janckuk.jpeg', smru3, 'base64')
-let smre3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
-anuk = `https://some-random-api.ml/canvas/${command}?avatar=${smre3.display_url}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-} else {
-reply1('Reply stc/img')
-}
-break
-
-case '3000years':
-case 'approved':
-case 'beautiful':
-case 'blur':
-case 'brazzers':
-case 'burn':
-case 'challenger':
-case 'circle':
-case 'contrast':
-case 'ddungeon':
-case 'deepfry':
-case 'dictator':
-case 'distort':
-case 'fire':
-case 'gay':
-case 'glitch':
-case 'greyscale':
-case 'instagram':
-case 'invert':
-case 'jail':
-case 'lookwhatkarenhave':
-case 'missionpassed':
-case 'moustache':
-case 'ps4':
-case 'redple':
-case 'rejected':
-case 'rip':
-case 'scary':
-case 'sepia':
-case 'sharpen':
-case 'sniper':
-case 'thanos':
-case 'triggered':
-case 'utatoo':
-case 'wanted':
-case 'wasted':
-console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
-var imgbb = require('imgbb-uploader')
-if (!isQuotedSticker) {
-var lpha = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-var lphi = await alpha.downloadAndSaveMediaMessage(lpha, `./media/${sender}.png`)
-let lphu = await imgbb(`${img_key}`, lphi)
-anuk = `https://api-alphabot.herokuapp.com/api/image_editor/${command}?apikey=Alphabot&url=${lphu.display_url}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-} else if (!isQuotedImage) {
-var lpha2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
-var lphi2 = await alpha.downloadAndSaveMediaMessage(lpha2, `./media/${sender}.png`)
-let lphu2 = await imgbb(`${img_key}`, lphi2)
-anuk = `https://api-alphabot.herokuapp.com/api/image_editor/${command}?apikey=Alphabot&url=${lphu2.display_url}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-} else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
-lphi3 = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
-let lpha3 = await alpha.getProfilePicture(lphi3).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
-let lphu3 = await imageToBase64(JSON.stringify(lpha3).replace(/\"/gi, ''))
-fs.writeFileSync('janckuk.jpeg', lphu3, 'base64')
-let lphe3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
-anuk = `https://api-alphabot.herokuapp.com/api/image_editor/${command}?apikey=Alphabot&url=${lphe3.display_url}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-} else {
-reply1('Reply stc/img')
-}
-break
-
-case 'animeface':
-case 'awooify':
-case 'baguette':
-case 'blurpify':
-// case 'captcha':
-case 'changemymind':
-case 'clickforhentai':
-case 'clyde':
-case 'ddlc':
-// case 'deepfry':
-// case 'fact':
-case 'iphonex':
-case 'jpeg':
-case 'kannagen':
-case 'kidnap':
-case 'kms':
-// case 'lolice':
-case 'magik':
-case 'nichijou':
-case 'osu':
-case 'phcomment':
-case 'ship':
-case 'stickbug':
-case 'threats':
-// case 'trap':
-// case 'trash':
-case 'trumptweet':
-// case 'tweet':
-case 'whowouldwin':
-console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
-var imgbb = require('imgbb-uploader')
-if (!isQuotedSticker) {
-var nka = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-var nki = await alpha.downloadAndSaveMediaMessage(nka, `./media/${sender}.png`)
-let nku = await imgbb(`${img_key}`, nki)
-titid = await fetchJson(`https://nekobot.xyz/api/imagegen?type=${command}&url=${nku.display_url}`, {method: 'get'})
-anuk = `${titid.message}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-} else if (!isQuotedImage) {
-var nka2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
-var nki2 = await alpha.downloadAndSaveMediaMessage(nka2, `./media/${sender}.png`)
-let nku2 = await imgbb(`${img_key}`, nki2)
-titid = await fetchJson(`https://nekobot.xyz/api/imagegen?type=${command}&url=${nku2.display_url}`, {method: 'get'})
-anuk = `${titid.message}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-} else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
-nki3 = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
-let nka3 = await alpha.getProfilePicture(nki3).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
-let nku3 = await imageToBase64(JSON.stringify(nka3).replace(/\"/gi, ''))
-fs.writeFileSync('janckuk.jpeg', nku3, 'base64')
-let nke3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
-titid = await fetchJson(`https://nekobot.xyz/api/imagegen?type=${command}&url=${nke3.display_url}`, {method: 'get'})
-anuk = `${titid.message}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-} else {
-reply1('Reply stc/img')
-}
-break
-
-case 'brightness':
-case 'captcha':
-case 'circle':
-case 'continued':
-case 'discordblack':
-case 'discordblue':
-case 'enhance':
-case 'gay2':
-case 'gay':
-case 'glass':
-case 'greyscale':
-case 'hitler':
-case 'invert':
-case 'komunis':
-case 'penjara':
-case 'petimati':
-case 'police':
-case 'putin':
-case 'sepia':
-case 'triger':
-case 'wasted':
-console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
-var imgbb = require('imgbb-uploader')
-if (!isQuotedSticker) {
-var jan = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-var jin = await alpha.downloadAndSaveMediaMessage(jan, `./media/${sender}.png`)
-let jun = await imgbb(`${img_key}`, jin)
-anuk = `https://janbot-api.herokuapp.com/api/imgedit/${command}?url=${jun.display_url}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-} else if (!isQuotedImage) {
-var jan2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
-var jin2 = await alpha.downloadAndSaveMediaMessage(jan2, `./media/${sender}.png`)
-let jun2 = await imgbb(`${img_key}`, jin2)
-anuk = `https://janbot-api.herokuapp.com/api/imgedit/${command}?url=${jun2.display_url}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-} else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
-jin3 = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
-let jan3 = await alpha.getProfilePicture(jin3).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
-let jun3 = await imageToBase64(JSON.stringify(jan3).replace(/\"/gi, ''))
-fs.writeFileSync('janckuk.jpeg', jun3, 'base64')
-let jen3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
-anuk = `https://janbot-api.herokuapp.com/api/imgedit/${command}?url=${jen3.display_url}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-} else {
-reply1('Reply stc/img')
-}
-break
-
-case 'ad':
-case 'airpods':
-case 'approved':
-case 'bill':
-case 'bjp':
-case 'blur':
-case 'bobross':
-case 'captcha':
-case 'circle':
-case 'communism':
-case 'confusedstonk':
-case 'continued':
-case 'crush':
-case 'delete':
-case 'discordblack':
-case 'discordblue':
-case 'facepalm':
-case 'gay':
-case 'greyscale':
-case 'hacker2':
-case 'hacker':
-case 'hitler':
-case 'invert':
-case 'jail':
-case 'karaba':
-case 'linus':
-case 'meth':
-case 'mms':
-case 'notstonk':
-case 'police':
-case 'poutine':
-// case 'removebg':
-case 'rip':
-case 'sepia':
-case 'stonk':
-case 'tatoo':
-case 'thomas':
-case 'trash':
-case 'triggered':
-case 'udf':
-case 'wanted':
-case 'what':
-console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
-var imgbb = require('imgbb-uploader')
-if (!isQuotedSticker) {
-var dpuh = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-var dpah = await alpha.downloadAndSaveMediaMessage(dpuh, `./media/${sender}.png`)
-let dpih = await imgbb(`${img_key}`, dpah)
-anuk = `https://api.dapuhy.ga/api/canvas/${command}?img=${dpih.display_url}&apikey=${dapuhy}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-} else if (!isQuotedImage) {
-var dpuh2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
-var dpah2 = await alpha.downloadAndSaveMediaMessage(dpuh2, `./media/${sender}.png`)
-let dpih2 = await imgbb(`${img_key}`, dpah2)
-anuk = `https://api.dapuhy.ga/api/canvas/${command}?img=${dpih2.display_url}&apikey=${dapuhy}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-} else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
-dpah3 = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
-let dpuh3 = await alpha.getProfilePicture(dpah3).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
-let dpih3 = await imageToBase64(JSON.stringify(dpuh3).replace(/\"/gi, ''))
-fs.writeFileSync('janckuk.jpeg', dpih3, 'base64')
-let dpeh3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
-anuk = `https://api.dapuhy.ga/api/canvas/${command}?img=${dpeh3.display_url}&apikey=${dapuhy}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-} else {
-reply1('Reply stc/img')
-}
-break
-
-case 'wroom':
-case 'text3d':
-case 'water':
-case 'blackbird':
-case 'smurf':
-case 'memories':
-if(!q) return reply1(`${emoj} Hint : ${prefix + command} noob`) 
-anuk = `https://kocakz.herokuapp.com/api/flamingtext/${command}?text=${q}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-break
-
-case 'advancedglow':
-case 'blackpink':
-case 'bloodtext':
-case 'bokehtext':
-case 'captamerica':
-case 'cloudsky':
-case 'dropwater':
-case 'equalizer':
-case 'firework':
-case 'foilballoon':
-case 'glue3d':
-case 'greenneon':
-case 'holographic':
-case 'lavatext':
-case 'luxury':
-case 'matrixtext':
-case 'metaldark':
-case 'miniontext':
-case 'neonlight':
-case 'neontext':
-case 'old1917':
-case 'realcloud':
-case 'realvintage':
-case 'sandengraved':
-case 'sandsummer':
-case 'sandsummery':
-case 'sandwrite':
-case 'text3d':
-case 'thundertext':
-case 'toxictext':
-ini_buffer = await getBuffer(`https://kocakz.herokuapp.com/api/textpro/${command}?text=${q}`)
-alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Dah selesai , Req by: ${pushname}\nKetik *${prefix}tpro_list* untuk melihat menu yang lain`})
-break
-
-case 'avengers':
-case 'glitchtext':
-case 'marvelstudio':
-case 'pornhub':
-case 'space3d':
-case 'stonetext':
-t = args.join(' ')
-t1 = t.split('|')[0]
-t2 = t.split('|')[1]
-ini_buffer = await getBuffer(`https://kocakz.herokuapp.com/api/textpro/${command}?text1=${t1}&text2=${t2}`)
-alpha.sendMessage(from, ini_buffer, MessageType.image,{quoted: mek})
-break
-
-case 'sertitolol':
-if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy Bot`) 
-buff = await getBuffer(`https://mysakura.herokuapp.com/api/serti/tolol?text=${q}&apikey=sakura404`)
-alpha.sendMessage(from, buff, image, {quoted: mek, caption : `Ketik *.serti* untuk melihat list , Req by: ${pushname}`})
-break
 
 //───────────────[ FITUR IMAGE ]───────────────//
 case 'waifu':
@@ -16462,7 +15346,7 @@ case 'bangke':
 case 'sange':
 case 'sangean':
 case 'dakjal':
-// case 'horny':
+case 'horny':
 case 'ngewibu':
 case 'puki':
 case 'pantex':
@@ -17304,82 +16188,6 @@ alpha.sendMessage(from, gambar, image, { quoted: mek, caption: "Nih kack" })
 })
 break
 
-case 'customgfx1':
-case 'kustomfx1':
-case 'fx1':
-if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy Bot`) 
-console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
-var imgbb = require('imgbb-uploader')
-if (!isQuotedSticker) {
-var fara = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-var fari = await alpha.downloadAndSaveMediaMessage(fara, `./media/${sender}.png`)
-let faru = await imgbb(`${img_key}`, fari)
-anuk = `https://api-xfar05.herokuapp.com/api/canvas/customgfx1?teks=${q}&bg=${faru.display_url}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-} else if (!isQuotedImage) {
-var fara2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
-var fari2 = await alpha.downloadAndSaveMediaMessage(fara2, `./media/${sender}.png`)
-let faru2 = await imgbb(`${img_key}`, fari2)
-anuk = `https://api-xfar05.herokuapp.com/api/canvas/customgfx1?teks=${q}&bg=${faru2.display_url}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-} else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
-fari3 = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
-let fara3 = await alpha.getProfilePicture(fari3).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
-let faru3 = await imageToBase64(JSON.stringify(fara3).replace(/\"/gi, ''))
-fs.writeFileSync('janckuk.jpeg', faru3, 'base64')
-let fare3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
-anuk = `https://api-xfar05.herokuapp.com/api/canvas/customgfx1?teks=${q}&bg=${fare3.display_url}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-} else {
-reply1('Reply stc/img')
-}
-break
-
-case 'customgfx2':
-case 'kustomfx':
-case 'fxmaker':
-if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy|Bot`) 
-var m = q
-var m1 = m.split("|")[0];
-var m2 = m.split("|")[1]; 
-console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
-var imgbb = require('imgbb-uploader')
-if (!isQuotedSticker) {
-var fara_ = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-var fari_ = await alpha.downloadAndSaveMediaMessage(fara_, `./media/${sender}.png`)
-let faru_ = await imgbb(`${img_key}`, fari_)
-anuk = `https://api-xfar05.herokuapp.com/api/canvas/customgfx2?teks1=${m1}&teks2=${m2}&bg=${faru_.display_url}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-} else if (!isQuotedImage) {
-var fara_2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
-var fari_2 = await alpha.downloadAndSaveMediaMessage(fara_2, `./media/${sender}.png`)
-let faru_2 = await imgbb(`${img_key}`, fari_2)
-anuk = `https://api-xfar05.herokuapp.com/api/canvas/customgfx2?teks1=${m1}&teks2=${m2}&bg=${faru_2.display_url}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-} else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
-fari_3 = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
-let fara_3 = await alpha.getProfilePicture(fari_3).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
-let faru_3 = await imageToBase64(JSON.stringify(fara_3).replace(/\"/gi, ''))
-fs.writeFileSync('janckuk.jpeg', faru_3, 'base64')
-let fare_3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
-anuk = `https://api-xfar05.herokuapp.com/api/canvas/customgfx2?teks1=${m1}&teks2=${m2}&bg=${fare_3.display_url}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-} else {
-reply1('Reply stc/img')
-}
-break
 
 case 'gfx1':
 case 'gfx2':
@@ -17437,40 +16245,7 @@ alpha.sendMessage(from, nama_, image, {quoted: mek})
 fs.unlinkSync('./stickmeme.jpeg')
 break
 
-case 'xnxxmeme':
-if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy Bot`) 
-console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
-var imgbb = require('imgbb-uploader')
-if (!isQuotedSticker) {
-var fara__ = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-var fari__ = await alpha.downloadAndSaveMediaMessage(fara__, `./media/${sender}.png`)
-let faru__ = await imgbb(`${img_key}`, fari__)
-anuk = `https://api-xfar05.herokuapp.com/api/canvas/xnxx?pp=${faru__.display_url}&username=${q}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-} else if (!isQuotedImage) {
-var fara__2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
-var fari__2 = await alpha.downloadAndSaveMediaMessage(fara__2, `./media/${sender}.png`)
-let faru__2 = await imgbb(`${img_key}`, fari__2)
-anuk = `https://api-xfar05.herokuapp.com/api/canvas/xnxx?pp=${faru__2.display_url}&username=${q}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-} else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
-fari__3 = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
-let fara__3 = await alpha.getProfilePicture(fari__3).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
-let faru__3 = await imageToBase64(JSON.stringify(fara__3).replace(/\"/gi, ''))
-fs.writeFileSync('janckuk.jpeg', faru__3, 'base64')
-let fare__3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
-anuk = `https://api-xfar05.herokuapp.com/api/canvas/xnxx?pp=${fare__3.display_url}&username=${q}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-} else {
-reply1('Reply stc/img')
-}
-break
+
 
 case 'nagasepi':
 case 'sepi':
@@ -17765,39 +16540,7 @@ quoted: mek, sendEphemeral: true
 })
 break
 
-case 'yugioh':
-if (!q)return reply1(`*${emoj} Hint :* ${prefix + command} teks1|teks2|teks3|teks4`)
-t = args.join(' ')
-t1 = t.split('|')[0]
-t2 = t.split('|')[1]
-t3 = t.split('|')[2]
-t4 = t.split('|')[3]
-console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
-var imgbb = require('imgbb-uploader')
-if (!isQuotedSticker) {
-var yug = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-var yig = await alpha.downloadAndSaveMediaMessage(yug, `./media/${sender}.png`)
-let yeg = await imgbb(`${img_key}`, yig)
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `https://api.lolhuman.xyz/api/yugioh?apikey=${lolkey}&img=${yeg.display_url}&title=${t1}&desc=${t2}&atk=${t3}&def=${t4}`, mek)
-} else if (!isQuotedImage) {
-var yug2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
-var yig2 = await alpha.downloadAndSaveMediaMessage(yug2, `./media/${sender}.png`)
-let yeg2 = await imgbb(`${img_key}`, yig2)
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `https://api.lolhuman.xyz/api/yugioh?apikey=${lolkey}&img=${yeg2.display_url}&title=${t1}&desc=${t2}&atk=${t3}&def=${t4}`, mek)
-} else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
-yig3 = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
-let yug3 = await alpha.getProfilePicture(yig3).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
-let yeg3 = await imageToBase64(JSON.stringify(yug3).replace(/\"/gi, ''))
-fs.writeFileSync('janckuk.jpeg', yeg3, 'base64')
-let yog3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `https://api.lolhuman.xyz/api/yugioh?apikey=${lolkey}&img=${yog3.display_url}&title=${t1}&desc=${t2}&atk=${t3}&def=${t4}`, mek)
-} else {
-reply1('Reply stc/img')
-}
-break
+
 
 case 'toloserti':
 case 'fuckboy':
@@ -18477,6 +17220,1320 @@ await alpha.sendMessage(from, quot_2, MessageType.listMessage, {
 "mentionedJid" : [sender]},
 quoted: mek, sendEphemeral: true
 })
+break
+//───────────────[ FITUR MAKER ]───────────────//
+
+case 'wanted':
+case 'utatoo':
+case 'unsharpen':
+case 'thanos':
+case 'sniper':
+case 'sharpen':
+case 'sepia':
+case 'scary':
+case 'rip':
+case 'redple':
+case 'rejected':
+case 'posterize':
+case 'ps4':
+case 'pixelize':
+case 'missionpassed':
+case 'moustache':
+case 'lookwhatkarenhave':
+case 'jail':
+case 'invert':
+case 'instagram':
+case 'greyscale':
+case 'glitch':
+case 'gay':
+case 'frame':
+case 'fire':
+case 'distort':
+case 'dictator':
+case 'deepfry':
+case 'ddungeon':
+case 'circle':
+case 'challenger':
+case 'burn':
+case 'brazzers':
+case 'beautiful':
+console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
+var imgbb = require('imgbb-uploader')
+if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
+// Wait //
+var bioij = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+var delib = await alpha.downloadAndSaveMediaMessage(bioij, `./media/${sender}.png`)
+let datau = await imgbb(`${img_key}`, delib)
+anuk = `${datau.display_url}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+imoj = await ameApi.generate(ini_gen, { url: anuk})
+alpha.sendFile(from, imoj, `${sender}.png`, null, mek, {thumbnail: thumbnya})
+sendStickerFromUrl(from, `${emoj}`, mek)
+} else {
+// Wait //
+ghost = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
+let oppp = await alpha.getProfilePicture(ghost).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
+let medianya = await getBuffer(oppp)
+let datae = await imageToBase64(JSON.stringify(oppp).replace(/\"/gi, ''))
+fs.writeFileSync('janckuk.jpeg', datae, 'base64')
+let odata = await imgbb(`${img_key}`, 'janckuk.jpeg')
+anuk = `${odata.display_url}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+imoj = await ameApi.generate(ini_gen, { url: anuk})
+alpha.sendFile(from, imoj, `${sender}.png`, null, mek, {thumbnail: medianya})
+sendStickerFromUrl(from, `${emoj}`, mek)
+}
+break
+
+case 'blue':
+case 'blur':
+case 'blurple':
+case 'blurple2':
+case 'brightness':
+case 'color':
+case 'colorviewer':
+case 'comrade':
+case 'gay':
+case 'glass':
+case 'green':
+case 'greyscale':
+case 'hex':
+case 'horny':
+case 'invert':
+case 'invertgreyscale':
+case 'its-so-stupid':
+case 'jail':
+case 'lolice':
+case 'passed':
+case 'pixelate':
+case 'red':
+case 'rgb':
+case 'sepia':
+case 'simpcard':
+case 'threshold':
+case 'triggered':
+case 'tweet':
+case 'wasted':
+case 'youtube-comment':
+console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
+var imgbb = require('imgbb-uploader')
+if (!isQuotedSticker) {
+var smra = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+var smri = await alpha.downloadAndSaveMediaMessage(smra, `./media/${sender}.png`)
+let smru = await imgbb(`${img_key}`, smri)
+anuk = `https://some-random-api.ml/canvas/${command}?avatar=${smru.display_url}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+ini_buffer = await getBuffer(`${anuk}`)
+alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+} else if (!isQuotedImage) {
+var smra2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
+var smri2 = await alpha.downloadAndSaveMediaMessage(smra2, `./media/${sender}.png`)
+let smru2 = await imgbb(`${img_key}`, smri2)
+anuk = `https://some-random-api.ml/canvas/${command}?avatar=${smru2.display_url}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+ini_buffer = await getBuffer(`${anuk}`)
+alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+} else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
+smri3 = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
+let smra3 = await alpha.getProfilePicture(smri3).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
+let smru3 = await imageToBase64(JSON.stringify(smra3).replace(/\"/gi, ''))
+fs.writeFileSync('janckuk.jpeg', smru3, 'base64')
+let smre3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
+anuk = `https://some-random-api.ml/canvas/${command}?avatar=${smre3.display_url}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+ini_buffer = await getBuffer(`${anuk}`)
+alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+} else {
+reply1('Reply stc/img')
+}
+break
+
+case 'burnpaper':
+case 'butterfly':
+case 'coffecup':
+case 'coffecup2':
+case 'csgobanner':
+case 'cup':
+case 'cup2':
+case 'doubleheart':
+case 'flaming':
+case 'greenleaves':
+case 'harrypotter':
+case 'lolbanner':
+case 'lovemessage':
+case 'naruto':
+case 'nightsky':
+case 'romantic':
+case 'roses':
+case 'shadow':
+case 'smoke':
+case 'undergrass':
+case 'underwater':
+case 'whitecube':
+case 'wolfmetal':
+if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy Bot`) 
+let poxy_1 = await getBuffer(`https://api.dapuhy.ga/api/photooxy/${command}?text=${q}&apikey=${dapuhy}`);
+const poxy_3 = await alpha.prepareMessage(from, poxy_1, MessageType.image, { thumbnail:thumb_oxy})
+let poxy_2 = poxy_3.message["ephemeralMessage"] ? poxy_3.message.ephemeralMessage : poxy_3
+poxy_5 = `*${jwb_oke}* ${emoj}`
+const poxy_6 = [
+{buttonId: 'x_menu', buttonText: {displayText: `⬅️ Menu`}, type: 1},
+{buttonId: `${command} ${q}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+]
+const poxy_7 = {
+contentText: poxy_5 ,
+footerText: `Thanks @${sender.split("@")[0]} !`,
+buttons: poxy_6,
+headerType: 4,
+imageMessage: poxy_2.message.imageMessage
+}
+alpha.sendMessage(from, poxy_7, MessageType.buttonsMessage,{
+"contextInfo": {
+"forwardingScore": 999,isForwarded: false,
+"externalAdReply": {
+"title": `${ucapannya2}` ,
+"body": `${botname}`,
+"sourceUrl": apiku,
+"thumbnail": thumb_oxy},
+"mentionedJid" : [sender]},
+quoted: mek, sendEphemeral: true
+})
+break
+
+case '3dbox':
+case '3dglowing':
+case '3dglue':
+case '3dneonlight':
+case '3dstone':
+case '3dunderwater':
+case 'abstragold':
+case 'artpapercut':
+case 'bearlogo':
+case 'berry':
+case 'biscuit':
+case 'blackpink':
+case 'blood':
+case 'bluegem':
+case 'bluemetal':
+case 'bokeh':
+case 'bread':
+case 'breakwall':
+case 'brokenglass':
+case 'bronzeglitter':
+case 'captainamerica':
+case 'chocolatecake':
+case 'christmas':
+case 'cloud2':
+case 'cloud':
+case 'decorategreen':
+case 'deluxesilver':
+case 'denim':
+case 'dropwater':
+case 'embossed':
+case 'engraved3d':
+case 'erodedmetal':
+case 'fabric':
+case 'fiction':
+case 'fireworksparkle':
+case 'fruitjuice':
+case 'futuristic':
+case 'glosycarbon':
+case 'greenhorror':
+case 'greenneon':
+case 'halloween':
+case 'harrypotter':
+case 'holographic':
+case 'honey':
+case 'horror':
+case 'horrorblood':
+case 'icecold':
+case 'koifish':
+case 'lava':
+case 'logojoker':
+case 'luxurygold':
+case 'magmahot':
+case 'marble':
+case 'matrixstyle':
+case 'metaldark':
+case 'metalpurple':
+case 'metalrainbow':
+case 'minion':
+case 'naturalleaves':
+case 'neon2':
+case 'neon':
+case 'neondevil':
+case 'neonlight2':
+case 'neonlight':
+case 'newyear2':
+case 'newyear':
+case 'pinksparkling':
+case 'plasticbagdrug':
+case 'pupleglass':
+case 'purplegem':
+case 'purpleshiny':
+case 'rainbowequalizer':
+case 'roadwarning':
+case 'robot':
+case 'rock':
+case 'rusymetal':
+case 'shinymetal':
+case 'skeleton':
+case 'snow':
+case 'steel':
+case 'strawberry':
+case 'summerbeach':
+case 'summery':
+case 'thunder':
+case 'toxic':
+case 'transformer':
+case 'ultragloss':
+case 'wicker':
+case 'wonderfulgraffiti':
+case 'wood':
+case 'writing':
+case 'xmascards':
+case 'yellowglass':
+case 'yellowjewelry':
+if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy Bot`) 
+let txtpr_1 = await getBuffer(`https://api.dapuhy.ga/api/textpro/${command}?text=${q}&apikey=${dapuhy}`);
+const txtpr_3 = await alpha.prepareMessage(from, txtpr_1, MessageType.image, { thumbnail:thumb_pro})
+let txtpr_2 = txtpr_3.message["ephemeralMessage"] ? txtpr_3.message.ephemeralMessage : txtpr_3
+txtpr_5 = `*${jwb_oke}* ${emoj}`
+const txtpr_6 = [
+{buttonId: 'x_menu', buttonText: {displayText: `⬅️ Menu`}, type: 1},
+{buttonId: `textpro_list`, buttonText: {displayText: 'Textpro List'}, type: 1}
+]
+const txtpr_7 = {
+contentText: txtpr_5 ,
+footerText: `Thanks @${sender.split("@")[0]} !`,
+buttons: txtpr_6,
+headerType: 4,
+imageMessage: txtpr_2.message.imageMessage
+}
+alpha.sendMessage(from, txtpr_7, MessageType.buttonsMessage,{
+"contextInfo": {
+"forwardingScore": 999,isForwarded: false,
+"externalAdReply": {
+"title": `${ucapannya2}` ,
+"body": `${botname}`,
+"sourceUrl": apiku,
+"thumbnail": thumb_pro},
+"mentionedJid" : [sender]},
+quoted: mek, sendEphemeral: true
+})
+break
+
+case '3dcrack':
+case '3dhologram':
+case '3dshiny':
+case '3dunderwater':
+case '1917':
+case 'artpapercut':
+case 'bearlogo':
+case 'birthdaycake':
+case 'blackpink':
+case 'blackpinkneon':
+case 'brokenglass':
+case 'cake':
+case 'cakes':
+case 'cloud':
+case 'clouds':
+case 'galaxy':
+case 'galaxybat':
+case 'galaxystyle':
+case 'glow':
+case 'glowing':
+case 'graffiti2':
+case 'graffiti3':
+case 'graffiti5':
+case 'graffiti':
+case 'graffiticolor':
+case 'greenbrush':
+case 'hotmetalic':
+case 'lighteffects':
+case 'lightgalaxy':
+case 'metal':
+case 'neon2':
+case 'neon':
+case 'neondevil':
+case 'neonlight':
+case 'pubgmascot':
+case 'snake':
+case 'startsnight2':
+case 'startsnight':
+case 'summerbeach2':
+case 'summerbeach':
+case 'thunder':
+case 'watercolor':
+case 'wetglass':
+case 'wooden3d':
+case 'wordgreen':
+case 'writingchalk':
+case 'zombie3d':
+if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy Bot`) 
+let ephto_1 = await getBuffer(`https://api.dapuhy.ga/api/ephoto/${command}?text=${q}&apikey=${dapuhy}`);
+const ephto_3 = await alpha.prepareMessage(from, ephto_1, MessageType.image, { thumbnail:thumb_epho})
+let ephto_2 = ephto_3.message["ephemeralMessage"] ? ephto_3.message.ephemeralMessage : ephto_3
+ephto_5 = `*${jwb_oke}* ${emoj}`
+const ephto_6 = [
+{buttonId: 'x_menu', buttonText: {displayText: `⬅️ Menu`}, type: 1},
+{buttonId: `ephoto_list`, buttonText: {displayText: 'Ephoto List'}, type: 1}
+]
+const ephto_7 = {
+contentText: ephto_5 ,
+footerText: `Thanks @${sender.split("@")[0]} !`,
+buttons: ephto_6,
+headerType: 4,
+imageMessage: ephto_2.message.imageMessage
+}
+alpha.sendMessage(from, ephto_7, MessageType.buttonsMessage,{
+"contextInfo": {
+"forwardingScore": 999,isForwarded: false,
+"externalAdReply": {
+"title": `${ucapannya2}` ,
+"body": `${botname}`,
+"sourceUrl": apiku,
+"thumbnail": thumb_epho},
+"mentionedJid" : [sender]},
+quoted: mek, sendEphemeral: true
+})
+break
+
+case 'airballoon':
+case 'beachsign':
+case 'blinkinglights':
+case 'bracelet':
+case 'cemeterygates':
+case 'christmas':
+case 'denimembroidery':
+case 'einstein':
+case 'fortunecookie':
+case 'lightgraffiti':
+case 'lightwriting':
+case 'lovelock':
+case 'neonsign':
+case 'nightmare':
+case 'pendant':
+case 'planebanner':
+case 'rugbyball':
+case 'rustywriting':
+if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy Bot`) 
+let pfun_1 = await getBuffer(`https://api.dapuhy.ga/api/photofunia/${command}?text=${q}&apikey=${dapuhy}`);
+const pfun_3 = await alpha.prepareMessage(from, pfun_1, MessageType.image, { thumbnail:thumb_pfun})
+let pfun_2 = pfun_3.message["ephemeralMessage"] ? pfun_3.message.ephemeralMessage : pfun_3
+pfun_5 = `*${jwb_oke}* ${emoj}`
+const pfun_6 = [
+{buttonId: 'x_menu', buttonText: {displayText: `⬅️ Menu`}, type: 1},
+{buttonId: `pfun_list`, buttonText: {displayText: `${emoj} Photofunia List`}, type: 1}
+]
+const pfun_7 = {
+contentText: pfun_5 ,
+footerText: `Thanks @${sender.split("@")[0]} !`,
+buttons: pfun_6,
+headerType: 4,
+imageMessage: pfun_2.message.imageMessage
+}
+alpha.sendMessage(from, pfun_7, MessageType.buttonsMessage,{
+"contextInfo": {
+"forwardingScore": 999,isForwarded: false,
+"externalAdReply": {
+"title": `${ucapannya2}` ,
+"body": `${botname}`,
+"sourceUrl": apiku,
+"thumbnail": thumb_pfun},
+"mentionedJid" : [sender]},
+quoted: mek, sendEphemeral: true
+})
+break
+
+case 'brightness':
+case 'captcha':
+case 'circle':
+case 'continued':
+case 'discordblack':
+case 'discordblue':
+case 'enhance':
+case 'gay2':
+case 'gay':
+case 'glass':
+case 'greyscale':
+case 'hitler':
+case 'invert':
+case 'komunis':
+case 'penjara':
+case 'petimati':
+case 'police':
+case 'putin':
+case 'sepia':
+case 'triger':
+case 'wasted':
+console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
+var imgbb = require('imgbb-uploader')
+if (!isQuotedSticker) {
+var jan = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+var jin = await alpha.downloadAndSaveMediaMessage(jan, `./media/${sender}.png`)
+let jun = await imgbb(`${img_key}`, jin)
+anuk = `https://janbot-api.herokuapp.com/api/imgedit/${command}?url=${jun.display_url}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+ini_buffer = await getBuffer(`${anuk}`)
+alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+} else if (!isQuotedImage) {
+var jan2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
+var jin2 = await alpha.downloadAndSaveMediaMessage(jan2, `./media/${sender}.png`)
+let jun2 = await imgbb(`${img_key}`, jin2)
+anuk = `https://janbot-api.herokuapp.com/api/imgedit/${command}?url=${jun2.display_url}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+ini_buffer = await getBuffer(`${anuk}`)
+alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+} else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
+jin3 = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
+let jan3 = await alpha.getProfilePicture(jin3).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
+let jun3 = await imageToBase64(JSON.stringify(jan3).replace(/\"/gi, ''))
+fs.writeFileSync('janckuk.jpeg', jun3, 'base64')
+let jen3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
+anuk = `https://janbot-api.herokuapp.com/api/imgedit/${command}?url=${jen3.display_url}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+ini_buffer = await getBuffer(`${anuk}`)
+alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+} else {
+reply1('Reply stc/img')
+}
+break
+
+case 'animeface':
+case 'awooify':
+case 'baguette':
+case 'blurpify':
+case 'captcha':
+case 'changemymind':
+case 'clickforhentai':
+case 'clyde':
+case 'ddlc':
+case 'deepfry':
+case 'fact':
+case 'iphonex':
+case 'jpeg':
+case 'kannagen':
+case 'kidnap':
+case 'kms':
+case 'lolice':
+case 'magik':
+case 'nichijou':
+case 'osu':
+case 'phcomment':
+case 'ship':
+case 'stickbug':
+case 'threats':
+case 'trap':
+case 'trash':
+case 'trumptweet':
+case 'tweet':
+case 'whowouldwin':
+console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
+var imgbb = require('imgbb-uploader')
+if (!isQuotedSticker) {
+var nka = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+var nki = await alpha.downloadAndSaveMediaMessage(nka, `./media/${sender}.png`)
+let nku = await imgbb(`${img_key}`, nki)
+titid = await fetchJson(`https://nekobot.xyz/api/imagegen?type=${command}&url=${nku.display_url}`, {method: 'get'})
+anuk = `${titid.message}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+ini_buffer = await getBuffer(`${anuk}`)
+alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+} else if (!isQuotedImage) {
+var nka2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
+var nki2 = await alpha.downloadAndSaveMediaMessage(nka2, `./media/${sender}.png`)
+let nku2 = await imgbb(`${img_key}`, nki2)
+titid = await fetchJson(`https://nekobot.xyz/api/imagegen?type=${command}&url=${nku2.display_url}`, {method: 'get'})
+anuk = `${titid.message}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+ini_buffer = await getBuffer(`${anuk}`)
+alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+} else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
+nki3 = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
+let nka3 = await alpha.getProfilePicture(nki3).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
+let nku3 = await imageToBase64(JSON.stringify(nka3).replace(/\"/gi, ''))
+fs.writeFileSync('janckuk.jpeg', nku3, 'base64')
+let nke3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
+titid = await fetchJson(`https://nekobot.xyz/api/imagegen?type=${command}&url=${nke3.display_url}`, {method: 'get'})
+anuk = `${titid.message}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+ini_buffer = await getBuffer(`${anuk}`)
+alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+} else {
+reply1('Reply stc/img')
+}
+break
+
+case 'ad':
+case 'airpods':
+case 'approved':
+case 'bill':
+case 'bjp':
+case 'blur':
+case 'bobross':
+case 'captcha':
+case 'circle':
+case 'communism':
+case 'confusedstonk':
+case 'continued':
+case 'crush':
+case 'delete':
+case 'discordblack':
+case 'discordblue':
+case 'facepalm':
+case 'gay':
+case 'greyscale':
+case 'hacker2':
+case 'hacker':
+case 'hitler':
+case 'invert':
+case 'jail':
+case 'karaba':
+case 'linus':
+case 'meth':
+case 'mms':
+case 'notstonk':
+case 'police':
+case 'poutine':
+case 'removebg':
+case 'rip':
+case 'sepia':
+case 'stonk':
+case 'tatoo':
+case 'thomas':
+case 'trash':
+case 'triggered':
+case 'udf':
+case 'wanted':
+case 'what':
+console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
+var imgbb = require('imgbb-uploader')
+if (!isQuotedSticker) {
+var dpuh = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+var dpah = await alpha.downloadAndSaveMediaMessage(dpuh, `./media/${sender}.png`)
+let dpih = await imgbb(`${img_key}`, dpah)
+anuk = `https://api.dapuhy.ga/api/canvas/${command}?img=${dpih.display_url}&apikey=${dapuhy}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+ini_buffer = await getBuffer(`${anuk}`)
+alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+} else if (!isQuotedImage) {
+var dpuh2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
+var dpah2 = await alpha.downloadAndSaveMediaMessage(dpuh2, `./media/${sender}.png`)
+let dpih2 = await imgbb(`${img_key}`, dpah2)
+anuk = `https://api.dapuhy.ga/api/canvas/${command}?img=${dpih2.display_url}&apikey=${dapuhy}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+ini_buffer = await getBuffer(`${anuk}`)
+alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+} else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
+dpah3 = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
+let dpuh3 = await alpha.getProfilePicture(dpah3).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
+let dpih3 = await imageToBase64(JSON.stringify(dpuh3).replace(/\"/gi, ''))
+fs.writeFileSync('janckuk.jpeg', dpih3, 'base64')
+let dpeh3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
+anuk = `https://api.dapuhy.ga/api/canvas/${command}?img=${dpeh3.display_url}&apikey=${dapuhy}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+ini_buffer = await getBuffer(`${anuk}`)
+alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+} else {
+reply1('Reply stc/img')
+}
+break
+
+case '3000years':
+case 'approved':
+case 'beautiful':
+case 'blur':
+case 'brazzers':
+case 'burn':
+case 'challenger':
+case 'circle':
+case 'contrast':
+case 'ddungeon':
+case 'deepfry':
+case 'dictator':
+case 'distort':
+case 'fire':
+case 'gay':
+case 'glitch':
+case 'greyscale':
+case 'instagram':
+case 'invert':
+case 'jail':
+case 'lookwhatkarenhave':
+case 'missionpassed':
+case 'moustache':
+case 'ps4':
+case 'redple':
+case 'rejected':
+case 'rip':
+case 'scary':
+case 'sepia':
+case 'sharpen':
+case 'sniper':
+case 'thanos':
+case 'triggered':
+case 'utatoo':
+case 'wanted':
+case 'wasted':
+console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
+var imgbb = require('imgbb-uploader')
+if (!isQuotedSticker) {
+var lpha = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+var lphi = await alpha.downloadAndSaveMediaMessage(lpha, `./media/${sender}.png`)
+let lphu = await imgbb(`${img_key}`, lphi)
+anuk = `https://api-alphabot.herokuapp.com/api/image_editor/${command}?apikey=Alphabot&url=${lphu.display_url}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+ini_buffer = await getBuffer(`${anuk}`)
+alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+} else if (!isQuotedImage) {
+var lpha2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
+var lphi2 = await alpha.downloadAndSaveMediaMessage(lpha2, `./media/${sender}.png`)
+let lphu2 = await imgbb(`${img_key}`, lphi2)
+anuk = `https://api-alphabot.herokuapp.com/api/image_editor/${command}?apikey=Alphabot&url=${lphu2.display_url}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+ini_buffer = await getBuffer(`${anuk}`)
+alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+} else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
+lphi3 = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
+let lpha3 = await alpha.getProfilePicture(lphi3).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
+let lphu3 = await imageToBase64(JSON.stringify(lpha3).replace(/\"/gi, ''))
+fs.writeFileSync('janckuk.jpeg', lphu3, 'base64')
+let lphe3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
+anuk = `https://api-alphabot.herokuapp.com/api/image_editor/${command}?apikey=Alphabot&url=${lphe3.display_url}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+ini_buffer = await getBuffer(`${anuk}`)
+alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+} else {
+reply1('Reply stc/img')
+}
+break
+
+//2 TEXT
+case 'captain_as':
+case 'smoke':
+case 'tiktok2': 
+case 'arcade':
+case 'battlefield':
+case 'pubg':
+if (!q) return reply1(lang.tahta(prefix, command))
+var m = q
+var m1 = m.split("|")[0];
+var m2 = m.split("|")[1]; 
+let oxy2_ = await getBuffer(`https://api-alphabot.herokuapp.com/api/photooxy/${command}?apikey=Alphabot&text=${m1}&text2=${m2}`)
+let oxy2_1 = await getBuffer(oxy2_);
+const oxy2_3 = await alpha.prepareMessage(from, oxy2_1, MessageType.image, { thumbnail:thumb_pro})
+let oxy2_2 = oxy2_3.message["ephemeralMessage"] ? oxy2_3.message.ephemeralMessage : oxy2_3
+oxy2_5 = `*${jwb_oke}* ${emoj}`
+const oxy2_6 = [
+{buttonId: 'x_menu', buttonText: {displayText: `⬅️ Menu`}, type: 1},
+{buttonId: `oxy_list`, buttonText: {displayText: `${emoj} PhotoOxy List`}, type: 1}
+]
+const oxy2_7 = {
+contentText: oxy2_5 ,
+footerText: `Thanks @${sender.split("@")[0]} !`,
+buttons: oxy2_6,
+headerType: 4,
+imageMessage: oxy2_2.message.imageMessage
+}
+alpha.sendMessage(from, oxy2_7, MessageType.buttonsMessage,{
+"contextInfo": {
+"forwardingScore": 999,isForwarded: false,
+"externalAdReply": {
+"title": `${ucapannya2}` ,
+"body": `${botname}`,
+"sourceUrl": apiku,
+"thumbnail": thumb_pro},
+"mentionedJid" : [sender]},
+quoted: mek, sendEphemeral: true
+})
+break
+
+//1 TEXT
+case '3dglowing':
+case '3dligth':
+case '3dnature':
+case '3dsummer':
+case 'avatar':
+case 'bcake':
+case 'burnpaper':
+case 'butterfly':
+case 'camouflage':
+case 'cemetery':
+case 'cname':
+case 'coffecup2':
+case 'coffeecup':
+case 'crisp':
+case 'embroidery':
+case 'flaming':
+case 'flower':
+case 'funnycup':
+case 'fur':
+case 'glowneon':
+case 'glowrainbow':
+case 'goldenrose':
+case 'graffiti':
+case 'harry':
+case 'heart':
+case 'honey':
+case 'luxury':
+case 'metallic':
+case 'nightsky':
+case 'rainbow':
+case 'romantic':
+case 'shadow':
+case 'simple':
+case 'smoke':
+case 'smokyneon':
+case 'striking':
+case 'sweet':
+case 'typography':
+case 'typography':
+case 'underfall':
+case 'underflower2':
+case 'underflower':
+case 'undergrass':
+case 'underwater':
+case 'vector':
+case 'vintage':
+case 'watermelon':
+case 'whitecube':
+case 'wolf_metal':
+case 'wood':
+case 'woodblock':
+case 'wooden':
+if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy Bot`) 
+let oxxy_1 = await getBuffer(`https://api-alphabot.herokuapp.com/api/photooxy/${command}?apikey=Alphabot&text=${q}`);
+const oxxy_3 = await alpha.prepareMessage(from, oxxy_1, MessageType.image, { thumbnail:thumb_pro})
+let oxxy_2 = oxxy_3.message["ephemeralMessage"] ? oxxy_3.message.ephemeralMessage : oxxy_3
+oxxy_5 = `*${jwb_oke}* ${emoj}`
+const oxxy_6 = [
+{buttonId: 'x_menu', buttonText: {displayText: `⬅️ Menu`}, type: 1},
+{buttonId: `oxy_list`, buttonText: {displayText: `${emoj} PhotoOxy List`}, type: 1}
+]
+const oxxy_7 = {
+contentText: oxxy_5 ,
+footerText: `Thanks @${sender.split("@")[0]} !`,
+buttons: oxxy_6,
+headerType: 4,
+imageMessage: oxxy_2.message.imageMessage
+}
+alpha.sendMessage(from, oxxy_7, MessageType.buttonsMessage,{
+"contextInfo": {
+"forwardingScore": 999,isForwarded: false,
+"externalAdReply": {
+"title": `${ucapannya2}` ,
+"body": `${botname}`,
+"sourceUrl": apiku,
+"thumbnail": thumb_pro},
+"mentionedJid" : [sender]},
+quoted: mek, sendEphemeral: true
+})
+break
+
+//2 TEXT
+case 'halloween2':
+case 'horror':
+case 'game8bit':
+case 'layered':
+case 'glitch2':
+case 'coolg':
+case 'coolwg':
+case 'realistic':
+case 'space3d':
+case 'gtiktok':
+case 'stone':
+case 'marvel':
+case 'marvel2':
+case 'pornhub':
+case 'avengers':
+case 'metalr':
+case 'metalg':
+case 'metalg2':
+case 'halloween2':
+case 'lion':
+case 'wolf_bw':
+case 'wolf_g':
+case 'ninja':
+case '3dsteel':
+case 'horror2':
+case 'lava':
+case 'bagel':
+if (!q) return reply1(lang.tahta(prefix, command))
+var m = q
+var m1 = m.split("|")[0];
+var m2 = m.split("|")[1]; 
+let tpr2_ = await getBuffer(`https://api-alphabot.herokuapp.com/api/textpro/${command}?apikey=Alphabot&text=${m1}&text2=${m2}`)
+let tpr2_1 = await getBuffer(tpr2_);
+const tpr2_3 = await alpha.prepareMessage(from, tpr2_1, MessageType.image, { thumbnail:thumb_pro})
+let tpr2_2 = tpr2_3.message["ephemeralMessage"] ? tpr2_3.message.ephemeralMessage : tpr2_3
+tpr2_5 = `*${jwb_oke}* ${emoj}`
+const tpr2_6 = [
+{buttonId: 'x_menu', buttonText: {displayText: `⬅️ Menu`}, type: 1},
+{buttonId: `textpro_list`, buttonText: {displayText: 'TextPro List'}, type: 1}
+]
+const tpr2_7 = {
+contentText: tpr2_5 ,
+footerText: `Thanks @${sender.split("@")[0]} !`,
+buttons: tpr2_6,
+headerType: 4,
+imageMessage: tpr2_2.message.imageMessage
+}
+alpha.sendMessage(from, tpr2_7, MessageType.buttonsMessage,{
+"contextInfo": {
+"forwardingScore": 999,isForwarded: false,
+"externalAdReply": {
+"title": `${ucapannya2}` ,
+"body": `${botname}`,
+"sourceUrl": apiku,
+"thumbnail": thumb_pro},
+"mentionedJid" : [sender]},
+quoted: mek, sendEphemeral: true
+})
+break 
+//1 TEXT
+case '3dbox':
+case '3dchrome':
+case '3dglue':
+case '3dstone':
+case 'abstra':
+case 'advanced':
+case 'balloon2':
+case 'balloon3':
+case 'balloon4':
+case 'balloon5':
+case 'balloon6':
+case 'balloon7':
+case 'balloon':
+case 'bear':
+case 'berry':
+case 'biscuit':
+case 'blackpink':
+case 'blood2':
+case 'blood':
+case 'bokeh':
+case 'bread':
+case 'broken':
+case 'candy':
+case 'captain_as2':
+case 'carbon':
+case 'chocolate':
+case 'chrismast':
+case 'christmas':
+case 'cloudsky':
+case 'darkg':
+case 'decorate2':
+case 'decorate':
+case 'decorative':
+case 'deluxe2':
+case 'demon':
+case 'denim':
+case 'discovery':
+case 'dropwater':
+case 'drug':
+case 'embossed':
+case 'engraved':
+case 'equalizer':
+case 'fabric':
+case 'fiction':
+case 'firework':
+case 'gemb':
+case 'glass2':
+case 'glass3':
+case 'glass4':
+case 'glass5':
+case 'glass6':
+case 'glass7':
+case 'glass8':
+case 'glass':
+case 'glitch':
+case 'glitter2':
+case 'glitter3':
+case 'glitter4':
+case 'glitter5':
+case 'glitter6':
+case 'glitter7':
+case 'glitter':
+case 'gloss':
+case 'glossy':
+case 'glossyb':
+case 'glossyc':
+case 'gneon':
+case 'golden':
+case 'gradient2':
+case 'gradient':
+case 'halloween':
+case 'harry_potter':
+case 'holographic':
+case 'honey':
+case 'ice':
+case 'jewelry2':
+case 'jewelry3':
+case 'jewelry4':
+case 'jewelry5':
+case 'jewelry6':
+case 'jewelry7':
+case 'jewelry8':
+case 'jewelry':
+case 'joker':
+case 'juice':
+case 'koifish':
+case 'luxury':
+case 'magma':
+case 'marble2':
+case 'marble':
+case 'matrix':
+case 'metalb2':
+case 'metalb':
+case 'metaldark':
+case 'metale':
+case 'metalg':
+case 'metalh':
+case 'metallic':
+case 'metalr':
+case 'metals':
+case 'minion':
+case 'multicolor':
+case 'natural':
+case 'neon2':
+case 'neon':
+case 'neonc':
+case 'neonlight':
+case 'neonligth2':
+case 'neon_devil':
+case 'neon_light':
+case 'newyear2':
+case 'newyear':
+case 'oscar':
+case 'papercut':
+case 'peridot':
+case 'purple':
+case 'purpleg':
+case 'rainbow':
+case 'roadw':
+case 'robot':
+case 'rock':
+case 'rusty':
+case 'scifi':
+case 'shiny':
+case 'sircuit':
+case 'skeleton':
+case 'sketch':
+case 'snow':
+case 'sparkling2':
+case 'sparkling3':
+case 'sparkling4':
+case 'sparkling5':
+case 'sparkling6':
+case 'sparkling7':
+case 'sparkling':
+case 'steel':
+case 'strawberry':
+case 'summer':
+case 'summery':
+case 'thunder2':
+case 'thunder':
+case 'toxic':
+case 'transformer':
+case 'underwater':
+case 'wall':
+case 'watercolor':
+case 'water_pipe':
+case 'wicker':
+case 'wonderfulg':
+case 'wood':
+case 'writing':
+case 'xmas':
+if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy Bot`) 
+let tpr_1 = await getBuffer(`https://api-alphabot.herokuapp.com/api/textpro/${command}?text=${q}&apikey=Alphabot`);
+const tpr_3 = await alpha.prepareMessage(from, tpr_1, MessageType.image, { thumbnail:thumb_pro})
+let tpr_2 = tpr_3.message["ephemeralMessage"] ? tpr_3.message.ephemeralMessage : tpr_3
+tpr_5 = `*${jwb_oke}* ${emoj}`
+const tpr_6 = [
+{buttonId: 'x_menu', buttonText: {displayText: `⬅️ Menu`}, type: 1},
+{buttonId: `textpro_list`, buttonText: {displayText: 'Textpro List'}, type: 1}
+]
+const tpr_7 = {
+contentText: tpr_5 ,
+footerText: `Thanks @${sender.split("@")[0]} !`,
+buttons: tpr_6,
+headerType: 4,
+imageMessage: tpr_2.message.imageMessage
+}
+alpha.sendMessage(from, tpr_7, MessageType.buttonsMessage,{
+"contextInfo": {
+"forwardingScore": 999,isForwarded: false,
+"externalAdReply": {
+"title": `${ucapannya2}` ,
+"body": `${botname}`,
+"sourceUrl": apiku,
+"thumbnail": thumb_pro},
+"mentionedJid" : [sender]},
+quoted: mek, sendEphemeral: true
+})
+break
+
+case 'customgfx1':
+case 'kustomfx1':
+case 'fx1':
+if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy Bot`) 
+console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
+var imgbb = require('imgbb-uploader')
+if (!isQuotedSticker) {
+var fara = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+var fari = await alpha.downloadAndSaveMediaMessage(fara, `./media/${sender}.png`)
+let faru = await imgbb(`${img_key}`, fari)
+anuk = `https://api-xfar05.herokuapp.com/api/canvas/customgfx1?teks=${q}&bg=${faru.display_url}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+ini_buffer = await getBuffer(`${anuk}`)
+alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+} else if (!isQuotedImage) {
+var fara2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
+var fari2 = await alpha.downloadAndSaveMediaMessage(fara2, `./media/${sender}.png`)
+let faru2 = await imgbb(`${img_key}`, fari2)
+anuk = `https://api-xfar05.herokuapp.com/api/canvas/customgfx1?teks=${q}&bg=${faru2.display_url}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+ini_buffer = await getBuffer(`${anuk}`)
+alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+} else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
+fari3 = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
+let fara3 = await alpha.getProfilePicture(fari3).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
+let faru3 = await imageToBase64(JSON.stringify(fara3).replace(/\"/gi, ''))
+fs.writeFileSync('janckuk.jpeg', faru3, 'base64')
+let fare3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
+anuk = `https://api-xfar05.herokuapp.com/api/canvas/customgfx1?teks=${q}&bg=${fare3.display_url}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+ini_buffer = await getBuffer(`${anuk}`)
+alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+} else {
+reply1('Reply stc/img')
+}
+break
+
+case 'customgfx2':
+case 'kustomfx':
+case 'fxmaker':
+if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy|Bot`) 
+var m = q
+var m1 = m.split("|")[0];
+var m2 = m.split("|")[1]; 
+console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
+var imgbb = require('imgbb-uploader')
+if (!isQuotedSticker) {
+var fara_ = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+var fari_ = await alpha.downloadAndSaveMediaMessage(fara_, `./media/${sender}.png`)
+let faru_ = await imgbb(`${img_key}`, fari_)
+anuk = `https://api-xfar05.herokuapp.com/api/canvas/customgfx2?teks1=${m1}&teks2=${m2}&bg=${faru_.display_url}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+ini_buffer = await getBuffer(`${anuk}`)
+alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+} else if (!isQuotedImage) {
+var fara_2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
+var fari_2 = await alpha.downloadAndSaveMediaMessage(fara_2, `./media/${sender}.png`)
+let faru_2 = await imgbb(`${img_key}`, fari_2)
+anuk = `https://api-xfar05.herokuapp.com/api/canvas/customgfx2?teks1=${m1}&teks2=${m2}&bg=${faru_2.display_url}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+ini_buffer = await getBuffer(`${anuk}`)
+alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+} else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
+fari_3 = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
+let fara_3 = await alpha.getProfilePicture(fari_3).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
+let faru_3 = await imageToBase64(JSON.stringify(fara_3).replace(/\"/gi, ''))
+fs.writeFileSync('janckuk.jpeg', faru_3, 'base64')
+let fare_3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
+anuk = `https://api-xfar05.herokuapp.com/api/canvas/customgfx2?teks1=${m1}&teks2=${m2}&bg=${fare_3.display_url}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+ini_buffer = await getBuffer(`${anuk}`)
+alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+} else {
+reply1('Reply stc/img')
+}
+break
+
+case 'xnxxmeme':
+if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy Bot`) 
+console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
+var imgbb = require('imgbb-uploader')
+if (!isQuotedSticker) {
+var fara__ = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+var fari__ = await alpha.downloadAndSaveMediaMessage(fara__, `./media/${sender}.png`)
+let faru__ = await imgbb(`${img_key}`, fari__)
+anuk = `https://api-xfar05.herokuapp.com/api/canvas/xnxx?pp=${faru__.display_url}&username=${q}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+ini_buffer = await getBuffer(`${anuk}`)
+alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+} else if (!isQuotedImage) {
+var fara__2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
+var fari__2 = await alpha.downloadAndSaveMediaMessage(fara__2, `./media/${sender}.png`)
+let faru__2 = await imgbb(`${img_key}`, fari__2)
+anuk = `https://api-xfar05.herokuapp.com/api/canvas/xnxx?pp=${faru__2.display_url}&username=${q}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+ini_buffer = await getBuffer(`${anuk}`)
+alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+} else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
+fari__3 = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
+let fara__3 = await alpha.getProfilePicture(fari__3).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
+let faru__3 = await imageToBase64(JSON.stringify(fara__3).replace(/\"/gi, ''))
+fs.writeFileSync('janckuk.jpeg', faru__3, 'base64')
+let fare__3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
+anuk = `https://api-xfar05.herokuapp.com/api/canvas/xnxx?pp=${fare__3.display_url}&username=${q}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+ini_buffer = await getBuffer(`${anuk}`)
+alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+} else {
+reply1('Reply stc/img')
+}
+break
+case 'yugioh':
+if (!q)return reply1(`*${emoj} Hint :* ${prefix + command} teks1|teks2|teks3|teks4`)
+t = args.join(' ')
+t1 = t.split('|')[0]
+t2 = t.split('|')[1]
+t3 = t.split('|')[2]
+t4 = t.split('|')[3]
+console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
+var imgbb = require('imgbb-uploader')
+if (!isQuotedSticker) {
+var yug = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+var yig = await alpha.downloadAndSaveMediaMessage(yug, `./media/${sender}.png`)
+let yeg = await imgbb(`${img_key}`, yig)
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `https://api.lolhuman.xyz/api/yugioh?apikey=${lolkey}&img=${yeg.display_url}&title=${t1}&desc=${t2}&atk=${t3}&def=${t4}`, mek)
+} else if (!isQuotedImage) {
+var yug2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
+var yig2 = await alpha.downloadAndSaveMediaMessage(yug2, `./media/${sender}.png`)
+let yeg2 = await imgbb(`${img_key}`, yig2)
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `https://api.lolhuman.xyz/api/yugioh?apikey=${lolkey}&img=${yeg2.display_url}&title=${t1}&desc=${t2}&atk=${t3}&def=${t4}`, mek)
+} else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
+yig3 = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
+let yug3 = await alpha.getProfilePicture(yig3).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
+let yeg3 = await imageToBase64(JSON.stringify(yug3).replace(/\"/gi, ''))
+fs.writeFileSync('janckuk.jpeg', yeg3, 'base64')
+let yog3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `https://api.lolhuman.xyz/api/yugioh?apikey=${lolkey}&img=${yog3.display_url}&title=${t1}&desc=${t2}&atk=${t3}&def=${t4}`, mek)
+} else {
+reply1('Reply stc/img')
+}
+break
+
+case 'wroom':
+case 'text3d':
+case 'water':
+case 'blackbird':
+case 'smurf':
+case 'memories':
+if(!q) return reply1(`${emoj} Hint : ${prefix + command} noob`) 
+anuk = `https://kocakz.herokuapp.com/api/flamingtext/${command}?text=${q}`
+ini_gen = `${command}`
+console.log(color(ini_gen))
+sendStickerFromUrl(from, `${anuk}`, mek)
+ini_buffer = await getBuffer(`${anuk}`)
+alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+break
+
+case 'advancedglow':
+case 'blackpink':
+case 'bloodtext':
+case 'bokehtext':
+case 'captamerica':
+case 'cloudsky':
+case 'dropwater':
+case 'equalizer':
+case 'firework':
+case 'foilballoon':
+case 'glue3d':
+case 'greenneon':
+case 'holographic':
+case 'lavatext':
+case 'luxury':
+case 'matrixtext':
+case 'metaldark':
+case 'miniontext':
+case 'neonlight':
+case 'neontext':
+case 'old1917':
+case 'realcloud':
+case 'realvintage':
+case 'sandengraved':
+case 'sandsummer':
+case 'sandsummery':
+case 'sandwrite':
+case 'text3d':
+case 'thundertext':
+case 'toxictext':
+ini_buffer = await getBuffer(`https://kocakz.herokuapp.com/api/textpro/${command}?text=${q}`)
+alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Dah selesai , Req by: ${pushname}\nKetik *${prefix}tpro_list* untuk melihat menu yang lain`})
+break
+
+case 'avengers':
+case 'glitchtext':
+case 'marvelstudio':
+case 'pornhub':
+case 'space3d':
+case 'stonetext':
+t = args.join(' ')
+t1 = t.split('|')[0]
+t2 = t.split('|')[1]
+ini_buffer = await getBuffer(`https://kocakz.herokuapp.com/api/textpro/${command}?text1=${t1}&text2=${t2}`)
+alpha.sendMessage(from, ini_buffer, MessageType.image,{quoted: mek})
+break
+
+case 'sertitolol':
+if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy Bot`) 
+buff = await getBuffer(`https://mysakura.herokuapp.com/api/serti/tolol?text=${q}&apikey=sakura404`)
+alpha.sendMessage(from, buff, image, {quoted: mek, caption : `Ketik *.serti* untuk melihat list , Req by: ${pushname}`})
 break
 
 //Ends
