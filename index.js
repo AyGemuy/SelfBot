@@ -4187,9 +4187,7 @@ teks = `⌯✆ *VERIFIED* ✆⌯
 │ *Time :* ${wib} Wib
 ╰⌯`
 let vengrif = [
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1},
-{buttonId: 'menu_x', buttonText: {displayText: `${emoj3} Lol-Menu`}, type: 1},
-{buttonId: 'menu_xc', buttonText: {displayText: '🌱 Xc-Menu'}, type: 1}
+{buttonId: `menu`, buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
 ]
 sendButLocation(from, teks , `Makasih Udah Verifikasi 😉\n${botname}™© | By ${ownername}`,pp_verify, vengrif, {contextInfo: { mentionedJid: [sender]}})
 break
@@ -15679,13 +15677,16 @@ break
 
 // ANONYMOUS CHAT
 case 'anonymous':
+{
 if (!isGroup) return reply1('Fitur Tidak Dapat Digunakan Untuk Group!')
 this.anonymous = this.anonymous ? this.anonymous : {}
 sendMess(m.chat, `Welcome To Anonymous Chat\n\n${prefix}start - Search Partner\n${prefix}leave - Keluar Sesi Anonymous\n${prefix}next - Skip Sesi Anonymous\n${prefix}menu - All Menu`)
+}
 break
 
 case 'keluar':
 case 'leave':
+{
 if (!isGroup) return reply1('Fitur Tidak Dapat Digunakan Untuk Group!')
 this.anonymous = this.anonymous ? this.anonymous : {}
 let room = Object.values(this.anonymous).find(room => room.check(m.sender))
@@ -15698,10 +15699,12 @@ let other = room.other(m.sender)
 if (other) await sendMess(other, `_*Partner meninggalkan chat..*_`)
 delete this.anonymous[room.id]
 if (command === 'leave')
+}
 break
 
 case 'mulai':
 case 'start':
+{
 if (!isGroup) return reply1('Fitur Tidak Dapat Digunakan Untuk Group!')
 this.anonymous = this.anonymous ? this.anonymous : {}
 
@@ -15731,10 +15734,12 @@ if (room) {
 	}
 	await sendMess(m.chat, `_*Menunggu Partner...*_`)
 }
+}
 break
 
 case 'next':
 case 'lanjut':
+{
 if (!isGroup) return reply1('Fitur Tidak Dapat Digunakan Untuk Group!')
 this.anonymous = this.anonymous ? this.anonymous : {}
 let romeo = Object.values(this.anonymous).find(room => room.check(m.sender))
@@ -15766,6 +15771,7 @@ if (room) {
 		},
 	}
 	await sendText(m.chat, `_*Menunggu Partner...*_`, m)
+}
 }
 break
 
