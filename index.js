@@ -363,15 +363,58 @@ thumb_coupl = fs.readFileSync(`image/coupl.jpg`)
 thumb_404 = fs.readFileSync(`image/404.jpg`)
 thumb_ind = fs.readFileSync(`image/ind.jpg`)
 
+/*
 // APIKEY
 key = ["007bfd53a8d454e05cecc12036139ee2","bf63216d7cb102a3a60df8e493bbc673","bf9c1a877ad4759f7d01b0119d0bc354","96cdd712f558134f32966adbb94173bf","cd2c716e7ac3c66c81b730d998f2b49f"]
 var img_key = key[Math.floor(Math.random() * key.length)]
 lk = ["cc96c7fb66cae76c359e3641","78bd89cd7b4d6205e3e18061","4f1cc7a2294ebce0a7bef4d2"]
 var lolkey = lk[Math.floor(Math.random() * lk.length)]
-dp = ["AyGemuy24","ls7II19RQIYv1aS","kYR0hlaVZZPvv8B"]
+dp = ["AyGemuy24","1MncQZd4zs","TWEuyfw32s"]
 var dapuhy = dp[Math.floor(Math.random() * dp.length)]
 zk = ["aygemuy24","aygemuy242"]
 var zeksApikey = zk[Math.floor(Math.random() * zk.length)]
+*/
+// APIKEY
+try { 
+img_key = '0fd7b4782b515846c577b13938eb2923'
+} catch {
+img_key = '3b70be40dd3de6ad4fbabb1dd140ee1d'
+}
+try { 
+img_key = 'dd88b72c4e43d9a89abeb92c4945394c'
+} catch {
+img_key = 'acf6ed068f13989895c44b95981d54c4'
+}
+try { 
+img_key = '42e9bad6080e6907bac663f1b9fb3b9e'
+} catch {
+img_key = '96cdd712f558134f32966adbb94173bf'
+}
+try { 
+lolkey = 'cc96c7fb66cae76c359e3641'
+} catch {
+lolkey = '78bd89cd7b4d6205e3e18061'
+}
+try { 
+lolkey = '327a6596e4c4baa20c756132'
+} catch {
+lolkey = '4f1cc7a2294ebce0a7bef4d2'
+}
+try { 
+dapuhy = 'AyGemuy24'
+} catch {
+dapuhy = '1MncQZd4zs'
+}
+try { 
+dapuhy = 'tpc0HGnqaA'
+} catch {
+dapuhy = 'TWEuyfw32s'
+}
+try { 
+zeksApikey = 'aygemuy24'
+} catch {
+zeksApikey = 'aygemuy242'
+}
 
 // Penyedia Api
 ApiZeks = 'https://api.zeks.me'
@@ -394,8 +437,6 @@ YuzzuApi = 'https://yuzzu-api.herokuapp.com'
 Dt04Api = 'https://dt-04.herokuapp.com'
 XcoderApi = 'https://api-xcoders.xyz'
 SomeApi = 'https://some-random-api.ml'
-
-
 
 
 
@@ -12109,7 +12150,7 @@ case 'wooden-boards':
 case 'write-stars':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy Bot`) 
 buff = await getBuffer(`${HadiApi}/api/photoxy/${command}?teks=${q}`)
-alpha.sendMessage(from, buff, image, {quoted: mek, caption : `Dah selesai , Req by: ${pushname}\nKetik *${prefix}oxylist* untuk melihat menu yang lain`})
+alpha.sendMessage(from, buff, image, {quoted: mek, caption : `Dah selesai , Req by: ${pushname}\nKetik *${prefix}oxy_list* untuk melihat menu yang lain`})
 break
 
 case 'anime':
