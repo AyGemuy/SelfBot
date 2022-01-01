@@ -370,18 +370,15 @@ lk = ["cc96c7fb66cae76c359e3641","78bd89cd7b4d6205e3e18061","4f1cc7a2294ebce0a7b
 var lolkey = lk[Math.floor(Math.random() * lk.length)]
 dp = ["AyGemuy24","ls7II19RQIYv1aS","kYR0hlaVZZPvv8B"]
 var dapuhy = dp[Math.floor(Math.random() * dp.length)]
+zk = ["aygemuy24","aygemuy242"]
+var zeksApikey = zk[Math.floor(Math.random() * zk.length)]
 
 ApiZeks = 'https://api.zeks.me'
 
 try {
-DappaApi = 'https://dapuhy.xyz'
+DappaApi = 'https://api.dapuhy.xyz'
 } catch {
 DappaApi = 'https://api.dapuhy.ga'
-}
-try {
-zeksApikey = 'aygemuy24'
-} catch {
-zeksApikey = 'aygemuy242'
 }
 
 // RANDOM
