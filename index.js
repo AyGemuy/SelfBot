@@ -12234,7 +12234,7 @@ case 'ttp':
 anuk = `https://api-xcoders.xyz/api/maker/${command}?text=${encodeURIComponent(q)}&apikey=7iyNa0qA`
 sendStickerFromUrl(from, `${anuk}`, mek)
 ini_buffer = await getBuffer(`${anuk}`)
-alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 break
 
 case 'ttp4': 
@@ -17328,7 +17328,7 @@ ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
 ini_buffer = await getBuffer(`${anuk}`)
-alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else if (!isQuotedImage) {
 var smra2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
 var smri2 = await alpha.downloadAndSaveMediaMessage(smra2, `./media/${sender}.png`)
@@ -17338,7 +17338,7 @@ ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
 ini_buffer = await getBuffer(`${anuk}`)
-alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
 smri3 = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
 let smra3 = await alpha.getProfilePicture(smri3).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
@@ -17350,7 +17350,7 @@ ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
 ini_buffer = await getBuffer(`${anuk}`)
-alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else {
 reply1('Reply stc/img')
 }
@@ -17686,7 +17686,7 @@ ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
 ini_buffer = await getBuffer(`${anuk}`)
-alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else if (!isQuotedImage) {
 var jan2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
 var jin2 = await alpha.downloadAndSaveMediaMessage(jan2, `./media/${sender}.png`)
@@ -17696,7 +17696,7 @@ ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
 ini_buffer = await getBuffer(`${anuk}`)
-alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
 jin3 = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
 let jan3 = await alpha.getProfilePicture(jin3).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
@@ -17708,7 +17708,7 @@ ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
 ini_buffer = await getBuffer(`${anuk}`)
-alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else {
 reply1('Reply stc/img')
 }
@@ -17755,7 +17755,7 @@ ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
 ini_buffer = await getBuffer(`${anuk}`)
-alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else if (!isQuotedImage) {
 var nka2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
 var nki2 = await alpha.downloadAndSaveMediaMessage(nka2, `./media/${sender}.png`)
@@ -17766,7 +17766,7 @@ ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
 ini_buffer = await getBuffer(`${anuk}`)
-alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
 nki3 = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
 let nka3 = await alpha.getProfilePicture(nki3).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
@@ -17779,7 +17779,7 @@ ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
 ini_buffer = await getBuffer(`${anuk}`)
-alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else {
 reply1('Reply stc/img')
 }
@@ -17838,7 +17838,7 @@ ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
 ini_buffer = await getBuffer(`${anuk}`)
-alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else if (!isQuotedImage) {
 var dpuh2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
 var dpah2 = await alpha.downloadAndSaveMediaMessage(dpuh2, `./media/${sender}.png`)
@@ -17848,7 +17848,7 @@ ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
 ini_buffer = await getBuffer(`${anuk}`)
-alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
 dpah3 = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
 let dpuh3 = await alpha.getProfilePicture(dpah3).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
@@ -17860,7 +17860,7 @@ ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
 ini_buffer = await getBuffer(`${anuk}`)
-alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else {
 reply1('Reply stc/img')
 }
@@ -17913,7 +17913,7 @@ ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
 ini_buffer = await getBuffer(`${anuk}`)
-alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else if (!isQuotedImage) {
 var lpha2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
 var lphi2 = await alpha.downloadAndSaveMediaMessage(lpha2, `./media/${sender}.png`)
@@ -17923,7 +17923,7 @@ ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
 ini_buffer = await getBuffer(`${anuk}`)
-alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
 lphi3 = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
 let lpha3 = await alpha.getProfilePicture(lphi3).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
@@ -17935,7 +17935,7 @@ ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
 ini_buffer = await getBuffer(`${anuk}`)
-alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else {
 reply1('Reply stc/img')
 }
@@ -18320,7 +18320,7 @@ ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
 ini_buffer = await getBuffer(`${anuk}`)
-alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else if (!isQuotedImage) {
 var fara2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
 var fari2 = await alpha.downloadAndSaveMediaMessage(fara2, `./media/${sender}.png`)
@@ -18330,7 +18330,7 @@ ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
 ini_buffer = await getBuffer(`${anuk}`)
-alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
 fari3 = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
 let fara3 = await alpha.getProfilePicture(fari3).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
@@ -18342,7 +18342,7 @@ ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
 ini_buffer = await getBuffer(`${anuk}`)
-alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else {
 reply1('Reply stc/img')
 }
@@ -18366,7 +18366,7 @@ ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
 ini_buffer = await getBuffer(`${anuk}`)
-alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else if (!isQuotedImage) {
 var fara_2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
 var fari_2 = await alpha.downloadAndSaveMediaMessage(fara_2, `./media/${sender}.png`)
@@ -18376,7 +18376,7 @@ ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
 ini_buffer = await getBuffer(`${anuk}`)
-alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
 fari_3 = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
 let fara_3 = await alpha.getProfilePicture(fari_3).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
@@ -18388,7 +18388,7 @@ ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
 ini_buffer = await getBuffer(`${anuk}`)
-alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else {
 reply1('Reply stc/img')
 }
@@ -18407,7 +18407,7 @@ ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
 ini_buffer = await getBuffer(`${anuk}`)
-alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else if (!isQuotedImage) {
 var fara__2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
 var fari__2 = await alpha.downloadAndSaveMediaMessage(fara__2, `./media/${sender}.png`)
@@ -18417,7 +18417,7 @@ ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
 ini_buffer = await getBuffer(`${anuk}`)
-alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
 fari__3 = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
 let fara__3 = await alpha.getProfilePicture(fari__3).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
@@ -18429,7 +18429,7 @@ ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
 ini_buffer = await getBuffer(`${anuk}`)
-alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else {
 reply1('Reply stc/img')
 }
@@ -18480,7 +18480,7 @@ ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
 ini_buffer = await getBuffer(`${anuk}`)
-alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
+await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 break
 
 case 'advancedglow':
