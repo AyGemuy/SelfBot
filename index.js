@@ -373,13 +373,31 @@ var dapuhy = dp[Math.floor(Math.random() * dp.length)]
 zk = ["aygemuy24","aygemuy242"]
 var zeksApikey = zk[Math.floor(Math.random() * zk.length)]
 
+// Penyedia Api
 ApiZeks = 'https://api.zeks.me'
-
-try {
 DappaApi = 'https://api.dapuhy.xyz'
-} catch {
-DappaApi = 'https://api.dapuhy.ga'
-}
+HadiApi = 'https://hadi-api.herokuapp.com'
+ZekaisApi = 'http://api.zekais.com'
+LolApi = 'https://api.lolhuman.xyz'
+XfarApi = 'https://api-xfar05.herokuapp.com'
+XrestApi = 'https://x-restapi.herokuapp.com'
+AlphaApi = 'https://api-alphabot.herokuapp.com'
+KntolApi = 'https://kuontol-api.herokuapp.com'
+KocakApi = 'https://kocakz.herokuapp.com'
+NuruApi = 'https://nurutomo.herokuapp.com'
+SakuraApi = 'https://mysakura.herokuapp.com'
+HardiApi = 'https://hardianto-chan.herokuapp.com'
+OjanApi = 'https://janbot-api.herokuapp.com'
+IchikaApi = 'https://velgrynd.herokuapp.com'
+XnxxApi = 'https://xnxxapi.herokuapp.com'
+YuzzuApi = 'https://yuzzu-api.herokuapp.com'
+Dt04Api = 'https://dt-04.herokuapp.com'
+XcoderApi = 'https://api-xcoders.xyz'
+SomeApi = 'https://some-random-api.ml'
+
+
+
+
 
 // RANDOM
 pe = ["https://www.teahub.io/photos/full/1-12617_adobe-illustrator-art-landscape..jpg","https://i.pinimg.com/originals/30/e0/36/30e036a43def45e2616848b4fef44a69.jpg","https://i.pinimg.com/736x/c4/ec/4b/c4ec4bba05077363550389a4f09c3d83.jpg","https://i.pinimg.com/736x/ab/72/c2/ab72c2f610178394c0a6ea0d681b1fa0.jpg","https://i.pinimg.com/736x/73/7f/dd/737fdd0886221e59fe3561df429b67be.jpg"]
@@ -2578,7 +2596,7 @@ pep = await alpha.getProfilePicture(sender)
 } catch {
 pep = 'https://audiopromedia.co.id/wp-content/uploads/2021/06/Screenshot_2021-06-19-16-22-16-937_com.miui_.gallery.jpg'
 }
-let lev_up = await getBuffer(`https://api-xfar05.herokuapp.com/api/canvas/levelup?pp=${pep}`)
+let lev_up = await getBuffer(`${XfarApi}/api/canvas/levelup?pp=${pep}`)
 capt = ` *「 LEVEL UP 」*
 🎯 *User :* @${sender.split("@")[0]}
 🆔 *Nomer :* ${sender.split("@")[0]}
@@ -2779,7 +2797,7 @@ if (akinator.hasOwnProperty(sender.split('@')[0]) && !isCmd && ["0", "1", "2", "
 kuis = true
 var { server, frontaddr, session, signature, question, step } = akinator[sender.split('@')[0]]
 if (step == "0" && budy == "5") return reply1("Maaf Anda telah mencapai pertanyaan pertama")
-var ini_url = `https://api.lolhuman.xyz/api/akinator/answer?apikey=${lolkey}&server=${server}&frontaddr=${frontaddr}&session=${session}&signature=${signature}&answer=${budy}&step=${step}`
+var ini_url = `${LolApi}/api/akinator/answer?apikey=${lolkey}&server=${server}&frontaddr=${frontaddr}&session=${session}&signature=${signature}&answer=${budy}&step=${step}`
 var get_result = await fetchJson(ini_url)
 var get_result = get_result.result
 if (get_result.hasOwnProperty("name")) {
@@ -2804,7 +2822,7 @@ ini_txt += "3 - Mungkin\n"
 ini_txt += "4 - Mungkin Tidak\n"
 ini_txt += "5 - Kembali ke Pertanyaan Sebelumnya"
 if (budy == "5") {
-var ini_url = `https://api.lolhuman.xyz/api/akinator/back?apikey=${lolkey}&server=${server}&frontaddr=${frontaddr}&session=${session}&signature=${signature}&answer=${budy}&step=${step}`
+var ini_url = `${LolApi}/api/akinator/back?apikey=${lolkey}&server=${server}&frontaddr=${frontaddr}&session=${session}&signature=${signature}&answer=${budy}&step=${step}`
 var get_result = await fetchJson(ini_url)
 var get_result = get_result.result
 var { question, _, step } = get_result
@@ -4112,7 +4130,7 @@ case 'verif':
 case 'daftar':
 case 'regis':
 if (isRegister) return reply1('Kamu sudah terdaftar di dalam database')
-let pp_verify = await getBuffer(`https://hadi-api.herokuapp.com/api/card/verify2?name=${encodeURIComponent(pushname)}&memverify=${encodeURIComponent(groupMembers.length)}&gcname=${encodeURIComponent(groupName)}&gcicon=${encodeURIComponent(ppgc)}&pp=${encodeURIComponent(pp_userb)}&bg=${encodeURIComponent(bg_verify)}`)
+let pp_verify = await getBuffer(`${HadiApi}/api/card/verify2?name=${encodeURIComponent(pushname)}&memverify=${encodeURIComponent(groupMembers.length)}&gcname=${encodeURIComponent(groupName)}&gcicon=${encodeURIComponent(ppgc)}&pp=${encodeURIComponent(pp_userb)}&bg=${encodeURIComponent(bg_verify)}`)
 addRegisterUser(sender, pushname, bio_user, wib)
 sn_ = await fetchJson('https://api.caranya.my.id/gen-password')
 let ran_blc = randomNomor(50)
@@ -6617,7 +6635,7 @@ if (!q) return reply1(`${command} text \n*Atau*\n${prefix}nuliskiri text\n${pref
 teks = args.join(' ')
 // Wait //
 nulis = encodeURIComponent(teks)
-res = await axios.get(`https://dt-04.herokuapp.com/nulis?text=${nulis}`)
+res = await axios.get(`${Dt04Api}/nulis?text=${nulis}`)
 if (res.data.error) return reply1(res.data.error)
 buff = Buffer.from(res.data.result.split(',')[1], 'base64')
 alpha.sendMessage(from, buff, image, {quoted: mek, caption: mess.success}).catch(e => {
@@ -7305,21 +7323,21 @@ break
 case 'sspng':
 if (!q) return reply1('Urlnya mana om')
 teks = args[0]
-buff = await getBuffer(`https://nurutomo.herokuapp.com/api/ssweb?url=${teks}&type=png`)
+buff = await getBuffer(`${NuruApi}/api/ssweb?url=${teks}&type=png`)
 alpha.sendMessage(from, buff, image, {quoted: mek, caption : `Screenshot from ${teks}`})
 break
 
 case 'sspjpeg':
 if (!q) return reply1('Urlnya mana om')
 teks = args[0]
-buff = await getBuffer(`https://nurutomo.herokuapp.com/api/ssweb?url=${teks}&type=jpeg`)
+buff = await getBuffer(`${NuruApi}/api/ssweb?url=${teks}&type=jpeg`)
 alpha.sendMessage(from, buff, image, {quoted: mek, caption : `Screenshot from ${teks}`})
 break
 
 case 'ssmap':
 if (!q) return reply1('Kota apa?')
 teks = args[0]
-buff = await getBuffer(`https://api-xcoders.xyz/api/maker/ssmap?query=${q}&apikey=7iyNa0qA`)
+buff = await getBuffer(`${XcoderApi}/api/maker/ssmap?query=${q}&apikey=7iyNa0qA`)
 alpha.sendMessage(from, buff, image, {quoted: mek, caption : `Screenshot from ${teks}`})
 break
 
@@ -9104,7 +9122,7 @@ break
 case 'randomimage':
 pilih_dulu = "cosplay, husbu, loli, milf, neko, nekonime, shota, waifu"
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} ${pilih_dulu}`)
-let rimg_1 = await getBuffer(`https://kuontol-api.herokuapp.com/api/randomimage/${q}`);
+let rimg_1 = await getBuffer(`${KntolApi}/api/randomimage/${q}`);
 const rimg_3 = await alpha.prepareMessage(from, rimg_1, MessageType.image, { thumbnail:thumb_pro})
 let rimg_2 = rimg_3.message["ephemeralMessage"] ? rimg_3.message.ephemeralMessage : rimg_3
 rimg_5 = `*${jwb_oke}* ${emoj}`
@@ -9227,7 +9245,7 @@ break
 
 // Islami //
 case 'xlistsurah':
-get_result = await fetchJlson(`https://api.lolhuman.xyz/api/quran?apikey=${lolkey}`)
+get_result = await fetchJlson(`${LolApi}/api/quran?apikey=${lolkey}`)
 get_result = get_result.result
 ini_txt = 'List Surah:\n'
 for (var x in get_result) {
@@ -9238,7 +9256,7 @@ break
 
 case 'xalquran':
 if (!q) return reply1(`Contoh: ${prefix + command} 18 or ${prefix + command} 18/10 or ${prefix + command} 18/1-10`)
-urls = `https://api.lolhuman.xyz/api/quran/${args[0]}?apikey=${lolkey}`
+urls = `${LolApi}/api/quran/${args[0]}?apikey=${lolkey}`
 quran = await fetchJson(urls)
 result = quran.result
 ayat = result.ayat
@@ -9259,12 +9277,12 @@ break
 case 'xalquranaudio':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} 18 or ${prefix + command} 18/10`)
 surah = args[0]
-ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/quran/audio/${surah}?apikey=${lolkey}`)
+ini_buffer = await getBuffer(`${LolApi}/api/quran/audio/${surah}?apikey=${lolkey}`)
 await alpha.sendMessage(from, ini_buffer, audio, { quoted: mek, mimetype: Mimetype.mp4Audio })
 break
 
 case 'xasmaulhusna':
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/asmaulhusna?apikey=${lolkey}`)
+get_result = await fetchJson(`${LolApi}/api/asmaulhusna?apikey=${lolkey}`)
 get_result = get_result.result
 ini_txt = `No : ${get_result.index}\n`
 ini_txt += `Latin: ${get_result.latin}\n`
@@ -9277,7 +9295,7 @@ break
 case 'xkisahnabi':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} Muhammad`)
 query = args.join(" ")
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/kisahnabi/${query}?apikey=${lolkey}`)
+get_result = await fetchJson(`${LolApi}/api/kisahnabi/${query}?apikey=${lolkey}`)
 get_result = get_result.result
 ini_txt = `Name : ${get_result.name}\n`
 ini_txt += `Lahir : ${get_result.thn_kelahiran}\n`
@@ -9290,7 +9308,7 @@ break
 case 'xjadwalsholat':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} Yogyakarta`)
 daerah = args.join(" ")
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/sholat/${daerah}?apikey=${lolkey}`)
+get_result = await fetchJson(`${LolApi}/api/sholat/${daerah}?apikey=${lolkey}`)
 get_result = get_result.result
 ini_txt = `Wilayah : ${get_result.wilayah}\n`
 ini_txt += `Tanggal : ${get_result.tanggal}\n`
@@ -9309,9 +9327,9 @@ break
 // Downloader //
 case 'xytplay':
 if (args.length == 0) return await reply1(`Contoh: ${prefix + command} melukis senja`)
-await fetchJson(`https://api.lolhuman.xyz/api/ytsearch?apikey=${lolkey}&query=${args.join(" ")}`)
+await fetchJson(`${LolApi}/api/ytsearch?apikey=${lolkey}&query=${args.join(" ")}`)
 .then(async(result) => {
-await fetchJson(`https://api.lolhuman.xyz/api/ytaudio2?apikey=${lolkey}&url=https://www.youtube.com/watch?v=${result.result[0].videoId}`)
+await fetchJson(`${LolApi}/api/ytaudio2?apikey=${lolkey}&url=https://www.youtube.com/watch?v=${result.result[0].videoId}`)
 .then(async(result) => {
 result = result.result
 caption = `❖ Title : *${result.title}*\n`
@@ -9327,7 +9345,7 @@ break
 case 'xytsearch':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} Melukis Senja`)
 query = args.join(" ")
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/ytsearch?apikey=${lolkey}&query=${query}`)
+get_result = await fetchJson(`${LolApi}/api/ytsearch?apikey=${lolkey}&query=${query}`)
 get_result = get_result.result
 ini_txt = ""
 for (var x of get_result) {
@@ -9343,7 +9361,7 @@ break
 case 'xytmp3':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} https://www.youtube.com/watch?v=qZIQAk-BUEc`)
 ini_link = args[0]
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/ytaudio2?apikey=${lolkey}&url=${ini_link}`)
+get_result = await fetchJson(`${LolApi}/api/ytaudio2?apikey=${lolkey}&url=${ini_link}`)
 get_result = get_result.result
 caption = `❖ Title : *${result.title}*\n`
 caption += `❖ Size : *${result.size}*`
@@ -9356,7 +9374,7 @@ break
 case 'xytmp4':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} https://www.youtube.com/watch?v=qZIQAk-BUEc`)
 ini_link = args[0]
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/ytvideo2?apikey=${lolkey}&url=${ini_link}`)
+get_result = await fetchJson(`${LolApi}/api/ytvideo2?apikey=${lolkey}&url=${ini_link}`)
 get_result = get_result.result
 ini_txt = `${get_result.title} - ${get_result.size}`
 ini_buffer = await getBuffer(get_result.thumbnail)
@@ -9368,7 +9386,7 @@ break
 case 'xtelesticker':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} https://t.me/addstickers/LINE_Menhera_chan_ENG`)
 ini_url = args[0]
-ini_url = await fetchJson(`https://api.lolhuman.xyz/api/telestick?apikey=${lolkey}&url=${ini_url}`)
+ini_url = await fetchJson(`${LolApi}/api/telestick?apikey=${lolkey}&url=${ini_url}`)
 ini_sticker = ini_url.result.sticker
 for (sticker_ in ini_sticker) {
 ini_buffer = await getBuffer(ini_sticker[sticker_])
@@ -9379,7 +9397,7 @@ break
 case 'xtiktoknowm':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} https://vt.tiktok.com/ZSwWCk5o/`)
 ini_url = args[0]
-ini_url = `https://api.lolhuman.xyz/api/tiktok?apikey=${lolkey}&url=${ini_url}`
+ini_url = `${LolApi}/api/tiktok?apikey=${lolkey}&url=${ini_url}`
 get_result = await fetchJson(ini_url)
 ini_buffer = await getBuffer(get_result.result.link)
 await alpha.sendMessage(from, ini_buffer, video, { quoted: mek })
@@ -9388,14 +9406,14 @@ break
 case 'xtiktokmusic':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} https://vt.tiktok.com/ZSwWCk5o/`)
 ini_link = args[0]
-get_audio = await getBuffer(`https://api.lolhuman.xyz/api/tiktokmusic?apikey=${lolkey}&url=${ini_link}`)
+get_audio = await getBuffer(`${LolApi}/api/tiktokmusic?apikey=${lolkey}&url=${ini_link}`)
 await alpha.sendMessage(from, get_audio, audio, { mimetype: Mimetype.mp4Audio, quoted: mek })
 break
 
 case 'xspotify':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} https://open.spotify.com/track/0ZEYRVISCaqz5yamWZWzaA`)
 url = args[0]
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/spotify?apikey=${lolkey}&url=${url}`)
+get_result = await fetchJson(`${LolApi}/api/spotify?apikey=${lolkey}&url=${url}`)
 get_result = get_result.result
 ini_txt = `Title : ${get_result.title}\n`
 ini_txt += `Artists : ${get_result.artists}\n`
@@ -9411,7 +9429,7 @@ break
 case 'xspotifysearch':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} Melukis Senja`)
 query = args.join(" ")
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/spotifysearch?apikey=${lolkey}&query=${query}`)
+get_result = await fetchJson(`${LolApi}/api/spotifysearch?apikey=${lolkey}&query=${query}`)
 get_result = get_result.result
 ini_txt = ""
 for (var x of get_result) {
@@ -9427,7 +9445,7 @@ break
 case 'xjooxplay':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} Melukis Senja`)
 query = args.join(" ")
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/jooxplay?apikey=${lolkey}&query=${query}`)
+get_result = await fetchJson(`${LolApi}/api/jooxplay?apikey=${lolkey}&query=${query}`)
 get_result = get_result.result
 ini_txt = `Title : ${get_result.info.song}\n`
 ini_txt += `Artists : ${get_result.info.singer}\n`
@@ -9444,7 +9462,7 @@ break
 case 'xigdl':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} https://www.instagram.com/p/CJ8XKFmJ4al/?igshid=1acpcqo44kgkn`)
 ini_url = args[0]
-ini_url = await fetchJson(`https://api.lolhuman.xyz/api/instagram?apikey=${lolkey}&url=${ini_url}`)
+ini_url = await fetchJson(`${LolApi}/api/instagram?apikey=${lolkey}&url=${ini_url}`)
 ini_url = ini_url.result
 ini_type = image
 if (ini_url.includes(".mp4")) ini_type = video
@@ -9455,7 +9473,7 @@ break
 case 'xigdl2':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} https://www.instagram.com/p/CJ8XKFmJ4al/?igshid=1acpcqo44kgkn`)
 ini_url = args[0]
-ini_url = await fetchJson(`https://api.lolhuman.xyz/api/instagram2?apikey=${lolkey}&url=${ini_url}`)
+ini_url = await fetchJson(`${LolApi}/api/instagram2?apikey=${lolkey}&url=${ini_url}`)
 ini_result = ini_url.result.media
 for (var x of ini_result) {
 ini_type = image
@@ -9468,7 +9486,7 @@ break
 case 'xtwtdl':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} https://twitter.com/gofoodindonesia/status/1229369819511709697`)
 ini_url = args[0]
-ini_url = await fetchJson(`https://api.lolhuman.xyz/api/twitter?apikey=${lolkey}&url=${ini_url}`)
+ini_url = await fetchJson(`${LolApi}/api/twitter?apikey=${lolkey}&url=${ini_url}`)
 ini_url = ini_url.result
 ini_url = ini_url[ini_url.length - 1].link
 ini_buffer = await getBuffer(ini_url)
@@ -9478,7 +9496,7 @@ break
 case 'xfbdl':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} https://id-id.facebook.com/SamsungGulf/videos/video-bokeh/561108457758458/`)
 ini_url = args[0]
-ini_url = await fetchJson(`https://api.lolhuman.xyz/api/facebook?apikey=${lolkey}&url=${ini_url}`)
+ini_url = await fetchJson(`${LolApi}/api/facebook?apikey=${lolkey}&url=${ini_url}`)
 ini_url = ini_url.result[0].link
 ini_buffer = await getBuffer(ini_url)
 await alpha.sendMessage(from, ini_buffer, video, { quoted: mek })
@@ -9487,7 +9505,7 @@ break
 case 'xzippyshare':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} https://www51.zippyshare.com/v/5W0TOBz1/file.html`)
 ini_url = args[0]
-ini_url = await fetchJson(`https://api.lolhuman.xyz/api/zippyshare?apikey=${lolkey}&url=${ini_url}`)
+ini_url = await fetchJson(`${LolApi}/api/zippyshare?apikey=${lolkey}&url=${ini_url}`)
 ini_url = ini_url.result
 ini_txt = `File Name : ${ini_url.name_file}\n`
 ini_txt += `Size : ${ini_url.size}\n`
@@ -9499,7 +9517,7 @@ break
 case 'xpinterest':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} loli kawaii`)
 query = args.join(" ")
-ini_url = await fetchJson(`https://api.lolhuman.xyz/api/pinterest?apikey=${lolkey}&query=${query}`)
+ini_url = await fetchJson(`${LolApi}/api/pinterest?apikey=${lolkey}&query=${query}`)
 ini_url = ini_url.result
 ini_buffer = await getBuffer(ini_url)
 await alpha.sendMessage(from, ini_buffer, image, { quoted: mek, caption: "Nih kack" })
@@ -9508,7 +9526,7 @@ break
 case 'xpinterest2':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} loli kawaii`)
 query = args.join(" ")
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/pinterest2?apikey=${lolkey}&query=${query}`)
+get_result = await fetchJson(`${LolApi}/api/pinterest2?apikey=${lolkey}&query=${query}`)
 get_result = get_result.result
 for (var x = 0; x <= 5; x++) {
 var ini_buffer = await getBuffer(get_result[x])
@@ -9519,7 +9537,7 @@ break
 case 'xpinterestdl':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} https://id.pinterest.com/pin/696580267364426905/`)
 ini_url = args[0]
-ini_url = await fetchJson(`https://api.lolhuman.xyz/api/pinterestdl?apikey=${lolkey}&url=${ini_url}`)
+ini_url = await fetchJson(`${LolApi}/api/pinterestdl?apikey=${lolkey}&url=${ini_url}`)
 ini_url = ini_url.result[0]
 ini_buffer = await getBuffer(ini_url)
 await alpha.sendMessage(from, ini_buffer, image, { quoted: mek, caption: "Nih kack" })
@@ -9528,21 +9546,21 @@ break
 case 'xpixiv':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} loli kawaii`)
 query = args.join(" ")
-ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/pixiv?apikey=${lolkey}&query=${query}`)
+ini_buffer = await getBuffer(`${LolApi}/api/pixiv?apikey=${lolkey}&query=${query}`)
 await alpha.sendMessage(from, ini_buffer, image, { quoted: mek, caption: "Nih kack" })
 break
 
 case 'xpixivdl':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} 63456028`)
 query = args[0]
-ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/pixivdl/${pixivid}?apikey=${lolkey}`)
+ini_buffer = await getBuffer(`${LolApi}/api/pixivdl/${pixivid}?apikey=${lolkey}`)
 await alpha.sendMessage(from, ini_buffer, image, { quoted: mek, caption: "Nih kack" })
 break
 
 case 'xxhamstersearch':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} Japanese`)
 query = args.join(" ")
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/xhamstersearch?apikey=${lolkey}&query=${query}`)
+get_result = await fetchJson(`${LolApi}/api/xhamstersearch?apikey=${lolkey}&query=${query}`)
 get_result = get_result.result
 ini_txt = ""
 for (var x of get_result) {
@@ -9557,7 +9575,7 @@ break
 case 'xxhamster':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} https://xhamster.com/videos/party-with-friends-end-in-awesome-fucking-5798407`)
 query = args.join(" ")
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/xhamster?apikey=${lolkey}&url=${query}`)
+get_result = await fetchJson(`${LolApi}/api/xhamster?apikey=${lolkey}&url=${query}`)
 get_result = get_result.result
 ini_txt = `Title : ${get_result.title}\n`
 ini_txt += `Duration : ${get_result.duration}\n`
@@ -9580,7 +9598,7 @@ break
 case 'xxnxxsearch':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} Japanese`)
 query = args.join(" ")
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/xnxxsearch?apikey=${lolkey}&query=${query}`)
+get_result = await fetchJson(`${LolApi}/api/xnxxsearch?apikey=${lolkey}&query=${query}`)
 get_result = get_result.result
 ini_txt = ""
 for (var x of get_result) {
@@ -9597,7 +9615,7 @@ break
 case 'xxnxx':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} https://www.xnxx.com/video-uy5a73b/mom_is_horny_-_brooklyn`)
 query = args.join(" ")
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/xnxx?apikey=${lolkey}&url=${query}`)
+get_result = await fetchJson(`${LolApi}/api/xnxx?apikey=${lolkey}&url=${query}`)
 get_result = get_result.result
 ini_txt = `Title : ${get_result.title}\n`
 ini_txt += `Duration : ${get_result.duration}\n`
@@ -9621,7 +9639,7 @@ break
 case 'xcharacter':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} Wudy Nakano`)
 query = args.join(" ")
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/character?apikey=${lolkey}&query=${query}`)
+get_result = await fetchJson(`${LolApi}/api/character?apikey=${lolkey}&query=${query}`)
 get_result = get_result.result
 ini_txt = `Id : ${get_result.id}\n`
 ini_txt += `Name : ${get_result.name.full}\n`
@@ -9640,7 +9658,7 @@ break
 case 'xmanga':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} Gotoubun No Hanayome`)
 query = args.join(" ")
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/manga?apikey=${lolkey}&query=${query}`)
+get_result = await fetchJson(`${LolApi}/api/manga?apikey=${lolkey}&query=${query}`)
 get_result = get_result.result
 ini_txt = `Id : ${get_result.id}\n`
 ini_txt += `Id MAL : ${get_result.idMal}\n`
@@ -9670,7 +9688,7 @@ break
 case 'xanime':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} Gotoubun No Hanayome`)
 query = args.join(" ")
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/anime?apikey=${lolkey}&query=${query}`)
+get_result = await fetchJson(`${LolApi}/api/anime?apikey=${lolkey}&query=${query}`)
 get_result = get_result.result
 ini_txt = `Id : ${get_result.id}\n`
 ini_txt += `Id MAL : ${get_result.idMal}\n`
@@ -9713,7 +9731,7 @@ method: 'POST',
 credentials: 'include',
 body: form
 }
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/wait?apikey=${lolkey}`, {...options })
+get_result = await fetchJson(`${LolApi}/api/wait?apikey=${lolkey}`, {...options })
 fs.unlinkSync(filePath)
 get_result = get_result.result
 ini_video = await getBuffer(get_result.video)
@@ -9734,7 +9752,7 @@ break
 case 'xkusonime':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} https://kusonime.com/nanatsu-no-taizai-bd-batch-subtitle-indonesia/`)
 ini_url = args[0]
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/kusonime?apikey=${lolkey}&url=${ini_url}`)
+get_result = await fetchJson(`${LolApi}/api/kusonime?apikey=${lolkey}&url=${ini_url}`)
 get_result = get_result.result
 ini_txt = `Title : ${get_result.title}\n`
 ini_txt += `Japanese : ${get_result.japanese}\n`
@@ -9762,7 +9780,7 @@ break
 case 'xkusonimesearch':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} Gotoubun No Hanayome`)
 query = args.join(" ")
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/kusonimesearch?apikey=${lolkey}&query=${query}`)
+get_result = await fetchJson(`${LolApi}/api/kusonimesearch?apikey=${lolkey}&query=${query}`)
 get_result = get_result.result
 ini_txt = `Title : ${get_result.title}\n`
 ini_txt += `Japanese : ${get_result.japanese}\n`
@@ -9790,7 +9808,7 @@ break
 case 'xotakudesu':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} https://otakudesu.tv/lengkap/pslcns-sub-indo/`)
 ini_url = args[0]
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/otakudesu?apikey=${lolkey}&url=${ini_url}`)
+get_result = await fetchJson(`${LolApi}/api/otakudesu?apikey=${lolkey}&url=${ini_url}`)
 get_result = get_result.result
 ini_txt = `Title : ${get_result.title}\n`
 ini_txt += `Japanese : ${get_result.japanese}\n`
@@ -9824,7 +9842,7 @@ break
 case 'xotakudesusearch':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} Gotoubun No Hanayome`)
 query = args.join(" ")
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/otakudesusearch?apikey=${lolkey}&query=${query}`)
+get_result = await fetchJson(`${LolApi}/api/otakudesusearch?apikey=${lolkey}&query=${query}`)
 get_result = get_result.result
 ini_txt = `Title : ${get_result.title}\n`
 ini_txt += `Japanese : ${get_result.japanese}\n`
@@ -9858,7 +9876,7 @@ break
 case 'xnhentai':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} 344253`)
 henid = args[0]
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/nhentai/${henid}?apikey=${lolkey}`)
+get_result = await fetchJson(`${LolApi}/api/nhentai/${henid}?apikey=${lolkey}`)
 get_result = get_result.result
 ini_txt = `Title Romaji : ${get_result.title_romaji}\n`
 ini_txt += `Title Native : ${get_result.title_native}\n`
@@ -9879,7 +9897,7 @@ break
 case 'xnhentaipdf':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} 344253`)
 henid = args[0]
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/nhentaipdf/${henid}?apikey=${lolkey}`)
+get_result = await fetchJson(`${LolApi}/api/nhentaipdf/${henid}?apikey=${lolkey}`)
 get_result = get_result.result
 ini_buffer = await getBuffer(get_result)
 await alpha.sendMessage(from, ini_buffer, document, { quoted: mek, mimetype: Mimetype.pdf, filename: `${henid}.pdf` })
@@ -9888,7 +9906,7 @@ break
 case 'xnhentaisearch':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} Gotoubun No Hanayome`)
 query = args.join(" ")
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/nhentaisearch?apikey=${lolkey}&query=${query}`)
+get_result = await fetchJson(`${LolApi}/api/nhentaisearch?apikey=${lolkey}&query=${query}`)
 get_result = get_result.result
 ini_txt = "Result : \n"
 for (var x of get_result) {
@@ -9906,7 +9924,7 @@ break
 case 'xnekopoi':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} https://nekopoi.care/isekai-harem-monogatari-episode-4-subtitle-indonesia/`)
 ini_url = args[0]
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/nekopoi?apikey=${lolkey}&url=${ini_url}`)
+get_result = await fetchJson(`${LolApi}/api/nekopoi?apikey=${lolkey}&url=${ini_url}`)
 get_result = get_result.result
 ini_txt = `Title : ${get_result.anime}\n`
 ini_txt += `Porducers : ${get_result.producers}\n`
@@ -9928,7 +9946,7 @@ break
 case 'xnekopoisearch':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} Isekai Harem`)
 query = args.join(" ")
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/nekopoisearch?apikey=${lolkey}&query=${query}`)
+get_result = await fetchJson(`${LolApi}/api/nekopoisearch?apikey=${lolkey}&query=${query}`)
 get_result = get_result.result
 ini_txt = ""
 for (var x of get_result) {
@@ -9942,7 +9960,7 @@ break
 // Information //
 case 'xkbbi':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} kursi`)
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/kbbi?apikey=${lolkey}&query=${args.join(" ")}`)
+get_result = await fetchJson(`${LolApi}/api/kbbi?apikey=${lolkey}&query=${args.join(" ")}`)
 lila = get_result.result
 ini_txt = `${petik}Kata : ${lila[0].nama}${petik}\n`
 ini_txt += `${petik}Kata Dasar : ${lila[0].kata_dasar}${petik}\n`
@@ -9960,7 +9978,7 @@ break
 
 case 'xbrainly2':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} siapakah sukarno`)
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/brainly2?apikey=${lolkey}&query=${args.join(" ")}`)
+get_result = await fetchJson(`${LolApi}/api/brainly2?apikey=${lolkey}&query=${args.join(" ")}`)
 lala = get_result.result
 ini_txt = "Beberapa Pembahasan Dari Brainly :\n\n"
 for (var x of lala) {
@@ -9977,7 +9995,7 @@ if (args.length == 0) return reply1(`Contoh: ${prefix + command} jakarta - yogya
 pauls = args.join(" ")
 teks1 = pauls.split("-")[0].trim()
 teks2 = pauls.split("-")[1].trim()
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/jaraktempuh?apikey=${lolkey}&kota1=${teks1}&kota2=${teks2}`)
+get_result = await fetchJson(`${LolApi}/api/jaraktempuh?apikey=${lolkey}&kota1=${teks1}&kota2=${teks2}`)
 x = get_result.result
 ini_txt = `Informasi Jarak dari ${teks1} ke ${teks2} :\n\n`
 ini_txt += `${petik}◪ Asal :${petik} ${x.from.name}\n`
@@ -10000,7 +10018,7 @@ break
 
 case 'xurbandictionary':
 urb = args.join(" ")
-get_result = await fetchJson(`http://alpha.herokuapp.com/api/urdict?apikey=${lolkey}&query=${urb}`)
+get_result = await fetchJson(`${LolApi}/api/urdict?apikey=${lolkey}&query=${urb}`)
 lilu = get_result.result
 for (var x of lilu) {
 ini_txt = `${petik}Meaning :\n${x.definition}${petik}\n\n`
@@ -10020,7 +10038,7 @@ break
 case 'xchord':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} Melukis senja`)
 query = args.join(" ")
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/chord?apikey=${lolkey}&query=${query}`)
+get_result = await fetchJson(`${LolApi}/api/chord?apikey=${lolkey}&query=${query}`)
 get_result = get_result.result
 ini_txt = `Title : ${get_result.title}\n`
 ini_txt += `Chord : \n${get_result.chord}`
@@ -10030,7 +10048,7 @@ break
 case 'xheroml':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} Fanny`)
 hero = args.join(" ")
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/heroml/${hero}?apikey=${lolkey}`)
+get_result = await fetchJson(`${LolApi}/api/heroml/${hero}?apikey=${lolkey}`)
 get_result = get_result.result
 ini_txt = `Name : ${get_result.hero_name}\n`
 ini_txt += `Entrance Quotes : ${get_result.ent_quotes}\n`
@@ -10054,14 +10072,14 @@ break
 case 'xmlstalk':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} 84830127/2169`)
 ml_id = args[0]
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/mobilelegend/${ml_id}?apikey=${lolkey}`)
+get_result = await fetchJson(`${LolApi}/api/mobilelegend/${ml_id}?apikey=${lolkey}`)
 reply1(get_result.result)
 break
 
 case 'xgenshin':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} jean`)
 hero = args.join(" ")
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/genshin/${hero}?apikey=${lolkey}`)
+get_result = await fetchJson(`${LolApi}/api/genshin/${hero}?apikey=${lolkey}`)
 get_result = get_result.result
 ini_txt = `Name : ${get_result.title}\n`
 ini_txt += `Intro : ${get_result.intro}\n`
@@ -10086,7 +10104,7 @@ method: 'POST',
 credentials: 'include',
 body: form
 }
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/read-qr?apikey=${lolkey}`, {...options })
+get_result = await fetchJson(`${LolApi}/api/read-qr?apikey=${lolkey}`, {...options })
 fs.unlinkSync(filePath)
 reply1("Result: " + get_result.result)
 } else {
@@ -10097,7 +10115,7 @@ break
 case 'xwikipedia':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} Tahu`)
 query = args.join(" ")
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/wiki?apikey=${lolkey}&query=${query}`)
+get_result = await fetchJson(`${LolApi}/api/wiki?apikey=${lolkey}&query=${query}`)
 get_result = get_result.result
 reply1(get_result)
 break
@@ -10107,7 +10125,7 @@ if (args.length == 0) return reply1(`Contoh: ${prefix + command} en Tahu Bacem`)
 kode_negara = args[0]
 args.shift()
 ini_txt = args.join(" ")
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/translate/auto/${kode_negara}?apikey=${lolkey}&text=${ini_txt}`)
+get_result = await fetchJson(`${LolApi}/api/translate/auto/${kode_negara}?apikey=${lolkey}&text=${ini_txt}`)
 get_result = get_result.result
 init_txt = `From : ${get_result.from}\n`
 init_txt += `To : ${get_result.to}\n`
@@ -10120,7 +10138,7 @@ break
 case 'xbrainly':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} Soekarno adalah`)
 query = args.join(" ")
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/brainly?apikey=${lolkey}&query=${query}`)
+get_result = await fetchJson(`${LolApi}/api/brainly?apikey=${lolkey}&query=${query}`)
 get_result = get_result.result
 ini_txt = "Result : \n"
 for (var x of get_result) {
@@ -10133,7 +10151,7 @@ break
 case 'xjadwaltv':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} RCTI`)
 channel = args[0]
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/jadwaltv/${channel}?apikey=${lolkey}`)
+get_result = await fetchJson(`${LolApi}/api/jadwaltv/${channel}?apikey=${lolkey}`)
 get_result = get_result.result
 ini_txt = `Jadwal TV ${channel.toUpperCase()}\n`
 for (var x in get_result) {
@@ -10143,7 +10161,7 @@ reply1(ini_txt)
 break
 
 case 'xjadwaltvnow':
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/jadwaltv/now?apikey=${lolkey}`)
+get_result = await fetchJson(`${LolApi}/api/jadwaltv/now?apikey=${lolkey}`)
 get_result = get_result.result
 ini_txt = `Jadwal TV Now :\n`
 for (var x in get_result) {
@@ -10153,7 +10171,7 @@ reply1(ini_txt)
 break
 
 case 'xnewsinfo':
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/newsinfo?apikey=${lolkey}`)
+get_result = await fetchJson(`${LolApi}/api/newsinfo?apikey=${lolkey}`)
 get_result = get_result.result
 ini_txt = "Result :\n"
 for (var x of get_result) {
@@ -10168,7 +10186,7 @@ reply1(ini_txt)
 break
 
 case 'xcnnindonesia':
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/cnnindonesia?apikey=${lolkey}`)
+get_result = await fetchJson(`${LolApi}/api/cnnindonesia?apikey=${lolkey}`)
 get_result = get_result.result
 ini_txt = "Result :\n"
 for (var x of get_result) {
@@ -10181,7 +10199,7 @@ reply1(ini_txt)
 break
 
 case 'xcnnnasional':
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/cnnindonesia/nasional?apikey=${lolkey}`)
+get_result = await fetchJson(`${LolApi}/api/cnnindonesia/nasional?apikey=${lolkey}`)
 get_result = get_result.result
 ini_txt = "Result :\n"
 for (var x of get_result) {
@@ -10194,7 +10212,7 @@ reply1(ini_txt)
 break
 
 case 'xcnninternasional':
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/cnnindonesia/internasional?apikey=${lolkey}`)
+get_result = await fetchJson(`${LolApi}/api/cnnindonesia/internasional?apikey=${lolkey}`)
 get_result = get_result.result
 ini_txt = "Result :\n"
 for (var x of get_result) {
@@ -10207,7 +10225,7 @@ reply1(ini_txt)
 break
 
 case 'xinfogempa':
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/infogempa?apikey=${lolkey}`)
+get_result = await fetchJson(`${LolApi}/api/infogempa?apikey=${lolkey}`)
 get_result = get_result.result
 ini_txt = `Lokasi : ${get_result.lokasi}\n`
 ini_txt += `Waktu : ${get_result.waktu}\n`
@@ -10222,14 +10240,14 @@ break
 case 'xlirik':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} Melukis Senja`)
 query = args.join(" ")
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/lirik?apikey=${lolkey}&query=${query}`)
+get_result = await fetchJson(`${LolApi}/api/lirik?apikey=${lolkey}&query=${query}`)
 reply1(get_result.result)
 break
 
 case 'xcuaca':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} Yogyakarta`)
 daerah = args[0]
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/cuaca/${daerah}?apikey=${lolkey}`)
+get_result = await fetchJson(`${LolApi}/api/cuaca/${daerah}?apikey=${lolkey}`)
 get_result = get_result.result
 ini_txt = `Tempat : ${get_result.tempat}\n`
 ini_txt += `Cuaca : ${get_result.cuaca}\n`
@@ -10244,7 +10262,7 @@ reply1(ini_txt)
 break
 
 case 'xcovidindo':
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/corona/indonesia?apikey=${lolkey}`)
+get_result = await fetchJson(`${LolApi}/api/corona/indonesia?apikey=${lolkey}`)
 get_result = get_result.result
 ini_txt = `Positif : ${get_result.positif}\n`
 ini_txt += `Sembuh : ${get_result.sembuh}\n`
@@ -10254,7 +10272,7 @@ reply1(ini_txt)
 break
 
 case 'xcovidglobal':
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/corona/global?apikey=${lolkey}`)
+get_result = await fetchJson(`${LolApi}/api/corona/global?apikey=${lolkey}`)
 get_result = get_result.result
 ini_txt = `Positif : ${get_result.positif}\n`
 ini_txt += `Sembuh : ${get_result.sembuh}\n`
@@ -10266,7 +10284,7 @@ break
 case 'xkodepos':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} Slemanan or ${prefix + command} 66154`)
 daerah = args.join(" ")
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/kodepos?apikey=${lolkey}&query=${daerah}`)
+get_result = await fetchJson(`${LolApi}/api/kodepos?apikey=${lolkey}&query=${daerah}`)
 get_result = get_result.result[0]
 ini_txt = `Provinsi : ${get_result.province}\n`
 ini_txt += `Kabupaten : ${get_result.city}\n`
@@ -10277,7 +10295,7 @@ reply1(ini_txt)
 break
 
 case 'xjadwalbola':
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/jadwalbola?apikey=${lolkey}`)
+get_result = await fetchJson(`${LolApi}/api/jadwalbola?apikey=${lolkey}`)
 get_result = get_result.result
 ini_txt = "Jadwal Bola :\n"
 for (var x of get_result) {
@@ -10291,7 +10309,7 @@ reply1(ini_txt)
 break
 
 case 'xindbeasiswa':
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/indbeasiswa?apikey=${lolkey}`)
+get_result = await fetchJson(`${LolApi}/api/indbeasiswa?apikey=${lolkey}`)
 get_result = get_result.result
 ini_txt = 'Info Beasiswa :\n'
 for (var x of get_result) {
@@ -10302,7 +10320,7 @@ reply1(ini_txt)
 break
 
 case 'xhoax':
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/turnbackhoax?apikey=${lolkey}`)
+get_result = await fetchJson(`${LolApi}/api/turnbackhoax?apikey=${lolkey}`)
 get_result = get_result.result
 ini_txt = 'Info Hoax :\n'
 for (var x of get_result) {
@@ -10328,7 +10346,7 @@ method: 'POST',
 credentials: 'include',
 body: form
 }
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/nsfwcheck?apikey=${lolkey}`, {...options })
+get_result = await fetchJson(`${LolApi}/api/nsfwcheck?apikey=${lolkey}`, {...options })
 fs.unlinkSync(filePath)
 get_result = get_result.result
 is_nsfw = "No"
@@ -10353,7 +10371,7 @@ method: 'POST',
 credentials: 'include',
 body: form
 }
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/ocr?apikey=${lolkey}`, {...options })
+get_result = await fetchJson(`${LolApi}/api/ocr?apikey=${lolkey}`, {...options })
 fs.unlinkSync(filePath)
 get_result = get_result.result
 reply1(`Result : ${get_result}`)
@@ -10366,7 +10384,7 @@ break
 case 'xlk21':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} Transformer`)
 query = args.join(" ")
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/lk21?apikey=${lolkey}&query=${query}`)
+get_result = await fetchJson(`${LolApi}/api/lk21?apikey=${lolkey}&query=${query}`)
 get_result = get_result.result
 ini_txt = `Title : ${get_result.title}\n`
 ini_txt += `Link : ${get_result.link}\n`
@@ -10386,7 +10404,7 @@ await alpha.sendMessage(from, thumbnail, image, { quoted: mek, caption: ini_txt 
 break
 
 case 'xdrakorongoing':
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/drakorongoing?apikey=${lolkey}`)
+get_result = await fetchJson(`${LolApi}/api/drakorongoing?apikey=${lolkey}`)
 get_result = get_result.result
 ini_txt = "Ongoing Drakor\n\n"
 for (var x of get_result) {
@@ -10403,7 +10421,7 @@ break
 case 'xwattpad':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} https://www.wattpad.com/707367860-kumpulan-quote-tere-liye-tere-liye-quote-quote`)
 ini_url = args[0]
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/wattpad?apikey=${lolkey}&url=${ini_url}`)
+get_result = await fetchJson(`${LolApi}/api/wattpad?apikey=${lolkey}&url=${ini_url}`)
 get_result = get_result.result
 ini_txt = `Title : ${get_result.title}\n`
 ini_txt += `Rating : ${get_result.rating}\n`
@@ -10423,7 +10441,7 @@ break
 case 'xwattpadsearch':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} Tere Liye`)
 query = args.join(" ")
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/wattpadsearch?apikey=${lolkey}&query=${query}`)
+get_result = await fetchJson(`${LolApi}/api/wattpadsearch?apikey=${lolkey}&query=${query}`)
 get_result = get_result.result
 ini_txt = "Wattpad Seach : \n"
 for (var x of get_result) {
@@ -10438,7 +10456,7 @@ reply1(ini_txt)
 break
 
 case 'xcerpen':
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/cerpen?apikey=${lolkey}`)
+get_result = await fetchJson(`${LolApi}/api/cerpen?apikey=${lolkey}`)
 get_result = get_result.result
 ini_txt = `Title : ${get_result.title}\n`
 ini_txt += `Creator : ${get_result.creator}\n`
@@ -10447,7 +10465,7 @@ reply1(ini_txt)
 break
 
 case 'xceritahoror':
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/ceritahoror?apikey=${lolkey}`)
+get_result = await fetchJson(`${LolApi}/api/ceritahoror?apikey=${lolkey}`)
 get_result = get_result.result
 ini_txt = `Title : ${get_result.title}\n`
 ini_txt += `Desc : ${get_result.desc}\n`
@@ -10458,7 +10476,7 @@ break
 
 // Random Text //
 case 'xquotes':
-quotes = await fetchJson(`https://api.lolhuman.xyz/api/random/quotes?apikey=${lolkey}`)
+quotes = await fetchJson(`${LolApi}/api/random/quotes?apikey=${lolkey}`)
 quotes = quotes.result
 author = quotes.by
 quotes = quotes.quote
@@ -10466,7 +10484,7 @@ reply1(`_${quotes}_\n\n*― ${author}*`)
 break
 
 case 'xquotesanime':
-quotes = await fetchJson(`https://api.lolhuman.xyz/api/random/quotesnime?apikey=${lolkey}`)
+quotes = await fetchJson(`${LolApi}/api/random/quotesnime?apikey=${lolkey}`)
 quotes = quotes.result
 quote = quotes.quote
 char = quotes.character
@@ -10476,12 +10494,12 @@ reply1(`_${quote}_\n\n*― ${char}*\n*― ${anime} ${episode}*`)
 break
 
 case 'xquotesdilan':
-quotedilan = await fetchJson(`https://api.lolhuman.xyz/api/quotes/dilan?apikey=${lolkey}`)
+quotedilan = await fetchJson(`${LolApi}/api/quotes/dilan?apikey=${lolkey}`)
 reply1(quotedilan.result)
 break
 
 case 'xquotesimage':
-get_result = await getBuffer(`https://api.lolhuman.xyz/api/random/${xmen}?apikey=${lolkey}`)
+get_result = await getBuffer(`${LolApi}/api/random/${xmen}?apikey=${lolkey}`)
 await alpha.sendMessage(from, get_result, image, { quotes: mek })
 break
 
@@ -10489,12 +10507,12 @@ case 'xfaktaunik':
 case 'xkatabijak':
 case 'xpantun':
 case 'xbucin':
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/random/${xmen}?apikey=${lolkey}`)
+get_result = await fetchJson(`${LolApi}/api/random/${xmen}?apikey=${lolkey}`)
 reply1(get_result.result)
 break
 
 case 'xrandomnama':
-anu = await fetchJson(`https://api.lolhuman.xyz/api/random/nama?apikey=${lolkey}`)
+anu = await fetchJson(`${LolApi}/api/random/nama?apikey=${lolkey}`)
 reply1(anu.result)
 break
 
@@ -10502,14 +10520,14 @@ break
 case 'xgimage':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} loli kawaii`)
 query = args.join(" ")
-ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/gimage?apikey=${lolkey}&query=${query}`)
+ini_buffer = await getBuffer(`${LolApi}/api/gimage?apikey=${lolkey}&query=${query}`)
 await alpha.sendMessage(from, ini_buffer, image, { quoted: mek, caption: "Nih kack" })
 break
 
 case 'xgimage2':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} loli kawaii`)
 query = args.join(" ")
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/gimage2?apikey=${lolkey}&query=${query}`)
+get_result = await fetchJson(`${LolApi}/api/gimage2?apikey=${lolkey}&query=${query}`)
 get_result = get_result.result
 for (var x = 0; x <= 5; x++) {
 var ini_buffer = await getBuffer(get_result[x])
@@ -10520,14 +10538,14 @@ break
 case 'xkonachan':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} azur_lane`)
 query = args.join(" ")
-ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/konachan?apikey=${lolkey}&query=${query}`)
+ini_buffer = await getBuffer(`${LolApi}/api/konachan?apikey=${lolkey}&query=${query}`)
 await alpha.sendMessage(from, ini_buffer, image, { quoted: mek, caption: "Nih kack" })
 break
 
 case 'xwallpapersearch':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} loli kawaii`)
 query = args.join(" ")
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/wallpaper?apikey=${lolkey}&query=${query}`)
+get_result = await fetchJson(`${LolApi}/api/wallpaper?apikey=${lolkey}&query=${query}`)
 ini_buffer = await getBuffer(get_result.result)
 await alpha.sendMessage(from, ini_buffer, image, { quoted: mek, caption: "Nih kack" })
 break
@@ -10535,7 +10553,7 @@ break
 case 'xwallpapersearch2':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} loli kawaii`)
 query = args.join(" ")
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/wallpaper2?apikey=${lolkey}&query=${query}`)
+get_result = await fetchJson(`${LolApi}/api/wallpaper2?apikey=${lolkey}&query=${query}`)
 ini_buffer = await getBuffer(get_result.result)
 await alpha.sendMessage(from, ini_buffer, image, { quoted: mek, caption: "Nih kack" })
 break
@@ -10543,7 +10561,7 @@ break
 case 'xplaystore':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} telegram`)
 query = args.join(" ")
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/playstore?apikey=${lolkey}&query=${query}`)
+get_result = await fetchJson(`${LolApi}/api/playstore?apikey=${lolkey}&query=${query}`)
 get_result = get_result.result
 ini_txt = 'Play Store Search : \n'
 for (var x of get_result) {
@@ -10560,7 +10578,7 @@ break
 case 'xshopee':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} tas gendong`)
 query = args.join(" ")
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/shopee?apikey=${lolkey}&query=${query}`)
+get_result = await fetchJson(`${LolApi}/api/shopee?apikey=${lolkey}&query=${query}`)
 get_result = get_result.result
 ini_txt = 'Shopee Search : \n'
 for (var x of get_result) {
@@ -10576,7 +10594,7 @@ break
 case 'xgoogle':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} loli kawaii`)
 query = args.join(" ")
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/gsearch?apikey=${lolkey}&query=${query}`)
+get_result = await fetchJson(`${LolApi}/api/gsearch?apikey=${lolkey}&query=${query}`)
 get_result = get_result.result
 ini_txt = 'Google Search : \n'
 for (var x of get_result) {
@@ -10590,10 +10608,10 @@ break
 case 'xstickerwa':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} Koceng Imot`)
 query = args.join(" ")
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/stickerwa?apikey=${lolkey}&query=${query}`)
+get_result = await fetchJson(`${LolApi}/api/stickerwa?apikey=${lolkey}&query=${query}`)
 get_result = get_result.result[0].stickers
 for (var x of get_result) {
-ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/convert/towebp?apikey=${lolkey}&img=${x}`)
+ini_buffer = await getBuffer(`${LolApi}/api/convert/towebp?apikey=${lolkey}&img=${x}`)
 await alpha.sendMessage(from, ini_buffer, sticker)
 }
 break
@@ -10602,7 +10620,7 @@ break
 case 'xartinama':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} Wudy`)
 ini_nama = args.join(" ")
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/artinama?apikey=${lolkey}&nama=${ini_nama}`)
+get_result = await fetchJson(`${LolApi}/api/artinama?apikey=${lolkey}&nama=${ini_nama}`)
 reply1(get_result.result)
 break
 
@@ -10611,7 +10629,7 @@ if (args.length == 0) return reply1(`Contoh: ${prefix + command} Tahu & Bacem`)
 ini_nama = args.join(" ").split("&")
 nama1 = ini_nama[0].trim()
 nama2 = ini_nama[1].trim()
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/jodoh/${nama1}/${nama2}?apikey=${lolkey}`)
+get_result = await fetchJson(`${LolApi}/api/jodoh/${nama1}/${nama2}?apikey=${lolkey}`)
 get_result = get_result.result
 ini_txt = `Positif : ${get_result.positif}\n`
 ini_txt += `Negative : ${get_result.negatif}\n`
@@ -10624,7 +10642,7 @@ if (args.length == 0) return reply1(`Contoh: ${prefix + command} 12 12 2020`)
 tanggal = args[0]
 bulan = args[1]
 tahun = args[2]
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/weton/${tanggal}/${bulan}/${tahun}?apikey=${lolkey}`)
+get_result = await fetchJson(`${LolApi}/api/weton/${tanggal}/${bulan}/${tahun}?apikey=${lolkey}`)
 get_result = get_result.result
 ini_txt = `Weton : ${get_result.weton}\n`
 ini_txt += `Pekerjaan : ${get_result.pekerjaan}\n`
@@ -10638,7 +10656,7 @@ if (args.length == 0) return reply1(`Contoh: ${prefix + command} 12 12 2020`)
 tanggal = args[0]
 bulan = args[1]
 tahun = args[2]
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/jadian/${tanggal}/${bulan}/${tahun}?apikey=${lolkey}`)
+get_result = await fetchJson(`${LolApi}/api/jadian/${tanggal}/${bulan}/${tahun}?apikey=${lolkey}`)
 get_result = get_result.result
 ini_txt = `Karakteristik : ${get_result.karakteristik}\n`
 ini_txt += `Deskripsi : ${get_result.deskripsi}`
@@ -10649,7 +10667,7 @@ case 'xtebakumur':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} Wudy`)
 ini_name = args.join(" ")
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} Wudy`)
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/tebakumur?apikey=SoftApikey&name=${ini_name}`)
+get_result = await fetchJson(`${LolApi}/api/tebakumur?apikey=SoftApikey&name=${ini_name}`)
 get_result = get_result.result
 ini_txt = `Nama : ${get_result.name}\n`
 ini_txt += `Umur : ${get_result.age}`
@@ -10658,19 +10676,19 @@ break
 
 // Entertainment
 case 'xasupan':
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/asupan?apikey=${lolkey}`)
+get_result = await fetchJson(`${LolApi}/api/asupan?apikey=${lolkey}`)
 ini_buffer = await getBuffer(get_result.result)
 await alpha.sendMessage(from, ini_buffer, video, { quoted: mek, mimetype: Mimetype.mp4, filename: "asupan.mp4" })
 break
 
 case 'xwancak':
-ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/onecak?apikey=${lolkey}`)
+ini_buffer = await getBuffer(`${LolApi}/api/onecak?apikey=${lolkey}`)
 await alpha.sendMessage(from, ini_buffer, image, { quoted: mek, caption: "Nih kack" })
 break
 
 case 'xakinator': // Premium / VIP apikey only
 if (akinator.hasOwnProperty(sender.split('@')[0])) return reply1("Selesein yg sebelumnya dulu atuh")
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/akinator/start?apikey=${lolkey}`)
+get_result = await fetchJson(`${LolApi}/api/akinator/start?apikey=${lolkey}`)
 var { server, frontaddr, session, signature, question, step } = get_result.result
 const dt = {}
 dt["server"] = server
@@ -10707,7 +10725,7 @@ filePath = await alpha.downloadAndSaveMediaMessage(encmedia, filename = getRando
 file_name = getRandom(".webp")
 ini_txt = args.join(" ")
 request({
-url: `https://api.lolhuman.xyz/api/quotemaker3?apikey=${lolkey}`,
+url: `${LolApi}/api/quotemaker3?apikey=${lolkey}`,
 method: 'POST',
 formData: {
 "img": fs.createReadStream(filePath),
@@ -10735,7 +10753,7 @@ var formdata = new FormData()
 formdata.append('package', 'LoL')
 formdata.append('author', 'Human')
 formdata.append('img', image_buffer, { filename: 'tahu.jpg' })
-axios.post(`https://api.lolhuman.xyz/api/convert/towebpauthor?apikey=${lolkey}`, formdata.getBuffer(), { headers: { "content-type": `multipart/form-data; boundary=${formdata._boundary}` }, responseType: 'arraybuffer' }).then((res) => {
+axios.post(`${LolApi}/api/convert/towebpauthor?apikey=${lolkey}`, formdata.getBuffer(), { headers: { "content-type": `multipart/form-data; boundary=${formdata._boundary}` }, responseType: 'arraybuffer' }).then((res) => {
 alpha.sendMessage(from, res.data, sticker)
 })
 } else {
@@ -10773,7 +10791,7 @@ const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM
 var image_buffer = await alpha.downloadMediaMessage(encmedia);
 var formdata = new FormData()
 formdata.append('img', image_buffer, { filename: 'tahu.jpg' })
-axios.post(`https://api.lolhuman.xyz/api/convert/towebpwround?apikey=${lolkey}`, formdata.getBuffer(), { headers: { "content-type": `multipart/form-data; boundary=${formdata._boundary}` }, responseType: 'arraybuffer' }).then((res) => {
+axios.post(`${LolApi}/api/convert/towebpwround?apikey=${lolkey}`, formdata.getBuffer(), { headers: { "content-type": `multipart/form-data; boundary=${formdata._boundary}` }, responseType: 'arraybuffer' }).then((res) => {
 alpha.sendMessage(from, res.data, sticker)
 })
 } else {
@@ -10788,7 +10806,7 @@ filePath = await alpha.downloadAndSaveMediaMessage(encmedia)
 file_name = getRandom('.png')
 file_name2 = getRandom('.webp')
 request({
-url: `https://api.lolhuman.xyz/api/removebg?apikey=${lolkey}`,
+url: `${LolApi}/api/removebg?apikey=${lolkey}`,
 method: 'POST',
 formData: {
 "img": fs.createReadStream(filePath)
@@ -10826,7 +10844,7 @@ var formdata = new FormData()
 formdata.append('package', ini_txt[0])
 formdata.append('author', ini_txt[1])
 formdata.append('img', image_buffer, { filename: 'tahu.jpg' })
-axios.post(`https://api.lolhuman.xyz/api/convert/towebpauthor?apikey=${lolkey}`, formdata.getBuffer(), { headers: { "content-type": `multipart/form-data; boundary=${formdata._boundary}` }, responseType: 'arraybuffer' }).then((res) => {
+axios.post(`${LolApi}/api/convert/towebpauthor?apikey=${lolkey}`, formdata.getBuffer(), { headers: { "content-type": `multipart/form-data; boundary=${formdata._boundary}` }, responseType: 'arraybuffer' }).then((res) => {
 alpha.sendMessage(from, res.data, sticker)
 })
 } else {
@@ -10838,7 +10856,7 @@ case 'xtriggered':
 ini_url = args[0]
 ranp = getRandom('.gif')
 rano = getRandom('.webp')
-ini_buffer = `https://api.lolhuman.xyz/api/editor/triggered?apikey=${lolkey}&img=${ini_url}`
+ini_buffer = `${LolApi}/api/editor/triggered?apikey=${lolkey}&img=${ini_url}`
 exec(`wget "${ini_buffer}" -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
 fs.unlinkSync(ranp)
 buff = fs.readFileSync(rano)
@@ -10850,7 +10868,7 @@ break
 
 case 'xwasted':
 ini_url = args[0]
-ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/editor/wasted?apikey=${lolkey}&img=${ini_url}`)
+ini_buffer = await getBuffer(`${LolApi}/api/editor/wasted?apikey=${lolkey}&img=${ini_url}`)
 await alpha.sendMessage(from, ini_buffer, image, { quoted: mek, caption: "Nih kack" })
 break
 
@@ -10862,7 +10880,7 @@ emoji = encodeURI(emoji[0])
 } catch {
 emoji = encodeURI(emoji)
 }
-ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/smoji/${emoji}?apikey=${lolkey}`)
+ini_buffer = await getBuffer(`${LolApi}/api/smoji/${emoji}?apikey=${lolkey}`)
 await alpha.sendMessage(from, ini_buffer, sticker, { quoted: mek })
 break
 
@@ -10874,15 +10892,15 @@ emoji = encodeURI(emoji[0])
 } catch {
 emoji = encodeURI(emoji)
 }
-ini_buffer = await fetchJson(`https://api.lolhuman.xyz/api/smoji3/${emoji}?apikey=${lolkey}`)
-ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/convert/towebp?apikey=${lolkey}&img=` + ini_buffer.result.emoji.whatsapp)
+ini_buffer = await fetchJson(`${LolApi}/api/smoji3/${emoji}?apikey=${lolkey}`)
+ini_buffer = await getBuffer(`${LolApi}/api/convert/towebp?apikey=${lolkey}&img=` + ini_buffer.result.emoji.whatsapp)
 await alpha.sendMessage(from, ini_buffer, sticker, { quoted: mek })
 break
 
 case 'xfakedonald':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} Wudy`)
 ini_txt = args.join(" ")
-ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/tweettrump?apikey=${lolkey}&text=${ini_txt}`)
+ini_buffer = await getBuffer(`${LolApi}/api/tweettrump?apikey=${lolkey}&text=${ini_txt}`)
 await alpha.sendMessage(from, ini_buffer, image, { quoted: mek, caption: "Nih kack" })
 break
 
@@ -10909,7 +10927,7 @@ kerja = get_args[12]
 warga = get_args[13]
 until = get_args[14]
 img = get_args[15]
-ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/ktpmaker?apikey=${lolkey}&nik=${nik}&prov=${prov}&kabu=${kabu}&name=${name}&ttl=${ttl}&jk=${jk}&jl=${jl}&rtrw=${rtrw}&lurah=${lurah}&camat=${camat}&agama=${agama}&nikah=${nikah}&kerja=${kerja}&warga=${warga}&until=${until}&img=${img}`)
+ini_buffer = await getBuffer(`${LolApi}/api/ktpmaker?apikey=${lolkey}&nik=${nik}&prov=${prov}&kabu=${kabu}&name=${name}&ttl=${ttl}&jk=${jk}&jl=${jl}&rtrw=${rtrw}&lurah=${lurah}&camat=${camat}&agama=${agama}&nikah=${nikah}&kerja=${kerja}&warga=${warga}&until=${until}&img=${img}`)
 await alpha.sendMessage(from, ini_buffer, image, { quoted: mek, caption: "Nih kack" })
 break
 
@@ -10920,7 +10938,7 @@ const encmedia = isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quote
 filePath = await alpha.downloadAndSaveMediaMessage(encmedia, filename = getRandom());
 file_name = getRandom(".mp4")
 request({
-url: `https://api.lolhuman.xyz/api/convert/webptomp4?apikey=${lolkey}`,
+url: `${LolApi}/api/convert/webptomp4?apikey=${lolkey}`,
 method: 'POST',
 formData: {
 "img": fs.createReadStream(filePath),
@@ -10944,7 +10962,7 @@ const encmedia = isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quote
 filePath = await alpha.downloadAndSaveMediaMessage(encmedia, filename = getRandom());
 file_name = getRandom(".mp4")
 request({
-url: `https://api.lolhuman.xyz/api/convert/webptomp4?apikey=${lolkey}`,
+url: `${LolApi}/api/convert/webptomp4?apikey=${lolkey}`,
 method: 'POST',
 formData: {
 "img": fs.createReadStream(filePath),
@@ -10966,7 +10984,7 @@ break
 case 'xstalkig':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} jessnolimit`)
 username = args[0]
-ini_result = await fetchJson(`https://api.lolhuman.xyz/api/stalkig/${username}?apikey=${lolkey}`)
+ini_result = await fetchJson(`${LolApi}/api/stalkig/${username}?apikey=${lolkey}`)
 ini_result = ini_result.result
 ini_buffer = await getBuffer(ini_result.photo_profile)
 ini_txt = `Username : ${ini_result.username}\n`
@@ -10981,7 +10999,7 @@ break
 case 'xstalkgithub':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} LoL-Human`)
 username = args[0]
-ini_result = await fetchJson(`https://api.lolhuman.xyz/api/github/${username}?apikey=${lolkey}`)
+ini_result = await fetchJson(`${LolApi}/api/github/${username}?apikey=${lolkey}`)
 ini_result = ini_result.result
 ini_buffer = await getBuffer(ini_result.avatar)
 ini_txt = `Name : ${ini_result.name}\n`
@@ -10997,7 +11015,7 @@ break
 case 'xstalktwitter':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} jokowi`)
 username = args[0]
-ini_result = await fetchJson(`https://api.lolhuman.xyz/api/twitter/${username}?apikey=${lolkey}`)
+ini_result = await fetchJson(`${LolApi}/api/twitter/${username}?apikey=${lolkey}`)
 ini_result = ini_result.result
 ini_buffer = await getBuffer(ini_result.profile_picture)
 ini_txt = `Username : ${ini_result.screen_name}\n`
@@ -11014,7 +11032,7 @@ break
 case 'xstalktiktok':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} bulansutena`)
 stalk_toktok = args[0]
-get_result = await fetchJson(`http://alpha.herokuapp.com/api/stalktiktok/${stalk_toktok}?apikey=${lolkey}`)
+get_result = await fetchJson(`${LolApi}/api/stalktiktok/${stalk_toktok}?apikey=${lolkey}`)
 get_result = get_result.result
 ini_txt = `Username : ${get_result.username}\n`
 ini_txt += `Nickname : ${get_result.nickname}\n`
@@ -11029,37 +11047,37 @@ break
 
 // Other
 case 'xssweb':
-if (args.length == 0) return reply1(`Contoh: ${prefix + command} https://api.lolhuman.xyz`)
+if (args.length == 0) return reply1(`Contoh: ${prefix + command} ${LolApi}`)
 ini_link = args[0]
-ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/ssweb?apikey=${lolkey}&url=${ini_link}`)
+ini_buffer = await getBuffer(`${LolApi}/api/ssweb?apikey=${lolkey}&url=${ini_link}`)
 await alpha.sendMessage(from, ini_buffer, image, { quoted: mek, caption: "Nih kack" })
 break
 
 case 'xssweb2':
-if (args.length == 0) return reply1(`Contoh: ${prefix + command} https://api.lolhuman.xyz`)
+if (args.length == 0) return reply1(`Contoh: ${prefix + command} ${LolApi}`)
 ini_link = args[0]
-ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/sswebfull?apikey=${lolkey}&url=${ini_link}`)
+ini_buffer = await getBuffer(`${LolApi}/api/sswebfull?apikey=${lolkey}&url=${ini_link}`)
 await alpha.sendMessage(from, ini_buffer, image, { quoted: mek, caption: "Nih kack" })
 break
 
 case 'xshortlink':
-if (args.length == 0) return reply1(`Contoh: ${prefix + command} https://api.lolhuman.xyz`)
+if (args.length == 0) return reply1(`Contoh: ${prefix + command} ${LolApi}`)
 ini_link = args[0]
-ini_buffer = await fetchJson(`https://api.lolhuman.xyz/api/shortlink?apikey=${lolkey}&url=${ini_link}`)
+ini_buffer = await fetchJson(`${LolApi}/api/shortlink?apikey=${lolkey}&url=${ini_link}`)
 reply1(ini_buffer.result)
 break
 
 case 'xspamsms':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} 08303030303030`)
 nomor = args[0]
-await fetchJson(`https://api.lolhuman.xyz/api/sms/spam1?apikey=${lolkey}&nomor=${nomor}`)
-await fetchJson(`https://api.lolhuman.xyz/api/sms/spam2?apikey=${lolkey}&nomor=${nomor}`)
-await fetchJson(`https://api.lolhuman.xyz/api/sms/spam3?apikey=${lolkey}&nomor=${nomor}`)
-await fetchJson(`https://api.lolhuman.xyz/api/sms/spam4?apikey=${lolkey}&nomor=${nomor}`)
-await fetchJson(`https://api.lolhuman.xyz/api/sms/spam5?apikey=${lolkey}&nomor=${nomor}`)
-await fetchJson(`https://api.lolhuman.xyz/api/sms/spam6?apikey=${lolkey}&nomor=${nomor}`)
-await fetchJson(`https://api.lolhuman.xyz/api/sms/spam7?apikey=${lolkey}&nomor=${nomor}`)
-await fetchJson(`https://api.lolhuman.xyz/api/sms/spam8?apikey=${lolkey}&nomor=${nomor}`)
+await fetchJson(`${LolApi}/api/sms/spam1?apikey=${lolkey}&nomor=${nomor}`)
+await fetchJson(`${LolApi}/api/sms/spam2?apikey=${lolkey}&nomor=${nomor}`)
+await fetchJson(`${LolApi}/api/sms/spam3?apikey=${lolkey}&nomor=${nomor}`)
+await fetchJson(`${LolApi}/api/sms/spam4?apikey=${lolkey}&nomor=${nomor}`)
+await fetchJson(`${LolApi}/api/sms/spam5?apikey=${lolkey}&nomor=${nomor}`)
+await fetchJson(`${LolApi}/api/sms/spam6?apikey=${lolkey}&nomor=${nomor}`)
+await fetchJson(`${LolApi}/api/sms/spam7?apikey=${lolkey}&nomor=${nomor}`)
+await fetchJson(`${LolApi}/api/sms/spam8?apikey=${lolkey}&nomor=${nomor}`)
 reply1("Success")
 break
 
@@ -11094,7 +11112,7 @@ const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM
 filePath = await alpha.downloadAndSaveMediaMessage(encmedia)
 file_name = getRandom('.jpg')
 request({
-url: `https://api.lolhuman.xyz/api/filter/${xmen}?apikey=${lolkey}`,
+url: `${LolApi}/api/filter/${xmen}?apikey=${lolkey}`,
 method: 'POST',
 formData: {
 "img": fs.createReadStream(filePath)
@@ -11119,7 +11137,7 @@ const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM
 filePath = await alpha.downloadAndSaveMediaMessage(encmedia)
 file_name = getRandom('.jpg')
 request({
-url: `https://api.lolhuman.xyz/api/editor/pencil?apikey=${lolkey}`,
+url: `${LolApi}/api/editor/pencil?apikey=${lolkey}`,
 method: 'POST',
 formData: {
 "img": fs.createReadStream(filePath)
@@ -11158,7 +11176,7 @@ case 'xblackpink':
 case 'xmegumin':
 case 'xart':
 case 'xwallnime':
-getBuffer(`https://api.lolhuman.xyz/api/random/${xmen}?apikey=${lolkey}`).then((gambar) => {
+getBuffer(`${LolApi}/api/random/${xmen}?apikey=${lolkey}`).then((gambar) => {
 alpha.sendMessage(from, gambar, image, { quoted: mek, caption: "Nih kack" })
 })
 break
@@ -11184,7 +11202,7 @@ case 'xhentaifemdom':
 case 'xlewdanimegirls':
 case 'xbiganimetiddies':
 case 'xhentai4everyone':
-getBuffer(`https://api.lolhuman.xyz/api/random/nsfw/${xmen}?apikey=${lolkey}`).then((gambar) => {
+getBuffer(`${LolApi}/api/random/nsfw/${xmen}?apikey=${lolkey}`).then((gambar) => {
 alpha.sendMessage(from, gambar, image, { quoted: mek, caption: "Nih kack" })
 })
 break
@@ -11218,7 +11236,7 @@ case 'xpoke':
 case 'xdance':
 case 'xcringe':
 case 'xblush':
-getBuffer(`https://api.lolhuman.xyz/api/random/blush?apikey=${lolkey}`).then((gambar) => {
+getBuffer(`${LolApi}/api/random/blush?apikey=${lolkey}`).then((gambar) => {
 alpha.sendMessage(from, gambar, image, { quoted: mek, caption: "Nih kack" })
 })
 break
@@ -11273,7 +11291,7 @@ case 'xkemonomimi':
 case 'xnsfw_avatar':
 case 'xnsfw_neko_gif':
 case 'xrandom_hentai_gif':
-await getBuffer(`https://api.lolhuman.xyz/api/random2/${xmen}?apikey=${lolkey}`).then((gambar) => {
+await getBuffer(`${LolApi}/api/random2/${xmen}?apikey=${lolkey}`).then((gambar) => {
 alpha.sendMessage(from, gambar, image, { quoted: mek, caption: "Nih kack" })
 })
 break
@@ -11318,7 +11336,7 @@ case 'xwatercolor':
 case 'xwonderfulgraffiti':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} Wudy`)
 ini_txt = args.join(" ")
-await getBuffer(`https://api.lolhuman.xyz/api/textprome/${xmen}?apikey=${lolkey}&text=${ini_txt}`).then((gambar) => {
+await getBuffer(`${LolApi}/api/textprome/${xmen}?apikey=${lolkey}&text=${ini_txt}`).then((gambar) => {
 alpha.sendMessage(from, gambar, image, { quoted: mek, caption: "Nih kack" })
 })
 break
@@ -11337,7 +11355,7 @@ case 'xcoolgravity':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} Wudy`)
 txt1 = args[0]
 txt2 = args[1]
-await getBuffer(`https://api.lolhuman.xyz/api/textprome2/${xmen}?apikey=${lolkey}&text1=${txt1}&text2=${txt2}`).then((gambar) => {
+await getBuffer(`${LolApi}/api/textprome2/${xmen}?apikey=${lolkey}&text1=${txt1}&text2=${txt2}`).then((gambar) => {
 alpha.sendMessage(from, gambar, image, { quoted: mek, caption: "Nih kack" })
 })
 break
@@ -11367,7 +11385,7 @@ case 'xharrypotter':
 case 'xcarvedwood':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} Wudy`)
 ini_txt = args.join(" ")
-await getBuffer(`https://api.lolhuman.xyz/api/photooxy1/${xmen}?apikey=${lolkey}&text=${ini_txt}`).then((gambar) => {
+await getBuffer(`${LolApi}/api/photooxy1/${xmen}?apikey=${lolkey}&text=${ini_txt}`).then((gambar) => {
 alpha.sendMessage(from, gambar, image, { quoted: mek, caption: "Nih kack" })
 })
 break
@@ -11379,7 +11397,7 @@ case 'xpubg':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} Wudy`)
 txt1 = args[0]
 txt2 = args[1]
-await getBuffer(`https://api.lolhuman.xyz/api/photooxy2/${xmen}?apikey=${lolkey}&text1=${txt1}&text2=${txt2}`).then((gambar) => {
+await getBuffer(`${LolApi}/api/photooxy2/${xmen}?apikey=${lolkey}&text1=${txt1}&text2=${txt2}`).then((gambar) => {
 alpha.sendMessage(from, gambar, image, { quoted: mek, caption: "Nih kack" })
 })
 break
@@ -11427,7 +11445,7 @@ case 'xlolbanner':
 case 'xavatardota':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} Wudy`)
 ini_txt = args.join(" ")
-await getBuffer(`https://api.lolhuman.xyz/api/ephoto1/${xmen}?apikey=${lolkey}&text=${ini_txt}`).then((gambar) => {
+await getBuffer(`${LolApi}/api/ephoto1/${xmen}?apikey=${lolkey}&text=${ini_txt}`).then((gambar) => {
 alpha.sendMessage(from, gambar, image, { quoted: mek, caption: "Nih kack" })
 })
 break
@@ -11498,18 +11516,18 @@ case 'vn':
 case 'gtts':
 if(args.length == 0 ) {
 let bresss = mek.message.extendedTextMessage.contextInfo.quotedMessage.conversation
-let tetees = await getBuffer(`https://hadi-api.herokuapp.com/api/tts?language=id&text=${bresss}`)
+let tetees = await getBuffer(`${HadiApi}/api/tts?language=id&text=${bresss}`)
 await alpha.sendMessage(from, tetees, MessageType.audio, {mimetype:'audio/mp4', quoted:mek, ptt:true,duration: 86400000})
 } else if (!budy.includes("af","sq","ar","hy","ca","zh","zh-cn","zh-tw","zh-yue","hr","cs","da","nl","en","en-au","en-uk","en-us","eo","fi","fr","de","el","ht","hi","hu","is","id","it","ja","ko","la","lv","mk","no","pl","pt","pt-br","ro","ru","sr","sk","es","es-es","es-us","sw","sv","ta","th","tr","vi","cy")){
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} id helo`) 
 var vn = q
 var vn1 = vn.split(" ")[0];
 var vn2 = vn.split(" ")[1]; 
-let tetees = await getBuffer(`https://hadi-api.herokuapp.com/api/tts?language=${vn1}&text=${vn2}`)
+let tetees = await getBuffer(`${HadiApi}/api/tts?language=${vn1}&text=${vn2}`)
 await alpha.sendMessage(from, tetees, MessageType.audio, {mimetype:'audio/mp4', quoted:mek, ptt:true,duration: 86400000})
 } else if(args.join(' ')) {
 ngab = args.join(' ')
-let tetees = await getBuffer(`https://hadi-api.herokuapp.com/api/tts?language=id&text=${ngab}`)
+let tetees = await getBuffer(`${HadiApi}/api/tts?language=id&text=${ngab}`)
 await alpha.sendMessage(from, tetees, MessageType.audio, {mimetype:'audio/mp4', quoted:mek, ptt:true,duration: 86400000})
 }
 break
@@ -11522,11 +11540,10 @@ case 'asupanrikagusriani':
 case 'asupanghea':
 asup_2 = await getBuffer(`${DappaApi}/api/asupan/${command}?apikey=${dapuhy}`) 
 asup_1 = `Nih Asupan nya ${pushname}`
-alpha.sendMessage(from, asup_2,video,{caption: `${asup1}`,quoted: mek})
+alpha.sendMessage(from, `${asup_2}`,video,{caption: `${asup1}`,quoted: mek})
 break
 
 case 'quoteslucu':
-if(!q) return reply1(`${emoj} Hint : ${prefix + command}`) 
 qtlc_ = await fetchJson(`${DappaApi}/api/fun/quoteslucu?apikey=${dapuhy}`)
 var qtlc_1 = `${ucapannya2}
 *${qtlc_.quotes}*`
@@ -11549,7 +11566,6 @@ quoted: mek, sendEphemeral: true
 break
 
 case 'cerpen':
-if(!q) return reply1(`${emoj} Hint : ${prefix + command}`) 
 crpn_ = await fetchJson(`${DappaApi}/api/fun/cerpen?apikey=${dapuhy}`)
 var crpn_1 = `${ucapannya2}
 • *Judul :* ${crpn_.judul}
@@ -11597,7 +11613,7 @@ break
 
 case 'tebakgambar2':
 if (tebakgambar2.hasOwnProperty(sender.split('@')[0])) return reply1("Jawab dulu yang sebelumnya ,belum kelar ngab")
-ttgbr_ = await fetchJson(`${DappaApi}/api/fun/tebakgambar2?apikey=${dapuhy}`);
+ttgbr_ = await fetchJson(`${DappaApi}/api/fun/tebakgambar?apikey=${dapuhy}`);
 let ttgbr_1 = await getBuffer(ttgbr_.result.image);
 clu = ttgbr_.result.clue
 jwb_tbk2 = ttgbr_.result.jawaban
@@ -11802,7 +11818,7 @@ if(!q) return reply1(`*Cth :* ${prefix + command} 2|1`)
 qu = args.join(' ')
 sur = qu.split('|')[0]
 ay = qu.split('|')[1]
-qt = await fetchJson(`https://api-alphabot.herokuapp.com/api/quran?surah=${sur}&ayat=${ay}&apikey=Alphabot`)
+qt = await fetchJson(`${AlphaApi}/api/quran?surah=${sur}&ayat=${ay}&apikey=Alphabot`)
 arb = qt.result.text.arab
 indo = qt.result.translation.id
 aud = qt.result.audio.primary
@@ -11866,7 +11882,7 @@ case 'spank':
 case 'tits':
 case 'trap':
 case 'yuri':
-let nsfw2_1 = await getBuffer(`https://api-alphabot.herokuapp.com/api/nsfw/v2/${command}?apikey=Alphabot`);
+let nsfw2_1 = await getBuffer(`${AlphaApi}/api/nsfw/v2/${command}?apikey=Alphabot`);
 const nsfw2_3 = await alpha.prepareMessage(from, nsfw2_1, MessageType.image, { thumbnail:thumb_pro})
 let nsfw2_2 = nsfw2_3.message["ephemeralMessage"] ? nsfw2_3.message.ephemeralMessage : nsfw2_3
 nsfw2_5 = `*${jwb_oke}* ${emoj}`
@@ -11926,7 +11942,7 @@ break
 case 'ss2':
 if (!q) return reply1('Urlnya mana om')
 teks = args[0]
-buff = await getBuffer(`https://hadi-api.herokuapp.com/api/ssweb2?url=${teks}`)
+buff = await getBuffer(`${HadiApi}/api/ssweb2?url=${teks}`)
 alpha.sendMessage(from, buff, image, {quoted: mek, caption : `Screenshot from ${teks}`})
 break
 
@@ -11934,7 +11950,7 @@ case 'tinyurl':
 // Wait //
 if (args.length == 0) return reply1(`Format salah! dibutuhkan (${prefix + command} (url with http://)) Example: ${prefix + command} http://panel.vinny.wtf/`)
 short = args.join(" ")
-ini_result = await fetchJson(`http://hadi-api.herokuapp.com/api/tinyurl?url=${short}`,{method:'get'})
+ini_result = await fetchJson(`${HadiApi}/api/tinyurl?url=${short}`,{method:'get'})
 get_result = ini_result.result
 ini_txt = `*Tinyurl shortlink*`
 ini_txt += `Shortlink : ${get_result}`
@@ -11945,7 +11961,7 @@ case 'bitly':
 // Wait //
 if (args.length == 0) return reply1(`Format salah! dibutuhkan (${prefix + command} (url with http://)) Example: ${prefix + command} http://panel.vinny.wtf/`)
 short = args.join(" ")
-ini_result = await fetchJson(`http://hadi-api.herokuapp.com/api/bitly?url=${short}`,{method:'get'})
+ini_result = await fetchJson(`${HadiApi}/api/bitly?url=${short}`,{method:'get'})
 get_result = ini_result.result
 ini_txt = `*Bitly shortlink*`
 ini_txt += `Shortlink : ${get_result}`
@@ -11956,7 +11972,7 @@ case 'shorturl':
 // Wait //
 if (args.length == 0) return reply1(`Format salah! dibutuhkan (${prefix + command} (url with http://)) Example: ${prefix + command} http://panel.vinny.wtf/`)
 short = args.join(" ")
-ini_result = await fetchJson(`http://hadi-api.herokuapp.com/api/shorturl?url=${short}`,{method:'get'})
+ini_result = await fetchJson(`${HadiApi}/api/shorturl?url=${short}`,{method:'get'})
 get_result = ini_result.result
 ini_txt = `*Shorturl shortlink*`
 ini_txt += `Shortlink : ${get_result}`
@@ -11967,7 +11983,7 @@ case 'cuttly':
 // Wait //
 if (args.length == 0) return reply1(`Format salah! dibutuhkan (${prefix + command} (url with http://)) Example: ${prefix + command} http://panel.vinny.wtf/`)
 short = args.join(" ")
-ini_result = await fetchJson(`http://hadi-api.herokuapp.com/api/cuttly?url=${short}`,{method:'get'})
+ini_result = await fetchJson(`${HadiApi}/api/cuttly?url=${short}`,{method:'get'})
 get_result = ini_result.result
 ini_txt = `*Cuttly shortlink*`
 ini_txt += `Shortlink : ${get_result}`
@@ -11975,7 +11991,7 @@ reply1(ini_txt)
 break
 
 case 'wallflare':
-rdm_ = await fetchJson(`https://hadi-api.herokuapp.com/api/wallpaperflare?query=${q}`)
+rdm_ = await fetchJson(`${HadiApi}/api/wallpaperflare?query=${q}`)
 getr = rdm_.result
 let wflar= getr[Math.floor(Math.random() * getr.length)];
 let rdm_1 = await getBuffer(wflar);
@@ -11994,7 +12010,7 @@ quoted: mek, sendEphemeral: true
 break
 
 case 'wallhd':
-hdw_ = `https://hadi-api.herokuapp.com/api/wallpaperhd?q=${q}`
+hdw_ = `${HadiApi}/api/wallpaperhd?q=${q}`
 let hdw_1 = await getBuffer(hdw_);
 alpha.sendMessage(from, hdw_1, MessageType.image,{
 caption : `*${jwb_oke}* ${emoj}`,
@@ -12011,7 +12027,7 @@ quoted: mek, sendEphemeral: true
 break
 
 case 'wallanime':
-wnim_ = `https://hadi-api.herokuapp.com/api/walpaperanime?q=${q}`
+wnim_ = `${HadiApi}/api/walpaperanime?q=${q}`
 let wnim_1 = await getBuffer(wnim_);
 alpha.sendMessage(from, wnim_1, MessageType.image,{
 caption : `*${jwb_oke}* ${emoj}`,
@@ -12092,12 +12108,12 @@ case 'wooden-3d-black':
 case 'wooden-boards':
 case 'write-stars':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy Bot`) 
-buff = await getBuffer(`https://hadi-api.herokuapp.com/api/photoxy/${command}?teks=${q}`)
+buff = await getBuffer(`${HadiApi}/api/photoxy/${command}?teks=${q}`)
 alpha.sendMessage(from, buff, image, {quoted: mek, caption : `Dah selesai , Req by: ${pushname}\nKetik *${prefix}oxylist* untuk melihat menu yang lain`})
 break
 
 case 'anime':
-let animek_2 = await getBuffer(`https://hadi-api.herokuapp.com/api/anime`);
+let animek_2 = await getBuffer(`${HadiApi}/api/anime`);
 const animek_3 = await alpha.prepareMessage(from, animek_2, MessageType.image, { thumbnail:thumb_nime})
 let animek_4 = animek_3.message["ephemeralMessage"] ? animek_3.message.ephemeralMessage : animek_3
 animek_6 = `*${jwb_oke}* ${emoj}`
@@ -12127,21 +12143,21 @@ break
 
 case 'enc64':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} mobil`) 
-enc = await fetchJson(`https://hadi-api.herokuapp.com/api/base64?teks=${q}&method=enc`)
+enc = await fetchJson(`${HadiApi}/api/base64?teks=${q}&method=enc`)
 hsl = `*Hasil Enc :* ${enc.result.enc}`
 reply1(hsl)
 break
 
 case 'dec64':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} mobil`) 
-dec = await fetchJson(`https://hadi-api.herokuapp.com/api/base64?teks=${q}&method=dec`)
+dec = await fetchJson(`${HadiApi}/api/base64?teks=${q}&method=dec`)
 hsl = `*Hasil Dec :* ${dec.result.dec}`
 reply1(hsl)
 break
 
 case 'chord':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} kangen`)
-crd = await fetchJson(`https://hadi-api.herokuapp.com/api/chord?q=${q}`);
+crd = await fetchJson(`${HadiApi}/api/chord?q=${q}`);
 crdd = crd.result
 crddd = `${ucapannya2}
 ${crdd}`
@@ -12150,7 +12166,7 @@ break
 
 case 'covid':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} Indonesia `)
-cvd1 = await fetchJson(`https://hadi-api.herokuapp.com/api/corohelp?negara=${q}`);
+cvd1 = await fetchJson(`${HadiApi}/api/corohelp?negara=${q}`);
 cvd2 = cvd1.result
 cvd3 = `${ucapannya2}
 *COVID DUNIA*
@@ -12163,7 +12179,7 @@ break
 
 case 'cuaca':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} Sulawesi Selatan`) 
-cuac_ = await fetchJson(`https://hadi-api.herokuapp.com/api/cuaca?prov=${q}`)
+cuac_ = await fetchJson(`${HadiApi}/api/cuaca?prov=${q}`)
 let cu = `「 *CUACA* 」
 ${cuac_.powered_by}\n\n`
 for (let c of cuac_.result) {
@@ -12192,7 +12208,7 @@ break
 case 'font':
 case 'font2':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} Indonesia `)
-fnt1 = await fetchJson(`https://hadi-api.herokuapp.com/api/${command}?teks=${q}`);
+fnt1 = await fetchJson(`${HadiApi}/api/${command}?teks=${q}`);
 fnt2 = fnt1.result
 fnt3 = `${ucapannya2}
 • *Hasil* : ${fnt2}`
@@ -12201,43 +12217,43 @@ break
 
 //LIST───────[ API HARDIANTO
 case 'randomloli':
-kon = await getBuffer(`https://hardianto-chan.herokuapp.com/api/anime/loli?apikey=hardianto`)
+kon = await getBuffer(`${HardiApi}/api/anime/loli?apikey=hardianto`)
 sendButImage(from, `Nih Kak`, `${footerr}`, kon, [{buttonId: `${prefix+command}`,buttonText: {displayText: 'Try Again ♻️',},type: 1}]) 
 break
 
 case 'nuliskiri':
 if (!q) return reply1('Textnya mana gan?')
-anu = await getBuffer(`https://hardianto-chan.herokuapp.com/api/nuliskiri?text=${c}&apikey=hardianto`)
+anu = await getBuffer(`${HardiApi}/api/nuliskiri?text=${c}&apikey=hardianto`)
 alpha.sendMessage(from, anu, image, { quoted: mek, thumbnail: thumb_nulis})
 break
 
 case 'nuliskanan':
 if (!q) return reply1('Textnya mana gan?')
-anu = await getBuffer(`https://hardianto-chan.herokuapp.com/api/nuliskanan?text=${c}&apikey=hardianto`)
+anu = await getBuffer(`${HardiApi}/api/nuliskanan?text=${c}&apikey=hardianto`)
 alpha.sendMessage(from, anu, image, { quoted: mek, thumbnail: thumb_nulis})
 break
 
 case 'foliokanan':
 if (!q) return reply1('Textnya mana gan?')
-anu = await getBuffer(`https://hardianto-chan.herokuapp.com/api/foliokanan?text=${c}&apikey=hardianto`)
+anu = await getBuffer(`${HardiApi}/api/foliokanan?text=${c}&apikey=hardianto`)
 alpha.sendMessage(from, anu, image, { quoted: mek, thumbnail: thumb_nulis})
 break
 
 case 'foliokiri':
 if (!q) return reply1('Textnya mana gan?')
-anu = await getBuffer(`https://hardianto-chan.herokuapp.com/api/foliokiri?text=${c}&apikey=hardianto`)
+anu = await getBuffer(`${HardiApi}/api/foliokiri?text=${c}&apikey=hardianto`)
 alpha.sendMessage(from, anu, image, { quoted: mek, thumbnail: thumb_nulis})
 break
 
 case 'asupan2':
-asu = await getBuffer(`https://hardianto-chan.herokuapp.com/api/asupan?apikey=hardianto`)
+asu = await getBuffer(`${HardiApi}/api/asupan?apikey=hardianto`)
 alpha.sendMessage(from, asu, video, { quoted: mek})
 break
 
 //LIST───────[ API XTEAM
 case 'ttp3': 
 case 'ttp': 
-anuk = `https://api-xcoders.xyz/api/maker/${command}?text=${encodeURIComponent(q)}&apikey=7iyNa0qA`
+anuk = `${XcoderApi}/api/maker/${command}?text=${encodeURIComponent(q)}&apikey=7iyNa0qA`
 sendStickerFromUrl(from, `${anuk}`, mek)
 ini_buffer = await getBuffer(`${anuk}`)
 await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
@@ -12246,13 +12262,13 @@ break
 case 'ttp4': 
 case 'ttp2':
 if (!q) return reply1(`Teks Nya Mana Kak?\nContoh :\n${prefix}attp ${botname}`)
-atetepe = await getBuffer(`https://api.lolhuman.xyz/api/${command}?apikey=${lolkey}&text=${encodeURIComponent(q)}`)
+atetepe = await getBuffer(`${LolApi}/api/${command}?apikey=${lolkey}&text=${encodeURIComponent(q)}`)
 alpha.sendMessage(from, atetepe, sticker, { quoted: mek })
 break
 
 case 'attp2':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} hai bg`)
-buffer = await getBuffer(`https://api.lolhuman.xyz/api/attp?apikey=${lolkey}&text=${encodeURIComponent(q)}`)
+buffer = await getBuffer(`${LolApi}/api/attp?apikey=${lolkey}&text=${encodeURIComponent(q)}`)
 alpha.sendMessage(from, buffer, sticker, { quoted: mek })
 break
 
@@ -12264,19 +12280,19 @@ break
 
 case 'qrcode':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} hai bg`)
-buff = await getBuffer(`https://api.lolhuman.xyz/api/qrcode?apikey=${lolkey}&text=${encodeURIComponent(q)}`)
+buff = await getBuffer(`${LolApi}/api/qrcode?apikey=${lolkey}&text=${encodeURIComponent(q)}`)
 alpha.sendMessage(from, buff, MessageType.image,{ quoted: mek})
 break
 
 case 'scanqr':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} link`)
 ini_link = args[0]
-let sqr = await fetchJson(`https://api.lolhuman.xyz/api/read-qr?apikey=${lolkey}&img=${ini_link}`)
+let sqr = await fetchJson(`${LolApi}/api/read-qr?apikey=${lolkey}&img=${ini_link}`)
 reply1(sqr)
 break
 
 case 'dadu2':
-ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/convert/towebp?apikey=${lolkey}&img=https://janbot-api.herokuapp.com/api/maker/dadu`)
+ini_buffer = await getBuffer(`${LolApi}/api/convert/towebp?apikey=${lolkey}&img=${OjanApi}/api/maker/dadu`)
 await alpha.sendMessage(from, ini_buffer, sticker)
 break
 
@@ -12286,14 +12302,14 @@ case 'amongus':
 case 'gawrgura':
 case 'anjing':
 case 'bucinstick':
-ini_buffer = await getBuffer(`https://api.lolhuman.xyz/api/sticker/${command}?apikey=${lolkey}`)
+ini_buffer = await getBuffer(`${LolApi}/api/sticker/${command}?apikey=${lolkey}`)
 await alpha.sendMessage(from, ini_buffer, sticker)
 break
 
 case 'sambungkata':
 if (sambungkata.hasOwnProperty(sender.split('@')[0])) return reply1("Jawab dulu yang sebelumnya ,belum kelar ngab")
 ini_txt = args.join(" ")
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/sambungkata?apikey=${lolkey}&text=${ini_txt}`)
+get_result = await fetchJson(`${LolApi}/api/sambungkata?apikey=${lolkey}&text=${ini_txt}`)
 jwb_sbg = get_result.result
 clue = jwb_sbg.replace(jwb_sbg[jwb_sbg.length - 1])
 sambungkata[sender.split('@')[0]] = jwb_sbg.toLowerCase()
@@ -12317,7 +12333,7 @@ break
 
 case 'caklontong2':
 if (caklontong2.hasOwnProperty(sender.split('@')[0])) return reply1("Jawab dulu yang sebelumnya ,belum kelar ngab")
-anu = await fetchJson(`https://api.lolhuman.xyz/api/tebak/caklontong?apikey=${lolkey}`)
+anu = await fetchJson(`${LolApi}/api/tebak/caklontong?apikey=${lolkey}`)
 tebakya = anu.result.question
 jwb_cak2 = anu.result.answer
 clue = jwb_cak2.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
@@ -12342,7 +12358,7 @@ break
 
 case 'tebakgambar3':
 if (tebakgambar3.hasOwnProperty(sender.split('@')[0])) return reply1("Jawab dulu yang sebelumnya ,belum kelar ngab")
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/tebak/gambar?apikey=${lolkey}`)
+get_result = await fetchJson(`${LolApi}/api/tebak/gambar?apikey=${lolkey}`)
 get_result = get_result.result
 ini_image = get_result.image
 jwb_tbk3 = get_result.answer
@@ -12390,7 +12406,7 @@ break
 //LIST───────[ API VELGRYND
 case 'tebakgambar':
 if (tebakgambar.hasOwnProperty(sender.split('@')[0])) return reply1("Jawab dulu yang sebelumnya ,belum kelar ngab")
-tgbr_ = await fetchJson(`https://velgrynd.herokuapp.com/api/tebakgambar?apikey=slAuPQiV`);
+tgbr_ = await fetchJson(`${IchikaApi}/api/tebakgambar?apikey=slAuPQiV`);
 let tgbr_1 = await getBuffer(tgbr_.result.pertanyaan);
 jwb_tbk = tgbr_.result.jawaban
 clue = jwb_tbk.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
@@ -12435,7 +12451,7 @@ break
 
 case 'family100':
 if (family100.hasOwnProperty(sender.split('@')[0])) return reply1("Jawab dulu yang sebelumnya ,belum kelar ngab")
-fam_ = await fetchJson(`https://velgrynd.herokuapp.com/api/family100?apikey=slAuPQiV`);
+fam_ = await fetchJson(`${IchikaApi}/api/family100?apikey=slAuPQiV`);
 soal = fam_.soal
 ja = fam_.jawaban
 jwb_f100 = ja[Math.floor(Math.random() * ja.length)]
@@ -12461,7 +12477,7 @@ break
 
 case 'asahotak':
 if (asahotak.hasOwnProperty(sender.split('@')[0])) return reply1("Jawab dulu yang sebelumnya ,belum kelar ngab")
-ash_ = await fetchJson(`https://velgrynd.herokuapp.com/api/asahotak?apikey=slAuPQiV`);
+ash_ = await fetchJson(`${IchikaApi}/api/asahotak?apikey=slAuPQiV`);
 soal = ash_.soal
 jwb_asah = ash_.jawaban
 clue = jwb_asah.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
@@ -12486,7 +12502,7 @@ break
 
 case 'tebakkimia':
 if (tebakkimia.hasOwnProperty(sender.split('@')[0])) return reply1("Jawab dulu yang sebelumnya ,belum kelar ngab")
-kimia_ = await fetchJson(`https://velgrynd.herokuapp.com/api/tebakkimia?apikey=slAuPQiV`);
+kimia_ = await fetchJson(`${IchikaApi}/api/tebakkimia?apikey=slAuPQiV`);
 soal = kimia_.result.nama
 jwb_kimia = kimia_.result.lambang
 clue = jwb_kimia.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
@@ -12511,7 +12527,7 @@ break
 
 case 'tebakkata':
 if (tebakkata.hasOwnProperty(sender.split('@')[0])) return reply1("Jawab dulu yang sebelumnya ,belum kelar ngab")
-tbkt_ = await fetchJson(`https://velgrynd.herokuapp.com/api/tebakkata?apikey=slAuPQiV`);
+tbkt_ = await fetchJson(`${IchikaApi}/api/tebakkata?apikey=slAuPQiV`);
 soal = tbkt_.soal
 jwb_kata = tbkt_.jawaban
 clue = jwb_kata.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
@@ -12536,7 +12552,7 @@ break
 
 case 'tebakkata2':
 if (tebakkata.hasOwnProperty(sender.split('@')[0])) return reply1("Jawab dulu yang sebelumnya ,belum kelar ngab")
-te_ = await fetchJson(`https://velgrynd.herokuapp.com/api/tebakkata?apikey=slAuPQiV`);
+te_ = await fetchJson(`${IchikaApi}/api/tebakkata?apikey=slAuPQiV`);
 soal = te_.soal
 jwb_kata2 = te_.jawaban
 clue = jwb_kata2.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
@@ -12561,7 +12577,7 @@ break
 
 case 'tebaklirik':
 if (tebaklirik.hasOwnProperty(sender.split('@')[0])) return reply1("Jawab dulu yang sebelumnya ,belum kelar ngab")
-tlir_ = await fetchJson(`https://velgrynd.herokuapp.com/api/tebaklirik?apikey=slAuPQiV`);
+tlir_ = await fetchJson(`${IchikaApi}/api/tebaklirik?apikey=slAuPQiV`);
 soal = tlir_.result.question
 jwb_lirik = tlir_.result.answer
 clue = jwb_lirik.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
@@ -12586,7 +12602,7 @@ break
 
 case 'tebakkalimat':
 if (tebakkalimat.hasOwnProperty(sender.split('@')[0])) return reply1("Jawab dulu yang sebelumnya ,belum kelar ngab")
-tkal_ = await fetchJson(`https://velgrynd.herokuapp.com/api/tebakkalimat?apikey=slAuPQiV`);
+tkal_ = await fetchJson(`${IchikaApi}/api/tebakkalimat?apikey=slAuPQiV`);
 soal = tkal_.soal
 jwb_kali = tkal_.jawaban
 clue = jwb_kali.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
@@ -12611,7 +12627,7 @@ break
 
 case 'tebakan':
 if (tebakan.hasOwnProperty(sender.split('@')[0])) return reply1("Jawab dulu yang sebelumnya ,belum kelar ngab")
-tbkn_ = await fetchJson(`https://velgrynd.herokuapp.com/api/tebaktebakan?apikey=slAuPQiV`);
+tbkn_ = await fetchJson(`${IchikaApi}/api/tebaktebakan?apikey=slAuPQiV`);
 soal = tbkn_.soal
 jwb_tbkn = tbkn_.jawaban
 clue = jwb_tbkn.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
@@ -12636,7 +12652,7 @@ break
 
 case 'siapaaku':
 if (siapaaku.hasOwnProperty(sender.split('@')[0])) return reply1("Jawab dulu yang sebelumnya ,belum kelar ngab")
-saha_ = await fetchJson(`https://velgrynd.herokuapp.com/api/siapakahaku?apikey=slAuPQiV`);
+saha_ = await fetchJson(`${IchikaApi}/api/siapakahaku?apikey=slAuPQiV`);
 soal = saha_.soal
 jwb_siapa = saha_.jawaban
 clue = jwb_siapa.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
@@ -12661,7 +12677,7 @@ break
 
 case 'susunkata':
 if (susunkata.hasOwnProperty(sender.split('@')[0])) return reply1("Jawab dulu yang sebelumnya ,belum kelar ngab")
-susn_ = await fetchJson(`https://velgrynd.herokuapp.com/api/susunkata?apikey=slAuPQiV`);
+susn_ = await fetchJson(`${IchikaApi}/api/susunkata?apikey=slAuPQiV`);
 soal = susn_.soal
 timpe = susn_.tipe
 jwb_susun = susn_.jawaban
@@ -12687,7 +12703,7 @@ break
 
 case 'tebakgabut':
 if (tebakgabut.hasOwnProperty(sender.split('@')[0])) return reply1("Jawab dulu yang sebelumnya ,belum kelar ngab")
-tgbt_ = await fetchJson(`https://kuontol-api.herokuapp.com/api/game/tebakgabut`);
+tgbt_ = await fetchJson(`${KntolApi}/api/game/tebakgabut`);
 soal = tgbt_.soal
 jwb_gbt = tgbt_.jawaban
 clue = jwb_gbt.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
@@ -12712,7 +12728,7 @@ break
 
 case 'tebaklucu':
 if (tebaklucu.hasOwnProperty(sender.split('@')[0])) return reply1("Jawab dulu yang sebelumnya ,belum kelar ngab")
-tblc_ = await fetchJson(`https://kuontol-api.herokuapp.com/api/game/tebaktebaklucu`);
+tblc_ = await fetchJson(`${KntolApi}/api/game/tebaktebaklucu`);
 soal = tblc_.soal
 jwb_lucu = tblc_.jawaban
 clue = jwb_lucu.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
@@ -12737,7 +12753,7 @@ break
 
 case 'teswibu':
 if (teswibu.hasOwnProperty(sender.split('@')[0])) return reply1("Jawab dulu yang sebelumnya ,belum kelar ngab")
-twb_ = await fetchJson(`https://kuontol-api.herokuapp.com/api/game/teswibu`);
+twb_ = await fetchJson(`${KntolApi}/api/game/teswibu`);
 soal = twb_.pertanyaan
 ja = twb_.jawaban
 jwb_wibu = ja[Math.floor(Math.random() * ja.length)]
@@ -12766,7 +12782,7 @@ break
 
 
 case 'burung':
-rnim_ = await fetchJson(`https://some-random-api.ml/img/bird`);
+rnim_ = await fetchJson(`${SomeApi}/img/bird`);
 let rnim_1 = await getBuffer(rnim_.link);
 rnim_5 =`「 *${jwb_oke}* 」
 *${emoj} kak :* _@${sender.split("@")[0]}_\nKetik .fburung untuk melihat fakta en`
@@ -12784,13 +12800,13 @@ quoted: mek, sendEphemeral: true
 break
 
 case 'fburung':
-rfact_ = await fetchJson(`https://some-random-api.ml/facts/bird`);
+rfact_ = await fetchJson(`${SomeApi}/facts/bird`);
 f = rfact_.fact
 reply1(f)
 break
 
 case 'kucing':
-rcat_ = await fetchJson(`https://some-random-api.ml/img/cat`);
+rcat_ = await fetchJson(`${SomeApi}/img/cat`);
 let rcat_1 = await getBuffer(rcat_.link);
 rcat_5 =`「 *${jwb_oke}* 」
 *${emoj} kak :* _@${sender.split("@")[0]}_\nKetik .fkucing untuk melihat fakta en`
@@ -12808,13 +12824,13 @@ quoted: mek, sendEphemeral: true
 break
 
 case 'fkucing':
-rfact_ = await fetchJson(`https://some-random-api.ml/facts/cat`);
+rfact_ = await fetchJson(`${SomeApi}/facts/cat`);
 f = rfact_.fact
 reply1(f)
 break
 
 case 'anjing':
-rdog_ = await fetchJson(`https://some-random-api.ml/img/dog`);
+rdog_ = await fetchJson(`${SomeApi}/img/dog`);
 let rdog_1 = await getBuffer(rdog_.link);
 rdog_5 =`「 *${jwb_oke}* 」
 *${emoj} kak :* _@${sender.split("@")[0]}_\nKetik .fanjing untuk melihat fakta en`
@@ -12832,13 +12848,13 @@ quoted: mek, sendEphemeral: true
 break
 
 case 'fanjing':
-rfact_ = await fetchJson(`https://some-random-api.ml/facts/dog`);
+rfact_ = await fetchJson(`${SomeApi}/facts/dog`);
 f = rfact_.fact
 reply1(f)
 break
 
 case 'rubah':
-rfox_ = await fetchJson(`https://some-random-api.ml/img/fox`);
+rfox_ = await fetchJson(`${SomeApi}/img/fox`);
 let rfox_1 = await getBuffer(rfox_.link);
 rfox_5 =`「 *${jwb_oke}* 」
 *${emoj} kak :* _@${sender.split("@")[0]}_\nKetik .frubah untuk melihat fakta en`
@@ -12856,13 +12872,13 @@ quoted: mek, sendEphemeral: true
 break
 
 case 'frubah':
-rfact_ = await fetchJson(`https://some-random-api.ml/facts/fox`);
+rfact_ = await fetchJson(`${SomeApi}/facts/fox`);
 f = rfact_.fact
 reply1(f)
 break
 
 case 'koala':
-rkoa_ = await fetchJson(`https://some-random-api.ml/img/koala`);
+rkoa_ = await fetchJson(`${SomeApi}/img/koala`);
 let rkoa_1 = await getBuffer(rkoa_.link);
 rkoa_5 =`「 *${jwb_oke}* 」
 *${emoj} kak :* _@${sender.split("@")[0]}_\nKetik .fkoala untuk melihat fakta en`
@@ -12880,13 +12896,13 @@ quoted: mek, sendEphemeral: true
 break
 
 case 'fkoala':
-rfact_ = await fetchJson(`https://some-random-api.ml/facts/koala`);
+rfact_ = await fetchJson(`${SomeApi}/facts/koala`);
 f = rfact_.fact
 reply1(f)
 break
 
 case 'panda':
-rpan_ = await fetchJson(`https://some-random-api.ml/img/panda`);
+rpan_ = await fetchJson(`${SomeApi}/img/panda`);
 let rpan_1 = await getBuffer(rpan_.link);
 rpan_5 =`「 *${jwb_oke}* 」
 *${emoj} kak :* _@${sender.split("@")[0]}_\nKetik .fpanda untuk melihat fakta en`
@@ -12904,13 +12920,13 @@ quoted: mek, sendEphemeral: true
 break
 
 case 'fpanda':
-rfact_ = await fetchJson(`https://some-random-api.ml/facts/panda`);
+rfact_ = await fetchJson(`${SomeApi}/facts/panda`);
 f = rfact_.fact
 reply1(f)
 break
 
 case 'red_panda':
-rred_ = await fetchJson(`https://some-random-api.ml/img/red_panda`);
+rred_ = await fetchJson(`${SomeApi}/img/red_panda`);
 let rred_1 = await getBuffer(rred_.link);
 rred_5 =`「 *${jwb_oke}* 」
 *${emoj} kak :* _@${sender.split("@")[0]}_\nKetik .fred_panda untuk melihat fakta en`
@@ -12928,7 +12944,7 @@ quoted: mek, sendEphemeral: true
 break
 
 case 'fred_panda':
-rfact_ = await fetchJson(`https://some-random-api.ml/facts/red_panda`);
+rfact_ = await fetchJson(`${SomeApi}/facts/red_panda`);
 f = rfact_.fact
 reply1(f)
 break
@@ -12937,7 +12953,7 @@ break
 case 'maker3d':
 if (!q) return reply1(`*Example :*\n${prefix + command} ${botname}`)
 teksnya = args.join(" ")
-anu = await fetchJson(`https://xnxxapi.herokuapp.com/api/maker3d?text=${teksnya}&apikey=xnxx`)
+anu = await fetchJson(`${XnxxApi}/api/maker3d?text=${teksnya}&apikey=xnxx`)
 buffer1 = await getBuffer(anu.result.results)
 alpha.sendMessage(from, buffer1, image, {quoted: mek, thumbnail: thumb_miku})
 break
@@ -12945,7 +12961,7 @@ break
 case 'maker2d':
 if (!q) return reply1(`*Example :*\n${prefix + command} ${botname}`)
 teksnya = args.join(" ")
-anu = await fetchJson(`https://xnxxapi.herokuapp.com/api/maker?text=${teksnya}&apikey=xnxx`)
+anu = await fetchJson(`${XnxxApi}/api/maker?text=${teksnya}&apikey=xnxx`)
 buffer1 = await getBuffer(anu.result.results)
 alpha.sendMessage(from, buffer1, image, {quoted: mek, thumbnail: thumb_miku})
 break
@@ -12953,7 +12969,7 @@ break
 case 'epepserti':
 if (!q) return reply1(`*Example :*\n${prefix + command} ${botname}`)
 teksnya = args.join(" ")
-anu = await fetchJson(`https://xnxxapi.herokuapp.com/api/maker/special/epep?text=${teksnya}&apikey=xnxx`)
+anu = await fetchJson(`${XnxxApi}/api/maker/special/epep?text=${teksnya}&apikey=xnxx`)
 buffer1 = await getBuffer(anu.result.results)
 alpha.sendMessage(from, buffer1, image, {quoted: mek, thumbnail: thumb_miku})
 break
@@ -12962,7 +12978,7 @@ case 'song':
 if (!q) return reply1("Where's the link bro")
 if (!isUrl(args[0]) && !args[0].includes('youtu')) return reply1('```Invalid link```')
 // Wait // 
-anu = await fetchJson(`https://xnxxapi.herokuapp.com/api/yutub/audio?url=${args[0]}&apikey=xnxx`)
+anu = await fetchJson(`${XnxxApi}/api/yutub/audio?url=${args[0]}&apikey=xnxx`)
 ini_txt = `YT AUDIO HAS BEEN FOUND\n\n`
 ini_txt += ` Judul : ${anu.result.title}\n`
 ini_txt += ` Ext : mp3\n`
@@ -12975,7 +12991,7 @@ break
 
 //LIST───────[ API YUZZU
 case 'simi':
-ku = await fetchJson(`https://yuzzu-api.herokuapp.comapi/api/simi?text=${q}`)
+ku = await fetchJson(`${YuzzuApi}/api/simi?text=${q}`)
 mik = ku.result
 reply1(ku.result)
 break
@@ -12989,7 +13005,7 @@ break
 //LIST───────[ API X REST
 case 'gcwa':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} mabar`) 
-gcwa_ = await fetchJson(`https://x-restapi.herokuapp.com/api/search-grup?q=${q}&apikey=BETA`)
+gcwa_ = await fetchJson(`${XrestApi}/api/search-grup?q=${q}&apikey=BETA`)
 let gece = '「 *GC WA* 」\n\n'
 for (let g of gcwa_.data) {
 gece += `*Nama*: ${g.judul}\n*Link*: ${g.link}\n\n`}
@@ -13014,7 +13030,7 @@ break
 
 case 'gsearch':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} mabar`) 
-gsrch_ = await fetchJson(`https://x-restapi.herokuapp.com/api/google-search?q=${q}&apikey=BETA`)
+gsrch_ = await fetchJson(`${XrestApi}/api/google-search?q=${q}&apikey=BETA`)
 var gsrch_1 = `${ucapannya2}\n *Judul :*\n${gsrch_.data.title}\n*Link :* ${gsrch_.data.link}\n*Desc :* ${gsrch_.data.desc}`
 var gsrch_2 = [
 {buttonId: 'Menu' , buttonText: {displayText: `⬅️ Menu`}, type: 1},
@@ -13036,7 +13052,7 @@ break
 
 case 'topmanga':
 case 'topanime':
-topnim_ = await fetchJson(`https://x-restapi.herokuapp.com/api/${command}?apikey=BETA`)
+topnim_ = await fetchJson(`${XrestApi}/api/${command}?apikey=BETA`)
 let nimr = '「 *${command}* 」\n'
 for (let t of topnim_.data) {
 nimr += `
@@ -13064,7 +13080,7 @@ quoted: mek, sendEphemeral: true
 break
 
 case 'bucin':
-rbuc_ = await fetchJson(`https://x-restapi.herokuapp.com/api/random-bucin?apikey=BETA`)
+rbuc_ = await fetchJson(`${XrestApi}/api/random-bucin?apikey=BETA`)
 var rbuc_1 = `${ucapannya2}
 ${pembatas}
 *${rbuc_.bucin}*
@@ -13089,7 +13105,7 @@ quoted: mek, sendEphemeral: true
 break
 
 case 'fakta':
-fakta_ = await fetchJson(`https://x-restapi.herokuapp.com/api/random-fakta?apikey=BETA`)
+fakta_ = await fetchJson(`${XrestApi}/api/random-fakta?apikey=BETA`)
 var fakta_1 = `${ucapannya2}
 ${pembatas}
 *${fakta_.fakta}*
@@ -13114,7 +13130,7 @@ quoted: mek, sendEphemeral: true
 break
 
 case 'katabijak':
-ktbjk_ = await fetchJson(`https://x-restapi.herokuapp.com/api/random-katabijak?apikey=BETA`)
+ktbjk_ = await fetchJson(`${XrestApi}/api/random-katabijak?apikey=BETA`)
 var ktbjk_1 = `${ucapannya2}
 ${pembatas}
 *${ktbjk_.katabijak}*
@@ -13139,7 +13155,7 @@ quoted: mek, sendEphemeral: true
 break
 
 case 'motivasi':
-motvas_ = await fetchJson(`https://x-restapi.herokuapp.com/api/random-motivasi?apikey=BETA`)
+motvas_ = await fetchJson(`${XrestApi}/api/random-motivasi?apikey=BETA`)
 var motvas_1 = `${ucapannya2}
 ${pembatas}
 *${motvas_.motivasi}*
@@ -13164,7 +13180,7 @@ quoted: mek, sendEphemeral: true
 break
 
 case 'pantun':
-pntn_ = await fetchJson(`https://x-restapi.herokuapp.com/api/random-pantun?apikey=BETA`)
+pntn_ = await fetchJson(`${XrestApi}/api/random-pantun?apikey=BETA`)
 var pntn_1 = `${ucapannya2}
 ${pembatas}
 ${pntn_.pantun}
@@ -13190,7 +13206,7 @@ break
 
 case 'ssticker':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} pentol`) 
-var ano = await fetchJson(`https://x-restapi.herokuapp.com/api/search-sticker?q=${q}&apikey=BETA`)
+var ano = await fetchJson(`${XrestApi}/api/search-sticker?q=${q}&apikey=BETA`)
 wifegerak = ano.data.url
 var wifegerakx = wifegerak[Math.floor(Math.random() * wifegerak.length)]
 sendStickerUrl(from, wifegerakx)
@@ -13198,7 +13214,7 @@ break
 
 case 'ssfile':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} mabar`) 
-ssfile_ = await fetchJson(`https://x-restapi.herokuapp.com/api/sfile-search?q=wa&apikey=BETA`)
+ssfile_ = await fetchJson(`${XrestApi}/api/sfile-search?q=wa&apikey=BETA`)
 let sfile_ = '「 *Hasil* 」\n\n'
 for (let s of ssfile_.data) {
 sfile_ += `
@@ -13226,7 +13242,7 @@ break
 
 case 'moddroid':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} wa`) 
-smodd_ = await fetchJson(`https://x-restapi.herokuapp.com/api/moddroid-search?q=${q}&apikey=BETA`);
+smodd_ = await fetchJson(`${XrestApi}/api/moddroid-search?q=${q}&apikey=BETA`);
 let modd_1 = await getBuffer('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_NhIOLV738PJvKb_rkFDsIohJj-vZWihlaQ&usqp=CAU');
 const modd_3 = await alpha.prepareMessage(from, modd_1, MessageType.image, { thumbnail:fthumb_mod})
 let modd_2 = modd_3.message["ephemeralMessage"] ? modd_3.message.ephemeralMessage : modd_3
@@ -13263,7 +13279,7 @@ break
 
 case 'md5enc':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} Say no to drug`) 
-md5_ = await fetchJson(`https://x-restapi.herokuapp.com/api/md5-encrypt?teks=${q}&apikey=BETA`)
+md5_ = await fetchJson(`${XrestApi}/api/md5-encrypt?teks=${q}&apikey=BETA`)
 var md5_1 = `${ucapannya2}
 *Hasil :*
 • ${md5_.results}`
@@ -13287,7 +13303,7 @@ break
 
 case 'artikata':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} wibu`) 
-artikt_ = await fetchJson(`https://x-restapi.herokuapp.com/api/arti-kata?q=${q}&apikey=BETA`)
+artikt_ = await fetchJson(`${XrestApi}/api/arti-kata?q=${q}&apikey=BETA`)
 var artikt_1 = `${ucapannya2}
 *Arti Kata ${q} :*
 • ${artikt_.artikata}`
@@ -13310,7 +13326,7 @@ break
 
 case 'artimimpi':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} wibu`) 
-artimp_ = await fetchJson(`https://x-restapi.herokuapp.com/api/arti-mimpi?q=${q}&apikey=BETA`)
+artimp_ = await fetchJson(`${XrestApi}/api/arti-mimpi?q=${q}&apikey=BETA`)
 var artimp_1 = `${ucapannya2}
 *Arti Mimpi ${q} :*
 • ${artimp_.result}`
@@ -13333,7 +13349,7 @@ break
 
 case 'artinama':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} wibu`) 
-artinm_ = await fetchJson(`https://x-restapi.herokuapp.com/api/artinama?q=${q}&apikey=BETA`)
+artinm_ = await fetchJson(`${XrestApi}/api/artinama?q=${q}&apikey=BETA`)
 var artinm_1 = `${ucapannya2}
 *Arti Nama ${q} :*
 • ${artinm_.data}`
@@ -13356,7 +13372,7 @@ break
 
 case 'amazon':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} iPhone`) 
-amzn_ = await fetchJson(`https://x-restapi.herokuapp.com/api/amazon?q=${q}&apikey=BETA`)
+amzn_ = await fetchJson(`${XrestApi}/api/amazon?q=${q}&apikey=BETA`)
 var amzn_1 = `${ucapannya2}
 *Results ${q} :*
 • item : ${amzn_.item}
@@ -13388,7 +13404,7 @@ break
 
 case 'ipgeo':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} iPhone`) 
-ipgeo_ = await fetchJson(`https://x-restapi.herokuapp.com/api/ipgeolocation?ip=${q}&apikey=BETA`)
+ipgeo_ = await fetchJson(`${XrestApi}/api/ipgeolocation?ip=${q}&apikey=BETA`)
 var ipgeo_1 = `${ucapannya2}
 *Results ${q} :*
 • country_code : ${ipgeo_.country_code}
@@ -13420,7 +13436,7 @@ break
 
 case 'samehadaku':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} wa`) 
-smhdku_ = await fetchJson(`https://x-restapi.herokuapp.com/api/samehadaku-search?q=${q}&apikey=BETA`);
+smhdku_ = await fetchJson(`${XrestApi}/api/samehadaku-search?q=${q}&apikey=BETA`);
 let smhdku_1 = await getBuffer(smhdku_.image);
 const smhdku_3 = await alpha.prepareMessage(from, smhdku_1, MessageType.image, { thumbnail:thumb_sam})
 let smhdku_2 = smhdku_3.message["ephemeralMessage"] ? smhdku_3.message.ephemeralMessage : smhdku_3
@@ -13455,7 +13471,7 @@ break
 
 case 'thelazy':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} mobil`) 
-lzy_ = await fetchJson(`https://x-restapi.herokuapp.com/api/thelazy-search?q=${q}&apikey=BETA`)
+lzy_ = await fetchJson(`${XrestApi}/api/thelazy-search?q=${q}&apikey=BETA`)
 let zy = '「 *THELAZY* 」\n\n'
 for (let l of lzy_.data) {
 zy += `
@@ -13487,7 +13503,7 @@ break
 
 case 'youwatch':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} mobil`) 
-yw_ = await fetchJson(`https://x-restapi.herokuapp.com/api/youwatch-search?q=${q}&apikey=BETA`)
+yw_ = await fetchJson(`${XrestApi}/api/youwatch-search?q=${q}&apikey=BETA`)
 let y_ = '「 *YOUWATCH* 」\n\n'
 for (let y of yw_.data) {
 y_ += `
@@ -13516,7 +13532,7 @@ break
 
 case 'zodiak':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} leo`) 
-zdiak_ = await fetchJson(`https://x-restapi.herokuapp.com/api/zodiak?q=${q}&apikey=BETA`)
+zdiak_ = await fetchJson(`${XrestApi}/api/zodiak?q=${q}&apikey=BETA`)
 var zdiak_1 = `${ucapannya2}
 *Results ${q} :*
 • Umum : ${zdiak_.umum}
@@ -13541,7 +13557,7 @@ break
 
 case 'tebakgambar5':
 if (tebakgambar5.hasOwnProperty(sender.split('@')[0])) return reply1("Jawab dulu yang sebelumnya ,belum kelar ngab")
-gbr5_ = await fetchJson(`https://x-restapi.herokuapp.com/api/tebak-gambar?apikey=BETA`);
+gbr5_ = await fetchJson(`${XrestApi}/api/tebak-gambar?apikey=BETA`);
 let gbr5_1 = await getBuffer(gbr5_.img);
 jwb_tbk5 = gbr5_.jawaban
 clue = jwb_tbk5.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
@@ -13586,7 +13602,7 @@ break
 
 case 'caklontong3':
 if (caklontong3.hasOwnProperty(sender.split('@')[0])) return reply1("Jawab dulu yang sebelumnya ,belum kelar ngab")
-cak3_ = await fetchJson(`https://x-restapi.herokuapp.com/api/caklontong?apikey=BETA`);
+cak3_ = await fetchJson(`${XrestApi}/api/caklontong?apikey=BETA`);
 soal = cak3_.soal
 jwb_cak3 = cak3_.jawaban
 clue = jwb_cak3.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
@@ -13611,7 +13627,7 @@ break
 
 case 'tebakanime':
 if (tebakanime.hasOwnProperty(sender.split('@')[0])) return reply1("Jawab dulu yang sebelumnya ,belum kelar ngab")
-tnim_ = await fetchJson(`https://x-restapi.herokuapp.com/api/tebak-anime?apikey=BETA`);
+tnim_ = await fetchJson(`${XrestApi}/api/tebak-anime?apikey=BETA`);
 let tnim_1 = await getBuffer(tnim_.soal);
 jwb_anime = tnim_.jawaban
 clue = jwb_anime.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
@@ -13655,7 +13671,7 @@ fs.writeFileSync("./game/tebakanime.json", JSON.stringify(tebakanime))
 break
 
 case 'wallanime':
-wnime_ = await fetchJson(`https://x-restapi.herokuapp.com/api/random-wallanime?apikey=BETA`);
+wnime_ = await fetchJson(`${XrestApi}/api/random-wallanime?apikey=BETA`);
 let wnime_1 = await getBuffer(wnime_.link);
 const wnime_3 = await alpha.prepareMessage(from, wnime_1, MessageType.image, { thumbnail:thumb_nime})
 let wnime_2 = wnime_3.message["ephemeralMessage"] ? wnime_3.message.ephemeralMessage : wnime_3
@@ -13686,7 +13702,7 @@ quoted: mek, sendEphemeral: true
 break
 
 case 'shota':
-shta_ = await fetchJson(`https://x-restapi.herokuapp.com/api/random-shota?apikey=BETA`);
+shta_ = await fetchJson(`${XrestApi}/api/random-shota?apikey=BETA`);
 let shta_1 = await getBuffer(shta_.link);
 const shta_3 = await alpha.prepareMessage(from, shta_1, MessageType.image, { thumbnail:thumb_miku})
 let shta_2 = shta_3.message["ephemeralMessage"] ? shta_3.message.ephemeralMessage : shta_3
@@ -13717,7 +13733,7 @@ quoted: mek, sendEphemeral: true
 break
 
 case 'neko2':
-neku_ = await fetchJson(`https://x-restapi.herokuapp.com/api/random-neko?apikey=BETA`);
+neku_ = await fetchJson(`${XrestApi}/api/random-neko?apikey=BETA`);
 let neku_1 = await getBuffer(neku_.link);
 const neku_3 = await alpha.prepareMessage(from, neku_1, MessageType.image, { thumbnail:thumb_miku})
 let neku_2 = neku_3.message["ephemeralMessage"] ? neku_3.message.ephemeralMessage : neku_3
@@ -13748,7 +13764,7 @@ quoted: mek, sendEphemeral: true
 break
 
 case 'kemono':
-kmn_ = await fetchJson(`https://x-restapi.herokuapp.com/api/random-kemono?apikey=BETA`);
+kmn_ = await fetchJson(`${XrestApi}/api/random-kemono?apikey=BETA`);
 let kmn_1 = await getBuffer(kmn_.link);
 const kmn_3 = await alpha.prepareMessage(from, kmn_1, MessageType.image, { thumbnail:thumb_miku})
 let kmn_2 = kmn_3.message["ephemeralMessage"] ? kmn_3.message.ephemeralMessage : kmn_3
@@ -13779,7 +13795,7 @@ quoted: mek, sendEphemeral: true
 break
 
 case 'loli2':
-loly_ = await fetchJson(`https://x-restapi.herokuapp.com/api/random-loli?apikey=BETA`);
+loly_ = await fetchJson(`${XrestApi}/api/random-loli?apikey=BETA`);
 let loly_1 = await getBuffer(loly_.link);
 const loly_3 = await alpha.prepareMessage(from, loly_1, MessageType.image, { thumbnail:thumb_miku})
 let loly_2 = loly_3.message["ephemeralMessage"] ? loly_3.message.ephemeralMessage : loly_3
@@ -13810,7 +13826,7 @@ quoted: mek, sendEphemeral: true
 break
 
 case 'husbu2':
-hsb_ = await fetchJson(`https://x-restapi.herokuapp.com/api/random-husbu?apikey=BETA`);
+hsb_ = await fetchJson(`${XrestApi}/api/random-husbu?apikey=BETA`);
 let hsb_1 = await getBuffer(hsb_.link);
 const hsb_3 = await alpha.prepareMessage(from, hsb_1, MessageType.image, { thumbnail:thumb_miku})
 let hsb_2 = hsb_3.message["ephemeralMessage"] ? hsb_3.message.ephemeralMessage : hsb_3
@@ -13841,7 +13857,7 @@ quoted: mek, sendEphemeral: true
 break
 
 case 'cehor':
-cehor_ = await fetchJson(`https://x-restapi.herokuapp.com/api/random-cehor?apikey=BETA`);
+cehor_ = await fetchJson(`${XrestApi}/api/random-cehor?apikey=BETA`);
 let cehor_1 = await getBuffer(cehor_.thumb);
 const cehor_3 = await alpha.prepareMessage(from, cehor_1, MessageType.image, { thumbnail:thumb_miku})
 let cehor_2 = cehor_3.message["ephemeralMessage"] ? cehor_3.message.ephemeralMessage : cehor_3
@@ -13875,7 +13891,7 @@ quoted: mek, sendEphemeral: true
 break
 
 case 'darkjoke2':
-drjok_ = await fetchJson(`https://x-restapi.herokuapp.com/api/random-darkjoke?apikey=BETA`);
+drjok_ = await fetchJson(`${XrestApi}/api/random-darkjoke?apikey=BETA`);
 let drjok_1 = await getBuffer(drjok_.urlimage);
 const drjok_3 = await alpha.prepareMessage(from, drjok_1, MessageType.image, { thumbnail:thumb_dark})
 let drjok_2 = drjok_3.message["ephemeralMessage"] ? drjok_3.message.ephemeralMessage : drjok_3
@@ -13913,7 +13929,7 @@ case 'kitsune':
 case 'neko':
 case 'yuri':
 case 'boobs':
-resurl = await fetchJson(`https://x-restapi.herokuapp.com/api/${command}-nsfw?apikey=BETA`)
+resurl = await fetchJson(`${XrestApi}/api/${command}-nsfw?apikey=BETA`)
 xnsfw_ = resurl.url
 let xnsfw_1 = await getBuffer(xnsfw_)
 const xnsfw_3 = await alpha.prepareMessage(from, xnsfw_1, MessageType.image, { thumbnail:thumb_miku})
@@ -13945,7 +13961,7 @@ break
 
 case 'image':
 case 'gimage':
-resurl = await fetchJson(`https://x-restapi.herokuapp.com/api/google-image?q=${q}&apikey=BETA`)
+resurl = await fetchJson(`${XrestApi}/api/google-image?q=${q}&apikey=BETA`)
 gimg_ = resurl.url
 let gimg_1 = await getBuffer(gimg_)
 const gimg_3 = await alpha.prepareMessage(from, gimg_1, MessageType.image, { thumbnail:thumb_miku})
@@ -13978,7 +13994,7 @@ break
 //───────────────[ FITUR GAME ]───────────────//
 case 'recaptcha':
 if (recaptcha.hasOwnProperty(sender.split('@')[0])) return reply1("Jawab dulu yang sebelumnya ,belum kelar ngab")
-capt_ = await fetchJson(`http://api.zekais.com/captcha?apikey=CsapIPYk`);
+capt_ = await fetchJson(`${ZekaisApi}/captcha?apikey=CsapIPYk`);
 let capt_1 = await getBuffer(capt_.question);
 jwb_captcha = capt_.answer
 clue = jwb_captcha.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
@@ -14023,10 +14039,10 @@ break
 
 case 'tebakbendera':
 if (tebakbendera.hasOwnProperty(sender.split('@')[0])) return reply1("Jawab dulu yang sebelumnya ,belum kelar ngab")
-tbra_ = await fetchJson(`https://kuontol-api.herokuapp.com/api/game/tebakbendera`)
+tbra_ = await fetchJson(`${KntolApi}/api/game/tebakbendera`)
 ben = tbra_.bendera
 jwb_flag = tbra_.nama
-bng = await fetchJson(`https://api.lolhuman.xyz/api/smoji3/${encodeURI(ben)}?apikey=${lolkey}`)
+bng = await fetchJson(`${LolApi}/api/smoji3/${encodeURI(ben)}?apikey=${lolkey}`)
 bg = bng.result.emoji.whatsapp
 let tbra_1 = await getBuffer(bg);
 clue = jwb_flag.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
@@ -14071,7 +14087,7 @@ break
 
 case 'tebakkabupaten':
 if (tebakkabupaten.hasOwnProperty(sender.split('@')[0])) return reply1("Jawab dulu yang sebelumnya ,belum kelar ngab")
-tkab_ = await fetchJson(`https://kuontol-api.herokuapp.com/api/game/tebakkabupaten`)
+tkab_ = await fetchJson(`${KntolApi}/api/game/tebakkabupaten`)
 bg = tkab_.image
 jwb_kab = tkab_.jawaban
 let tkab_1 = await getBuffer(bg);
@@ -14117,7 +14133,7 @@ break
 
 case 'tebakgambar4':
 if (tebakgambar4.hasOwnProperty(sender.split('@')[0])) return reply1("Jawab dulu yang sebelumnya ,belum kelar ngab")
-gbr4_ = await fetchJson(`http://api.zekais.com/tebakgambar?apikey=CsapIPYk`);
+gbr4_ = await fetchJson(`${ZekaisApi}/tebakgambar?apikey=CsapIPYk`);
 let gbr4_1 = await getBuffer(gbr4_.soal);
 clu = gbr4_.clue
 jwb_tbk4 = gbr4_.jawaban
@@ -14246,7 +14262,7 @@ break
 
 case 'tebakan2':
 if (tebakan2.hasOwnProperty(sender.split('@')[0])) return reply1("Jawab dulu yang sebelumnya ,belum kelar ngab")
-tbkn2_ = await fetchJson(`http://api.zekais.com/tebakan?apikey=CsapIPYk`);
+tbkn2_ = await fetchJson(`${ZekaisApi}/tebakan?apikey=CsapIPYk`);
 soal = tbkn2_.question
 jwb_tbkn2 = tbkn2_.answer
 clue = jwb_tbkn2.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
@@ -14271,7 +14287,7 @@ break
 
 case 'tebakaplikasi':
 if (tebakaplikasi.hasOwnProperty(sender.split('@')[0])) return reply1("Jawab dulu yang sebelumnya ,belum kelar ngab")
-tapp_ = await fetchJson(`https://kuontol-api.herokuapp.com/api/game/tebakaplikasi`)
+tapp_ = await fetchJson(`${KntolApi}/api/game/tebakaplikasi`)
 app = tapp_.image
 jwb_apk = tapp_.jawaban
 let tapp_1 = await getBuffer(app);
@@ -14317,7 +14333,7 @@ break
 
 case 'tebaklagu':
 if (tebaklagu.hasOwnProperty(sender.split('@')[0])) return reply1("Jawab dulu yang sebelumnya ,belum kelar ngab")
-tgu_ = await fetchJson(`https://kuontol-api.herokuapp.com/api/game/tebaklagu`);
+tgu_ = await fetchJson(`${KntolApi}/api/game/tebaklagu`);
 let lgu = tgu_.lagu
 soal = tgu_.artis
 jwb_lagu = tgu_.judul
@@ -14400,13 +14416,13 @@ break
 
 case 'fancytext':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} noob`) 
-fan = await fetchJson(`https://kocakz.herokuapp.com/api/random/text/fancytext?text=${q}`)
+fan = await fetchJson(`${KocakApi}/api/random/text/fancytext?text=${q}`)
 fanc = fan.result
 reply1(fanc)
 break
 
 case 'quote':
-fan = await fetchJson(`https://kocakz.herokuapp.com/api/random/text/quotes`)
+fan = await fetchJson(`${KocakApi}/api/random/text/quotes`)
 fanc = fan.result
 by = fanc.by
 qu = fanc.quote
@@ -14417,7 +14433,7 @@ break
 case 'katabijak':
 case 'pantun':
 case 'faktaunik':
-fan = await fetchJson(`https://kocakz.herokuapp.com/api/random/text/${command}`)
+fan = await fetchJson(`${KocakApi}/api/random/text/${command}`)
 fanc = fan.result
 pnt = `*Nih :* ${fanc}`
 alpha.sendMessage(from, pnt, text,{quoted:mek})
@@ -14574,7 +14590,7 @@ break
 case 'ttp2': 
 if (!q) return reply1(lang.noteks(prefix, command))
 ttp = args.join(' ')
-anu1 = await getBuffer(`https://janbot-api.herokuapp.com/api/maker/ttp2?text=${encodeURI(ttp)}`)
+anu1 = await getBuffer(`${OjanApi}/api/maker/ttp2?text=${encodeURI(ttp)}`)
 alpha.sendMessage(from, anu1, sticker, {quoted: mek})
 break
 
@@ -14672,7 +14688,7 @@ break
 
 case 'math2':
 if (math2.hasOwnProperty(sender.split('@')[0])) return reply1("Jawab dulu yang sebelumnya ,belum kelar ngab")
-mat2_ = await fetchJson(`https://janbot-api.herokuapp.com/api/kuis/math`);
+mat2_ = await fetchJson(`${OjanApi}/api/kuis/math`);
 let mat2_1 = await getBuffer(mat2_.soal);
 jwb_math2 = mat2_.jawaban
 clue = jwb_math2.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
@@ -15438,7 +15454,7 @@ break
 
 case 'tebakjenaka':
 if (tebakjenaka.hasOwnProperty(sender.split('@')[0])) return reply1("Jawab dulu yang sebelumnya ,belum kelar ngab")
-tjk_ = await fetchJson(`https://kuontol-api.herokuapp.com/api/game/tebakjenaka`);
+tjk_ = await fetchJson(`${KntolApi}/api/game/tebakjenaka`);
 soal = tjk_.pertanyaan
 jwb_jen = tjk_.jawaban
 clue = jwb_jen.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
@@ -15549,7 +15565,7 @@ break
 case 'game':
 case 'games':
 case 'permainan':
-mo = await fetchJson(`https://x-restapi.herokuapp.com/api/random-motivasi?apikey=BETA`)
+mo = await fetchJson(`${XrestApi}/api/random-motivasi?apikey=BETA`)
 motiv = mo.motivasi
 list = []
 listmenu = [`asahotak`,`caklontong`,`caklontong2`,`caklontong3`,`family100`,`math`,`math2`,`recaptcha`,`sambungkata`,`siapaaku`,`siapakahaku`,`susunkata`,`susunkata2`,`tebakan`,`tebakan2`,`tebakanime`,`tebakbendera`,`tebakgambar`,`tebakgambar2`,`tebakgambar3`,`tebakgambar4`,`tebakgambar5`,`tebakjenaka`,`tebakkalimat`,`tebakkata`,`tebakkata2`,`tebakkimia`,`tebaklirik`,`tebakaplikasi`,`tebakgabut`,`tebakkabupaten`,`tebaklucu`,`tebaklagu`,`teswibu`,`tebakhewan`,`tebakbuah`,`cariemoji`]
@@ -15621,7 +15637,7 @@ case 'woodblock':
 case 'wooden-boards':
 case 'write-birthday':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy Bot`) 
-ini_buffer = await getBuffer(`https://kuontol-api.herokuapp.com/api/photooxy/${command}?text=${q}`)
+ini_buffer = await getBuffer(`${KntolApi}/api/photooxy/${command}?text=${q}`)
 alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Dah selesai , Req by: ${pushname}\nKetik *${prefix}oxy_list* untuk melihat menu yang lain`})
 break
 
@@ -15635,13 +15651,13 @@ case 'ts':
 case 'tr':
 if(args.length == 0 ) {
 let bresss = mek.message.extendedTextMessage.contextInfo.quotedMessage.conversation
-result = await fetchJson(`https://hadi-api.herokuapp.com/api/terjemahan?text=${bresss}&from=auto&to=id`)
+result = await fetchJson(`${HadiApi}/api/terjemahan?text=${bresss}&from=auto&to=id`)
 has = result.result.translated
 reply1(`*Hasil* : ${has}`)
 } else
 			if(args.join(' ')) {
 ngab = args.join(' ')
-result = await fetchJson(`https://hadi-api.herokuapp.com/api/terjemahan?text=${ngab}&from=auto&to=id`)
+result = await fetchJson(`${HadiApi}/api/terjemahan?text=${ngab}&from=auto&to=id`)
 has = result.result.translated
 reply1(`*Hasil* : ${has}`)
 }
@@ -16047,7 +16063,7 @@ await fs.writeFileSync(`./stickmeme.jpeg`, owgi)
 var imgbb = require('imgbb-uploader')
 anu = await imgbb(`${img_key}`, './stickmeme.jpeg')
 teks = `${anu.display_url}`
-buffer453 = await getBuffer (`https://api-xcoders.xyz/api/convert/reversevideo?url=${teks}&apikey=7iyNa0qA`)
+buffer453 = await getBuffer (`${XcoderApi}/api/convert/reversevideo?url=${teks}&apikey=7iyNa0qA`)
 alpha.sendMessage(from, buffer453, video, { mimetype: 'video/mp4', quoted: mek })
 fs.unlinkSync('./stickmeme.jpeg')
 }
@@ -16093,7 +16109,7 @@ case 'warface':
 case 'water':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} Wudy`)
 ini_txt = args.join(" ")
-await getBuffer(`https://api-xcoders.xyz/api/ephoto/${command}?text=${ini_txt}&apikey=7iyNa0qA`).then((gambar) => {
+await getBuffer(`${XcoderApi}/api/ephoto/${command}?text=${ini_txt}&apikey=7iyNa0qA`).then((gambar) => {
 alpha.sendMessage(from, gambar, image, { quoted: mek, caption: "Nih kack" })
 })
 break
@@ -16120,7 +16136,7 @@ owgi = await alpha.downloadMediaMessage(ger)
 await fs.writeFileSync(`./stickmeme.jpeg`, owgi)
 var imgbb = require('imgbb-uploader')
 anu = await imgbb(`${img_key}`, './stickmeme.jpeg')
-teks = await getBuffer(`https://api-xcoders.xyz/api/ephoto/${command}?url=${anu.display_url}&apikey=7iyNa0qA`)
+teks = await getBuffer(`${XcoderApi}/api/ephoto/${command}?url=${anu.display_url}&apikey=7iyNa0qA`)
 alpha.sendMessage(from, teks, image, { quoted: mek, caption: "Nih kack" })
 fs.unlinkSync('./stickmeme.jpeg')
 }
@@ -16138,7 +16154,7 @@ owgi = await alpha.downloadMediaMessage(ger)
 await fs.writeFileSync(`./stickmeme.jpeg`, owgi)
 var imgbb = require('imgbb-uploader')
 anu = await imgbb(`${img_key}`, './stickmeme.jpeg')
-teks = await getBuffer(`https://api-xcoders.xyz/api/ephoto/${command}?url=${anu.display_url}&text=${top}&text2=${bottom}&apikey=7iyNa0qA`)
+teks = await getBuffer(`${XcoderApi}/api/ephoto/${command}?url=${anu.display_url}&text=${top}&text2=${bottom}&apikey=7iyNa0qA`)
 alpha.sendMessage(from, teks, image, { quoted: mek, caption: "Nih kack" })
 fs.unlinkSync('./stickmeme.jpeg')
 }
@@ -16154,7 +16170,7 @@ owgi = await alpha.downloadMediaMessage(ger)
 await fs.writeFileSync(`./stickmeme.jpeg`, owgi)
 var imgbb = require('imgbb-uploader')
 anu = await imgbb(`${img_key}`, './stickmeme.jpeg')
-teks = await getBuffer(`https://api-xcoders.xyz/api/ephoto/adventure?url=${anu.display_url}&text=${top}&text2=${bottom}&apikey=7iyNa0qA`)
+teks = await getBuffer(`${XcoderApi}/api/ephoto/adventure?url=${anu.display_url}&text=${top}&text2=${bottom}&apikey=7iyNa0qA`)
 alpha.sendMessage(from, teks, image, { quoted: mek, caption: "Nih kack" })
 fs.unlinkSync('./stickmeme.jpeg')
 }
@@ -16173,7 +16189,7 @@ owgi = await alpha.downloadMediaMessage(ger)
 await fs.writeFileSync(`./stickmeme.jpeg`, owgi)
 var imgbb = require('imgbb-uploader')
 anu = await imgbb(`${img_key}`, './stickmeme.jpeg')
-teks = await getBuffer(`https://api-xcoders.xyz/api/ephoto/${command}?url=${anu.display_url}&text=${top}&apikey=7iyNa0qA`)
+teks = await getBuffer(`${XcoderApi}/api/ephoto/${command}?url=${anu.display_url}&text=${top}&apikey=7iyNa0qA`)
 alpha.sendMessage(from, teks, image, { quoted: mek, caption: "Nih kack" })
 fs.unlinkSync('./stickmeme.jpeg')
 }
@@ -16189,7 +16205,7 @@ case 'writestatus':
 if (!q) return reply1(`Contoh: ${prefix + command} top|bottom`)
 top = q.split('|')[0]
 bottom = q.split('|')[1]
-await getBuffer(`https://api-xcoders.xyz/api/ephoto/${command}?text=${txt1}&text2=${txt2}&apikey=7iyNa0qA`).then((gambar) => {
+await getBuffer(`${XcoderApi}/api/ephoto/${command}?text=${txt1}&text2=${txt2}&apikey=7iyNa0qA`).then((gambar) => {
 alpha.sendMessage(from, gambar, image, { quoted: mek, caption: "Nih kack" })
 })
 break
@@ -16199,7 +16215,7 @@ case 'gfx1':
 case 'gfx2':
 case 'gfx5':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy`) 
-nama_ = await getBuffer(`https://api-xfar05.herokuapp.com/api/canvas/${command}?teks=${q}`);
+nama_ = await getBuffer(`${XfarApi}/api/canvas/${command}?teks=${q}`);
 alpha.sendMessage(from, nama_, image, {quoted: mek})
 break
 
@@ -16209,13 +16225,13 @@ if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy|Bot`)
 var m = q
 var m1 = m.split("|")[0];
 var m2 = m.split("|")[1]; 
-nama_ = await getBuffer(`https://api-xfar05.herokuapp.com/api/canvas/${command}?teks1=${m1}&teks2=${m2}`);
+nama_ = await getBuffer(`${XfarApi}/api/canvas/${command}?teks1=${m1}&teks2=${m2}`);
 alpha.sendMessage(from, nama_, image, {quoted: mek})
 break
 
 case 'gfx6':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy|Bot`) 
-nama_ = await getBuffer(`https://api-xfar05.herokuapp.com/api/canvas/gura?teks=${q}`);
+nama_ = await getBuffer(`${XfarApi}/api/canvas/gura?teks=${q}`);
 alpha.sendMessage(from, nama_, image, {quoted: mek})
 break
 
@@ -16230,7 +16246,7 @@ await fs.writeFileSync(`./stickmeme.jpeg`, tmbh1)
 var imgbb = require('imgbb-uploader')
 anu = await imgbb(`${img_key}`, './stickmeme.jpeg')
 teks = `${anu.display_url}`
-nama_ = await getBuffer(`https://api-xfar05.herokuapp.com/api/canvas/patrick?image=${teks}`);
+nama_ = await getBuffer(`${XfarApi}/api/canvas/patrick?image=${teks}`);
 alpha.sendMessage(from, nama_, image, {quoted: mek})
 fs.unlinkSync('./stickmeme.jpeg')
 break
@@ -16246,7 +16262,7 @@ await fs.writeFileSync(`./stickmeme.jpeg`, tmbh2)
 var imgbb = require('imgbb-uploader')
 anu = await imgbb(`${img_key}`, './stickmeme.jpeg')
 teks = `${anu.display_url}`
-nama_ = await getBuffer(`https://api-xfar05.herokuapp.com/api/canvas/spongebob?image=${teks}`);
+nama_ = await getBuffer(`${XfarApi}/api/canvas/spongebob?image=${teks}`);
 alpha.sendMessage(from, nama_, image, {quoted: mek})
 fs.unlinkSync('./stickmeme.jpeg')
 break
@@ -16430,7 +16446,7 @@ alpha.sendMessage(_.jid,
 
 case 'ohno':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} wudy`)
-let ohno_ = await getBuffer(from, `https://api.lolhuman.xyz/api/creator/ohno?apikey=${lolkey}&text=${q}`)
+let ohno_ = await getBuffer(from, `${LolApi}/api/creator/ohno?apikey=${lolkey}&text=${q}`)
 alpha.sendMessage(from, ohno_, MessageType.image,{
 "contextInfo": {
 "forwardingScore": 999,isForwarded: false,
@@ -16450,7 +16466,7 @@ case 'meme4':
 case 'meme5':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} wudy`)
 
-let meme_1 = await getBuffer(`https://api.lolhuman.xyz/api/${command}?apikey=${lolkey}&text=${q}`);
+let meme_1 = await getBuffer(`${LolApi}/api/${command}?apikey=${lolkey}&text=${q}`);
 const meme_3 = await alpha.prepareMessage(from, meme_1, MessageType.image, { thumbnail:thumb_pro})
 let meme_2 = meme_3.message["ephemeralMessage"] ? meme_3.message.ephemeralMessage : meme_3
 meme_5 = `*${jwb_oke}* ${emoj}`
@@ -16487,7 +16503,7 @@ if(!q) return reply1(`${emoj} Hint : ${prefix + command} wudy|bot`)
 top = q.split('|')[0]
 bottom = q.split('|')[1]
 
-let meme2_1 = await getBuffer(`https://api.lolhuman.xyz/api/${command}?apikey=${lolkey}&text1=${top}&text2=${bottom}`);
+let meme2_1 = await getBuffer(`${LolApi}/api/${command}?apikey=${lolkey}&text1=${top}&text2=${bottom}`);
 const meme2_3 = await alpha.prepareMessage(from, meme2_1, MessageType.image, { thumbnail:thumb_pro})
 let meme2_2 = meme2_3.message["ephemeralMessage"] ? meme2_3.message.ephemeralMessage : meme2_3
 meme2_5 = `*${jwb_oke}* ${emoj}`
@@ -16518,7 +16534,7 @@ break
 case 'meme':
 case 'darkjoke':
 case 'memeindo':
-let mem_1 = await getBuffer(`https://api.lolhuman.xyz/api/random/${command}?apikey=${lolkey}`);
+let mem_1 = await getBuffer(`${LolApi}/api/random/${command}?apikey=${lolkey}`);
 const mem_3 = await alpha.prepareMessage(from, mem_1, MessageType.image, { thumbnail:thumb_pro})
 let mem_2 = mem_3.message["ephemeralMessage"] ? mem_3.message.ephemeralMessage : mem_3
 mem_5 = `*${jwb_oke}* ${emoj}`
@@ -16557,7 +16573,7 @@ case 'goodgirl':
 case 'badboy':
 case 'badgirl':
 if (!q)return reply1(`*${emoj} Hint :* ${prefix + command} wudy`)
-let srti_1 = await getBuffer(`https://api.lolhuman.xyz/api/${command}?apikey=${lolkey}&name=${q}`);
+let srti_1 = await getBuffer(`${LolApi}/api/${command}?apikey=${lolkey}&name=${q}`);
 const srti_3 = await alpha.prepareMessage(from, srti_1, MessageType.image, { thumbnail:thumb_pro})
 let srti_2 = srti_3.message["ephemeralMessage"] ? srti_3.message.ephemeralMessage : srti_3
 srti_5 = `*${jwb_oke}* ${emoj}`
@@ -16590,7 +16606,7 @@ if (!q)return reply1(`*${emoj} Hint :* ${prefix + command} wudy`)
 t = args.join(' ')
 t1 = t.split('|')[0]
 t2 = t.split('|')[1]
-let miss_1 = await getBuffer(`https://api.lolhuman.xyz/api/gtapassed?apikey=${lolkey}&text1=${t1}&text2=${t2}`);
+let miss_1 = await getBuffer(`${LolApi}/api/gtapassed?apikey=${lolkey}&text1=${t1}&text2=${t2}`);
 const miss_3 = await alpha.prepareMessage(from, miss_1, MessageType.image, { thumbnail:thumb_pro})
 let miss_2 = miss_3.message["ephemeralMessage"] ? miss_3.message.ephemeralMessage : miss_3
 miss_5 = `*${jwb_oke}* ${emoj}`
@@ -16801,7 +16817,7 @@ case 'swm2':
 case 'codenhentai':
 if (!q) return reply1('Masukkan kode')
 kod = args.join(' ')
-var tod__ = await fetchJson(`https://api-xcoders.xyz/api/anime/codenhentai?code=${kod}&apikey=7iyNa0qA`);
+var tod__ = await fetchJson(`${XcoderApi}/api/anime/codenhentai?code=${kod}&apikey=7iyNa0qA`);
 ide = tod__.titleID
 jep = tod__.titleJP
 cod = tod__.code
@@ -16840,7 +16856,7 @@ quoted: mek, sendEphemeral: true
 break
 
 case 'randomhentai':
-var tod___ = await fetchJson(`https://api-xcoders.xyz/api/anime/randomnhentai?apikey=7iyNa0qA`);
+var tod___ = await fetchJson(`${XcoderApi}/api/anime/randomnhentai?apikey=7iyNa0qA`);
 ide = tod___.titleID
 jep = tod___.titleJP
 cod = tod___.code
@@ -16887,7 +16903,7 @@ case 'neko':
 case 'loli':
 case 'husbu':
 case 'waifu':
-let hus_1 = await getBuffer(`https://api-xcoders.xyz/api/anime/husbu?apikey=7iyNa0qA`);
+let hus_1 = await getBuffer(`${XcoderApi}/api/anime/husbu?apikey=7iyNa0qA`);
 const hus_3 = await alpha.prepareMessage(from, hus_1, MessageType.image, { thumbnail:thumb_miku})
 let hus_2 = hus_3.message["ephemeralMessage"] ? hus_3.message.ephemeralMessage : hus_3
 hus_5 = `*${jwb_oke}* ${emoj}`
@@ -16921,7 +16937,7 @@ case 'searchnhentai':
 case 'kusonime':
 case 'latestnekopoi':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} mabar`) 
-hent_ = await fetchJson(`https://api-xcoders.xyz/api/anime/${command}?query=${q}&apikey=7iyNa0qA`)
+hent_ = await fetchJson(`${XcoderApi}/api/anime/${command}?query=${q}&apikey=7iyNa0qA`)
 let hent___ = await getBuffer(hent_.result.thumbnail[0]);
 const hent__ = await alpha.prepareMessage(from, hent___, MessageType.image, { thumbnail:thumb_img})
 let hent_0 = hent__.message["ephemeralMessage"] ? hent__.message.ephemeralMessage : hent__
@@ -16954,7 +16970,7 @@ var imgbb = require('imgbb-uploader')
 ger = isQuotedVideo ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 owgi = await alpha.downloadAndSaveMediaMessage(ger)
 anu = await imgbb(`${img_key}`, owgi)
-mp4 = await getBuffer(`https://api-xcoders.xyz/api/convert/reversevideo?url=${anu.display_url}&apikey=7iyNa0qA`)
+mp4 = await getBuffer(`${XcoderApi}/api/convert/reversevideo?url=${anu.display_url}&apikey=7iyNa0qA`)
 alpha.sendMessage(from, mp4, video, {mimetype: 'video/mp4', quoted: mek, caption: mess.success})
 break
 
@@ -16963,7 +16979,7 @@ var imgbb = require('imgbb-uploader')
 encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
 owgi = await alpha.downloadAndSaveMediaMessage(encmedia)
 anu = await imgbb(`${img_key}`, owgi)
-webp = await getBuffer(`https://api-xcoders.xyz/api/convert/towebp?url=${anu.display_url}&apikey=7iyNa0qA`)
+webp = await getBuffer(`${XcoderApi}/api/convert/towebp?url=${anu.display_url}&apikey=7iyNa0qA`)
 alpha.sendMessage(from, webp, image, {quoted: mek, caption: mess.success})
 break
 
@@ -16972,14 +16988,14 @@ var imgbb = require('imgbb-uploader')
 ger = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 owgi = await alpha.downloadAndSaveMediaMessage(ger)
 anu = await imgbb(`${img_key}`, owgi)
-webp = await getBuffer(`https://api-xcoders.xyz/api/convert/webp2mp4?url=${anu.display_url}&apikey=7iyNa0qA`)
+webp = await getBuffer(`${XcoderApi}/api/convert/webp2mp4?url=${anu.display_url}&apikey=7iyNa0qA`)
 alpha.sendMessage(from, webp, video, {mimetype: 'video/mp4',quoted: mek, caption: mess.success})
 break
 
 // DOWNLOAD
 case 'cocofun':
 if (!q) return reply1(`Kirim perintah *${prefix}${command}* query`)
-var cof = await fetchJson(`https://api-xcoders.xyz/api/download/cocofun?url=${q}&apikey=7iyNa0qA`);
+var cof = await fetchJson(`${XcoderApi}/api/download/cocofun?url=${q}&apikey=7iyNa0qA`);
 const cocap_ = `COCOFUN
 •${emoj}Judul : ${cof.result.title}
 •${emoj}Description : ${cof.result.desc}
@@ -17007,7 +17023,7 @@ case 'igtv':
 case 'imdb':
 case 'soundcloud':
 if (!q) return reply1(`Kirim perintah *${prefix}${command}* query`)
-var cof = await fetchJson(`https://api-xcoders.xyz/api/download/${command}?url=${q}&apikey=7iyNa0qA`);
+var cof = await fetchJson(`${XcoderApi}/api/download/${command}?url=${q}&apikey=7iyNa0qA`);
 const fbcap_ = `*${command} download*
 •${emoj}Judul : ${cof.result.title}
 •${emoj}Extension : ${cof.result.extension}
@@ -17027,7 +17043,7 @@ break
 
 case 'joox':
 if (!q) return reply1(`Kirim perintah *${prefix}${command}* query`)
-var cof = await fetchJson(`https://api-xcoders.xyz/api/download/joox?query=${q}&apikey=7iyNa0qA`);
+var cof = await fetchJson(`${XcoderApi}/api/download/joox?query=${q}&apikey=7iyNa0qA`);
 const joxcap_ = `*${command} download*
 •${emoj}Judul : ${cof.result.judul}
 •${emoj}Artist : ${cof.result.artist}
@@ -17049,7 +17065,7 @@ break
 case 'xnxx':
 case 'xvideos':
 if (!q) return reply1(`Kirim perintah *${prefix}${command}* query`)
-var cof = await fetchJson(`https://api-xcoders.xyz/api/download/${command}?url=${q}&apikey=7iyNa0qA`);
+var cof = await fetchJson(`${XcoderApi}/api/download/${command}?url=${q}&apikey=7iyNa0qA`);
 const xncap_ = `*${command} download*
 •${emoj}Judul : ${cof.result.title}
 •${emoj}Keyword : ${cof.result.keyword}
@@ -17118,7 +17134,7 @@ owgi = await alpha.downloadMediaMessage(ger)
 await fs.writeFileSync(`./stickmeme.jpeg`, owgi)
 var imgbb = require('imgbb-uploader')
 anu = await imgbb(`${img_key}`, './stickmeme.jpeg')
-teks = await getBuffer(`https://api-xcoders.xyz/api/maker/${command}?url=${anu.display_url}&apikey=7iyNa0qA`)
+teks = await getBuffer(`${XcoderApi}/api/maker/${command}?url=${anu.display_url}&apikey=7iyNa0qA`)
 alpha.sendMessage(from, teks, image, { quoted: mek, caption: "Nih kack" })
 fs.unlinkSync('./stickmeme.jpeg')
 }
@@ -17127,7 +17143,7 @@ break
 // TOOLS
 case 'headers':
 if (!q) return reply1(`Kirim perintah *${prefix}${command}* http://google.com`)
-var tyd = await fetchJson(`https://api-xcoders.xyz/api/tools/headers?url=${q}&apikey=7iyNa0qA`);
+var tyd = await fetchJson(`${XcoderApi}/api/tools/headers?url=${q}&apikey=7iyNa0qA`);
 ide = tyd.result
 a = ide.date
 b = ide.expires
@@ -17166,7 +17182,7 @@ break
 
 case 'pageurl':
 if (!q) return reply1(`Kirim perintah *${prefix}${command}* http://google.com`)
-var tod_ = await fetchJson(`https://api-xcoders.xyz/api/tools/pageurl?url=${q}&apikey=7iyNa0qA`);
+var tod_ = await fetchJson(`${XcoderApi}/api/tools/pageurl?url=${q}&apikey=7iyNa0qA`);
 ide = tod_.result
 const pageur = `${ide}`
 but = [
@@ -17329,7 +17345,7 @@ if (!isQuotedSticker) {
 var smra = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 var smri = await alpha.downloadAndSaveMediaMessage(smra, `./media/${sender}.png`)
 let smru = await imgbb(`${img_key}`, smri)
-anuk = `https://some-random-api.ml/canvas/${command}?avatar=${smru.display_url}`
+anuk = `${SomeApi}/canvas/${command}?avatar=${smru.display_url}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
@@ -17339,7 +17355,7 @@ await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih im
 var smra2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
 var smri2 = await alpha.downloadAndSaveMediaMessage(smra2, `./media/${sender}.png`)
 let smru2 = await imgbb(`${img_key}`, smri2)
-anuk = `https://some-random-api.ml/canvas/${command}?avatar=${smru2.display_url}`
+anuk = `${SomeApi}/canvas/${command}?avatar=${smru2.display_url}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
@@ -17351,7 +17367,7 @@ let smra3 = await alpha.getProfilePicture(smri3).catch(_ => 'https://telegra.ph/
 let smru3 = await imageToBase64(JSON.stringify(smra3).replace(/\"/gi, ''))
 fs.writeFileSync('janckuk.jpeg', smru3, 'base64')
 let smre3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
-anuk = `https://some-random-api.ml/canvas/${command}?avatar=${smre3.display_url}`
+anuk = `${SomeApi}/canvas/${command}?avatar=${smre3.display_url}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
@@ -17687,7 +17703,7 @@ if (!isQuotedSticker) {
 var jan = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 var jin = await alpha.downloadAndSaveMediaMessage(jan, `./media/${sender}.png`)
 let jun = await imgbb(`${img_key}`, jin)
-anuk = `https://janbot-api.herokuapp.com/api/imgedit/${command}?url=${jun.display_url}`
+anuk = `${OjanApi}/api/imgedit/${command}?url=${jun.display_url}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
@@ -17697,7 +17713,7 @@ await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih im
 var jan2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
 var jin2 = await alpha.downloadAndSaveMediaMessage(jan2, `./media/${sender}.png`)
 let jun2 = await imgbb(`${img_key}`, jin2)
-anuk = `https://janbot-api.herokuapp.com/api/imgedit/${command}?url=${jun2.display_url}`
+anuk = `${OjanApi}/api/imgedit/${command}?url=${jun2.display_url}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
@@ -17709,7 +17725,7 @@ let jan3 = await alpha.getProfilePicture(jin3).catch(_ => 'https://telegra.ph/fi
 let jun3 = await imageToBase64(JSON.stringify(jan3).replace(/\"/gi, ''))
 fs.writeFileSync('janckuk.jpeg', jun3, 'base64')
 let jen3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
-anuk = `https://janbot-api.herokuapp.com/api/imgedit/${command}?url=${jen3.display_url}`
+anuk = `${OjanApi}/api/imgedit/${command}?url=${jen3.display_url}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
@@ -17914,7 +17930,7 @@ if (!isQuotedSticker) {
 var lpha = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 var lphi = await alpha.downloadAndSaveMediaMessage(lpha, `./media/${sender}.png`)
 let lphu = await imgbb(`${img_key}`, lphi)
-anuk = `https://api-alphabot.herokuapp.com/api/image_editor/${command}?apikey=Alphabot&url=${lphu.display_url}`
+anuk = `${AlphaApi}/api/image_editor/${command}?apikey=Alphabot&url=${lphu.display_url}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
@@ -17924,7 +17940,7 @@ await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih im
 var lpha2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
 var lphi2 = await alpha.downloadAndSaveMediaMessage(lpha2, `./media/${sender}.png`)
 let lphu2 = await imgbb(`${img_key}`, lphi2)
-anuk = `https://api-alphabot.herokuapp.com/api/image_editor/${command}?apikey=Alphabot&url=${lphu2.display_url}`
+anuk = `${AlphaApi}/api/image_editor/${command}?apikey=Alphabot&url=${lphu2.display_url}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
@@ -17936,7 +17952,7 @@ let lpha3 = await alpha.getProfilePicture(lphi3).catch(_ => 'https://telegra.ph/
 let lphu3 = await imageToBase64(JSON.stringify(lpha3).replace(/\"/gi, ''))
 fs.writeFileSync('janckuk.jpeg', lphu3, 'base64')
 let lphe3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
-anuk = `https://api-alphabot.herokuapp.com/api/image_editor/${command}?apikey=Alphabot&url=${lphe3.display_url}`
+anuk = `${AlphaApi}/api/image_editor/${command}?apikey=Alphabot&url=${lphe3.display_url}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
@@ -17958,7 +17974,7 @@ if (!q) return reply1(lang.tahta(prefix, command))
 var m = q
 var m1 = m.split("|")[0];
 var m2 = m.split("|")[1]; 
-let oxy2_ = await getBuffer(`https://api-alphabot.herokuapp.com/api/photooxy/${command}?apikey=Alphabot&text=${m1}&text2=${m2}`)
+let oxy2_ = await getBuffer(`${AlphaApi}/api/photooxy/${command}?apikey=Alphabot&text=${m1}&text2=${m2}`)
 let oxy2_1 = await getBuffer(oxy2_);
 const oxy2_3 = await alpha.prepareMessage(from, oxy2_1, MessageType.image, { thumbnail:thumb_pro})
 let oxy2_2 = oxy2_3.message["ephemeralMessage"] ? oxy2_3.message.ephemeralMessage : oxy2_3
@@ -18041,7 +18057,7 @@ case 'wood':
 case 'woodblock':
 case 'wooden':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy Bot`) 
-let oxxy_1 = await getBuffer(`https://api-alphabot.herokuapp.com/api/photooxy/${command}?apikey=Alphabot&text=${q}`);
+let oxxy_1 = await getBuffer(`${AlphaApi}/api/photooxy/${command}?apikey=Alphabot&text=${q}`);
 const oxxy_3 = await alpha.prepareMessage(from, oxxy_1, MessageType.image, { thumbnail:thumb_pro})
 let oxxy_2 = oxxy_3.message["ephemeralMessage"] ? oxxy_3.message.ephemeralMessage : oxxy_3
 oxxy_5 = `*${jwb_oke}* ${emoj}`
@@ -18101,7 +18117,7 @@ if (!q) return reply1(lang.tahta(prefix, command))
 var m = q
 var m1 = m.split("|")[0];
 var m2 = m.split("|")[1]; 
-let tpr2_ = await getBuffer(`https://api-alphabot.herokuapp.com/api/textpro/${command}?apikey=Alphabot&text=${m1}&text2=${m2}`)
+let tpr2_ = await getBuffer(`${AlphaApi}/api/textpro/${command}?apikey=Alphabot&text=${m1}&text2=${m2}`)
 let tpr2_1 = await getBuffer(tpr2_);
 const tpr2_3 = await alpha.prepareMessage(from, tpr2_1, MessageType.image, { thumbnail:thumb_pro})
 let tpr2_2 = tpr2_3.message["ephemeralMessage"] ? tpr2_3.message.ephemeralMessage : tpr2_3
@@ -18283,7 +18299,7 @@ case 'wood':
 case 'writing':
 case 'xmas':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy Bot`) 
-let tpr_1 = await getBuffer(`https://api-alphabot.herokuapp.com/api/textpro/${command}?text=${q}&apikey=Alphabot`);
+let tpr_1 = await getBuffer(`${AlphaApi}/api/textpro/${command}?text=${q}&apikey=Alphabot`);
 const tpr_3 = await alpha.prepareMessage(from, tpr_1, MessageType.image, { thumbnail:thumb_pro})
 let tpr_2 = tpr_3.message["ephemeralMessage"] ? tpr_3.message.ephemeralMessage : tpr_3
 tpr_5 = `*${jwb_oke}* ${emoj}`
@@ -18321,7 +18337,7 @@ if (!isQuotedSticker) {
 var fara = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 var fari = await alpha.downloadAndSaveMediaMessage(fara, `./media/${sender}.png`)
 let faru = await imgbb(`${img_key}`, fari)
-anuk = `https://api-xfar05.herokuapp.com/api/canvas/customgfx1?teks=${q}&bg=${faru.display_url}`
+anuk = `${XfarApi}/api/canvas/customgfx1?teks=${q}&bg=${faru.display_url}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
@@ -18331,7 +18347,7 @@ await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih im
 var fara2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
 var fari2 = await alpha.downloadAndSaveMediaMessage(fara2, `./media/${sender}.png`)
 let faru2 = await imgbb(`${img_key}`, fari2)
-anuk = `https://api-xfar05.herokuapp.com/api/canvas/customgfx1?teks=${q}&bg=${faru2.display_url}`
+anuk = `${XfarApi}/api/canvas/customgfx1?teks=${q}&bg=${faru2.display_url}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
@@ -18343,7 +18359,7 @@ let fara3 = await alpha.getProfilePicture(fari3).catch(_ => 'https://telegra.ph/
 let faru3 = await imageToBase64(JSON.stringify(fara3).replace(/\"/gi, ''))
 fs.writeFileSync('janckuk.jpeg', faru3, 'base64')
 let fare3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
-anuk = `https://api-xfar05.herokuapp.com/api/canvas/customgfx1?teks=${q}&bg=${fare3.display_url}`
+anuk = `${XfarApi}/api/canvas/customgfx1?teks=${q}&bg=${fare3.display_url}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
@@ -18367,7 +18383,7 @@ if (!isQuotedSticker) {
 var fara_ = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 var fari_ = await alpha.downloadAndSaveMediaMessage(fara_, `./media/${sender}.png`)
 let faru_ = await imgbb(`${img_key}`, fari_)
-anuk = `https://api-xfar05.herokuapp.com/api/canvas/customgfx2?teks1=${m1}&teks2=${m2}&bg=${faru_.display_url}`
+anuk = `${XfarApi}/api/canvas/customgfx2?teks1=${m1}&teks2=${m2}&bg=${faru_.display_url}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
@@ -18377,7 +18393,7 @@ await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih im
 var fara_2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
 var fari_2 = await alpha.downloadAndSaveMediaMessage(fara_2, `./media/${sender}.png`)
 let faru_2 = await imgbb(`${img_key}`, fari_2)
-anuk = `https://api-xfar05.herokuapp.com/api/canvas/customgfx2?teks1=${m1}&teks2=${m2}&bg=${faru_2.display_url}`
+anuk = `${XfarApi}/api/canvas/customgfx2?teks1=${m1}&teks2=${m2}&bg=${faru_2.display_url}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
@@ -18389,7 +18405,7 @@ let fara_3 = await alpha.getProfilePicture(fari_3).catch(_ => 'https://telegra.p
 let faru_3 = await imageToBase64(JSON.stringify(fara_3).replace(/\"/gi, ''))
 fs.writeFileSync('janckuk.jpeg', faru_3, 'base64')
 let fare_3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
-anuk = `https://api-xfar05.herokuapp.com/api/canvas/customgfx2?teks1=${m1}&teks2=${m2}&bg=${fare_3.display_url}`
+anuk = `${XfarApi}/api/canvas/customgfx2?teks1=${m1}&teks2=${m2}&bg=${fare_3.display_url}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
@@ -18408,7 +18424,7 @@ if (!isQuotedSticker) {
 var fara__ = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 var fari__ = await alpha.downloadAndSaveMediaMessage(fara__, `./media/${sender}.png`)
 let faru__ = await imgbb(`${img_key}`, fari__)
-anuk = `https://api-xfar05.herokuapp.com/api/canvas/xnxx?pp=${faru__.display_url}&username=${q}`
+anuk = `${XfarApi}/api/canvas/xnxx?pp=${faru__.display_url}&username=${q}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
@@ -18418,7 +18434,7 @@ await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih im
 var fara__2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
 var fari__2 = await alpha.downloadAndSaveMediaMessage(fara__2, `./media/${sender}.png`)
 let faru__2 = await imgbb(`${img_key}`, fari__2)
-anuk = `https://api-xfar05.herokuapp.com/api/canvas/xnxx?pp=${faru__2.display_url}&username=${q}`
+anuk = `${XfarApi}/api/canvas/xnxx?pp=${faru__2.display_url}&username=${q}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
@@ -18430,7 +18446,7 @@ let fara__3 = await alpha.getProfilePicture(fari__3).catch(_ => 'https://telegra
 let faru__3 = await imageToBase64(JSON.stringify(fara__3).replace(/\"/gi, ''))
 fs.writeFileSync('janckuk.jpeg', faru__3, 'base64')
 let fare__3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
-anuk = `https://api-xfar05.herokuapp.com/api/canvas/xnxx?pp=${fare__3.display_url}&username=${q}`
+anuk = `${XfarApi}/api/canvas/xnxx?pp=${fare__3.display_url}&username=${q}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
@@ -18454,13 +18470,13 @@ var yug = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extende
 var yig = await alpha.downloadAndSaveMediaMessage(yug, `./media/${sender}.png`)
 let yeg = await imgbb(`${img_key}`, yig)
 console.log(color(ini_gen))
-sendStickerFromUrl(from, `https://api.lolhuman.xyz/api/yugioh?apikey=${lolkey}&img=${yeg.display_url}&title=${t1}&desc=${t2}&atk=${t3}&def=${t4}`, mek)
+sendStickerFromUrl(from, `${LolApi}/api/yugioh?apikey=${lolkey}&img=${yeg.display_url}&title=${t1}&desc=${t2}&atk=${t3}&def=${t4}`, mek)
 } else if (!isQuotedImage) {
 var yug2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
 var yig2 = await alpha.downloadAndSaveMediaMessage(yug2, `./media/${sender}.png`)
 let yeg2 = await imgbb(`${img_key}`, yig2)
 console.log(color(ini_gen))
-sendStickerFromUrl(from, `https://api.lolhuman.xyz/api/yugioh?apikey=${lolkey}&img=${yeg2.display_url}&title=${t1}&desc=${t2}&atk=${t3}&def=${t4}`, mek)
+sendStickerFromUrl(from, `${LolApi}/api/yugioh?apikey=${lolkey}&img=${yeg2.display_url}&title=${t1}&desc=${t2}&atk=${t3}&def=${t4}`, mek)
 } else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
 yig3 = mek.message.extendedTextMessage.contextInfo.participant || mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
 let yug3 = await alpha.getProfilePicture(yig3).catch(_ => 'https://telegra.ph/file/24fa902ead26340f3df2c.png')
@@ -18468,7 +18484,7 @@ let yeg3 = await imageToBase64(JSON.stringify(yug3).replace(/\"/gi, ''))
 fs.writeFileSync('janckuk.jpeg', yeg3, 'base64')
 let yog3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
 console.log(color(ini_gen))
-sendStickerFromUrl(from, `https://api.lolhuman.xyz/api/yugioh?apikey=${lolkey}&img=${yog3.display_url}&title=${t1}&desc=${t2}&atk=${t3}&def=${t4}`, mek)
+sendStickerFromUrl(from, `${LolApi}/api/yugioh?apikey=${lolkey}&img=${yog3.display_url}&title=${t1}&desc=${t2}&atk=${t3}&def=${t4}`, mek)
 } else {
 reply1('Reply stc/img')
 }
@@ -18481,7 +18497,7 @@ case 'blackbird':
 case 'smurf':
 case 'memories':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} noob`) 
-anuk = `https://kocakz.herokuapp.com/api/flamingtext/${command}?text=${q}`
+anuk = `${KocakApi}/api/flamingtext/${command}?text=${q}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
@@ -18519,7 +18535,7 @@ case 'sandwrite':
 case 'text3d':
 case 'thundertext':
 case 'toxictext':
-ini_buffer = await getBuffer(`https://kocakz.herokuapp.com/api/textpro/${command}?text=${q}`)
+ini_buffer = await getBuffer(`${KocakApi}/api/textpro/${command}?text=${q}`)
 alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Dah selesai , Req by: ${pushname}\nKetik *${prefix}tpro_list* untuk melihat menu yang lain`})
 break
 
@@ -18532,13 +18548,13 @@ case 'stonetext':
 t = args.join(' ')
 t1 = t.split('|')[0]
 t2 = t.split('|')[1]
-ini_buffer = await getBuffer(`https://kocakz.herokuapp.com/api/textpro/${command}?text1=${t1}&text2=${t2}`)
+ini_buffer = await getBuffer(`${KocakApi}/api/textpro/${command}?text1=${t1}&text2=${t2}`)
 alpha.sendMessage(from, ini_buffer, MessageType.image,{quoted: mek})
 break
 
 case 'sertitolol':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy Bot`) 
-buff = await getBuffer(`https://mysakura.herokuapp.com/api/serti/tolol?text=${q}&apikey=sakura404`)
+buff = await getBuffer(`${SakuraApi}/api/serti/tolol?text=${q}&apikey=sakura404`)
 alpha.sendMessage(from, buff, image, {quoted: mek, caption : `Ketik *.serti* untuk melihat list , Req by: ${pushname}`})
 break
 
@@ -18547,7 +18563,7 @@ default:
 //-----------------------[ STIKER ]-------------------//
 //______________//
 if (q5 == "q_anime"){
-susn_ = await fetchJson(`https://mysakura.herokuapp.com/api/quote/anime?apikey=sakura404`);
+susn_ = await fetchJson(`${SakuraApi}/api/quote/anime?apikey=sakura404`);
 quontes = susn_.quotes
 but = [
 {buttonId: `quotes`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
@@ -18556,7 +18572,7 @@ but = [
 sendButton(from, `*Quote :* ${quontes}`, `Thanks @${sender.split("@")[0]} !`, but)
 }
 if (q5 == "q_bijak"){
-susn_ = await fetchJson(`https://mysakura.herokuapp.com/api/quote/bijak?apikey=sakura404`);
+susn_ = await fetchJson(`${SakuraApi}/api/quote/bijak?apikey=sakura404`);
 quontes = susn_.result.quotes
 but = [
 {buttonId: `quotes`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
@@ -18565,7 +18581,7 @@ but = [
 sendButton(from, `*Quote :* ${quontes}`, `Thanks @${sender.split("@")[0]} !`, but)
 }
 if (q5 == "q_gambar"){
-susn_ = await fetchJson(`https://mysakura.herokuapp.com/api/quote/gambar?apikey=sakura404`);
+susn_ = await fetchJson(`${SakuraApi}/api/quote/gambar?apikey=sakura404`);
 qatabijak = susn_.url
 qatabijak_ = await getBuffer(qatabijak);
 alpha.sendMessage(from, qatabijak_, image, {quoted: mek, caption: `*${jwb_oke}* ${emoj}`})
@@ -18576,7 +18592,7 @@ but = [
 sendButton(from, `Hei wibu..,pilih lanjut atau gk🗿`, `Thanks @${sender.split("@")[0]} !`, but)
 }
 if (q5 == "q_islam"){
-susn_ = await fetchJson(`https://mysakura.herokuapp.com/api/quote/islami?apikey=sakura404`);
+susn_ = await fetchJson(`${SakuraApi}/api/quote/islami?apikey=sakura404`);
 quontes = susn_.result
 but = [
 {buttonId: `quotes`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
@@ -18585,7 +18601,7 @@ but = [
 sendButton(from, `*Quote :* ${quontes}`, `Thanks @${sender.split("@")[0]} !`, but)
 }
 if (q5 == "q_joker"){
-susn_ = await fetchJson(`https://mysakura.herokuapp.com/api/quote/joker?apikey=sakura404`);
+susn_ = await fetchJson(`${SakuraApi}/api/quote/joker?apikey=sakura404`);
 quontes = susn_.result.quotes
 but = [
 {buttonId: `quotes`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
@@ -18750,7 +18766,7 @@ reply1('Oke bg')
 }
 
 if (subscribezeeoneofc == 'x_menu') {
-fa = await fetchJson(`https://x-restapi.herokuapp.com/api/random-fakta?apikey=BETA`)
+fa = await fetchJson(`${XrestApi}/api/random-fakta?apikey=BETA`)
 fak = fa.fakta
 list = []
 listmenu = [`All menu bot`,`animemenu`,`asupan menu`,`convertmenu`,`downloadmenu`,`funmenu`,`gacha cecan`,`gacha cogan`,`image effect`,`makermenu`,`nsfw menu`,`othermenu`,`ownermenu`,`quotesmenu`,`set sticker cmd`,`storagemenu`,`tagmenu`,`telegram sticker`,`upmenu`]
@@ -18774,7 +18790,7 @@ listmsg(from, `${ucapanWaktu}`, `${ucapannya2} @${sender.split('@')[0]}\n\n*Fakt
 
 if (q5 == "very_easy"){
 if (math3.hasOwnProperty(sender.split('@')[0])) return reply1("Jawab dulu yang sebelumnya ,belum kelar ngab")
-asah_ = await fetchJson(`http://api.zekais.com/math?mode=very_easy&apikey=CsapIPYk`);
+asah_ = await fetchJson(`${ZekaisApi}/math?mode=very_easy&apikey=CsapIPYk`);
 soal = asah_.soal
 jwb_math3 = asah_.jawaban
 clue = jwb_math3.replace(/[2|3|4|5|6|7|8|9]/gi, '⁓')
@@ -18799,7 +18815,7 @@ fs.writeFileSync("./game/math3.json", JSON.stringify(math3))
 
 if (q5 == "easy"){
 if (math3.hasOwnProperty(sender.split('@')[0])) return reply1("Jawab dulu yang sebelumnya ,belum kelar ngab")
-asah_ = await fetchJson(`http://api.zekais.com/math?mode=easy&apikey=CsapIPYk`);
+asah_ = await fetchJson(`${ZekaisApi}/math?mode=easy&apikey=CsapIPYk`);
 soal = asah_.soal
 jwb_math3 = asah_.jawaban
 clue = jwb_math3.replace(/[2|3|4|5|6|7|8|9]/gi, '⁓')
@@ -18824,7 +18840,7 @@ fs.writeFileSync("./game/math3.json", JSON.stringify(math3))
 
 if (q5 == "medium"){
 if (math3.hasOwnProperty(sender.split('@')[0])) return reply1("Jawab dulu yang sebelumnya ,belum kelar ngab")
-asah_ = await fetchJson(`http://api.zekais.com/math?mode=medium&apikey=CsapIPYk`);
+asah_ = await fetchJson(`${ZekaisApi}/math?mode=medium&apikey=CsapIPYk`);
 soal = asah_.soal
 jwb_math3 = asah_.jawaban
 clue = jwb_math3.replace(/[2|3|4|5|6|7|8|9]/gi, '⁓')
@@ -18849,7 +18865,7 @@ fs.writeFileSync("./game/math3.json", JSON.stringify(math3))
 
 if (q5 == "hard"){
 if (math3.hasOwnProperty(sender.split('@')[0])) return reply1("Jawab dulu yang sebelumnya ,belum kelar ngab")
-asah_ = await fetchJson(`http://api.zekais.com/math?mode=hard&apikey=CsapIPYk`);
+asah_ = await fetchJson(`${ZekaisApi}/math?mode=hard&apikey=CsapIPYk`);
 soal = asah_.soal
 jwb_math3 = asah_.jawaban
 clue = jwb_math3.replace(/[2|3|4|5|6|7|8|9]/gi, '⁓')
@@ -18874,7 +18890,7 @@ fs.writeFileSync("./game/math3.json", JSON.stringify(math3))
 
 if (q5 == "extreme"){
 if (math3.hasOwnProperty(sender.split('@')[0])) return reply1("Jawab dulu yang sebelumnya ,belum kelar ngab")
-asah_ = await fetchJson(`http://api.zekais.com/math?mode=extreme&apikey=CsapIPYk`);
+asah_ = await fetchJson(`${ZekaisApi}/math?mode=extreme&apikey=CsapIPYk`);
 soal = asah_.soal
 jwb_math3 = asah_.jawaban
 clue = jwb_math3.replace(/[2|3|4|5|6|7|8|9]/gi, '⁓')
@@ -18899,7 +18915,7 @@ fs.writeFileSync("./game/math3.json", JSON.stringify(math3))
 
 if (q5 == "impossible"){
 if (math3.hasOwnProperty(sender.split('@')[0])) return reply1("Jawab dulu yang sebelumnya ,belum kelar ngab")
-asah_ = await fetchJson(`http://api.zekais.com/math?mode=impossible&apikey=CsapIPYk`);
+asah_ = await fetchJson(`${ZekaisApi}/math?mode=impossible&apikey=CsapIPYk`);
 soal = asah_.soal
 jwb_math3 = asah_.jawaban
 clue = jwb_math3.replace(/[2|3|4|5|6|7|8|9]/gi, '⁓')
@@ -18923,7 +18939,7 @@ fs.writeFileSync("./game/math3.json", JSON.stringify(math3))
 }
 
 if (q5 == "waifu_1"){
-let wifu_2 = await getBuffer(`https://velgrynd.herokuapp.com/api/image/waifu?apikey=slAuPQiV`);
+let wifu_2 = await getBuffer(`${IchikaApi}/api/image/waifu?apikey=slAuPQiV`);
 const wifu_3 = await alpha.prepareMessage(from, wifu_2, MessageType.image, { thumbnail:thumb_nime})
 let wifu_4 = wifu_3.message["ephemeralMessage"] ? wifu_3.message.ephemeralMessage : wifu_3
 wifu_6 = `*${jwb_oke}* ${emoj}`
@@ -18952,7 +18968,7 @@ quoted: mek, sendEphemeral: true
 }
 
 if (q5 == "waifu_2"){
-let wifu2_2 = await getBuffer(`https://api.lolhuman.xyz/api/random/waifu?apikey=${lolkey}`);
+let wifu2_2 = await getBuffer(`${LolApi}/api/random/waifu?apikey=${lolkey}`);
 const wifu2_3 = await alpha.prepareMessage(from, wifu2_2, MessageType.image, { thumbnail:thumb_nime})
 let wifu2_4 = wifu2_3.message["ephemeralMessage"] ? wifu2_3.message.ephemeralMessage : wifu2_3
 wifu2_6 = `*${jwb_oke}* ${emoj}`
@@ -18981,7 +18997,7 @@ quoted: mek, sendEphemeral: true
 }
 
 if (q5 == "waifu_3"){
-wifu3_1 = await fetchJson(`https://x-restapi.herokuapp.com/api/random-waifu?apikey=BETA`);
+wifu3_1 = await fetchJson(`${XrestApi}/api/random-waifu?apikey=BETA`);
 let wifu3_2 = await getBuffer(wifu3_1.link);
 const wifu3_3 = await alpha.prepareMessage(from, wifu3_2, MessageType.image, { thumbnail:thumb_nime})
 let wifu3_4 = wifu3_3.message["ephemeralMessage"] ? wifu3_3.message.ephemeralMessage : wifu3_3
@@ -19567,7 +19583,7 @@ alpha.sendMessage(from, buttonMessagee, MessageType.buttonsMessage,{
 // AUTO REPLY by Piyo >_<
 if (budy.includes("@verify","@verif","daftar")){
 if (isRegister) return reply1('Kamu sudah terdaftar di dalam database')
-let pp_verify = await getBuffer(`https://hadi-api.herokuapp.com/api/card/verify2?name=${encodeURIComponent(pushname)}&memverify=${encodeURIComponent(groupMembers.length)}&gcname=${encodeURIComponent(groupName)}&gcicon=${encodeURIComponent(ppgc)}&pp=${encodeURIComponent(pp_userzb)}&bg=${encodeURIComponent(bg_verify)}`)
+let pp_verify = await getBuffer(`${HadiApi}/api/card/verify2?name=${encodeURIComponent(pushname)}&memverify=${encodeURIComponent(groupMembers.length)}&gcname=${encodeURIComponent(groupName)}&gcicon=${encodeURIComponent(ppgc)}&pp=${encodeURIComponent(pp_userzb)}&bg=${encodeURIComponent(bg_verify)}`)
 addRegisterUser(sender, pushname, bio_user, wib)
 sn_ = await fetchJson('https://api.caranya.my.id/gen-password')
 let ran_blc = randomNomor(50)
@@ -19677,7 +19693,7 @@ const _0x42e377=_0x18d2;(function(_0x2427ef,_0x36f8e9){const _0x47e474=_0x18d2,_
 if (isGroup && isSimiAudio && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio &&  budy != undefined) {
 let sim_a = await fetchJson(`https://simsimi.info/api/?text=${budy}&lc=id`)
 zim = `${sim_a.success}`
-let has_a = await getBuffer(`https://hadi-api.herokuapp.com/api/tts?language=id&text=${zim}`)
+let has_a = await getBuffer(`${HadiApi}/api/tts?language=id&text=${zim}`)
 await alpha.sendMessage(from,has_a, MessageType.audio, {mimetype:'audio/mp4', quoted:mek, ptt:true,duration: 86400000})
 }
 
