@@ -17322,9 +17322,9 @@ case 'brazzers':
 case 'beautiful':
 console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
 var imgbb = require('imgbb-uploader')
-if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
+if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) && args.length > 0) {
 // Wait //
-var bioij = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+var bioij = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek 
 var delib = await alpha.downloadAndSaveMediaMessage(bioij, `./media/${sender}.png`)
 let datau = await imgbb(`${img_key}`, delib)
 anuk = `${datau.display_url}`
@@ -17382,18 +17382,8 @@ case 'wasted':
 case 'youtube-comment':
 console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
 var imgbb = require('imgbb-uploader')
-if (!isQuotedSticker) {
-var smra = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-var smri = await alpha.downloadAndSaveMediaMessage(smra, `./media/${sender}.png`)
-let smru = await imgbb(`${img_key}`, smri)
-anuk = `${SomeApi}/canvas/${command}?avatar=${smru.display_url}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-ini_buffer = await getBuffer(`${anuk}`)
-await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
-} else if (!isQuotedImage) {
-var smra2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
+if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) && args.length > 0) {
+var smra2 = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek 
 var smri2 = await alpha.downloadAndSaveMediaMessage(smra2, `./media/${sender}.png`)
 let smru2 = await imgbb(`${img_key}`, smri2)
 anuk = `${SomeApi}/canvas/${command}?avatar=${smru2.display_url}`
@@ -17415,7 +17405,7 @@ sendStickerFromUrl(from, `${anuk}`, mek)
 ini_buffer = await getBuffer(`${anuk}`)
 await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else {
-reply1('Reply stc/img')
+reply1('Reply stc/img/@tag')
 }
 break
 
@@ -17740,18 +17730,8 @@ case 'triger':
 case 'wasted':
 console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
 var imgbb = require('imgbb-uploader')
-if (!isQuotedSticker) {
-var jan = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-var jin = await alpha.downloadAndSaveMediaMessage(jan, `./media/${sender}.png`)
-let jun = await imgbb(`${img_key}`, jin)
-anuk = `${OjanApi}/api/imgedit/${command}?url=${jun.display_url}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-ini_buffer = await getBuffer(`${anuk}`)
-await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
-} else if (!isQuotedImage) {
-var jan2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
+if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) && args.length > 0) {
+var jan2 = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek 
 var jin2 = await alpha.downloadAndSaveMediaMessage(jan2, `./media/${sender}.png`)
 let jun2 = await imgbb(`${img_key}`, jin2)
 anuk = `${OjanApi}/api/imgedit/${command}?url=${jun2.display_url}`
@@ -17773,7 +17753,7 @@ sendStickerFromUrl(from, `${anuk}`, mek)
 ini_buffer = await getBuffer(`${anuk}`)
 await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else {
-reply1('Reply stc/img')
+reply1('Reply stc/img/@tag')
 }
 break
 
@@ -17808,19 +17788,8 @@ case 'tweet':
 case 'whowouldwin':
 console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
 var imgbb = require('imgbb-uploader')
-if (!isQuotedSticker) {
-var nka = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-var nki = await alpha.downloadAndSaveMediaMessage(nka, `./media/${sender}.png`)
-let nku = await imgbb(`${img_key}`, nki)
-titid = await fetchJson(`https://nekobot.xyz/api/imagegen?type=${command}&url=${nku.display_url}`, {method: 'get'})
-anuk = `${titid.message}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-ini_buffer = await getBuffer(`${anuk}`)
-await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
-} else if (!isQuotedImage) {
-var nka2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
+if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) && args.length > 0) {
+var nka2 = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek 
 var nki2 = await alpha.downloadAndSaveMediaMessage(nka2, `./media/${sender}.png`)
 let nku2 = await imgbb(`${img_key}`, nki2)
 titid = await fetchJson(`https://nekobot.xyz/api/imagegen?type=${command}&url=${nku2.display_url}`, {method: 'get'})
@@ -17844,7 +17813,7 @@ sendStickerFromUrl(from, `${anuk}`, mek)
 ini_buffer = await getBuffer(`${anuk}`)
 await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else {
-reply1('Reply stc/img')
+reply1('Reply stc/img/@tag')
 }
 break
 
@@ -17892,18 +17861,8 @@ case 'wanted':
 case 'what':
 console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
 var imgbb = require('imgbb-uploader')
-if (!isQuotedSticker) {
-var dpuh = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-var dpah = await alpha.downloadAndSaveMediaMessage(dpuh, `./media/${sender}.png`)
-let dpih = await imgbb(`${img_key}`, dpah)
-anuk = `${DappaApi}/api/canvas/${command}?img=${dpih.display_url}&apikey=${dapuhy}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-ini_buffer = await getBuffer(`${anuk}`)
-await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
-} else if (!isQuotedImage) {
-var dpuh2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
+if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) && args.length > 0) {
+var dpuh2 = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek 
 var dpah2 = await alpha.downloadAndSaveMediaMessage(dpuh2, `./media/${sender}.png`)
 let dpih2 = await imgbb(`${img_key}`, dpah2)
 anuk = `${DappaApi}/api/canvas/${command}?img=${dpih2.display_url}&apikey=${dapuhy}`
@@ -17925,7 +17884,7 @@ sendStickerFromUrl(from, `${anuk}`, mek)
 ini_buffer = await getBuffer(`${anuk}`)
 await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else {
-reply1('Reply stc/img')
+reply1('Reply stc/img/@tag')
 }
 break
 
@@ -17967,18 +17926,8 @@ case 'wanted':
 case 'wasted':
 console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
 var imgbb = require('imgbb-uploader')
-if (!isQuotedSticker) {
-var lpha = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-var lphi = await alpha.downloadAndSaveMediaMessage(lpha, `./media/${sender}.png`)
-let lphu = await imgbb(`${img_key}`, lphi)
-anuk = `${AlphaApi}/api/image_editor/${command}?apikey=Alphabot&url=${lphu.display_url}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-ini_buffer = await getBuffer(`${anuk}`)
-await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
-} else if (!isQuotedImage) {
-var lpha2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
+if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) && args.length > 0) {
+var lpha2 = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek 
 var lphi2 = await alpha.downloadAndSaveMediaMessage(lpha2, `./media/${sender}.png`)
 let lphu2 = await imgbb(`${img_key}`, lphi2)
 anuk = `${AlphaApi}/api/image_editor/${command}?apikey=Alphabot&url=${lphu2.display_url}`
@@ -18000,7 +17949,7 @@ sendStickerFromUrl(from, `${anuk}`, mek)
 ini_buffer = await getBuffer(`${anuk}`)
 await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else {
-reply1('Reply stc/img')
+reply1('Reply stc/img/@tag')
 }
 break
 
@@ -18374,18 +18323,8 @@ case 'fx1':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy Bot`) 
 console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
 var imgbb = require('imgbb-uploader')
-if (!isQuotedSticker) {
-var fara = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-var fari = await alpha.downloadAndSaveMediaMessage(fara, `./media/${sender}.png`)
-let faru = await imgbb(`${img_key}`, fari)
-anuk = `${XfarApi}/api/canvas/customgfx1?teks=${q}&bg=${faru.display_url}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-ini_buffer = await getBuffer(`${anuk}`)
-await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
-} else if (!isQuotedImage) {
-var fara2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
+if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) && args.length > 0) {
+var fara2 = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek 
 var fari2 = await alpha.downloadAndSaveMediaMessage(fara2, `./media/${sender}.png`)
 let faru2 = await imgbb(`${img_key}`, fari2)
 anuk = `${XfarApi}/api/canvas/customgfx1?teks=${q}&bg=${faru2.display_url}`
@@ -18407,7 +18346,7 @@ sendStickerFromUrl(from, `${anuk}`, mek)
 ini_buffer = await getBuffer(`${anuk}`)
 await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else {
-reply1('Reply stc/img')
+reply1('Reply stc/img/@tag')
 }
 break
 
@@ -18420,18 +18359,8 @@ var m1 = m.split("|")[0];
 var m2 = m.split("|")[1]; 
 console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
 var imgbb = require('imgbb-uploader')
-if (!isQuotedSticker) {
-var fara_ = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-var fari_ = await alpha.downloadAndSaveMediaMessage(fara_, `./media/${sender}.png`)
-let faru_ = await imgbb(`${img_key}`, fari_)
-anuk = `${XfarApi}/api/canvas/customgfx2?teks1=${m1}&teks2=${m2}&bg=${faru_.display_url}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-ini_buffer = await getBuffer(`${anuk}`)
-await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
-} else if (!isQuotedImage) {
-var fara_2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
+if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) && args.length > 0) {
+var fara_2 = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek 
 var fari_2 = await alpha.downloadAndSaveMediaMessage(fara_2, `./media/${sender}.png`)
 let faru_2 = await imgbb(`${img_key}`, fari_2)
 anuk = `${XfarApi}/api/canvas/customgfx2?teks1=${m1}&teks2=${m2}&bg=${faru_2.display_url}`
@@ -18453,7 +18382,7 @@ sendStickerFromUrl(from, `${anuk}`, mek)
 ini_buffer = await getBuffer(`${anuk}`)
 await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else {
-reply1('Reply stc/img')
+reply1('Reply stc/img/@tag')
 }
 break
 
@@ -18461,18 +18390,8 @@ case 'xnxxmeme':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy Bot`) 
 console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
 var imgbb = require('imgbb-uploader')
-if (!isQuotedSticker) {
-var fara__ = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-var fari__ = await alpha.downloadAndSaveMediaMessage(fara__, `./media/${sender}.png`)
-let faru__ = await imgbb(`${img_key}`, fari__)
-anuk = `${XfarApi}/api/canvas/xnxx?pp=${faru__.display_url}&username=${q}`
-ini_gen = `${command}`
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
-ini_buffer = await getBuffer(`${anuk}`)
-await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
-} else if (!isQuotedImage) {
-var fara__2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
+if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) && args.length > 0) {
+var fara__2 = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek 
 var fari__2 = await alpha.downloadAndSaveMediaMessage(fara__2, `./media/${sender}.png`)
 let faru__2 = await imgbb(`${img_key}`, fari__2)
 anuk = `${XfarApi}/api/canvas/xnxx?pp=${faru__2.display_url}&username=${q}`
@@ -18494,7 +18413,7 @@ sendStickerFromUrl(from, `${anuk}`, mek)
 ini_buffer = await getBuffer(`${anuk}`)
 await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else {
-reply1('Reply stc/img')
+reply1('Reply stc/img/@tag')
 }
 break
 case 'yugioh':
@@ -18506,14 +18425,8 @@ t3 = t.split('|')[2]
 t4 = t.split('|')[3]
 console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
 var imgbb = require('imgbb-uploader')
-if (!isQuotedSticker) {
-var yug = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-var yig = await alpha.downloadAndSaveMediaMessage(yug, `./media/${sender}.png`)
-let yeg = await imgbb(`${img_key}`, yig)
-console.log(color(ini_gen))
-sendStickerFromUrl(from, `${LolApi}/api/yugioh?apikey=${lolkey}&img=${yeg.display_url}&title=${t1}&desc=${t2}&atk=${t3}&def=${t4}`, mek)
-} else if (!isQuotedImage) {
-var yug2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
+if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) && args.length > 0) {
+var yug2 = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek 
 var yig2 = await alpha.downloadAndSaveMediaMessage(yug2, `./media/${sender}.png`)
 let yeg2 = await imgbb(`${img_key}`, yig2)
 console.log(color(ini_gen))
@@ -18527,7 +18440,7 @@ let yog3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${LolApi}/api/yugioh?apikey=${lolkey}&img=${yog3.display_url}&title=${t1}&desc=${t2}&atk=${t3}&def=${t4}`, mek)
 } else {
-reply1('Reply stc/img')
+reply1('Reply stc/img/@tag')
 }
 break
 
