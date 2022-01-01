@@ -18457,11 +18457,11 @@ case 'setnamegc':
 
 case 'quotes':
 const quot_ = [
-{title: 'Anime', description: "", rowId:"q_anime"},
-{title: 'Bijak', description: "", rowId:"q_bijak"},
-{title: 'Gambar', description: "", rowId:"q_gambar"},
-{title: 'Islami', description: "", rowId:"q_islam"},
-{title: 'Joker', description: "", rowId:"q_joker"}
+{title: `${emoj + command} Anime`, description: "", rowId:"q_anime"},
+{title: `${emoj2 + command} Bijak`, description: "", rowId:"q_bijak"},
+{title: `${emoj + command} Gambar`, description: "", rowId:"q_gambar"},
+{title: `${emoj2 + command} Islami`, description: "", rowId:"q_islam"},
+{title: `${emoj + command} Joker`, description: "", rowId:"q_joker"}
 ]
 const quot_1 = [{title: "🌹 ⸙ PILIH MODE ⸙ 🌹", rows: quot_}]
 const quot_2 = {
@@ -18505,25 +18505,12 @@ if (q5 == "q_gambar"){
 susn_ = await fetchJson(`https://mysakura.herokuapp.com/api/quote/gambar?apikey=sakura404`);
 qatabijak = susn_.url
 qatabijak_ = await getBuffer(qatabijak);
-const qimg_ = await alpha.prepareMessage(from, tttgbr_1, MessageType.image, { thumbnail:thumb_img})
-let qimg_1 = qimg_.message["ephemeralMessage"] ? qimg_.message.ephemeralMessage : qimg_
-qimg_2 = `*${jwb_oke}* ${emoj}`
-const qimg_3 = [
-{buttonId: `menu`, buttonText: {displayText: `${emoj} List-Menu`}, type: 1},
-{buttonId: `quotes`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+alpha.sendMessage(from, qatabijak_, image, {quoted: mek, caption: `*${jwb_oke}* ${emoj}`})
+but = [
+{buttonId: `quotes`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
+{buttonId: `menu`, buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
 ]
-const qimg_4 = {
-contentText: qimg_2 ,
-footerText: `Thanks @${sender.split("@")[0]} !`,
-buttons: qimg_3,
-headerType: 4,
-imageMessage: qimg_1.message.imageMessage
-}
-alpha.sendMessage(from, qimg_4, MessageType.buttonsMessage,{
-"contextInfo": {
-"forwardingScore": 999,isForwarded: false,
-quoted: mek, sendEphemeral: true
-}})
+sendButton(from, `Hei wibu..,pilih lanjut atau gk🗿`, `Thanks @${sender.split("@")[0]} !`, but)
 }
 if (q5 == "q_islam"){
 susn_ = await fetchJson(`https://mysakura.herokuapp.com/api/quote/islami?apikey=sakura404`);
