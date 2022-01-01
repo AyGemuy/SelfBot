@@ -17322,7 +17322,7 @@ case 'brazzers':
 case 'beautiful':
 console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
 var imgbb = require('imgbb-uploader')
-if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) && args.length > 0) {
+if (isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) {
 // Wait //
 var bioij = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek 
 var delib = await alpha.downloadAndSaveMediaMessage(bioij, `./media/${sender}.png`)
@@ -17382,7 +17382,7 @@ case 'wasted':
 case 'youtube-comment':
 console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
 var imgbb = require('imgbb-uploader')
-if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) && args.length > 0) {
+if (isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) {
 var smra2 = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek 
 var smri2 = await alpha.downloadAndSaveMediaMessage(smra2, `./media/${sender}.png`)
 let smru2 = await imgbb(`${img_key}`, smri2)
@@ -17730,7 +17730,7 @@ case 'triger':
 case 'wasted':
 console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
 var imgbb = require('imgbb-uploader')
-if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) && args.length > 0) {
+if (isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) {
 var jan2 = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek 
 var jin2 = await alpha.downloadAndSaveMediaMessage(jan2, `./media/${sender}.png`)
 let jun2 = await imgbb(`${img_key}`, jin2)
@@ -17788,7 +17788,7 @@ case 'tweet':
 case 'whowouldwin':
 console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
 var imgbb = require('imgbb-uploader')
-if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) && args.length > 0) {
+if (isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) {
 var nka2 = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek 
 var nki2 = await alpha.downloadAndSaveMediaMessage(nka2, `./media/${sender}.png`)
 let nku2 = await imgbb(`${img_key}`, nki2)
@@ -17861,7 +17861,7 @@ case 'wanted':
 case 'what':
 console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
 var imgbb = require('imgbb-uploader')
-if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) && args.length > 0) {
+if (isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) {
 var dpuh2 = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek 
 var dpah2 = await alpha.downloadAndSaveMediaMessage(dpuh2, `./media/${sender}.png`)
 let dpih2 = await imgbb(`${img_key}`, dpah2)
@@ -17926,7 +17926,7 @@ case 'wanted':
 case 'wasted':
 console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
 var imgbb = require('imgbb-uploader')
-if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) && args.length > 0) {
+if (isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) {
 var lpha2 = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek 
 var lphi2 = await alpha.downloadAndSaveMediaMessage(lpha2, `./media/${sender}.png`)
 let lphu2 = await imgbb(`${img_key}`, lphi2)
@@ -18323,7 +18323,7 @@ case 'fx1':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy Bot`) 
 console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
 var imgbb = require('imgbb-uploader')
-if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) && args.length > 0) {
+if (isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) {
 var fara2 = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek 
 var fari2 = await alpha.downloadAndSaveMediaMessage(fara2, `./media/${sender}.png`)
 let faru2 = await imgbb(`${img_key}`, fari2)
@@ -18359,7 +18359,7 @@ var m1 = m.split("|")[0];
 var m2 = m.split("|")[1]; 
 console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
 var imgbb = require('imgbb-uploader')
-if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) && args.length > 0) {
+if (isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) {
 var fara_2 = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek 
 var fari_2 = await alpha.downloadAndSaveMediaMessage(fara_2, `./media/${sender}.png`)
 let faru_2 = await imgbb(`${img_key}`, fari_2)
@@ -18390,7 +18390,7 @@ case 'xnxxmeme':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy Bot`) 
 console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
 var imgbb = require('imgbb-uploader')
-if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) && args.length > 0) {
+if (isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) {
 var fara__2 = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek 
 var fari__2 = await alpha.downloadAndSaveMediaMessage(fara__2, `./media/${sender}.png`)
 let faru__2 = await imgbb(`${img_key}`, fari__2)
@@ -18425,7 +18425,7 @@ t3 = t.split('|')[2]
 t4 = t.split('|')[3]
 console.log(command + ' -> Mungkin fitur ini masih suka eror ngab jadi fix sendiri ya')
 var imgbb = require('imgbb-uploader')
-if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) && args.length > 0) {
+if (isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) {
 var yug2 = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek 
 var yig2 = await alpha.downloadAndSaveMediaMessage(yug2, `./media/${sender}.png`)
 let yeg2 = await imgbb(`${img_key}`, yig2)
