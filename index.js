@@ -14704,7 +14704,7 @@ const math3_1 = [
 ]
 const math3_2 = [{title: "🌹 ⸙ MATH MODE ⸙ 🌹", rows: math3_1}]
 const math3_3 = {
-buttonText: `${emoj2} Pilih mode!`
+buttonText: `${emoj2} Pilih mode!`,
 description: `*${ucapannya2} @${sender.split("@")[0]}*\n\nSilahkan pilih jenis dibawah`,
 sections: math3_2,
 footerText: `Thanks @${sender.split("@")[0]} !`,
@@ -17188,7 +17188,7 @@ const quot_ = [
 ]
 const quot_1 = [{title: "🌹 ⸙ PILIH MODE ⸙ 🌹", rows: quot_}]
 const quot_2 = {
-buttonText: `${emoj2} Pilih mode!`
+buttonText: `${emoj2} Pilih mode!`,
 description: `*${ucapannya2} @${sender.split("@")[0]}*\n\nSilahkan pilih jenis dibawah`,
 sections: quot_1,
 footerText: `Thanks @${sender.split("@")[0]} !`,
