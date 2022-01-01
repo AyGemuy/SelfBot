@@ -370,10 +370,19 @@ lk = ["cc96c7fb66cae76c359e3641","78bd89cd7b4d6205e3e18061","4f1cc7a2294ebce0a7b
 var lolkey = lk[Math.floor(Math.random() * lk.length)]
 dp = ["AyGemuy24","ls7II19RQIYv1aS","kYR0hlaVZZPvv8B"]
 var dapuhy = dp[Math.floor(Math.random() * dp.length)]
-zk = ["aygemuy24","aygemuy242"]
-var zeksApikey = zk[Math.floor(Math.random() * zk.length)]
+
 ApiZeks = 'https://api.zeks.me'
 
+try {
+DappaApi = 'https://dapuhy.xyz'
+} catch {
+DappaApi = 'https://api.dapuhy.ga'
+}
+try {
+zeksApikey = 'aygemuy24'
+} catch {
+zeksApikey = 'aygemuy242'
+}
 
 // RANDOM
 pe = ["https://www.teahub.io/photos/full/1-12617_adobe-illustrator-art-landscape..jpg","https://i.pinimg.com/originals/30/e0/36/30e036a43def45e2616848b4fef44a69.jpg","https://i.pinimg.com/736x/c4/ec/4b/c4ec4bba05077363550389a4f09c3d83.jpg","https://i.pinimg.com/736x/ab/72/c2/ab72c2f610178394c0a6ea0d681b1fa0.jpg","https://i.pinimg.com/736x/73/7f/dd/737fdd0886221e59fe3561df429b67be.jpg"]
@@ -11431,7 +11440,7 @@ break
 case 'happymod': 
 if (args.length == 0) return reply1(`${emoj} Hint : ${prefix + command} free fire`)
 query = args.join(" ")
-get_result = await fetchJson(`https://api.dapuhy.ga/api/search/happymod?query=${query}&apikey=${dapuhy}`, {method: 'get'})
+get_result = await fetchJson(`${DappaApi}/api/search/happymod?query=${query}&apikey=${dapuhy}`, {method: 'get'})
 kontol = get_result.result
 ini_txt = "Result : \n"
 for (var x of kontol) {
@@ -11444,7 +11453,7 @@ break
 case 'klikmanga': 
 if (args.length == 0) return reply1(`${emoj} Hint : ${prefix + command} naruto`)
 query = args.join(" ")
-get_result = await fetchJson(`https://api.dapuhy.ga/api/manga/klikmanga?query=${query}&apikey=${dapuhy}`, {method: 'get'})
+get_result = await fetchJson(`${DappaApi}/api/manga/klikmanga?query=${query}&apikey=${dapuhy}`, {method: 'get'})
 kontol = get_result.result
 ini_txt = "Result : \n"
 for (var x of kontol) {
@@ -11462,7 +11471,7 @@ break
 case 'kiryu': 
 if (args.length == 0) return reply1(`${emoj} Hint : ${prefix + command} naruto`)
 query = args.join(" ")
-get_result = await fetchJson(`https://api.dapuhy.ga/api/manga/kiryuu?query=${query}&apikey=${dapuhy}`, {method: 'get'})
+get_result = await fetchJson(`${DappaApi}/api/manga/kiryuu?query=${query}&apikey=${dapuhy}`, {method: 'get'})
 kontol = get_result.result
 ini_txt = "Result : \n"
 for (var x of kontol) {
@@ -11477,7 +11486,7 @@ break
 case 'animeplanet': 
 if (args.length == 0) return reply1(`${emoj} Hint : ${prefix + command} naruto`)
 query = args.join(" ")
-get_result = await fetchJson(`https://api.dapuhy.ga/api/manga/animeplanet?query=${query}&apikey=${dapuhy}`, {method: 'get'})
+get_result = await fetchJson(`${DappaApi}/api/manga/animeplanet?query=${query}&apikey=${dapuhy}`, {method: 'get'})
 kontol = get_result.result
 ini_txt = "Result : \n"
 for (var x of kontol) {
@@ -11514,14 +11523,14 @@ case 'asupanbocil':
 case 'asupanukhty':
 case 'asupanrikagusriani':
 case 'asupanghea':
-asup_2 = await getBuffer(`https://api.dapuhy.ga/api/asupan/${command}?apikey=${dapuhy}`) 
+asup_2 = await getBuffer(`${DappaApi}/api/asupan/${command}?apikey=${dapuhy}`) 
 asup_1 = `Nih Asupan nya ${pushname}`
 alpha.sendMessage(from, asup_2,video,{caption: `${asup1}`,quoted: mek})
 break
 
 case 'quoteslucu':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command}`) 
-qtlc_ = await fetchJson(`https://api.dapuhy.ga/api/fun/quoteslucu?apikey=${dapuhy}`)
+qtlc_ = await fetchJson(`${DappaApi}/api/fun/quoteslucu?apikey=${dapuhy}`)
 var qtlc_1 = `${ucapannya2}
 *${qtlc_.quotes}*`
 var qtlc_2 = [
@@ -11544,7 +11553,7 @@ break
 
 case 'cerpen':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command}`) 
-crpn_ = await fetchJson(`https://api.dapuhy.ga/api/fun/cerpen?apikey=${dapuhy}`)
+crpn_ = await fetchJson(`${DappaApi}/api/fun/cerpen?apikey=${dapuhy}`)
 var crpn_1 = `${ucapannya2}
 • *Judul :* ${crpn_.judul}
 • *Kategori :* ${crpn_.kategori}
@@ -11569,7 +11578,7 @@ break
 
 case 'jagokata':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} Merdeka`) 
-jgkt_ = await fetchJson(`https://api.dapuhy.ga/api/fun/jagokata?query=${q}&apikey=${dapuhy}`)
+jgkt_ = await fetchJson(`${DappaApi}/api/fun/jagokata?query=${q}&apikey=${dapuhy}`)
 var jgkt_1 = `• *Result :* ${jgkt_.result}`
 var jgkt_2 = [
 {buttonId: `${command} ${q}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
@@ -11591,7 +11600,7 @@ break
 
 case 'tebakgambar2':
 if (tebakgambar2.hasOwnProperty(sender.split('@')[0])) return reply1("Jawab dulu yang sebelumnya ,belum kelar ngab")
-ttgbr_ = await fetchJson(`https://api.dapuhy.ga/api/fun/tebakgambar2?apikey=${dapuhy}`);
+ttgbr_ = await fetchJson(`${DappaApi}/api/fun/tebakgambar2?apikey=${dapuhy}`);
 let ttgbr_1 = await getBuffer(ttgbr_.result.image);
 clu = ttgbr_.result.clue
 jwb_tbk2 = ttgbr_.result.jawaban
@@ -11637,7 +11646,7 @@ break
 
 case 'caklontong':
 if (caklontong.hasOwnProperty(sender.split('@')[0])) return reply1("Jawab dulu yang sebelumnya ,belum kelar ngab")
-cak_ = await fetchJson(`https://api.dapuhy.ga/api/fun/caklontong?apikey=${dapuhy}`);
+cak_ = await fetchJson(`${DappaApi}/api/fun/caklontong?apikey=${dapuhy}`);
 informasi = cak_.informasi
 soal = cak_.soal
 jwb_cak = cak_.jawaban
@@ -11663,7 +11672,7 @@ break
 
 case 'siapakahaku':
 if (siapakah.hasOwnProperty(sender.split('@')[0])) return reply1("Jawab dulu yang sebelumnya ,belum kelar ngab")
-anu = await fetchJson(`https://api.dapuhy.ga/api/fun/siapakah?apikey=${dapuhy}`);
+anu = await fetchJson(`${DappaApi}/api/fun/siapakah?apikey=${dapuhy}`);
 soal = anu.pertanyaan
 jwb_siapakah = anu.jawaban
 clue = jwb_siapakah.replace(/[b|c|d|f|g|h|j|k|l|m|n|p|q|r|s|t|v|w|x|y|z]/gi, '⁓')
@@ -11687,7 +11696,7 @@ break
 
 case 'susunkata2':
 if (susunkata2.hasOwnProperty(sender.split('@')[0])) return reply1("Jawab dulu yang sebelumnya ,belum kelar ngab")
-anu = await fetchJson(`https://api.dapuhy.ga/api/fun/${command}?apikey=${dapuhy}`);
+anu = await fetchJson(`${DappaApi}/api/fun/${command}?apikey=${dapuhy}`);
 tipenya = anu.tipe
 tebakya = anu.acak
 jwb_susun2 = anu.jawaban
@@ -11717,7 +11726,7 @@ case 'exontol':
 case 'blekpink':
 case 'quotesyt':
 case 'darkjokes':
-rdmg_ = `https://api.dapuhy.ga/api/randomimage/${command}?apikey=${dapuhy}`
+rdmg_ = `${DappaApi}/api/randomimage/${command}?apikey=${dapuhy}`
 let rdmg_1 = await getBuffer(rdmg_);
 alpha.sendMessage(from, rdmg_1, MessageType.image,{
 caption : `*${jwb_oke}* ${emoj}`,
@@ -11736,7 +11745,7 @@ break
 
 case 'pasangan':
 case 'ppcp':
-cwe_ = await fetchJson(`https://api.dapuhy.ga/api/randomimage/couple?apikey=${dapuhy}`)
+cwe_ = await fetchJson(`${DappaApi}/api/randomimage/couple?apikey=${dapuhy}`)
 let cwe_1 = await getBuffer(cwe_.result.wanita);
 const cwe_3 = await alpha.prepareMessage(from, cwe_1, MessageType.image, { thumbnail:thumb_coupl})
 let cwe_2 = cwe_3.message["ephemeralMessage"] ? cwe_3.message.ephemeralMessage : cwe_3
@@ -17380,7 +17389,7 @@ case 'underwater':
 case 'whitecube':
 case 'wolfmetal':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy Bot`) 
-let poxy_1 = await getBuffer(`https://api.dapuhy.ga/api/photooxy/${command}?text=${q}&apikey=${dapuhy}`);
+let poxy_1 = await getBuffer(`${DappaApi}/api/photooxy/${command}?text=${q}&apikey=${dapuhy}`);
 const poxy_3 = await alpha.prepareMessage(from, poxy_1, MessageType.image, { thumbnail:thumb_oxy})
 let poxy_2 = poxy_3.message["ephemeralMessage"] ? poxy_3.message.ephemeralMessage : poxy_3
 poxy_5 = `*${jwb_oke}* ${emoj}`
@@ -17503,7 +17512,7 @@ case 'xmascards':
 case 'yellowglass':
 case 'yellowjewelry':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy Bot`) 
-let txtpr_1 = await getBuffer(`https://api.dapuhy.ga/api/textpro/${command}?text=${q}&apikey=${dapuhy}`);
+let txtpr_1 = await getBuffer(`${DappaApi}/api/textpro/${command}?text=${q}&apikey=${dapuhy}`);
 const txtpr_3 = await alpha.prepareMessage(from, txtpr_1, MessageType.image, { thumbnail:thumb_pro})
 let txtpr_2 = txtpr_3.message["ephemeralMessage"] ? txtpr_3.message.ephemeralMessage : txtpr_3
 txtpr_5 = `*${jwb_oke}* ${emoj}`
@@ -17579,7 +17588,7 @@ case 'wordgreen':
 case 'writingchalk':
 case 'zombie3d':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy Bot`) 
-let ephto_1 = await getBuffer(`https://api.dapuhy.ga/api/ephoto/${command}?text=${q}&apikey=${dapuhy}`);
+let ephto_1 = await getBuffer(`${DappaApi}/api/ephoto/${command}?text=${q}&apikey=${dapuhy}`);
 const ephto_3 = await alpha.prepareMessage(from, ephto_1, MessageType.image, { thumbnail:thumb_epho})
 let ephto_2 = ephto_3.message["ephemeralMessage"] ? ephto_3.message.ephemeralMessage : ephto_3
 ephto_5 = `*${jwb_oke}* ${emoj}`
@@ -17626,7 +17635,7 @@ case 'planebanner':
 case 'rugbyball':
 case 'rustywriting':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy Bot`) 
-let pfun_1 = await getBuffer(`https://api.dapuhy.ga/api/photofunia/${command}?text=${q}&apikey=${dapuhy}`);
+let pfun_1 = await getBuffer(`${DappaApi}/api/photofunia/${command}?text=${q}&apikey=${dapuhy}`);
 const pfun_3 = await alpha.prepareMessage(from, pfun_1, MessageType.image, { thumbnail:thumb_pfun})
 let pfun_2 = pfun_3.message["ephemeralMessage"] ? pfun_3.message.ephemeralMessage : pfun_3
 pfun_5 = `*${jwb_oke}* ${emoj}`
@@ -17833,7 +17842,7 @@ if (!isQuotedSticker) {
 var dpuh = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 var dpah = await alpha.downloadAndSaveMediaMessage(dpuh, `./media/${sender}.png`)
 let dpih = await imgbb(`${img_key}`, dpah)
-anuk = `https://api.dapuhy.ga/api/canvas/${command}?img=${dpih.display_url}&apikey=${dapuhy}`
+anuk = `${DappaApi}/api/canvas/${command}?img=${dpih.display_url}&apikey=${dapuhy}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
@@ -17843,7 +17852,7 @@ await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih im
 var dpuh2 = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
 var dpah2 = await alpha.downloadAndSaveMediaMessage(dpuh2, `./media/${sender}.png`)
 let dpih2 = await imgbb(`${img_key}`, dpah2)
-anuk = `https://api.dapuhy.ga/api/canvas/${command}?img=${dpih2.display_url}&apikey=${dapuhy}`
+anuk = `${DappaApi}/api/canvas/${command}?img=${dpih2.display_url}&apikey=${dapuhy}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
@@ -17855,7 +17864,7 @@ let dpuh3 = await alpha.getProfilePicture(dpah3).catch(_ => 'https://telegra.ph/
 let dpih3 = await imageToBase64(JSON.stringify(dpuh3).replace(/\"/gi, ''))
 fs.writeFileSync('janckuk.jpeg', dpih3, 'base64')
 let dpeh3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
-anuk = `https://api.dapuhy.ga/api/canvas/${command}?img=${dpeh3.display_url}&apikey=${dapuhy}`
+anuk = `${DappaApi}/api/canvas/${command}?img=${dpeh3.display_url}&apikey=${dapuhy}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
 sendStickerFromUrl(from, `${anuk}`, mek)
