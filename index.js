@@ -4335,12 +4335,10 @@ let content1 = thumb_miku
 const media1 = await alpha.prepareMessage(from, content1, MessageType.location, {thumbnail: thumb_miku})
 let bacotlu1 = media1.message["ephemeralMessage"] ? media1.message.ephemeralMessage : media1
 const buttons1 = [
-{buttonId: 'diamond_ff', buttonText: {displayText: 'DIAMOND FF'}, type: 1},
-{buttonId: 'diamond_ml', buttonText: {displayText: 'DIAMOND ML'}, type: 1},
-{buttonId: 'uc_pubg', buttonText:{displayText: 'UC PUBG'}, type: 1}
+{buttonId: 'Oke', buttonText: {displayText: 'Ok'}, type: 1}
 ]
 const btn1 = {
-contentText: `Halo @${sender.split('@')[0]}\n\nTop up diamond by WhatsApp bot. Ini hanyalah percobaan jadi miku gak jual diamond, uc, dll. Untuk list shop yang lain ketik ${prefix}price😅`,
+contentText: `Saya udah bangruf🗿`,
 footerText: `Thanks @${sender.split("@")[0]} !`,
 buttons: buttons1,
 headerType: 6,
@@ -4483,7 +4481,6 @@ teskny +=`${petik}Versi Hp : ${device_model}${petik}\n`
 teskny +=`${petik}Runtime : ${kyun(anu)}${petik}`
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: 'statiktiknya', buttonText: {displayText: '🎮 Bot Stats'}, type: 1},
 {buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
 ]
 sendButton(from, `${teskny}`, `Pilih salah satu`, but, mek)
@@ -4713,7 +4710,6 @@ break
 case 'status':
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: 'statiktiknya', buttonText: {displayText: '🎮 Bot Stats'}, type: 1},
 {buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
 ]
 sendButton(from, `*STATUS*\n${offline ? '> OFFLINE' : '> ONLINE'}\n${banChats ? '> SELF-MODE' : '> PUBLIC-MODE'}`, `Pilih salah satu`, but, mek)
@@ -5730,7 +5726,6 @@ const teks = child.replace(/Memory:/, "Ram:")
 const pingnya = `${teks}Speed: *${latensi.toFixed(4)}* Second`
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: 'statiktiknya', buttonText: {displayText: '🎮 Bot Stats'}, type: 1},
 {buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
 ]
 sendButton(from, `${pingnya}`, `Test`, but)
@@ -9084,8 +9079,7 @@ var ramdom_1 = `${ucapannya2}
 @${sender.split("@")[0]} Silahkan Klik Dibawah \nUntuk Melihat Menu Random`
 var ramdom_2 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1},
-{buttonId: 'menu_x', buttonText: {displayText: '🍵 Lol menu'}, type: 1}
+{buttonId: 'x_menu', buttonText: {displayText: `${emoj3} List-Menu`}, type: 1}
 ]
 ramdom_3 = {
 contentText: ramdom_1,
@@ -9110,8 +9104,7 @@ let rimg_2 = rimg_3.message["ephemeralMessage"] ? rimg_3.message.ephemeralMessag
 rimg_5 = `*${jwb_oke}* ${emoj}`
 const rimg_6 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1},
-{buttonId: 'menu_x', buttonText: {displayText: '🍵 Lol menu'}, type: 1}
+{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
 ]
 const rimg_7 = {
 contentText: rimg_5 ,
@@ -9139,7 +9132,8 @@ var xmn_1 = `${ucapannya2}
 *@${sender.split("@")[0]}*`
 var xmn_2 = [
 {buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1},
-{buttonId: 'menu_x', buttonText: {displayText: '🍵 Lol menu'}, type: 1}
+{buttonId: 'menu_x', buttonText: {displayText: `${emoj2} Lol-Menu`}, type: 1},
+{buttonId: 'menu_xc', buttonText: {displayText: `${emoj3} Xc-Menu`}, type: 1}
 ]
 xmn_3 = {
 contentText: xmn_1,
@@ -11532,8 +11526,7 @@ var qtlc_1 = `${ucapannya2}
 *${qtlc_.quotes}*`
 var qtlc_2 = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1},
-{buttonId: 'menu_x', buttonText: {displayText: '🍵 Lol menu'}, type: 1}
+{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
 ]
 qtlc_3 = {
 contentText: qtlc_1,
@@ -11558,8 +11551,7 @@ var crpn_1 = `${ucapannya2}
 • *Cerpen :* ${crpn_.cerita}`
 var crpn_2 = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1},
-{buttonId: 'menu_x', buttonText: {displayText: '🍵 Lol menu'}, type: 1}
+{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
 ]
 crpn_3 = {
 contentText: crpn_1,
@@ -11581,8 +11573,7 @@ jgkt_ = await fetchJson(`https://api.dapuhy.ga/api/fun/jagokata?query=${q}&apike
 var jgkt_1 = `• *Result :* ${jgkt_.result}`
 var jgkt_2 = [
 {buttonId: `${command} ${q}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1},
-{buttonId: 'menu_x', buttonText: {displayText: '🍵 Lol menu'}, type: 1}
+{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
 ]
 jgkt_3 = {
 contentText: jgkt_1,
@@ -11636,8 +11627,7 @@ await sleep(`${waktu_game}`)
 if (tebakgambar2.hasOwnProperty(sender.split('@')[0])) {
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_tbk2}`, `Waktu habis ${waktu_game}ms`, but)
 delete tebakgambar2[sender.split('@')[0]]
@@ -11663,8 +11653,7 @@ await sleep(`${waktu_game}`)
 if (caklontong.hasOwnProperty(sender.split('@')[0])) {
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_cak}`, `Waktu habis ${waktu_game}ms`, but)
 delete caklontong[sender.split('@')[0]]
@@ -11688,8 +11677,7 @@ await sleep(`${waktu_game}`)
 if (siapakah.hasOwnProperty(sender.split('@')[0])) {
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_siapakah}`, `Waktu habis ${waktu_game}ms`, but)
 delete siapakah[sender.split('@')[0]]
@@ -11715,8 +11703,7 @@ await sleep(`${waktu_game}`)
 if (susunkata2.hasOwnProperty(sender.split('@')[0])) {
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_susun2}`, `Waktu habis ${waktu_game}ms`, but)
 delete susunkata2[sender.split('@')[0]]
@@ -12972,8 +12959,7 @@ await sleep(`${waktu_game}`)
 if (sambungkata.hasOwnProperty(sender.split('@')[0])) {
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_sbg}`, `Waktu habis ${waktu_game}ms`, but)
 delete sambungkata[sender.split('@')[0]]
@@ -12998,8 +12984,7 @@ await sleep(`${waktu_game}`)
 if (caklontong2.hasOwnProperty(sender.split('@')[0])) {
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_cak2}`, `Waktu habis ${waktu_game}ms`, but)
 delete caklontong2[sender.split('@')[0]]
@@ -13046,8 +13031,7 @@ await sleep(`${waktu_game}`)
 if (tebakgambar3.hasOwnProperty(sender.split('@')[0])) {
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_tbk3}`, `Waktu habis ${waktu_game}ms`, but)
 delete tebakgambar3[sender.split('@')[0]]
@@ -13093,8 +13077,7 @@ await sleep(`${waktu_game}`)
 if (tebakgambar.hasOwnProperty(sender.split('@')[0])) {
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_tbk}`, `Waktu habis ${waktu_game}ms`, but)
 delete tebakgambar[sender.split('@')[0]]
@@ -13120,8 +13103,7 @@ await sleep(`${waktu_game}`)
 if (family100.hasOwnProperty(sender.split('@')[0])) {
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_f100}`, `Waktu habis ${waktu_game}ms`, but)
 delete family100[sender.split('@')[0]]
@@ -13146,8 +13128,7 @@ await sleep(`${waktu_game}`)
 if (asahotak.hasOwnProperty(sender.split('@')[0])) {
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_asah}`, `Waktu habis ${waktu_game}ms`, but)
 delete asahotak[sender.split('@')[0]]
@@ -13172,8 +13153,7 @@ await sleep(`${waktu_game}`)
 if (tebakkimia.hasOwnProperty(sender.split('@')[0])) {
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_kimia}`, `Waktu habis ${waktu_game}ms`, but)
 delete tebakkimia[sender.split('@')[0]]
@@ -13198,8 +13178,7 @@ await sleep(`${waktu_game}`)
 if (tebakkata.hasOwnProperty(sender.split('@')[0])) {
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_kata}`, `Waktu habis ${waktu_game}ms`, but)
 delete tebakkata[sender.split('@')[0]]
@@ -13224,8 +13203,7 @@ await sleep(`${waktu_game}`)
 if (tebakkata.hasOwnProperty(sender.split('@')[0])) {
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_kata2}`, `Waktu habis ${waktu_game}ms`, but)
 delete tebakkata[sender.split('@')[0]]
@@ -13250,8 +13228,7 @@ await sleep(`${waktu_game}`)
 if (tebaklirik.hasOwnProperty(sender.split('@')[0])) {
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_lirik}`, `Waktu habis ${waktu_game}ms`, but)
 delete tebaklirik[sender.split('@')[0]]
@@ -13276,8 +13253,7 @@ await sleep(`${waktu_game}`)
 if (tebakkalimat.hasOwnProperty(sender.split('@')[0])) {
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_kali}`, `Waktu habis ${waktu_game}ms`, but)
 delete tebakkalimat[sender.split('@')[0]]
@@ -13302,8 +13278,7 @@ await sleep(`${waktu_game}`)
 if (tebakan.hasOwnProperty(sender.split('@')[0])) {
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_tbkn}`, `Waktu habis ${waktu_game}ms`, but)
 delete tebakan[sender.split('@')[0]]
@@ -13328,8 +13303,7 @@ await sleep(`${waktu_game}`)
 if (siapaaku.hasOwnProperty(sender.split('@')[0])) {
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_siapa}`, `Waktu habis ${waktu_game}ms`, but)
 delete siapaaku[sender.split('@')[0]]
@@ -13355,8 +13329,7 @@ await sleep(`${waktu_game}`)
 if (susunkata.hasOwnProperty(sender.split('@')[0])) {
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_susun}`, `Waktu habis ${waktu_game}ms`, but)
 delete susunkata[sender.split('@')[0]]
@@ -13381,8 +13354,7 @@ await sleep(`${waktu_game}`)
 if (tebakgabut.hasOwnProperty(sender.split('@')[0])) {
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_gbt}`, `Waktu habis ${waktu_game}ms`, but)
 delete tebakgabut[sender.split('@')[0]]
@@ -13407,8 +13379,7 @@ await sleep(`${waktu_game}`)
 if (tebaklucu.hasOwnProperty(sender.split('@')[0])) {
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_lucu}`, `Waktu habis ${waktu_game}ms`, but)
 delete tebaklucu[sender.split('@')[0]]
@@ -13434,8 +13405,7 @@ await sleep(`${waktu_game}`)
 if (teswibu.hasOwnProperty(sender.split('@')[0])) {
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_wibu}`, `Waktu habis ${waktu_game}ms`, but)
 delete teswibu[sender.split('@')[0]]
@@ -14258,8 +14228,7 @@ await sleep(`${waktu_game}`)
 if (tebakgambar5.hasOwnProperty(sender.split('@')[0])) {
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_tbk5}`, `Waktu habis ${waktu_game}ms`, but)
 delete tebakgambar5[sender.split('@')[0]]
@@ -14284,8 +14253,7 @@ await sleep(`${waktu_game}`)
 if (caklontong3.hasOwnProperty(sender.split('@')[0])) {
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_cak3}`, `Waktu habis ${waktu_game}ms`, but)
 delete caklontong3[sender.split('@')[0]]
@@ -14330,8 +14298,7 @@ await sleep(`${waktu_game}`)
 if (tebakanime.hasOwnProperty(sender.split('@')[0])) {
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_anime}`, `Waktu habis ${waktu_game}ms`, but)
 delete tebakanime[sender.split('@')[0]]
@@ -14698,8 +14665,7 @@ await sleep(`${waktu_game}`)
 if (recaptcha.hasOwnProperty(sender.split('@')[0])) {
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_captcha}`, `Waktu habis ${waktu_game}ms`, but)
 delete recaptcha[sender.split('@')[0]]
@@ -14747,8 +14713,7 @@ await sleep(`${waktu_game}`)
 if (tebakbendera.hasOwnProperty(sender.split('@')[0])) {
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_flag}`, `Waktu habis ${waktu_game}ms`, but)
 delete tebakbendera[sender.split('@')[0]]
@@ -14794,8 +14759,7 @@ await sleep(`${waktu_game}`)
 if (tebakkabupaten.hasOwnProperty(sender.split('@')[0])) {
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_kab}`, `Waktu habis ${waktu_game}ms`, but)
 delete tebakkabupaten[sender.split('@')[0]]
@@ -14841,8 +14805,7 @@ await sleep(`${waktu_game}`)
 if (tebakgambar4.hasOwnProperty(sender.split('@')[0])) {
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_tbk4}`, `Waktu habis ${waktu_game}ms`, but)
 delete tebakgambar4[sender.split('@')[0]]
@@ -14950,8 +14913,7 @@ await sleep(`${waktu_game}`)
 if (tebakan2.hasOwnProperty(sender.split('@')[0])) {
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_tbkn2}`, `Waktu habis ${waktu_game}ms`, but)
 delete tebakan2[sender.split('@')[0]]
@@ -14997,8 +14959,7 @@ await sleep(`${waktu_game}`)
 if (tebakaplikasi.hasOwnProperty(sender.split('@')[0])) {
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_apk}`, `Waktu habis ${waktu_game}ms`, but)
 delete tebakaplikasi[sender.split('@')[0]]
@@ -15023,8 +14984,7 @@ await sleep(`${waktu_game}`)
 if (tebaklagu.hasOwnProperty(sender.split('@')[0])) {
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_lagu}`, `Waktu habis ${waktu_game}ms`, but)
 delete tebaklagu[sender.split('@')[0]]
@@ -15857,8 +15817,7 @@ await sleep(`${waktu_game}`)
 if (math2.hasOwnProperty(sender.split('@')[0])) {
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_math2}`, `Waktu habis ${waktu_game}ms`, but)
 delete math2[sender.split('@')[0]]
@@ -16604,8 +16563,7 @@ await sleep(`${waktu_game}`)
 if (tebakjenaka.hasOwnProperty(sender.split('@')[0])) {
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_jen}`, `Waktu habis ${waktu_game}ms`, but)
 delete tebakjenaka[sender.split('@')[0]]
@@ -17054,8 +17012,7 @@ await sleep(`${waktu_game}`)
 if (tebakhewan.hasOwnProperty(sender.split('@')[0])) {
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_hwn}`, `Waktu habis ${waktu_game}ms`, but)
 delete tebakhewan[sender.split('@')[0]]
@@ -17080,8 +17037,7 @@ await sleep(`${waktu_game}`)
 if (tebakbuah.hasOwnProperty(sender.split('@')[0])) {
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_buah}`, `Waktu habis ${waktu_game}ms`, but)
 delete tebakbuah[sender.split('@')[0]]
@@ -17103,8 +17059,7 @@ await sleep(`${waktu_game}`)
 if (cariemoj.hasOwnProperty(sender.split('@')[0])) {
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_emoj}`, `Waktu habis ${waktu_game}ms`, but)
 delete cariemoj[sender.split('@')[0]]
@@ -17720,8 +17675,7 @@ let meme_2 = meme_3.message["ephemeralMessage"] ? meme_3.message.ephemeralMessag
 meme_5 = `*${jwb_oke}* ${emoj}`
 const meme_6 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1},
-{buttonId: 'menu_x', buttonText: {displayText: '🍵 Lol menu'}, type: 1}
+{buttonId: 'x_menu', buttonText: {displayText: `${emoj3} List-Menu`}, type: 1}
 ]
 const meme_7 = {
 contentText: meme_5 ,
@@ -17758,8 +17712,7 @@ let meme2_2 = meme2_3.message["ephemeralMessage"] ? meme2_3.message.ephemeralMes
 meme2_5 = `*${jwb_oke}* ${emoj}`
 const meme2_6 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1},
-{buttonId: 'menu_x', buttonText: {displayText: '🍵 Lol menu'}, type: 1}
+{buttonId: 'x_menu', buttonText: {displayText: `${emoj3} List-Menu`}, type: 1}
 ]
 const meme2_7 = {
 contentText: meme2_5 ,
@@ -17790,8 +17743,7 @@ let mem_2 = mem_3.message["ephemeralMessage"] ? mem_3.message.ephemeralMessage :
 mem_5 = `*${jwb_oke}* ${emoj}`
 const mem_6 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1},
-{buttonId: 'menu_x', buttonText: {displayText: '🍵 Lol menu'}, type: 1}
+{buttonId: 'x_menu', buttonText: {displayText: `${emoj3} List-Menu`}, type: 1}
 ]
 const mem_7 = {
 contentText: mem_5 ,
@@ -17862,8 +17814,7 @@ let srti_2 = srti_3.message["ephemeralMessage"] ? srti_3.message.ephemeralMessag
 srti_5 = `*${jwb_oke}* ${emoj}`
 const srti_6 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1},
-{buttonId: 'menu_x', buttonText: {displayText: '🍵 Lol menu'}, type: 1}
+{buttonId: 'x_menu', buttonText: {displayText: `${emoj3} List-Menu`}, type: 1}
 ]
 const srti_7 = {
 contentText: srti_5 ,
@@ -17896,8 +17847,7 @@ let miss_2 = miss_3.message["ephemeralMessage"] ? miss_3.message.ephemeralMessag
 miss_5 = `*${jwb_oke}* ${emoj}`
 const miss_6 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
-{buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1},
-{buttonId: 'menu_x', buttonText: {displayText: '🍵 Lol menu'}, type: 1}
+{buttonId: 'x_menu', buttonText: {displayText: `${emoj3} List-Menu`}, type: 1}
 ]
 const miss_7 = {
 contentText: miss_5 ,
@@ -18460,7 +18410,6 @@ ${l}
 ${m}`
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: 'statiktiknya', buttonText: {displayText: '🎮 Bot Stats'}, type: 1},
 {buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
 ]
 sendButton(from, `${heder}`, `Test`, but)
@@ -18473,7 +18422,6 @@ ide = tod_.result
 const pageur = `${ide}`
 but = [
 {buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: 'statiktiknya', buttonText: {displayText: '🎮 Bot Stats'}, type: 1},
 {buttonId: 'x_menu', buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
 ]
 sendButton(from, `${pageur}`, `Test`, but)
@@ -18540,7 +18488,6 @@ susn_ = await fetchJson(`https://mysakura.herokuapp.com/api/quote/anime?apikey=s
 quontes = susn_.quotes
 but = [
 {buttonId: `quotes`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
 {buttonId: `menu`, buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
 ]
 sendButton(from, `*Quote :* ${quontes}`, `Thanks @${sender.split("@")[0]} !`, but)
@@ -18550,15 +18497,14 @@ susn_ = await fetchJson(`https://mysakura.herokuapp.com/api/quote/bijak?apikey=s
 quontes = susn_.result.quotes
 but = [
 {buttonId: `quotes`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
 {buttonId: `menu`, buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
 ]
 sendButton(from, `*Quote :* ${quontes}`, `Thanks @${sender.split("@")[0]} !`, but)
 }
 if (q5 == "q_gambar"){
 susn_ = await fetchJson(`https://mysakura.herokuapp.com/api/quote/gambar?apikey=sakura404`);
-let qatabijak = susn_.url
-let qatabijak_ = await getBuffer(qatabijak);
+qatabijak = susn_.url
+qatabijak_ = await getBuffer(qatabijak);
 const qimg_ = await alpha.prepareMessage(from, tttgbr_1, MessageType.image, { thumbnail:thumb_img})
 let qimg_1 = qimg_.message["ephemeralMessage"] ? qimg_.message.ephemeralMessage : qimg_
 qimg_2 = `*${jwb_oke}* ${emoj}`
@@ -18584,7 +18530,6 @@ susn_ = await fetchJson(`https://mysakura.herokuapp.com/api/quote/islami?apikey=
 quontes = susn_.result
 but = [
 {buttonId: `quotes`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
 {buttonId: `menu`, buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
 ]
 sendButton(from, `*Quote :* ${quontes}`, `Thanks @${sender.split("@")[0]} !`, but)
@@ -18594,7 +18539,6 @@ susn_ = await fetchJson(`https://mysakura.herokuapp.com/api/quote/joker?apikey=s
 quontes = susn_.result.quotes
 but = [
 {buttonId: `quotes`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
 {buttonId: `menu`, buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
 ]
 sendButton(from, `*Quote :* ${quontes}`, `Thanks @${sender.split("@")[0]} !`, but)
@@ -18794,9 +18738,8 @@ sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nSelamat menjawab ${emo
 await sleep(`${waktu_game}`)
 if (math3.hasOwnProperty(sender.split('@')[0])) {
 but = [
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `menu`, buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `math`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_math3}`, `Waktu habis ${waktu_game}ms`, but)
 delete math3[sender.split('@')[0]]
@@ -18820,9 +18763,8 @@ sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nSelamat menjawab ${emo
 await sleep(`${waktu_game}`)
 if (math3.hasOwnProperty(sender.split('@')[0])) {
 but = [
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `menu`, buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `math`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_math3}`, `Waktu habis ${waktu_game}ms`, but)
 delete math3[sender.split('@')[0]]
@@ -18846,9 +18788,8 @@ sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nSelamat menjawab ${emo
 await sleep(`${waktu_game}`)
 if (math3.hasOwnProperty(sender.split('@')[0])) {
 but = [
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `menu`, buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `math`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_math3}`, `Waktu habis ${waktu_game}ms`, but)
 delete math3[sender.split('@')[0]]
@@ -18872,9 +18813,8 @@ sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nSelamat menjawab ${emo
 await sleep(`${waktu_game}`)
 if (math3.hasOwnProperty(sender.split('@')[0])) {
 but = [
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `menu`, buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `math`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_math3}`, `Waktu habis ${waktu_game}ms`, but)
 delete math3[sender.split('@')[0]]
@@ -18898,9 +18838,8 @@ sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nSelamat menjawab ${emo
 await sleep(`${waktu_game}`)
 if (math3.hasOwnProperty(sender.split('@')[0])) {
 but = [
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `menu`, buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `math`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_math3}`, `Waktu habis ${waktu_game}ms`, but)
 delete math3[sender.split('@')[0]]
@@ -18924,9 +18863,8 @@ sendButton(from, `*Soal :* ${soal}\n\n*Clue :* ${clue}\n\nSelamat menjawab ${emo
 await sleep(`${waktu_game}`)
 if (math3.hasOwnProperty(sender.split('@')[0])) {
 but = [
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1},
-{buttonId: `menu`, buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+{buttonId: `math`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
+{buttonId: `games`, buttonText: {displayText: '🎮 Game List'}, type: 1}
 ]
 sendButton(from, `❌ ${g_over}..\n*Jawaban :* ${jwb_math3}`, `Waktu habis ${waktu_game}ms`, but)
 delete math3[sender.split('@')[0]]
@@ -18941,7 +18879,6 @@ let wifu_4 = wifu_3.message["ephemeralMessage"] ? wifu_3.message.ephemeralMessag
 wifu_6 = `*${jwb_oke}* ${emoj}`
 const wifu_7 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
 {buttonId: `menu`, buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
 ]
 const wifu_8 = {
@@ -18971,7 +18908,6 @@ let wifu2_4 = wifu2_3.message["ephemeralMessage"] ? wifu2_3.message.ephemeralMes
 wifu2_6 = `*${jwb_oke}* ${emoj}`
 const wifu2_7 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
 {buttonId: `menu`, buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
 ]
 const wifu2_8 = {
@@ -19002,7 +18938,6 @@ let wifu3_4 = wifu3_3.message["ephemeralMessage"] ? wifu3_3.message.ephemeralMes
 wifu3_6 = `*${jwb_oke}* ${emoj}`
 const wifu3_7 = [
 {buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
 {buttonId: `menu`, buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
 ]
 const wifu3_8 = {
@@ -19551,8 +19486,7 @@ teks = `*「 STATISTIK BOT 」*
 *Speed :* ${latensinya.toFixed(4)} _Second_
 *Runtime :* ${kyun(anuui)}`
 but = [
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: 'statiktiknya', buttonText: {displayText: '🎮 Bot Stats'}, type: 1},
+{buttonId: `botstat`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
 {buttonId: `menu`, buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
 ]
 sendButton(from, `${teks}`, `Pilih salah satu`, but, mek)
