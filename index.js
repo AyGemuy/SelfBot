@@ -6248,7 +6248,17 @@ reply1('```Byeee 👋```')
 break
 
 case 'getpp':
-if (mek.message.extendedTextMessage != undefined){
+if (!m.quoted) return {
+try {
+pic = await alpha.getProfilePicture(mek.quoted.sender)
+} catch {
+pic = 'https://audiopromedia.co.id/wp-content/uploads/2021/06/Screenshot_2021-06-19-16-22-16-937_com.miui_.gallery.jpg'
+}
+seeer = `Nama : *${pushname}`
+thumbb = await getBuffer(pic)
+anuu = {contextInfo:{"forwardingScore":999,"isForwarded":true,'stanzaId': "B826873620DD5947E683E3ABE663F263", 'participant': `${numbernye}@s.whatsapp.net`, 'remoteJid': '6289523258649-1604595598@g.us', 'quotedMessage': {"imageMessage": {"caption": `「 Bot by Ay 」`, 'jpegThumbnail': thumb_miku}}}}
+alpha.sendMessage(from, thumbb ,image, anuu)
+} else if (mek.message.extendedTextMessage != undefined){
 let mentioneddd = mek.message.extendedTextMessage.contextInfo.mentionedJid
 try {
 pic = await alpha.getProfilePicture(mentioneddd[0])
@@ -6259,7 +6269,9 @@ seeer = `Nama : *${pushname}`
 thumbb = await getBuffer(pic)
 anuu = {contextInfo:{"forwardingScore":999,"isForwarded":true,'stanzaId': "B826873620DD5947E683E3ABE663F263", 'participant': `${numbernye}@s.whatsapp.net`, 'remoteJid': '6289523258649-1604595598@g.us', 'quotedMessage': {"imageMessage": {"caption": `「 Bot by Ay 」`, 'jpegThumbnail': thumb_miku}}}}
 alpha.sendMessage(from, thumbb ,image, anuu)
-}
+} else {
+ reply1(`*Reply/@tag Target!*`)
+ }
 break
 
 case 'inspect':
