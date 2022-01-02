@@ -18330,6 +18330,7 @@ buff = await getBuffer(`${SakuraApi}/api/serti/tolol?text=${q}&apikey=sakura404`
 alpha.sendMessage(from, buff, image, {quoted: mek, caption : `Ketik *.serti* untuk melihat list , Req by: ${pushname}`})
 break
 
+
 //Ends
 default:
 //-----------------------[ STIKER ]-------------------//
