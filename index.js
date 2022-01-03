@@ -6248,7 +6248,7 @@ reply1('```Byeee 👋```')
 break
 
 case 'getpp':
-if (!m.quoted) return {
+if (!mek.message.extendedTextMessage) return {
 try {
 pic = await alpha.getProfilePicture(mek.quoted.sender)
 } catch {
