@@ -6247,20 +6247,24 @@ reply1('```Byeee 👋```')
 }, 0)
 break
 
-case 'getpp':
 case 'getpict':
-if (mek.message.extendedTextMessage != undefined){
-let mentioneddd = mek.message.extendedTextMessage.contextInfo.mentionedJid
-try {
-pic = await alpha.getProfilePicture(mentioneddd[0])
-} catch {
-pic = 'https://audiopromedia.co.id/wp-content/uploads/2021/06/Screenshot_2021-06-19-16-22-16-937_com.miui_.gallery.jpg'
+case 'getpp':
+               if (mek.message.extendedTextMessage === null || mek.message.extendedTextMessage === undefined) {
+               linkpp = await alpha.getProfilePicture(from) || "https://telegra.ph/file/40151a65238ba2643152d.jpg"
+               buffer = await getBuffer(linkpp)
+               alpha.sendMessage(from, buffer, image, {caption: "Nih", quoted: mek })
+               } else if (mek.message.extendedTextMessage.contextInfo.mentionedJid === null || mek.message.extendedTextMessage.contextInfo.mentionedJid === undefined) {
+               mberr = mek.message.extendedTextMessage.contextInfo.participant
+               linkpp = await alpha.getProfilePicture(mberr) || "https://telegra.ph/file/40151a65238ba2643152d.jpg"
+               buffer = await getBuffer(linkpp)
+               alpha.sendMessage(from, buffer, image, { quoted: mek, caption: `Profile Picture of @${mberr.split("@")[0]}`, contextInfo: { "mentionedJid": [mberr] }})
+               } else if (mek.message.extendedTextMessage.contextInfo.mentionedJid.length > 0) {
+               mberr = mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
+               linkpp = await alpha.getProfilePicture(mberr) || "https://telegra.ph/file/40151a65238ba2643152d.jpg"
+               buffer = await getBuffer(linkpp)
+               alpha.sendMessage(from, buffer, image, { quoted: mek, caption: `Profile Picture of @${mberr.split("@")[0]}`, contextInfo: { "mentionedJid": [mberr] }})
 }
-seeer = `Nama : *${pushname}`
-thumbb = await getBuffer(pic)
-alpha.sendMessage(from, thumbb ,image, mek)
-}
-break
+               break
 
 case 'inspect':
 try {
