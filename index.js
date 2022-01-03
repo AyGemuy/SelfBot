@@ -6248,16 +6248,8 @@ reply1('```Byeee 👋```')
 break
 
 case 'getpp':
-if (!mek.message.extendedTextMessage) {
-try {
-pic = await alpha.getProfilePicture(mek.quoted.sender)
-} catch {
-pic = 'https://audiopromedia.co.id/wp-content/uploads/2021/06/Screenshot_2021-06-19-16-22-16-937_com.miui_.gallery.jpg'
-}
-seeer = `Nama : *${pushname}`
-thumbb = await getBuffer(pic)
-alpha.sendMessage(from, thumbb ,image, mek)
-} else if (mek.message.extendedTextMessage != undefined){
+case 'getpict':
+if (mek.message.extendedTextMessage != undefined){
 let mentioneddd = mek.message.extendedTextMessage.contextInfo.mentionedJid
 try {
 pic = await alpha.getProfilePicture(mentioneddd[0])
@@ -6267,9 +6259,7 @@ pic = 'https://audiopromedia.co.id/wp-content/uploads/2021/06/Screenshot_2021-06
 seeer = `Nama : *${pushname}`
 thumbb = await getBuffer(pic)
 alpha.sendMessage(from, thumbb ,image, mek)
-} else {
- reply1(`*Reply/@tag Target!*`)
- }
+}
 break
 
 case 'inspect':
