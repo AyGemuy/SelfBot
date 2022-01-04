@@ -16280,34 +16280,7 @@ anu = fs.readFileSync(`${q}`)
 reply1(String(anu))
 break
 
-	case 'dibc':
-	case 'bece':
-             if (!isOwner) return  reply1('Only owner')
-             if (!q) return reply1('Teks ?')
-             anu = await alpha.chats.all()
-             if (isMedia && !mek.message.videoMessage || isQuotedImage) {
-             const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
-             bc = await alpha.downloadMediaMessage(encmedia)
-             for (let _ of anu) {
-             alpha.sendMessage(_.jid, bc, image, {quoted:freply,caption: `*「 Broadcast 」*\n\n${q}`})
-}
-             reply1('Suksess broadcast')
-             } else {
-             for (let _ of anu) {
-alpha.sendMessage(_.jid, 
-			{"contentText": `*「 Broadcast 」*\n${botname}\n*Isi Pesan :* ${q}`,
-			"footerText": '© Wudy',
-			"buttons": [
-			{"buttonId": `menu`,
-			"buttonText": {"displayText": "LIST MENU"
-			},"type": "RESPONSE"}
-			], "headerType": 1,
-			}, MessageType.buttonsMessage )
-}
-             reply1('Suksess broadcast')
-}
-             break
-
+	
 case 'ohno':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} wudy`)
 let ohno_ = await getBuffer(from, `${LolApi}/api/creator/ohno?apikey=${lolkey}&text=${q}`)
@@ -18334,6 +18307,135 @@ buff = await getBuffer(`${SakuraApi}/api/serti/tolol?text=${q}&apikey=sakura404`
 alpha.sendMessage(from, buff, image, {quoted: mek, caption : `Ketik *.serti* untuk melihat list , Req by: ${pushname}`})
 break
 
+case 'dibc':
+	case 'bece':
+if (!q) return reply1('Teks ?')
+if (isQuotedSticker) {
+anu = await alpha.prepareMessageFromContent(from,{
+"stickerMessage": {
+"url": m.quoted.url,
+"fileSha256": m.quoted.fileSha256.toString('base64'),
+"fileEncSha256": m.quoted.fileEncSha256.toString('base64'),
+"mediaKey": m.quoted.mediaKey.toString('base64'),
+"mimetype": m.quoted.mimetype,
+"height": m.quoted.height,
+"width": m.quoted.width,
+"directPath": m.quoted.directPath,
+"fileLength": 9000000000000,
+"mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
+"isAnimated": m.quoted.isAnimated
+}
+}, {quoted: mek, contextInfo: { mentionedJid: [sender]}})
+alpha.relayWAMessage(anu)
+} else if (isQuotedImage) {
+anu = alpha.prepareMessageFromContent(from,{
+"imageMessage": {
+"caption": `*「 Broadcast 」*\n\n${q}`,
+"url": m.quoted.url,
+"mimetype": m.quoted.mimetype,
+"fileSha256": m.quoted.fileSha256.toString('base64'),
+"fileLength": 9000000000000,
+"height": m.quoted.height,
+"width": m.quoted.width,
+"mediaKey": m.quoted.mediaKey.toString('base64'),
+"fileEncSha256": m.quoted.fileEncSha256.toString('base64'),
+"directPath": m.quoted.directPath,
+"mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
+"jpegThumbnail": thumb_miku,
+"scansSidecar": "NzpuTEVBk75vpLp4WArEAbJzsMJ7i0ciK/LSe44IIbzdoLq9iltpTQ==",
+"scanLengths": [
+2411,
+6978,
+1298,
+861
+],
+"midQualityFileSha256": "w2l7NiU1z+b+lgCcmHyfJqbbxg3LFgWEB7F7Cle82Q4="
+}},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
+alpha.relayWAMessage(anu)
+} else if (isQuotedVideo) {
+anu = alpha.prepareMessageFromContent(from,{
+"videoMessage": {
+"caption": `*「 Broadcast 」*\n\n${q}`,
+"url": m.quoted.url,
+"mimetype": m.quoted.mimetype,
+"fileSha256": m.quoted.fileSha256.toString('base64'),
+"fileLength": 9000000000000,
+"height": m.quoted.height,
+"width": m.quoted.width,
+"mediaKey": m.quoted.mediaKey.toString('base64'),
+"fileEncSha256": m.quoted.fileEncSha256.toString('base64'),
+"directPath": m.quoted.directPath,
+"mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
+"jpegThumbnail": thumb_miku,
+"scansSidecar": "NzpuTEVBk75vpLp4WArEAbJzsMJ7i0ciK/LSe44IIbzdoLq9iltpTQ==",
+"scanLengths": [
+2411,
+6978,
+1298,
+861
+],
+"midQualityFileSha256": "w2l7NiU1z+b+lgCcmHyfJqbbxg3LFgWEB7F7Cle82Q4="
+}},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
+alpha.relayWAMessage(anu)
+} else if (isQuotedDocument) {
+anu = alpha.prepareMessageFromContent(from,{
+"documentMessage": {
+"caption": `*「 Broadcast 」*\n\n${q}`,
+"title": `${botname}`,
+"pageCount": 100,
+"fileName": `${ucapannya2}`,
+"url": m.quoted.url,
+"mimetype": m.quoted.mimetype,
+"fileSha256": m.quoted.fileSha256.toString('base64'),
+"fileLength": 9000000000000,
+"height": m.quoted.height,
+"width": m.quoted.width,
+"mediaKey": m.quoted.mediaKey.toString('base64'),
+"fileEncSha256": m.quoted.fileEncSha256.toString('base64'),
+"directPath": m.quoted.directPath,
+"mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
+"jpegThumbnail": thumb_miku,
+"scansSidecar": "NzpuTEVBk75vpLp4WArEAbJzsMJ7i0ciK/LSe44IIbzdoLq9iltpTQ==",
+"scanLengths": [
+2411,
+6978,
+1298,
+861
+],
+"midQualityFileSha256": "w2l7NiU1z+b+lgCcmHyfJqbbxg3LFgWEB7F7Cle82Q4="
+}},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
+alpha.relayWAMessage(anu)
+} else if (isQuotedLocation) {
+anu = alpha.prepareMessageFromContent(from,{
+"locationMessage": {
+"caption": `*「 Broadcast 」*\n\n${q}`,
+"degreesLatitude": '',
+"degreesLongitude": '',
+"url": m.quoted.url,
+"mimetype": m.quoted.mimetype,
+"fileSha256": m.quoted.fileSha256.toString('base64'),
+"fileLength": 9000000000000,
+"height": m.quoted.height,
+"width": m.quoted.width,
+"mediaKey": m.quoted.mediaKey.toString('base64'),
+"fileEncSha256": m.quoted.fileEncSha256.toString('base64'),
+"directPath": m.quoted.directPath,
+"mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
+"jpegThumbnail": thumb_miku,
+"scansSidecar": "NzpuTEVBk75vpLp4WArEAbJzsMJ7i0ciK/LSe44IIbzdoLq9iltpTQ==",
+"scanLengths": [
+2411,
+6978,
+1298,
+861
+],
+"midQualityFileSha256": "w2l7NiU1z+b+lgCcmHyfJqbbxg3LFgWEB7F7Cle82Q4="
+}},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
+alpha.relayWAMessage(anu)
+} else {
+reply1('Reply Stic/Img/Vid')
+}
+break
 
 //Ends
 default:
