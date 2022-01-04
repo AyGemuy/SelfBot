@@ -18308,10 +18308,12 @@ alpha.sendMessage(from, buff, image, {quoted: mek, caption : `Ketik *.serti* unt
 break
 
 case 'dibc':
-	case 'bece':
-if (!q) return reply1('Teks ?')
+case 'bece':
+if (!q) return reply1('```TEXT?```')
+arg = args.join(' ');
+anu = await alpha.chats.all()
 if (isQuotedSticker) {
-anu = await alpha.prepareMessageFromContent(from,{
+anu = await alpha.prepareMessageFromContent(anu.jid,{
 "stickerMessage": {
 "url": m.quoted.url,
 "fileSha256": m.quoted.fileSha256.toString('base64'),
@@ -18328,9 +18330,9 @@ anu = await alpha.prepareMessageFromContent(from,{
 }, {quoted: mek, contextInfo: { mentionedJid: [sender]}})
 alpha.relayWAMessage(anu)
 } else if (isQuotedImage) {
-anu = alpha.prepareMessageFromContent(from,{
+anu = alpha.prepareMessageFromContent(anu.jid,{
 "imageMessage": {
-"caption": `*「 Broadcast 」*\n\n${q}`,
+"caption": `*「 Broadcast 」*\n\n${arg}`,
 "url": m.quoted.url,
 "mimetype": m.quoted.mimetype,
 "fileSha256": m.quoted.fileSha256.toString('base64'),
@@ -18353,9 +18355,9 @@ anu = alpha.prepareMessageFromContent(from,{
 }},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
 alpha.relayWAMessage(anu)
 } else if (isQuotedVideo) {
-anu = alpha.prepareMessageFromContent(from,{
+anu = alpha.prepareMessageFromContent(anu.jid,{
 "videoMessage": {
-"caption": `*「 Broadcast 」*\n\n${q}`,
+"caption": `*「 Broadcast 」*\n\n${arg}`,
 "url": m.quoted.url,
 "mimetype": m.quoted.mimetype,
 "fileSha256": m.quoted.fileSha256.toString('base64'),
@@ -18378,9 +18380,9 @@ anu = alpha.prepareMessageFromContent(from,{
 }},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
 alpha.relayWAMessage(anu)
 } else if (isQuotedDocument) {
-anu = alpha.prepareMessageFromContent(from,{
+anu = alpha.prepareMessageFromContent(anu.jid,{
 "documentMessage": {
-"caption": `*「 Broadcast 」*\n\n${q}`,
+"caption": `*「 Broadcast 」*\n\n${arg}`,
 "title": `${botname}`,
 "pageCount": 100,
 "fileName": `${ucapannya2}`,
@@ -18406,9 +18408,9 @@ anu = alpha.prepareMessageFromContent(from,{
 }},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
 alpha.relayWAMessage(anu)
 } else if (isQuotedLocation) {
-anu = alpha.prepareMessageFromContent(from,{
+anu = alpha.prepareMessageFromContent(anu.jid,{
 "locationMessage": {
-"caption": `*「 Broadcast 」*\n\n${q}`,
+"caption": `*「 Broadcast 」*\n\n${arg}`,
 "degreesLatitude": '',
 "degreesLongitude": '',
 "url": m.quoted.url,
