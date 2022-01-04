@@ -18311,9 +18311,9 @@ case 'dibc':
 case 'bece':
 if (!q) return reply1('```TEXT?```')
 arg = args.join(' ');
-anu = await alpha.chats.all()
+anu2 = await alpha.chats.all()
 if (isQuotedSticker) {
-anu = await alpha.prepareMessageFromContent(anu.jid,{
+anu = await alpha.prepareMessageFromContent(anu2.jid,{
 "stickerMessage": {
 "url": m.quoted.url,
 "fileSha256": m.quoted.fileSha256.toString('base64'),
@@ -18330,7 +18330,7 @@ anu = await alpha.prepareMessageFromContent(anu.jid,{
 }, {quoted: mek, contextInfo: { mentionedJid: [sender]}})
 alpha.relayWAMessage(anu)
 } else if (isQuotedImage) {
-anu = alpha.prepareMessageFromContent(anu.jid,{
+anu = alpha.prepareMessageFromContent(anu2.jid,{
 "imageMessage": {
 "caption": `*「 Broadcast 」*\n\n${arg}`,
 "url": m.quoted.url,
@@ -18355,7 +18355,7 @@ anu = alpha.prepareMessageFromContent(anu.jid,{
 }},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
 alpha.relayWAMessage(anu)
 } else if (isQuotedVideo) {
-anu = alpha.prepareMessageFromContent(anu.jid,{
+anu = alpha.prepareMessageFromContent(anu2.jid,{
 "videoMessage": {
 "caption": `*「 Broadcast 」*\n\n${arg}`,
 "url": m.quoted.url,
@@ -18380,7 +18380,7 @@ anu = alpha.prepareMessageFromContent(anu.jid,{
 }},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
 alpha.relayWAMessage(anu)
 } else if (isQuotedDocument) {
-anu = alpha.prepareMessageFromContent(anu.jid,{
+anu = alpha.prepareMessageFromContent(anu2.jid,{
 "documentMessage": {
 "caption": `*「 Broadcast 」*\n\n${arg}`,
 "title": `${botname}`,
@@ -18408,7 +18408,7 @@ anu = alpha.prepareMessageFromContent(anu.jid,{
 }},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
 alpha.relayWAMessage(anu)
 } else if (isQuotedLocation) {
-anu = alpha.prepareMessageFromContent(anu.jid,{
+anu = alpha.prepareMessageFromContent(anu2.jid,{
 "locationMessage": {
 "caption": `*「 Broadcast 」*\n\n${arg}`,
 "degreesLatitude": '',
@@ -18435,7 +18435,11 @@ anu = alpha.prepareMessageFromContent(anu.jid,{
 }},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
 alpha.relayWAMessage(anu)
 } else {
-reply1('Reply Stic/Img/Vid')
+but = [
+{buttonId: `quotes`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
+{buttonId: `menu`, buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+]
+sendButton(anu2.jid, `*「 Broadcast 」*\n\n${arg}`, `Thanks @${sender.split("@")[0]} !`, but)
 }
 break
 
