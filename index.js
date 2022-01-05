@@ -2037,14 +2037,14 @@ anu = alpha.prepareMessageFromContent(from,{
 "directPath": m.quoted.directPath,
 "mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
 "jpegThumbnail": thumb_miku,
-"scansSidecar": "NzpuTEVBk75vpLp4WArEAbJzsMJ7i0ciK/LSe44IIbzdoLq9iltpTQ==",
+"scansSidecar": m.quoted.scansSidecar,
 "scanLengths": [
 2411,
 6978,
 1298,
 861
 ],
-"midQualityFileSha256": "w2l7NiU1z+b+lgCcmHyfJqbbxg3LFgWEB7F7Cle82Q4="
+"midQualityFileSha256": m.quoted.midQualityFileSha256.toString('base64')
 }},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
 alpha.relayWAMessage(anu)
 } 
@@ -2065,14 +2065,14 @@ anu = alpha.prepareMessageFromContent(from,{
 "directPath": m.quoted.directPath,
 "mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
 "jpegThumbnail": thumb_miku,
-"scansSidecar": "NzpuTEVBk75vpLp4WArEAbJzsMJ7i0ciK/LSe44IIbzdoLq9iltpTQ==",
+"scansSidecar": m.quoted.scansSidecar,
 "scanLengths": [
 2411,
 6978,
 1298,
 861
 ],
-"midQualityFileSha256": "w2l7NiU1z+b+lgCcmHyfJqbbxg3LFgWEB7F7Cle82Q4="
+"midQualityFileSha256": m.quoted.midQualityFileSha256.toString('base64')
 }},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
 alpha.relayWAMessage(anu)
 }
@@ -7211,14 +7211,14 @@ anu = alpha.prepareMessageFromContent(from,{
 "directPath": m.quoted.directPath,
 "mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
 "jpegThumbnail": thumb_miku,
-"scansSidecar": "NzpuTEVBk75vpLp4WArEAbJzsMJ7i0ciK/LSe44IIbzdoLq9iltpTQ==",
+"scansSidecar": m.quoted.scansSidecar,
 "scanLengths": [
 2411,
 6978,
 1298,
 861
 ],
-"midQualityFileSha256": "w2l7NiU1z+b+lgCcmHyfJqbbxg3LFgWEB7F7Cle82Q4="
+"midQualityFileSha256": m.quoted.midQualityFileSha256.toString('base64')
 }},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
 alpha.relayWAMessage(anu)
 } else if (isQuotedVideo) {
@@ -7235,14 +7235,14 @@ anu = alpha.prepareMessageFromContent(from,{
 "directPath": m.quoted.directPath,
 "mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
 "jpegThumbnail": thumb_miku,
-"scansSidecar": "NzpuTEVBk75vpLp4WArEAbJzsMJ7i0ciK/LSe44IIbzdoLq9iltpTQ==",
+"scansSidecar": m.quoted.scansSidecar,
 "scanLengths": [
 2411,
 6978,
 1298,
 861
 ],
-"midQualityFileSha256": "w2l7NiU1z+b+lgCcmHyfJqbbxg3LFgWEB7F7Cle82Q4="
+"midQualityFileSha256": m.quoted.midQualityFileSha256.toString('base64')
 }},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
 alpha.relayWAMessage(anu)
 } else {
@@ -18363,15 +18363,15 @@ anu4 = alpha.prepareMessageFromContent(from,{
 "fileEncSha256": m.quoted.fileEncSha256.toString('base64'),
 "directPath": m.quoted.directPath,
 "mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
-"jpegThumbnail": thumb_miku,
-"scansSidecar": "NzpuTEVBk75vpLp4WArEAbJzsMJ7i0ciK/LSe44IIbzdoLq9iltpTQ==",
+"jpegThumbnail": pp_userz,
+"scansSidecar": m.quoted.scansSidecar,
 "scanLengths": [
 2411,
 6978,
 1298,
 861
 ],
-"midQualityFileSha256": "w2l7NiU1z+b+lgCcmHyfJqbbxg3LFgWEB7F7Cle82Q4="
+"midQualityFileSha256": m.quoted.midQualityFileSha256.toString('base64')
 }},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
 bece4 = await alpha.chats.all(anu4)
 alpha.relayWAMessage(bece4)
@@ -18390,15 +18390,15 @@ anu = alpha.prepareMessageFromContent(from,{
 "fileEncSha256": m.quoted.fileEncSha256.toString('base64'),
 "directPath": m.quoted.directPath,
 "mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
-"jpegThumbnail": thumb_miku,
-"scansSidecar": "NzpuTEVBk75vpLp4WArEAbJzsMJ7i0ciK/LSe44IIbzdoLq9iltpTQ==",
+"jpegThumbnail": pp_userz,
+"scansSidecar": m.quoted.scansSidecar,
 "scanLengths": [
 2411,
 6978,
 1298,
 861
 ],
-"midQualityFileSha256": "w2l7NiU1z+b+lgCcmHyfJqbbxg3LFgWEB7F7Cle82Q4="
+"midQualityFileSha256": m.quoted.midQualityFileSha256.toString('base64')
 }},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
 bece5 = await alpha.chats.all(anu5)
 alpha.relayWAMessage(bece5)
@@ -18419,15 +18419,15 @@ anu6 = alpha.prepareMessageFromContent(from,{
 "fileEncSha256": m.quoted.fileEncSha256.toString('base64'),
 "directPath": m.quoted.directPath,
 "mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
-"jpegThumbnail": thumb_miku,
-"scansSidecar": "NzpuTEVBk75vpLp4WArEAbJzsMJ7i0ciK/LSe44IIbzdoLq9iltpTQ==",
+"jpegThumbnail": pp_userz,
+"scansSidecar": m.quoted.scansSidecar,
 "scanLengths": [
 2411,
 6978,
 1298,
 861
 ],
-"midQualityFileSha256": "w2l7NiU1z+b+lgCcmHyfJqbbxg3LFgWEB7F7Cle82Q4="
+"midQualityFileSha256": m.quoted.midQualityFileSha256.toString('base64')
 }},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
 bece6 = await alpha.chats.all(anu6)
 alpha.relayWAMessage(bece6)
@@ -18455,7 +18455,7 @@ anu8 = alpha.prepareMessageFromContent(from,{
 						"fileEncSha256": m.quoted.fileEncSha256.toString('base64'),
 "directPath": m.quoted.directPath,
 						"mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
-"jpegThumbnail": thumb_miku
+"jpegThumbnail": pp_userz
 }},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
 bece8 = await alpha.chats.all(anu8)
 alpha.relayWAMessage(bece8)
