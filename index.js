@@ -2086,6 +2086,26 @@ fromMe:false,
 participant:`0@s.whatsapp.net`, ...(from ? {
 remoteJid :"6289523258649-1604595598@g.us" }: {})
 },message:{"orderMessage":{"orderId":"174238614569481","thumbnail":thumb_miku,"itemCount":10,"status":"INQUIRY","surface":"CATALOG","message":`${setting.botname}`,"token":"AR6xBKbXZn0Xwmu76Ksyd7rnxI+Rx87HfinVlW4lwXa6JA=="}}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true})}
+
+const sendStickerFromUrl2 = async(to, url, options) => {
+var names2 = Date.now() / 10000;
+var download2 = function (uri, filename, callback) {
+request.head(uri, function (err, res, body) {
+request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+});
+};
+download2(url, './sticker' + names2 + '.png', async function () {
+console.log('selesai');
+let filess2 = './sticker' + names2 + '.png'
+let asw2 = './sticker' + names2 + '.webp'
+exec(`ffmpeg -i ${filess2} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${asw2}`, (err) => {
+let media2 = fs.readFileSync(asw2)
+alpha.sendMessage(to, media2, MessageType.sticker,{quoted: options})
+fs.unlinkSync(filess2)
+fs.unlinkSync(asw2)
+});
+});
+}
 const sendStickerFromUrl = async(to, url) => {
 var names = Date.now() / 10000;
 var download = function (uri, filename, callback) {
@@ -18460,7 +18480,7 @@ pfft = ranex[Math.floor(Math.random() * ranex.length)]
 res = await fetchJson(`https://api.satou-chan.xyz/api/endpoint/${pfft}`)
 inibuff2 = res.url
 inibuff3 = await getBuffer(inibuff2)
-alpha.sendMessage(from, inibuff3, sticker, {quoted: {key: { fromMe: false,participant: `${mentioned}`, ...(from ? { remoteJid: "6289643739077-1613049930@g.us" } : {}) },message: { "videoMessage": { "title":`Nama gw ${pushname}, samgat ${command.slice(1)} skaleh`, "h": `Hmm`,'seconds': '99999', 'caption': `${jwb_oke}`, 'jpegThumbnail': inibuff1}}}})
+sendStickerFromUrl2(from, inibuff3, {quoted: {key: { fromMe: false,participant: `${mentioned}`, ...(from ? { remoteJid: "6289643739077-1613049930@g.us" } : {}) },message: { "videoMessage": { "title":`Nama gw ${pushname}, samgat ${command.slice(1)} skaleh`, "h": `Hmm`,'seconds': '99999', 'caption': `${jwb_oke}`, 'jpegThumbnail': inibuff1}}}})
 break
 
 
