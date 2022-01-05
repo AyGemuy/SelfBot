@@ -653,14 +653,14 @@ alpha.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
 }
 
 const sendFakeAud = (from, sfxnye) => {
-const aud_ = ["https://www.youtube.com","https://www.instagram.com","http://facebook.com","http://wa.me"]
+const aud_ = ["https://www.youtube.com","https://www.instagram.com","http://facebook.com"]
 const aud_2 = aud_[Math.floor(Math.random() * aud_.length)]
 alpha.sendMessage(from, sfxnye, MessageType.audio,
 { quoted: mek,sendEphemeral: true,
 contextInfo: { forwardingScore: 508,
 isForwarded: false,
-externalAdReply: { title: `${botname}`,
-body: `${ownername}`,
+externalAdReply: { title: `${ucapannya2}`,
+body: `${tampilTanggal}`,
 thumbnail: pp_userz,
 mediaType:"2",
 previewType: "VIDEO",
@@ -670,7 +670,7 @@ mediaUrl: aud_2}}})
 const reki_nih = (from, tek1) => {
 const mim_ = ["application/vnd.openxmlformats-officedocument.presentationml.presentation","application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","application/vnd.openxmlformats-officedocument.wordprocessingml.document","application/zip","application/pdf"]
 const mimtip = mim_[Math.floor(Math.random() * mim_.length)]
-const ngelink_ = ["https://www.youtube.com","https://www.instagram.com","http://facebook.com","http://wa.me"]
+const ngelink_ = ["https://www.youtube.com","https://www.instagram.com","http://facebook.com"]
 const pelink_ = ngelink_[Math.floor(Math.random() * ngelink_.length)]
 alpha.sendMessage(from, { contentText: tek1,
 buttons: [
@@ -18319,7 +18319,7 @@ case 'xhalal':
 case 'xmeki':
 case 'xbaik':
 if (!q) return reply1(`Usage :\n${prefix + command} @tag`)
-mberr = mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
+mberr = mek.message.extendedTextMessage.contextInfo.participant
 var ranex = ["angry","anime","bite","bored","bread","chocolate","cookie","cuddle","dance","drunk","happy","kill","kiss","laugh","lick","lonely","pat","poke","pregnant","punch","run","satouselfies","sleep","spank","spit","steal","tickle"]
 pfft = ranex[Math.floor(Math.random() * ranex.length)]
 res = await fetchJson(`https://api.satou-chan.xyz/api/endpoint/${pfft}`)
@@ -18328,7 +18328,7 @@ Sendstickerfromurl(from, inibuff2, {"contextInfo": {
 "forwardingScore": 999,isForwarded: false,
 "mentionedJid" : [mberr]},
 sendEphemeral: true,
-quoted: {key: {participant: "0@s.whatsapp.net","remoteJid": "0@s.whatsapp.net"},"message": {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us","inviteCode": "m","groupName": "P", "caption": `Nama gw @${mberr.split("@")[0]} bruh\nIya gw ${command.slice(1)} Skaleh`, 'jpegThumbnail': pp_userz}}}})
+quoted: {key: {participant: `${mberr}`,"remoteJid": `${mberr}`},"message": {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us","inviteCode": "m","groupName": "P", "caption": `Nama gw @${mberr.split("@")[0]} bruh\nIya gw ${command.slice(1)} Skaleh`, 'jpegThumbnail': pp_userz}}}})
 break
 
 
