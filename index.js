@@ -18364,7 +18364,7 @@ anu4 = alpha.prepareMessageFromContent(from,{
 "fileEncSha256": m.quoted.fileEncSha256.toString('base64'),
 "directPath": m.quoted.directPath,
 "mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
-"jpegThumbnail": pp_userz,,
+"jpegThumbnail": pp_userz,
 "scansSidecar": m.quoted.scansSidecar,
 "scanLengths": [
 2411,
@@ -18392,7 +18392,7 @@ anu5 = alpha.prepareMessageFromContent(from,{
 "fileEncSha256": m.quoted.fileEncSha256.toString('base64'),
 "directPath": m.quoted.directPath,
 "mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
-"jpegThumbnail": pp_userz,,
+"jpegThumbnail": pp_userz,
 "scansSidecar": m.quoted.scansSidecar,
 "scanLengths": [
 2411,
@@ -18423,7 +18423,7 @@ anu6 = alpha.prepareMessageFromContent(from,{
 "fileEncSha256": m.quoted.fileEncSha256.toString('base64'),
 "directPath": m.quoted.directPath,
 "mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
-"jpegThumbnail": pp_userz,,
+"jpegThumbnail": pp_userz,
 "scansSidecar": m.quoted.scansSidecar,
 "scanLengths": [
 2411,
@@ -18469,6 +18469,20 @@ bece8 = await alpha.chats.all(anu8)
 alpha.relayWAMessage(bece8)
 
 }
+break
+
+case 'xbabi':
+case 'xharam':
+case 'xkontol':
+case 'xhalal':
+case 'xmeki':
+if (!q) return reply1(`Usage :\n${prefix + command} @tag`)
+mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
+var ranex = ["angry","anime","bite","bored","bread","chocolate","cookie","cuddle","dance","drunk","happy","kill","kiss","laugh","lick","lonely","pat","poke","pregnant","punch","run","satouselfies","sleep","spank","spit","steal","tickle"]
+pfft = ranex[Math.floor(Math.random() * ranex.length)]
+res = await fetchJson(`https://api.satou-chan.xyz/api/endpoint/${pfft}`)
+inibuff2 = res.url
+sendStickerFromUrl2(from, inibuff2, {quoted: {key: {participant: `${mentioned}`,"remoteJid": `${mentioned}`},"message": {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us","inviteCode": "m","groupName": "P", "caption": `Nama gw ${pushname} bruh\nIya gw ${command.slice(1)} Skaleh`, 'jpegThumbnail': pp_userz}}}
 break
 
 
