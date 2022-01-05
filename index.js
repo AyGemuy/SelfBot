@@ -7184,9 +7184,8 @@ alpha.relayWAMessage(anu5)
 
 anu6 = alpha.prepareMessageFromContent(from,{
 "documentMessage": {
-"caption": m.quoted.caption,
 "title": m.quoted.title,
-"pageCount": 100,
+"pageCount": m.quoted.pageCount,
 "fileName": m.quoted.fileName,
 "url": m.quoted.url,
 "mimetype": m.quoted.mimetype,
@@ -7213,11 +7212,11 @@ alpha.relayWAMessage(anu6)
 } else if (isQuotedLocation) {
 
 anu7 = alpha.prepareMessageFromContent(from,{
-"liveLocationMessage": {
-"degreesLatitude": -1.0000000,
-	"degreesLongitude": 100.0000000,
-	"caption": m.quoted.caption,
-	"sequenceNumber": "1641356008487001",
+"locationMessage": {
+"degreesLatitude": filesize,
+	"degreesLongitude": filesize,
+	"name": m.quoted.name,
+	"sequenceNumber": m.quoted.sequenceNumber,
 	"jpegThumbnail": m.quoted.jpegThumbnail,
 }},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
 alpha.relayWAMessage(anu7)
