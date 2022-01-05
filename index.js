@@ -1997,85 +1997,12 @@ const fgif = {key: {participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "62
 const fgif2 = {key: {participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "0@s.whatsapp.net" } : {})},message: {"videoMessage": {'gifPlayback': 'true', 'caption': `؜✗ ${pushname} ✗\n𝐸𝑥𝑒𝑐 : ${command}`, 'jpegThumbnail': pp_userz}}}
 const fgclink = {key: {participant: "0@s.whatsapp.net","remoteJid": "0@s.whatsapp.net"},"message": {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us","inviteCode": "m","groupName": "P", "caption": `✗ ${pushname} ✗\n𝐸𝑥𝑒𝑐 : ${command}`, 'jpegThumbnail': fs.readFileSync(`image/${fthumb}`)}}}
 const fgclink2 = {key: {participant: "0@s.whatsapp.net","remoteJid": "0@s.whatsapp.net"},"message": {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us","inviteCode": "m","groupName": "P", "caption": `${fake}`, 'jpegThumbnail': thumb_miku}}}
+const fgclink3 = {key: {participant: "0@s.whatsapp.net","remoteJid": "0@s.whatsapp.net"},"message": {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us","inviteCode": "m","groupName": "P", "caption": `Nama gw ${pushname} bruh\nIya gw ${command.slice(1)} Skaleh`, 'jpegThumbnail': pp_userz}}}
 const fvideo = {key: { fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "6289643739077-1613049930@g.us" } : {}) },message: { "videoMessage": { "title":`${creator}`, "h": `Hmm`,'seconds': '99999', 'caption': `${creator}`, 'jpegThumbnail': thumb_miku}}}
 const floc = {contextInfo: {"forwardingScore":999,"isForwarded":true,'stanzaId': msgId, 'participant':`${numbernye}@s.whatsapp.net`, 'remoteJid': '6283136505591-1614953337@g.us', 'quotedMessage': {"locationMessage": {"degreesLatitude": 51.507351, "degreesLongitude": -0.127758, "name": fake , 'jpegThumbnail': thumb_miku}}}}
 const fkontak = { key: {participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: `6283136505591-1614953337@g.us` } : {}) }, message: { 'contactMessage': { 'displayName': `${cr}`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${cr},;;;\nFN:${cr},\nitem1.TEL;waid=${sender.split('@')[0]}:${sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': thumb_miku, thumbnail: thumb_miku,sendEphemeral: true}}}
 var fakeReplyList = ['ftroli', 'fdoc', 'fvn', 'fgif', 'fgclink', 'fvideo', 'floc', 'fkontak']
 var fakeReply = fakeReplyList[Math.floor(Math.random() * fakeReplyList.length)];
-
-const fssticker = (filesize) => {
-anu = alpha.prepareMessageFromContent(from,{
-"stickerMessage": {
-"url": m.quoted.url,
-"fileSha256": m.quoted.fileSha256.toString('base64'),
-"fileEncSha256": m.quoted.fileEncSha256.toString('base64'),
-"mediaKey": m.quoted.mediaKey.toString('base64'),
-"mimetype": m.quoted.mimetype,
-"height": m.quoted.height,
-"width": m.quoted.width,
-"directPath": m.quoted.directPath,
-"fileLength": filesize,
-"mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
-"isAnimated": m.quoted.isAnimated
-}
-}, {quoted: mek, contextInfo: { mentionedJid: [sender]}})
-alpha.relayWAMessage(anu)
-} 
-
-const fsimage = (teks, filesize) => {
-anu = alpha.prepareMessageFromContent(from,{
-"imageMessage": {
-"url": m.quoted.url,
-"mimetype": m.quoted.mimetype,
-"caption": teks,
-"fileSha256": m.quoted.fileSha256.toString('base64'),
-"fileLength": filesize,
-"height": m.quoted.height,
-"width": m.quoted.width,
-"mediaKey": m.quoted.mediaKey.toString('base64'),
-"fileEncSha256": m.quoted.fileEncSha256.toString('base64'),
-"directPath": m.quoted.directPath,
-"mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
-"jpegThumbnail": thumb_miku,
-"scansSidecar": m.quoted.scansSidecar,
-"scanLengths": [
-2411,
-6978,
-1298,
-861
-],
-"midQualityFileSha256": m.quoted.midQualityFileSha256.toString('base64')
-}},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
-alpha.relayWAMessage(anu)
-} 
-
-
-const fsvideo = (teks, filesize) => {
-anu = alpha.prepareMessageFromContent(from,{
-"videoMessage": {
-"url": m.quoted.url,
-"mimetype": m.quoted.mimetype,
-"caption": teks,
-"fileSha256": m.quoted.fileSha256.toString('base64'),
-"fileLength": filsize,
-"height": m.quoted.height,
-"width": m.quoted.width,
-"mediaKey": m.quoted.mediaKey.toString('base64'),
-"fileEncSha256": m.quoted.fileEncSha256.toString('base64'),
-"directPath": m.quoted.directPath,
-"mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
-"jpegThumbnail": thumb_miku,
-"scansSidecar": m.quoted.scansSidecar,
-"scanLengths": [
-2411,
-6978,
-1298,
-861
-],
-"midQualityFileSha256": m.quoted.midQualityFileSha256.toString('base64')
-}},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
-alpha.relayWAMessage(anu)
-}
 
 
 const fakeitem = (teks) => {
@@ -2100,13 +2027,14 @@ let filess = './sticker' + names + '.png'
 let asw = './sticker' + names + '.webp'
 exec(`ffmpeg -i ${filess} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${asw}`, (err) => {
 let media = fs.readFileSync(asw)
-alpha.sendMessage(to, media, MessageType.sticker,{quoted:mek})
+alpha.sendMessage(to, media, MessageType.sticker,{quoted: mek})
 fs.unlinkSync(filess)
 fs.unlinkSync(asw)
 });
 });
 }
-const sendStickerFromUrl2 = async(to, url, options) => {
+
+const sendStickerFromUrl2 = async(to, url) => {
 var names = Date.now() / 10000;
 var download = function (uri, filename, callback) {
 request.head(uri, function (err, res, body) {
@@ -2119,12 +2047,13 @@ let filess = './sticker' + names + '.png'
 let asw = './sticker' + names + '.webp'
 exec(`ffmpeg -i ${filess} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${asw}`, (err) => {
 let media = fs.readFileSync(asw)
-alpha.sendMessage(to, media, MessageType.sticker,{quoted: options })
+alpha.sendMessage(to, media, MessageType.sticker,{quoted: fgclink3})
 fs.unlinkSync(filess)
 fs.unlinkSync(asw)
 });
 });
 }
+
 const sendWebp = async(to, url) => {
 var names = Date.now() / 10000;
 var download = function (uri, filename, callback) {
@@ -18331,8 +18260,9 @@ case 'dibc':
 case 'bece':
 if (!q) return reply1('```TEXT?```')
 arg = args.join(' ');
+var bece_grup = await alpha.chats.all().filter(v => v.jid.endsWith('g.us'))
 if (isQuotedSticker) {
-anu3 = await alpha.prepareMessageFromContent(from,{
+anu3 = await alpha.prepareMessageFromContent(bece_grup.jid,{
 "stickerMessage": {
 "url": m.quoted.url,
 "fileSha256": m.quoted.fileSha256.toString('base64'),
@@ -18345,13 +18275,12 @@ anu3 = await alpha.prepareMessageFromContent(from,{
 "fileLength": 9000000000000,
 "mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
 "isAnimated": m.quoted.isAnimated
-}}, {quoted: mek, contextInfo: { mentionedJid: [sender]}})
-bece3 = await alpha.chats.all(anu3)
-alpha.relayWAMessage(bece3)
+}
+}, {quoted: mek, contextInfo: { mentionedJid: [sender]}})
+alpha.relayWAMessage(anu3)
 
 } else if (isQuotedImage) {
-
-anu4 = alpha.prepareMessageFromContent(from,{
+anu4 = alpha.prepareMessageFromContent(bece_grup.jid,{
 "imageMessage": {
 "caption": `*「 Broadcast 」*\n\n${arg}`,
 "url": m.quoted.url,
@@ -18364,7 +18293,7 @@ anu4 = alpha.prepareMessageFromContent(from,{
 "fileEncSha256": m.quoted.fileEncSha256.toString('base64'),
 "directPath": m.quoted.directPath,
 "mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
-"jpegThumbnail": pp_userz,
+"jpegThumbnail": pp_userz,,
 "scansSidecar": m.quoted.scansSidecar,
 "scanLengths": [
 2411,
@@ -18374,12 +18303,10 @@ anu4 = alpha.prepareMessageFromContent(from,{
 ],
 "midQualityFileSha256": m.quoted.midQualityFileSha256.toString('base64')
 }},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
-bece4 = await alpha.chats.all(anu4)
-alpha.relayWAMessage(bece4)
-
+alpha.relayWAMessage(anu4)
 } else if (isQuotedVideo) {
 
-anu5 = alpha.prepareMessageFromContent(from,{
+anu5 = alpha.prepareMessageFromContent(bece_grup.jid,{
 "videoMessage": {
 "caption": `*「 Broadcast 」*\n\n${arg}`,
 "url": m.quoted.url,
@@ -18392,7 +18319,7 @@ anu5 = alpha.prepareMessageFromContent(from,{
 "fileEncSha256": m.quoted.fileEncSha256.toString('base64'),
 "directPath": m.quoted.directPath,
 "mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
-"jpegThumbnail": pp_userz,
+"jpegThumbnail": pp_userz,,
 "scansSidecar": m.quoted.scansSidecar,
 "scanLengths": [
 2411,
@@ -18402,12 +18329,11 @@ anu5 = alpha.prepareMessageFromContent(from,{
 ],
 "midQualityFileSha256": m.quoted.midQualityFileSha256.toString('base64')
 }},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
-bece5 = await alpha.chats.all(anu5)
-alpha.relayWAMessage(bece5)
+alpha.relayWAMessage(anu5)
 
 } else if (isQuotedDocument) {
 
-anu6 = alpha.prepareMessageFromContent(from,{
+anu6 = alpha.prepareMessageFromContent(bece_grup.jid,{
 "documentMessage": {
 "caption": `*「 Broadcast 」*\n\n${arg}`,
 "title": `${botname}`,
@@ -18423,7 +18349,7 @@ anu6 = alpha.prepareMessageFromContent(from,{
 "fileEncSha256": m.quoted.fileEncSha256.toString('base64'),
 "directPath": m.quoted.directPath,
 "mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
-"jpegThumbnail": pp_userz,
+"jpegThumbnail": pp_userz,,
 "scansSidecar": m.quoted.scansSidecar,
 "scanLengths": [
 2411,
@@ -18433,12 +18359,11 @@ anu6 = alpha.prepareMessageFromContent(from,{
 ],
 "midQualityFileSha256": m.quoted.midQualityFileSha256.toString('base64')
 }},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
-bece6 = await alpha.chats.all(anu6)
-alpha.relayWAMessage(bece6)
+alpha.relayWAMessage(anu6)
 
 } else if (isQuotedLocation) {
 
-anu7 = alpha.prepareMessageFromContent(from,{
+anu7 = alpha.prepareMessageFromContent(bece_grup.jid,{
 "liveLocationMessage": {
 "degreesLatitude": -1.0000000,
 	"degreesLongitude": 100.0000000,
@@ -18446,12 +18371,11 @@ anu7 = alpha.prepareMessageFromContent(from,{
 	"sequenceNumber": "1641356008487001",
 	"jpegThumbnail": pp_userz,
 }},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
-bece7 = await alpha.chats.all(anu7)
-alpha.relayWAMessage(bece7)
+alpha.relayWAMessage(anu7)
 
 } else if (isQuotedAudio) {
 
-anu8 = alpha.prepareMessageFromContent(from,{
+anu8 = alpha.prepareMessageFromContent(bece_grup.jid,{
 "audioMessage": {
 						"url": m.quoted.url,
 						"mimetype": m.quoted.mimetype,
@@ -18465,8 +18389,7 @@ anu8 = alpha.prepareMessageFromContent(from,{
 						"mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
 "jpegThumbnail": pp_userz,
 }},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
-bece8 = await alpha.chats.all(anu8)
-alpha.relayWAMessage(bece8)
+alpha.relayWAMessage(anu8)
 
 }
 break
@@ -18482,10 +18405,8 @@ var ranex = ["angry","anime","bite","bored","bread","chocolate","cookie","cuddle
 pfft = ranex[Math.floor(Math.random() * ranex.length)]
 res = await fetchJson(`https://api.satou-chan.xyz/api/endpoint/${pfft}`)
 inibuff2 = res.url
-sendStickerFromUrl2(from, inibuff2, {quoted: {key: {participant: `${mentioned}`,"remoteJid": `${mentioned}`},"message": {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us","inviteCode": "m","groupName": "P", "caption": `Nama gw ${pushname} bruh\nIya gw ${command.slice(1)} Skaleh`, 'jpegThumbnail': pp_userz}}}})
+sendStickerFromUrl2(from, inibuff2, {quoted: fgclink3})
 break
-
-
 
 
 //Ends
