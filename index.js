@@ -651,6 +651,22 @@ headerType: 6
 }
 alpha.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
 }
+
+const sendFakeAud = (from, sfxnye) => {
+const aud_ = ["https://www.youtube.com","https://www.instagram.com","http://facebook.com","http://wa.me"]
+const aud_2 = aud_[Math.floor(Math.random() * aud_.length)]
+alpha.sendMessage(from, sfxnye, MessageType.audio,
+{ quoted: mek,sendEphemeral: true,
+contextInfo: { forwardingScore: 508,
+isForwarded: false,
+externalAdReply: { title: `${botname}`,
+body: `${ownername}`,
+thumbnail: pp_userz,
+mediaType:"2",
+previewType: "VIDEO",
+mediaUrl: aud_2}}})
+}
+
 const reki_nih = (from, tek1) => {
 const mim_ = ["application/vnd.openxmlformats-officedocument.presentationml.presentation","application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","application/vnd.openxmlformats-officedocument.wordprocessingml.document","application/zip","application/pdf"]
 const mimtip = mim_[Math.floor(Math.random() * mim_.length)]
@@ -2761,7 +2777,7 @@ alpha.sendMessage(from, result,sticker, {quoted : mek})
 for (let zeeonee of audionye){
 if (budy === zeeonee){
 result = fs.readFileSync(`./media/audio/${zeeonee}.mp3`)
-alpha.sendMessage(from, result, audio, {mimetype : 'audio/mp4' , duration : 86400000, ptt : true, quoted : mek})
+sendFakeAud(from, result)
 }
 }
 for (let zeeoneee of imagenye){
@@ -4898,7 +4914,7 @@ exec(`ffmpeg -i ${media2} ${ran}`, (err) => {
 fs.unlinkSync(media2)
 if (err) return reply1(`Err: ${err}`)
 buffer453 = fs.readFileSync(ran)
-alpha.sendMessage(from, buffer453, audio, { mimetype : 'audio/mp4' , duration : 86400000, quoted: mek })
+sendFakeAud(from, buffer453)
 fs.unlinkSync(ran)
 })
 break
@@ -4941,7 +4957,7 @@ exec(`ffmpeg -i ${media6} -filter:a "atempo=0.5,asetrate=65100" ${ran}`, (err, s
 fs.unlinkSync(media6)
 if (err) return reply1('Error!')
 let hah = fs.readFileSync(ran)
-alpha.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt:true, quoted: mek})
+sendFakeAud(from, hah)
 fs.unlinkSync(ran)
 })
 break
@@ -5713,7 +5729,7 @@ Anu = res.SD
 fto = fs.readFileSync(`./image/${thumbnail}`)
 alpha.sendMessage(from, fto, image, {quoted:mek, caption:`*TWITTER MP3*${enter}${enter}•> Hd : ${res.HD}${enter}•> Sd : ${res.SD}${enter}•> Audio : ${res.audio}${enter}${enter}_Harap tunggu, file media sedang dikirim, mungkin perlu beberapa menit_`, thumbnail:fs.readFileSync(`./image/${thumbnail}`), contextInfo:{forwardingScore: 989, isForwarded: true}})
 khs = await getBuffer(Anu)
-alpha.sendMessage(from, khs, audio, {mimetype:'audio/mp4', filename:'alphagan.mp3', quoted:mek, ptt:true})
+sendFakeAud(from, khs)
 })
 break
 
@@ -8695,7 +8711,7 @@ exec(`ffmpeg -i ${tvn} ${nvn}`, (err) => {
 fs.unlinkSync(tvn)
 if (err) return reply1('Gagal, pada saat mengkonversi video ke mp3')
 var buffer = fs.readFileSync(nvn)
-alpha.sendMessage(from, buffer, audio, {ptt: true, mimetype: 'audio/mp4', quoted: mek})
+sendFakeAud(from, buffer)
 fs.unlinkSync(nvn)
 })
 limitAdd(sender, limit)
@@ -8809,7 +8825,7 @@ exec(`ffmpeg -i ${media3} -filter:a "volume=${args[0]}" ${rname}`, (err, stderr,
 fs.unlinkSync(media3)
 if (err) return reply1('Error!')
 jadie = fs.readFileSync(rname)
-alpha.sendMessage(from, jadie, audio, {mimetype: 'audio/mp4', ptt:true, duration: 86400000, quoted: mek})
+sendFakeAud(from, jadie)
 fs.unlinkSync(rname)
 }
 )
@@ -8822,7 +8838,7 @@ exec(`ffmpeg -i ${media4} -filter_complex "areverse" ${ran}`, (err, stderr, stdo
 fs.unlinkSync(media4)
 if (err) return reply1('emror')
 hihi = fs.readFileSync(ran)
-alpha.sendMessage(from, hihi, audio, {mimetype: 'audio/mp4', ptt:true, duration: 86400000, quoted: mek})
+sendFakeAud(from, hihi)
 fs.unlinkSync(ran)
 })
 break
@@ -8836,7 +8852,7 @@ exec(`ffmpeg -i ${medial} -filter_complex "afftfilt=real='hypot(re,im)*sin(0)':i
 fs.unlinkSync(medial)
 if (err) return reply1(mess.error.api)
 hah = fs.readFileSync(ran)
-alpha.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', duration: 86400000, ptt:true, quoted: mek})
+sendFakeAud(from, hah)
 fs.unlinkSync(ran)
 })
 break
@@ -8850,7 +8866,7 @@ exec(`ffmpeg -i ${mediaz} -filter:a "atempo=1.6,asetrate=22100" ${ran}`, (err, s
 fs.unlinkSync(mediaz)
 if (err) return ephe('Error!')
 hah = fs.readFileSync(ran)
-alpha.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt:true, duration: 86400000, quoted:mek})
+sendFakeAud(from, hah)
 fs.unlinkSync(ran)
 })
 break
@@ -8864,7 +8880,7 @@ if (!isQuotedAudio) return reply1('Reply audio!')
 fs.unlinkSync(mediau)
 if (err) return reply1('Error!')
 hah = fs.readFileSync(ran)
-alpha.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt: true, duration: 86400000, quoted:mek})
+sendFakeAud(from, hah)
 fs.unlinkSync(ran)
 	})
 break
@@ -8878,7 +8894,7 @@ encvoice_ = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.exten
 fs.unlinkSync(voice_)
 if (err) return reply1('Error!')
 hah = fs.readFileSync(ran)
-alpha.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt: true, duration: 86400000, quoted:mek})
+sendFakeAud(from, hah)
 fs.unlinkSync(ran)
 	})
 break
@@ -8892,7 +8908,7 @@ encvoice1_ = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.exte
 fs.unlinkSync(voice1_)
 if (err) return reply1('Error!')
 hah = fs.readFileSync(ran)
-alpha.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt: true, duration: 86400000, quoted:mek})
+sendFakeAud(from, hah)
 fs.unlinkSync(ran)
 	})
 break
@@ -8906,7 +8922,7 @@ encvoice2_ = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.exte
 fs.unlinkSync(voice2_)
 if (err) return reply1('Error!')
 hah = fs.readFileSync(ran)
-alpha.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt: true, duration: 86400000, quoted:mek})
+sendFakeAud(from, hah)
 fs.unlinkSync(ran)
 	})
 break
@@ -8920,7 +8936,7 @@ encvoice3_ = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.exte
 fs.unlinkSync(voice3_)
 if (err) return reply1('Error!')
 hah = fs.readFileSync(ran)
-alpha.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt: true, duration: 86400000, quoted:mek})
+sendFakeAud(from, hah)
 fs.unlinkSync(ran)
 	})
 break
@@ -8934,7 +8950,7 @@ encvoice4_ = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.exte
 fs.unlinkSync(voice4_)
 if (err) return reply1('Error!')
 hah = fs.readFileSync(ran)
-alpha.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt: true, duration: 86400000, quoted:mek})
+sendFakeAud(from, hah)
 fs.unlinkSync(ran)
 	})
 break
@@ -8948,7 +8964,7 @@ encvoice5_ = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.exte
 fs.unlinkSync(voice5_)
 if (err) return reply1('Error!')
 hah = fs.readFileSync(ran)
-alpha.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt: true, duration: 86400000, quoted:mek})
+sendFakeAud(from, hah)
 fs.unlinkSync(ran)
 	})
 break
@@ -8962,7 +8978,7 @@ encvoice6_ = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.exte
 fs.unlinkSync(voice6_)
 if (err) return reply1('Error!')
 hah = fs.readFileSync(ran)
-alpha.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt: true, duration: 86400000, quoted:mek})
+sendFakeAud(from, hah)
 fs.unlinkSync(ran)
 	})
 break
@@ -8976,7 +8992,7 @@ encvoice7_ = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.exte
 fs.unlinkSync(voice7_)
 if (err) return reply1('Error!')
 hah = fs.readFileSync(ran)
-alpha.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt: true, duration: 86400000, quoted:mek})
+sendFakeAud(from, hah)
 fs.unlinkSync(ran)
 	})
 break
@@ -8990,7 +9006,7 @@ encvoice8_ = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.exte
 fs.unlinkSync(voice8_)
 if (err) return reply1('Error!')
 hah = fs.readFileSync(ran)
-alpha.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt: true, duration: 86400000, quoted:mek})
+sendFakeAud(from, hah)
 fs.unlinkSync(ran)
 	})
 break
@@ -9004,7 +9020,7 @@ encvoice9_ = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.exte
 fs.unlinkSync(voice9_)
 if (err) return reply1('Error!')
 hah = fs.readFileSync(ran)
-alpha.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt: true, duration: 86400000, quoted:mek})
+sendFakeAud(from, hah)
 fs.unlinkSync(ran)
 	})
 break
@@ -9018,7 +9034,7 @@ encvoice10_ = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.ext
 fs.unlinkSync(voice10_)
 if (err) return reply1('Error!')
 hah = fs.readFileSync(ran)
-alpha.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt: true, duration: 86400000, quoted:mek})
+sendFakeAud(from, hah)
 fs.unlinkSync(ran)
 	})
 break
@@ -9032,7 +9048,7 @@ encvoice11_ = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.ext
 fs.unlinkSync(voice11_)
 if (err) return reply1('Error!')
 hah = fs.readFileSync(ran)
-alpha.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt: true, duration: 86400000, quoted:mek})
+sendFakeAud(from, hah)
 fs.unlinkSync(ran)
 	})
 break
@@ -9046,7 +9062,7 @@ exec(`ffmpeg -i ${mediao} -af equalizer=f=94:width_type=o:width=2:g=30 ${ran}`, 
 fs.unlinkSync(mediao)
 if (err) return reply1('Error!')
 hah = fs.readFileSync(ran)
-alpha.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt: true, duration: 86400000, quoted:mek})
+sendFakeAud(from, hah)
 fs.unlinkSync(ran)
 })
 break
@@ -9062,7 +9078,7 @@ beuh = Number(args[0])
 exec(`ffmpeg -i ${baaas} -af equalizer=f=${beuh}:width_type=o:width=2:g=30 ${bas}`, (err, stderr, stdout) => {
 fs.unlinkSync(media)
 hah = fs.readFileSync(bas)
-alpha.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt:true, duration: 86400000, quoted: mek})
+sendFakeAud(from, hah)
 fs.unlinkSync(bas)
 })
 break
@@ -9096,7 +9112,7 @@ exec(`ffmpeg -i ${ranm} -ar 48000 -vn -c:a libopus ${rano}`, (err) => {
 fs.unlinkSync(ranm)
 buff = fs.readFileSync(rano)
 if (err) return reply1(mess.error)
-alpha.sendMessage(from, buff, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true, duration: 86400000})
+sendFakeAud(from, buff)
 fs.unlinkSync(rano)
 })
 })
@@ -9114,7 +9130,7 @@ exec(`ffmpeg -i ${ranm} -ar 48000 -vn -c:a libopus ${rano}`, (err) => {
 fs.unlinkSync(ranm)
 buff = fs.readFileSync(rano)
 if (err) return reply1(mess.error)
-alpha.sendMessage(from, buff, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true, duration: 86400000})
+sendFakeAud(from, buff)
 fs.unlinkSync(rano)
 })
 })
@@ -11544,18 +11560,18 @@ case 'gtts':
 if(args.length == 0 ) {
 let bresss = mek.message.extendedTextMessage.contextInfo.quotedMessage.conversation
 let tetees = await getBuffer(`${HadiApi}/api/tts?language=id&text=${bresss}`)
-await alpha.sendMessage(from, tetees, MessageType.audio, {mimetype:'audio/mp4', quoted:mek, ptt:true,duration: 86400000})
+await sendFakeAud(from, tetees)
 } else if (!budy.includes("af","sq","ar","hy","ca","zh","zh-cn","zh-tw","zh-yue","hr","cs","da","nl","en","en-au","en-uk","en-us","eo","fi","fr","de","el","ht","hi","hu","is","id","it","ja","ko","la","lv","mk","no","pl","pt","pt-br","ro","ru","sr","sk","es","es-es","es-us","sw","sv","ta","th","tr","vi","cy")){
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} id helo`) 
 var vn = q
 var vn1 = vn.split(" ")[0];
 var vn2 = vn.split(" ")[1]; 
 let tetees = await getBuffer(`${HadiApi}/api/tts?language=${vn1}&text=${vn2}`)
-await alpha.sendMessage(from, tetees, MessageType.audio, {mimetype:'audio/mp4', quoted:mek, ptt:true,duration: 86400000})
+await sendFakeAud(from, tetees)
 } else if(args.join(' ')) {
 ngab = args.join(' ')
 let tetees = await getBuffer(`${HadiApi}/api/tts?language=id&text=${ngab}`)
-await alpha.sendMessage(from, tetees, MessageType.audio, {mimetype:'audio/mp4', quoted:mek, ptt:true,duration: 86400000})
+await sendFakeAud(from, tetees)
 }
 break
 
@@ -14367,7 +14383,7 @@ tebaklagu[sender.split('@')[0]] = jwb_lagu.toLowerCase()
 fs.writeFileSync("./game/tebaklagu.json", JSON.stringify(tebaklagu))
 console.log(jwb_lagu)
 song_nya = await getBuffer(`${lgu}`)
-alpha.sendMessage(from, song_nya, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true, duration: 86400000})
+sendFakeAud(from, song_nya)
 reply1(clue)
 await sleep(`${waktu_game}`)
 if (tebaklagu.hasOwnProperty(sender.split('@')[0])) {
@@ -14905,7 +14921,7 @@ exec(`ffmpeg -i ${slow} -filter:a "atempo=0.7,asetrate=44100" ${ran}`, (err, std
 fs.unlinkSync(slow)
 if (err) return reply1('Error!')
 hah = fs.readFileSync(ran)
-alpha.sendMessage(from, hah, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true, duration: 86400000})
+sendFakeAud(from, hah)
 fs.unlinkSync(ran)
 })
 break
@@ -14918,7 +14934,7 @@ exec(`ffmpeg -i ${muk} -filter:a "atempo=1.6,asetrate=22100" ${ran}`, (err, stde
 fs.unlinkSync(muk)
 if (err) return reply1('Error!')
 hah = fs.readFileSync(ran)
-alpha.sendMessage(from, hah, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true, duration: 86400000})
+sendFakeAud(from, hah)
 fs.unlinkSync(ran)
 })
 break
@@ -14931,7 +14947,7 @@ exec(`ffmpeg -i ${pai2} -filter:a "atempo=0.5,asetrate=65100" ${ran}`, (err, std
 fs.unlinkSync(pai2)
 if (err) return reply1('Error!')
 hah = fs.readFileSync(ran)
-alpha.sendMessage(from, hah, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true, duration: 86400000})
+sendFakeAud(from, hah)
 fs.unlinkSync(ran)
 })
 break
@@ -14944,7 +14960,7 @@ exec(`ffmpeg -i ${ptt} ${ran}`, (err) => {
 fs.unlinkSync(ptt)
 if (err) return reply1('Gagal mengkonversi audio ke ptt')
 topt = fs.readFileSync(ran)
-alpha.sendMessage(from, hah, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true, duration: 86400000})
+sendFakeAud(from, hah)
 })
 break
 
@@ -14956,7 +14972,7 @@ exec(`ffmpeg -i ${bas2} -af equalizer=f=94:width_type=o:width=2:g=30 ${ran}`, (e
 fs.unlinkSync(bas2)
 if (err) return reply1('Error!')
 hah = fs.readFileSync(ran)
-alpha.sendMessage(from, hah, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true, duration: 86400000})
+sendFakeAud(from, hah)
 fs.unlinkSync(ran)
 })
 break
@@ -15276,11 +15292,11 @@ case 'sound':
 if (!q) return reply1('Masukan angkanya 1-75')
 sfx_ke = args[0]
 try {
-omkeh = await getBuffer(`https://hansxd.nasihosting.com/sound/sound${sfx_ke}.mp3`)
-alpha.sendMessage(from, omkeh, MessageType.audio, { quoted: mek, mimetype: 'audio/mp4', ptt: true })
+hah = await getBuffer(`https://hansxd.nasihosting.com/sound/sound${sfx_ke}.mp3`)
+sendFakeAud(from, hah)
 } catch {
-omkeh = await getBuffer(`https://ojankyaa.000webhostapp.com/sound/sound${sfx_ke}.mp3`)
-alpha.sendMessage(from, omkeh, MessageType.audio, { quoted: mek, mimetype: 'audio/mp4', ptt: true })
+hah = await getBuffer(`https://ojankyaa.000webhostapp.com/sound/sound${sfx_ke}.mp3`)
+sendFakeAud(from, hah)
 }
 break
 
@@ -15485,7 +15501,7 @@ exec(`ffmpeg -i ${medx} -filter_complex "vibrato=f=16" ${ran}`, (err, stderr, st
 	fs.unlinkSync(medx)
 	if (err) return reply1('Error!')
 	hah = fs.readFileSync(ran)
-	alpha.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt: true, quoted: mek})
+	sendFakeAud(from, hah)
 	fs.unlinkSync(ran)
 	})
 	limitAdd(sender, limit)
@@ -16466,7 +16482,7 @@ let sfx_ = await fetchJson(`http://www.myinstants.com/api/v1/instants/?format=js
 let sf = sfx_.results
 var sfxnya = sf[Math.floor(Math.random() * sf.length)]
 let sfxnye = await getBuffer(sfxnya.sound)
-hmm = await alpha.sendMessage(from,sfxnye, MessageType.audio, {mimetype:'audio/mp4', quoted:mek, ptt:true,duration: 86400000})
+hmm = await sendFakeAud(from, sfxnye)
 alpha.sendMessage(from,`${sfxnya.name}`, MessageType.text, {quoted:hmm})
 break
 
@@ -18303,12 +18319,16 @@ case 'xhalal':
 case 'xmeki':
 case 'xbaik':
 if (!q) return reply1(`Usage :\n${prefix + command} @tag`)
-mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
+mberr = mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
 var ranex = ["angry","anime","bite","bored","bread","chocolate","cookie","cuddle","dance","drunk","happy","kill","kiss","laugh","lick","lonely","pat","poke","pregnant","punch","run","satouselfies","sleep","spank","spit","steal","tickle"]
 pfft = ranex[Math.floor(Math.random() * ranex.length)]
 res = await fetchJson(`https://api.satou-chan.xyz/api/endpoint/${pfft}`)
 inibuff2 = res.url
-Sendstickerfromurl(from, inibuff2, {quoted: {key: {participant: "0@s.whatsapp.net","remoteJid": "0@s.whatsapp.net"},"message": {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us","inviteCode": "m","groupName": "P", "caption": `Nama gw @${mentioned[0].split('@')[0]} bruh\nIya gw ${command.slice(1)} Skaleh`, 'jpegThumbnail': pp_userz}}}})
+Sendstickerfromurl(from, inibuff2, {"contextInfo": {
+"forwardingScore": 999,isForwarded: false,
+"mentionedJid" : [mberr]},
+sendEphemeral: true,
+quoted: {key: {participant: "0@s.whatsapp.net","remoteJid": "0@s.whatsapp.net"},"message": {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us","inviteCode": "m","groupName": "P", "caption": `Nama gw @${mberr.split("@")[0]} bruh\nIya gw ${command.slice(1)} Skaleh`, 'jpegThumbnail': pp_userz}}}})
 break
 
 
