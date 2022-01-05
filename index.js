@@ -18332,8 +18332,7 @@ case 'bece':
 if (!q) return reply1('```TEXT?```')
 arg = args.join(' ');
 if (isQuotedSticker) {
-anu2 = await alpha.chats.all()
-anu = await alpha.prepareMessageFromContent(from,{
+anu3 = await alpha.prepareMessageFromContent(from,{
 "stickerMessage": {
 "url": m.quoted.url,
 "fileSha256": m.quoted.fileSha256.toString('base64'),
@@ -18348,10 +18347,10 @@ anu = await alpha.prepareMessageFromContent(from,{
 "isAnimated": m.quoted.isAnimated
 }
 }, {quoted: mek, contextInfo: { mentionedJid: [sender]}})
-alpha.relayWAMessage(anu)
+bece3 = await alpha.chats.all(anu3)
+alpha.relayWAMessage(bece3)
 } else if (isQuotedImage) {
-anu3 = await alpha.chats.all()
-anu = alpha.prepareMessageFromContent(from,{
+anu4 = alpha.prepareMessageFromContent(from,{
 "imageMessage": {
 "caption": `*「 Broadcast 」*\n\n${arg}`,
 "url": m.quoted.url,
@@ -18374,9 +18373,10 @@ anu = alpha.prepareMessageFromContent(from,{
 ],
 "midQualityFileSha256": "w2l7NiU1z+b+lgCcmHyfJqbbxg3LFgWEB7F7Cle82Q4="
 }},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
-alpha.relayWAMessage(anu)
+bece4 = await alpha.chats.all(anu4)
+alpha.relayWAMessage(bece4)
 } else if (isQuotedVideo) {
-anu4 = await alpha.chats.all()
+anu5 = await alpha.chats.all()
 anu = alpha.prepareMessageFromContent(from,{
 "videoMessage": {
 "caption": `*「 Broadcast 」*\n\n${arg}`,
@@ -18400,10 +18400,10 @@ anu = alpha.prepareMessageFromContent(from,{
 ],
 "midQualityFileSha256": "w2l7NiU1z+b+lgCcmHyfJqbbxg3LFgWEB7F7Cle82Q4="
 }},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
-alpha.relayWAMessage(anu)
+bece5 = await alpha.chats.all(anu5)
+alpha.relayWAMessage(bece5)
 } else if (isQuotedDocument) {
-anu5 = await alpha.chats.all()
-anu = alpha.prepareMessageFromContent(from,{
+anu6 = alpha.prepareMessageFromContent(from,{
 "documentMessage": {
 "caption": `*「 Broadcast 」*\n\n${arg}`,
 "title": `${botname}`,
@@ -18429,42 +18429,36 @@ anu = alpha.prepareMessageFromContent(from,{
 ],
 "midQualityFileSha256": "w2l7NiU1z+b+lgCcmHyfJqbbxg3LFgWEB7F7Cle82Q4="
 }},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
-alpha.relayWAMessage(anu)
+bece6 = await alpha.chats.all(anu6)
+alpha.relayWAMessage(bece6)
 } else if (isQuotedLocation) {
-anu6 = await alpha.chats.all()
-anu = alpha.prepareMessageFromContent(from,{
-"locationMessage": {
-"caption": `*「 Broadcast 」*\n\n${arg}`,
-"degreesLatitude": '',
-"degreesLongitude": '',
-"url": m.quoted.url,
-"mimetype": m.quoted.mimetype,
-"fileSha256": m.quoted.fileSha256.toString('base64'),
-"fileLength": 9000000000000,
-"height": m.quoted.height,
-"width": m.quoted.width,
-"mediaKey": m.quoted.mediaKey.toString('base64'),
-"fileEncSha256": m.quoted.fileEncSha256.toString('base64'),
-"directPath": m.quoted.directPath,
-"mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
-"jpegThumbnail": thumb_miku,
-"scansSidecar": "NzpuTEVBk75vpLp4WArEAbJzsMJ7i0ciK/LSe44IIbzdoLq9iltpTQ==",
-"scanLengths": [
-2411,
-6978,
-1298,
-861
-],
-"midQualityFileSha256": "w2l7NiU1z+b+lgCcmHyfJqbbxg3LFgWEB7F7Cle82Q4="
+anu7 = alpha.prepareMessageFromContent(from,{
+"liveLocationMessage": {
+"degreesLatitude": -1.0000000,
+	"degreesLongitude": 100.0000000,
+	"caption": `*「 Broadcast 」*\n\n${arg}`,
+	"sequenceNumber": "1641356008487001",
+	"jpegThumbnail": pp_userz
 }},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
-alpha.relayWAMessage(anu)
-} else {
-anu7 = await alpha.chats.all()
-but = [
-{buttonId: `quotes`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
-{buttonId: `menu`, buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
-]
-sendButton(anu7.jid, `*「 Broadcast 」*\n\n${arg}`, `Thanks @${sender.split("@")[0]} !`, but)
+bece7 = await alpha.chats.all(anu7)
+alpha.relayWAMessage(bece7)
+} else if (isQuotedAudio) {
+anu8 = alpha.prepareMessageFromContent(from,{
+"audioMessage": {
+						"url": m.quoted.url,
+						"mimetype": m.quoted.mimetype,
+						"fileSha256": m.quoted.fileSha256.toString('base64'),
+						"fileLength": 9000000000000,
+						"seconds": 9000000000000,
+						"ptt": true,
+						"mediaKey": m.quoted.mediaKey.toString('base64'),
+						"fileEncSha256": m.quoted.fileEncSha256.toString('base64'),
+"directPath": m.quoted.directPath,
+						"mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
+"jpegThumbnail": thumb_miku
+}},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
+bece8 = await alpha.chats.all(anu8)
+alpha.relayWAMessage(bece8)
 }
 break
 
@@ -18474,18 +18468,12 @@ case 'xkontol':
 case 'xhalal':
 case 'xmeki':
 if (!q) return reply1(`Usage :\n${prefix + command} @tag`)
-mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
-try {
-ppus = await alpha.getProfilePicture(mek.message.extendedTextMessage.contextInfo.mentionedJid[0])
-} catch {
-ppus = 'https://audiopromedia.co.id/wp-content/uploads/2021/06/Screenshot_2021-06-19-16-22-16-937_com.miui_.gallery.jpg'
-}
-inibuff1 = await getBuffer(ppus)
+mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
 var ranex = ["angry","anime","bite","bored","bread","chocolate","cookie","cuddle","dance","drunk","happy","kill","kiss","laugh","lick","lonely","pat","poke","pregnant","punch","run","satouselfies","sleep","spank","spit","steal","tickle"]
 pfft = ranex[Math.floor(Math.random() * ranex.length)]
 res = await fetchJson(`https://api.satou-chan.xyz/api/endpoint/${pfft}`)
 inibuff2 = res.url
-sendStickerFromUrl2(from, inibuff2, {quoted: {key: {participant: `${mentioned}`,"remoteJid": "0@s.whatsapp.net"},"message": {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us","inviteCode": "m","groupName": "P", "caption": `Nama gw ${pushname}, samgat ${command.slice(1)} skaleh`, 'jpegThumbnail': inibuff1}}}})
+sendStickerFromUrl2(from, inibuff2, {quoted: {key: {participant: `${mentioned}`,"remoteJid": `${mentioned}`},"message": {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us","inviteCode": "m","groupName": "P", "caption": `Nama gw ${pushname} bruh\nIya gw ${command.slice(1)} Skaleh`, 'jpegThumbnail': pp_userz}}}
 break
 
 
