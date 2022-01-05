@@ -18482,7 +18482,7 @@ var ranex = ["angry","anime","bite","bored","bread","chocolate","cookie","cuddle
 pfft = ranex[Math.floor(Math.random() * ranex.length)]
 res = await fetchJson(`https://api.satou-chan.xyz/api/endpoint/${pfft}`)
 inibuff2 = res.url
-sendStickerFromUrl2(from, inibuff2, {quoted: {key: {participant: `${mentioned}`,"remoteJid": `${mentioned}`},"message": {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us","inviteCode": "m","groupName": "P", "caption": `Nama gw ${pushname} bruh\nIya gw ${command.slice(1)} Skaleh`, 'jpegThumbnail': pp_userz}}}
+sendStickerFromUrl2(from, inibuff2, {quoted: {key: {participant: `${mentioned}`,"remoteJid": `${mentioned}`},"message": {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us","inviteCode": "m","groupName": "P", "caption": `Nama gw ${pushname} bruh\nIya gw ${command.slice(1)} Skaleh`, 'jpegThumbnail': pp_userz}}}})
 break
 
 
