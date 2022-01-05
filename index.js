@@ -2087,25 +2087,6 @@ participant:`0@s.whatsapp.net`, ...(from ? {
 remoteJid :"6289523258649-1604595598@g.us" }: {})
 },message:{"orderMessage":{"orderId":"174238614569481","thumbnail":thumb_miku,"itemCount":10,"status":"INQUIRY","surface":"CATALOG","message":`${setting.botname}`,"token":"AR6xBKbXZn0Xwmu76Ksyd7rnxI+Rx87HfinVlW4lwXa6JA=="}}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true})}
 
-const sendStickerFromUrl2 = async(to, url, options) => {
-var names2 = Date.now() / 10000;
-var download2 = function (uri, filename, callback) {
-request.head(uri, function (err, res, body) {
-request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
-});
-};
-download2(url, './sticker' + names2 + '.png', async function () {
-console.log('selesai');
-let filess2 = './sticker' + names2 + '.png'
-let asw2 = './sticker' + names2 + '.webp'
-exec(`ffmpeg -i ${filess2} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${asw2}`, (err) => {
-let media2 = fs.readFileSync(asw2)
-alpha.sendMessage(to, media2, MessageType.sticker,{quoted: options})
-fs.unlinkSync(filess2)
-fs.unlinkSync(asw2)
-});
-});
-}
 const sendStickerFromUrl = async(to, url) => {
 var names = Date.now() / 10000;
 var download = function (uri, filename, callback) {
@@ -18331,8 +18312,8 @@ case 'dibc':
 case 'bece':
 if (!q) return reply1('```TEXT?```')
 arg = args.join(' ');
-anu2 = await alpha.chats.all()
 if (isQuotedSticker) {
+anu2 = await alpha.chats.all()
 anu = await alpha.prepareMessageFromContent(anu2.jid,{
 "stickerMessage": {
 "url": m.quoted.url,
@@ -18350,7 +18331,8 @@ anu = await alpha.prepareMessageFromContent(anu2.jid,{
 }, {quoted: mek, contextInfo: { mentionedJid: [sender]}})
 alpha.relayWAMessage(anu)
 } else if (isQuotedImage) {
-anu = alpha.prepareMessageFromContent(anu2.jid,{
+anu3 = await alpha.chats.all()
+anu = alpha.prepareMessageFromContent(anu3.jid,{
 "imageMessage": {
 "caption": `*「 Broadcast 」*\n\n${arg}`,
 "url": m.quoted.url,
@@ -18375,7 +18357,8 @@ anu = alpha.prepareMessageFromContent(anu2.jid,{
 }},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
 alpha.relayWAMessage(anu)
 } else if (isQuotedVideo) {
-anu = alpha.prepareMessageFromContent(anu2.jid,{
+anu4 = await alpha.chats.all()
+anu = alpha.prepareMessageFromContent(anu4.jid,{
 "videoMessage": {
 "caption": `*「 Broadcast 」*\n\n${arg}`,
 "url": m.quoted.url,
@@ -18400,7 +18383,8 @@ anu = alpha.prepareMessageFromContent(anu2.jid,{
 }},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
 alpha.relayWAMessage(anu)
 } else if (isQuotedDocument) {
-anu = alpha.prepareMessageFromContent(anu2.jid,{
+anu5 = await alpha.chats.all()
+anu = alpha.prepareMessageFromContent(anu5.jid,{
 "documentMessage": {
 "caption": `*「 Broadcast 」*\n\n${arg}`,
 "title": `${botname}`,
@@ -18428,7 +18412,8 @@ anu = alpha.prepareMessageFromContent(anu2.jid,{
 }},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
 alpha.relayWAMessage(anu)
 } else if (isQuotedLocation) {
-anu = alpha.prepareMessageFromContent(anu2.jid,{
+anu6 = await alpha.chats.all()
+anu = alpha.prepareMessageFromContent(anu6.jid,{
 "locationMessage": {
 "caption": `*「 Broadcast 」*\n\n${arg}`,
 "degreesLatitude": '',
@@ -18455,11 +18440,12 @@ anu = alpha.prepareMessageFromContent(anu2.jid,{
 }},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
 alpha.relayWAMessage(anu)
 } else {
+anu7 = await alpha.chats.all()
 but = [
 {buttonId: `quotes`, buttonText: {displayText: 'Try Again ♻️'}, type: 1},
 {buttonId: `menu`, buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
 ]
-sendButton(anu2.jid, `*「 Broadcast 」*\n\n${arg}`, `Thanks @${sender.split("@")[0]} !`, but)
+sendButton(anu7.jid, `*「 Broadcast 」*\n\n${arg}`, `Thanks @${sender.split("@")[0]} !`, but)
 }
 break
 
@@ -18480,7 +18466,7 @@ var ranex = ["angry","anime","bite","bored","bread","chocolate","cookie","cuddle
 pfft = ranex[Math.floor(Math.random() * ranex.length)]
 res = await fetchJson(`https://api.satou-chan.xyz/api/endpoint/${pfft}`)
 inibuff2 = res.url
-sendStickerFromUrl2(from, inibuff2, {quoted: {key: { fromMe: false,participant: `${mentioned}`, ...(from ? { remoteJid: "6289643739077-1613049930@g.us" } : {}) },message: { "videoMessage": { "title":`Nama gw ${pushname}, samgat ${command.slice(1)} skaleh`, "h": `Hmm`,'seconds': '99999', 'caption': `${jwb_oke}`, 'jpegThumbnail': inibuff1}}}})
+sendFileFromUrlF(from, inibuff2, sticker, {quoted: {key: { fromMe: false,participant: `${mentioned}`, ...(from ? { remoteJid: "6289643739077-1613049930@g.us" } : {}) },message: { "videoMessage": { "title":`Nama gw ${pushname}, samgat ${command.slice(1)} skaleh`, "h": `Hmm`,'seconds': '99999', 'caption': `${jwb_oke}`, 'jpegThumbnail': inibuff1}}}})
 break
 
 
