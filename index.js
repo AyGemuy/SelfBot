@@ -18467,6 +18467,7 @@ case 'xbabi':
 case 'xharam':
 case 'xkontol':
 case 'xhalal':
+case 'xmeki':
 if (!q) return reply1(`Usage :\n${prefix + command} @tag`)
 mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 try {
@@ -18479,8 +18480,7 @@ var ranex = ["angry","anime","bite","bored","bread","chocolate","cookie","cuddle
 pfft = ranex[Math.floor(Math.random() * ranex.length)]
 res = await fetchJson(`https://api.satou-chan.xyz/api/endpoint/${pfft}`)
 inibuff2 = res.url
-inibuff3 = await getBuffer(inibuff2)
-sendStickerFromUrl2(from, inibuff3, {quoted: {key: { fromMe: false,participant: `${mentioned}`, ...(from ? { remoteJid: "6289643739077-1613049930@g.us" } : {}) },message: { "videoMessage": { "title":`Nama gw ${pushname}, samgat ${command.slice(1)} skaleh`, "h": `Hmm`,'seconds': '99999', 'caption': `${jwb_oke}`, 'jpegThumbnail': inibuff1}}}})
+sendStickerFromUrl2(from, inibuff2, {quoted: {key: { fromMe: false,participant: `${mentioned}`, ...(from ? { remoteJid: "6289643739077-1613049930@g.us" } : {}) },message: { "videoMessage": { "title":`Nama gw ${pushname}, samgat ${command.slice(1)} skaleh`, "h": `Hmm`,'seconds': '99999', 'caption': `${jwb_oke}`, 'jpegThumbnail': inibuff1}}}})
 break
 
 
