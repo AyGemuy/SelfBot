@@ -18443,6 +18443,20 @@ sendButton(anu2.jid, `*「 Broadcast 」*\n\n${arg}`, `Thanks @${sender.split("@
 }
 break
 
+case 'xbucin':
+case 'xbabi':
+case 'xharam':
+case 'xkontol':
+case 'xhalal':
+var ranex = ["angry","anime","bite","bored","bread","chocolate","cookie","cuddle","dance","drunk","happy","kill","kiss","laugh","lick","lonely","pat","poke","pregnant","punch","run","satouselfies","sleep","spank","spit","steal","tickle"]
+pfft = ranex[Math.floor(Math.random() * ranex.length)]
+res = await fetchJson(`https://api.satou-chan.xyz/api/endpoint/${pfft}`)
+inibuff = res.url
+sendStickerFromUrl(from, inibuff,{quoted: {key: { fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "6289643739077-1613049930@g.us" } : {}) },message: { "videoMessage": { "title":`Nama gw ${pushname}, samgat ${command.slice(1)} skaleh`, "h": `Hmm`,'seconds': '86400000', 'caption': `${jwb_oke}`, 'jpegThumbnail': pp_userz}}}})
+break
+
+
+
 //Ends
 default:
 //-----------------------[ STIKER ]-------------------//
