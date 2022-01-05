@@ -191,6 +191,46 @@ wudy4_getVideo
 } = require("./scrappe/srapp4.js");
 // const { } = require("./scrappe/srapp5.js");
 const { wudy6_ssweb } = require("./scrappe/srapp6.js");
+const {
+apkmody_wudy,
+asmaul_wudy,
+covid_wudy,
+emoji_wudy,
+fb_wudy,
+gempa_wudy,
+ghstalk_wudy,
+halal_wudy,
+happymod_wudy,
+hoax_wudy,
+igfoto_wudy,
+igstalk_wudy,
+igtv_wudy,
+igvideo_wudy,
+jalantikus_wudy,
+kodepos_wudy,
+kompasnews_wudy,
+mcpedl_wudy,
+mediafire_wudy,
+moddroid_wudy,
+palingmurah_wudy,
+pinterest_wudy,
+playstore_wudy,
+servermc_wudy,
+sfilesearch_wudy,
+ssweb_wudy,
+styleText_wudy,
+tahta_wudy,
+tebakgambar_wudy,
+telegra_wudy,
+tiktokmusic_wudy,
+tiktok_wudy,
+tribunnews_wudy,
+twitter_wudy,
+wallpapper_wudy,
+yta_wudy,
+ytv_wudy
+} require("./scrappe/srapp7.js");
+
 const { convertSticker } = require("./list/swm.js")
 const { dafontSearch, dafontDown } = require('./list/dafont.js')
 const { jagoKata } = require('./list/jagokata.js')
@@ -1674,7 +1714,7 @@ var ucapannya2 = `𝐍𝐢𝐠𝐡𝐭 🌚 ${pushname}`
 }
 
 if(time2 < "19:00:00"){
-var ucapannya2 = `𝐍𝐢𝐠𝐡𝐭 🌚 ${pushname}`
+var ucapannya2 = `𝐍𝐢𝐠𝐡?? 🌚 ${pushname}`
 }
 
 if(time2 < "18:00:00"){
@@ -5833,7 +5873,7 @@ reply1(`reply gambar/sticker/audio/video dengan caption ${prefix}totag`)
 }
 break
 
-case 'tovideo':
+case 'tovideo2':
 if (!isQuotedSticker) return reply1('Reply stikernya')
 // Wait //
 anumedia = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
@@ -5846,7 +5886,17 @@ alpha.sendMessage(from, buffer, video, { quoted: mek, caption: 'Done... Jangan L
 fs.unlinkSync(ran)})
 break
 
+case 'tovideo3':
+let topid = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+let topid2 = await alpha.downloadAndSaveMediaMessage(topid)
+let topid3 = await wudy2_ToVid(topid2)
+buffer453 = await getBuffer(topid3.result.data);
+alpha.sendMessage(from, buffer453, video, { mimetype: 'video/mp4', quoted: mek })
+break
+
 case 'tomp4':
+case 'tovideo':
+case 'tovid':
 if ((isMedia && !mek.message.videoMessage || isQuotedSticker) && args.length == 0) {
 ger = isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
 let owogi = await alpha.downloadAndSaveMediaMessage(ger)
@@ -6213,6 +6263,7 @@ reply1('```Byeee 👋```')
 break
 
 case 'getpict':
+case 'getpic':
 case 'getpp':
                if (mek.message.extendedTextMessage === null || mek.message.extendedTextMessage === undefined) {
                linkpp = await alpha.getProfilePicture(from) || "https://telegra.ph/file/40151a65238ba2643152d.jpg"
@@ -13452,20 +13503,22 @@ quoted: mek, sendEphemeral: true
 break
 
 case 'ipgeo':
+case 'cekip':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} iPhone`) 
 ipgeo_ = await fetchJson(`${XrestApi}/api/ipgeolocation?ip=${q}&apikey=BETA`)
 var ipgeo_1 = `${ucapannya2}
 *Results ${q} :*
-• country_code : ${ipgeo_.country_code}
-• country_name : ${ipgeo_.country_name}
-• region_code : ${ipgeo_.region_code}
-• region_name : ${ipgeo_.region_name}
-• city : ${ipgeo_.city}
-• isp : ${ipgeo_.isp}
-• zip_code : ${ipgeo_.zip_code}
-• time_zone : ${ipgeo_.time_zone}
-• latitude : ${ipgeo_.latitude}
-• longitude : ${ipgeo_.longitude}`
+
+• Kode negara : *${ipgeo_.country_code}*
+• Nama negara : *${ipgeo_.country_name}*
+• Kode wilayah : *${ipgeo_.region_code}*
+• Nama wilayah : *${ipgeo_.region_name}*
+• Kota : *${ipgeo_.city}*
+• Isp : *${ipgeo_.isp}*
+• Kode Pos : *${ipgeo_.zip_code}*
+• Zona waktu : *${ipgeo_.time_zone}*
+• Garis Lintang : *${ipgeo_.latitude}*
+• Garis bujur : *${ipgeo_.longitude}*`
 var ipgeo_2 = [
 {buttonId: `${command} ${q}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
 ]
@@ -18328,7 +18381,7 @@ Sendstickerfromurl(from, inibuff2, {"contextInfo": {
 "forwardingScore": 999,isForwarded: false,
 "mentionedJid" : [mberr]},
 sendEphemeral: true,
-quoted: {key: {participant: `${mberr}`,"remoteJid": `${mberr}`},"message": {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us","inviteCode": "m","groupName": "P", "caption": `Nama gw @${mberr.split("@")[0]} bruh\nIya gw ${command.slice(1)} Skaleh`, 'jpegThumbnail': pp_userz}}}})
+quoted: {key: {participant: `${mberr}`,"remoteJid": from},"message": {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us","inviteCode": "m","groupName": "P", "caption": `Nama gw ${q} @${mberr.split("@")[0]}\nIya gw ${command.slice(1)} Skaleh`, 'jpegThumbnail': pp_userz}}}})
 break
 
 case 'teledown':
@@ -18350,6 +18403,56 @@ pfft = inibuff[Math.floor(Math.random() * inibuff.length)]
 sendStickerFromUrl(from, pfft,{quoted: mek})
 but = [{buttonId: `teledown ${q}`, buttonText: {displayText: `Download Full ${inibuff.length}`}, type: 1}]
 sendButton(from, `*Total:* ${inibuff.length} Sticker${enter}*Link:* ${q}`, `Download dibawah${enter}⚠️ Note: SPAM ${inibuff.length} Sticker`, but)
+break
+
+case 'upfile':
+let upfil = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+let upfil2 = await alpha.downloadAndSaveMediaMessage(upfil)
+let upfil3 = await wudy2_uploadFile(upfil2)
+reply2(upfil3.result.url)
+break
+
+case 'eapple':
+case 'egoogle':
+case 'esamsung':
+case 'emicrosoft':
+case 'ewhatsapp':
+case 'etwitter':
+case 'efacebook':
+case 'ejooxPixel':
+case 'eopenemoji':
+case 'eemojidex':
+case 'emessanger':
+case 'eLG':
+case 'eHTC':
+case 'emozilla':
+case 'esoftbank':
+case 'edocomo':
+case 'eKDDI':
+case 'emoji2':
+if (!q) return reply1('Emoj')
+fa = await fetchJson(`${KocakApi}/api/random/text/katabijak`)
+fak = fa.result
+list = []
+listmenu = [`eapple`,`egoogle`,`esamsung`,`emicrosoft`,`ewhatsapp`,`etwitter`,`efacebook`,`ejooxPixel`,`eopenemoji`,`eemojidex`,`emessanger`,`eLG`,`eHTC`,`emozilla`,`esoftbank`,`edocomo`,`eKDDI`]
+listmenuu = [`${q} apple`,`${q} google`,`${q} samsung`,`${q} microsoft`,`${q} whatsapp`,`${q} twitter`,`${q} facebook`,`${q} jooxPixel`,`${q} openemoji`,`${q} emojidex`,`${q} messanger`,`${q} LG`,`${q} HTC`,`${q} mozilla`,`${q} softbank`,`${q} docomo`,`${q} KDDI`]
+nombor = 1
+nombor2 = 0
+for (let x of listmenuu) {
+const yy = {title: 'Sub menu ke -'+ nombor++,
+rows: [
+{
+title: `${listmenu[nombor2++]}`,
+description: `${x}`,
+rowId: ``
+}
+]
+}
+list.push(yy)
+}
+listmsg(from, `${ucapanWaktu}`, `${ucapannya2} @${sender.split('@')[0]}\n\n*Fakta hari ini :* \n${fak}`, list)
+let pft = await wudy2_emoji(`${q}`)
+sendStickerFromUrl(from, `${'pft.'command.slice(1)}`,{quoted: mek})
 break
 
 //Ends
