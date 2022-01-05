@@ -15525,8 +15525,8 @@ break
 case 'game':
 case 'games':
 case 'permainan':
-mo = await fetchJson(`${XrestApi}/api/random-motivasi?apikey=BETA`)
-motiv = mo.motivasi
+mo = await fetchJson(`${KocakApi}/api/random/text/faktaunik`)
+motiv = mo.result
 list = []
 listmenu = [`asahotak`,`caklontong`,`caklontong2`,`caklontong3`,`family100`,`math`,`math2`,`recaptcha`,`sambungkata`,`siapaaku`,`siapakahaku`,`susunkata`,`susunkata2`,`tebakan`,`tebakan2`,`tebakanime`,`tebakbendera`,`tebakgambar`,`tebakgambar2`,`tebakgambar3`,`tebakgambar4`,`tebakgambar5`,`tebakjenaka`,`tebakkalimat`,`tebakkata`,`tebakkata2`,`tebakkimia`,`tebaklirik`,`tebakaplikasi`,`tebakgabut`,`tebakkabupaten`,`tebaklucu`,`tebaklagu`,`teswibu`,`tebakhewan`,`tebakbuah`,`cariemoji`]
 listmenuu = [`${emoj} Asah otak`,`${emoj3} Cak lontong`,`${emoj} Cak lontong2`,`${emoj3} Cak lontong3`,`${emoj} Family 100`,`${emoj3} Math`,`${emoj} Math 2`,`${emoj3} Recaptcha`,`${emoj} Sambung kata`,`${emoj3} Siapa aku`,`${emoj} Siapakah aku`,`${emoj3} Susun kata`,`${emoj} Susun kata2`,`${emoj} Tebakan`,`${emoj3} Tebakan2`,`${emoj} Tebak anime`,`${emoj3} Tebak bendera`,`${emoj} Tebak gambar`,`${emoj3} Tebak gambar2`,`${emoj} Tebak gambar3`,`${emoj3} Tebak gambar4`,`${emoj} Tebak gambar5`,`${emoj3} Tebak jenaka`,`${emoj} Tebak kalimat`,`${emoj3} Tebak kata`,`${emoj} Tebak kata2`,`${emoj3} Tebak kimia`,`${emoj} Tebak lirik`,`${emoj3} Tebak aplikasi`,`${emoj} Tebak gabut`,`${emoj3} Tebak kabupaten`,`${emoj} Tebak lucu`,`${emoj3} Tebak lagu`,`${emoj} Tes wibu`,`${emoj3} Tebak hewan`,`${emoj} Tebak buah`,`${emoj3} Cari emoji`]
@@ -18331,6 +18331,26 @@ sendEphemeral: true,
 quoted: {key: {participant: `${mberr}`,"remoteJid": `${mberr}`},"message": {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us","inviteCode": "m","groupName": "P", "caption": `Nama gw @${mberr.split("@")[0]} bruh\nIya gw ${command.slice(1)} Skaleh`, 'jpegThumbnail': pp_userz}}}})
 break
 
+case 'teledown':
+if (!q) return reply1('Link Nya Mana? ')
+              res = await fetchJson(`${XfarApi}/api/telesticker?url=${q}`)
+              ini_tel = res.result
+              for (sticker_ in ini_tel) {
+              ini_buffer = await getBuffer(ini_tel[sticker_])
+              alpha.sendMessage(from, ini_buffer, sticker, {})
+}
+              break
+case 'telesticker':
+case 'telestick':
+case 'telestik':
+if (!q) return reply(`Example: ${prefix + command} https://t.me/addstickers/LINE_Menhera_chan_ENG`)
+res = await fetchJson(`${XfarApi}/api/telesticker?url=${q}`)
+inibuff = res.result
+pfft = inibuff[Math.floor(Math.random() * inibuff.length)]
+sendStickerFromUrl(from, pfft,{quoted: mek})
+but = [{buttonId: `teledown ${q}`, buttonText: {displayText: `Download Full ${inibuff.length}`}, type: 1}]
+sendButton(from, `*Total:* ${inibuff.length} Sticker${enter}*Link:* ${q}`, `Download dibawah${enter}⚠️ Note: SPAM ${inibuff.length} Sticker`, but)
+break
 
 //Ends
 default:
@@ -18540,8 +18560,8 @@ reply1('Oke bg')
 }
 
 if (subscribezeeoneofc == 'x_menu') {
-fa = await fetchJson(`${XrestApi}/api/random-fakta?apikey=BETA`)
-fak = fa.fakta
+fa = await fetchJson(`${KocakApi}/api/random/text/katabijak`)
+fak = fa.result
 list = []
 listmenu = [`All menu bot`,`animemenu`,`asupan menu`,`convertmenu`,`downloadmenu`,`funmenu`,`gacha cecan`,`gacha cogan`,`image effect`,`makermenu`,`nsfw menu`,`othermenu`,`ownermenu`,`quotesmenu`,`set sticker cmd`,`storagemenu`,`tagmenu`,`telegram sticker`,`upmenu`]
 listmenuu = [`${emoj} All menu bot`,`${emoj3} Anime menu`,`${emoj} Asupan menu`,`${emoj3} Convert menu`,`${emoj} Download menu`,`${emoj3} Fun menu`,`${emoj} Gacha cecan`,`${emoj3} Gacha cogan`,`${emoj} Image effect`,`${emoj3} Maker menu`,`${emoj} Nsfw menu`,`${emoj3} Other menu`,`${emoj} Owner menu`,`${emoj3} Quotes menu`,`${emoj} Set sticker cmd`,`${emoj3} Storage menu`,`${emoj} Tag menu`,`${emoj3} Telegram sticker`,`${emoj} Up menu`]
