@@ -1997,7 +1997,6 @@ const fgif = {key: {participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "62
 const fgif2 = {key: {participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "0@s.whatsapp.net" } : {})},message: {"videoMessage": {'gifPlayback': 'true', 'caption': `؜✗ ${pushname} ✗\n𝐸𝑥𝑒𝑐 : ${command}`, 'jpegThumbnail': pp_userz}}}
 const fgclink = {key: {participant: "0@s.whatsapp.net","remoteJid": "0@s.whatsapp.net"},"message": {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us","inviteCode": "m","groupName": "P", "caption": `✗ ${pushname} ✗\n𝐸𝑥𝑒𝑐 : ${command}`, 'jpegThumbnail': fs.readFileSync(`image/${fthumb}`)}}}
 const fgclink2 = {key: {participant: "0@s.whatsapp.net","remoteJid": "0@s.whatsapp.net"},"message": {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us","inviteCode": "m","groupName": "P", "caption": `${fake}`, 'jpegThumbnail': thumb_miku}}}
-const fgclink3 = {key: {participant: "0@s.whatsapp.net","remoteJid": "0@s.whatsapp.net"},"message": {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us","inviteCode": "m","groupName": "P", "caption": `Nama gw ${pushname} bruh\nIya gw ${command.slice(1)} Skaleh`, 'jpegThumbnail': pp_userz}}}
 const fvideo = {key: { fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "6289643739077-1613049930@g.us" } : {}) },message: { "videoMessage": { "title":`${creator}`, "h": `Hmm`,'seconds': '99999', 'caption': `${creator}`, 'jpegThumbnail': thumb_miku}}}
 const floc = {contextInfo: {"forwardingScore":999,"isForwarded":true,'stanzaId': msgId, 'participant':`${numbernye}@s.whatsapp.net`, 'remoteJid': '6283136505591-1614953337@g.us', 'quotedMessage': {"locationMessage": {"degreesLatitude": 51.507351, "degreesLongitude": -0.127758, "name": fake , 'jpegThumbnail': thumb_miku}}}}
 const fkontak = { key: {participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: `6283136505591-1614953337@g.us` } : {}) }, message: { 'contactMessage': { 'displayName': `${cr}`, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${cr},;;;\nFN:${cr},\nitem1.TEL;waid=${sender.split('@')[0]}:${sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': thumb_miku, thumbnail: thumb_miku,sendEphemeral: true}}}
@@ -2034,7 +2033,7 @@ fs.unlinkSync(asw)
 });
 }
 
-const Sendstickerfromurl = async(to, url) => {
+const Sendstickerfromurl = async(to, url, opti) => {
 var names = Date.now() / 10000;
 var download = function (uri, filename, callback) {
 request.head(uri, function (err, res, body) {
@@ -2047,7 +2046,7 @@ let filess = './sticker' + names + '.png'
 let asw = './sticker' + names + '.webp'
 exec(`ffmpeg -i ${filess} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${asw}`, (err) => {
 let media = fs.readFileSync(asw)
-alpha.sendMessage(to, media, MessageType.sticker,{quoted: fgclink3})
+alpha.sendMessage(to, media, MessageType.sticker, opti)
 fs.unlinkSync(filess)
 fs.unlinkSync(asw)
 });
@@ -7110,7 +7109,7 @@ break
 
 case 'size':
 if (!q) return reply1('Masukan angkanya')
-filsize = args[0]
+filesize = args[0]
 if (isQuotedSticker) {
 anu3 = await alpha.prepareMessageFromContent(from,{
 "stickerMessage": {
@@ -18328,13 +18327,14 @@ case 'xharam':
 case 'xkontol':
 case 'xhalal':
 case 'xmeki':
+case 'xbaik':
 if (!q) return reply1(`Usage :\n${prefix + command} @tag`)
 mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
 var ranex = ["angry","anime","bite","bored","bread","chocolate","cookie","cuddle","dance","drunk","happy","kill","kiss","laugh","lick","lonely","pat","poke","pregnant","punch","run","satouselfies","sleep","spank","spit","steal","tickle"]
 pfft = ranex[Math.floor(Math.random() * ranex.length)]
 res = await fetchJson(`https://api.satou-chan.xyz/api/endpoint/${pfft}`)
 inibuff2 = res.url
-Sendstickerfromurl(from, inibuff2)
+Sendstickerfromurl(from, inibuff2, {quoted: {key: {participant: "0@s.whatsapp.net","remoteJid": "0@s.whatsapp.net"},"message": {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us","inviteCode": "m","groupName": "P", "caption": `Nama gw ${mentioned} bruh\nIya gw ${command.slice(1)} Skaleh`, 'jpegThumbnail': pp_userz}}}})
 break
 
 
