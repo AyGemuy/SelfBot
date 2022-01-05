@@ -7113,70 +7113,55 @@ filesize = args[0]
 if (isQuotedSticker) {
 anu3 = await alpha.prepareMessageFromContent(from,{
 "stickerMessage": {
-"url": m.quoted.url,
-"fileSha256": m.quoted.fileSha256.toString('base64'),
-"fileEncSha256": m.quoted.fileEncSha256.toString('base64'),
-"mediaKey": m.quoted.mediaKey.toString('base64'),
-"mimetype": m.quoted.mimetype,
-"height": m.quoted.height,
-"width": m.quoted.width,
-"directPath": m.quoted.directPath,
-"fileLength": filesize,
-"mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
-"isAnimated": m.quoted.isAnimated
-}
-}, {quoted: mek, contextInfo: { mentionedJid: [sender]}})
+						"url": m.quoted.url,
+						"fileSha256": m.quoted.fileSha256,
+						"fileEncSha256": m.quoted.fileEncSha256,
+						"mediaKey": m.quoted.mediaKey,
+						"mimetype": m.quoted.mimetype,
+						"height": m.quoted.height,
+						"width": m.quoted.width,
+						"directPath": m.quoted.directPath,
+						"fileLength": filesize,
+						"mediaKeyTimestamp": m.quoted.mediaKeyTimestamp,
+						"isAnimated": m.quoted.isAnimated
+}}, {quoted: mek, contextInfo: { mentionedJid: [sender]}})
 alpha.relayWAMessage(anu3)
 
 } else if (isQuotedImage) {
 anu4 = alpha.prepareMessageFromContent(from,{
 "imageMessage": {
-"caption": m.quoted.caption,
-"url": m.quoted.url,
-"mimetype": m.quoted.mimetype,
-"fileSha256": m.quoted.fileSha256.toString('base64'),
-"fileLength": filesize,
-"height": m.quoted.height,
-"width": m.quoted.width,
-"mediaKey": m.quoted.mediaKey.toString('base64'),
-"fileEncSha256": m.quoted.fileEncSha256.toString('base64'),
-"directPath": m.quoted.directPath,
-"mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
-"jpegThumbnail": m.quoted.jpegThumbnail,
-"scansSidecar": m.quoted.scansSidecar,
-"scanLengths": [
-2411,
-6978,
-1298,
-861
-],
-"midQualityFileSha256": m.quoted.midQualityFileSha256.toString('base64')
+						"url": m.quoted.url,
+						"mimetype": m.quoted.mimetype,
+						"caption": m.quoted.caption,
+						"fileSha256": m.quoted.fileSha256,
+						"fileLength": filesize,
+						"height": m.quoted.height,
+						"width": m.quoted.width,
+						"mediaKey": m.quoted.mediaKey,
+						"fileEncSha256": m.quoted.fileEncSha256,
+						"directPath": m.quoted.directPath,
+						"mediaKeyTimestamp": m.quoted.mediaKeyTimestamp,
+						"jpegThumbnail": m.quoted.jpegThumbnail
 }},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
 alpha.relayWAMessage(anu4)
 } else if (isQuotedVideo) {
 
 anu5 = alpha.prepareMessageFromContent(from,{
 "videoMessage": {
-"caption": m.quoted.caption,
-"url": m.quoted.url,
-"mimetype": m.quoted.mimetype,
-"fileSha256": m.quoted.fileSha256.toString('base64'),
-"fileLength": filesize,
-"height": m.quoted.height,
-"width": m.quoted.width,
-"mediaKey": m.quoted.mediaKey.toString('base64'),
-"fileEncSha256": m.quoted.fileEncSha256.toString('base64'),
-"directPath": m.quoted.directPath,
-"mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
-"jpegThumbnail": m.quoted.jpegThumbnail,
-"scansSidecar": m.quoted.scansSidecar,
-"scanLengths": [
-2411,
-6978,
-1298,
-861
-],
-"midQualityFileSha256": m.quoted.midQualityFileSha256.toString('base64')
+						"url": m.quoted.url,
+						"mimetype": m.quoted.mimetype,
+						"fileSha256": m.quoted.fileSha256,
+						"fileLength": filesize,
+						"seconds": filesize,
+						"mediaKey": m.quoted.mediaKey,
+						"caption": m.quoted.caption,
+						"height": m.quoted.height,
+						"width": m.quoted.width,
+						"fileEncSha256": m.quoted.fileEncSha256,
+						"directPath": m.quoted.directPath,
+						"mediaKeyTimestamp": m.quoted.mediaKeyTimestamp,
+						"jpegThumbnail": m.quoted.jpegThumbnail,
+						"streamingSidecar": m.quoted.streamingSidecar
 }},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
 alpha.relayWAMessage(anu5)
 
@@ -7184,28 +7169,18 @@ alpha.relayWAMessage(anu5)
 
 anu6 = alpha.prepareMessageFromContent(from,{
 "documentMessage": {
-"title": m.quoted.title,
-"pageCount": m.quoted.pageCount,
-"fileName": m.quoted.fileName,
-"url": m.quoted.url,
-"mimetype": m.quoted.mimetype,
-"fileSha256": m.quoted.fileSha256.toString('base64'),
-"fileLength": filesize,
-"height": m.quoted.height,
-"width": m.quoted.width,
-"mediaKey": m.quoted.mediaKey.toString('base64'),
-"fileEncSha256": m.quoted.fileEncSha256.toString('base64'),
-"directPath": m.quoted.directPath,
-"mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
-"jpegThumbnail": m.quoted.jpegThumbnail,
-"scansSidecar": m.quoted.scansSidecar,
-"scanLengths": [
-2411,
-6978,
-1298,
-861
-],
-"midQualityFileSha256": m.quoted.midQualityFileSha256.toString('base64')
+						"url": m.quoted.url,
+						"mimetype": m.quoted.mimetype,
+						"title": m.quoted.title,
+						"fileSha256": m.quoted.fileSha256,
+						"fileLength": filesize,
+						"pageCount": filesize,
+						"mediaKey": m.quoted.mediaKey,
+						"fileName": m.quoted.fileName,
+						"fileEncSha256": m.quoted.fileEncSha256,
+						"directPath": m.quoted.directPath,
+						"mediaKeyTimestamp": m.quoted.mediaKeyTimestamp,
+						"jpegThumbnail": m.quoted.jpegThumbnail
 }},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
 alpha.relayWAMessage(anu6)
 
@@ -7217,7 +7192,7 @@ anu7 = alpha.prepareMessageFromContent(from,{
 	"degreesLongitude": filesize,
 	"name": m.quoted.name,
 	"sequenceNumber": m.quoted.sequenceNumber,
-	"jpegThumbnail": m.quoted.jpegThumbnail,
+	"jpegThumbnail": m.quoted.jpegThumbnail
 }},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
 alpha.relayWAMessage(anu7)
 
@@ -7235,7 +7210,7 @@ anu8 = alpha.prepareMessageFromContent(from,{
 						"fileEncSha256": m.quoted.fileEncSha256.toString('base64'),
 "directPath": m.quoted.directPath,
 						"mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
-"jpegThumbnail": m.quoted.jpegThumbnail,
+"jpegThumbnail": m.quoted.jpegThumbnail
 }},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
 alpha.relayWAMessage(anu8)
 
