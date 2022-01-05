@@ -2106,6 +2106,25 @@ fs.unlinkSync(asw)
 });
 });
 }
+const sendStickerFromUrl2 = async(to, url, options) => {
+var names = Date.now() / 10000;
+var download = function (uri, filename, callback) {
+request.head(uri, function (err, res, body) {
+request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+});
+};
+download(url, './sticker' + names + '.png', async function () {
+console.log('selesai');
+let filess = './sticker' + names + '.png'
+let asw = './sticker' + names + '.webp'
+exec(`ffmpeg -i ${filess} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${asw}`, (err) => {
+let media = fs.readFileSync(asw)
+alpha.sendMessage(to, media, MessageType.sticker,{quoted: options })
+fs.unlinkSync(filess)
+fs.unlinkSync(asw)
+});
+});
+}
 const sendWebp = async(to, url) => {
 var names = Date.now() / 10000;
 var download = function (uri, filename, callback) {
@@ -18314,7 +18333,7 @@ if (!q) return reply1('```TEXT?```')
 arg = args.join(' ');
 if (isQuotedSticker) {
 anu2 = await alpha.chats.all()
-anu = await alpha.prepareMessageFromContent(anu2.jid,{
+anu = await alpha.prepareMessageFromContent(from,{
 "stickerMessage": {
 "url": m.quoted.url,
 "fileSha256": m.quoted.fileSha256.toString('base64'),
@@ -18332,7 +18351,7 @@ anu = await alpha.prepareMessageFromContent(anu2.jid,{
 alpha.relayWAMessage(anu)
 } else if (isQuotedImage) {
 anu3 = await alpha.chats.all()
-anu = alpha.prepareMessageFromContent(anu3.jid,{
+anu = alpha.prepareMessageFromContent(from,{
 "imageMessage": {
 "caption": `*「 Broadcast 」*\n\n${arg}`,
 "url": m.quoted.url,
@@ -18358,7 +18377,7 @@ anu = alpha.prepareMessageFromContent(anu3.jid,{
 alpha.relayWAMessage(anu)
 } else if (isQuotedVideo) {
 anu4 = await alpha.chats.all()
-anu = alpha.prepareMessageFromContent(anu4.jid,{
+anu = alpha.prepareMessageFromContent(from,{
 "videoMessage": {
 "caption": `*「 Broadcast 」*\n\n${arg}`,
 "url": m.quoted.url,
@@ -18384,7 +18403,7 @@ anu = alpha.prepareMessageFromContent(anu4.jid,{
 alpha.relayWAMessage(anu)
 } else if (isQuotedDocument) {
 anu5 = await alpha.chats.all()
-anu = alpha.prepareMessageFromContent(anu5.jid,{
+anu = alpha.prepareMessageFromContent(from,{
 "documentMessage": {
 "caption": `*「 Broadcast 」*\n\n${arg}`,
 "title": `${botname}`,
@@ -18413,7 +18432,7 @@ anu = alpha.prepareMessageFromContent(anu5.jid,{
 alpha.relayWAMessage(anu)
 } else if (isQuotedLocation) {
 anu6 = await alpha.chats.all()
-anu = alpha.prepareMessageFromContent(anu6.jid,{
+anu = alpha.prepareMessageFromContent(from,{
 "locationMessage": {
 "caption": `*「 Broadcast 」*\n\n${arg}`,
 "degreesLatitude": '',
@@ -18456,12 +18475,19 @@ case 'xhalal':
 case 'xmeki':
 if (!q) return reply1(`Usage :\n${prefix + command} @tag`)
 mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
+try {
+ppus = await alpha.getProfilePicture(mek.message.extendedTextMessage.contextInfo.mentionedJid[0])
+} catch {
+ppus = 'https://audiopromedia.co.id/wp-content/uploads/2021/06/Screenshot_2021-06-19-16-22-16-937_com.miui_.gallery.jpg'
+}
+inibuff1 = await getBuffer(ppus)
 var ranex = ["angry","anime","bite","bored","bread","chocolate","cookie","cuddle","dance","drunk","happy","kill","kiss","laugh","lick","lonely","pat","poke","pregnant","punch","run","satouselfies","sleep","spank","spit","steal","tickle"]
 pfft = ranex[Math.floor(Math.random() * ranex.length)]
 res = await fetchJson(`https://api.satou-chan.xyz/api/endpoint/${pfft}`)
 inibuff2 = res.url
-sendFileFromUrlF(inibuff2, sticker, {quoted: {key: {participant: `${mentioned}`,"remoteJid": "0@s.whatsapp.net"},"message": {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us","inviteCode": "m","groupName": "P", "caption": `Nama gw ${pushname}, samgat ${command.slice(1)} skaleh`, 'jpegThumbnail': pp_userz}}}})
+sendStickerFromUrl2(from, inibuff2, {quoted: {key: {participant: `${mentioned}`,"remoteJid": "0@s.whatsapp.net"},"message": {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us","inviteCode": "m","groupName": "P", "caption": `Nama gw ${pushname}, samgat ${command.slice(1)} skaleh`, 'jpegThumbnail': inibuff1}}}})
 break
+
 
 
 
