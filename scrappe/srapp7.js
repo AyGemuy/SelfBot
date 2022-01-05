@@ -31,7 +31,7 @@ body: Object.keys(formdata).map(key => `${key}=${encodeURIComponent(formdata[key
 })
 }
 //Tiktok Video
-async function tiktok(Url) {
+async function tiktok_wudy(Url) {
 return new Promise (async (resolve, reject) => {
 await axios.request({
 url: "https://ttdownloader.com/",
@@ -88,7 +88,7 @@ Math.random() * 3,
 }
 
 
- async function tiktokmusic(URL) {
+ async function tiktokmusic_wudy(URL) {
 return new Promise(async (resolve, reject) => {
 GDF = await axios.get('https://www.tiktok.com/')
 Cookie = "ttwid=1%7C5UyITGuqEDXVZHtmtbU-7V35lTk8--iB6IjJuxRKPTs%7C1625390616%7C62c0b171e938115d5940a9af40c377000bc616cc7b25dfd76557913951585606; Domain=.tiktok.com; Path=/; Expires=Mon, 04 Jul 2022 09:23:36 GMT; HttpOnlytt_webid_v2=6980999485653632513; path=/; expires=Mon, 04 Jul 2022 09:23:37 GMT; domain=.tiktok.com; samesite=none; secure; httponlytt_webid=6980999485653632513; path=/; expires=Mon, 04 Jul 2022 09:23:37 GMT; domain=.tiktok.com; samesite=none; secure; httponlytt_csrf_token=9u_ml89_dULuOD6oMp_zTH06; path=/; domain=.tiktok.com; samesite=lax; secure; httponly"
@@ -109,7 +109,7 @@ resolve({meta})
 }
 
 //Github Stalk
-function ghstalk(username) {
+function ghstalk_wudy(username) {
 url= `https://api.github.com/users/${username}`; 
 return axios.get(url)
 .then(data => {
@@ -119,7 +119,7 @@ console.log(data.data)
 }
 
 //Telegraph
-async function telegra(buffer) {
+async function telegra_wudy(buffer) {
   return new Promise(async (resolve, reject) => {
 const { ext } = await fromBuffer(buffer)
 let form = new FormData
@@ -136,7 +136,7 @@ console.log(hasil)
 }).catch(reject)
 }
 //Youtube Audio
-function yta(url) {
+function yta_wudy(url) {
 return new Promise((resolve, reject) => {
 if (ytIdRegex.test(url)) {
 let ytId = ytIdRegex.exec(url)
@@ -182,7 +182,7 @@ console.log(hasil)
 }
 
 //Youtube Video
-function ytv(url) {
+function ytv_wudy(url) {
 return new Promise((resolve, reject) => {
 if (ytIdRegex.test(url)) {
 let ytId = ytIdRegex.exec(url)
@@ -225,7 +225,7 @@ console.log(hasil)
 } 
 
 //Emoji 
-async function emoji(emoticon) {
+async function emoji_wudy(emoticon) {
 const emojii = encodeURI(`${emoticon}`)
 var link = await axios.get(`https://emojipedia.org/${emojii}/`)
 var $ =cheerio.load(link.data)
@@ -271,7 +271,7 @@ console.log(result)
 
 //cuaca
 //Covid
-function covid() {
+function covid_wudy() {
 return new Promise(async(resolve, reject) => {
 axios.get('https://covid19.go.id/')
 .then(({ data }) => {
@@ -312,7 +312,7 @@ console.log(hasil)
 }
 
 //mediafire
-async function mediafire(url) {
+async function mediafire_wudy(url) {
 let query = await axios.get(url) 
 let cher = cheerio.load(query.data)
 let hasil = []
@@ -355,7 +355,7 @@ function rand(min, max, q = 0.001) {
 return Math.floor((Math.random() * (max - min)) / q) * q
 }
 // Tahta
-function tahta(text = '') {
+function tahta_wudy(text = '') {
 return new Promise((resolve, reject) => {
 let img = path.join(aesthetic, pickRandom(fs.readdirSync(aesthetic)))
 let font = path.join(_font, 'Obelix.ttf')
@@ -405,7 +405,7 @@ reject(e)
 }
 
 //Style Text
- async function styleText(text) {
+ async function styleText_wudy(text) {
 let res = await fetch('http://qaz.wtf/u/convert.cgi?text=' + encodeURIComponent(text))
 let html = await res.text()
 let dom = new JSDOM(html)
@@ -421,7 +421,7 @@ console.log(obj)
 }
 
 //AsmaulHusna
-function asmaul() {
+function asmaul_wudy() {
 global.asmaulhusna = {
 "result": {
 "data": [
@@ -1132,7 +1132,7 @@ console.log(hasil)
 }
 
 //Facebook
-function fb(link){
+function fb_wudy(link){
 	return new Promise((resolve,reject) => {
 	let config = {
 'url': link
@@ -1158,7 +1158,7 @@ resolve({
 }
 
 //IgStalk
-function igstalk(username){
+function igstalk_wudy(username){
 	return new Promise((resolve,reject) => {
 axios.get('https://www.instagram.com/'+ username +'/?__a=1',{
 	method: 'GET',
@@ -1194,7 +1194,7 @@ console.log(result)
 }
 
 //TebakGambar
-function tebakgambar() {
+function tebakgambar_wudy() {
 	return new Promise(async(resolve, reject) => {
 axios.get('https://jawabantebakgambar.net/all-answers/')
 .then(({ data }) => {
@@ -1218,7 +1218,7 @@ result.push({
 }
 
 //PlayStore
-function playstore(name){
+function playstore_wudy(name){
 	return new Promise((resolve, reject) => {
 axios.get('https://play.google.com/store/search?q='+ name +'&c=apps')
 .then(({ data }) => {
@@ -1259,7 +1259,7 @@ console.log(result)
 }
 
 //Twitter
-function twitter(link){
+function twitter_wudy(link){
 	return new Promise((resolve, reject) => {
 let config = {
 	'URL': link
@@ -1287,7 +1287,7 @@ audio: 'https://twdown.net/' + $('tr:nth-child(4) > td:nth-child(4) > a').attr('
 }
 
 //KodePos
-async function kodepos(kota) {
+async function kodepos_wudy(kota) {
 return new Promise(async (resolve, reject) => {
 let postalcode = 'https://carikodepos.com/';
 let url = postalcode+'?s='+kota;
@@ -1326,7 +1326,7 @@ console.log(results)
 };
 
 //Gempa
-function gempa() {
+function gempa_wudy() {
 return new Promise((resolve, reject) => {
 axios.get('https://www.bmkg.go.id/gempabumi/gempabumi-dirasakan.bmkg').then((response) => {
 const $ = cheerio.load(response.data)
@@ -1360,7 +1360,7 @@ console.log(hasil)
 }
 
 //ServerMc
-function servermc() {
+function servermc_wudy() {
 return new Promise((resolve, reject) => {
 axios.get(`https://minecraftpocket-servers.com/country/indonesia/`).then( tod => {
 const $ = cheerio.load(tod.data)
@@ -1384,7 +1384,7 @@ resolve(hasil)
 }
 
 //HappyMod
-function happymod(query) {
+function happymod_wudy(query) {
 return new Promise((resolve, reject) => {
 axios.get(`https://www.happymod.com/search.html?q=${query}`).then(async tod => {
 const $ = cheerio.load(tod.data)
@@ -1408,7 +1408,7 @@ hasil.push(Data)
 }
 
 //Halal
-function halal(query, page) {
+function halal_wudy(query, page) {
 return new Promise((resolve, reject) => {
 axios.get(`https://www.halalmui.org/mui14/searchproduk/search/?kategori=nama_produk&katakunci=${query}&page=${page}`).then( tod => {
 const $ = cheerio.load(tod.data)
@@ -1430,7 +1430,7 @@ resolve(hasil)
 }
 
 //McPe Dl
-function mcpedl(query) {
+function mcpedl_wudy(query) {
 return new Promise((resolve, reject) => {
 axios.get(`https://mcpedl.com/?s=${query}`).then(async tod => {
 const $ = cheerio.load(tod.data)
@@ -1458,7 +1458,7 @@ hasil.push(Data)
 }
 
 //Sfile Seaech
-function sfilesearch(query) {
+function sfilesearch_wudy(query) {
 return new Promise((resolve, reject) => {
 axios.get(`https://sfile.mobi/search.php?q=${query}&search=Search`).then(async tod => {
 const $ = cheerio.load(tod.data)
@@ -1481,7 +1481,7 @@ resolve(hasil)
 }
 
 //Hoax
-function hoax() {
+function hoax_wudy() {
 return new Promise((resolve, reject) => {
 axios.get(`https://turnbackhoax.id/`).then( tod => {
 const $ = cheerio.load(tod.data)
@@ -1510,7 +1510,7 @@ resolve(hasil)
 }
 
 //IgVid
-function igvideo(link) {
+function igvideo_wudy(link) {
 return new Promise(async(resolve, reject) => {
 let config = {
 'url': link,
@@ -1535,7 +1535,7 @@ link: $('#downloadBox > a').attr('href')
 } 
 
 //IgFoto 
-function igfoto(link) {
+function igfoto_wudy(link) {
 return new Promise(async(resolve, reject) => {
 let config = {
 'url': link,
@@ -1560,7 +1560,7 @@ link: $('#downloadBox > a').attr('href')
 }
 
 //IgTv
-function igtv(link) {
+function igtv_wudy(link) {
 return new Promise(async(resolve, reject) => {
 let config = {
 'url': link,
@@ -1584,7 +1584,7 @@ link: $('#downloadBox > a').attr('href')
 })
 }
 //Jalan Tikus
-function jalantikus(query) {
+function jalantikus_wudy(query) {
 return new Promise((resolve, reject) => {
 axios.get(`https://jalantikus.com/search/articles/${query}/`).then( tod => {
 const $ = cheerio.load(tod.data)
@@ -1608,7 +1608,7 @@ resolve(hasil)
 }
 
 //Tribun News
-function tribunnews() {
+function tribunnews_wudy() {
 return new Promise((resolve, reject) => {
 axios.get(`https://www.tribunnews.com/news`).then( tod => {
 const $ = cheerio.load(tod.data)
@@ -1634,7 +1634,7 @@ resolve(hasil)
 }
 
 //Kompas News
-function kompasnews() {
+function kompasnews_wudy() {
 return new Promise((resolve, reject) => {
 axios.get(`https://news.kompas.com/`).then( tod => {
 const $ = cheerio.load(tod.data)
@@ -1658,7 +1658,7 @@ resolve(hasil)
 }
 
 //WallPapper
-function wallpapper(query) {
+function wallpapper_wudy(query) {
 return new Promise((resolve, reject) => {
 axios.get(`https://www.wallpaperflare.com/search?wallpaper=${query}`).then(async tod => {
 const $ = cheerio.load(tod.data)
@@ -1673,7 +1673,7 @@ resolve(hasil)
 }
 
 //ApkMody
-function apkmody(query) {
+function apkmody_wudy(query) {
 return new Promise((resolve, reject) => {
 axios.get(`https://apkmody.io/?s=${query}`).then( tod => {
 const $ = cheerio.load(tod.data)
@@ -1697,7 +1697,7 @@ resolve(hasil)
 }
 
 //PalingMurah
-function palingmurah(query) {
+function palingmurah_wudy(query) {
 return new Promise((resolve, reject) => {
 axios.get(`https://palingmurah.net/pencarian-produk/?term=${query}`).then(async tod => {
 const $ = cheerio.load(tod.data)
@@ -1729,7 +1729,7 @@ resolve(hasil)
 }
 
 //Moddroid
-function moddroid(query) {
+function moddroid_wudy(query) {
 return new Promise((resolve, reject) => {
 axios.get(`https://moddroid.com/?s=${query}`).then( tod => {
 const $ = cheerio.load(tod.data)
@@ -1752,7 +1752,7 @@ resolve(hasil)
 });
 }
 
-function pinterest(querry){
+function pinterest_wudy(querry){
 	return new Promise(async(resolve,reject) => {
 		 axios.get('https://id.pinterest.com/search/pins/?autologin=true&q=' + querry, {
 			headers: {
@@ -1775,7 +1775,7 @@ function pinterest(querry){
 		})
 	})
 }
-function ssweb(url) {
+function ssweb_wudy(url) {
   return new Promise(async(resolve,reject) => {
    await getBuffer(`http://fdz-app.herokuapp.com/api/ssweb/mobile/get_screenshot?url=${url}`).then(res => {
    resolve(res)
@@ -1784,41 +1784,41 @@ function ssweb(url) {
 })
 }
 
-module.exports.tiktok = tiktok
-module.exports.tiktokmusic = tiktokmusic
-module.exports.ghstalk = ghstalk
-module.exports.telegra = telegra
-module.exports.yta = yta
-module.exports.ytv = ytv
-module.exports.emoji = emoji
-module.exports.mediafire = mediafire
-module.exports.covid = covid
-module.exports.tahta = tahta
-module.exports.styleText = styleText
-module.exports.asmaul = asmaul
-module.exports.fb = fb
-module.exports.igstalk = igstalk
-module.exports.tebakgambar = tebakgambar
-module.exports.playstore = playstore
-module.exports.twitter = twitter
-module.exports.kodepos = kodepos
-module.exports.gempa = gempa
-module.exports.servermc = servermc
-module.exports.happymod = happymod
-module.exports.kompasnews = kompasnews
-module.exports.tribunnews = tribunnews
-module.exports.jalantikus = jalantikus
-module.exports.igtv = igtv
-module.exports.igfoto = igfoto
-module.exports.igvideo = igvideo
-module.exports.hoax = hoax
-module.exports.sfilesearch = sfilesearch
-module.exports.mcpedl = mcpedl
-module.exports.halal =halal
-module.exports.wallpapper =wallpapper
-module.exports.apkmody = apkmody
-module.exports.moddroid = moddroid
-module.exports.pinterest = pinterest
-module.exports.palingmurah = palingmurah
-module.exports.ssweb = ssweb
+module.exports.tiktok_wudy = tiktok_wudy
+module.exports.tiktokmusic_wudy = tiktokmusic_wudy
+module.exports.ghstalk_wudy = ghstalk_wudy
+module.exports.telegra_wudy = telegra_wudy
+module.exports.yta_wudy = yta_wudy
+module.exports.ytv_wudy = ytv_wudy
+module.exports.emoji_wudy = emoji_wudy
+module.exports.mediafire_wudy = mediafire_wudy
+module.exports.covid_wudy = covid_wudy
+module.exports.tahta_wudy = tahta_wudy
+module.exports.styleText_wudy = styleText_wudy
+module.exports.asmaul_wudy = asmaul_wudy
+module.exports.fb_wudy = fb_wudy
+module.exports.igstalk_wudy = igstalk_wudy
+module.exports.tebakgambar_wudy = tebakgambar_wudy
+module.exports.playstore_wudy = playstore_wudy
+module.exports.twitter_wudy = twitter_wudy
+module.exports.kodepos_wudy = kodepos_wudy
+module.exports.gempa_wudy = gempa_wudy
+module.exports.servermc_wudy = servermc_wudy
+module.exports.happymod_wudy = happymod_wudy
+module.exports.kompasnews_wudy = kompasnews_wudy
+module.exports.tribunnews_wudy = tribunnews_wudy
+module.exports.jalantikus_wudy = jalantikus_wudy
+module.exports.igtv_wudy = igtv_wudy
+module.exports.igfoto_wudy = igfoto_wudy
+module.exports.igvideo_wudy = igvideo_wudy
+module.exports.hoax_wudy = hoax_wudy
+module.exports.sfilesearch_wudy = sfilesearch_wudy
+module.exports.mcpedl_wudy = mcpedl_wudy
+module.exports.halal_wudy = halal_wudy
+module.exports.wallpapper_wudy =wallpapper_wudy
+module.exports.apkmody_wudy = apkmody_wudy
+module.exports.moddroid_wudy = moddroid_wudy
+module.exports.pinterest_wudy = pinterest_wudy
+module.exports.palingmurah_wudy = palingmurah_wudy
+module.exports.ssweb_wudy = ssweb_wudy
 
