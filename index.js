@@ -18293,7 +18293,7 @@ anu4 = alpha.prepareMessageFromContent(bece_grup.jid,{
 "fileEncSha256": m.quoted.fileEncSha256.toString('base64'),
 "directPath": m.quoted.directPath,
 "mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
-"jpegThumbnail": pp_userz,,
+"jpegThumbnail": pp_userz,
 "scansSidecar": m.quoted.scansSidecar,
 "scanLengths": [
 2411,
@@ -18319,7 +18319,7 @@ anu5 = alpha.prepareMessageFromContent(bece_grup.jid,{
 "fileEncSha256": m.quoted.fileEncSha256.toString('base64'),
 "directPath": m.quoted.directPath,
 "mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
-"jpegThumbnail": pp_userz,,
+"jpegThumbnail": pp_userz,
 "scansSidecar": m.quoted.scansSidecar,
 "scanLengths": [
 2411,
@@ -18349,7 +18349,7 @@ anu6 = alpha.prepareMessageFromContent(bece_grup.jid,{
 "fileEncSha256": m.quoted.fileEncSha256.toString('base64'),
 "directPath": m.quoted.directPath,
 "mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
-"jpegThumbnail": pp_userz,,
+"jpegThumbnail": pp_userz,
 "scansSidecar": m.quoted.scansSidecar,
 "scanLengths": [
 2411,
