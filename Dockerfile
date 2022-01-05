@@ -64,9 +64,6 @@ RUN set -ex \
   # smoke test
   && yarn --version
 
-COPY docker-entrypoint.sh /usr/local/bin/
-ENTRYPOINT ["docker-entrypoint.sh"]
-
 RUN apt-get update && \
   apt-get install -y \
   neofetch \
