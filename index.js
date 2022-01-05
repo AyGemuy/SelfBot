@@ -2027,26 +2027,6 @@ let filess = './sticker' + names + '.png'
 let asw = './sticker' + names + '.webp'
 exec(`ffmpeg -i ${filess} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${asw}`, (err) => {
 let media = fs.readFileSync(asw)
-alpha.sendMessage(to, media, MessageType.sticker,{quoted: mek})
-fs.unlinkSync(filess)
-fs.unlinkSync(asw)
-});
-});
-}
-
-const sendStickerFromUrl2 = async(to, url) => {
-var names = Date.now() / 10000;
-var download = function (uri, filename, callback) {
-request.head(uri, function (err, res, body) {
-request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
-});
-};
-download(url, './sticker' + names + '.png', async function () {
-console.log('selesai');
-let filess = './sticker' + names + '.png'
-let asw = './sticker' + names + '.webp'
-exec(`ffmpeg -i ${filess} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${asw}`, (err) => {
-let media = fs.readFileSync(asw)
 alpha.sendMessage(to, media, MessageType.sticker,{quoted: fgclink3})
 fs.unlinkSync(filess)
 fs.unlinkSync(asw)
@@ -12244,7 +12224,7 @@ case 'ttp5':
 if (!q) return reply1(lang.noteks(prefix, command))
 ttp = args.join(' ')
 anuk = `${OjanApi}/api/maker/ttp2?text=${encodeURI(ttp)}`
-sendStickerFromUrl(from, `${anuk}`, mek)
+sendStickerFromUrl(from, `${anuk}`)
 ini_buffer = await getBuffer(`${anuk}`)
 await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 break
@@ -12252,7 +12232,7 @@ break
 case 'ttp3': 
 case 'ttp': 
 anuk = `${XcoderApi}/api/maker/${command}?text=${encodeURIComponent(q)}&apikey=7iyNa0qA`
-sendStickerFromUrl(from, `${anuk}`, mek)
+sendStickerFromUrl(from, `${anuk}`)
 ini_buffer = await getBuffer(`${anuk}`)
 await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 break
@@ -17133,7 +17113,7 @@ let smru2 = await imgbb(`${img_key}`, smri2)
 anuk = `${SomeApi}/canvas/${command}?avatar=${smru2.display_url}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
+sendStickerFromUrl(from, `${anuk}`)
 ini_buffer = await getBuffer(`${anuk}`)
 await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
@@ -17145,7 +17125,7 @@ let smre3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
 anuk = `${SomeApi}/canvas/${command}?avatar=${smre3.display_url}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
+sendStickerFromUrl(from, `${anuk}`)
 ini_buffer = await getBuffer(`${anuk}`)
 await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else {
@@ -17481,7 +17461,7 @@ let jun2 = await imgbb(`${img_key}`, jin2)
 anuk = `${OjanApi}/api/imgedit/${command}?url=${jun2.display_url}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
+sendStickerFromUrl(from, `${anuk}`)
 ini_buffer = await getBuffer(`${anuk}`)
 await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
@@ -17493,7 +17473,7 @@ let jen3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
 anuk = `${OjanApi}/api/imgedit/${command}?url=${jen3.display_url}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
+sendStickerFromUrl(from, `${anuk}`)
 ini_buffer = await getBuffer(`${anuk}`)
 await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else {
@@ -17540,7 +17520,7 @@ titid = await fetchJson(`https://nekobot.xyz/api/imagegen?type=${command}&url=${
 anuk = `${titid.message}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
+sendStickerFromUrl(from, `${anuk}`)
 ini_buffer = await getBuffer(`${anuk}`)
 await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
@@ -17553,7 +17533,7 @@ titid = await fetchJson(`https://nekobot.xyz/api/imagegen?type=${command}&url=${
 anuk = `${titid.message}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
+sendStickerFromUrl(from, `${anuk}`)
 ini_buffer = await getBuffer(`${anuk}`)
 await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else {
@@ -17612,7 +17592,7 @@ let dpih2 = await imgbb(`${img_key}`, dpah2)
 anuk = `${DappaApi}/api/canvas/${command}?img=${dpih2.display_url}&apikey=${dapuhy}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
+sendStickerFromUrl(from, `${anuk}`)
 ini_buffer = await getBuffer(`${anuk}`)
 await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
@@ -17624,7 +17604,7 @@ let dpeh3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
 anuk = `${DappaApi}/api/canvas/${command}?img=${dpeh3.display_url}&apikey=${dapuhy}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
+sendStickerFromUrl(from, `${anuk}`)
 ini_buffer = await getBuffer(`${anuk}`)
 await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else {
@@ -17677,7 +17657,7 @@ let lphu2 = await imgbb(`${img_key}`, lphi2)
 anuk = `${AlphaApi}/api/image_editor/${command}?apikey=Alphabot&url=${lphu2.display_url}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
+sendStickerFromUrl(from, `${anuk}`)
 ini_buffer = await getBuffer(`${anuk}`)
 await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
@@ -17689,7 +17669,7 @@ let lphe3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
 anuk = `${AlphaApi}/api/image_editor/${command}?apikey=Alphabot&url=${lphe3.display_url}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
+sendStickerFromUrl(from, `${anuk}`)
 ini_buffer = await getBuffer(`${anuk}`)
 await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else {
@@ -18074,7 +18054,7 @@ let faru2 = await imgbb(`${img_key}`, fari2)
 anuk = `${XfarApi}/api/canvas/customgfx1?teks=${q}&bg=${faru2.display_url}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
+sendStickerFromUrl(from, `${anuk}`)
 ini_buffer = await getBuffer(`${anuk}`)
 await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
@@ -18086,7 +18066,7 @@ let fare3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
 anuk = `${XfarApi}/api/canvas/customgfx1?teks=${q}&bg=${fare3.display_url}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
+sendStickerFromUrl(from, `${anuk}`)
 ini_buffer = await getBuffer(`${anuk}`)
 await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else {
@@ -18110,7 +18090,7 @@ let faru_2 = await imgbb(`${img_key}`, fari_2)
 anuk = `${XfarApi}/api/canvas/customgfx2?teks1=${m1}&teks2=${m2}&bg=${faru_2.display_url}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
+sendStickerFromUrl(from, `${anuk}`)
 ini_buffer = await getBuffer(`${anuk}`)
 await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
@@ -18122,7 +18102,7 @@ let fare_3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
 anuk = `${XfarApi}/api/canvas/customgfx2?teks1=${m1}&teks2=${m2}&bg=${fare_3.display_url}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
+sendStickerFromUrl(from, `${anuk}`)
 ini_buffer = await getBuffer(`${anuk}`)
 await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else {
@@ -18141,7 +18121,7 @@ let faru__2 = await imgbb(`${img_key}`, fari__2)
 anuk = `${XfarApi}/api/canvas/xnxx?pp=${faru__2.display_url}&username=${q}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
+sendStickerFromUrl(from, `${anuk}`)
 ini_buffer = await getBuffer(`${anuk}`)
 await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else if (!mek.message.extendedTextMessage.contextInfo.mentionedJid[0]) {
@@ -18153,7 +18133,7 @@ let fare__3 = await imgbb(`${img_key}`, 'janckuk.jpeg')
 anuk = `${XfarApi}/api/canvas/xnxx?pp=${fare__3.display_url}&username=${q}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
+sendStickerFromUrl(from, `${anuk}`)
 ini_buffer = await getBuffer(`${anuk}`)
 await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 } else {
@@ -18198,7 +18178,7 @@ if(!q) return reply1(`${emoj} Hint : ${prefix + command} noob`)
 anuk = `${KocakApi}/api/flamingtext/${command}?text=${q}`
 ini_gen = `${command}`
 console.log(color(ini_gen))
-sendStickerFromUrl(from, `${anuk}`, mek)
+sendStickerFromUrl(from, `${anuk}`)
 ini_buffer = await getBuffer(`${anuk}`)
 await alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Nih image nya`})
 break
@@ -18405,7 +18385,7 @@ var ranex = ["angry","anime","bite","bored","bread","chocolate","cookie","cuddle
 pfft = ranex[Math.floor(Math.random() * ranex.length)]
 res = await fetchJson(`https://api.satou-chan.xyz/api/endpoint/${pfft}`)
 inibuff2 = res.url
-sendStickerFromUrl2(from, inibuff2, {quoted: fgclink3})
+sendStickerFromUrl(from, inibuff2)
 break
 
 
