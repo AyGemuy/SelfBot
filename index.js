@@ -18448,11 +18448,18 @@ case 'xbabi':
 case 'xharam':
 case 'xkontol':
 case 'xhalal':
+if (!q) return reply1(`Usage :\n${prefix + command} @tag`)
+mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
+try {
+ppus = await alpha.getProfilePicture(mek.message.extendedTextMessage.contextInfo.mentionedJid[0])
+} catch {
+ppus = 'https://audiopromedia.co.id/wp-content/uploads/2021/06/Screenshot_2021-06-19-16-22-16-937_com.miui_.gallery.jpg'
+}
 var ranex = ["angry","anime","bite","bored","bread","chocolate","cookie","cuddle","dance","drunk","happy","kill","kiss","laugh","lick","lonely","pat","poke","pregnant","punch","run","satouselfies","sleep","spank","spit","steal","tickle"]
 pfft = ranex[Math.floor(Math.random() * ranex.length)]
 res = await fetchJson(`https://api.satou-chan.xyz/api/endpoint/${pfft}`)
 inibuff = res.url
-sendStickerFromUrl(from, inibuff,{quoted: {key: { fromMe: false,participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "6289643739077-1613049930@g.us" } : {}) },message: { "videoMessage": { "title":`Nama gw ${pushname}, samgat ${command.slice(1)} skaleh`, "h": `Hmm`,'seconds': '86400000', 'caption': `${jwb_oke}`, 'jpegThumbnail': pp_userz}}}})
+sendStickerFromUrl(from, inibuff,{quoted: {key: { fromMe: false,participant: `${mentioned}`, ...(from ? { remoteJid: "6289643739077-1613049930@g.us" } : {}) },message: { "videoMessage": { "title":`Nama gw ${pushname}, samgat ${command.slice(1)} skaleh`, "h": `Hmm`,'seconds': '99999', 'caption': `${jwb_oke}`, 'jpegThumbnail': ppus}}}})
 break
 
 
