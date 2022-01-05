@@ -230,6 +230,62 @@ wallpapper_wudy,
 yta_wudy,
 ytv_wudy
 } require("./scrappe/srapp7.js");
+const { 
+wudy8_android1,
+wudy8_anime,
+wudy8_anoboydl,
+wudy8_anoboys,
+wudy8_apkmirror,
+wudy8_apkmody,
+wudy8_artinama,
+wudy8_asupanfilm,
+wudy8_asupanfilminfo,
+wudy8_bacaresep,
+wudy8_carigc,
+wudy8_cariresep,
+wudy8_chara,
+wudy8_corona,
+wudy8_devianart,
+wudy8_dewabatch,
+wudy8_drakor,
+wudy8_film,
+wudy8_gempa,
+wudy8_ghfollower,
+wudy8_ghfollowing,
+wudy8_ghuser,
+wudy8_goredl,
+wudy8_happymod,
+wudy8_happymoddl,
+wudy8_hentaivid,
+wudy8_igdl,
+wudy8_igstalk,
+wudy8_job,
+wudy8_kiryu,
+wudy8_konachan,
+wudy8_manga,
+wudy8_mangatoon,
+wudy8_mediafire,
+wudy8_palingmurah,
+wudy8_pinterest,
+wudy8_pornvid,
+wudy8_randomgore,
+wudy8_randomtt,
+wudy8_searchgore,
+wudy8_sfiledown,
+wudy8_sfilesearch,
+wudy8_soundcloud,
+wudy8_stickersearch,
+wudy8_textmakervid,
+wudy8_trendtwit,
+wudy8_wallpapercave,
+wudy8_wallpapercraft,
+wudy8_wallpaperhd,
+wudy8_wattpad,
+wudy8_webtoons,
+wudy8_wikisearch,
+wudy8_zerochan,
+wudy8_zippydl
+} = require("./scrappe/srapp8.js");
 
 const { convertSticker } = require("./list/swm.js")
 const { dafontSearch, dafontDown } = require('./list/dafont.js')
@@ -1714,7 +1770,7 @@ var ucapannya2 = `𝐍𝐢𝐠𝐡𝐭 🌚 ${pushname}`
 }
 
 if(time2 < "19:00:00"){
-var ucapannya2 = `𝐍𝐢𝐠𝐡?? 🌚 ${pushname}`
+var ucapannya2 = `𝐍𝐢𝐠𝐡𝐭 🌚 ${pushname}`
 }
 
 if(time2 < "18:00:00"){
@@ -8459,7 +8515,7 @@ ytresult += '𝗬𝗢𝗨𝗧𝗨𝗕𝗘 𝗦𝗘𝗔𝗥𝗖𝗛'
 ytresult += '\n⌬━━━━━━━━━━━━⌬\n\n'
 aramas.all.map((video) => {
 ytresult += '•🌹Title: ' + video.title + '\n'
-ytresult += '•🌹Link: ' + video.url + '\n'
+ytresult += '•??Link: ' + video.url + '\n'
 ytresult += '•🌹Durasi: ' + video.timestamp + '\n'
 ytresult += '•🌹Upload: ' + video.ago + '\n⌬━━━━━━━━━━━━⌬\n\n'
 }); 	 	 
