@@ -2027,12 +2027,33 @@ let filess = './sticker' + names + '.png'
 let asw = './sticker' + names + '.webp'
 exec(`ffmpeg -i ${filess} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${asw}`, (err) => {
 let media = fs.readFileSync(asw)
+alpha.sendMessage(to, media, MessageType.sticker,{quoted: mek})
+fs.unlinkSync(filess)
+fs.unlinkSync(asw)
+});
+});
+}
+
+const Sendstickerfromurl = async(to, url) => {
+var names = Date.now() / 10000;
+var download = function (uri, filename, callback) {
+request.head(uri, function (err, res, body) {
+request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+});
+};
+download(url, './sticker' + names + '.png', async function () {
+console.log('selesai');
+let filess = './sticker' + names + '.png'
+let asw = './sticker' + names + '.webp'
+exec(`ffmpeg -i ${filess} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${asw}`, (err) => {
+let media = fs.readFileSync(asw)
 alpha.sendMessage(to, media, MessageType.sticker,{quoted: fgclink3})
 fs.unlinkSync(filess)
 fs.unlinkSync(asw)
 });
 });
 }
+
 
 const sendWebp = async(to, url) => {
 var names = Date.now() / 10000;
@@ -7086,11 +7107,12 @@ starGame = `「 *MEMULAI GAME TICTACTOE* 」${enter}${enter}•@${sender.replace
 alpha.sendMessage(from, starGame, text, {quoted: mek, contextInfo: { mentionedJid: [sender, args[0].replace("@", "") + "@s.whatsapp.net"],}})
 break
 
+
 case 'size':
 if (!q) return reply1('Masukan angkanya')
 filsize = args[0]
 if (isQuotedSticker) {
-anu = await alpha.prepareMessageFromContent(from,{
+anu3 = await alpha.prepareMessageFromContent(from,{
 "stickerMessage": {
 "url": m.quoted.url,
 "fileSha256": m.quoted.fileSha256.toString('base64'),
@@ -7100,26 +7122,28 @@ anu = await alpha.prepareMessageFromContent(from,{
 "height": m.quoted.height,
 "width": m.quoted.width,
 "directPath": m.quoted.directPath,
-"fileLength": filsize,
+"fileLength": filesize,
 "mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
 "isAnimated": m.quoted.isAnimated
 }
 }, {quoted: mek, contextInfo: { mentionedJid: [sender]}})
-alpha.relayWAMessage(anu)
+alpha.relayWAMessage(anu3)
+
 } else if (isQuotedImage) {
-anu = alpha.prepareMessageFromContent(from,{
+anu4 = alpha.prepareMessageFromContent(from,{
 "imageMessage": {
+"caption": m.quoted.caption,
 "url": m.quoted.url,
 "mimetype": m.quoted.mimetype,
 "fileSha256": m.quoted.fileSha256.toString('base64'),
-"fileLength": filsize,
+"fileLength": filesize,
 "height": m.quoted.height,
 "width": m.quoted.width,
 "mediaKey": m.quoted.mediaKey.toString('base64'),
 "fileEncSha256": m.quoted.fileEncSha256.toString('base64'),
 "directPath": m.quoted.directPath,
 "mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
-"jpegThumbnail": thumb_miku,
+"jpegThumbnail": m.quoted.jpegThumbnail,
 "scansSidecar": m.quoted.scansSidecar,
 "scanLengths": [
 2411,
@@ -7129,21 +7153,23 @@ anu = alpha.prepareMessageFromContent(from,{
 ],
 "midQualityFileSha256": m.quoted.midQualityFileSha256.toString('base64')
 }},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
-alpha.relayWAMessage(anu)
+alpha.relayWAMessage(anu4)
 } else if (isQuotedVideo) {
-anu = alpha.prepareMessageFromContent(from,{
+
+anu5 = alpha.prepareMessageFromContent(from,{
 "videoMessage": {
+"caption": m.quoted.caption,
 "url": m.quoted.url,
 "mimetype": m.quoted.mimetype,
 "fileSha256": m.quoted.fileSha256.toString('base64'),
-"fileLength": filsize,
+"fileLength": filesize,
 "height": m.quoted.height,
 "width": m.quoted.width,
 "mediaKey": m.quoted.mediaKey.toString('base64'),
 "fileEncSha256": m.quoted.fileEncSha256.toString('base64'),
 "directPath": m.quoted.directPath,
 "mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
-"jpegThumbnail": thumb_miku,
+"jpegThumbnail": m.quoted.jpegThumbnail,
 "scansSidecar": m.quoted.scansSidecar,
 "scanLengths": [
 2411,
@@ -7153,11 +7179,71 @@ anu = alpha.prepareMessageFromContent(from,{
 ],
 "midQualityFileSha256": m.quoted.midQualityFileSha256.toString('base64')
 }},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
-alpha.relayWAMessage(anu)
-} else {
-reply1('Reply Stic/Img/Vid')
+alpha.relayWAMessage(anu5)
+
+} else if (isQuotedDocument) {
+
+anu6 = alpha.prepareMessageFromContent(from,{
+"documentMessage": {
+"caption": m.quoted.caption,
+"title": m.quoted.title,
+"pageCount": 100,
+"fileName": m.quoted.fileName,
+"url": m.quoted.url,
+"mimetype": m.quoted.mimetype,
+"fileSha256": m.quoted.fileSha256.toString('base64'),
+"fileLength": filesize,
+"height": m.quoted.height,
+"width": m.quoted.width,
+"mediaKey": m.quoted.mediaKey.toString('base64'),
+"fileEncSha256": m.quoted.fileEncSha256.toString('base64'),
+"directPath": m.quoted.directPath,
+"mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
+"jpegThumbnail": m.quoted.jpegThumbnail,
+"scansSidecar": m.quoted.scansSidecar,
+"scanLengths": [
+2411,
+6978,
+1298,
+861
+],
+"midQualityFileSha256": m.quoted.midQualityFileSha256.toString('base64')
+}},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
+alpha.relayWAMessage(anu6)
+
+} else if (isQuotedLocation) {
+
+anu7 = alpha.prepareMessageFromContent(from,{
+"liveLocationMessage": {
+"degreesLatitude": -1.0000000,
+	"degreesLongitude": 100.0000000,
+	"caption": m.quoted.caption,
+	"sequenceNumber": "1641356008487001",
+	"jpegThumbnail": m.quoted.jpegThumbnail,
+}},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
+alpha.relayWAMessage(anu7)
+
+} else if (isQuotedAudio) {
+
+anu8 = alpha.prepareMessageFromContent(from,{
+"audioMessage": {
+						"url": m.quoted.url,
+						"mimetype": m.quoted.mimetype,
+						"fileSha256": m.quoted.fileSha256.toString('base64'),
+						"fileLength": filesize,
+						"seconds": filesize,
+						"ptt": true,
+						"mediaKey": m.quoted.mediaKey.toString('base64'),
+						"fileEncSha256": m.quoted.fileEncSha256.toString('base64'),
+"directPath": m.quoted.directPath,
+						"mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
+"jpegThumbnail": m.quoted.jpegThumbnail,
+}},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
+alpha.relayWAMessage(anu8)
+
 }
 break
+
 
 case "colongsw": 
 if (!mek.key.fromMe) return
@@ -18236,143 +18322,6 @@ buff = await getBuffer(`${SakuraApi}/api/serti/tolol?text=${q}&apikey=sakura404`
 alpha.sendMessage(from, buff, image, {quoted: mek, caption : `Ketik *.serti* untuk melihat list , Req by: ${pushname}`})
 break
 
-case 'dibc':
-case 'bece':
-if (!q) return reply1('```TEXT?```')
-arg = args.join(' ');
-var bece_grup = await alpha.chats.all().filter(v => v.jid.endsWith('g.us'))
-if (isQuotedSticker) {
-anu3 = await alpha.prepareMessageFromContent(bece_grup.jid,{
-"stickerMessage": {
-"url": m.quoted.url,
-"fileSha256": m.quoted.fileSha256.toString('base64'),
-"fileEncSha256": m.quoted.fileEncSha256.toString('base64'),
-"mediaKey": m.quoted.mediaKey.toString('base64'),
-"mimetype": m.quoted.mimetype,
-"height": m.quoted.height,
-"width": m.quoted.width,
-"directPath": m.quoted.directPath,
-"fileLength": 9000000000000,
-"mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
-"isAnimated": m.quoted.isAnimated
-}
-}, {quoted: mek, contextInfo: { mentionedJid: [sender]}})
-alpha.relayWAMessage(anu3)
-
-} else if (isQuotedImage) {
-anu4 = alpha.prepareMessageFromContent(bece_grup.jid,{
-"imageMessage": {
-"caption": `*「 Broadcast 」*\n\n${arg}`,
-"url": m.quoted.url,
-"mimetype": m.quoted.mimetype,
-"fileSha256": m.quoted.fileSha256.toString('base64'),
-"fileLength": 9000000000000,
-"height": m.quoted.height,
-"width": m.quoted.width,
-"mediaKey": m.quoted.mediaKey.toString('base64'),
-"fileEncSha256": m.quoted.fileEncSha256.toString('base64'),
-"directPath": m.quoted.directPath,
-"mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
-"jpegThumbnail": pp_userz,
-"scansSidecar": m.quoted.scansSidecar,
-"scanLengths": [
-2411,
-6978,
-1298,
-861
-],
-"midQualityFileSha256": m.quoted.midQualityFileSha256.toString('base64')
-}},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
-alpha.relayWAMessage(anu4)
-} else if (isQuotedVideo) {
-
-anu5 = alpha.prepareMessageFromContent(bece_grup.jid,{
-"videoMessage": {
-"caption": `*「 Broadcast 」*\n\n${arg}`,
-"url": m.quoted.url,
-"mimetype": m.quoted.mimetype,
-"fileSha256": m.quoted.fileSha256.toString('base64'),
-"fileLength": 9000000000000,
-"height": m.quoted.height,
-"width": m.quoted.width,
-"mediaKey": m.quoted.mediaKey.toString('base64'),
-"fileEncSha256": m.quoted.fileEncSha256.toString('base64'),
-"directPath": m.quoted.directPath,
-"mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
-"jpegThumbnail": pp_userz,
-"scansSidecar": m.quoted.scansSidecar,
-"scanLengths": [
-2411,
-6978,
-1298,
-861
-],
-"midQualityFileSha256": m.quoted.midQualityFileSha256.toString('base64')
-}},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
-alpha.relayWAMessage(anu5)
-
-} else if (isQuotedDocument) {
-
-anu6 = alpha.prepareMessageFromContent(bece_grup.jid,{
-"documentMessage": {
-"caption": `*「 Broadcast 」*\n\n${arg}`,
-"title": `${botname}`,
-"pageCount": 100,
-"fileName": `${ucapannya2}`,
-"url": m.quoted.url,
-"mimetype": m.quoted.mimetype,
-"fileSha256": m.quoted.fileSha256.toString('base64'),
-"fileLength": 9000000000000,
-"height": m.quoted.height,
-"width": m.quoted.width,
-"mediaKey": m.quoted.mediaKey.toString('base64'),
-"fileEncSha256": m.quoted.fileEncSha256.toString('base64'),
-"directPath": m.quoted.directPath,
-"mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
-"jpegThumbnail": pp_userz,
-"scansSidecar": m.quoted.scansSidecar,
-"scanLengths": [
-2411,
-6978,
-1298,
-861
-],
-"midQualityFileSha256": m.quoted.midQualityFileSha256.toString('base64')
-}},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
-alpha.relayWAMessage(anu6)
-
-} else if (isQuotedLocation) {
-
-anu7 = alpha.prepareMessageFromContent(bece_grup.jid,{
-"liveLocationMessage": {
-"degreesLatitude": -1.0000000,
-	"degreesLongitude": 100.0000000,
-	"caption": `*「 Broadcast 」*\n\n${arg}`,
-	"sequenceNumber": "1641356008487001",
-	"jpegThumbnail": pp_userz,
-}},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
-alpha.relayWAMessage(anu7)
-
-} else if (isQuotedAudio) {
-
-anu8 = alpha.prepareMessageFromContent(bece_grup.jid,{
-"audioMessage": {
-						"url": m.quoted.url,
-						"mimetype": m.quoted.mimetype,
-						"fileSha256": m.quoted.fileSha256.toString('base64'),
-						"fileLength": 9000000000000,
-						"seconds": 9000000000000,
-						"ptt": true,
-						"mediaKey": m.quoted.mediaKey.toString('base64'),
-						"fileEncSha256": m.quoted.fileEncSha256.toString('base64'),
-"directPath": m.quoted.directPath,
-						"mediaKeyTimestamp": m.quoted.mediaKeyTimestamp.low,
-"jpegThumbnail": pp_userz,
-}},{quoted: mek, contextInfo: { mentionedJid: [sender]}})
-alpha.relayWAMessage(anu8)
-
-}
-break
 
 case 'xbabi':
 case 'xharam':
@@ -18385,7 +18334,7 @@ var ranex = ["angry","anime","bite","bored","bread","chocolate","cookie","cuddle
 pfft = ranex[Math.floor(Math.random() * ranex.length)]
 res = await fetchJson(`https://api.satou-chan.xyz/api/endpoint/${pfft}`)
 inibuff2 = res.url
-sendStickerFromUrl(from, inibuff2)
+Sendstickerfromurl(from, inibuff2)
 break
 
 
