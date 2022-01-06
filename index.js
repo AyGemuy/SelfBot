@@ -18473,133 +18473,121 @@ let upfil3 = await wudy2_uploadFile(upfil2)
 reply2(upfil3.result.url)
 break
 
+// EMOJI
+case 'eapple':
+pft = await wudy2_emoji(`${q}`)
+emo = pft.apple
+sendStickerFromUrl(from, emo,{quoted: mek})
+break
+case 'edocomo':
+pft = await wudy2_emoji(`${q}`)
+emo = pft.docomo
+sendStickerFromUrl(from, emo,{quoted: mek})
+break
+case 'eemojidex':
+pft = await wudy2_emoji(`${q}`)
+emo = pft.emojidex
+sendStickerFromUrl(from, emo,{quoted: mek})
+break
+case 'efacebook':
+pft = await wudy2_emoji(`${q}`)
+emo = pft.facebook
+sendStickerFromUrl(from, emo,{quoted: mek})
+break
+case 'egoogle':
+pft = await wudy2_emoji(`${q}`)
+emo = pft.google
+sendStickerFromUrl(from, emo,{quoted: mek})
+break
+case 'ehtc':
+pft = await wudy2_emoji(`${q}`)
+emo = pft.htc
+sendStickerFromUrl(from, emo,{quoted: mek})
+break
+case 'ejooxpixel':
+pft = await wudy2_emoji(`${q}`)
+emo = pft.jooxpixel
+sendStickerFromUrl(from, emo,{quoted: mek})
+break
+case 'ekddi':
+pft = await wudy2_emoji(`${q}`)
+emo = pft.kddi
+sendStickerFromUrl(from, emo,{quoted: mek})
+break
+case 'elg':
+pft = await wudy2_emoji(`${q}`)
+emo = pft.lg
+sendStickerFromUrl(from, emo,{quoted: mek})
+break
+case 'emessanger':
+pft = await wudy2_emoji(`${q}`)
+emo = pft.messanger
+sendStickerFromUrl(from, emo,{quoted: mek})
+break
+case 'emicrosoft':
+pft = await wudy2_emoji(`${q}`)
+emo = pft.microsoft
+sendStickerFromUrl(from, emo,{quoted: mek})
+break
+case 'emozilla':
+pft = await wudy2_emoji(`${q}`)
+emo = pft.mozilla
+sendStickerFromUrl(from, emo,{quoted: mek})
+break
+case 'eopenemoji':
+pft = await wudy2_emoji(`${q}`)
+emo = pft.openemoji
+sendStickerFromUrl(from, emo,{quoted: mek})
+break
+case 'esamsung':
+pft = await wudy2_emoji(`${q}`)
+emo = pft.samsung
+sendStickerFromUrl(from, emo,{quoted: mek})
+break
+case 'esoftbank':
+pft = await wudy2_emoji(`${q}`)
+emo = pft.softbank
+sendStickerFromUrl(from, emo,{quoted: mek})
+break
+case 'etwitter':
+pft = await wudy2_emoji(`${q}`)
+emo = pft.twitter
+sendStickerFromUrl(from, emo,{quoted: mek})
+break
+case 'ewhatsapp':
+pft = await wudy2_emoji(`${q}`)
+emo = pft.whatsapp
+sendStickerFromUrl(from, emo,{quoted: mek})
+break
+
 case 'emoji2':
-if (!q) return reply1('Kasi emoj')
-const emo_1 = [
-{title: `${q} apple`, description: "", rowId: "eapple"},
-{title: `${q} docomo`, description: "", rowId: "edocomo"},
-{title: `${q} emojidex`, description: "", rowId: "eemojidex"},
-{title: `${q} facebook`, description: "", rowId: "efacebook"},
-{title: `${q} google`, description: "", rowId: "egoogle"},
-{title: `${q} htc`, description: "", rowId: "ehtc"},
-{title: `${q} jooxpixel`, description: "", rowId: "ejooxpixel"},
-{title: `${q} kddi`, description: "", rowId: "ekddi"},
-{title: `${q} lg`, description: "", rowId: "elg"},
-{title: `${q} messanger`, description: "", rowId: "emessanger"},
-{title: `${q} microsoft`, description: "", rowId: "emicrosoft"},
-{title: `${q} mozilla`, description: "", rowId: "emozilla"},
-{title: `${q} openemoji`, description: "", rowId: "eopenemoji"},
-{title: `${q} samsung`, description: "", rowId: "esamsung"},
-{title: `${q} softbank`, description: "", rowId: "esoftbank"},
-{title: `${q} twitter`, description: "", rowId: "etwitter"},
-{title: `${q} whatsapp`, description: "", rowId: "ewhatsapp"}
-]
-const emo_2 = [{title: " ⸙ EMOJI ⸙ ", rows: emo_1}]
-const emo_3 = {
-buttonText: `${emoj2} Pilih !`,
-description: `*${ucapannya2} @${sender.split("@")[0]}*\n\nSilahkan pilih jenis dibawah`,
-sections: emo_2,
-footerText: `Thanks @${sender.split("@")[0]} !`,
-listType: 1
+if (!q) return reply1('Emoj')
+fa = await fetchJson(`${KocakApi}/api/random/text/katabijak`)
+fak = fa.result
+list = []
+listmenu = [`eapple`,`egoogle`,`esamsung`,`emicrosoft`,`ewhatsapp`,`etwitter`,`efacebook`,`ejooxpixel`,`eopenemoji`,`eemojidex`,`emessanger`,`elg`,`ehtc`,`emozilla`,`esoftbank`,`edocomo`,`ekddi`]
+listmenuu = [`${q} apple`,`${q} google`,`${q} samsung`,`${q} microsoft`,`${q} whatsapp`,`${q} twitter`,`${q} facebook`,`${q} jooxPixel`,`${q} openemoji`,`${q} emojidex`,`${q} messanger`,`${q} LG`,`${q} HTC`,`${q} mozilla`,`${q} softbank`,`${q} docomo`,`${q} KDDI`]
+nombor = 1
+nombor2 = 0
+for (let x of listmenuu) {
+const yy = {title: 'Sub menu ke -'+ nombor++,
+rows: [
+{
+title: `${listmenu[nombor2++]} ${q}`,
+description: `${x}`,
+rowId: ``
 }
-await alpha.sendMessage(from, emo_3, MessageType.listMessage, {
-"contextInfo": {
-"forwardingScore": 999,isForwarded: false,
-"mentionedJid" : [sender]},
-quoted: mek, sendEphemeral: true
-})
+]
+}
+list.push(yy)
+}
+listmsg(from, `${ucapanWaktu}`, `${ucapannya2} @${sender.split('@')[0]}\n\n*Fakta hari ini :* \n${fak}`, list)
 break
 
 
 //Ends
 default:
 //-----------------------[ STIKER ]-------------------//
-// EMOJI
-if (q5 == "eapple"){
-pft = await wudy2_emoji(`${q}`)
-emo = pft.apple
-sendStickerFromUrl(from, emo,{quoted: mek})
-}
-if (q5 == "edocomo"){
-pft = await wudy2_emoji(`${q}`)
-emo = pft.docomo
-sendStickerFromUrl(from, emo,{quoted: mek})
-}
-if (q5 == "eemojidex"){
-pft = await wudy2_emoji(`${q}`)
-emo = pft.emojidex
-sendStickerFromUrl(from, emo,{quoted: mek})
-}
-if (q5 == "efacebook"){
-pft = await wudy2_emoji(`${q}`)
-emo = pft.facebook
-sendStickerFromUrl(from, emo,{quoted: mek})
-}
-if (q5 == "egoogle"){
-pft = await wudy2_emoji(`${q}`)
-emo = pft.google
-sendStickerFromUrl(from, emo,{quoted: mek})
-}
-if (q5 == "ehtc"){
-pft = await wudy2_emoji(`${q}`)
-emo = pft.htc
-sendStickerFromUrl(from, emo,{quoted: mek})
-}
-if (q5 == "ejooxpixel"){
-pft = await wudy2_emoji(`${q}`)
-emo = pft.jooxpixel
-sendStickerFromUrl(from, emo,{quoted: mek})
-}
-if (q5 == "ekddi"){
-pft = await wudy2_emoji(`${q}`)
-emo = pft.kddi
-sendStickerFromUrl(from, emo,{quoted: mek})
-}
-if (q5 == "elg"){
-pft = await wudy2_emoji(`${q}`)
-emo = pft.lg
-sendStickerFromUrl(from, emo,{quoted: mek})
-}
-if (q5 == "emessanger"){
-pft = await wudy2_emoji(`${q}`)
-emo = pft.messanger
-sendStickerFromUrl(from, emo,{quoted: mek})
-}
-if (q5 == "emicrosoft"){
-pft = await wudy2_emoji(`${q}`)
-emo = pft.microsoft
-sendStickerFromUrl(from, emo,{quoted: mek})
-}
-if (q5 == "emozilla"){
-pft = await wudy2_emoji(`${q}`)
-emo = pft.mozilla
-sendStickerFromUrl(from, emo,{quoted: mek})
-}
-if (q5 == "eopenemoji"){
-pft = await wudy2_emoji(`${q}`)
-emo = pft.openemoji
-sendStickerFromUrl(from, emo,{quoted: mek})
-}
-if (q5 == "esamsung"){
-pft = await wudy2_emoji(`${q}`)
-emo = pft.samsung
-sendStickerFromUrl(from, emo,{quoted: mek})
-}
-if (q5 == "esoftbank"){
-pft = await wudy2_emoji(`${q}`)
-emo = pft.softbank
-sendStickerFromUrl(from, emo,{quoted: mek})
-}
-if (q5 == "etwitter"){
-pft = await wudy2_emoji(`${q}`)
-emo = pft.twitter
-sendStickerFromUrl(from, emo,{quoted: mek})
-}
-if (q5 == "ewhatsapp"){
-pft = await wudy2_emoji(`${q}`)
-emo = pft.whatsapp
-sendStickerFromUrl(from, emo,{quoted: mek})
-}
 
 //______________//
 if (q5 == "q_anime"){
