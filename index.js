@@ -18579,7 +18579,7 @@ case 'neko':
 case 'loli':
 case 'husbu':
 case 'waifu':
-let hus_1 = await getBuffer(`${XcoderApi}/api/anime/husbu?apikey=7iyNa0qA`);
+let hus_1 = await getBuffer(`${XcoderApi}/api/anime/${command}?apikey=7iyNa0qA`);
 const hus_3 = await alpha.prepareMessage(from, hus_1, MessageType.image, { thumbnail:thumb_miku})
 let hus_2 = hus_3.message["ephemeralMessage"] ? hus_3.message.ephemeralMessage : hus_3
 hus_5 = `*${jwb_oke}* ${emoj}`
@@ -18829,13 +18829,13 @@ listmenu = [`angry`,`anime`,`bite`,`bored`,`bread`,`chocolate`,`cookie`,`cuddle`
 listmenuu = [`${emoj3} Sticker angry`,`${emoj3} Sticker anime`,`${emoj3} Sticker bite`,`${emoj3} Sticker bored`,`${emoj3} Sticker bread`,`${emoj3} Sticker chocolate`,`${emoj3} Sticker cookie`,`${emoj3} Sticker cuddle`,`${emoj3} Sticker dance`,`${emoj3} Sticker drunk`,`${emoj3} Sticker happy`,`${emoj3} Sticker kill`,`${emoj3} Sticker kiss`,`${emoj3} Sticker laugh`,`${emoj3} Sticker lick`,`${emoj3} Sticker lonely`,`${emoj3} Sticker pat`,`${emoj3} Sticker poke`,`${emoj3} Sticker pregnant`,`${emoj3} Sticker punch`,`${emoj3} Sticker run`,`${emoj3} Sticker satouselfies`,`${emoj3} Sticker sleep`,`${emoj3} Sticker spank`,`${emoj3} Sticker spit`,`${emoj3} Sticker steal`,`${emoj3} Sticker tickle`]
 nombor = 1
 nombor2 = 0
-for (let grepp of listmenu) {
+for (let x of listmenu) {
 const yy = {title: 'Stiker ke -'+ nombor++,
 rows: [
 {
 title: `${listmenuu[nombor2++]}`,
 description: ``,
-rowId: `${prefix}satouchan ${grepp}`
+rowId: `${prefix}satouchan ${x}`
 }
 ]
 }
@@ -18845,7 +18845,7 @@ listmsg(from, `${ucapanWaktu}`, `${ucapannya2} @${sender.split('@')[0]}\n\n*${mo
 break
 
 case 'satouchan':
-res = fetchJson(`https://api.satou-chan.xyz/api/endpoint/${grepp}`)
+res = fetchJson(`https://api.satou-chan.xyz/api/endpoint/${command.slice(10)}`)
 inibuff = res.url
 sendStickerFromUrl(from, inibuff,{quoted: mek})
 break
