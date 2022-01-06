@@ -18835,7 +18835,7 @@ rows: [
 {
 title: `${listmenuu[nombor2++]}`,
 description: ``,
-rowId: `${prefix}satouchan ${x}`
+rowId: `${prefix}satou${x}`
 }
 ]
 }
@@ -18844,8 +18844,34 @@ list.push(yy)
 listmsg(from, `${ucapanWaktu}`, `${ucapannya2} @${sender.split('@')[0]}\n\n*${motiv}*`, list)
 break
 
-case 'satouchan':
-res = await fetchJson(`https://api.satou-chan.xyz/api/endpoint/${x}`)
+case 'satouangry':
+case 'satouanime':
+case 'satoubite':
+case 'satoubored':
+case 'satoubread':
+case 'satouchocolate':
+case 'satoucookie':
+case 'satoucuddle':
+case 'satoudance':
+case 'satoudrunk':
+case 'satouhappy':
+case 'satoukill':
+case 'satoukiss':
+case 'satoulaugh':
+case 'satoulick':
+case 'satoulonely':
+case 'satoupat':
+case 'satoupoke':
+case 'satoupregnant':
+case 'satoupunch':
+case 'satourun':
+case 'satousatouselfies':
+case 'satousleep':
+case 'satouspank':
+case 'satouspit':
+case 'satousteal':
+case 'satoutickle':
+res = await fetchJson(`https://api.satou-chan.xyz/api/endpoint/${command.slice(5)}`)
 inibuff = res.url
 sendStickerFromUrl(from, inibuff,{quoted: mek})
 break
