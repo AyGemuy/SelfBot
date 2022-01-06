@@ -15618,8 +15618,8 @@ break
 case 'game':
 case 'games':
 case 'permainan':
-mo = await fetchJson(`${KocakApi}/api/random/text/faktaunik`)
-motiv = mo.result
+mo = await fetchJson(`${XrestApi}/api/random-bucin?apikey=BETA`)
+motiv = mo.bucin
 list = []
 listmenu = [`asahotak`,`caklontong`,`caklontong2`,`caklontong3`,`family100`,`math`,`math2`,`recaptcha`,`sambungkata`,`siapaaku`,`siapakahaku`,`susunkata`,`susunkata2`,`tebakan`,`tebakan2`,`tebakanime`,`tebakbendera`,`tebakgambar`,`tebakgambar2`,`tebakgambar3`,`tebakgambar4`,`tebakgambar5`,`tebakjenaka`,`tebakkalimat`,`tebakkata`,`tebakkata2`,`tebakkimia`,`tebaklirik`,`tebakaplikasi`,`tebakgabut`,`tebakkabupaten`,`tebaklucu`,`tebaklagu`,`teswibu`,`tebakhewan`,`tebakbuah`,`cariemoji`]
 listmenuu = [`${emoj} Asah otak`,`${emoj3} Cak lontong`,`${emoj} Cak lontong2`,`${emoj3} Cak lontong3`,`${emoj} Family 100`,`${emoj3} Math`,`${emoj} Math 2`,`${emoj3} Recaptcha`,`${emoj} Sambung kata`,`${emoj3} Siapa aku`,`${emoj} Siapakah aku`,`${emoj3} Susun kata`,`${emoj} Susun kata2`,`${emoj} Tebakan`,`${emoj3} Tebakan2`,`${emoj} Tebak anime`,`${emoj3} Tebak bendera`,`${emoj} Tebak gambar`,`${emoj3} Tebak gambar2`,`${emoj} Tebak gambar3`,`${emoj3} Tebak gambar4`,`${emoj} Tebak gambar5`,`${emoj3} Tebak jenaka`,`${emoj} Tebak kalimat`,`${emoj3} Tebak kata`,`${emoj} Tebak kata2`,`${emoj3} Tebak kimia`,`${emoj} Tebak lirik`,`${emoj3} Tebak aplikasi`,`${emoj} Tebak gabut`,`${emoj3} Tebak kabupaten`,`${emoj} Tebak lucu`,`${emoj3} Tebak lagu`,`${emoj} Tes wibu`,`${emoj3} Tebak hewan`,`${emoj} Tebak buah`,`${emoj3} Cari emoji`]
@@ -15637,7 +15637,7 @@ rowId: `${prefix}${x}`
 }
 list.push(yy)
 }
-listmsg(from, `${ucapanWaktu}`, `${ucapannya2} @${sender.split('@')[0]}\n\n*Motivasi hari ini :* \n${motiv}`, list)
+listmsg(from, `${ucapanWaktu}`, `${ucapannya2} @${sender.split('@')[0]}\n\n*${motiv}*`, list)
 break
 
 case '3d-nature':
@@ -18416,8 +18416,8 @@ break
 
 case 'emoji2':
 if (!q) return reply1('Emoj')
-mo = await fetchJson(`${KocakApi}/api/random/text/faktaunik`)
-motiv = mo.result
+mo = await fetchJson(`${XrestApi}/api/random-bucin?apikey=BETA`)
+motiv = mo.bucin
 list = []
 listmenu = [`eapple`,`egoogle`,`esamsung`,`emicrosoft`,`ewhatsapp`,`etwitter`,`efacebook`,`ejooxpixel`,`eopenemoji`,`eemojidex`,`emessanger`,`elg`,`ehtc`,`emozilla`,`esoftbank`,`edocomo`,`ekddi ${q}`]
 listmenuu = [`Emoji apple `,`Emoji google `,`Emoji samsung `,`Emoji microsoft `,`Emoji whatsapp `,`Emoji twitter `,`Emoji facebook `,`Emoji jooxpixel `,`Emoji openemoji `,`Emoji emojidex `,`Emoji messanger `,`Emoji lg `,`Emoji htc `,`Emoji mozilla `,`Emoji softbank `,`Emoji docomo `,`Emoji kddi`]
@@ -18435,7 +18435,7 @@ rowId: `${prefix}${x} ${q}`
 }
 list.push(yy)
 }
-listmsg(from, `${ucapanWaktu}`, `${ucapannya2} @${sender.split('@')[0]}\n\n*Motivasi hari ini :* \n${motiv}`, list)
+listmsg(from, `${ucapanWaktu}`, `${ucapannya2} @${sender.split('@')[0]}\n\n*${motiv}*`, list)
 break
 
 // EMOJI
@@ -18526,8 +18526,8 @@ sendStickerFromUrl(from, emo,{quoted: mek})
 break
 
 case 'waifu':
-mo = await fetchJson(`${KocakApi}/api/random/text/faktaunik`)
-motiv = mo.result
+mo = await fetchJson(`${XrestApi}/api/random-bucin?apikey=BETA`)
+motiv = mo.bucin
 list = []
 listmenu = [`random-a`,`random-b`,`random-c`,`yeet`,`trap`,`waifu`,`neko`,`blowjob`,`awoo`,`bite`,`blush`,`bonk`,`bully`,`cringe`,`cry`,`cuddle`,`dance`,`glomp`,`handhold`,`happy`,`highfive`,`hug`,`kick`,`kill`,`kiss`,`lick`,`megumin`,`nom`,`pat`,`poke`,`shinobu`,`slap`,`smile`,`smug`,`wave`,`wink`,`yeet`]
 listmenuu = [`${emoj3} Random A`,`${emoj3} Random B`,`${emoj3} Random C`,`${emoj3} Nsfw yeet`,`${emoj3} Nsfw trap`,`${emoj3} Nsfw waifu`,`${emoj3} Nsfw neko`,`${emoj3} Nsfw blowjob`,`${emoj3} Sfw awoo`,`${emoj3} Sfw bite`,`${emoj3} Sfw blush`,`${emoj3} Sfw bonk`,`${emoj3} Sfw bully`,`${emoj3} Sfw cringe`,`${emoj3} Sfw cry`,`${emoj3} Sfw cuddle`,`${emoj3} Sfw dance`,`${emoj3} Sfw glomp`,`${emoj3} Sfw handhold`,`${emoj3} Sfw happy`,`${emoj3} Sfw highfive`,`${emoj3} Sfw hug`,`${emoj3} Sfw kick`,`${emoj3} Sfw kill`,`${emoj3} Sfw kiss`,`${emoj3} Sfw lick`,`${emoj3} Sfw megumin`,`${emoj3} Sfw nom`,`${emoj3} Sfw pat`,`${emoj3} Sfw poke`,`${emoj3} Sfw shinobu`,`${emoj3} Sfw slap`,`${emoj3} Sfw smile`,`${emoj3} Sfw smug`,`${emoj3} Sfw wave`,`${emoj3} Sfw wink`,`${emoj3} Sfw yeet`]
@@ -18545,7 +18545,7 @@ rowId: `${prefix}${x}`
 }
 list.push(yy)
 }
-listmsg(from, `${ucapanWaktu}`, `${ucapannya2} @${sender.split('@')[0]}\n\n*Motivasi hari ini :* \n${motiv}`, list)
+listmsg(from, `${ucapanWaktu}`, `${ucapannya2} @${sender.split('@')[0]}\n\n*${motiv}*`, list)
 break
 
 case 'neko':
@@ -18969,6 +18969,8 @@ reply1('Oke bg')
 }
 
 if (subscribezeeoneofc == 'x_menu') {
+mo = await fetchJson(`${XrestApi}/api/random-bucin?apikey=BETA`)
+motiv = mo.bucin
 list = []
 listmenu = [`All menu bot`,`animemenu`,`asupan menu`,`convertmenu`,`downloadmenu`,`funmenu`,`gacha cecan`,`gacha cogan`,`image effect`,`makermenu`,`nsfw menu`,`othermenu`,`ownermenu`,`quotesmenu`,`set sticker cmd`,`storagemenu`,`tagmenu`,`telegram sticker`,`upmenu`]
 listmenuu = [`${emoj} All menu bot`,`${emoj3} Anime menu`,`${emoj} Asupan menu`,`${emoj3} Convert menu`,`${emoj} Download menu`,`${emoj3} Fun menu`,`${emoj} Gacha cecan`,`${emoj3} Gacha cogan`,`${emoj} Image effect`,`${emoj3} Maker menu`,`${emoj} Nsfw menu`,`${emoj3} Other menu`,`${emoj} Owner menu`,`${emoj3} Quotes menu`,`${emoj} Set sticker cmd`,`${emoj3} Storage menu`,`${emoj} Tag menu`,`${emoj3} Telegram sticker`,`${emoj} Up menu`]
@@ -18986,7 +18988,7 @@ rowId: ``
 }
 list.push(yy)
 }
-listmsg(from, `${ucapanWaktu}`, `${ucapannya2} @${sender.split('@')[0]}\n\n*MENU NYA KAK*`, list)
+listmsg(from, `${ucapanWaktu}`, `${ucapannya2} @${sender.split('@')[0]}\n\n*${motiv}*`, list)
 }
 
 if (q5 == "very_easy"){
