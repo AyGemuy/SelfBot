@@ -7555,8 +7555,13 @@ if (!isGroup) return reply1(lang.onlygc())
 if (isAfkOn) return 
 reason = q ? q : 'Nothing'
 off.addAfkUser(sender, Date.now(), reason, _off)
-papa = `\n*@${sender.split('@')[0]}* sekarang AFK\n*Alasan :* ${reason}\n`
-alpha.sendMessage(from,papa, text,{quoted : mek,contextInfo: {mentionedJid: [sender]}})
+but = [{ buttonId: 'Oke', buttonText: { displayText: 'Gak jadi' }, type: 1 }]
+sendButton(from, `\n*@${sender.split('@')[0]}* sekarang AFK\n*Alasan :* ${reason}\n`, `Gak jadi?`, but, {
+"contextInfo": {
+"forwardingScore": 999,isForwarded: false,
+"mentionedJid" : [sender]},
+quoted: mek, sendEphemeral: true
+})
 break
 
 case 'autoread':
@@ -18791,29 +18796,29 @@ ger = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTex
 // Wait //
 owgi = await alpha.downloadAndSaveMediaMessage(ger)
 Okelor = await imgbb(`${img_key}`, owgi)
-pdfnye = await getBuffer(`https://api.lolhuman.xyz/api/convert/imgtopdf?apikey=${lolkey}&img=${Okelor.display_url}`)
-sendFakeAud(from, pdfnye)
+pdfnye = await getBuffer(`${LolApi}/api/convert/imgtopdf?apikey=${lolkey}&img=${Okelor.display_url}`)
+sendFakePdf(from, pdfnye)
 } else if (isQuotedImage) {
 ger = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 // Wait //
 owgi = await alpha.downloadAndSaveMediaMessage(ger)
 qbc = await imgbb(`${img_key}`, owgi)
-pdfnye = await getBuffer(`https://api.lolhuman.xyz/api/convert/imgtopdf?apikey=${lolkey}&img=${qbc.display_url}`)
-sendFakeAud(from, pdfnye)
+pdfnye = await getBuffer(`${LolApi}/api/convert/imgtopdf?apikey=${lolkey}&img=${qbc.display_url}`)
+sendFakePdf(from, pdfnye)
 } else if (isQuotedVideo) {
 ger = isQuotedVideo ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 // Wait //
 owgi = await alpha.downloadAndSaveMediaMessage(ger)
 ffff = await imgbb(`${img_key}`, owgi)
-pdfnye = await getBuffer(`https://api.lolhuman.xyz/api/convert/imgtopdf?apikey=${lolkey}&img=${ffff.display_url}`)
-sendFakeAud(from, pdfnye)
+pdfnye = await getBuffer(`${LolApi}/api/convert/imgtopdf?apikey=${lolkey}&img=${ffff.display_url}`)
+sendFakePdf(from, pdfnye)
 } else if (isQuotedSticker) {
 ger = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 // Wait //
 owgi = await alpha.downloadAndSaveMediaMessage(ger)
 vrr = await imgbb(`${img_key}`, owgi)
-pdfnye = await getBuffer(`https://api.lolhuman.xyz/api/convert/imgtopdf?apikey=${lolkey}&img=${vrr.display_url}`)
-sendFakeAud(from, pdfnye)
+pdfnye = await getBuffer(`${LolApi}/api/convert/imgtopdf?apikey=${lolkey}&img=${vrr.display_url}`)
+sendFakePdf(from, pdfnye)
 } 
 break
 
