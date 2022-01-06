@@ -14515,27 +14515,6 @@ break
 
 
 //───────────────[ FITUR IMAGE ]───────────────//
-case 'waifu':
-const w_1 = [
-{title: `${emoj} Waifu 1`, description: "", rowId:"waifu_1"},
-{title: `${emoj} Waifu 2`, description: "", rowId:"waifu_2"},
-{title: `${emoj} Waifu 3`, description: "", rowId:"waifu_3"}
-]
-const w_2 = [{title: `${emoj} ⸙ WAIFU ⸙ ${emoj}`, rows: w_1}]
-const w_3 = {
-buttonText: `${emoj} Waifu Disini`,
-description: `*${ucapannya2} @${sender.split("@")[0]}*\n\n⌕ *MENU WAIFU*`,
-sections: w_2,
-footerText: `Thanks @${sender.split("@")[0]} !`,
-listType: 1
-}
-await alpha.sendMessage(from, w_3, MessageType.listMessage, {
-"contextInfo": {
-"forwardingScore": 999,isForwarded: false,
-"mentionedJid" : [sender]},
-quoted: mek, sendEphemeral: true
-})
-break
 
 case 'pinterest':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} noob`) 
@@ -18466,17 +18445,8 @@ but = [{buttonId: `teledown ${q}`, buttonText: {displayText: `Download Full ${in
 sendButton(from, `*Total:* ${inibuff.length} Sticker${enter}*Link:* ${q}`, `Download dibawah${enter}⚠️ Note: SPAM ${inibuff.length} Sticker`, but)
 break
 
-case 'upfile':
-let upfil = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
-let upfil2 = await alpha.downloadAndSaveMediaMessage(upfil)
-upfil3 = await wudy2_uploadFile(upfil2)
-reply2(upfil3.result.url)
-break
-
 case 'emoji2':
 if (!q) return reply1('Emoj')
-fa = await fetchJson(`${KocakApi}/api/random/text/katabijak`)
-fak = fa.result
 list = []
 listmenu = [`eapple`,`egoogle`,`esamsung`,`emicrosoft`,`ewhatsapp`,`etwitter`,`efacebook`,`ejooxpixel`,`eopenemoji`,`eemojidex`,`emessanger`,`elg`,`ehtc`,`emozilla`,`esoftbank`,`edocomo`,`ekddi`]
 listmenuu = [`apple`,`google`,`samsung`,`microsoft`,`whatsapp`,`twitter`,`facebook`,`jooxpixel`,`openemoji`,`emojidex`,`messanger`,`lg`,`htc`,`mozilla`,`softbank`,`docomo`,`kddi`]
@@ -18487,14 +18457,14 @@ const yy = {title: 'Sub menu ke -'+ nombor++,
 rows: [
 {
 title: `${listmenu[nombor2++]} ${q}`,
-description: `${q} Emoji ${x} `,
-rowId: `${listmenu[nombor2++]} ${q}`
+description: `${q} Emoji ${x}`,
+rowId: ``
 }
 ]
 }
 list.push(yy)
 }
-listmsg(from, `${ucapanWaktu}`, `${ucapannya2} @${sender.split('@')[0]}\n\n*Fakta hari ini :* \n${fak}`, list)
+listmsg(from, `${ucapanWaktu}`, `${ucapannya2} @${sender.split('@')[0]}\n\n*PILIH KAK*`, list)
 break
 
 // EMOJI
@@ -18584,6 +18554,206 @@ emo = pft.whatsapp
 sendStickerFromUrl(from, emo,{quoted: mek})
 break
 
+case 'waifu':
+list = []
+listmenu = [`random-a`,`random-b`,`random-c`,`awoo`,`bite`,`blush`,`bonk`,`bully`,`cringe`,`cry`,`cuddle`,`dance`,`glomp`,`handhold`,`happy`,`highfive`,`hug`,`kick`,`kill`,`kiss`,`lick`,`megumin`,`nom`,`pat`,`poke`,`shinobu`,`slap`,`smile`,`smug`,`wave`,`wink`,`yeet`]
+listmenuu = [`${emoj3} Random A`,`${emoj3} Random B`,`${emoj3} Random B`,`${emoj3} Sfw awoo`,`${emoj3} Sfw bite`,`${emoj3} Sfw blush`,`${emoj3} Sfw bonk`,`${emoj3} Sfw bully`,`${emoj3} Sfw cringe`,`${emoj3} Sfw cry`,`${emoj3} Sfw cuddle`,`${emoj3} Sfw dance`,`${emoj3} Sfw glomp`,`${emoj3} Sfw handhold`,`${emoj3} Sfw happy`,`${emoj3} Sfw highfive`,`${emoj3} Sfw hug`,`${emoj3} Sfw kick`,`${emoj3} Sfw kill`,`${emoj3} Sfw kiss`,`${emoj3} Sfw lick`,`${emoj3} Sfw megumin`,`${emoj3} Sfw nom`,`${emoj3} Sfw pat`,`${emoj3} Sfw poke`,`${emoj3} Sfw shinobu`,`${emoj3} Sfw slap`,`${emoj3} Sfw smile`,`${emoj3} Sfw smug`,`${emoj3} Sfw wave`,`${emoj3} Sfw wink`,`${emoj3} Sfw yeet`]
+nombor = 1
+nombor2 = 0
+for (let x of listmenuu) {
+const yy = {title: 'Waifu ke -'+ nombor++,
+rows: [
+{
+title: `${listmenu[nombor2++]}`,
+description: `${x}`,
+rowId: ``
+}
+]
+}
+list.push(yy)
+}
+listmsg(from, `${ucapanWaktu}`, `${ucapannya2} @${sender.split('@')[0]}\n\n*WAIFU NYA KAK*`, list)
+break
+
+case 'random-a':
+wafu1_1 = await fetchJson(`${XrestApi}/api/random-waifu?apikey=BETA`);
+let wafu1_2 = await getBuffer(wafu1_1.link);
+const wafu1_3 = await alpha.prepareMessage(from, wafu1_2, MessageType.image, { thumbnail:thumb_nime})
+let wafu1_4 = wafu1_3.message["ephemeralMessage"] ? wafu1_3.message.ephemeralMessage : wafu1_3
+wafu1_6 = `*${jwb_oke}* ${emoj}`
+const wafu1_7 = [
+{buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
+{buttonId: `menu`, buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+]
+const wafu1_8 = {
+contentText: wafu1_6 ,
+footerText: `Thanks @${sender.split("@")[0]} !`,
+buttons: wafu1_7,
+headerType: 4,
+imageMessage: wafu1_4.message.imageMessage
+}
+alpha.sendMessage(from, wafu1_8, MessageType.buttonsMessage,{
+"contextInfo": {
+"forwardingScore": 999,isForwarded: false,
+"externalAdReply": {
+"title": `${ucapannya2}` ,
+"body": `${botname}`,
+"sourceUrl": apiku,
+"thumbnail": thumb_nime},
+"mentionedJid" : [sender]},
+quoted: mek, sendEphemeral: true 
+})
+break
+
+case 'random-b':
+let wafu2_2 = await getBuffer(`${LolApi}/api/random/waifu?apikey=${lolkey}`);
+const wafu2_3 = await alpha.prepareMessage(from, wafu2_2, MessageType.image, { thumbnail:thumb_nime})
+let wafu2_4 = wafu2_3.message["ephemeralMessage"] ? wafu2_3.message.ephemeralMessage : wafu2_3
+wafu2_6 = `*${jwb_oke}* ${emoj}`
+const wafu2_7 = [
+{buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
+{buttonId: `menu`, buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+]
+const wafu2_8 = {
+contentText: wafu2_6 ,
+footerText: `Thanks @${sender.split("@")[0]} !`,
+buttons: wafu2_7,
+headerType: 4,
+imageMessage: wafu2_4.message.imageMessage
+}
+alpha.sendMessage(from, wafu2_8, MessageType.buttonsMessage,{
+"contextInfo": {
+"forwardingScore": 999,isForwarded: false,
+"externalAdReply": {
+"title": `${ucapannya2}` ,
+"body": `${botname}`,
+"sourceUrl": apiku,
+"thumbnail": thumb_nime},
+"mentionedJid" : [sender]},
+quoted: mek, sendEphemeral: true 
+})
+break
+
+case 'random-c':
+let wafu3_2 = await getBuffer(`${IchikaApi}/api/image/waifu?apikey=slAuPQiV`);
+const wafu3_3 = await alpha.prepareMessage(from, wafu3_2, MessageType.image, { thumbnail:thumb_nime})
+let wafu3_4 = wafu3_3.message["ephemeralMessage"] ? wafu3_3.message.ephemeralMessage : wafu3_3
+wafu3_6 = `*${jwb_oke}* ${emoj}`
+const wafu3_7 = [
+{buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
+{buttonId: `menu`, buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+]
+const wafu3_8 = {
+contentText: wafu3_6 ,
+footerText: `Thanks @${sender.split("@")[0]} !`,
+buttons: wafu3_7,
+headerType: 4,
+imageMessage: wafu3_4.message.imageMessage
+}
+alpha.sendMessage(from, wafu3_8, MessageType.buttonsMessage,{
+"contextInfo": {
+"forwardingScore": 999,isForwarded: false,
+"externalAdReply": {
+"title": `${ucapannya2}` ,
+"body": `${botname}`,
+"sourceUrl": apiku,
+"thumbnail": thumb_nime},
+"mentionedJid" : [sender]},
+quoted: mek, sendEphemeral: true 
+})
+break
+
+case 'awoo':
+case 'bite':
+case 'blush':
+case 'bonk':
+case 'bully':
+case 'cringe':
+case 'cry':
+case 'cuddle':
+case 'dance':
+case 'glomp':
+case 'handhold':
+case 'happy':
+case 'highfive':
+case 'hug':
+case 'kick':
+case 'kill':
+case 'kiss':
+case 'lick':
+case 'megumin':
+case 'nom':
+case 'pat':
+case 'poke':
+case 'shinobu':
+case 'slap':
+case 'smile':
+case 'smug':
+case 'wave':
+case 'wink':
+case 'yeet':
+wafu_1 = await fetchJson(`https://waifu.pics/api/sfw/${command}`);
+let wafu_2 = await getBuffer(wafu_1.url);
+const wafu_3 = await alpha.prepareMessage(from, wafu_2, MessageType.image, { thumbnail:thumb_nime})
+let wafu_4 = wafu_3.message["ephemeralMessage"] ? wafu_3.message.ephemeralMessage : wafu_3
+wafu_6 = `*${jwb_oke}* ${emoj}`
+const wafu_7 = [
+{buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
+{buttonId: `menu`, buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+]
+const wafu_8 = {
+contentText: wafu_6 ,
+footerText: `Thanks @${sender.split("@")[0]} !`,
+buttons: wafu_7,
+headerType: 4,
+imageMessage: wafu_4.message.imageMessage
+}
+alpha.sendMessage(from, wafu_8, MessageType.buttonsMessage,{
+"contextInfo": {
+"forwardingScore": 999,isForwarded: false,
+"externalAdReply": {
+"title": `${ucapannya2}` ,
+"body": `${botname}`,
+"sourceUrl": apiku,
+"thumbnail": thumb_nime},
+"mentionedJid" : [sender]},
+quoted: mek, sendEphemeral: true 
+})
+break
+
+case 'yeet':
+case 'trap':
+case 'waifu':
+case 'neko':
+case 'blowjob':
+wafu__1 = await fetchJson(`https://waifu.pics/api/nsfw/${command}`);
+let wafu__2 = await getBuffer(wafu__1.url);
+const wafu__3 = await alpha.prepareMessage(from, wafu__2, MessageType.image, { thumbnail:thumb_nime})
+let wafu__4 = wafu__3.message["ephemeralMessage"] ? wafu__3.message.ephemeralMessage : wafu__3
+wafu__6 = `*${jwb_oke}* ${emoj}`
+const wafu__7 = [
+{buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
+{buttonId: `menu`, buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
+]
+const wafu__8 = {
+contentText: wafu__6 ,
+footerText: `Thanks @${sender.split("@")[0]} !`,
+buttons: wafu__7,
+headerType: 4,
+imageMessage: wafu__4.message.imageMessage
+}
+alpha.sendMessage(from, wafu__8, MessageType.buttonsMessage,{
+"contextInfo": {
+"forwardingScore": 999,isForwarded: false,
+"externalAdReply": {
+"title": `${ucapannya2}` ,
+"body": `${botname}`,
+"sourceUrl": apiku,
+"thumbnail": thumb_nime},
+"mentionedJid" : [sender]},
+quoted: mek, sendEphemeral: true 
+})
+break
 
 //Ends
 default:
@@ -18794,8 +18964,6 @@ reply1('Oke bg')
 }
 
 if (subscribezeeoneofc == 'x_menu') {
-fa = await fetchJson(`${KocakApi}/api/random/text/katabijak`)
-fak = fa.result
 list = []
 listmenu = [`All menu bot`,`animemenu`,`asupan menu`,`convertmenu`,`downloadmenu`,`funmenu`,`gacha cecan`,`gacha cogan`,`image effect`,`makermenu`,`nsfw menu`,`othermenu`,`ownermenu`,`quotesmenu`,`set sticker cmd`,`storagemenu`,`tagmenu`,`telegram sticker`,`upmenu`]
 listmenuu = [`${emoj} All menu bot`,`${emoj3} Anime menu`,`${emoj} Asupan menu`,`${emoj3} Convert menu`,`${emoj} Download menu`,`${emoj3} Fun menu`,`${emoj} Gacha cecan`,`${emoj3} Gacha cogan`,`${emoj} Image effect`,`${emoj3} Maker menu`,`${emoj} Nsfw menu`,`${emoj3} Other menu`,`${emoj} Owner menu`,`${emoj3} Quotes menu`,`${emoj} Set sticker cmd`,`${emoj3} Storage menu`,`${emoj} Tag menu`,`${emoj3} Telegram sticker`,`${emoj} Up menu`]
@@ -18813,7 +18981,7 @@ rowId: ``
 }
 list.push(yy)
 }
-listmsg(from, `${ucapanWaktu}`, `${ucapannya2} @${sender.split('@')[0]}\n\n*Fakta hari ini :* \n${fak}`, list)
+listmsg(from, `${ucapanWaktu}`, `${ucapannya2} @${sender.split('@')[0]}\n\n*MENU NYA KAK*`, list)
 }
 
 if (q5 == "very_easy"){
@@ -18966,93 +19134,6 @@ fs.writeFileSync("./game/math3.json", JSON.stringify(math3))
 }
 }
 
-if (q5 == "waifu_1"){
-let wifu_2 = await getBuffer(`${IchikaApi}/api/image/waifu?apikey=slAuPQiV`);
-const wifu_3 = await alpha.prepareMessage(from, wifu_2, MessageType.image, { thumbnail:thumb_nime})
-let wifu_4 = wifu_3.message["ephemeralMessage"] ? wifu_3.message.ephemeralMessage : wifu_3
-wifu_6 = `*${jwb_oke}* ${emoj}`
-const wifu_7 = [
-{buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
-{buttonId: `menu`, buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
-]
-const wifu_8 = {
-contentText: wifu_6 ,
-footerText: `Thanks @${sender.split("@")[0]} !`,
-buttons: wifu_7,
-headerType: 4,
-imageMessage: wifu_4.message.imageMessage
-}
-alpha.sendMessage(from, wifu_8, MessageType.buttonsMessage,{
-"contextInfo": {
-"forwardingScore": 999,isForwarded: false,
-"externalAdReply": {
-"title": `${ucapannya2}` ,
-"body": `${botname}`,
-"sourceUrl": apiku,
-"thumbnail": thumb_nime},
-"mentionedJid" : [sender]},
-quoted: mek, sendEphemeral: true
-})
-}
-
-if (q5 == "waifu_2"){
-let wifu2_2 = await getBuffer(`${LolApi}/api/random/waifu?apikey=${lolkey}`);
-const wifu2_3 = await alpha.prepareMessage(from, wifu2_2, MessageType.image, { thumbnail:thumb_nime})
-let wifu2_4 = wifu2_3.message["ephemeralMessage"] ? wifu2_3.message.ephemeralMessage : wifu2_3
-wifu2_6 = `*${jwb_oke}* ${emoj}`
-const wifu2_7 = [
-{buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
-{buttonId: `menu`, buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
-]
-const wifu2_8 = {
-contentText: wifu2_6 ,
-footerText: `Thanks @${sender.split("@")[0]} !`,
-buttons: wifu2_7,
-headerType: 4,
-imageMessage: wifu2_4.message.imageMessage
-}
-alpha.sendMessage(from, wifu2_8, MessageType.buttonsMessage,{
-"contextInfo": {
-"forwardingScore": 999,isForwarded: false,
-"externalAdReply": {
-"title": `${ucapannya2}` ,
-"body": `${botname}`,
-"sourceUrl": apiku,
-"thumbnail": thumb_nime},
-"mentionedJid" : [sender]},
-quoted: mek, sendEphemeral: true
-})
-}
-
-if (q5 == "waifu_3"){
-wifu3_1 = await fetchJson(`${XrestApi}/api/random-waifu?apikey=BETA`);
-let wifu3_2 = await getBuffer(wifu3_1.link);
-const wifu3_3 = await alpha.prepareMessage(from, wifu3_2, MessageType.image, { thumbnail:thumb_nime})
-let wifu3_4 = wifu3_3.message["ephemeralMessage"] ? wifu3_3.message.ephemeralMessage : wifu3_3
-wifu3_6 = `*${jwb_oke}* ${emoj}`
-const wifu3_7 = [
-{buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
-{buttonId: `menu`, buttonText: {displayText: `${emoj} List-Menu`}, type: 1}
-]
-const wifu3_8 = {
-contentText: wifu3_6 ,
-footerText: `Thanks @${sender.split("@")[0]} !`,
-buttons: wifu3_7,
-headerType: 4,
-imageMessage: wifu3_4.message.imageMessage
-}
-alpha.sendMessage(from, wifu3_8, MessageType.buttonsMessage,{
-"contextInfo": {
-"forwardingScore": 999,isForwarded: false,
-"externalAdReply": {
-"title": `${ucapannya2}` ,
-"body": `${botname}`,
-"sourceUrl": apiku,
-"thumbnail": thumb_nime},
-"mentionedJid" : [sender]},
-quoted: mek, sendEphemeral: true 
-})
-}
 
 if (subscribezeeoneofc == 'menu_xc') {
 xc_menus = `*KALO GAK WORK*\n*SOMRY, DON'T SPAM YA KAK*
