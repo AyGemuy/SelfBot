@@ -18464,48 +18464,6 @@ let upfil3 = await wudy2_uploadFile(upfil2)
 reply2(upfil3.result.url)
 break
 
-case 'eapple':
-case 'egoogle':
-case 'esamsung':
-case 'emicrosoft':
-case 'ewhatsapp':
-case 'etwitter':
-case 'efacebook':
-case 'ejooxpixel':
-case 'eopenemoji':
-case 'eemojidex':
-case 'emessanger':
-case 'elg':
-case 'ehtc':
-case 'emozilla':
-case 'esoftbank':
-case 'edocomo':
-case 'ekddi':
-case 'emoji2':
-if (!q) return reply1('Emoj')
-fa = await fetchJson(`${KocakApi}/api/random/text/katabijak`)
-fak = fa.result
-list = []
-listmenu = [`eapple`,`egoogle`,`esamsung`,`emicrosoft`,`ewhatsapp`,`etwitter`,`efacebook`,`ejooxpixel`,`eopenemoji`,`eemojidex`,`emessanger`,`elg`,`ehtc`,`emozilla`,`esoftbank`,`edocomo`,`ekddi`]
-listmenuu = [`${q} apple`,`${q} google`,`${q} samsung`,`${q} microsoft`,`${q} whatsapp`,`${q} twitter`,`${q} facebook`,`${q} jooxPixel`,`${q} openemoji`,`${q} emojidex`,`${q} messanger`,`${q} LG`,`${q} HTC`,`${q} mozilla`,`${q} softbank`,`${q} docomo`,`${q} KDDI`]
-nombor = 1
-nombor2 = 0
-for (let x of listmenuu) {
-const yy = {title: 'Sub menu ke -'+ nombor++,
-rows: [
-{
-title: `${listmenu[nombor2++]}`,
-description: `${x}`,
-rowId: ``
-}
-]
-}
-list.push(yy)
-}
-listmsg(from, `${ucapanWaktu}`, `${ucapannya2} @${sender.split('@')[0]}\n\n*Fakta hari ini :* \n${fak}`, list)
-let pft = await wudy2_emoji(`${q}`)
-sendStickerFromUrl(from, 'pft.' + command.slice(1),{quoted: mek})
-break
 
 //Ends
 default:
