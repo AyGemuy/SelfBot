@@ -18416,149 +18416,136 @@ break
 
 case 'emoji2':
 if (!q) return reply1('Emoj')
+mo = await fetchJson(`${KocakApi}/api/random/text/faktaunik`)
+motiv = mo.result
 list = []
-listmenu = [`eapple ${q}`,`egoogle ${q}`,`esamsung ${q}`,`emicrosoft ${q}`,`ewhatsapp ${q}`,`etwitter ${q}`,`efacebook ${q}`,`ejooxpixel ${q}`,`eopenemoji ${q}`,`eemojidex ${q}`,`emessanger ${q}`,`elg ${q}`,`ehtc ${q}`,`emozilla ${q}`,`esoftbank ${q}`,`edocomo ${q}`,`ekddi ${q}`]
+listmenu = [`eapple`,`egoogle`,`esamsung`,`emicrosoft`,`ewhatsapp`,`etwitter`,`efacebook`,`ejooxpixel`,`eopenemoji`,`eemojidex`,`emessanger`,`elg`,`ehtc`,`emozilla`,`esoftbank`,`edocomo`,`ekddi ${q}`]
 listmenuu = [`Emoji apple `,`Emoji google `,`Emoji samsung `,`Emoji microsoft `,`Emoji whatsapp `,`Emoji twitter `,`Emoji facebook `,`Emoji jooxpixel `,`Emoji openemoji `,`Emoji emojidex `,`Emoji messanger `,`Emoji lg `,`Emoji htc `,`Emoji mozilla `,`Emoji softbank `,`Emoji docomo `,`Emoji kddi`]
 nombor = 1
 nombor2 = 0
-for (let x of listmenuu) {
-const yy = {title: 'Sub menu ke -'+ nombor++,
+for (let x of listmenu) {
+const yy = {title: 'Emoji ke -'+ nombor++,
 rows: [
 {
-title: `${listmenu[nombor2++]}`,
-description: `${x}`,
-rowId: ``
+title: `${listmenuu[nombor2++]}`,
+description: ``,
+rowId: `${prefix}${x} ${q}`
 }
 ]
 }
 list.push(yy)
 }
-listmsg(from, `${ucapanWaktu}`, `${ucapannya2} @${sender.split('@')[0]}\n\n*PILIH KAK*`, list)
+listmsg(from, `${ucapanWaktu}`, `${ucapannya2} @${sender.split('@')[0]}\n\n*Motivasi hari ini :* \n${motiv}`, list)
 break
 
 // EMOJI
 case 'eapple':
-tes = q
-pft = await wudy2_emoji(tes)
+pft = await wudy2_emoji(`${q}`)
 emo = pft.apple
 sendStickerFromUrl(from, emo,{quoted: mek})
 break
 case 'edocomo':
-tes = q
-pft = await wudy2_emoji(tes)
+pft = await wudy2_emoji(`${q}`)
 emo = pft.docomo
 sendStickerFromUrl(from, emo,{quoted: mek})
 break
 case 'eemojidex':
-tes = q
-pft = await wudy2_emoji(tes)
+pft = await wudy2_emoji(`${q}`)
 emo = pft.emojidex
 sendStickerFromUrl(from, emo,{quoted: mek})
 break
 case 'efacebook':
-tes = q
-pft = await wudy2_emoji(tes)
+pft = await wudy2_emoji(`${q}`)
 emo = pft.facebook
 sendStickerFromUrl(from, emo,{quoted: mek})
 break
 case 'egoogle':
-tes = q
-pft = await wudy2_emoji(tes)
+pft = await wudy2_emoji(`${q}`)
 emo = pft.google
 sendStickerFromUrl(from, emo,{quoted: mek})
 break
 case 'ehtc':
-tes = q
-pft = await wudy2_emoji(tes)
+pft = await wudy2_emoji(`${q}`)
 emo = pft.htc
 sendStickerFromUrl(from, emo,{quoted: mek})
 break
 case 'ejooxpixel':
-tes = q
-pft = await wudy2_emoji(tes)
+pft = await wudy2_emoji(`${q}`)
 emo = pft.jooxpixel
 sendStickerFromUrl(from, emo,{quoted: mek})
 break
 case 'ekddi':
-tes = q
-pft = await wudy2_emoji(tes)
+pft = await wudy2_emoji(`${q}`)
 emo = pft.kddi
 sendStickerFromUrl(from, emo,{quoted: mek})
 break
 case 'elg':
-tes = q
-pft = await wudy2_emoji(tes)
+pft = await wudy2_emoji(`${q}`)
 emo = pft.lg
 sendStickerFromUrl(from, emo,{quoted: mek})
 break
 case 'emessanger':
-tes = q
-pft = await wudy2_emoji(tes)
+pft = await wudy2_emoji(`${q}`)
 emo = pft.messanger
 sendStickerFromUrl(from, emo,{quoted: mek})
 break
 case 'emicrosoft':
-tes = q
-pft = await wudy2_emoji(tes)
+pft = await wudy2_emoji(`${q}`)
 emo = pft.microsoft
 sendStickerFromUrl(from, emo,{quoted: mek})
 break
 case 'emozilla':
-tes = q
-pft = await wudy2_emoji(tes)
+pft = await wudy2_emoji(`${q}`)
 emo = pft.mozilla
 sendStickerFromUrl(from, emo,{quoted: mek})
 break
 case 'eopenemoji':
-tes = q
-pft = await wudy2_emoji(tes)
+pft = await wudy2_emoji(`${q}`)
 emo = pft.openemoji
 sendStickerFromUrl(from, emo,{quoted: mek})
 break
 case 'esamsung':
-tes = q
-pft = await wudy2_emoji(tes)
+pft = await wudy2_emoji(`${q}`)
 emo = pft.samsung
 sendStickerFromUrl(from, emo,{quoted: mek})
 break
 case 'esoftbank':
-tes = q
-pft = await wudy2_emoji(tes)
+pft = await wudy2_emoji(`${q}`)
 emo = pft.softbank
 sendStickerFromUrl(from, emo,{quoted: mek})
 break
 case 'etwitter':
-tes = q
-pft = await wudy2_emoji(tes)
+pft = await wudy2_emoji(`${q}`)
 emo = pft.twitter
 sendStickerFromUrl(from, emo,{quoted: mek})
 break
 case 'ewhatsapp':
-tes = q
-pft = await wudy2_emoji(tes)
+pft = await wudy2_emoji(`${q}`)
 emo = pft.whatsapp
 sendStickerFromUrl(from, emo,{quoted: mek})
 break
 
 case 'waifu':
+mo = await fetchJson(`${KocakApi}/api/random/text/faktaunik`)
+motiv = mo.result
 list = []
-listmenu = [`random-a`,`random-b`,`random-c`,`awoo`,`bite`,`blush`,`bonk`,`bully`,`cringe`,`cry`,`cuddle`,`dance`,`glomp`,`handhold`,`happy`,`highfive`,`hug`,`kick`,`kill`,`kiss`,`lick`,`megumin`,`nom`,`pat`,`poke`,`shinobu`,`slap`,`smile`,`smug`,`wave`,`wink`,`yeet`]
-listmenuu = [`${emoj3} Random A`,`${emoj3} Random B`,`${emoj3} Random B`,`${emoj3} Sfw awoo`,`${emoj3} Sfw bite`,`${emoj3} Sfw blush`,`${emoj3} Sfw bonk`,`${emoj3} Sfw bully`,`${emoj3} Sfw cringe`,`${emoj3} Sfw cry`,`${emoj3} Sfw cuddle`,`${emoj3} Sfw dance`,`${emoj3} Sfw glomp`,`${emoj3} Sfw handhold`,`${emoj3} Sfw happy`,`${emoj3} Sfw highfive`,`${emoj3} Sfw hug`,`${emoj3} Sfw kick`,`${emoj3} Sfw kill`,`${emoj3} Sfw kiss`,`${emoj3} Sfw lick`,`${emoj3} Sfw megumin`,`${emoj3} Sfw nom`,`${emoj3} Sfw pat`,`${emoj3} Sfw poke`,`${emoj3} Sfw shinobu`,`${emoj3} Sfw slap`,`${emoj3} Sfw smile`,`${emoj3} Sfw smug`,`${emoj3} Sfw wave`,`${emoj3} Sfw wink`,`${emoj3} Sfw yeet`]
+listmenu = [`random-a`,`random-b`,`random-c`,`yeet`,`trap`,`waifu`,`neko`,`blowjob`,`awoo`,`bite`,`blush`,`bonk`,`bully`,`cringe`,`cry`,`cuddle`,`dance`,`glomp`,`handhold`,`happy`,`highfive`,`hug`,`kick`,`kill`,`kiss`,`lick`,`megumin`,`nom`,`pat`,`poke`,`shinobu`,`slap`,`smile`,`smug`,`wave`,`wink`,`yeet`]
+listmenuu = [`${emoj3} Random A`,`${emoj3} Random B`,`${emoj3} Random C`,`${emoj3} Nsfw yeet`,`${emoj3} Nsfw trap`,`${emoj3} Nsfw waifu`,`${emoj3} Nsfw neko`,`${emoj3} Nsfw blowjob`,`${emoj3} Sfw awoo`,`${emoj3} Sfw bite`,`${emoj3} Sfw blush`,`${emoj3} Sfw bonk`,`${emoj3} Sfw bully`,`${emoj3} Sfw cringe`,`${emoj3} Sfw cry`,`${emoj3} Sfw cuddle`,`${emoj3} Sfw dance`,`${emoj3} Sfw glomp`,`${emoj3} Sfw handhold`,`${emoj3} Sfw happy`,`${emoj3} Sfw highfive`,`${emoj3} Sfw hug`,`${emoj3} Sfw kick`,`${emoj3} Sfw kill`,`${emoj3} Sfw kiss`,`${emoj3} Sfw lick`,`${emoj3} Sfw megumin`,`${emoj3} Sfw nom`,`${emoj3} Sfw pat`,`${emoj3} Sfw poke`,`${emoj3} Sfw shinobu`,`${emoj3} Sfw slap`,`${emoj3} Sfw smile`,`${emoj3} Sfw smug`,`${emoj3} Sfw wave`,`${emoj3} Sfw wink`,`${emoj3} Sfw yeet`]
 nombor = 1
 nombor2 = 0
-for (let x of listmenuu) {
+for (let x of listmenu) {
 const yy = {title: 'Waifu ke -'+ nombor++,
 rows: [
 {
-title: `${listmenu[nombor2++]}`,
-description: `${x}`,
-rowId: ``
+title: `${listmenuu[nombor2++]}`,
+description: ``,
+rowId: `${prefix}${x}`
 }
 ]
 }
 list.push(yy)
 }
-listmsg(from, `${ucapanWaktu}`, `${ucapannya2} @${sender.split('@')[0]}\n\n*WAIFU NYA KAK*`, list)
+listmsg(from, `${ucapanWaktu}`, `${ucapannya2} @${sender.split('@')[0]}\n\n*Motivasi hari ini :* \n${motiv}`, list)
 break
 
 case 'neko':
