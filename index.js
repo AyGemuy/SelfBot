@@ -18845,7 +18845,7 @@ listmsg(from, `${ucapanWaktu}`, `${ucapannya2} @${sender.split('@')[0]}\n\n*${mo
 break
 
 case 'satouchan':
-res = fetchJson(`https://api.satou-chan.xyz/api/endpoint/${command.slice(10)}`)
+res = await fetchJson(`https://api.satou-chan.xyz/api/endpoint/${x}`)
 inibuff = res.url
 sendStickerFromUrl(from, inibuff,{quoted: mek})
 break
