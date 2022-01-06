@@ -5980,9 +5980,9 @@ console.log(color(time, 'magenta'), color(moment.tz('Asia/Jakarta').format('HH:m
 owgi = await alpha.downloadAndSaveMediaMessage(ger)
 anu = await imgbb(`${img_key}`, owgi)
 but = [
-{ buttonId: `tinyurl ${teks}`, buttonText: { displayText: 'Tinyurl' }, type: 1 },
-{ buttonId: `bitly ${teks}`, buttonText: { displayText: 'Bitly' }, type: 1 },
-{ buttonId: `cuttly ${teks}`, buttonText: { displayText: 'Cuttly' }, type: 1 }
+{ buttonId: `tinyurl ${anu.display_url}`, buttonText: { displayText: 'Tinyurl' }, type: 1 },
+{ buttonId: `bitly ${anu.display_url}`, buttonText: { displayText: 'Bitly' }, type: 1 },
+{ buttonId: `cuttly ${anu.display_url}`, buttonText: { displayText: 'Cuttly' }, type: 1 }
 ]
 sendButton(from, `✓ *${jwb_oke}* ${pushname} \n*Link* ${anu.display_url}`, `Pilih Shortlink?`, but, mek)
 .catch((e)=>{reply1(`${petik}[ x ]${petik}Eror! ada masalah dgn imgbb`)})
@@ -8269,9 +8269,9 @@ Okelor = await imgbb(`${img_key}`, owgi)
 teks=`*${emoj} 「 AUDIO TO URL 」 ${emoj}*
 *$Url : ${Okelor.display_url}*`
 but = [
-{ buttonId: `tinyurl ${teks}`, buttonText: { displayText: 'Tinyurl' }, type: 1 },
-{ buttonId: `bitly ${teks}`, buttonText: { displayText: 'Bitly' }, type: 1 },
-{ buttonId: `cuttly ${teks}`, buttonText: { displayText: 'Cuttly' }, type: 1 }
+{ buttonId: `tinyurl ${Okelor.display_url}`, buttonText: { displayText: 'Tinyurl' }, type: 1 },
+{ buttonId: `bitly ${Okelor.display_url}`, buttonText: { displayText: 'Bitly' }, type: 1 },
+{ buttonId: `cuttly ${Okelor.display_url}`, buttonText: { displayText: 'Cuttly' }, type: 1 }
 ]
 sendButton(from, `${teks}`, `Pilih Shortlink?`, but, mek)
 } else if (isQuotedImage) {
@@ -8282,9 +8282,9 @@ qbc = await imgbb(`${img_key}`, owgi)
 teks=`*${emoj} 「 IMAGE TO URL 」 ${emoj}*
 *Url : ${qbc.display_url}*`
 but = [
-{ buttonId: `tinyurl ${teks}`, buttonText: { displayText: 'Tinyurl' }, type: 1 },
-{ buttonId: `bitly ${teks}`, buttonText: { displayText: 'Bitly' }, type: 1 },
-{ buttonId: `cuttly ${teks}`, buttonText: { displayText: 'Cuttly' }, type: 1 }
+{ buttonId: `tinyurl ${qbc.display_url}`, buttonText: { displayText: 'Tinyurl' }, type: 1 },
+{ buttonId: `bitly ${qbc.display_url}`, buttonText: { displayText: 'Bitly' }, type: 1 },
+{ buttonId: `cuttly ${qbc.display_url}`, buttonText: { displayText: 'Cuttly' }, type: 1 }
 ]
 sendButton(from, `${teks}`, `Pilih Shortlink?`, but, mek)
 } else if (isQuotedVideo) {
@@ -8295,9 +8295,9 @@ ffff = await imgbb(`${img_key}`, owgi)
 teks=`*${emoj} 「 VIDEO TO URL 」 ${emoj}*
 *$Url : ${ffff.display_url}*`
 but = [
-{ buttonId: `tinyurl ${teks}`, buttonText: { displayText: 'Tinyurl' }, type: 1 },
-{ buttonId: `bitly ${teks}`, buttonText: { displayText: 'Bitly' }, type: 1 },
-{ buttonId: `cuttly ${teks}`, buttonText: { displayText: 'Cuttly' }, type: 1 }
+{ buttonId: `tinyurl ${ffff.display_url}`, buttonText: { displayText: 'Tinyurl' }, type: 1 },
+{ buttonId: `bitly ${ffff.display_url}`, buttonText: { displayText: 'Bitly' }, type: 1 },
+{ buttonId: `cuttly ${ffff.display_url}`, buttonText: { displayText: 'Cuttly' }, type: 1 }
 ]
 sendButton(from, `${teks}`, `Pilih Shortlink?`, but, mek)
 } else if (isQuotedSticker) {
@@ -8308,9 +8308,9 @@ vrr = await imgbb(`${img_key}`, owgi)
 teks=`*${emoj} 「 STICKER TO URL 」 ${emoj}*
 *Url : ${vrr.display_url}*`
 but = [
-{ buttonId: `tinyurl ${teks}`, buttonText: { displayText: 'Tinyurl' }, type: 1 },
-{ buttonId: `bitly ${teks}`, buttonText: { displayText: 'Bitly' }, type: 1 },
-{ buttonId: `cuttly ${teks}`, buttonText: { displayText: 'Cuttly' }, type: 1 }
+{ buttonId: `tinyurl ${vrr.display_url}`, buttonText: { displayText: 'Tinyurl' }, type: 1 },
+{ buttonId: `bitly ${vrr.display_url}`, buttonText: { displayText: 'Bitly' }, type: 1 },
+{ buttonId: `cuttly ${vrr.display_url}`, buttonText: { displayText: 'Cuttly' }, type: 1 }
 ]
 sendButton(from, `${teks}`, `Pilih Shortlink?`, but, mek)
 } 
@@ -15756,7 +15756,7 @@ alpha.relayWAMessage(grup)
 break
 
 case 'jadikatalog':
-if(!q) return reply1(`${prefix}jadigc judul|menu`)
+if(!q) return reply1(`${prefix}jadikatalog judul|menu`)
 gc = args.join(' ')
 judul_nya = gc.split('|')[0]
 menu_nya = gc.split('|')[1]
@@ -18469,8 +18469,32 @@ break
 case 'upfile':
 let upfil = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
 let upfil2 = await alpha.downloadAndSaveMediaMessage(upfil)
-let upfil3 = await wudy2_uploadFile(upfil2)
+upfil3 = await wudy2_uploadFile(upfil2)
 reply2(upfil3.result.url)
+break
+
+case 'emoji2':
+if (!q) return reply1('Emoj')
+fa = await fetchJson(`${KocakApi}/api/random/text/katabijak`)
+fak = fa.result
+list = []
+listmenu = [`eapple`,`egoogle`,`esamsung`,`emicrosoft`,`ewhatsapp`,`etwitter`,`efacebook`,`ejooxpixel`,`eopenemoji`,`eemojidex`,`emessanger`,`elg`,`ehtc`,`emozilla`,`esoftbank`,`edocomo`,`ekddi`]
+listmenuu = [`apple`,`google`,`samsung`,`microsoft`,`whatsapp`,`twitter`,`facebook`,`jooxpixel`,`openemoji`,`emojidex`,`messanger`,`lg`,`htc`,`mozilla`,`softbank`,`docomo`,`kddi`]
+nombor = 1
+nombor2 = 0
+for (let x of listmenuu) {
+const yy = {title: 'Sub menu ke -'+ nombor++,
+rows: [
+{
+title: `${listmenu[nombor2++]} ${q}`,
+description: `${q} Emoji ${x} `,
+rowId: `${listmenu[nombor2++]} ${q}`
+}
+]
+}
+list.push(yy)
+}
+listmsg(from, `${ucapanWaktu}`, `${ucapannya2} @${sender.split('@')[0]}\n\n*Fakta hari ini :* \n${fak}`, list)
 break
 
 // EMOJI
@@ -18558,30 +18582,6 @@ case 'ewhatsapp':
 pft = await wudy2_emoji(`${q}`)
 emo = pft.whatsapp
 sendStickerFromUrl(from, emo,{quoted: mek})
-break
-
-case 'emoji2':
-if (!q) return reply1('Emoj')
-fa = await fetchJson(`${KocakApi}/api/random/text/katabijak`)
-fak = fa.result
-list = []
-listmenu = [`eapple`,`egoogle`,`esamsung`,`emicrosoft`,`ewhatsapp`,`etwitter`,`efacebook`,`ejooxpixel`,`eopenemoji`,`eemojidex`,`emessanger`,`elg`,`ehtc`,`emozilla`,`esoftbank`,`edocomo`,`ekddi`]
-listmenuu = [`${q} apple`,`${q} google`,`${q} samsung`,`${q} microsoft`,`${q} whatsapp`,`${q} twitter`,`${q} facebook`,`${q} jooxPixel`,`${q} openemoji`,`${q} emojidex`,`${q} messanger`,`${q} LG`,`${q} HTC`,`${q} mozilla`,`${q} softbank`,`${q} docomo`,`${q} KDDI`]
-nombor = 1
-nombor2 = 0
-for (let x of listmenuu) {
-const yy = {title: 'Sub menu ke -'+ nombor++,
-rows: [
-{
-title: `${listmenu[nombor2++]} ${q}`,
-description: `${x}`,
-rowId: ``
-}
-]
-}
-list.push(yy)
-}
-listmsg(from, `${ucapanWaktu}`, `${ucapannya2} @${sender.split('@')[0]}\n\n*Fakta hari ini :* \n${fak}`, list)
 break
 
 
