@@ -79,16 +79,16 @@ async function wudy2_emoji(emoticon) {
 		whatsapp: whatsapp.replace('120', '240'),
 		twitter: twitter.replace('120', '240'),
 		facebook: facebook.replace('120', '240'),
-		jooxPixel: jooxpixel.replace('120', '240'),
+		jooxpixel: jooxpixel.replace('120', '240'),
 		openemoji: openmoji.replace('120', '240'),
 		emojidex: emojidex.replace('120', '240'),
 		messanger: messager.replace('120', '240'),
-		LG: LG.replace('120', '240'),
-		HTC: HTC.replace('120', '240'),
+		lg: LG.replace('120', '240'),
+		htc: HTC.replace('120', '240'),
 		mozilla: mozilla.replace('120', '240'),
 		softbank: softbank.replace('120', '240'),
 		docomo: docomo.replace('120', '240'),
-		KDDI: KDDI.replace('120', '240')
+		kddi: KDDI.replace('120', '240')
 	}
 	return result
 }
