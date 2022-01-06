@@ -18437,7 +18437,7 @@ Sendstickerfromurl(from, inibuff2, {"contextInfo": {
 "forwardingScore": 999,isForwarded: false,
 "mentionedJid" : [mberr]},
 sendEphemeral: true,
-quoted: {key: {participant: `${mberr}`,"remoteJid": from},"message": {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us","inviteCode": "m","groupName": "P", "caption": `Nama gw ${q} @${mberr.split("@")[0]}\nIya gw ${command.slice(1)} Skaleh`, 'jpegThumbnail': pp_userz}}}})
+quoted: {key: {participant: from,"remoteJid": from},"message": {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us","inviteCode": "m","groupName": "P", "caption": `Nama gw ${q} @${mberr.split("@")[0]}\nIya gw ${command.slice(1)} Skaleh`, 'jpegThumbnail': pp_userz}}}})
 break
 
 case 'teledown':
@@ -18475,22 +18475,22 @@ case 'emicrosoft':
 case 'ewhatsapp':
 case 'etwitter':
 case 'efacebook':
-case 'ejooxPixel':
+case 'ejooxpixel':
 case 'eopenemoji':
 case 'eemojidex':
 case 'emessanger':
-case 'eLG':
-case 'eHTC':
+case 'elg':
+case 'ehtc':
 case 'emozilla':
 case 'esoftbank':
 case 'edocomo':
-case 'eKDDI':
+case 'ekddi':
 case 'emoji2':
 if (!q) return reply1('Emoj')
 fa = await fetchJson(`${KocakApi}/api/random/text/katabijak`)
 fak = fa.result
 list = []
-listmenu = [`eapple`,`egoogle`,`esamsung`,`emicrosoft`,`ewhatsapp`,`etwitter`,`efacebook`,`ejooxPixel`,`eopenemoji`,`eemojidex`,`emessanger`,`eLG`,`eHTC`,`emozilla`,`esoftbank`,`edocomo`,`eKDDI`]
+listmenu = [`eapple`,`egoogle`,`esamsung`,`emicrosoft`,`ewhatsapp`,`etwitter`,`efacebook`,`ejooxpixel`,`eopenemoji`,`eemojidex`,`emessanger`,`elg`,`ehtc`,`emozilla`,`esoftbank`,`edocomo`,`ekddi`]
 listmenuu = [`${q} apple`,`${q} google`,`${q} samsung`,`${q} microsoft`,`${q} whatsapp`,`${q} twitter`,`${q} facebook`,`${q} jooxPixel`,`${q} openemoji`,`${q} emojidex`,`${q} messanger`,`${q} LG`,`${q} HTC`,`${q} mozilla`,`${q} softbank`,`${q} docomo`,`${q} KDDI`]
 nombor = 1
 nombor2 = 0
@@ -18508,7 +18508,7 @@ list.push(yy)
 }
 listmsg(from, `${ucapanWaktu}`, `${ucapannya2} @${sender.split('@')[0]}\n\n*Fakta hari ini :* \n${fak}`, list)
 let pft = await wudy2_emoji(`${q}`)
-sendStickerFromUrl(from, `${'pft.'command.slice(1)}`,{quoted: mek})
+sendStickerFromUrl(from, `'pft.'${command.slice(1)}`,{quoted: mek})
 break
 
 //Ends
