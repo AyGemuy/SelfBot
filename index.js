@@ -5975,7 +5975,7 @@ reply1(`reply gambar/sticker/audio/video dengan caption ${prefix}totag`)
 }
 break
 
-case 'tovideo2':
+case 'tovideo3':
 if (!isQuotedSticker) return reply1('Reply stikernya')
 // Wait //
 anumedia = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
@@ -5988,17 +5988,22 @@ sendFakeVid(from, buffer)
 fs.unlinkSync(ran)})
 break
 
-case 'tovideo3':
-let topid = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
-let topid2 = await alpha.downloadAndSaveMediaMessage(topid)
-let topid3 = await wudy2_ToVid(topid2)
-buffer453 = await getBuffer(topid3.result.data);
-sendFakeVid(from, buffer453)
-break
-
 case 'tomp4':
 case 'tovideo':
 case 'tovid':
+if ((isMedia && !mek.message.videoMessage || isQuotedSticker) && args.length == 0) {
+ger = isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
+let topid = await alpha.downloadAndSaveMediaMessage(ger)
+wudy2_ToVid(topid).then(res=>{
+sendMediaURL(from,res.result.data,'Done')
+})
+}else {
+reply1('reply stiker')
+}
+fs.unlinkSync(owgi)
+break
+
+case 'tovideo2':
 if ((isMedia && !mek.message.videoMessage || isQuotedSticker) && args.length == 0) {
 ger = isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
 let owogi = await alpha.downloadAndSaveMediaMessage(ger)
