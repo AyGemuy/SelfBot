@@ -16833,37 +16833,6 @@ kus = args.join(' ')
 sendMediaURL(`${kus}`);
 break
 
-case 'neko':
-case 'loli':
-case 'husbu':
-case 'waifu':
-let hus_1 = await getBuffer(`${XcoderApi}/api/anime/husbu?apikey=7iyNa0qA`);
-const hus_3 = await alpha.prepareMessage(from, hus_1, MessageType.image, { thumbnail:thumb_miku})
-let hus_2 = hus_3.message["ephemeralMessage"] ? hus_3.message.ephemeralMessage : hus_3
-hus_5 = `*${jwb_oke}* ${emoj}`
-const hus_6 = [
-{buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
-{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
-]
-const hus_7 = {
-contentText: hus_5 ,
-footerText: `Thanks @${sender.split("@")[0]} !`,
-buttons: hus_6,
-headerType: 4,
-imageMessage: hus_2.message.imageMessage
-}
-alpha.sendMessage(from, hus_7, MessageType.buttonsMessage,{
-"contextInfo": {
-"forwardingScore": 999,isForwarded: false,
-"externalAdReply": {
-"title": `${ucapannya2}` ,
-"body": `${botname}`,
-"sourceUrl": apiku,
-"thumbnail": thumb_miku},
-"mentionedJid" : [sender]},
-quoted: mek, sendEphemeral: true
-})
-break
 
 case 'searchnekopoi':
 case 'searchnhentai':
@@ -18457,7 +18426,7 @@ const yy = {title: 'Sub menu ke -'+ nombor++,
 rows: [
 {
 title: `${listmenu[nombor2++]}`,
-description: `${q} Emoji ${x}`,
+description: `${x}`,
 rowId: ``
 }
 ]
@@ -18469,87 +18438,104 @@ break
 
 // EMOJI
 case 'eapple':
-pft = await wudy2_emoji(`${q}`)
+tes = q
+pft = await wudy2_emoji(tes)
 emo = pft.apple
 sendStickerFromUrl(from, emo,{quoted: mek})
 break
 case 'edocomo':
-pft = await wudy2_emoji(`${q}`)
+tes = q
+pft = await wudy2_emoji(tes)
 emo = pft.docomo
 sendStickerFromUrl(from, emo,{quoted: mek})
 break
 case 'eemojidex':
-pft = await wudy2_emoji(`${q}`)
+tes = q
+pft = await wudy2_emoji(tes)
 emo = pft.emojidex
 sendStickerFromUrl(from, emo,{quoted: mek})
 break
 case 'efacebook':
-pft = await wudy2_emoji(`${q}`)
+tes = q
+pft = await wudy2_emoji(tes)
 emo = pft.facebook
 sendStickerFromUrl(from, emo,{quoted: mek})
 break
 case 'egoogle':
-pft = await wudy2_emoji(`${q}`)
+tes = q
+pft = await wudy2_emoji(tes)
 emo = pft.google
 sendStickerFromUrl(from, emo,{quoted: mek})
 break
 case 'ehtc':
-pft = await wudy2_emoji(`${q}`)
+tes = q
+pft = await wudy2_emoji(tes)
 emo = pft.htc
 sendStickerFromUrl(from, emo,{quoted: mek})
 break
 case 'ejooxpixel':
-pft = await wudy2_emoji(`${q}`)
+tes = q
+pft = await wudy2_emoji(tes)
 emo = pft.jooxpixel
 sendStickerFromUrl(from, emo,{quoted: mek})
 break
 case 'ekddi':
-pft = await wudy2_emoji(`${q}`)
+tes = q
+pft = await wudy2_emoji(tes)
 emo = pft.kddi
 sendStickerFromUrl(from, emo,{quoted: mek})
 break
 case 'elg':
-pft = await wudy2_emoji(`${q}`)
+tes = q
+pft = await wudy2_emoji(tes)
 emo = pft.lg
 sendStickerFromUrl(from, emo,{quoted: mek})
 break
 case 'emessanger':
-pft = await wudy2_emoji(`${q}`)
+tes = q
+pft = await wudy2_emoji(tes)
 emo = pft.messanger
 sendStickerFromUrl(from, emo,{quoted: mek})
 break
 case 'emicrosoft':
-pft = await wudy2_emoji(`${q}`)
+tes = q
+pft = await wudy2_emoji(tes)
 emo = pft.microsoft
 sendStickerFromUrl(from, emo,{quoted: mek})
 break
 case 'emozilla':
-pft = await wudy2_emoji(`${q}`)
+tes = q
+pft = await wudy2_emoji(tes)
 emo = pft.mozilla
 sendStickerFromUrl(from, emo,{quoted: mek})
 break
 case 'eopenemoji':
-pft = await wudy2_emoji(`${q}`)
+tes = q
+pft = await wudy2_emoji(tes)
 emo = pft.openemoji
 sendStickerFromUrl(from, emo,{quoted: mek})
 break
 case 'esamsung':
-pft = await wudy2_emoji(`${q}`)
+tes = q
+pft = await wudy2_emoji(tes)
 emo = pft.samsung
 sendStickerFromUrl(from, emo,{quoted: mek})
 break
 case 'esoftbank':
-pft = await wudy2_emoji(`${q}`)
+tes = q
+pft = await wudy2_emoji(tes)
 emo = pft.softbank
 sendStickerFromUrl(from, emo,{quoted: mek})
 break
 case 'etwitter':
-pft = await wudy2_emoji(`${q}`)
+tes = q
+pft = await wudy2_emoji(tes)
 emo = pft.twitter
 sendStickerFromUrl(from, emo,{quoted: mek})
 break
 case 'ewhatsapp':
-pft = await wudy2_emoji(`${q}`)
+tes = q
+pft = await wudy2_emoji(tes)
 emo = pft.whatsapp
 sendStickerFromUrl(from, emo,{quoted: mek})
 break
@@ -18573,6 +18559,38 @@ rowId: ``
 list.push(yy)
 }
 listmsg(from, `${ucapanWaktu}`, `${ucapannya2} @${sender.split('@')[0]}\n\n*WAIFU NYA KAK*`, list)
+break
+
+case 'neko':
+case 'loli':
+case 'husbu':
+case 'waifu':
+let hus_1 = await getBuffer(`${XcoderApi}/api/anime/husbu?apikey=7iyNa0qA`);
+const hus_3 = await alpha.prepareMessage(from, hus_1, MessageType.image, { thumbnail:thumb_miku})
+let hus_2 = hus_3.message["ephemeralMessage"] ? hus_3.message.ephemeralMessage : hus_3
+hus_5 = `*${jwb_oke}* ${emoj}`
+const hus_6 = [
+{buttonId: 'random_list', buttonText: {displayText: `${emoj} Random List`}, type: 1},
+{buttonId: `${command}`, buttonText: {displayText: 'Try Again ♻️'}, type: 1}
+]
+const hus_7 = {
+contentText: hus_5 ,
+footerText: `Thanks @${sender.split("@")[0]} !`,
+buttons: hus_6,
+headerType: 4,
+imageMessage: hus_2.message.imageMessage
+}
+alpha.sendMessage(from, hus_7, MessageType.buttonsMessage,{
+"contextInfo": {
+"forwardingScore": 999,isForwarded: false,
+"externalAdReply": {
+"title": `${ucapannya2}` ,
+"body": `${botname}`,
+"sourceUrl": apiku,
+"thumbnail": thumb_miku},
+"mentionedJid" : [sender]},
+quoted: mek, sendEphemeral: true
+})
 break
 
 case 'random-a':
