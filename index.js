@@ -767,6 +767,45 @@ previewType: "VIDEO",
 mediaUrl: aud_2}}})
 }
 
+const sendFakeVid = (from, vidnye) => {
+const vid_ = ["https://www.youtube.com","https://www.instagram.com","http://facebook.com"]
+const vid_2 = vid_[Math.floor(Math.random() * vid_.length)]
+alpha.sendMessage(from, vidnye, MessageType.video,
+{mimetype : 'video/mp4' ,
+duration : 86400000,
+caption: "Nih",
+thumbnail: Buffer.alloc(0),
+quoted: mek,sendEphemeral: true,
+contextInfo: { forwardingScore: 508,
+isForwarded: false,
+externalAdReply: { title: `${ucapannya2}`,
+body: `${tampilTanggal}`,
+thumbnail: pp_userz,
+mediaType: "2",
+previewType: "VIDEO",
+mediaUrl: vid_2}}})
+}
+
+const sendFakePdf = (from, pdfnye) => {
+const pdf_ = ["https://www.youtube.com","https://www.instagram.com","http://facebook.com"]
+const pdf_2 = pdf_[Math.floor(Math.random() * pdf_.length)]
+alpha.sendMessage(from, pdfnye, MessageType.document,
+{mimetype : 'application/pdf',
+pageCount: 9999999,
+fileLength: 9999999,
+filename: "Nih",
+thumbnail: thumb_miku,
+quoted: mek,sendEphemeral: true,
+contextInfo: { forwardingScore: 508,
+isForwarded: false,
+externalAdReply: { title: `${ucapannya2}`,
+body: `${tampilTanggal}`,
+thumbnail: pp_userz,
+mediaType: "2",
+previewType: "VIDEO",
+mediaUrl: pdf_2}}})
+}
+
 const reki_nih = (from, tek1) => {
 const mim_ = ["application/vnd.openxmlformats-officedocument.presentationml.presentation","application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","application/vnd.openxmlformats-officedocument.wordprocessingml.document","application/zip","application/pdf"]
 const mimtip = mim_[Math.floor(Math.random() * mim_.length)]
@@ -847,6 +886,7 @@ mediaType:"2",
 previewType: "VIDEO",
 mediaUrl: pelink_}}})
 }
+
 // Auto Read Group 
 var chats = await alpha.chats.array.filter(v => v.jid.endsWith('g.us'))
 chats.map( async ({ jid }) => {
@@ -2889,7 +2929,7 @@ alpha.sendMessage(from, result,image, {quoted : mek})
 for (let zeeonew of videonye){
 if (budy === zeeonew){
 result = fs.readFileSync(`./media/video/${zeeonew}.mp4`)
-alpha.sendMessage(from, result,video, {mimetype: 'video/mp4', duration: 86400000, quoted: mek})
+sendFakeVid(from, result)
 }
 } 
 for (let i = 0; i < filter.length ; i++) {
@@ -5030,7 +5070,7 @@ exec(`ffmpeg -i ${media3} -filter_complex "[0:v]setpts=0.5*PTS[v];[0:a]atempo=2[
 fs.unlinkSync(media3)
 if (err) return reply1(`Err: ${err}`)
 buffer453 = fs.readFileSync(ran)
-alpha.sendMessage(from, buffer453, video, { mimetype: 'video/mp4', quoted: mek })
+sendFakeVid(from, buffer453)
 fs.unlinkSync(ran)
 })
 break
@@ -5045,7 +5085,7 @@ exec(`ffmpeg -i ${media4} -filter_complex "[0:v]setpts=2*PTS[v];[0:a]atempo=0.5[
 fs.unlinkSync(media4)
 if (err) return reply1(`Err: ${err}`)
 buffer453 = fs.readFileSync(ran)
-alpha.sendMessage(from, buffer453, video, { mimetype: 'video/mp4', quoted: mek })
+sendFakeVid(from, buffer453)
 fs.unlinkSync(ran)
 })
 break
@@ -5072,7 +5112,7 @@ exec(`ffmpeg -i ${media5} -vf reverse -af areverse ${ran}`, (err) => {
 fs.unlinkSync(media5)
 if (err) return reply1(`Err: ${err}`)
 buffer453 = fs.readFileSync(ran)
-alpha.sendMessage(from, buffer453, video, { mimetype: 'video/mp4', quoted: mek })
+sendFakeVid(from, buffer453)
 fs.unlinkSync(ran)
 })
 break
@@ -5512,6 +5552,7 @@ fakethumb(buffer, `Nih kak ${pushname}`)
 fs.unlinkSync(ran)
 })
 }
+break
 
 case 'ytsearch':
 case 'yts':
@@ -5943,7 +5984,7 @@ ran = getRandom('.webp')
 exec(`ffmpeg -i ${anum} ${ran}`, (err) => {
 fs.unlinkSync(anum)
 buffer = fs.readFileSync(ran)
-alpha.sendMessage(from, buffer, video, { quoted: mek, caption: 'Done... Jangan Lupa Subscribe client Botz' })
+sendFakeVid(from, buffer)
 fs.unlinkSync(ran)})
 break
 
@@ -5952,7 +5993,7 @@ let topid = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.exte
 let topid2 = await alpha.downloadAndSaveMediaMessage(topid)
 let topid3 = await wudy2_ToVid(topid2)
 buffer453 = await getBuffer(topid3.result.data);
-alpha.sendMessage(from, buffer453, video, { mimetype: 'video/mp4', quoted: mek })
+sendFakeVid(from, buffer453)
 break
 
 case 'tomp4':
@@ -5970,27 +6011,7 @@ reply1('reply stiker')
 fs.unlinkSync(owgi)
 break
 
-case 'tourl':
-case 'imgtourl':{
-if ((isMedia && !mek.message.videoMessage || isQuotedImage ) && args.length == 0) {
-var imgbb = require('imgbb-uploader')
-ger = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek 
-// Wait //
-console.log(color(time, 'magenta'), color(moment.tz('Asia/Jakarta').format('HH:mm:ss'), "gold"), color('Downloading image...'))
-owgi = await alpha.downloadAndSaveMediaMessage(ger)
-anu = await imgbb(`${img_key}`, owgi)
-but = [
-{ buttonId: `tinyurl ${anu.display_url}`, buttonText: { displayText: 'Tinyurl' }, type: 1 },
-{ buttonId: `bitly ${anu.display_url}`, buttonText: { displayText: 'Bitly' }, type: 1 },
-{ buttonId: `cuttly ${anu.display_url}`, buttonText: { displayText: 'Cuttly' }, type: 1 }
-]
-sendButton(from, `✓ *${jwb_oke}* ${pushname} \n*Link* ${anu.display_url}`, `Pilih Shortlink?`, but, mek)
-.catch((e)=>{reply1(`${petik}[ x ]${petik}Eror! ada masalah dgn imgbb`)})
-} else {
-reply1(`Kirim gambar atau reply gambar dengan caption ${command}`)
-}
-}
-break
+
 /*
 ]=====> NSFW MENU<=====[
 */
@@ -8044,7 +8065,7 @@ if (isMedia && !mek.message.videoMessage || isQuotedAudio) {
 const encmedia = isQuotedAudio ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
 buff = await alpha.downloadMediaMessage(encmedia)
 for (let _ of anu) {
-alpha.sendMessage(_.jid, buff, audio, { quoted: mek, mimetype: 'audio/mp4', ptt:true})}
+	sendFakeAud(_.jid, buff)}
 } else if (isMedia && !mek.message.videoMessage || isQuotedSticker) {
 const encmedia = isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : mek
 buff = await alpha.downloadMediaMessage(encmedia)
@@ -8061,7 +8082,7 @@ if (isMedia && !alpha.message.audioMessage || isQuotedAudio) {
 const encmedia = isQuotedAudio ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 bc = await alpha.downloadMediaMessage(encmedia)
 for (let _ of anu) {
-alpha.sendMessage(_.jid, bc, audio, {mimetype : 'audio/mp4' , duration : 86400000, ptt : true,quoted: mek})
+sendFakeAud(_.jid, bc)
 }
 reply1('Suksess broadcast')
 }
@@ -8254,6 +8275,8 @@ var wifegerakx = wifegerak[Math.floor(Math.random() * wifegerak.length)]
 sendStickerUrl(from, wifegerakx)
 break
 
+case 'tourl':
+case 'imgtourl':
 case 'imagetorul':
 case 'audiotourl':
 case 'videotourl':
@@ -8440,7 +8463,7 @@ alpha.sendMessage(from, fto, image, {quoted:mek, caption:`*𝗙𝗔𝗖𝗘𝗕�
 •${emoj}Audio : ${res.audio}
 Harap tunggu, file media sedang dikirim, mungkin perlu beberapa menit`, thumbnail:thumb_fb, contextInfo:{forwardingScore: 989, isForwarded: true}})
 khs = await getBuffer(Anu)
-alpha.sendMessage(from, khs, audio, {quoted:mek, mimetype:'audio/mp4', filename:'clientgans.mp3', ptt:true})
+sendFakeAud(from, khs)
 })
 break
 
@@ -8555,7 +8578,7 @@ alpha.sendMessage(from, fto, image, {quoted:mek, caption:`*𝗧𝗪𝗜𝗧𝗧�
 •${emoj}Audio : ${res.audio}
 Harap tunggu, file media sedang dikirim, mungkin perlu beberapa menit`, thumbnail:thumb_tw, contextInfo:{forwardingScore: 989, isForwarded: true}})
 khs = await getBuffer(Anu)
-alpha.sendMessage(from, khs, audio, {mimetype:'audio/mp4', filename:'clientgan.mp3', quoted:mek, ptt:true})
+sendFakeAud(from, khs)
 }) 
 break
 
@@ -9433,7 +9456,7 @@ case 'xalquranaudio':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} 18 or ${prefix + command} 18/10`)
 surah = args[0]
 ini_buffer = await getBuffer(`${LolApi}/api/quran/audio/${surah}?apikey=${lolkey}`)
-await alpha.sendMessage(from, ini_buffer, audio, { quoted: mek, mimetype: Mimetype.mp4Audio })
+await sendFakeAud(from, ini_buffer)
 break
 
 case 'xasmaulhusna':
@@ -9492,7 +9515,7 @@ caption += `❖ Size : *${result.size}*`
 ini_buffer = await getBuffer(result.thumbnail)
 await alpha.sendMessage(from, ini_buffer, image, { quoted: mek, caption: caption })
 get_audio = await getBuffer(result.link)
-await alpha.sendMessage(from, get_audio, audio, { mimetype: 'audio/mp4', filename: `${result.title}.mp3`, quoted: mek })
+await sendFakeAud(from, get_audio)
 })
 })
 break
@@ -9523,7 +9546,7 @@ caption += `❖ Size : *${result.size}*`
 ini_buffer = await getBuffer(get_result.thumbnail)
 await alpha.sendMessage(from, ini_buffer, image, { quoted: mek, caption: ini_txt })
 get_audio = await getBuffer(get_result.link)
-await alpha.sendMessage(from, get_audio, audio, { mimetype: 'audio/mp4', filename: `${get_result.title}.mp3`, quoted: mek })
+await sendFakeAud(from, get_audio)
 break
 
 case 'xytmp4':
@@ -9535,7 +9558,7 @@ ini_txt = `${get_result.title} - ${get_result.size}`
 ini_buffer = await getBuffer(get_result.thumbnail)
 await alpha.sendMessage(from, ini_buffer, image, { quoted: mek, caption: ini_txt })
 get_audio = await getBuffer(get_result.link)
-await alpha.sendMessage(from, get_audio, video, { mimetype: 'video/mp4', filename: `${get_result.title}.mp4`, quoted: mek })
+await sendFakeVid(from, get_audio)
 break
 
 case 'xtelesticker':
@@ -9555,14 +9578,14 @@ ini_url = args[0]
 ini_url = `${LolApi}/api/tiktok?apikey=${lolkey}&url=${ini_url}`
 get_result = await fetchJson(ini_url)
 ini_buffer = await getBuffer(get_result.result.link)
-await alpha.sendMessage(from, ini_buffer, video, { quoted: mek })
+await sendFakeVid(from, ini_buffer)
 break
 
 case 'xtiktokmusic':
 if (args.length == 0) return reply1(`Contoh: ${prefix + command} https://vt.tiktok.com/ZSwWCk5o/`)
 ini_link = args[0]
 get_audio = await getBuffer(`${LolApi}/api/tiktokmusic?apikey=${lolkey}&url=${ini_link}`)
-await alpha.sendMessage(from, get_audio, audio, { mimetype: Mimetype.mp4Audio, quoted: mek })
+await sendFakeAud(from, get_audio)
 break
 
 case 'xspotify':
@@ -9578,7 +9601,7 @@ ini_txt += `Preview : ${get_result.preview_url}\n`
 thumbnail = await getBuffer(get_result.thumbnail)
 await alpha.sendMessage(from, thumbnail, image, { quoted: mek, caption: ini_txt })
 get_audio = await getBuffer(get_result.link)
-await alpha.sendMessage(from, get_audio, audio, { mimetype: 'audio/mp4', filename: `${get_result.title}.mp3`, quoted: mek })
+await sendFakeAud(from, get_audio)
 break
 
 case 'xspotifysearch':
@@ -9611,7 +9634,7 @@ ini_txt += `Lirik :\n ${get_result.lirik}\n`
 thumbnail = await getBuffer(get_result.image)
 await alpha.sendMessage(from, thumbnail, image, { quoted: mek, caption: ini_txt })
 get_audio = await getBuffer(get_result.audio[0].link)
-await alpha.sendMessage(from, get_audio, audio, { mimetype: 'audio/mp4', filename: `${get_result.info.song}.mp3`, quoted: mek })
+await sendFakeAud(from, get_audio)
 break
 
 case 'xigdl':
@@ -9645,7 +9668,7 @@ ini_url = await fetchJson(`${LolApi}/api/twitter?apikey=${lolkey}&url=${ini_url}
 ini_url = ini_url.result
 ini_url = ini_url[ini_url.length - 1].link
 ini_buffer = await getBuffer(ini_url)
-await alpha.sendMessage(from, ini_buffer, video, { quoted: mek })
+await sendFakeVid(from, ini_buffer)
 break
 
 case 'xfbdl':
@@ -9654,7 +9677,7 @@ ini_url = args[0]
 ini_url = await fetchJson(`${LolApi}/api/facebook?apikey=${lolkey}&url=${ini_url}`)
 ini_url = ini_url.result[0].link
 ini_buffer = await getBuffer(ini_url)
-await alpha.sendMessage(from, ini_buffer, video, { quoted: mek })
+await sendFakeVid(from, ini_buffer)
 break
 
 case 'xzippyshare':
@@ -10242,7 +10265,7 @@ ini_txt += `Icon : ${get_result.icon}\n`
 ini_icon = await getBuffer(get_result.cover1)
 await alpha.sendMessage(from, ini_icon, image, { quoted: mek, caption: ini_txt })
 ini_voice = await getBuffer(get_result.cv[0].audio[0])
-await alpha.sendMessage(from, ini_voice, audio, { quoted: mek, mimetype: Mimetype.mp4Audio })
+await sendFakeAud(from, get_audio)
 break
 
 case 'xqrreader':
@@ -10833,7 +10856,7 @@ break
 case 'xasupan':
 get_result = await fetchJson(`${LolApi}/api/asupan?apikey=${lolkey}`)
 ini_buffer = await getBuffer(get_result.result)
-await alpha.sendMessage(from, ini_buffer, video, { quoted: mek, mimetype: Mimetype.mp4, filename: "asupan.mp4" })
+await sendFakeVid(from, ini_buffer)
 break
 
 case 'xwancak':
@@ -11126,7 +11149,7 @@ formData: {
 fs.unlinkSync(filePath)
 get_result = JSON.parse(body)
 getBuffer(get_result.result).then(result => {
-alpha.sendMessage(from, result, video, { mimetype: Mimetype.mp4 })
+sendFakeVid(from, result)
 fs.unlinkSync(file_name)
 })
 });
@@ -13152,7 +13175,7 @@ ini_txt += ` Size : ${anu.result.filesize}\n\n_Tunggu beberapa menit video akan 
 ini_txt2 = await getBuffer(anu.result.thumb)
 ini_txt3 = await getBuffer(anu.result.result)
 alpha.sendMessage(from, ini_txt2, image, { quoted: mek, caption: ini_txt })
-alpha.sendMessage(from, ini_txt3, audio, { mimetype: 'audio/mp4', quoted: mek, ptt:true})
+sendFakeAud(from, ini_txt3)
 break
 
 //LIST───────[ API YUZZU
@@ -14760,7 +14783,7 @@ break
 case 'getvn':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} nama vn\nCek ketik .listvn`)
 get_vn = fs.readFileSync(`./media/audio/${q}.mp3`)
-alpha.sendMessage(from, get_vn, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true, duration: 86400000})
+sendFakeAud(from, get_vn)
 break
 
 case 'rexdl':
@@ -16025,7 +16048,7 @@ var imgbb = require('imgbb-uploader')
 anu = await imgbb(`${img_key}`, './stickmeme.jpeg')
 teks = `${anu.display_url}`
 buffer453 = await getBuffer (`${XcoderApi}/api/convert/reversevideo?url=${teks}&apikey=7iyNa0qA`)
-alpha.sendMessage(from, buffer453, video, { mimetype: 'video/mp4', quoted: mek })
+sendFakeVid(from, buffer453)
 fs.unlinkSync('./stickmeme.jpeg')
 }
 break
@@ -16873,7 +16896,7 @@ ger = isQuotedVideo ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).mes
 owgi = await alpha.downloadAndSaveMediaMessage(ger)
 anu = await imgbb(`${img_key}`, owgi)
 mp4 = await getBuffer(`${XcoderApi}/api/convert/reversevideo?url=${anu.display_url}&apikey=7iyNa0qA`)
-alpha.sendMessage(from, mp4, video, {mimetype: 'video/mp4', quoted: mek, caption: mess.success})
+sendFakeVid(from, mp4)
 break
 
 case 'towebp':
@@ -16891,7 +16914,7 @@ ger = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTex
 owgi = await alpha.downloadAndSaveMediaMessage(ger)
 anu = await imgbb(`${img_key}`, owgi)
 webp = await getBuffer(`${XcoderApi}/api/convert/webp2mp4?url=${anu.display_url}&apikey=7iyNa0qA`)
-alpha.sendMessage(from, webp, video, {mimetype: 'video/mp4',quoted: mek, caption: mess.success})
+sendFakeVid(from, webp)
 break
 
 // DOWNLOAD
@@ -18350,6 +18373,7 @@ case 'sandwrite':
 case 'text3d':
 case 'thundertext':
 case 'toxictext':
+if(!q) return reply1(`${emoj} Hint : ${prefix + command} noob`) 
 ini_buffer = await getBuffer(`${KocakApi}/api/textpro/${command}?text=${q}`)
 alpha.sendMessage(from, ini_buffer, image, {quoted: mek, caption : `Dah selesai , Req by: ${pushname}\nKetik *${prefix}tpro_list* untuk melihat menu yang lain`})
 break
@@ -18427,7 +18451,7 @@ for (let x of listmenu) {
 const yy = {title: 'Emoji ke -'+ nombor++,
 rows: [
 {
-title: `${listmenuu[nombor2++]}`,
+title: `${listmenuu[nombor2++]} ${q}`,
 description: ``,
 rowId: `${prefix}${x} ${q}`
 }
@@ -18759,6 +18783,40 @@ alpha.sendMessage(from, wafu__8, MessageType.buttonsMessage,{
 quoted: mek, sendEphemeral: true 
 })
 break
+
+case 'topdf':
+var imgbb = require('imgbb-uploader')
+if (isQuotedAudio) {
+ger = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+// Wait //
+owgi = await alpha.downloadAndSaveMediaMessage(ger)
+Okelor = await imgbb(`${img_key}`, owgi)
+pdfnye = await getBuffer(`https://api.lolhuman.xyz/api/convert/imgtopdf?apikey=${lolkey}&img=${Okelor.display_url}`)
+sendFakeAud(from, pdfnye)
+} else if (isQuotedImage) {
+ger = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
+// Wait //
+owgi = await alpha.downloadAndSaveMediaMessage(ger)
+qbc = await imgbb(`${img_key}`, owgi)
+pdfnye = await getBuffer(`https://api.lolhuman.xyz/api/convert/imgtopdf?apikey=${lolkey}&img=${qbc.display_url}`)
+sendFakeAud(from, pdfnye)
+} else if (isQuotedVideo) {
+ger = isQuotedVideo ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
+// Wait //
+owgi = await alpha.downloadAndSaveMediaMessage(ger)
+ffff = await imgbb(`${img_key}`, owgi)
+pdfnye = await getBuffer(`https://api.lolhuman.xyz/api/convert/imgtopdf?apikey=${lolkey}&img=${ffff.display_url}`)
+sendFakeAud(from, pdfnye)
+} else if (isQuotedSticker) {
+ger = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+// Wait //
+owgi = await alpha.downloadAndSaveMediaMessage(ger)
+vrr = await imgbb(`${img_key}`, owgi)
+pdfnye = await getBuffer(`https://api.lolhuman.xyz/api/convert/imgtopdf?apikey=${lolkey}&img=${vrr.display_url}`)
+sendFakeAud(from, pdfnye)
+} 
+break
+
 
 //Ends
 default:
@@ -19596,7 +19654,7 @@ reply1(`${sur}\n*${sur2}*\n\n${arb}\n\n${indo}\n\n*Tafsir :*\n_${taf}_`)
 
 if (subscribezeeoneofc == 'Quran_audio') {
 getaudio = await getBuffer(aud)
-alpha.sendMessage(from, getaudio, audio, {mimetype:'audio/mp4', quoted: mek, ptt:true})
+sendFakeAud(from, getaudio)
 }
 
 if (fs.existsSync(`./media/${from}.json`)) {
@@ -19815,7 +19873,7 @@ if (isGroup && isSimiAudio && !mek.key.fromMe && !isOwner && !isMedia && !isQuot
 let sim_a = await fetchJson(`https://simsimi.info/api/?text=${budy}&lc=id`)
 zim = `${sim_a.success}`
 let has_a = await getBuffer(`${HadiApi}/api/tts?language=id&text=${zim}`)
-await alpha.sendMessage(from,has_a, MessageType.audio, {mimetype:'audio/mp4', quoted:mek, ptt:true,duration: 86400000})
+await sendFakeAud(from, has_a)
 }
 
 if (isGroup && isSisimi && !mek.key.fromMe && !isOwner && !isMedia && !isQuotedAudio && budy != undefined) {
