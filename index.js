@@ -78,8 +78,7 @@ const { herolist } = require('./lib/herolist.js')
 const { herodetails } = require('./lib/herodetail.js');
 const { TiktokDownloader, igDownloader, webp2gifFile } = require("./lib/gif.js");
 const { Text2Speech } = require("./lib/gtts.js");
-const { 
-wudy_android1,
+const { wudy_android1,
 wudy_anime,
 wudy_anoboydl,
 wudy_anoboys,
@@ -185,14 +184,12 @@ wudy3_InfoOtakudesu,
 wudy3_Musikmatch,
 wudy3_Snaptik
 } = require("./scrappe/srapp3.js");
-const {
-wudy4_getLatest,
+const { wudy4_getLatest,
 wudy4_getVideo
 } = require("./scrappe/srapp4.js");
 // const { } = require("./scrappe/srapp5.js");
 const { wudy6_ssweb } = require("./scrappe/srapp6.js");
-const {
-apkmody_wudy,
+const { apkmody_wudy,
 asmaul_wudy,
 covid_wudy,
 emoji_wudy,
@@ -230,8 +227,7 @@ wallpapper_wudy,
 yta_wudy,
 ytv_wudy
 } require("./scrappe/srapp7.js");
-const { 
-wudy8_android1,
+const { wudy8_android1,
 wudy8_anime,
 wudy8_anoboydl,
 wudy8_anoboys,
@@ -8515,7 +8511,7 @@ ytresult += '𝗬𝗢𝗨𝗧𝗨𝗕𝗘 𝗦𝗘𝗔𝗥𝗖𝗛'
 ytresult += '\n⌬━━━━━━━━━━━━⌬\n\n'
 aramas.all.map((video) => {
 ytresult += '•🌹Title: ' + video.title + '\n'
-ytresult += '•??Link: ' + video.url + '\n'
+ytresult += '•🌹Link: ' + video.url + '\n'
 ytresult += '•🌹Durasi: ' + video.timestamp + '\n'
 ytresult += '•🌹Upload: ' + video.ago + '\n⌬━━━━━━━━━━━━⌬\n\n'
 }); 	 	 
@@ -18508,7 +18504,7 @@ list.push(yy)
 }
 listmsg(from, `${ucapanWaktu}`, `${ucapannya2} @${sender.split('@')[0]}\n\n*Fakta hari ini :* \n${fak}`, list)
 let pft = await wudy2_emoji(`${q}`)
-sendStickerFromUrl(from, `'pft.'${command.slice(1)}`,{quoted: mek})
+sendStickerFromUrl(from, 'pft.' + command.slice(1),{quoted: mek})
 break
 
 //Ends
