@@ -18448,15 +18448,15 @@ break
 case 'emoji2':
 if (!q) return reply1('Emoj')
 list = []
-listmenu = [`eapple`,`egoogle`,`esamsung`,`emicrosoft`,`ewhatsapp`,`etwitter`,`efacebook`,`ejooxpixel`,`eopenemoji`,`eemojidex`,`emessanger`,`elg`,`ehtc`,`emozilla`,`esoftbank`,`edocomo`,`ekddi`]
-listmenuu = [`apple`,`google`,`samsung`,`microsoft`,`whatsapp`,`twitter`,`facebook`,`jooxpixel`,`openemoji`,`emojidex`,`messanger`,`lg`,`htc`,`mozilla`,`softbank`,`docomo`,`kddi`]
+listmenu = [`eapple ${q}`,`egoogle ${q}`,`esamsung ${q}`,`emicrosoft ${q}`,`ewhatsapp ${q}`,`etwitter ${q}`,`efacebook ${q}`,`ejooxpixel ${q}`,`eopenemoji ${q}`,`eemojidex ${q}`,`emessanger ${q}`,`elg ${q}`,`ehtc ${q}`,`emozilla ${q}`,`esoftbank ${q}`,`edocomo ${q}`,`ekddi ${q}`]
+listmenuu = [`Emoji apple `,`Emoji google `,`Emoji samsung `,`Emoji microsoft `,`Emoji whatsapp `,`Emoji twitter `,`Emoji facebook `,`Emoji jooxpixel `,`Emoji openemoji `,`Emoji emojidex `,`Emoji messanger `,`Emoji lg `,`Emoji htc `,`Emoji mozilla `,`Emoji softbank `,`Emoji docomo `,`Emoji kddi`]
 nombor = 1
 nombor2 = 0
 for (let x of listmenuu) {
 const yy = {title: 'Sub menu ke -'+ nombor++,
 rows: [
 {
-title: `${listmenu[nombor2++]} ${q}`,
+title: `${listmenu[nombor2++]}`,
 description: `${q} Emoji ${x}`,
 rowId: ``
 }
