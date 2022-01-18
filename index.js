@@ -12302,7 +12302,7 @@ case 'wooden-3d-black':
 case 'wooden-boards':
 case 'write-stars':
 if(!q) return reply1(`${emoj} Hint : ${prefix + command} Wudy Bot`) 
-buff = await getBuffer(`${HadiApi}/api/photoxy/${command}?teks=${q}`)
+buff = await getBuffer(`${HadiApi}/api/photoxy/${command}?text=${q}`)
 alpha.sendMessage(from, buff, image, {quoted: mek, caption : `Dah selesai , Req by: ${pushname}\nKetik *${prefix}oxy_list* untuk melihat menu yang lain`})
 break
 
