@@ -18883,8 +18883,6 @@ teks = `⌯✆ *SHOP GAME* ✆⌯
 ╭⌯
 │ *Nama :* ${pushname}
 │ *Nomor :* @${sender.split('@')[0]}
-│ *Bio :* ${bio_user}
-│ *SN :* ${sn_.medium}
 │ *Time :* ${wib} Wib
 ╰⌯
 
@@ -18903,8 +18901,6 @@ teks = `𝐏𝐑𝐈𝐂𝐄 𝐋𝐈𝐒𝐓 𝐃𝐈𝐀𝐌𝐎𝐍𝐃
 ╭⊸
 │ *Nama :* ${pushname}
 │ *Nomor :* @${sender.split('@')[0]}
-│ *Bio :* ${bio_user}
-│ *SN :* ${sn_.medium}
 │ *Time :* ${wib} Wib
 ╰⊸
 ╭─⊸© 「 ML 」 
@@ -18944,8 +18940,6 @@ teks = `𝐏𝐑𝐈𝐂𝐄 𝐋𝐈𝐒𝐓 𝐃𝐈𝐀𝐌𝐎𝐍𝐃
 ╭⊸
 │ *Nama :* ${pushname}
 │ *Nomor :* @${sender.split('@')[0]}
-│ *Bio :* ${bio_user}
-│ *SN :* ${sn_.medium}
 │ *Time :* ${wib} Wib
 ╰⊸
 ╭─⊸© 「 PUBG 」 
@@ -18985,8 +18979,6 @@ teks = `𝐏𝐑𝐈𝐂𝐄 𝐋𝐈𝐒𝐓 𝐃𝐈𝐀𝐌𝐎𝐍𝐃
 ╭⊸
 │ *Nama :* ${pushname}
 │ *Nomor :* @${sender.split('@')[0]}
-│ *Bio :* ${bio_user}
-│ *SN :* ${sn_.medium}
 │ *Time :* ${wib} Wib
 ╰⊸
 ╭─⊸© 「 FF 」 

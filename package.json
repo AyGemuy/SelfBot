@@ -8,9 +8,9 @@
   },
   "dependencies": {
     "@adiwajshing/baileys": "^3.5.3",
-    "async": "^3.2.1",
-    "awesome-phonenumber": "^2.62.0",
-    "axios": "^0.21.4",
+    "async": "^3.2.3",
+    "awesome-phonenumber": "^2.67.0",
+    "axios": "^0.25.0",
     "brainly-scraper": "^1.0.3",
     "browser-id3-writer": "^4.4.0",
     "cfonts": "^2.10.0",
