@@ -18876,6 +18876,269 @@ inibuff = res.url
 sendStickerUrl(from, inibuff,{quoted: mek})
 break
 
+case 'toko':
+case 'pricelist': 
+case 'diamond':{
+teks = `⌯✆ *SHOP GAME* ✆⌯
+╭⌯
+│ *Nama :* ${pushname}
+│ *Nomor :* @${sender.split('@')[0]}
+│ *Bio :* ${bio_user}
+│ *SN :* ${sn_.medium}
+│ *Time :* ${wib} Wib
+╰⌯
+
+_Silahkan pilih dibawah untuk mengetahui harga_`
+let ngeshop = [
+{buttonId: `freefireshop`, buttonText: {displayText: `${emoj} List-FF`}, type: 1},
+{buttonId: `pubgshop`, buttonText: {displayText: `${emoj} List-PUBG`}, type: 1},
+{buttonId: `mlshop`, buttonText: {displayText: `${emoj} List-ML`}, type: 1}
+]
+sendButLocation(from, teks , `Hi👋 I'am\n${botname}™© | By ${ownername}`,pp_verify, ngeshop, {contextInfo: { mentionedJid: [sender]}})
+}
+break
+
+case 'mlshop':{
+teks = `𝐏𝐑𝐈𝐂𝐄 𝐋𝐈𝐒𝐓 𝐃𝐈𝐀𝐌𝐎𝐍𝐃
+╭⊸
+│ *Nama :* ${pushname}
+│ *Nomor :* @${sender.split('@')[0]}
+│ *Bio :* ${bio_user}
+│ *SN :* ${sn_.medium}
+│ *Time :* ${wib} Wib
+╰⊸
+╭─⊸© 「 ML 」 
+│⌯ DM 50 💎 = RP.8.000
+│⌯ DM 70 💎 = RP.10.000
+│⌯ DM 100 💎 = RP.15.000
+│⌯ DM 140 💎 = RP.20.000
+│⌯ DM 210 💎 = RP.30.000
+│⌯ DM 280 💎 = RP.40.000
+│⌯ DM 355 💎 = RP.50.000
+│⌯ DM 425 💎 = RP.60.000
+│⌯ DM 500 💎 = RP.70.000
+│⌯ DM 565 💎 = RP.80.000
+│⌯ DM 635 💎 = RP.90.000
+│⌯ DM 720 💎 = RP.100.000
+│⌯ DM 1075 💎 = RP.150.000
+│⌯ DM 2000 💎 = RP.275.000
+│⌯ DM 2720 💎 = RP.375.000
+│⌯ DM 4000 💎 = RP.540.000
+│⌯ DM 6000 💎 = RP.810.000
+│⌯ DM 8000 💎 = RP.1.075.000
+╰⊸©
+
+Ketik *.dm <jumlah> ml*
+Untuk memesan diamond.`
+let ngeshopml = [
+{buttonId: `freefireshop`, buttonText: {displayText: `${emoj} List-FF`}, type: 1},
+{buttonId: `pubgshop`, buttonText: {displayText: `${emoj} List-PUBG`}, type: 1},
+{buttonId: `mlshop`, buttonText: {displayText: `${emoj} List-ML`}, type: 1}
+]
+sendButLocation(from, teks , `Hi👋 I'am\n${botname}™© | By ${ownername}`,pp_verify, ngeshopml, {contextInfo: { mentionedJid: [sender]}})
+}
+break
+
+case 'pubgshop':{
+teks = `𝐏𝐑𝐈𝐂𝐄 𝐋𝐈𝐒𝐓 𝐃𝐈𝐀𝐌𝐎𝐍𝐃
+╭⊸
+│ *Nama :* ${pushname}
+│ *Nomor :* @${sender.split('@')[0]}
+│ *Bio :* ${bio_user}
+│ *SN :* ${sn_.medium}
+│ *Time :* ${wib} Wib
+╰⊸
+╭─⊸© 「 PUBG 」 
+│⌯ DM 50 💎 = RP.8.000
+│⌯ DM 70 💎 = RP.10.000
+│⌯ DM 100 💎 = RP.15.000
+│⌯ DM 140 💎 = RP.20.000
+│⌯ DM 210 💎 = RP.30.000
+│⌯ DM 280 💎 = RP.40.000
+│⌯ DM 355 💎 = RP.50.000
+│⌯ DM 425 💎 = RP.60.000
+│⌯ DM 500 💎 = RP.70.000
+│⌯ DM 565 💎 = RP.80.000
+│⌯ DM 635 💎 = RP.90.000
+│⌯ DM 720 💎 = RP.100.000
+│⌯ DM 1075 💎 = RP.150.000
+│⌯ DM 2000 💎 = RP.275.000
+│⌯ DM 2720 💎 = RP.375.000
+│⌯ DM 4000 💎 = RP.540.000
+│⌯ DM 6000 💎 = RP.810.000
+│⌯ DM 8000 💎 = RP.1.075.000
+╰⊸©
+
+Ketik *.dm <jumlah> pubg*
+Untuk memesan diamond.`
+let ngeshoppubg = [
+{buttonId: `freefireshop`, buttonText: {displayText: `${emoj} List-FF`}, type: 1},
+{buttonId: `pubgshop`, buttonText: {displayText: `${emoj} List-PUBG`}, type: 1},
+{buttonId: `mlshop`, buttonText: {displayText: `${emoj} List-ML`}, type: 1}
+]
+sendButLocation(from, teks , `Hi👋 I'am\n${botname}™© | By ${ownername}`,pp_verify, ngeshoppubg, {contextInfo: { mentionedJid: [sender]}})
+}
+break
+
+case 'ffshop':{
+teks = `𝐏𝐑𝐈𝐂𝐄 𝐋𝐈𝐒𝐓 𝐃𝐈𝐀𝐌𝐎𝐍𝐃
+╭⊸
+│ *Nama :* ${pushname}
+│ *Nomor :* @${sender.split('@')[0]}
+│ *Bio :* ${bio_user}
+│ *SN :* ${sn_.medium}
+│ *Time :* ${wib} Wib
+╰⊸
+╭─⊸© 「 FF 」 
+│⌯ DM 50 💎 = RP.8.000
+│⌯ DM 70 💎 = RP.10.000
+│⌯ DM 100 💎 = RP.15.000
+│⌯ DM 140 💎 = RP.20.000
+│⌯ DM 210 💎 = RP.30.000
+│⌯ DM 280 💎 = RP.40.000
+│⌯ DM 355 💎 = RP.50.000
+│⌯ DM 425 💎 = RP.60.000
+│⌯ DM 500 💎 = RP.70.000
+│⌯ DM 565 💎 = RP.80.000
+│⌯ DM 635 💎 = RP.90.000
+│⌯ DM 720 💎 = RP.100.000
+│⌯ DM 1075 💎 = RP.150.000
+│⌯ DM 2000 💎 = RP.275.000
+│⌯ DM 2720 💎 = RP.375.000
+│⌯ DM 4000 💎 = RP.540.000
+│⌯ DM 6000 💎 = RP.810.000
+│⌯ DM 8000 💎 = RP.1.075.000
+╰⊸©
+
+Ketik *.dm <jumlah> pubg*
+Untuk memesan diamond.`
+let ngeshopff = [
+{buttonId: `freefireshop`, buttonText: {displayText: `${emoj} List-FF`}, type: 1},
+{buttonId: `pubgshop`, buttonText: {displayText: `${emoj} List-PUBG`}, type: 1},
+{buttonId: `mlshop`, buttonText: {displayText: `${emoj} List-ML`}, type: 1}
+]
+sendButLocation(from, teks , `Hi👋 I'am\n${botname}™© | By ${ownername}`,pp_verify, ngeshopff, {contextInfo: { mentionedJid: [sender]}})
+}
+break
+
+case 'dm':{
+if (!q) return reply1("Format Salah")
+var F = q
+var tes1 = F.split(" ")[0];
+var tes2 = F.split(" ")[1];
+let duid = tes1
+if (duid == '50') {
+rupi = 'RP.8.000'
+} else if (duid == '70') {
+rupi = 'RP.10.000'
+} else if (duid == '100') {
+rupi = 'RP.15.000'
+} else if (duid == '140') {
+rupi = 'RP.20.000'
+} else if (duid == '210') {
+rupi = 'RP.30.000'
+} else if (duid == '280') {
+rupi = 'RP.40.000'
+} else if (duid == '355') {
+rupi = 'RP.50.000'
+} else if (duid == '425') {
+rupi = 'RP.60.000'
+} else if (duid == '500') {
+rupi = 'RP.70.000'
+} else if (duid == '565') {
+rupi = 'RP.80.000'
+} else if (duid == '635') {
+rupi = 'RP.90.000'
+} else if (duid == '720') {
+rupi = 'RP.100.000'
+} else if (duid == '1075') {
+rupi = 'RP.150.000'
+} else if (duid == '2000') {
+rupi = 'RP.275.000'
+} else if (duid == '2720') {
+rupi = 'RP.375.000'
+} else if (duid == '4000') {
+rupi = 'RP.540.000'
+} else if (duid == '6000') {
+rupi = 'RP.810.000'
+} else if (duid == '8000') {
+rupi = 'RP.1.075.000'
+}
+teks = `Detail :
+*Nama :* ${pushname}
+*Nomor :* @${sender.split('@')[0]}
+*Jenis DM :* ${tes2}
+*Total DM :* ${tes1}
+*Harga DM :* ${rupi}
+
+_Metode pembayaran_`
+let ngeshopvia = [
+{buttonId: `viadana ${tes1}`, buttonText: {displayText: `${emoj} DANA`}, type: 1},
+{buttonId: `viagopay ${tes1}`, buttonText: {displayText: `${emoj} GOPAY`}, type: 1}
+]
+pp_shop = await getBuffer(`https://api-xfar05.herokuapp.com/api/canvas/gfx3?teks1=${tes1}&teks2=DM%20${tes2}`);
+
+sendButLocation(from, teks , `Hi👋 I'am\n${botname}™© | By ${ownername}`,pp_shop, ngeshopvia, {contextInfo: { mentionedJid: [sender]}})
+}
+break
+
+
+case 'viadana':{
+if (!q) return reply1("Format Salah")
+var F = q
+var tes1 = F.split(" ")[0];
+var tes2 = F.split(" ")[1];
+let duid = tes1
+if (duid == '50') {
+rupi = 'RP.8.000'
+} else if (duid == '70') {
+rupi = 'RP.10.000'
+} else if (duid == '100') {
+rupi = 'RP.15.000'
+} else if (duid == '140') {
+rupi = 'RP.20.000'
+} else if (duid == '210') {
+rupi = 'RP.30.000'
+} else if (duid == '280') {
+rupi = 'RP.40.000'
+} else if (duid == '355') {
+rupi = 'RP.50.000'
+} else if (duid == '425') {
+rupi = 'RP.60.000'
+} else if (duid == '500') {
+rupi = 'RP.70.000'
+} else if (duid == '565') {
+rupi = 'RP.80.000'
+} else if (duid == '635') {
+rupi = 'RP.90.000'
+} else if (duid == '720') {
+rupi = 'RP.100.000'
+} else if (duid == '1075') {
+rupi = 'RP.150.000'
+} else if (duid == '2000') {
+rupi = 'RP.275.000'
+} else if (duid == '2720') {
+rupi = 'RP.375.000'
+} else if (duid == '4000') {
+rupi = 'RP.540.000'
+} else if (duid == '6000') {
+rupi = 'RP.810.000'
+} else if (duid == '8000') {
+rupi = 'RP.1.075.000'
+}
+kapt = `Detail :
+*Nama :* ${pushname}
+*Nomor :* @${sender.split('@')[0]}
+*Jenis DM :* ${tes2}
+*Total DM :* ${tes1}
+*Harga DM :* ${rupi}
+
+_Silahkan Scan QR Ini atau hubungi https://wa.link/84b1ws_`
+
+buff = await getBuffer(`https://qrickit.com/api/qr.php?d=https://wa.link/84b1ws`)
+alpha.sendMessage(from, buff, MessageType.image,{ quoted: kapt})
+break
+
 //Ends
 default:
 //-----------------------[ STIKER ]-------------------//
